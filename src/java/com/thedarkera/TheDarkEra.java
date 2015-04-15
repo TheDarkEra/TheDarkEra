@@ -1,5 +1,7 @@
 package com.thedarkera;
 
+import org.apache.logging.log4j.Logger;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -14,21 +16,25 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 public class TheDarkEra
 {
 	public static final String NAME = "The Dark Era";
-	public static final String MODID = "thedarkera";
+	public static final String MODID = "TheDarkEra";
 	public static final String VERSION = "1.7.10-A1"; //Alpha 1; feel free to change
 	
 	@Mod.Instance("thedarkera")
 	public static TheDarkEra instance;
 	
+	public static Logger logger;
+	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		System.out.println("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + ".");
+		logger = event.getModLog();
+		
+		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + ".");
 		
 		TDEItems.init();
 		TDEBlocks.init();
 		
-		System.out.println(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded successfully!");
+		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded successfully!");
 	}
 	
 	public static CreativeTabs tabTDE = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era")
