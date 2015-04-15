@@ -1,9 +1,9 @@
 package com.thedarkera;
 
-import org.apache.logging.log4j.Logger;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+
+import org.apache.logging.log4j.Logger;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
@@ -43,6 +43,6 @@ public class TheDarkEra
 		public Item getTabIconItem()
 		{
 			return TDEItems.common_soul_gem;
-		}	
+		}
 	};
 }
