@@ -4,8 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemSteelOre extends ItemBlock{
-	
+public class ItemSteelOre extends ItemBlock
+{	
 	public ItemSteelOre(Block block) 
 	{
 		super(block);
@@ -29,7 +29,7 @@ public class ItemSteelOre extends ItemBlock{
 			name = "broken";
 			break;
 		}
-		return getUnlocalizedName() + "." + name;
+		return getUnlocalizedName() + "_" + name;
 	}
 	
 	@Override

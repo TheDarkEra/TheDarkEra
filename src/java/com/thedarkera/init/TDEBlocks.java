@@ -1,7 +1,7 @@
 package com.thedarkera.init;
 
 import com.thedarkera.block.BlockEbonyOre;
-import com.thedarkera.block.BlockSteelOre;
+import com.thedarkera.block.BlockSteel;
 import com.thedarkera.item.ItemSteelOre;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -15,13 +15,13 @@ public class TDEBlocks
 	public static void init()
 	{
 		ebony_ore = new BlockEbonyOre();
-		steel_ore = new BlockSteelOre();
+		steel_ore = new BlockSteel();
 		
-		//for registering normal blocks//
-	GameRegistry.registerBlock(ebony_ore, "Ebony_Ore");
+		// Blocks
+		GameRegistry.registerBlock(ebony_ore, "Ebony_Ore");
 	
-		//for registering metadata Blocks//
-	GameRegistry.registerBlock(steel_ore, ItemSteelOre.class, "Steel_Ore");	
+		// Meta Blocks
+		GameRegistry.registerBlock(steel_ore, ItemSteelOre.class, steel_ore.getUnlocalizedName());	
 		
 	}
 }

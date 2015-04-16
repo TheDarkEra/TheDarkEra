@@ -15,24 +15,23 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemSoulGem extends Item 
 {	
-		//This is where you would write the items you want//
-	private String[] name = {"common_soul_gem", "lesser_soul_gem", "greater_soul_gem", "grand_soul_gem", "black_soul_gem"};
+	private String[] name = {"common", "lesser", "greater", "grand", "black"};
 	
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
-
+	
 	public ItemSoulGem()
 	{
-		setUnlocalizedName(TheDarkEra.MODID + "_" + "gem");
+		setUnlocalizedName("soul_gem");
 		setHasSubtypes(true);
-		setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(TheDarkEra.tabTDE);
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack par1ItemStack)
     {
         int metadata = MathHelper.clamp_int(par1ItemStack.getItemDamage(), 0, 15);
-        return super.getUnlocalizedName() + "." + name[metadata];
+        return super.getUnlocalizedName() + "_" + name[metadata];
     }
 	
     @SideOnly(Side.CLIENT)
@@ -43,7 +42,7 @@ public class ItemSoulGem extends Item
 		
 		for(int i = 0; i < icons.length; i++)
 		{
-			icons[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + (getUnlocalizedName().substring(5)) + " " + name[i]);
+			icons[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + name[i] + "_" + (getUnlocalizedName().substring(5)));
 		}
     }
 

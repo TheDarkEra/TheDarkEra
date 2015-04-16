@@ -1,12 +1,7 @@
 package com.thedarkera.block;
 
 import java.util.List;
-import java.util.Random;
 
-import com.thedarkera.TheDarkEra;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -16,30 +11,37 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class BlockSteelOre extends Block {
+import com.thedarkera.TheDarkEra;
 
-String name = "steelOre";
-	
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+public class BlockSteel extends Block
+{
+	String name = "steel";
+	private String[] names = {"ore", "block_side", "block_top"};
+
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
-	
-	public BlockSteelOre()
+
+	public BlockSteel()
 	{
 		super(Material.rock);
-		setBlockName(TheDarkEra.MODID + "_" + name);
+		setBlockName(name);
 		setCreativeTab(TheDarkEra.tabTDE);
 		setHardness(2F);
 		setResistance(5F);
 		setStepSound(soundTypeStone);
 		setHarvestLevel("pickaxe", 2);
 	}
-	
-	//@Override
-	//public Item getItemDropped(int meta, Random rand, int fortune)
-	//{
-		//return ModItems.samdust;
-	//}
-	
+
+	/*
+	@Override
+	public Item getItemDropped(int meta, Random rand, int fortune)
+	{
+		return ModItems.samdust;
+	}
+	*/
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister)
@@ -48,29 +50,30 @@ String name = "steelOre";
 
 		for (int i = 0; i < icons.length; i++)
 		{
-			icons[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + "samstone" + i);
+			icons[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + name + "_" + names[i]);
 		}
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int par1, int par2)
 	{
-		switch(par2)
+		switch (par2)
 		{
 		case 0:
 			return icons[0];
 		case 1:
-			if(ForgeDirection.getOrientation(par1) == ForgeDirection.UP || ForgeDirection.getOrientation(par1) == ForgeDirection.DOWN)
+			if (ForgeDirection.getOrientation(par1) == ForgeDirection.UP
+					|| ForgeDirection.getOrientation(par1) == ForgeDirection.DOWN)
 				return icons[2];
 			else
 				return icons[1];
 		default:
-			System.out.println("Problems with getting the icon for BlockSamStone");
+			TheDarkEra.logger.error("Cannot retrieve icons for " + name + "!");
 			return null;
 		}
 	}
-	
+
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@SideOnly(Side.CLIENT)
 	@Override

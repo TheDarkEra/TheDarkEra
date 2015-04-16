@@ -1,21 +1,18 @@
 package com.thedarkera.block;
 
-import java.util.Random;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
-
 public class BlockEbonyOre extends Block {
 	
-	String name = "ebonyOre";
+	String name = "ebony_ore";
 	
 	public BlockEbonyOre()
 	{
 		super(Material.rock);
-		setBlockName(TheDarkEra.MODID + "_" + name);
+		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);
 		setHardness(2F);

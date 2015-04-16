@@ -52,7 +52,7 @@ public class TheDarkEra
 		@Override
 		public Item getTabIconItem()
 		{
-			return TDEItems.common_soul_gem;
+			return TDEItems.soul_gem;
 		}
 	};
 	
