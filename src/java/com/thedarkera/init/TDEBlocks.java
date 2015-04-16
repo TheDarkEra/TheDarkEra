@@ -18,7 +18,7 @@ public class TDEBlocks
 			//Blocks//
 		ebony_ore = new BlockEbonyOre();
 		steel_ore = new BlockSteel();	
-		// Meta Blocks
+			// Meta Blocks//
 		GameRegistry.registerBlock(steel_ore, ItemSteelOre.class, steel_ore.getUnlocalizedName());
 		GameRegistry.registerBlock(ebony_ore, ebony_ore.getUnlocalizedName());		
 	}
