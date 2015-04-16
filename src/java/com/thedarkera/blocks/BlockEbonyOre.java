@@ -1,4 +1,4 @@
-package com.thedarkera.block;
+package com.thedarkera.blocks;
 
 import java.util.Random;
 
@@ -6,7 +6,7 @@ import com.thedarkera.TheDarkEra;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
+
 
 public class BlockEbonyOre extends Block {
 	

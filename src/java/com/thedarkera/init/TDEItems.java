@@ -3,7 +3,7 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.item.ItemSoulGem;
+import com.thedarkera.items.ItemSoulGem;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -19,6 +19,8 @@ public class TDEItems
 	
 	public static void init()
 	{
+		
+			//Items//
 		common_soul_gem = new Item().setUnlocalizedName("common_soul_gem").setTextureName(TheDarkEra.MODID + ":common_soul_gem").setCreativeTab(TheDarkEra.tabTDE);
 		GameRegistry.registerItem(common_soul_gem, common_soul_gem.getUnlocalizedName());
 		lesser_soul_gem = new Item().setUnlocalizedName("lesser_soul_gem").setTextureName(TheDarkEra.MODID + ":lesser_soul_gem").setCreativeTab(TheDarkEra.tabTDE);
@@ -29,9 +31,12 @@ public class TDEItems
 		GameRegistry.registerItem(grand_soul_gem, grand_soul_gem.getUnlocalizedName());
 		black_soul_gem = new Item().setUnlocalizedName("black_soul_gem").setTextureName(TheDarkEra.MODID + ":black_soul_gem").setCreativeTab(TheDarkEra.tabTDE);
 		GameRegistry.registerItem(black_soul_gem, black_soul_gem.getUnlocalizedName());
-			
-			//better way in making more items that are kind of the sam//
-		soul_gem = new ItemSoulGem();
+		
+		//Metadata items//
+		soul_gem = new ItemSoulGem();	
 		GameRegistry.registerItem(soul_gem, "Soul_Gem");
+		
+		
+		
 	}
 }

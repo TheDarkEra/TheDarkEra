@@ -1,4 +1,4 @@
-package com.thedarkera.item;
+package com.thedarkera.items;
 
 import java.util.List;
 

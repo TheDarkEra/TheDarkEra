@@ -1,8 +1,6 @@
-package com.thedarkera.block;
+package com.thedarkera.blocks;
 
 import java.util.List;
-import java.util.Random;
-
 import com.thedarkera.TheDarkEra;
 
 import cpw.mods.fml.relauncher.Side;
@@ -33,13 +31,7 @@ String name = "steelOre";
 		setStepSound(soundTypeStone);
 		setHarvestLevel("pickaxe", 2);
 	}
-	
-	//@Override
-	//public Item getItemDropped(int meta, Random rand, int fortune)
-	//{
-		//return ModItems.samdust;
-	//}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister)
