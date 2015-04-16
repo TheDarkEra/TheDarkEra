@@ -19,7 +19,7 @@ public class ItemGrape extends ItemFood{
 	public ItemGrape(int food, float saturation, boolean wolfFood, String name) 
 	{
 		super(food, saturation, wolfFood);
-		setUnlocalizedName(TheDarkEra.MODID + "_" + name);
+		setUnlocalizedName("grape");
 		setTextureName(TheDarkEra.MODID + ":" + name);
 		setPotionEffect(Potion.moveSpeed.id, 15, 0, 1F);
 		setSecondPotionEffect(Potion.digSpeed.id, 15, 0, 1F);

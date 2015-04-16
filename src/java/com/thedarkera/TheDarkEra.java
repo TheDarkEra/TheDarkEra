@@ -10,6 +10,7 @@ import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
 import com.thedarkera.init.TDERecipes;
+import com.thedarkera.init.TDETools;
 import com.thedarkera.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
@@ -46,6 +47,7 @@ public class TheDarkEra
 		TDEBlocks.init();
 		TDEArmors.init();
 		TDERecipes.init();
+		TDETools.init();
 		
 		GameRegistry.registerWorldGenerator(handler, 0);
 		

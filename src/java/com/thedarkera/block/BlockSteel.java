@@ -32,7 +32,7 @@ public class BlockSteel extends Block
 		setHardness(2F);
 		setResistance(5F);
 		setStepSound(soundTypeStone);
-		setHarvestLevel("pickaxe", 2);
+		setHarvestLevel("pickaxe", 3);
 	}
 
 	/*
@@ -84,4 +84,5 @@ public class BlockSteel extends Block
 			par3List.add(new ItemStack(par1, 1, var4));
 		}
 	}
+	
 }
