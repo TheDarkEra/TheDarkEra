@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 
 import org.apache.logging.log4j.Logger;
 
+import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
 import com.thedarkera.proxy.CommonProxy;
@@ -12,6 +13,7 @@ import com.thedarkera.proxy.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = TheDarkEra.MODID, name = TheDarkEra.NAME, version = TheDarkEra.VERSION)
 
@@ -23,6 +25,8 @@ public class TheDarkEra
 	
 	@Mod.Instance("thedarkera")
 	public static TheDarkEra instance;
+	
+	WorldGenHandler handler = new WorldGenHandler();
 	
 	@SidedProxy(clientSide = "com.thedarkera.proxy.ClientProxy", serverSide = "com.thedarkera.proxy.CommonProxy")
 	public static CommonProxy proxy;
@@ -38,6 +42,7 @@ public class TheDarkEra
 		
 		TDEItems.init();
 		TDEBlocks.init();
+		GameRegistry.registerWorldGenerator(handler, 0);
 		
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded successfully!");
 	}
