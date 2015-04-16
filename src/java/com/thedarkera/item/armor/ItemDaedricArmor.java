@@ -22,7 +22,7 @@ public class ItemDaedricArmor extends ItemArmor
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
 	{
-		if (stack.getItem() == TDEArmors.daedric_helmet || stack.getItem() == TDEArmors.daedric_chest || stack.getItem() == TDEArmors.daedric_boots)
+		if (stack.getItem() == TDEArmors.daedric_helmet || stack.getItem() == TDEArmors.daedric_chestplate || stack.getItem() == TDEArmors.daedric_boots)
 		{
 			return TheDarkEra.MODID + ":models/armor/daedric_armor_1.png";
 		}

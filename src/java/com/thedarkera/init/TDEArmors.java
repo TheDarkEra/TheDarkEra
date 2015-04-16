@@ -12,7 +12,7 @@ public class TDEArmors
 {
 
 	public static Item daedric_helmet;
-	public static Item daedric_chest;
+	public static Item daedric_chestplate;
 	public static Item daedric_leggings;
 	public static Item daedric_boots;
 
@@ -22,13 +22,13 @@ public class TDEArmors
 	{
 
 		daedric_helmet = new ItemDaedricArmor(daedric_armor, 0, "daedric_helmet");
-		GameRegistry.registerItem(daedric_helmet, "DaedricHelmet");
-		daedric_chest = new ItemDaedricArmor(daedric_armor, 1, "daedric_chest");
-		GameRegistry.registerItem(daedric_chest, "DaedricChest");
+		GameRegistry.registerItem(daedric_helmet, daedric_helmet.getUnlocalizedName());
+		daedric_chestplate = new ItemDaedricArmor(daedric_armor, 1, "daedric_chestplate");
+		GameRegistry.registerItem(daedric_chestplate, daedric_chestplate.getUnlocalizedName());
 		daedric_leggings = new ItemDaedricArmor(daedric_armor, 2, "daedric_leggings");
-		GameRegistry.registerItem(daedric_leggings, "DaedricLeggings");
+		GameRegistry.registerItem(daedric_leggings, daedric_leggings.getUnlocalizedName());
 		daedric_boots = new ItemDaedricArmor(daedric_armor, 3, "daedric_boots");
-		GameRegistry.registerItem(daedric_boots, "DaedricBoots");
+		GameRegistry.registerItem(daedric_boots, daedric_boots.getUnlocalizedName());
 
 	}
 
