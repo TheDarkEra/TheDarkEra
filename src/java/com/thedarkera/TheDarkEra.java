@@ -7,8 +7,10 @@ import org.apache.logging.log4j.Logger;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
+import com.thedarkera.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = TheDarkEra.MODID, name = TheDarkEra.NAME, version = TheDarkEra.VERSION)
@@ -21,6 +23,9 @@ public class TheDarkEra
 	
 	@Mod.Instance("thedarkera")
 	public static TheDarkEra instance;
+	
+	@SidedProxy(clientSide = "com.thedarkera.proxy.ClientProxy", serverSide = "com.thedarkera.proxy.CommonProxy")
+	public static CommonProxy proxy;
 	
 	public static Logger logger;
 	
@@ -45,4 +50,13 @@ public class TheDarkEra
 			return TDEItems.common_soul_gem;
 		}
 	};
+	
+	/*
+	 * Will be filled with Gui IDs.
+	 * With this we can get GuiID.EXAMPLE_GUI.ordinal() and get its corresponding gui id.
+	 */
+	public enum GuiID
+	{
+		
+	}
 }
