@@ -45,7 +45,7 @@ public class ItemDaedricArmor extends ItemArmor
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
     {
         if (player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(TDEArmors.daedric_helmet) 
-                && player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(TDEArmors.daedric_chest) 
+                && player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(TDEArmors.daedric_chestplate) 
                 && player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(TDEArmors.daedric_leggings) 
                 && player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(TDEArmors.daedric_boots))
         {
