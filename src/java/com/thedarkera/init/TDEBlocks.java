@@ -2,8 +2,8 @@ package com.thedarkera.init;
 
 import net.minecraft.block.Block;
 
+import com.thedarkera.block.BlockEbonyOre;
 import com.thedarkera.block.BlockSteel;
-import com.thedarkera.blocks.BlockEbonyOre;
 import com.thedarkera.item.ItemSteelOre;
 
 import cpw.mods.fml.common.registry.GameRegistry;
