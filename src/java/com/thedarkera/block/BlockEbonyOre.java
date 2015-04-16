@@ -4,7 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.init.TDETools;
+
 
 public class BlockEbonyOre extends Block {
 	
@@ -19,7 +19,7 @@ public class BlockEbonyOre extends Block {
 		setHardness(2F);
 		setResistance(5F);
 		setStepSound(soundTypeStone);
-		setHarvestLevel("pickaxe", 4);
+		setHarvestLevel("pickaxe", 3);
 	}
 	
 //	@Override
