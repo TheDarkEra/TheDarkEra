@@ -16,6 +16,11 @@ item.daedric_chestplate.name=Daedric Chestplate
 item.daedric_leggings.name=Daedric Leggings
 item.daedric_boots.name=Daedric Boots
 
+item.steel_helmet.name=Steel Helmet
+item.steel_chestplate.name=Steel Chestplate
+item.steel_leggings.name=Steel Leggings
+item.steel_boots.name=Steel Boots
+
 tile.ebony_ore.name=Ebony Ore
 tile.steel_ore.name=Steel Ore
 tile.steel_block.name=Steel Block
