@@ -2,6 +2,8 @@ package com.thedarkera.handler;
 
 import java.util.Random;
 
+import com.thedarkera.init.TDEBlocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityZombie;
@@ -41,7 +43,6 @@ public class WorldGenHandler implements IWorldGenerator
 		System.out.println("jump");
 	}
 	
-	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) 
 	{
 		switch(world.provider.dimensionId)
@@ -54,12 +55,13 @@ public class WorldGenHandler implements IWorldGenerator
 	
 	private void generateEnd(World world, Random random, int x, int z)
     {
-	//	addOreSpawn(ModBlocks.samStone, 0, Blocks.obsidian, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
+		//addOreSpawn(TDEBlocks., 0, Blocks.obsidian, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
     }
     
 	private void generateSurface(World world, Random random, int x, int z)
     {
-     //   addOreSpawn(ModBlocks.samStone, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
+        addOreSpawn(TDEBlocks.ebony_ore, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
+        addOreSpawn(TDEBlocks.steel_ore, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
    
         for(int i = 0; i < 3; i++)
         {

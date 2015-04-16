@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import org.apache.logging.log4j.Logger;
 
 import com.thedarkera.handler.WorldGenHandler;
+import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
 import com.thedarkera.proxy.CommonProxy;
@@ -42,6 +43,7 @@ public class TheDarkEra
 		
 		TDEItems.init();
 		TDEBlocks.init();
+		TDEArmors.init();
 		GameRegistry.registerWorldGenerator(handler, 0);
 		
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded successfully!");
