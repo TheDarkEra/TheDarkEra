@@ -5,3 +5,13 @@ item.lesser_soul_gem.name=Lesser Soul Gem
 item.greater_soul_gem.name=Greater Soul Gem
 item.grand_soul_gem.name=Grand Soul Gem
 item.black_soul_gem.name=Black Soul Gem
+
+item.TheDarkEra_gem.common_soul_gem.name=Common Soul Gem
+item.TheDarkEra_gem.lesser_soul_gem.name=Lesser Soul Gem
+item.TheDarkEra_gem.greater_soul_gem.name=Greater Soul Gem
+item.TheDarkEra_gem.grand_soul_gem.name=Grand Soul Gem
+item.TheDarkEra_gem.black_soul_gem.name=Black Soul Gem
+
+tile.TheDarkEra_ebonyOre.name=Ebony Ore
+tile.TheDarkEra_steelOre.ore.name=Steel Ore
+tile.TheDarkEra_steelOre.block.name=Steel Block
