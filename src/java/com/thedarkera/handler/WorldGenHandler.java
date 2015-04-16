@@ -2,7 +2,9 @@ package com.thedarkera.handler;
 
 import java.util.Random;
 
+import com.thedarkera.generation.WorldGenGrapePlant;
 import com.thedarkera.init.TDEBlocks;
+import com.thedarkera.init.TDEItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
@@ -33,8 +35,8 @@ public class WorldGenHandler implements IWorldGenerator
 	@SubscribeEvent
 	public void addBlockDrops(BlockEvent.HarvestDropsEvent event)
 	{
-	//	if(event.block == Blocks.red_flower)
-	//		event.drops.add(new ItemStack(ModItems.berry));
+		if(event.block == Blocks.red_flower)
+			event.drops.add(new ItemStack(TDEItems.grape));
 	}
 	
 	@SubscribeEvent
@@ -65,10 +67,10 @@ public class WorldGenHandler implements IWorldGenerator
    
         for(int i = 0; i < 3; i++)
         {
-       // 	int posX = x + random.nextInt(16);
-       //	int posY = 50 + random.nextInt(35);
-       // 	int posZ = z + random.nextInt(16);
-      //  	new WorldGenSamPlant().generate(world, random, posX, posY, posZ);
+        	int posX = x + random.nextInt(16);
+        	int posY = 50 + random.nextInt(35);
+        	int posZ = z + random.nextInt(16);
+        	new WorldGenGrapePlant().generate(world, random, posX, posY, posZ);
         }
         
    //     int posX = x + random.nextInt(16);
