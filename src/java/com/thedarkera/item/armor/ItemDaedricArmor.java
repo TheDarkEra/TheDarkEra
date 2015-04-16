@@ -40,11 +40,11 @@ public class ItemDaedricArmor extends ItemArmor
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
 	{
-		if (itemStack.getItem().getUnlocalizedName() == "daedric_helmet")
+		if (itemStack.getItem().equals(TDEArmors.daedric_helmet))
 		{
 			if (player.isInWater())
 			{
-				player.setAir(15);
+				player.setAir(300);
 			}
 		}
 	}
