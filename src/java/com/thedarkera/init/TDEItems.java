@@ -3,8 +3,9 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 
 import com.thedarkera.item.ItemAncientIngot;
+import com.thedarkera.item.ItemDaedraHeart;
 import com.thedarkera.item.ItemEbonyIngot;
-import com.thedarkera.item.ItemLeatherStrips;
+import com.thedarkera.item.ItemLeatherStrip;
 import com.thedarkera.item.ItemOrichalcumIngot;
 import com.thedarkera.item.ItemSoulGem;
 import com.thedarkera.item.ItemSteelIngot;
@@ -17,7 +18,8 @@ public class TDEItems
 {
 		//Misc items//
 	public static Item soul_gem;
-	public static Item leather_strips;
+	public static Item leather_strip;
+	public static Item daedra_heart;
 	
 		//Ingot items//
 	public static Item steel_ingot;
@@ -36,8 +38,11 @@ public class TDEItems
 		//Misc items init//
 		soul_gem = new ItemSoulGem();
 		GameRegistry.registerItem(soul_gem, soul_gem.getUnlocalizedName());
-		leather_strips = new ItemLeatherStrips();
-		GameRegistry.registerItem(leather_strips, "Leather_Strips");
+		leather_strip = new ItemLeatherStrip();
+		GameRegistry.registerItem(leather_strip, "Leather_Strip");
+		daedra_heart = new ItemDaedraHeart();
+		GameRegistry.registerItem(daedra_heart, "Daedra_Heart");
+		
 		
 		//Ingot items init//
 		steel_ingot = new ItemSteelIngot();
