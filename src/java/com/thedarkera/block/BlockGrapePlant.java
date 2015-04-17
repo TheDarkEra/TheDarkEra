@@ -54,7 +54,7 @@ public class BlockGrapePlant extends BlockBush implements IGrowable
 	{
 		if(par2 < 0 || par2 >= 3)
 		{
-			System.out.println("Something is wrong with the metadata for BlockGrapePlant!");
+			TheDarkEra.logger.error("Something is wrong with the metadata for BlockGrapePlant!");
 			return icons[0];
 		}
 		else
@@ -123,19 +123,16 @@ public class BlockGrapePlant extends BlockBush implements IGrowable
         return ret;
     }
 	
-	@Override
 	public boolean func_149851_a(World world, int x, int y, int z, boolean var5) 
 	{
 		return world.getBlockMetadata(x, y, z) != 2;
 	}
 	
-	@Override
 	public boolean func_149852_a(World world, Random rand, int x, int y, int z) 
 	{
 		return true;
 	}
 	
-	@Override
 	public void func_149853_b(World world, Random rand, int x, int y, int z) 
 	{
 		int next = world.getBlockMetadata(x, y, z) + 1;
