@@ -59,19 +59,16 @@ public class ItemGrapeSeed extends Item implements IPlantable
         }
     }
 
-	@Override
 	public EnumPlantType getPlantType(IBlockAccess world, int x, int y, int z) 
 	{
 		return EnumPlantType.Crop;
 	}
 
-	@Override
 	public Block getPlant(IBlockAccess world, int x, int y, int z) 
 	{
 		return plant;
 	}
 
-	@Override
 	public int getPlantMetadata(IBlockAccess world, int x, int y, int z) 
 	{
 		return 0;
