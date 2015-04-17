@@ -1,26 +1,37 @@
 itemGroup.the_dark_era=The Dark Era
 
+	//Item Misc//
 item.soul_gem_common.name=Common Soul Gem
 item.soul_gem_lesser.name=Lesser Soul Gem
 item.soul_gem_greater.name=Greater Soul Gem
 item.soul_gem_grand.name=Grand Soul Gem
 item.soul_gem_black.name=Black Soul Gem
+item.leather_strips.name=Leather Strips
 
-item.grape.name=Grape
-item.grape_seed.name=Grape Seed
+	//Item Ingot//
+item.ebony_ingot.name=Ebony Ingot
+item.steel_ingot.name=Steel Ingot
+item.ancient_ingot.name=Ancient Ingot
+item.orichalcum_ingot.name=Orichalcum Ingot	
 
+	//Item Tool//
 item.ancient_pickaxe.name=Ancient Pickaxe
 
+	//Item Food//
+item.grape.name=Grape
+item.grape_seed.name=Grape Seed
+	
+	//Item Armor//
 item.daedric_helmet.name=Daedric Helmet
 item.daedric_chestplate.name=Daedric Chestplate
 item.daedric_leggings.name=Daedric Leggings
 item.daedric_boots.name=Daedric Boots
-
 item.steel_helmet.name=Steel Helmet
 item.steel_chestplate.name=Steel Chestplate
 item.steel_leggings.name=Steel Leggings
 item.steel_boots.name=Steel Boots
 
+	//Block//
 tile.ebony_ore.name=Ebony Ore
 tile.steel_ore.name=Steel Ore
 tile.steel_block.name=Steel Block
