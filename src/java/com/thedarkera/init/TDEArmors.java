@@ -5,6 +5,9 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.thedarkera.item.armor.ItemDaedricArmor;
+import com.thedarkera.item.armor.ItemDragonHeavyArmor;
+import com.thedarkera.item.armor.ItemDragonLightArmor;
+import com.thedarkera.item.armor.ItemOrichalcumArmor;
 import com.thedarkera.item.armor.ItemSteelArmor;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -17,7 +20,7 @@ public class TDEArmors
 	public static Item daedric_leggings;
 	public static Item daedric_boots;
 	
-	static ArmorMaterial daedric_armor = EnumHelper.addArmorMaterial("daedric_armor", 20, new int[] { 3, 7, 6, 3 }, 10);
+	static ArmorMaterial daedric_armor = EnumHelper.addArmorMaterial("daedric_armor", 20, new int[] { 4, 7, 6, 3 }, 10);
 
 	public static Item steel_helmet;
 	public static Item steel_chestplate;
@@ -26,9 +29,30 @@ public class TDEArmors
 	
 	static ArmorMaterial steel_armor = EnumHelper.addArmorMaterial("steel_armor", 20, new int[] { 3, 7, 6, 3 }, 10);
 	
+	public static Item dragon_heavy_helmet;
+	public static Item dragon_heavy_chestplate;
+	public static Item dragon_heavy_leggings;
+	public static Item dragon_heavy_boots;
+	
+	static ArmorMaterial dragon_heavy_armor = EnumHelper.addArmorMaterial("dragon_heavy_armor", 20, new int[] { 3, 7, 6, 3 }, 10);
+	
+	public static Item dragon_light_helmet;
+	public static Item dragon_light_chestplate;
+	public static Item dragon_light_leggings;
+	public static Item dragon_light_boots;
+	
+	static ArmorMaterial dragon_light_armor = EnumHelper.addArmorMaterial("dragon_light_armor", 20, new int[] { 3, 7, 6, 3 }, 10);
+	
+	public static Item orichalcum_helmet;
+	public static Item orichalcum_chestplate;
+	public static Item orichalcum_leggings;
+	public static Item orichalcum_boots;
+	
+	static ArmorMaterial orichalcum_armor = EnumHelper.addArmorMaterial("orichalcum_armor", 20, new int[] { 3, 7, 6, 3 }, 10);
+	
 	public static void init()
 	{
-
+			//Daedric armor//
 		daedric_helmet = new ItemDaedricArmor(daedric_armor, 0, "daedric_helmet");
 		GameRegistry.registerItem(daedric_helmet, daedric_helmet.getUnlocalizedName());
 		daedric_chestplate = new ItemDaedricArmor(daedric_armor, 1, "daedric_chestplate");
@@ -37,7 +61,7 @@ public class TDEArmors
 		GameRegistry.registerItem(daedric_leggings, daedric_leggings.getUnlocalizedName());
 		daedric_boots = new ItemDaedricArmor(daedric_armor, 3, "daedric_boots");
 		GameRegistry.registerItem(daedric_boots, daedric_boots.getUnlocalizedName());
-		
+			//Steel armor//
 		steel_helmet = new ItemSteelArmor(steel_armor, 0, "steel_helmet");
 		GameRegistry.registerItem(steel_helmet, steel_helmet.getUnlocalizedName());
 		steel_chestplate = new ItemSteelArmor(steel_armor, 1, "steel_chestplate");
@@ -46,6 +70,33 @@ public class TDEArmors
 		GameRegistry.registerItem(steel_leggings, steel_leggings.getUnlocalizedName());
 		steel_boots = new ItemSteelArmor(steel_armor, 3, "steel_boots");
 		GameRegistry.registerItem(steel_boots, steel_boots.getUnlocalizedName());
+			//Dragon heavy armor//
+		dragon_heavy_helmet = new ItemDragonHeavyArmor(dragon_heavy_armor, 0, "dragon_heavy_helmet");
+		GameRegistry.registerItem(dragon_heavy_helmet, dragon_heavy_helmet.getUnlocalizedName());
+		dragon_heavy_chestplate = new ItemDragonHeavyArmor(dragon_heavy_armor, 1, "dragon_heavy_chestplate");
+		GameRegistry.registerItem(dragon_heavy_chestplate, dragon_heavy_chestplate.getUnlocalizedName());
+		dragon_heavy_leggings = new ItemDragonHeavyArmor(dragon_heavy_armor, 2, "dragon_heavy_leggings");
+		GameRegistry.registerItem(dragon_heavy_leggings, dragon_heavy_leggings.getUnlocalizedName());
+		dragon_heavy_boots = new ItemDragonHeavyArmor(dragon_heavy_armor, 3, "dragon_heavy_boots");
+		GameRegistry.registerItem(dragon_heavy_boots, dragon_heavy_boots.getUnlocalizedName());
+			//Dragon light armor//
+		dragon_light_helmet = new ItemDragonLightArmor(dragon_light_armor, 0, "dragon_light_helmet");
+		GameRegistry.registerItem(dragon_light_helmet, dragon_light_helmet.getUnlocalizedName());
+		dragon_light_chestplate = new ItemDragonLightArmor(dragon_light_armor, 1, "dragon_light_chestplate");
+		GameRegistry.registerItem(dragon_light_chestplate, dragon_light_chestplate.getUnlocalizedName());
+		dragon_light_leggings = new ItemDragonLightArmor(dragon_light_armor, 2, "dragon_light_leggings");
+		GameRegistry.registerItem(dragon_light_leggings, dragon_light_leggings.getUnlocalizedName());
+		dragon_light_boots = new ItemDragonLightArmor(dragon_light_armor, 3, "dragon_light_boots");
+		GameRegistry.registerItem(dragon_light_boots, dragon_light_boots.getUnlocalizedName());
+			//Orichalcum armor//
+		orichalcum_helmet = new ItemOrichalcumArmor(orichalcum_armor, 0, "orichalcum_helmet");
+		GameRegistry.registerItem(orichalcum_helmet, orichalcum_helmet.getUnlocalizedName());
+		orichalcum_chestplate = new ItemSteelArmor(orichalcum_armor, 1, "orichalcum_chestplate");
+		GameRegistry.registerItem(orichalcum_chestplate, orichalcum_chestplate.getUnlocalizedName());
+		orichalcum_leggings = new ItemSteelArmor(orichalcum_armor, 2, "orichalcum_leggings");
+		GameRegistry.registerItem(orichalcum_leggings, orichalcum_leggings.getUnlocalizedName());
+		orichalcum_boots = new ItemSteelArmor(orichalcum_armor, 3, "orichalcum_boots");
+		GameRegistry.registerItem(orichalcum_boots, orichalcum_boots.getUnlocalizedName());
 
 	}
 

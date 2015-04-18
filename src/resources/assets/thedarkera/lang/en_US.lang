@@ -7,6 +7,10 @@ item.soul_gem_greater.name=Greater Soul Gem
 item.soul_gem_grand.name=Grand Soul Gem
 item.soul_gem_black.name=Black Soul Gem
 item.leather_strips.name=Leather Strips
+item.dragon_scale.name=Dragon Scale
+item.dragon_bone.name=Dragon Bone
+item.daedra_heart.name=Daedra Heart
+
 
 	//Item Ingot//
 item.ebony_ingot.name=Ebony Ingot
@@ -26,10 +30,26 @@ item.daedric_helmet.name=Daedric Helmet
 item.daedric_chestplate.name=Daedric Chestplate
 item.daedric_leggings.name=Daedric Leggings
 item.daedric_boots.name=Daedric Boots
+
 item.steel_helmet.name=Steel Helmet
 item.steel_chestplate.name=Steel Chestplate
 item.steel_leggings.name=Steel Leggings
 item.steel_boots.name=Steel Boots
+
+item.dragon_heavy_helmet.name=Dragon Heavy Helmet
+item.dragon_heavy_chestplate.name=Dragon Heavy Chestplate
+item.dragon_heavy_leggings.name=Dragon Heavy Leggings
+item.dragon_heavy_boots.name=Dragon Heavy Boots
+
+item.dragon_light_helmet.name=Dragon Light Helmet
+item.dragon_light_chestplate.name=Dragon Light Chestplate
+item.dragon_light_leggings.name=Dragon Light Leggings
+item.dragon_light_boots.name=Dragon Light Boots
+
+item.orichalcum_helmet.name=Orichalcum Helmet
+item.orichalcum_chestplate.name=Orichalcum Chestplate
+item.orichalcum_leggings.name=Orichalcum Leggings
+item.orichalcum_boots.name=Orichalcum Boots
 
 	//Block//
 tile.ebony_ore.name=Ebony Ore

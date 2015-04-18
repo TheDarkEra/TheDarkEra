@@ -4,6 +4,8 @@ import net.minecraft.item.Item;
 
 import com.thedarkera.item.ItemAncientIngot;
 import com.thedarkera.item.ItemDaedraHeart;
+import com.thedarkera.item.ItemDragonBone;
+import com.thedarkera.item.ItemDragonScale;
 import com.thedarkera.item.ItemEbonyIngot;
 import com.thedarkera.item.ItemLeatherStrip;
 import com.thedarkera.item.ItemOrichalcumIngot;
@@ -20,6 +22,8 @@ public class TDEItems
 	public static Item soul_gem;
 	public static Item leather_strip;
 	public static Item daedra_heart;
+	public static Item dragon_bone;
+	public static Item dragon_scale;
 	
 		//Ingot items//
 	public static Item steel_ingot;
@@ -42,6 +46,11 @@ public class TDEItems
 		GameRegistry.registerItem(leather_strip, "Leather_Strip");
 		daedra_heart = new ItemDaedraHeart();
 		GameRegistry.registerItem(daedra_heart, "Daedra_Heart");
+		dragon_bone = new ItemDragonBone();
+		GameRegistry.registerItem(dragon_bone, "Dragon_Bone");
+		dragon_scale = new ItemDragonScale();
+		GameRegistry.registerItem(dragon_scale, "Dragon_Scale");
+		
 		
 		
 		//Ingot items init//
