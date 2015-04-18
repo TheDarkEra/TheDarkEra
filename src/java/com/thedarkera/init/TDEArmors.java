@@ -27,28 +27,28 @@ public class TDEArmors
 	public static Item steel_leggings;
 	public static Item steel_boots;
 	
-	static ArmorMaterial steel_armor = EnumHelper.addArmorMaterial("steel_armor", 20, new int[] { 3, 7, 6, 3 }, 10);
+	static ArmorMaterial steel_armor = EnumHelper.addArmorMaterial("steel_armor", 20, new int[] { 2, 5, 4, 2 }, 10);
 	
 	public static Item dragon_heavy_helmet;
 	public static Item dragon_heavy_chestplate;
 	public static Item dragon_heavy_leggings;
 	public static Item dragon_heavy_boots;
 	
-	static ArmorMaterial dragon_heavy_armor = EnumHelper.addArmorMaterial("dragon_heavy_armor", 20, new int[] { 3, 7, 6, 3 }, 10);
+	static ArmorMaterial dragon_heavy_armor = EnumHelper.addArmorMaterial("dragon_heavy_armor", 20, new int[] { 3, 7, 6, 4 }, 10);
 	
 	public static Item dragon_light_helmet;
 	public static Item dragon_light_chestplate;
 	public static Item dragon_light_leggings;
 	public static Item dragon_light_boots;
 	
-	static ArmorMaterial dragon_light_armor = EnumHelper.addArmorMaterial("dragon_light_armor", 20, new int[] { 3, 7, 6, 3 }, 10);
+	static ArmorMaterial dragon_light_armor = EnumHelper.addArmorMaterial("dragon_light_armor", 20, new int[] { 2, 5, 5, 3 }, 10);
 	
 	public static Item orichalcum_helmet;
 	public static Item orichalcum_chestplate;
 	public static Item orichalcum_leggings;
 	public static Item orichalcum_boots;
 	
-	static ArmorMaterial orichalcum_armor = EnumHelper.addArmorMaterial("orichalcum_armor", 20, new int[] { 3, 7, 6, 3 }, 10);
+	static ArmorMaterial orichalcum_armor = EnumHelper.addArmorMaterial("orichalcum_armor", 20, new int[] { 2, 6, 4, 3 }, 10);
 	
 	public static void init()
 	{
