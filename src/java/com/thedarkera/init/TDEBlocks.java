@@ -28,7 +28,7 @@ public class TDEBlocks
 		
 			//Plants//
 		grape_plant = new BlockGrapePlant();
-		GameRegistry.registerBlock(grape_plant, "Grape_Plant");
+		GameRegistry.registerBlock(grape_plant, grape_plant.getUnlocalizedName());
 		
 	}
 }

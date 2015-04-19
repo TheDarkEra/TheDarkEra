@@ -16,7 +16,7 @@ public class TDETools {
 	public static void init()
 	 {
 		ancient_pickaxe = new ItemAncientPickaxe(ancient, "ancient_pickaxe");
-		GameRegistry.registerItem(ancient_pickaxe, "Ancient_Pickaxe");
+		GameRegistry.registerItem(ancient_pickaxe, ancient_pickaxe.getUnlocalizedName());
 		 
 		 
 		 

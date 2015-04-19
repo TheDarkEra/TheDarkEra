@@ -43,33 +43,33 @@ public class TDEItems
 		soul_gem = new ItemSoulGem();
 		GameRegistry.registerItem(soul_gem, soul_gem.getUnlocalizedName());
 		leather_strip = new ItemLeatherStrip();
-		GameRegistry.registerItem(leather_strip, "Leather_Strip");
+		GameRegistry.registerItem(leather_strip, leather_strip.getUnlocalizedName());
 		daedra_heart = new ItemDaedraHeart();
-		GameRegistry.registerItem(daedra_heart, "Daedra_Heart");
+		GameRegistry.registerItem(daedra_heart, daedra_heart.getUnlocalizedName());
 		dragon_bone = new ItemDragonBone();
-		GameRegistry.registerItem(dragon_bone, "Dragon_Bone");
+		GameRegistry.registerItem(dragon_bone, dragon_bone.getUnlocalizedName());
 		dragon_scale = new ItemDragonScale();
-		GameRegistry.registerItem(dragon_scale, "Dragon_Scale");
+		GameRegistry.registerItem(dragon_scale, dragon_scale.getUnlocalizedName());
 		
 		
 		
 		//Ingot items init//
 		steel_ingot = new ItemSteelIngot();
-		GameRegistry.registerItem(steel_ingot, "Steel_Ingot");
+		GameRegistry.registerItem(steel_ingot, steel_ingot.getUnlocalizedName());
 		ebony_ingot = new ItemEbonyIngot();
-		GameRegistry.registerItem(ebony_ingot, "Ebony_Ingot");
+		GameRegistry.registerItem(ebony_ingot, ebony_ingot.getUnlocalizedName());
 		orichalcum_ingot = new ItemOrichalcumIngot();
-		GameRegistry.registerItem(orichalcum_ingot, "Orichalcum_Ingot");
+		GameRegistry.registerItem(orichalcum_ingot, orichalcum_ingot.getUnlocalizedName());
 		ancient_ingot = new ItemAncientIngot();
-		GameRegistry.registerItem(ancient_ingot, "Ancient_Ingot");
+		GameRegistry.registerItem(ancient_ingot, ancient_ingot.getUnlocalizedName());
 		
 		//Food items init//
 		grape = new ItemGrape(3, 0.3F, true, "grape");
-		GameRegistry.registerItem(grape, "Grape");
+		GameRegistry.registerItem(grape, grape.getUnlocalizedName());
 		
 		//Seed items//
 		grape_seed = new ItemGrapeSeed(TDEBlocks.grape_plant);
-		GameRegistry.registerItem(grape_seed, "Grape_Seed");
+		GameRegistry.registerItem(grape_seed, grape_seed.getUnlocalizedName());
 		
 	}
 }
