@@ -2,9 +2,11 @@ package com.thedarkera;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.DimensionManager;
 
 import org.apache.logging.log4j.Logger;
 
+import com.thedarkera.dimension.TDEWorldProvider;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBlocks;
@@ -14,7 +16,9 @@ import com.thedarkera.init.TDETools;
 import com.thedarkera.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -25,6 +29,8 @@ public class TheDarkEra
 	public static final String NAME = "The Dark Era";
 	public static final String MODID = "TheDarkEra";
 	public static final String VERSION = "1.7.10-A1"; //Alpha 1; feel free to change
+	
+	public static int dimension = 3;
 	
 	@Mod.Instance("thedarkera")
 	public static TheDarkEra instance;
@@ -71,4 +77,12 @@ public class TheDarkEra
 	{
 		
 	}
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event)
+	    {
+		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
+    	DimensionManager.registerDimension(dimension, dimension);
+		
+	    }
 }
