@@ -10,7 +10,8 @@ item.leather_strip.name=Leather Strip
 item.dragon_scale.name=Dragon Scale
 item.dragon_bone.name=Dragon Bone
 item.daedra_heart.name=Daedra Heart
-
+item.fire_rune.name=Fire Rune
+item.frost_rune.name=Frost Rune
 
 	//Item Ingot//
 item.ebony_ingot.name=Ebony Ingot
@@ -55,3 +56,6 @@ item.orichalcum_boots.name=Orichalcum Boots
 tile.ebony_ore.name=Ebony Ore
 tile.steel_ore.name=Steel Ore
 tile.steel_block.name=Steel Block
+tile.teleporter_dark.name=Dark Dimesion Teleporter
+tile.dark_portal.name=Dark Dimesion Portal
+
