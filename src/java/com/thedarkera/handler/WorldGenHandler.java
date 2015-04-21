@@ -2,6 +2,7 @@ package com.thedarkera.handler;
 
 import java.util.Random;
 
+import com.thedarkera.TheDarkEra;
 import com.thedarkera.generation.WorldGenGrapePlant;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
@@ -52,6 +53,8 @@ public class WorldGenHandler implements IWorldGenerator
                case -1: generateNether(world, random, chunkX * 16, chunkZ * 16);
                case 0: generateSurface(world, random, chunkX * 16, chunkZ * 16);
                case 1: generateEnd(world, random, chunkX * 16, chunkZ * 16);
+           
+           
         }
 	}
 	
@@ -83,7 +86,7 @@ public class WorldGenHandler implements IWorldGenerator
     {
  //   	addOreSpawn(ModBlocks.samStone, 0, Blocks.netherrack, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
     }
-    
+ 
     /**
      * Adds an Ore Spawn to Minecraft. Simply register all Ores to spawn with this method in your Generation method in your IWorldGeneration extending Class
      *
