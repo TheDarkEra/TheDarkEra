@@ -2,8 +2,10 @@ package com.thedarkera.init;
 
 import net.minecraft.block.Block;
 
+import com.thedarkera.block.BlockAncientOre;
 import com.thedarkera.block.BlockEbonyOre;
 import com.thedarkera.block.BlockGrapePlant;
+import com.thedarkera.block.BlockOrichalcumOre;
 import com.thedarkera.block.BlockPortalDark;
 import com.thedarkera.block.BlockSteel;
 import com.thedarkera.item.ItemSteelOre;
@@ -14,6 +16,8 @@ public class TDEBlocks
 {
 	public static Block ebony_ore;
 	public static Block steel_ore;
+	public static Block orichalcum_ore;
+	public static Block ancient_ore;
 	public static Block grape_plant;
 	public static Block dark_portal;
 	public static Block teleporter_dark;
@@ -23,6 +27,11 @@ public class TDEBlocks
 			//Blocks//
 		ebony_ore = new BlockEbonyOre();
 		GameRegistry.registerBlock(ebony_ore, ebony_ore.getUnlocalizedName());		
+		orichalcum_ore = new BlockOrichalcumOre();
+		GameRegistry.registerBlock(orichalcum_ore, orichalcum_ore.getUnlocalizedName());	
+		ancient_ore = new BlockAncientOre();
+		GameRegistry.registerBlock(ancient_ore, ancient_ore.getUnlocalizedName());	
+		
 		
 			// Meta Blocks//
 		steel_ore = new BlockSteel();	

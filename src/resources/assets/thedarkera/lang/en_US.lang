@@ -55,6 +55,8 @@ item.orichalcum_boots.name=Orichalcum Boots
 	//Block//
 tile.ebony_ore.name=Ebony Ore
 tile.steel_ore.name=Steel Ore
+tile.orichalcum_ore.name=Orichalcum Ore
+tile.ancient_ore.name=Ancient Ore
 tile.steel_block.name=Steel Block
 tile.teleporter_dark.name=Dark Dimesion Teleporter
 tile.dark_portal.name=Dark Dimesion Portal
