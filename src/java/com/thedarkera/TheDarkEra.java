@@ -83,6 +83,5 @@ public class TheDarkEra
 	    {
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
     	DimensionManager.registerDimension(dimension, dimension);
-		
 	    }
 }
