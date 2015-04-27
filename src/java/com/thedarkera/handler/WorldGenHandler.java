@@ -67,7 +67,9 @@ public class WorldGenHandler implements IWorldGenerator
     {
         addOreSpawn(TDEBlocks.ebony_ore, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
         addOreSpawn(TDEBlocks.steel_ore, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
-   
+        addOreSpawn(TDEBlocks.orichalcum_ore, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
+        addOreSpawn(TDEBlocks.ancient_ore, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
+
         for(int i = 0; i < 3; i++)
         {
         	int posX = x + random.nextInt(16);
