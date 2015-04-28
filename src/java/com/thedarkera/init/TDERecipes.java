@@ -24,8 +24,13 @@ public class TDERecipes
 		GameRegistry.addSmelting(TDEBlocks.ancient_ore, new ItemStack(TDEItems.ancient_ingot), 0.4F);
 		
 			//Armors//
-		
-		
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.daedric_chestplate), 
+				"Y Y",
+				"XXX",
+				"XXX",
+				'X', TDEItems.ebony_ingot, 'Y', TDEItems.leather_strip
+			);
+	
 		
 			//Tools//
 		GameRegistry.addRecipe(new ShapedOreRecipe(TDETools.ancient_pickaxe, 
