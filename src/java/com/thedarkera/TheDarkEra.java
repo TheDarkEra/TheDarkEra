@@ -65,7 +65,7 @@ public class TheDarkEra
 		@Override
 		public Item getTabIconItem()
 		{
-			return TDEItems.soul_gem;
+			return TDEArmors.daedric_helmet;
 		}
 	};
 	
