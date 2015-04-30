@@ -7,7 +7,7 @@ import net.minecraftforge.common.DimensionManager;
 import org.apache.logging.log4j.Logger;
 
 import com.thedarkera.dimension.TDEWorldProvider;
-import com.thedarkera.gui.GuiHandler;
+import com.thedarkera.handler.GuiHandler;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBlocks;
