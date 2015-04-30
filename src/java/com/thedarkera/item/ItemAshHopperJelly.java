@@ -6,7 +6,7 @@ import net.minecraft.item.Item;
 
 public class ItemAshHopperJelly extends Item{
 	
-String name = "ash_hopper_jelly";
+String name = "witch_feather";
 	
 	public ItemAshHopperJelly()
 	{

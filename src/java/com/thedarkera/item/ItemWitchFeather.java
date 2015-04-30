@@ -4,11 +4,11 @@ import com.thedarkera.TheDarkEra;
 
 import net.minecraft.item.Item;
 
-public class ItemAshHopperMeat extends Item{
+public class ItemWitchFeather extends Item{
 	
-String name = "ash_hopper_meat";
+String name = "ash_hopper_jelly";
 	
-	public ItemAshHopperMeat()
+	public ItemWitchFeather()
 	{
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);

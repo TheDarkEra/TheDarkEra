@@ -2,6 +2,8 @@ package com.thedarkera.init;
 
 import net.minecraft.item.Item;
 
+import com.thedarkera.item.ItemAshHopperJelly;
+import com.thedarkera.item.ItemAshHopperLeg;
 import com.thedarkera.item.ItemDaedraHeart;
 import com.thedarkera.item.ItemDarkStoneRod;
 import com.thedarkera.item.ItemDragonBone;
@@ -14,6 +16,8 @@ import com.thedarkera.item.ItemOrichalcumIngot;
 import com.thedarkera.item.ItemRottenWoodStick;
 import com.thedarkera.item.ItemSoulGem;
 import com.thedarkera.item.ItemSteelIngot;
+import com.thedarkera.item.ItemWitchFeather;
+import com.thedarkera.item.food.ItemAshHopperMeat;
 import com.thedarkera.item.food.ItemGrape;
 import com.thedarkera.item.food.ItemGrapeSeed;
 
@@ -22,6 +26,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class TDEItems
 {
 		//Misc items//
+	public static Item witch_feather;
+	public static Item ash_hopper_leg;
+	public static Item ash_hopper_jelly;
+	public static Item ash_hopper_meat;
 	public static Item rotten_wood_stick;
 	public static Item dark_stone_rod;
 	public static Item soul_gem;
@@ -47,6 +55,14 @@ public class TDEItems
 	public static void init()
 	{	
 		//Misc items init//
+		witch_feather = new ItemWitchFeather();
+		GameRegistry.registerItem(witch_feather, witch_feather.getUnlocalizedName());
+		ash_hopper_meat = new ItemAshHopperMeat(0, 0, true, "ash_hopper_meat");
+		GameRegistry.registerItem(ash_hopper_meat, ash_hopper_meat.getUnlocalizedName());
+		ash_hopper_jelly = new ItemAshHopperJelly();
+		GameRegistry.registerItem(ash_hopper_jelly, ash_hopper_jelly.getUnlocalizedName());
+		ash_hopper_leg = new ItemAshHopperLeg();
+		GameRegistry.registerItem(ash_hopper_leg, ash_hopper_leg.getUnlocalizedName());
 		rotten_wood_stick = new ItemRottenWoodStick();
 		GameRegistry.registerItem(rotten_wood_stick, rotten_wood_stick.getUnlocalizedName());
 		dark_stone_rod = new ItemDarkStoneRod();
