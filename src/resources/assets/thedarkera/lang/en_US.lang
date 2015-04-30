@@ -1,6 +1,7 @@
 itemGroup.the_dark_era=The Dark Era
 
 	//Item Misc//
+item.dark_stone_rod.name=Dark Stone Rod
 item.soul_gem_common.name=Common Soul Gem
 item.soul_gem_lesser.name=Lesser Soul Gem
 item.soul_gem_greater.name=Greater Soul Gem
@@ -53,6 +54,12 @@ item.orichalcum_leggings.name=Orichalcum Leggings
 item.orichalcum_boots.name=Orichalcum Boots
 
 	//Block//
+tile.dark_stone.name=Dark Stone
+tile.dark_cobblestone.name=Dark Cobblestone
+tile.dark_stone_bricks.name=Dark Stone Bricks
+tile.dark_stone_fence.name=Dark Stone Fence
+tile.dark_stone_slab.name=Dark Stone Slab
+tile.dark_stone_stairs.name=Dark Stone Stairs
 tile.ebony_ore.name=Ebony Ore
 tile.steel_ore.name=Steel Ore
 tile.orichalcum_ore.name=Orichalcum Ore

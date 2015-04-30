@@ -4,6 +4,7 @@ import net.minecraft.item.Item;
 
 import com.thedarkera.item.ItemAncientIngot;
 import com.thedarkera.item.ItemDaedraHeart;
+import com.thedarkera.item.ItemDarkStoneRod;
 import com.thedarkera.item.ItemDragonBone;
 import com.thedarkera.item.ItemDragonScale;
 import com.thedarkera.item.ItemEbonyIngot;
@@ -21,6 +22,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class TDEItems
 {
 		//Misc items//
+	public static Item dark_stone_rod;
 	public static Item soul_gem;
 	public static Item leather_strip;
 	public static Item daedra_heart;
@@ -44,6 +46,8 @@ public class TDEItems
 	public static void init()
 	{	
 		//Misc items init//
+		dark_stone_rod = new ItemDarkStoneRod();
+		GameRegistry.registerItem(dark_stone_rod, dark_stone_rod.getUnlocalizedName());
 		soul_gem = new ItemSoulGem();
 		GameRegistry.registerItem(soul_gem, soul_gem.getUnlocalizedName());
 		leather_strip = new ItemLeatherStrip();
