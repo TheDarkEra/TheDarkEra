@@ -7,13 +7,13 @@ import net.minecraftforge.common.DimensionManager;
 import org.apache.logging.log4j.Logger;
 
 import com.thedarkera.dimension.TDEWorldProvider;
-import com.thedarkera.handler.GuiHandler;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
 import com.thedarkera.init.TDERecipes;
 import com.thedarkera.init.TDETools;
+import com.thedarkera.init.TDEWeapons;
 import com.thedarkera.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
@@ -21,7 +21,6 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = TheDarkEra.MODID, name = TheDarkEra.NAME, version = TheDarkEra.VERSION)
@@ -58,6 +57,7 @@ public class TheDarkEra
 		TDEArmors.init();
 		TDERecipes.init();
 		TDETools.init();
+		TDEWeapons.init();
 		
 		GameRegistry.registerWorldGenerator(handler, 0);
 		

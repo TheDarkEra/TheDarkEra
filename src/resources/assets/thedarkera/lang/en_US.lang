@@ -1,6 +1,10 @@
 itemGroup.the_dark_era=The Dark Era
 
 	//Item Misc//
+item.ash_hopper_meat.name=Ash Hopper Meat
+item.ash_hopper_leg.name=Ash Hopper Leg
+item.ash_hopper_jelly.name=Ash Hopper Jelly
+item.witch_feather.name=Witch Feather
 item.rotten_wood_stick.name=Rotten Stick
 item.dark_stone_rod.name=Dark Stone Rod
 item.soul_gem_common.name=Common Soul Gem
@@ -20,6 +24,10 @@ item.ebony_ingot.name=Ebony Ingot
 item.steel_ingot.name=Steel Ingot
 item.ancient_ingot.name=Ancient Ingot
 item.orichalcum_ingot.name=Orichalcum Ingot	
+
+	//Item Weapon//
+item.steel_sword.name=Steel Sword
+item.dark_stone_sword.name=Dark Sword
 
 	//Item Tool//
 item.ancient_pickaxe.name=Ancient Pickaxe
