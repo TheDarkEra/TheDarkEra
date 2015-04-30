@@ -23,6 +23,17 @@ item.orichalcum_ingot.name=Orichalcum Ingot
 
 	//Item Tool//
 item.ancient_pickaxe.name=Ancient Pickaxe
+item.steel_pickaxe.name=Steel Pickaxe
+item.dark_stone_pickaxe.name=Dark Pickaxe
+item.ancient_axe.name=Ancient Axe
+item.steel_axe.name=Steel Axe
+item.dark_stone_axe.name=Dark Axe
+item.ancient_shovel.name=Ancient Shovel
+item.steel_shovel.name=Steel Shovel
+item.dark_stone_shovel.name=Dark Shovel
+item.ancient_hoe.name=Ancient Hoe
+item.steel_hoe.name=Steel Hoe
+item.dark_stone_hoe.name=Dark Hoe
 
 	//Item Food//
 item.grape.name=Grape
