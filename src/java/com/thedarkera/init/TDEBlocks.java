@@ -25,12 +25,17 @@ import com.thedarkera.block.BlockRottenWoodFence;
 import com.thedarkera.block.BlockRottenWoodSlab;
 import com.thedarkera.block.BlockRottenWoodStairs;
 import com.thedarkera.block.BlockSteel;
+import com.thedarkera.block.BlockWorkBench;
 import com.thedarkera.item.ItemSteelOre;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDEBlocks
 {
+	//Entity Blocks//
+	public static Block work_bench;
+	
+	//Blocks//
 	public static Block ebony_ore;
 	public static Block steel_ore;
 	public static Block orichalcum_ore;
@@ -58,6 +63,11 @@ public class TDEBlocks
 	
 	public static void init()
 	{
+		
+		//Entity Blocks//
+		work_bench = new BlockWorkBench();
+		GameRegistry.registerBlock(work_bench, work_bench.getUnlocalizedName());
+		
 			//Blocks//
 		ancientpickaxe_ore = new BlockAncientPickaxeOre();
 		GameRegistry.registerBlock(ancientpickaxe_ore, ancientpickaxe_ore.getUnlocalizedName());

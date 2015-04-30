@@ -7,6 +7,7 @@ import net.minecraftforge.common.DimensionManager;
 import org.apache.logging.log4j.Logger;
 
 import com.thedarkera.dimension.TDEWorldProvider;
+import com.thedarkera.gui.GuiHandler;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBlocks;
@@ -20,6 +21,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = TheDarkEra.MODID, name = TheDarkEra.NAME, version = TheDarkEra.VERSION)
@@ -28,12 +30,14 @@ public class TheDarkEra
 {
 	public static final String NAME = "The Dark Era";
 	public static final String MODID = "TheDarkEra";
-	public static final String VERSION = "1.7.10-A1"; //Alpha 1; feel free to change
+	public static final String VERSION = "1.7.10-A1.0"; //Alpha 1.0; feel free to change
 	
 	public static int dimension = 2;
 	
 	@Mod.Instance("thedarkera")
 	public static TheDarkEra instance;
+	
+	
 	
 	WorldGenHandler handler = new WorldGenHandler();
 	
@@ -57,7 +61,7 @@ public class TheDarkEra
 		
 		GameRegistry.registerWorldGenerator(handler, 0);
 		
-		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded successfully!");
+		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 1 successfully!");
 	}
 	
 	public static CreativeTabs tabTDE = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era")
@@ -69,19 +73,20 @@ public class TheDarkEra
 		}
 	};
 	
-	/*
-	 * Will be filled with Gui IDs.
-	 * With this we can get GuiID.EXAMPLE_GUI.ordinal() and get its corresponding gui id.
-	 */
-	public enum GuiID
-	{
-		
+	public enum GUIs {
+	    WORKBENCH
 	}
 	
 	@EventHandler
-	public void init(FMLInitializationEvent event)
-	    {
+	public void init(FMLInitializationEvent event){
+		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");
+		
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+		proxy.registerTileEntities();
+		
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
     	DimensionManager.registerDimension(dimension, dimension);
+    	
+    	logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 2 successfully!");
 	    }
 }
