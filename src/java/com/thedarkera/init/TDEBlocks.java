@@ -44,7 +44,6 @@ public class TDEBlocks
 		GameRegistry.registerBlock(ebony_ore, ebony_ore.getUnlocalizedName());		
 		orichalcum_ore = new BlockOrichalcumOre();
 		GameRegistry.registerBlock(orichalcum_ore, orichalcum_ore.getUnlocalizedName());	
-		GameRegistry.registerBlock(ancient_ore, ancient_ore.getUnlocalizedName());	
 		dark_stone = new BlockDarkStone();
 		GameRegistry.registerBlock(dark_stone, dark_stone.getUnlocalizedName());
 		dark_cobblestone = new BlockDarkCobblestone();
