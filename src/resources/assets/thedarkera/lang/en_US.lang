@@ -63,6 +63,7 @@ tile.dark_stone_stairs.name=Dark Stone Stairs
 tile.ebony_ore.name=Ebony Ore
 tile.steel_ore.name=Steel Ore
 tile.orichalcum_ore.name=Orichalcum Ore
+tile.ancientpickaxe_ore.name=Ancient Pickaxe within Ore
 tile.steel_block.name=Steel Block
 tile.teleporter_dark.name=Dark Dimesion Teleporter
 tile.dark_portal.name=Dark Dimesion Portal
