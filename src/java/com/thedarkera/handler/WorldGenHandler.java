@@ -2,22 +2,19 @@ package com.thedarkera.handler;
 
 import java.util.Random;
 
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.generation.WorldGenGrapePlant;
-import com.thedarkera.init.TDEBlocks;
-import com.thedarkera.init.TDEItems;
-
 import net.minecraft.block.Block;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.world.BlockEvent;
+
+import com.thedarkera.generation.WorldGenGrapePlant;
+import com.thedarkera.init.TDEBlocks;
+import com.thedarkera.init.TDEItems;
+
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
@@ -69,6 +66,9 @@ public class WorldGenHandler implements IWorldGenerator
         addOreSpawn(TDEBlocks.steel_ore, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
         addOreSpawn(TDEBlocks.orichalcum_ore, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
         addOreSpawn(TDEBlocks.ancientpickaxe_ore, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
+        addOreSpawn(TDEBlocks.ancientaxe_ore, 0, Blocks.stone, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60); //needs adjusting
+        addOreSpawn(TDEBlocks.ancientshovel_ore, 0, Blocks.sand, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60); //needs adjusting
+        addOreSpawn(TDEBlocks.ancienthoe_ore, 0, Blocks.dirt, world, random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60); //needs adjusting
 
         for(int i = 0; i < 3; i++)
         {
