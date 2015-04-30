@@ -3,13 +3,13 @@ package com.thedarkera.init;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-import com.thedarkera.block.BlockAncientOre;
 import com.thedarkera.block.BlockDarkCobblestone;
 import com.thedarkera.block.BlockDarkStone;
 import com.thedarkera.block.BlockDarkStoneBricks;
 import com.thedarkera.block.BlockDarkStoneFence;
 import com.thedarkera.block.BlockDarkStoneSlab;
 import com.thedarkera.block.BlockDarkStoneStairs;
+import com.thedarkera.block.BlockAncientPickaxeOre;
 import com.thedarkera.block.BlockEbonyOre;
 import com.thedarkera.block.BlockGrapePlant;
 import com.thedarkera.block.BlockOrichalcumOre;
@@ -24,7 +24,7 @@ public class TDEBlocks
 	public static Block ebony_ore;
 	public static Block steel_ore;
 	public static Block orichalcum_ore;
-	public static Block ancient_ore;
+	public static Block ancientpickaxe_ore;
 	public static Block grape_plant;
 	public static Block dark_portal;
 	public static Block teleporter_dark;
@@ -44,7 +44,6 @@ public class TDEBlocks
 		GameRegistry.registerBlock(ebony_ore, ebony_ore.getUnlocalizedName());		
 		orichalcum_ore = new BlockOrichalcumOre();
 		GameRegistry.registerBlock(orichalcum_ore, orichalcum_ore.getUnlocalizedName());	
-		ancient_ore = new BlockAncientOre();
 		GameRegistry.registerBlock(ancient_ore, ancient_ore.getUnlocalizedName());	
 		dark_stone = new BlockDarkStone();
 		GameRegistry.registerBlock(dark_stone, dark_stone.getUnlocalizedName());
@@ -58,7 +57,8 @@ public class TDEBlocks
 		GameRegistry.registerBlock(dark_stone_stairs, dark_stone_stairs.getUnlocalizedName());
 		dark_stone_slab = new BlockDarkStoneSlab(false, Material.rock);
 		GameRegistry.registerBlock(dark_stone_slab, dark_stone_slab.getUnlocalizedName());
-		
+		ancientpickaxe_ore = new BlockAncientPickaxeOre();
+		GameRegistry.registerBlock(ancientpickaxe_ore, ancientpickaxe_ore.getUnlocalizedName());	
 			// Meta Blocks//
 		steel_ore = new BlockSteel();	
 		GameRegistry.registerBlock(steel_ore, ItemSteelOre.class, steel_ore.getUnlocalizedName());
