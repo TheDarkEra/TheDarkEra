@@ -81,7 +81,7 @@ public class TheDarkEra
 	public void init(FMLInitializationEvent event){
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");
 		
-		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+		//NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 		proxy.registerTileEntities();
 		
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);

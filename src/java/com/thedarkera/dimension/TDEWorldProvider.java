@@ -50,7 +50,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 		@Override
 		public String getDimensionName()
 		{
-			return "The Dark Dimesion";
+			return "The Dark Dimension";
 		}
 
 		/**

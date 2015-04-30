@@ -66,6 +66,7 @@ item.orichalcum_leggings.name=Orichalcum Leggings
 item.orichalcum_boots.name=Orichalcum Boots
 
 	//Block//
+tile.work_bench.name=Work Bench
 tile.rotten_wood.name=Rotten Wood
 tile.rotten_wood_stairs.name=Rotten Stairs
 tile.rotten_wood_slab.name=Rotten Slab
