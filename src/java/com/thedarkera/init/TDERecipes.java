@@ -21,7 +21,7 @@ public class TDERecipes
 		GameRegistry.addSmelting(TDEBlocks.ebony_ore, new ItemStack(TDEItems.ebony_ingot), 0.8F);
 		GameRegistry.addSmelting(TDEBlocks.steel_ore, new ItemStack(TDEItems.steel_ingot), 0.4F);
 		GameRegistry.addSmelting(TDEBlocks.orichalcum_ore, new ItemStack(TDEItems.orichalcum_ingot), 0.5F);
-		GameRegistry.addSmelting(TDEBlocks.ancient_ore, new ItemStack(TDEItems.ancient_ingot), 0.4F);
+	
 		
 			//Armors//
 		GameRegistry.addRecipe(new ItemStack(TDEArmors.daedric_helmet), new Object[]{ 
@@ -54,11 +54,8 @@ public class TDERecipes
 	
 		
 			//Tools//
-		GameRegistry.addRecipe(new ShapedOreRecipe(TDETools.ancient_pickaxe, 
-				"XXX",
-				" Y ",
-				" Y ",
-				'X', "ancient_ingot", 'Y', Items.stick
-		));
+	
+	
+
 	}
 }
