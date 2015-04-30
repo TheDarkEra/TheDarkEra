@@ -3,6 +3,7 @@ package com.thedarkera.init;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
+import com.thedarkera.TheDarkEra;
 import com.thedarkera.block.BlockAncientAxeOre;
 import com.thedarkera.block.BlockAncientHoeOre;
 import com.thedarkera.block.BlockAncientPickaxeOre;
@@ -76,7 +77,7 @@ public class TDEBlocks
 		GameRegistry.registerBlock(dark_cobblestone, dark_cobblestone.getUnlocalizedName());
 		dark_stone_bricks = new BlockDarkStoneBricks();
 		GameRegistry.registerBlock(dark_stone_bricks, dark_stone_bricks.getUnlocalizedName());
-		dark_stone_fence = new BlockDarkStoneFence("dark_stone_fence");
+		dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
 		GameRegistry.registerBlock(dark_stone_fence, dark_stone_fence.getUnlocalizedName());
 		dark_stone_stairs = new BlockDarkStoneStairs(dark_stone, 0);
 		GameRegistry.registerBlock(dark_stone_stairs, dark_stone_stairs.getUnlocalizedName());
@@ -84,7 +85,7 @@ public class TDEBlocks
 		GameRegistry.registerBlock(dark_stone_slab, dark_stone_slab.getUnlocalizedName());
 		rotten_wood = new BlockRottenWood();
 		GameRegistry.registerBlock(rotten_wood, rotten_wood.getUnlocalizedName());
-		rotten_wood_fence = new BlockRottenWoodFence("rotten_wood_fence");
+		rotten_wood_fence = new BlockRottenWoodFence(TheDarkEra.MODID + ":rotting_wood");
 		GameRegistry.registerBlock(rotten_wood_fence, rotten_wood_fence.getUnlocalizedName());
 		rotten_wood_stairs = new BlockRottenWoodStairs(rotten_wood, 0);
 		GameRegistry.registerBlock(rotten_wood_stairs, rotten_wood_stairs.getUnlocalizedName());
