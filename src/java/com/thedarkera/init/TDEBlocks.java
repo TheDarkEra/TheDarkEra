@@ -14,6 +14,10 @@ import com.thedarkera.block.BlockEbonyOre;
 import com.thedarkera.block.BlockGrapePlant;
 import com.thedarkera.block.BlockOrichalcumOre;
 import com.thedarkera.block.BlockPortalDark;
+import com.thedarkera.block.BlockRottenWood;
+import com.thedarkera.block.BlockRottenWoodFence;
+import com.thedarkera.block.BlockRottenWoodSlab;
+import com.thedarkera.block.BlockRottenWoodStairs;
 import com.thedarkera.block.BlockSteel;
 import com.thedarkera.item.ItemSteelOre;
 
@@ -29,13 +33,17 @@ public class TDEBlocks
 	public static Block dark_portal;
 	public static Block teleporter_dark;
 	
-	//dark stone, may want to lower block id's using meta blocks//
+	//village blocks, may want to lower block id's using meta blocks//
 	public static Block dark_stone;
 	public static Block dark_cobblestone;
 	public static Block dark_stone_bricks;
 	public static Block dark_stone_fence;
 	public static Block dark_stone_stairs;
 	public static Block dark_stone_slab;
+	public static Block rotten_wood;
+	public static Block rotten_wood_stairs;
+	public static Block rotten_wood_slab;
+	public static Block rotten_wood_fence;
 	
 	public static void init()
 	{
@@ -57,7 +65,15 @@ public class TDEBlocks
 		dark_stone_slab = new BlockDarkStoneSlab(false, Material.rock);
 		GameRegistry.registerBlock(dark_stone_slab, dark_stone_slab.getUnlocalizedName());
 		ancientpickaxe_ore = new BlockAncientPickaxeOre();
-		GameRegistry.registerBlock(ancientpickaxe_ore, ancientpickaxe_ore.getUnlocalizedName());	
+		GameRegistry.registerBlock(ancientpickaxe_ore, ancientpickaxe_ore.getUnlocalizedName());
+		rotten_wood = new BlockRottenWood();
+		GameRegistry.registerBlock(rotten_wood, rotten_wood.getUnlocalizedName());
+		rotten_wood_fence = new BlockRottenWoodFence("rotten_wood_fence");
+		GameRegistry.registerBlock(rotten_wood_fence, rotten_wood_fence.getUnlocalizedName());
+		rotten_wood_stairs = new BlockRottenWoodStairs(rotten_wood, 0);
+		GameRegistry.registerBlock(rotten_wood_stairs, rotten_wood_stairs.getUnlocalizedName());
+		rotten_wood_slab = new BlockRottenWoodSlab(false, Material.wood);
+		GameRegistry.registerBlock(rotten_wood_slab, rotten_wood_slab.getUnlocalizedName());
 			// Meta Blocks//
 		steel_ore = new BlockSteel();	
 		GameRegistry.registerBlock(steel_ore, ItemSteelOre.class, steel_ore.getUnlocalizedName());

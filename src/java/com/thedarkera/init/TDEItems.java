@@ -11,6 +11,7 @@ import com.thedarkera.item.ItemFireRune;
 import com.thedarkera.item.ItemFrostRune;
 import com.thedarkera.item.ItemLeatherStrip;
 import com.thedarkera.item.ItemOrichalcumIngot;
+import com.thedarkera.item.ItemRottenWoodStick;
 import com.thedarkera.item.ItemSoulGem;
 import com.thedarkera.item.ItemSteelIngot;
 import com.thedarkera.item.food.ItemGrape;
@@ -21,6 +22,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class TDEItems
 {
 		//Misc items//
+	public static Item rotten_wood_stick;
 	public static Item dark_stone_rod;
 	public static Item soul_gem;
 	public static Item leather_strip;
@@ -45,6 +47,8 @@ public class TDEItems
 	public static void init()
 	{	
 		//Misc items init//
+		rotten_wood_stick = new ItemRottenWoodStick();
+		GameRegistry.registerItem(rotten_wood_stick, rotten_wood_stick.getUnlocalizedName());
 		dark_stone_rod = new ItemDarkStoneRod();
 		GameRegistry.registerItem(dark_stone_rod, dark_stone_rod.getUnlocalizedName());
 		soul_gem = new ItemSoulGem();
