@@ -21,20 +21,44 @@ public class TDERecipes
 			    'x', TDEBlocks.dark_stone
 		});
 		GameRegistry.addRecipe(new ItemStack(TDEBlocks.dark_stone_stairs, 6),  new Object[]{ 
-			   	"  x",
-			    " xx",
-			    "xxx",
-			    'x', TDEBlocks.dark_stone
+		   	"  x",
+		    " xx",
+		    "xxx",
+		    'x', TDEBlocks.dark_stone
 		});
+		GameRegistry.addRecipe(new ItemStack(TDEBlocks.rotten_wood_stairs, 6),  new Object[]{ 
+		   	"  x",
+		    " xx",
+		    "xxx",
+		    'x', TDEBlocks.rotten_wood
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEBlocks.rotten_wood_stairs, 6),  new Object[]{ 
+		   	"x  ",
+		    "xx ",
+		    "xxx",
+		    'x', TDEBlocks.rotten_wood
+		});
+		
 		GameRegistry.addRecipe(new ItemStack(TDEBlocks.dark_stone_slab, 3),  new Object[]{ 
-			    "xxx",
-			    'x', TDEBlocks.dark_stone
-		});
+		    "xxx",
+		    'x', TDEBlocks.dark_stone
+	});
+		GameRegistry.addRecipe(new ItemStack(TDEBlocks.rotten_wood_slab, 3),  new Object[]{ 
+		    "xxx",
+		    'x', TDEBlocks.rotten_wood
+	});
 		GameRegistry.addRecipe(new ItemStack(TDEBlocks.dark_stone_fence, 3),  new Object[]{ 
-			   	"xxx",
-			    "xxx",
-			    'x', TDEItems.dark_stone_rod
-		});
+		   	"xxx",
+		    "xxx",
+		    'x', TDEItems.dark_stone_rod
+	});
+		GameRegistry.addRecipe(new ItemStack(TDEBlocks.rotten_wood_fence, 3),  new Object[]{ 
+		   	"xxx",
+		    "xxx",
+		    'x', TDEItems.rotten_wood_stick
+	});
+		
+		GameRegistry.addSmelting(TDEBlocks.dark_cobblestone, new ItemStack(TDEBlocks.dark_stone), 0.2F);
 		
 			//Misc items//
 		GameRegistry.addRecipe(new ItemStack(TDEItems.leather_strip, 2), new Object[]{ 
@@ -44,12 +68,16 @@ public class TDERecipes
 			    'X', Items.leather
 		});
 		GameRegistry.addRecipe(new ItemStack(TDEItems.dark_stone_rod, 4),  new Object[]{ 
-			   	"x",
-			    "x",
-			    'x', TDEBlocks.dark_cobblestone
+		   	"x",
+		    "x",
+		    'x', TDEBlocks.dark_cobblestone
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEItems.rotten_wood_stick, 4),  new Object[]{ 
+		   	"x",
+		    "x",
+		    'x', TDEBlocks.rotten_wood
 		});
 		
-		GameRegistry.addSmelting(TDEBlocks.dark_cobblestone, new ItemStack(TDEBlocks.dark_stone), 0.2F);
 
 		
 			//Ingots//
