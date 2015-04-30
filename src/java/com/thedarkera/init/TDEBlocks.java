@@ -7,9 +7,11 @@ import com.thedarkera.block.BlockAncientPickaxeOre;
 import com.thedarkera.block.BlockDarkCobblestone;
 import com.thedarkera.block.BlockDarkStone;
 import com.thedarkera.block.BlockDarkStoneBricks;
+import com.thedarkera.block.BlockDarkStoneDirt;
 import com.thedarkera.block.BlockDarkStoneFence;
 import com.thedarkera.block.BlockDarkStoneSlab;
 import com.thedarkera.block.BlockDarkStoneStairs;
+import com.thedarkera.block.BlockDeadGrass;
 import com.thedarkera.block.BlockEbonyOre;
 import com.thedarkera.block.BlockGrapePlant;
 import com.thedarkera.block.BlockOrichalcumOre;
@@ -44,6 +46,8 @@ public class TDEBlocks
 	public static Block rotten_wood_stairs;
 	public static Block rotten_wood_slab;
 	public static Block rotten_wood_fence;
+	public static Block dead_grass;
+	public static Block dark_stone_dirt;
 	
 	public static void init()
 	{
@@ -74,6 +78,10 @@ public class TDEBlocks
 		GameRegistry.registerBlock(rotten_wood_stairs, rotten_wood_stairs.getUnlocalizedName());
 		rotten_wood_slab = new BlockRottenWoodSlab(false, Material.wood);
 		GameRegistry.registerBlock(rotten_wood_slab, rotten_wood_slab.getUnlocalizedName());
+		dead_grass = new BlockDeadGrass();
+		GameRegistry.registerBlock(dead_grass, dead_grass.getUnlocalizedName());
+		dark_stone_dirt = new BlockDarkStoneDirt();
+		GameRegistry.registerBlock(dark_stone_dirt, dark_stone_dirt.getUnlocalizedName());
 			// Meta Blocks//
 		steel_ore = new BlockSteel();	
 		GameRegistry.registerBlock(steel_ore, ItemSteelOre.class, steel_ore.getUnlocalizedName());
