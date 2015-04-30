@@ -10,12 +10,12 @@ public class TDERecipes
 	public static void init() 
 	{
 			//Misc items//
-		GameRegistry.addRecipe(new ItemStack(TDEItems.leather_strip, 2),
+		GameRegistry.addRecipe(new ItemStack(TDEItems.leather_strip, 2), new Object[]{ 
 			   	"  ",
 			    " X ",
 			    "  ",
 			    'X', Items.leather
-			);
+		});
 		
 			//Ingots//
 		GameRegistry.addSmelting(TDEBlocks.ebony_ore, new ItemStack(TDEItems.ebony_ingot), 0.8F);
@@ -24,12 +24,33 @@ public class TDERecipes
 		GameRegistry.addSmelting(TDEBlocks.ancient_ore, new ItemStack(TDEItems.ancient_ingot), 0.4F);
 		
 			//Armors//
-		GameRegistry.addRecipe(new ItemStack(TDEArmors.daedric_chestplate), 
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.daedric_helmet), new Object[]{ 
+				"XXX",
+				"Y Y",
+				"   ",
+				'X', TDEItems.ebony_ingot, 'Y', TDEItems.leather_strip
+		});
+		
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.daedric_chestplate),new Object[]{  
 				"Y Y",
 				"XXX",
 				"XXX",
 				'X', TDEItems.ebony_ingot, 'Y', TDEItems.leather_strip
-			);
+		});
+		
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.daedric_leggings), new Object[]{ 
+				"XXX",
+				"X X",
+				"Y Y",
+				'X', TDEItems.ebony_ingot, 'Y', TDEItems.leather_strip
+		});
+		
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.daedric_boots), new Object[]{ 
+				"   ",
+				"X X",
+				"Y Y",
+				'X', TDEItems.ebony_ingot, 'Y', TDEItems.leather_strip
+		});
 	
 		
 			//Tools//
