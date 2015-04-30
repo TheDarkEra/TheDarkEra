@@ -141,7 +141,90 @@ public class TDERecipes
 	
 		
 			//Tools//
-	
+		GameRegistry.addRecipe(new ItemStack(TDETools.steel_pickaxe), new Object[]{ 
+			"xxx",
+			" y ",
+			" y ",
+			'X', TDEItems.steel_ingot, 'Y', Items.stick
+		});
+		
+		GameRegistry.addRecipe(new ItemStack(TDETools.dark_stone_pickaxe), new Object[]{ 
+			"xxx",
+			" y ",
+			" y ",
+			'X', TDEBlocks.dark_cobblestone, 'Y', Items.stick
+		});
+
+		GameRegistry.addRecipe(new ItemStack(TDETools.steel_axe), new Object[]{ 
+			"xx",
+			"xy",
+			" y",
+			'X', TDEItems.steel_ingot, 'Y', Items.stick
+		});
+
+		GameRegistry.addRecipe(new ItemStack(TDETools.steel_axe), new Object[]{ 
+			"xx",
+			"yx",
+			"y ",
+			'X', TDEItems.steel_ingot, 'Y', Items.stick
+		});
+
+		GameRegistry.addRecipe(new ItemStack(TDETools.dark_stone_axe), new Object[]{ 
+			"xx ",
+			"xy ",
+			" y ",
+			'X', TDEBlocks.dark_cobblestone, 'Y', Items.stick
+		});
+
+		GameRegistry.addRecipe(new ItemStack(TDETools.dark_stone_axe), new Object[]{ 
+			"xx",
+			"yx",
+			"y ",
+			'X', TDEBlocks.dark_cobblestone, 'Y', Items.stick
+		});
+
+		GameRegistry.addRecipe(new ItemStack(TDETools.dark_stone_shovel), new Object[]{ 
+			"x",
+			"y",
+			"y",
+			'X', TDEBlocks.dark_cobblestone, 'Y', Items.stick
+		});
+		
+		GameRegistry.addRecipe(new ItemStack(TDETools.steel_shovel), new Object[]{ 
+			"x",
+			"y",
+			"y",
+			'X', TDEItems.steel_ingot, 'Y', Items.stick
+		});
+
+		GameRegistry.addRecipe(new ItemStack(TDETools.dark_stone_hoe), new Object[]{ 
+			"xx",
+			"y ",
+			"y ",
+			'X', TDEBlocks.dark_cobblestone, 'Y', Items.stick
+		});
+
+		GameRegistry.addRecipe(new ItemStack(TDETools.dark_stone_hoe), new Object[]{ 
+			"xx",
+			" y",
+			" y",
+			'X', TDEBlocks.dark_cobblestone, 'Y', Items.stick
+		});
+
+		GameRegistry.addRecipe(new ItemStack(TDETools.steel_hoe), new Object[]{ 
+			"xx",
+			" y",
+			" y",
+			'X', TDEItems.steel_ingot, 'Y', Items.stick
+		});
+
+		GameRegistry.addRecipe(new ItemStack(TDETools.steel_hoe), new Object[]{ 
+			"xx",
+			"y ",
+			"y ",
+			'X', TDEItems.steel_ingot, 'Y', Items.stick
+		});
+		
 	
 
 	}
