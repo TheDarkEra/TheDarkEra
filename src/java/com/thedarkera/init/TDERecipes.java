@@ -90,25 +90,25 @@ public class TDERecipes
 			"Y Y",
 			"   ",
 			'X', TDEItems.steel_ingot, 'Y', TDEItems.leather_strip
-	});
-	GameRegistry.addRecipe(new ItemStack(TDEArmors.steel_chestplate),new Object[]{  
-			"Y Y",
-			"XXX",
-			"XXX",
-			'X', TDEItems.steel_ingot, 'Y', TDEItems.leather_strip
-	});
-	GameRegistry.addRecipe(new ItemStack(TDEArmors.steel_leggings), new Object[]{ 
-			"XXX",
-			"X X",
-			"Y Y",
-			'X', TDEItems.steel_ingot, 'Y', TDEItems.leather_strip
-	});
-	GameRegistry.addRecipe(new ItemStack(TDEArmors.steel_boots), new Object[]{ 
-			"   ",
-			"X X",
-			"Y Y",
-			'X', TDEItems.steel_ingot, 'Y', TDEItems.leather_strip
-	});
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.steel_chestplate),new Object[]{  
+				"Y Y",
+				"XXX",
+				"XXX",
+				'X', TDEItems.steel_ingot, 'Y', TDEItems.leather_strip
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.steel_leggings), new Object[]{ 
+				"XXX",
+				"X X",
+				"Y Y",
+				'X', TDEItems.steel_ingot, 'Y', TDEItems.leather_strip
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.steel_boots), new Object[]{ 
+				"   ",
+				"X X",
+				"Y Y",
+				'X', TDEItems.steel_ingot, 'Y', TDEItems.leather_strip
+		});
 
 	
 		
