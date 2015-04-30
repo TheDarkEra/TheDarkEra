@@ -57,7 +57,7 @@ public class TDEItems
 		//Misc items init//
 		witch_feather = new ItemWitchFeather();
 		GameRegistry.registerItem(witch_feather, witch_feather.getUnlocalizedName());
-		ash_hopper_meat = new ItemAshHopperMeat(0, 0, true, "ash_hopper_meat");
+		ash_hopper_meat = new ItemAshHopperMeat(3, 0.3F, true, "ash_hopper_meat");
 		GameRegistry.registerItem(ash_hopper_meat, ash_hopper_meat.getUnlocalizedName());
 		ash_hopper_jelly = new ItemAshHopperJelly();
 		GameRegistry.registerItem(ash_hopper_jelly, ash_hopper_jelly.getUnlocalizedName());
