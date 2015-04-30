@@ -3,13 +3,13 @@ package com.thedarkera.init;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
+import com.thedarkera.block.BlockAncientPickaxeOre;
 import com.thedarkera.block.BlockDarkCobblestone;
 import com.thedarkera.block.BlockDarkStone;
 import com.thedarkera.block.BlockDarkStoneBricks;
 import com.thedarkera.block.BlockDarkStoneFence;
 import com.thedarkera.block.BlockDarkStoneSlab;
 import com.thedarkera.block.BlockDarkStoneStairs;
-import com.thedarkera.block.BlockAncientPickaxeOre;
 import com.thedarkera.block.BlockEbonyOre;
 import com.thedarkera.block.BlockGrapePlant;
 import com.thedarkera.block.BlockOrichalcumOre;
@@ -44,7 +44,6 @@ public class TDEBlocks
 		GameRegistry.registerBlock(ebony_ore, ebony_ore.getUnlocalizedName());		
 		orichalcum_ore = new BlockOrichalcumOre();
 		GameRegistry.registerBlock(orichalcum_ore, orichalcum_ore.getUnlocalizedName());	
-		GameRegistry.registerBlock(ancient_ore, ancient_ore.getUnlocalizedName());	
 		dark_stone = new BlockDarkStone();
 		GameRegistry.registerBlock(dark_stone, dark_stone.getUnlocalizedName());
 		dark_cobblestone = new BlockDarkCobblestone();
