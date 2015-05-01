@@ -18,6 +18,7 @@ item.dragon_bone.name=Dragon Bone
 item.daedra_heart.name=Daedra Heart
 item.fire_rune.name=Fire Rune
 item.frost_rune.name=Frost Rune
+item.lightning_rune.name=Lightning Rune
 
 	//Item Ingot//
 item.ebony_ingot.name=Ebony Ingot
@@ -29,6 +30,7 @@ item.orichalcum_ingot.name=Orichalcum Ingot
 item.steel_sword.name=Steel Sword
 item.dark_stone_sword.name=Dark Sword
 item.daedric_bow.name=Daedric Bow
+item.daedric_arrow.name=Daedric Arrow
 
 	//Item Tool//
 item.ancient_pickaxe.name=Ancient Pickaxe
@@ -73,6 +75,11 @@ item.orichalcum_helmet.name=Orichalcum Helmet
 item.orichalcum_chestplate.name=Orichalcum Chestplate
 item.orichalcum_leggings.name=Orichalcum Leggings
 item.orichalcum_boots.name=Orichalcum Boots
+
+item.ancient_helmet.name=Ancient Helmet
+item.ancient_chestplate.name=Ancient Chestplate
+item.ancient_leggings.name=Ancient Leggings
+item.ancient_boots.name=Ancient Boots
 
 	//Block//
 tile.work_bench.name=Work Bench
