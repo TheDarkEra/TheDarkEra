@@ -3,13 +3,17 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+
+import com.thedarkera.item.weapon.ItemDaedricBow;
 import com.thedarkera.item.weapon.ItemModSword;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDEWeapons {
 	
 	public static Item steel_sword;
 	public static Item dark_stone_sword;
+	public static Item daedric_bow;
 	
 	//harvestLevel, maxUses, efficiencyOnProperMaterial, damageVsEntity, enchantability
 	//static ToolMaterial  = EnumHelper.addToolMaterial("", );
@@ -23,7 +27,10 @@ public class TDEWeapons {
 		GameRegistry.registerItem(steel_sword, steel_sword.getUnlocalizedName());
 		dark_stone_sword = new ItemModSword(dark_stone, "dark_stone_sword");
 		GameRegistry.registerItem(dark_stone_sword, dark_stone_sword.getUnlocalizedName());
+		//Bows
+		daedric_bow = new ItemDaedricBow("daedric_bow");
+		GameRegistry.registerItem(daedric_bow, daedric_bow.getUnlocalizedName());
 		
-
+		
 	 }
 }
