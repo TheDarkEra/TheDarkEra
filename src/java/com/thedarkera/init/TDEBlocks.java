@@ -13,6 +13,7 @@ import com.thedarkera.block.BlockDarkStone;
 import com.thedarkera.block.BlockDarkStoneBricks;
 import com.thedarkera.block.BlockDarkStoneDirt;
 import com.thedarkera.block.BlockDarkStoneFence;
+import com.thedarkera.block.BlockDarkStoneLadder;
 import com.thedarkera.block.BlockDarkStoneSlab;
 import com.thedarkera.block.BlockDarkStoneStairs;
 import com.thedarkera.block.BlockDeadGrass;
@@ -48,6 +49,7 @@ public class TDEBlocks
 	public static Block teleporter_dark;
 	
 	//village blocks, may want to lower block id's using meta blocks//
+	public static Block dark_stone_ladder;
 	public static Block dark_stone;
 	public static Block dark_cobblestone;
 	public static Block dark_stone_bricks;
@@ -81,6 +83,8 @@ public class TDEBlocks
 		GameRegistry.registerBlock(ebony_ore, ebony_ore.getUnlocalizedName());		
 		orichalcum_ore = new BlockOrichalcumOre();
 		GameRegistry.registerBlock(orichalcum_ore, orichalcum_ore.getUnlocalizedName());	
+		dark_stone_ladder = new BlockDarkStoneLadder();
+		GameRegistry.registerBlock(dark_stone_ladder, dark_stone_ladder.getUnlocalizedName());
 		dark_stone = new BlockDarkStone();
 		GameRegistry.registerBlock(dark_stone, dark_stone.getUnlocalizedName());
 		dark_cobblestone = new BlockDarkCobblestone();

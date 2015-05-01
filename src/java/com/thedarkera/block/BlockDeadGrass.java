@@ -16,7 +16,6 @@ public class BlockDeadGrass extends Block{
 	public BlockDeadGrass(){
 		super(Material.grass);
 		setBlockName(name);
-		setBlockTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);
 		setHardness(0.4F);
 		setStepSound(soundTypeGrass);
@@ -49,9 +48,5 @@ public class BlockDeadGrass extends Block{
 	public IIcon getIcon(int side, int meta) {
 	    return icons[side];
 	}
-	/**
-	 * Future:
-	 * Needs to have dirt texture on sides, bottom and dead_grass on top.
-	 */
 
 }
