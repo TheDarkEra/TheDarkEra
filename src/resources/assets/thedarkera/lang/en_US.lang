@@ -28,6 +28,7 @@ item.orichalcum_ingot.name=Orichalcum Ingot
 	//Item Weapon//
 item.steel_sword.name=Steel Sword
 item.dark_stone_sword.name=Dark Sword
+item.daedric_bow.name=Daedric Bow
 
 	//Item Tool//
 item.ancient_pickaxe.name=Ancient Pickaxe

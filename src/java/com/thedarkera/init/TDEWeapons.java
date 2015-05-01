@@ -4,6 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
+import com.thedarkera.item.weapon.ItemDaedricArrow;
 import com.thedarkera.item.weapon.ItemDaedricBow;
 import com.thedarkera.item.weapon.ItemModSword;
 
@@ -14,6 +15,7 @@ public class TDEWeapons {
 	public static Item steel_sword;
 	public static Item dark_stone_sword;
 	public static Item daedric_bow;
+	public static Item daedric_arrow;
 	
 	//harvestLevel, maxUses, efficiencyOnProperMaterial, damageVsEntity, enchantability
 	//static ToolMaterial  = EnumHelper.addToolMaterial("", );
@@ -30,6 +32,9 @@ public class TDEWeapons {
 		//Bows
 		daedric_bow = new ItemDaedricBow("daedric_bow");
 		GameRegistry.registerItem(daedric_bow, daedric_bow.getUnlocalizedName());
+		//Arrows
+		daedric_arrow = new ItemDaedricArrow("daedric_arrow");
+		GameRegistry.registerItem(daedric_arrow, daedric_arrow.getUnlocalizedName());
 		
 		
 	 }
