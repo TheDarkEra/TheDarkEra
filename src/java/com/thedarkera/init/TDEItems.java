@@ -12,6 +12,7 @@ import com.thedarkera.item.ItemEbonyIngot;
 import com.thedarkera.item.ItemFireRune;
 import com.thedarkera.item.ItemFrostRune;
 import com.thedarkera.item.ItemLeatherStrip;
+import com.thedarkera.item.ItemLightningRune;
 import com.thedarkera.item.ItemOrichalcumIngot;
 import com.thedarkera.item.ItemRottenWoodStick;
 import com.thedarkera.item.ItemSoulGem;
@@ -39,6 +40,7 @@ public class TDEItems
 	public static Item dragon_scale;
 	public static Item fire_rune;
 	public static Item frost_rune;
+	public static Item lightning_rune;
 	
 		//Ingot items//
 	public static Item steel_ingot;
@@ -81,6 +83,8 @@ public class TDEItems
 		GameRegistry.registerItem(fire_rune, fire_rune.getUnlocalizedName());
 		frost_rune = new ItemFrostRune();
 		GameRegistry.registerItem(frost_rune, frost_rune.getUnlocalizedName());
+		lightning_rune = new ItemLightningRune();
+		GameRegistry.registerItem(lightning_rune, lightning_rune.getUnlocalizedName());
 		
 		
 		//Ingot items init//

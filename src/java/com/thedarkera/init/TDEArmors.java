@@ -4,6 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
+import com.thedarkera.item.armor.ItemAncientArmor;
 import com.thedarkera.item.armor.ItemDaedricArmor;
 import com.thedarkera.item.armor.ItemDragonHeavyArmor;
 import com.thedarkera.item.armor.ItemDragonLightArmor;
@@ -49,6 +50,13 @@ public class TDEArmors
 	public static Item orichalcum_boots;
 	
 	static ArmorMaterial orichalcum_armor = EnumHelper.addArmorMaterial("orichalcum_armor", 20, new int[] { 2, 6, 4, 3 }, 10);
+	
+	public static Item ancient_helmet;
+	public static Item ancient_chestplate;
+	public static Item ancient_leggings;
+	public static Item ancient_boots;
+	
+	static ArmorMaterial ancient_armor = EnumHelper.addArmorMaterial("ancient_armor", 20, new int[] { 2, 6, 4, 3 }, 10);
 	
 	public static void init()
 	{
@@ -97,6 +105,15 @@ public class TDEArmors
 		GameRegistry.registerItem(orichalcum_leggings, orichalcum_leggings.getUnlocalizedName());
 		orichalcum_boots = new ItemSteelArmor(orichalcum_armor, 3, "orichalcum_boots");
 		GameRegistry.registerItem(orichalcum_boots, orichalcum_boots.getUnlocalizedName());
+			//Ancient Armor//
+		ancient_helmet = new ItemAncientArmor(ancient_armor, 0, "ancient_helmet");
+		GameRegistry.registerItem(ancient_helmet, ancient_helmet.getUnlocalizedName());
+		ancient_chestplate = new ItemAncientArmor(ancient_armor, 1, "ancient_chestplate");
+		GameRegistry.registerItem(ancient_chestplate, ancient_chestplate.getUnlocalizedName());
+		ancient_leggings = new ItemAncientArmor(ancient_armor, 2, "ancient_leggings");
+		GameRegistry.registerItem(ancient_leggings, ancient_leggings.getUnlocalizedName());
+		ancient_boots = new ItemAncientArmor(ancient_armor, 3, "ancient_boots");
+		GameRegistry.registerItem(ancient_boots, ancient_boots.getUnlocalizedName());
 
 	}
 
