@@ -1,4 +1,4 @@
-package com.thedarkera.entity;
+package com.thedarkera.tileentity;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -7,7 +7,7 @@ import net.minecraft.world.World;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.TheDarkEra.GUIs;
 
-public class TileEntityWorkBench extends TileEntity{
+public class TEWorkBench extends TileEntity{
 	
 	public static final String publicName = "tileEntityWorkBench";
     private String name = "tileEntityWorkBench";

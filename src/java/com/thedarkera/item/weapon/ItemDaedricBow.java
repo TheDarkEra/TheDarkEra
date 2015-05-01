@@ -1,6 +1,7 @@
 package com.thedarkera.item.weapon;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.entity.EntityDaedricArrow;
 import com.thedarkera.init.TDEWeapons;
 
 import net.minecraft.item.EnumAction;
@@ -69,7 +70,7 @@ import net.minecraftforge.event.entity.player.ArrowNockEvent;
 	                f = 1.0F;
 	            }
 
-	            ItemTEDaedricArrow entityarrow = new ItemTEDaedricArrow(p_77615_2_, p_77615_3_, f * 2.0F);
+	            EntityDaedricArrow entityarrow = new EntityDaedricArrow(p_77615_2_, p_77615_3_, f * 2.0F);
 
 	            if (f == 1.0F)
 	            {

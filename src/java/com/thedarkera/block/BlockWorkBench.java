@@ -7,12 +7,12 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.entity.TileEntityWorkBench;
+import com.thedarkera.tileentity.TEWorkBench;
 
 public class BlockWorkBench extends Block implements ITileEntityProvider{
 
 String name = "work_bench";
-	
+
 	public BlockWorkBench()
 	{
 		super(Material.wood);
@@ -25,14 +25,13 @@ String name = "work_bench";
 		setHarvestLevel("axe", 0);
 	}
 
-	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
-        return new TileEntityWorkBench();
+        return new TEWorkBench();
     }
- 
+
     @Override
     public boolean hasTileEntity(int metadata) {
- 
+
         return true;
     }
 
