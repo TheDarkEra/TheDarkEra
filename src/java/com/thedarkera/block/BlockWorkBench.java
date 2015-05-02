@@ -36,16 +36,16 @@ public class BlockWorkBench extends Block implements ITileEntityProvider{
 	        icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + name + "_top");
 	    }
 		for (int i = 2; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + name);
+	        icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + name + "_sides");
 	    }
 		for (int i = 3; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + name);
+	        icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + name + "_sides");
 	    }
 		for (int i = 4; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + name);
+	        icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + name + "_sides");
 	    }
 		for (int i = 5; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + name);
+	        icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + name + "_sides");
 	    }
 	}
 	
