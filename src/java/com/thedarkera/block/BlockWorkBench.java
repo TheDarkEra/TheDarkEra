@@ -65,3 +65,19 @@ public class BlockWorkBench extends Block implements ITileEntityProvider{
     }
 
 }
+
+/**
+ * I have Modelled the workbench and double workbench.
+ * 
+ * When one workbench is placed it needs to use the ModelWorkBench.
+ * When 2 are placed next to each other it needs to use ModelDoubleWorkBenchOne and ModelDoubleWorkBenchTwo. (These may need to be rotated.)
+ * I have put the texture templates in the textures folder, If you need help knowing what part is what position on the texture template just ask.
+ * 
+ * Please Note: I have commented line 84 out of TheDarkEra.java. This is the registerGuiHandler class, this is causing a crash when the game is launched and needs to be looked at.
+ * Once this is fixed the Gui for the workbench should work. The Gui still needs a few things set up after it is working.
+ * 
+ * Thanks
+ * - Blurr
+ */
+
+
