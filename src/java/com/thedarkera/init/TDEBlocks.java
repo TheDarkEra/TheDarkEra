@@ -129,7 +129,7 @@ public class TDEBlocks
 		GameRegistry.registerBlock(teleporter_dark, teleporter_dark.getUnlocalizedName());
 		
 			//Tree blocks//
-		GameRegistry.registerBlock(dark_birch_wood, dark_birch_wood.getUnlocalizedName());
 		dark_birch_wood = new BlockDarkBirchWood();
+		GameRegistry.registerBlock(dark_birch_wood, dark_birch_wood.getUnlocalizedName());
 	}
 }
