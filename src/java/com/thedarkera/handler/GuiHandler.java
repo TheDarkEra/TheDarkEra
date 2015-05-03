@@ -1,6 +1,6 @@
 package com.thedarkera.handler;
 
-import com.thedarkera.TheDarkEra.GUIs;
+import com.thedarkera.block.BlockSmasherTE.GUIs;
 import com.thedarkera.gui.GuiSmasher;
 
 import net.minecraft.entity.player.EntityPlayer;
