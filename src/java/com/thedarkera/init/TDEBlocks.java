@@ -25,6 +25,7 @@ import com.thedarkera.block.BlockOrichalcumOre;
 import com.thedarkera.block.BlockPortalDark;
 import com.thedarkera.block.BlockRottenWood;
 import com.thedarkera.block.BlockRottenWoodFence;
+import com.thedarkera.block.BlockRottenWoodLog;
 import com.thedarkera.block.BlockRottenWoodSlab;
 import com.thedarkera.block.BlockRottenWoodStairs;
 import com.thedarkera.block.BlockSteel;
@@ -68,6 +69,7 @@ public class TDEBlocks
 	
 	//Tree blocks//
 	public static Block dark_birch_wood;
+	public static Block rotten_wood_log;
 	
 	public static void init()
 	{
@@ -136,5 +138,7 @@ public class TDEBlocks
 			//Tree blocks//
 		dark_birch_wood = new BlockDarkBirchWood();
 		GameRegistry.registerBlock(dark_birch_wood, dark_birch_wood.getUnlocalizedName());
+		rotten_wood_log = new BlockRottenWoodLog(Material.wood);
+		GameRegistry.registerBlock(rotten_wood_log, rotten_wood_log.getUnlocalizedName());
 	}
 }
