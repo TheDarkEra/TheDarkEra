@@ -28,7 +28,6 @@ import com.thedarkera.block.BlockRottenWoodFence;
 import com.thedarkera.block.BlockRottenWoodLog;
 import com.thedarkera.block.BlockRottenWoodSlab;
 import com.thedarkera.block.BlockRottenWoodStairs;
-import com.thedarkera.block.BlockSmasherTE;
 import com.thedarkera.block.BlockSteel;
 import com.thedarkera.item.ItemSteelOre;
 
@@ -37,7 +36,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class TDEBlocks
 {
 	//Entity Blocks//
-	public static Block smasher;
 	
 	//Blocks//
 	public static Block ebony_ore;
@@ -75,8 +73,8 @@ public class TDEBlocks
 	{
 		
 			//Entity Blocks//
-		smasher = new BlockSmasherTE();
-		GameRegistry.registerBlock(smasher, smasher.getUnlocalizedName());
+		
+		
 			//Blocks//
 		ancientpickaxe_ore = new BlockAncientPickaxeOre();
 		GameRegistry.registerBlock(ancientpickaxe_ore, ancientpickaxe_ore.getUnlocalizedName());
