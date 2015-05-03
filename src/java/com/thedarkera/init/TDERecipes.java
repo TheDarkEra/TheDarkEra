@@ -84,6 +84,7 @@ public class TDERecipes
 		GameRegistry.addSmelting(TDEBlocks.ebony_ore, new ItemStack(TDEItems.ebony_ingot), 0.8F);
 		GameRegistry.addSmelting(TDEBlocks.steel_ore, new ItemStack(TDEItems.steel_ingot), 0.4F);
 		GameRegistry.addSmelting(TDEBlocks.orichalcum_ore, new ItemStack(TDEItems.orichalcum_ingot), 0.5F);
+		GameRegistry.addSmelting(TDEBlocks.orichalcum_ore, new ItemStack(TDEItems.ancient_ingot), 0.5F);
 	
 		
 			//Armors//
@@ -137,7 +138,32 @@ public class TDERecipes
 				"Y Y",
 				'X', TDEItems.steel_ingot, 'Y', TDEItems.leather_strip
 		});
-
+				//Ancient Armor//
+		//Steel armor//
+	GameRegistry.addRecipe(new ItemStack(TDEArmors.ancient_helmet), new Object[]{ 
+		"XXX",
+		"Y Y",
+		"   ",
+		'X', TDEItems.ancient_ingot, 'Y', TDEItems.leather_strip
+	});
+	GameRegistry.addRecipe(new ItemStack(TDEArmors.ancient_chestplate),new Object[]{  
+			"Y Y",
+			"XXX",
+			"XXX",
+			'X', TDEItems.ancient_ingot, 'Y', TDEItems.leather_strip
+	});
+	GameRegistry.addRecipe(new ItemStack(TDEArmors.ancient_leggings), new Object[]{ 
+			"XXX",
+			"X X",
+			"Y Y",
+			'X', TDEItems.ancient_ingot, 'Y', TDEItems.leather_strip
+	});
+	GameRegistry.addRecipe(new ItemStack(TDEArmors.ancient_boots), new Object[]{ 
+			"   ",
+			"X X",
+			"Y Y",
+			'X', TDEItems.ancient_ingot, 'Y', TDEItems.leather_strip
+	});
 	
 		
 			//Tools//
