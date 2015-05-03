@@ -2,6 +2,7 @@ package com.thedarkera.init;
 
 import net.minecraft.item.Item;
 
+import com.thedarkera.item.ItemAncientIngot;
 import com.thedarkera.item.ItemAshHopperJelly;
 import com.thedarkera.item.ItemAshHopperLeg;
 import com.thedarkera.item.ItemDaedraHeart;
@@ -46,6 +47,7 @@ public class TDEItems
 	public static Item steel_ingot;
 	public static Item ebony_ingot;
 	public static Item orichalcum_ingot;
+	public static Item ancient_ingot;
 	
 		
 		//Food items//
@@ -94,6 +96,8 @@ public class TDEItems
 		GameRegistry.registerItem(ebony_ingot, ebony_ingot.getUnlocalizedName());
 		orichalcum_ingot = new ItemOrichalcumIngot();
 		GameRegistry.registerItem(orichalcum_ingot, orichalcum_ingot.getUnlocalizedName());
+		ancient_ingot = new ItemAncientIngot();
+		GameRegistry.registerItem(ancient_ingot, ancient_ingot.getUnlocalizedName());
 		
 		//Food items init//
 		grape = new ItemGrape(3, 0.3F, true, "grape");

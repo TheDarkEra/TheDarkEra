@@ -8,6 +8,7 @@ import com.thedarkera.block.BlockAncientAxeOre;
 import com.thedarkera.block.BlockAncientHoeOre;
 import com.thedarkera.block.BlockAncientPickaxeOre;
 import com.thedarkera.block.BlockAncientShovelOre;
+import com.thedarkera.block.BlockDarkBirchWood;
 import com.thedarkera.block.BlockDarkCobblestone;
 import com.thedarkera.block.BlockDarkStone;
 import com.thedarkera.block.BlockDarkStoneBricks;
@@ -63,10 +64,13 @@ public class TDEBlocks
 	public static Block dead_grass;
 	public static Block dark_stone_dirt;
 	
+	//Tree blocks//
+	public static Block dark_birch_wood;
+	
 	public static void init()
 	{
 		
-		//Entity Blocks//
+			//Entity Blocks//
 		work_bench = new BlockWorkBench();
 		GameRegistry.registerBlock(work_bench, work_bench.getUnlocalizedName());
 		
@@ -123,5 +127,9 @@ public class TDEBlocks
 		GameRegistry.registerBlock(dark_portal, dark_portal.getUnlocalizedName());
 		teleporter_dark = new BlockPortalDark().setBlockName("teleporter_dark");
 		GameRegistry.registerBlock(teleporter_dark, teleporter_dark.getUnlocalizedName());
+		
+			//Tree blocks//
+		GameRegistry.registerBlock(dark_birch_wood, dark_birch_wood.getUnlocalizedName());
+		dark_birch_wood = new BlockDarkBirchWood();
 	}
 }
