@@ -29,7 +29,6 @@ import com.thedarkera.block.BlockRottenWoodLog;
 import com.thedarkera.block.BlockRottenWoodSlab;
 import com.thedarkera.block.BlockRottenWoodStairs;
 import com.thedarkera.block.BlockSteel;
-import com.thedarkera.block.BlockWorkBench;
 import com.thedarkera.item.ItemSteelOre;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -75,8 +74,7 @@ public class TDEBlocks
 	{
 		
 			//Entity Blocks//
-		work_bench = new BlockWorkBench();
-		GameRegistry.registerBlock(work_bench, work_bench.getUnlocalizedName());
+	
 		
 			//Blocks//
 		ancientpickaxe_ore = new BlockAncientPickaxeOre();
