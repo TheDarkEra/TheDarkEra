@@ -8,6 +8,7 @@ import com.thedarkera.render.RenderDarkBirchWood;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.world.IBlockAccess;
@@ -27,7 +28,7 @@ public class BlockDarkBirchWood extends Block
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);
-		setHarvestLevel("axe", 1);
+		setHarvestLevel("axe", 0);
 	}
 
 	@Override
@@ -67,6 +68,10 @@ public class BlockDarkBirchWood extends Block
 	public Item getItemDropped(int par1, Random par2Random, int par3)
 	{
 		return Items.stick;
+		/**
+		 * If you want to return a block
+		 * return Blocks.planks.getItem(null, 0, 0, 0);
+		 */
 	}
 
 	/**
