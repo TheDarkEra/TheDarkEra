@@ -1,7 +1,7 @@
-package com.darkteam.thedarkera.blocks;
+package com.thedarkera.block;
 
-import com.darkteam.thedarkera.Main;
-import com.darkteam.thedarkera.tileentities.TileEntitySmasher;
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.tileentity.TileEntitySmasher;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -36,7 +36,7 @@ public class BlockSmasherTE extends Block implements ITileEntityProvider{
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int meta, float hitX, float hitY, float hitZ) {
         if(world.isRemote) {
             if (world.getTileEntity(x, y, z) != null)
-                player.openGui(Main.instance, GUIs.SMASHER.ordinal(), world, x, y, z);
+                player.openGui(TheDarkEra.instance, GUIs.SMASHER.ordinal(), world, x, y, z);
             return true;
         }
         return true;

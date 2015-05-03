@@ -1,7 +1,7 @@
-package com.darkteam.thedarkera.handlers;
+package com.thedarkera.handler;
 
-import com.darkteam.thedarkera.blocks.BlockSmasherTE.GUIs;
-import com.darkteam.thedarkera.guis.GuiSmasher;
+import com.thedarkera.TheDarkEra.GUIs;
+import com.thedarkera.gui.GuiSmasher;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;

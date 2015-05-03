@@ -77,10 +77,6 @@ public class TheDarkEra
 		}
 	};
 	
-	public enum GUIs {
-	    WORKBENCH
-	}
-	
 	@EventHandler
 	public void init(FMLInitializationEvent event){
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");

@@ -1,6 +1,4 @@
-package com.darkteam.thedarkera.tileentities;
-
-import com.darkteam.thedarkera.Main;
+package com.thedarkera.tileentity;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
