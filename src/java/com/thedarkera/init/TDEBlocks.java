@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.block.BlockAncientAxeOre;
 import com.thedarkera.block.BlockAncientHoeOre;
+import com.thedarkera.block.BlockAncientOre;
 import com.thedarkera.block.BlockAncientPickaxeOre;
 import com.thedarkera.block.BlockAncientShovelOre;
 import com.thedarkera.block.BlockDarkBirchWood;
@@ -41,6 +42,7 @@ public class TDEBlocks
 	public static Block ebony_ore;
 	public static Block steel_ore;
 	public static Block orichalcum_ore;
+	public static Block ancient_ore;
 	public static Block ancientpickaxe_ore;
 	public static Block ancientaxe_ore;
 	public static Block ancientshovel_ore;
@@ -83,6 +85,8 @@ public class TDEBlocks
 		GameRegistry.registerBlock(ancientshovel_ore, ancientshovel_ore.getUnlocalizedName());
 		ancienthoe_ore = new BlockAncientHoeOre();
 		GameRegistry.registerBlock(ancienthoe_ore, ancienthoe_ore.getUnlocalizedName());
+		ancient_ore = new BlockAncientOre();
+		GameRegistry.registerBlock(ancient_ore, ancient_ore.getUnlocalizedName());
 		ebony_ore = new BlockEbonyOre();
 		GameRegistry.registerBlock(ebony_ore, ebony_ore.getUnlocalizedName());		
 		orichalcum_ore = new BlockOrichalcumOre();
@@ -113,6 +117,7 @@ public class TDEBlocks
 		GameRegistry.registerBlock(dead_grass, dead_grass.getUnlocalizedName());
 		dark_stone_dirt = new BlockDarkStoneDirt();
 		GameRegistry.registerBlock(dark_stone_dirt, dark_stone_dirt.getUnlocalizedName());
+		
 			// Meta Blocks//
 		steel_ore = new BlockSteel();	
 		GameRegistry.registerBlock(steel_ore, ItemSteelOre.class, steel_ore.getUnlocalizedName());

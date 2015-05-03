@@ -52,6 +52,8 @@ public class TheDarkEra
 		
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + ".");
 		
+	 	proxy.registerRenderers();
+		
 		TDEItems.init();
 		TDEBlocks.init();
 		TDEArmors.init();
@@ -80,8 +82,6 @@ public class TheDarkEra
 	@EventHandler
 	public void init(FMLInitializationEvent event){
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");
-		
-    	proxy.registerRenderers();
 		
 		//NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 		proxy.registerTileEntities();
