@@ -23,7 +23,7 @@ public class BlockAncientPickaxeOre extends Block {
 		setHardness(2F);
 		setResistance(5F);
 		setStepSound(soundTypeStone);
-		setHarvestLevel("pickaxe", 3);
+		setHarvestLevel("pickaxe", 2);
 	}
 	
 	@Override
