@@ -9,6 +9,7 @@ import com.thedarkera.block.BlockAncientHoeOre;
 import com.thedarkera.block.BlockAncientOre;
 import com.thedarkera.block.BlockAncientPickaxeOre;
 import com.thedarkera.block.BlockAncientShovelOre;
+import com.thedarkera.block.BlockDarkBirchPlanks;
 import com.thedarkera.block.BlockDarkBirchWood;
 import com.thedarkera.block.BlockDarkCobblestone;
 import com.thedarkera.block.BlockDarkStone;
@@ -51,6 +52,7 @@ public class TDEBlocks
 	public static Block dark_portal;
 	public static Block teleporter_dark;
 	public static Block smasher;
+	public static Block dark_birch_planks; 
 
 	//village blocks //
 	//TODO: Use block metadata
@@ -116,7 +118,8 @@ public class TDEBlocks
 		dark_stone_dirt = new BlockDarkStoneDirt();
 		GameRegistry.registerBlock(dark_stone_dirt, dark_stone_dirt.getUnlocalizedName());
 		smasher = new BlockSmasher();
-		
+		dark_birch_planks = new BlockDarkBirchPlanks();
+		GameRegistry.registerBlock(dark_birch_planks, dark_birch_planks.getUnlocalizedName());
 
 		// Meta Blocks//
 		steel_ore = new BlockSteel();	
@@ -138,5 +141,6 @@ public class TDEBlocks
 		GameRegistry.registerBlock(dark_birch_wood, dark_birch_wood.getUnlocalizedName());
 		rotten_wood_log = new BlockRottenWoodLog(Material.wood);
 		GameRegistry.registerBlock(rotten_wood_log, rotten_wood_log.getUnlocalizedName());
+		
 	}
 }
