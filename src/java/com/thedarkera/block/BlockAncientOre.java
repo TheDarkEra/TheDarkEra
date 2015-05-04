@@ -1,10 +1,15 @@
 package com.thedarkera.block;
 
-	import net.minecraft.block.Block;
-	import net.minecraft.block.material.Material;
+	import java.util.Random;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 
 
-	import com.thedarkera.TheDarkEra;
+import net.minecraft.item.Item;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.init.TDETools;
 
 
 	public class BlockAncientOre extends Block {
@@ -23,14 +28,11 @@ package com.thedarkera.block;
 			setHarvestLevel("pickaxe", 2);
 		}
 		
-	//	@Override
-	//	public Item getItemDropped(int meta, Random rand, int fortune)
-	//	{
-	//		return TDETools.ancient_hoe;
-	//	}
-		
+		@Override
+		public Item getItemDropped(int meta, Random rand, int fortune)
+		{
+			return TDETools.ancient_hoe;
+			}
 	
-
-
 	}
 
