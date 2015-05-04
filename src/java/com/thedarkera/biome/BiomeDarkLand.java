@@ -2,6 +2,8 @@ package com.thedarkera.biome;
 
 import java.util.Random;
 
+import com.thedarkera.init.TDEBlocks;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -13,7 +15,7 @@ public class BiomeDarkLand extends BiomeGenBase
 	{
 		super(biomeID);
 		spawnableCreatureList.clear();
-		topBlock = Blocks.grass;
+		topBlock = TDEBlocks.dead_grass;
 		fillerBlock = Blocks.dirt;
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
