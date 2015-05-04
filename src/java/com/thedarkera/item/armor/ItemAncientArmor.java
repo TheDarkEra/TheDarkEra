@@ -28,7 +28,7 @@ public class ItemAncientArmor extends ItemArmor
 		{
 			return TheDarkEra.MODID + ":models/armor/ancient_armor_1.png";
 		}
-		else if (stack.getItem() == TDEArmors.daedric_leggings)
+		else if (stack.getItem() == TDEArmors.ancient_leggings)
 		{
 			return TheDarkEra.MODID + ":models/armor/ancient_armor_2.png";
 		}
@@ -42,10 +42,10 @@ public class ItemAncientArmor extends ItemArmor
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
 	{
-		if (player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(TDEArmors.ancient_helmet) 
-				&& player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(TDEArmors.ancient_chestplate) 
-				&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(TDEArmors.ancient_leggings) 
-				&& player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(TDEArmors.ancient_boots))
+		if (player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(TDEArmors.ancient_boots) 
+				&& player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(TDEArmors.ancient_leggings) 
+				&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(TDEArmors.ancient_chestplate) 
+				&& player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(TDEArmors.ancient_helmet))
 		{
 			player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 20*1));
 

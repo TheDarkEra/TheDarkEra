@@ -42,10 +42,10 @@ public class ItemOrichalcumArmor extends ItemArmor
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
 	{
-		if (player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(TDEArmors.orichalcum_helmet) 
-				&& player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(TDEArmors.orichalcum_chestplate) 
-				&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(TDEArmors.orichalcum_leggings) 
-				&& player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(TDEArmors.orichalcum_boots))
+		if (player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(TDEArmors.orichalcum_boots) 
+				&& player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(TDEArmors.orichalcum_leggings) 
+				&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(TDEArmors.orichalcum_chestplate) 
+				&& player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(TDEArmors.orichalcum_helmet))
 		{
 			player.addPotionEffect(new PotionEffect(Potion.resistance.id, 20*1));
 

@@ -42,12 +42,13 @@ public class ItemDragonLightArmor extends ItemArmor
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
 	{
-		if (player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(TDEArmors.dragon_light_helmet) 
-				&& player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(TDEArmors.dragon_light_chestplate) 
-				&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(TDEArmors.dragon_light_leggings) 
-				&& player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(TDEArmors.dragon_light_boots))
+		if (player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(TDEArmors.dragon_light_boots) 
+				&& player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(TDEArmors.dragon_light_leggings) 
+				&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(TDEArmors.dragon_light_chestplate) 
+				&& player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(TDEArmors.dragon_light_helmet))
 		{
 			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 20*1));
+			player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 20*1));
 		}
 	}
 }
