@@ -89,8 +89,7 @@ tile.rotten_wood_stairs.name=Rotten Stairs
 tile.rotten_wood_slab.name=Rotten Slab
 tile.rotten_wood_fence.name=Rotten Fence
 tile.rotten_wood_log.name=Rotten Log
-
-
+tile.wisp_wood.name=Wisp Wood
 tile.dark_birch_planks.name=Dark Birch Planks
 tile.dark_birch_wood.name=Dark Birch Wood
 tile.dark_stone.name=Dark Stone
