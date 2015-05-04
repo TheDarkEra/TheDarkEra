@@ -131,8 +131,7 @@ public class TDERecipes
 			"Y Y",
 			'X', TDEItems.steel_ingot, 'Y', TDEItems.leather_strip
 		});
-		//Ancient Armor//
-		//Steel armor//
+		//Ancient armor//
 		GameRegistry.addRecipe(new ItemStack(TDEArmors.ancient_helmet), new Object[]{ 
 			"XXX",
 			"Y Y",
@@ -154,6 +153,52 @@ public class TDERecipes
 			"X X",
 			"Y Y",
 			'X', TDEItems.ancient_ingot, 'Y', TDEItems.leather_strip
+		});
+		//Dragon heavy armor//
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.dragon_heavy_helmet), new Object[]{ 
+			"XXX",
+			"Y Y",
+			'X', TDEItems.dragon_bone, 'Y', TDEItems.leather_strip
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.dragon_heavy_chestplate),new Object[]{  
+			"Y Y",
+			"XXX",
+			"XXX",
+			'X', TDEItems.dragon_bone, 'Y', TDEItems.leather_strip
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.dragon_heavy_leggings), new Object[]{ 
+			"XXX",
+			"X X",
+			"Y Y",
+			'X', TDEItems.dragon_bone, 'Y', TDEItems.leather_strip
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.dragon_heavy_boots), new Object[]{
+			"X X",
+			"Y Y",
+			'X', TDEItems.dragon_bone, 'Y', TDEItems.leather_strip
+		});
+		//Dragon light armor//
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.dragon_light_helmet), new Object[]{ 
+			"XXX",
+			"Y Y",
+			'X', TDEItems.dragon_scale, 'Y', TDEItems.leather_strip
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.dragon_light_chestplate),new Object[]{  
+			"Y Y",
+			"XXX",
+			"XXX",
+			'X', TDEItems.dragon_scale, 'Y', TDEItems.leather_strip
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.dragon_light_leggings), new Object[]{ 
+			"XXX",
+			"X X",
+			"Y Y",
+			'X', TDEItems.dragon_scale, 'Y', TDEItems.leather_strip
+		});
+		GameRegistry.addRecipe(new ItemStack(TDEArmors.dragon_light_boots), new Object[]{
+			"X X",
+			"Y Y",
+			'X', TDEItems.dragon_scale, 'Y', TDEItems.leather_strip
 		});
 
 		//Tools//

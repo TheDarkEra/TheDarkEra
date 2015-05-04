@@ -40,15 +40,8 @@ public class ItemDragonHeavyArmor extends ItemArmor
 	}
 
 	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
+	public void onArmorTick(World world, EntityPlayer player, ItemStack armorPiece)
 	{
-		if (player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(TDEArmors.dragon_heavy_helmet) 
-				&& player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(TDEArmors.dragon_heavy_chestplate) 
-				&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(TDEArmors.dragon_heavy_leggings) 
-				&& player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(TDEArmors.dragon_heavy_boots))
-		{
-			player.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 20*1));
-
-		}
+			player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 20*1));
 	}
 }

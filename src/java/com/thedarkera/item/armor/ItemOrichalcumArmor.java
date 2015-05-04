@@ -47,7 +47,7 @@ public class ItemOrichalcumArmor extends ItemArmor
 				&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(TDEArmors.orichalcum_leggings) 
 				&& player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(TDEArmors.orichalcum_boots))
 		{
-			player.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 20*1));
+			player.addPotionEffect(new PotionEffect(Potion.resistance.id, 20*1));
 
 		}
 	}

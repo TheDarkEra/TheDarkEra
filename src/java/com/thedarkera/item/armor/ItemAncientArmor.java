@@ -47,7 +47,7 @@ public class ItemAncientArmor extends ItemArmor
 				&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(TDEArmors.ancient_leggings) 
 				&& player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(TDEArmors.ancient_boots))
 		{
-			player.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 20*1));
+			player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 20*1));
 
 		}
 	}
