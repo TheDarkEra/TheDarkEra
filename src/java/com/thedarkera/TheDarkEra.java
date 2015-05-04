@@ -80,7 +80,7 @@ public class TheDarkEra
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");
 
 		proxy.registerTileEntities();
-        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+       // NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
 		DimensionManager.registerDimension(dimension, dimension);
