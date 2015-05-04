@@ -11,7 +11,9 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.world.BlockEvent;
 
+import com.thedarkera.generation.WorldGenDarkBirchTree;
 import com.thedarkera.generation.WorldGenGrapePlant;
+import com.thedarkera.generation.WorldGenWispTree;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
 
@@ -63,6 +65,21 @@ public class WorldGenHandler implements IWorldGenerator
 			int posY = 50 + random.nextInt(35);
 			int posZ = z + random.nextInt(16);
 			new WorldGenGrapePlant().generate(world, random, posX, posY, posZ);
+		}
+
+		for(int i = 0; i < 3; i++)
+		{
+			int posX = x + random.nextInt(16);
+			int posY = 50 + random.nextInt(35);
+			int posZ = z + random.nextInt(16);
+			new WorldGenDarkBirchTree().generate(world, random, posX, posY, posZ);
+		}
+		for(int i = 0; i < 3; i++)
+		{
+			int posX = x + random.nextInt(16);
+			int posY = 50 + random.nextInt(35);
+			int posZ = z + random.nextInt(16);
+			new WorldGenWispTree().generate(world, random, posX, posY, posZ);
 		}
 	}
 
