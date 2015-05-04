@@ -28,6 +28,7 @@ import com.thedarkera.block.BlockRottenWoodFence;
 import com.thedarkera.block.BlockRottenWoodLog;
 import com.thedarkera.block.BlockRottenWoodSlab;
 import com.thedarkera.block.BlockRottenWoodStairs;
+import com.thedarkera.block.BlockSmasher;
 import com.thedarkera.block.BlockSteel;
 import com.thedarkera.item.ItemSteelOre;
 
@@ -49,6 +50,7 @@ public class TDEBlocks
 	public static Block grape_plant;
 	public static Block dark_portal;
 	public static Block teleporter_dark;
+	public static Block smasher;
 
 	//village blocks //
 	//TODO: Use block metadata
@@ -113,6 +115,8 @@ public class TDEBlocks
 		GameRegistry.registerBlock(dead_grass, dead_grass.getUnlocalizedName());
 		dark_stone_dirt = new BlockDarkStoneDirt();
 		GameRegistry.registerBlock(dark_stone_dirt, dark_stone_dirt.getUnlocalizedName());
+		smasher = new BlockSmasher();
+		
 
 		// Meta Blocks//
 		steel_ore = new BlockSteel();	

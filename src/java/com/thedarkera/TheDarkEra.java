@@ -7,6 +7,7 @@ import net.minecraftforge.common.DimensionManager;
 import org.apache.logging.log4j.Logger;
 
 import com.thedarkera.dimension.TDEWorldProvider;
+import com.thedarkera.handler.GuiHandler;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBlocks;
@@ -21,6 +22,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = TheDarkEra.MODID, name = TheDarkEra.NAME, version = TheDarkEra.VERSION)
@@ -78,6 +80,7 @@ public class TheDarkEra
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");
 
 		proxy.registerTileEntities();
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
 		DimensionManager.registerDimension(dimension, dimension);
