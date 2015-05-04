@@ -9,11 +9,10 @@ import net.minecraft.item.Item;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDETools;
 
-
 public class BlockAncientPickaxeOre extends Block {
-	
+
 	String name = "ancientpickaxe_ore";
-	
+
 	public BlockAncientPickaxeOre()
 	{
 		super(Material.rock);
@@ -25,14 +24,11 @@ public class BlockAncientPickaxeOre extends Block {
 		setStepSound(soundTypeStone);
 		setHarvestLevel("pickaxe", 2);
 	}
-	
+
 	@Override
 	public Item getItemDropped(int meta, Random rand, int fortune)
 	{
 		return TDETools.ancient_pickaxe;
 	}
-	
-
-
 }
 

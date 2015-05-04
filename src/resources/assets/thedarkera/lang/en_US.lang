@@ -1,6 +1,6 @@
 itemGroup.the_dark_era=The Dark Era
 
-	//Item Misc//
+//Item Misc//
 item.ash_hopper_meat.name=Ash Hopper Meat
 item.ash_hopper_leg.name=Ash Hopper Leg
 item.ash_hopper_jelly.name=Ash Hopper Jelly
@@ -20,20 +20,20 @@ item.fire_rune.name=Fire Rune
 item.frost_rune.name=Frost Rune
 item.lightning_rune.name=Lightning Rune
 
-	//Item Ingot//
+//Item Ingot//
 item.ebony_ingot.name=Ebony Ingot
 item.steel_ingot.name=Steel Ingot
 item.ancient_ingot.name=Ancient Ingot
 item.orichalcum_ingot.name=Orichalcum Ingot	
 
-	//Item Weapon//
+//Item Weapon//
 item.steel_sword.name=Steel Sword
 item.steel_dagger.name=Steel Dagger
 item.dark_stone_sword.name=Dark Sword
 item.daedric_bow.name=Daedric Bow
 item.daedric_arrow.name=Daedric Arrow
 
-	//Item Tool//
+//Item Tool//
 item.ancient_pickaxe.name=Ancient Pickaxe
 item.steel_pickaxe.name=Steel Pickaxe
 item.dark_stone_pickaxe.name=Dark Pickaxe
@@ -47,11 +47,11 @@ item.ancient_hoe.name=Ancient Hoe
 item.steel_hoe.name=Steel Hoe
 item.dark_stone_hoe.name=Dark Hoe
 
-	//Item Food//
+//Item Food//
 item.grape.name=Grape
 item.grape_seed.name=Grape Seed
 	
-	//Item Armor//
+//Item Armor//
 item.daedric_helmet.name=Daedric Helmet
 item.daedric_chestplate.name=Daedric Chestplate
 item.daedric_leggings.name=Daedric Leggings
@@ -82,23 +82,28 @@ item.ancient_chestplate.name=Ancient Chestplate
 item.ancient_leggings.name=Ancient Leggings
 item.ancient_boots.name=Ancient Boots
 
-	//Block//
+//Block//
 tile.work_bench.name=Work Bench
 tile.rotten_wood.name=Rotten Wood
 tile.rotten_wood_stairs.name=Rotten Stairs
 tile.rotten_wood_slab.name=Rotten Slab
 tile.rotten_wood_fence.name=Rotten Fence
+tile.rotten_wood_log.name=Rotten Log
+
+tile.dark_birch_wood.name=Dark Birch Wood
 tile.dark_stone.name=Dark Stone
 tile.dark_cobblestone.name=Dark Cobblestone
 tile.dark_stone_bricks.name=Dark Stone Bricks
 tile.dark_stone_fence.name=Dark Stone Fence
 tile.dark_stone_slab.name=Dark Stone Slab
 tile.dark_stone_stairs.name=Dark Stone Stairs
-tile.drake_stone_dirt.name=Dark Stone with Dirt
+tile.dark_stone_ladder.name=Dark Stone Ladder
+tile.dark_stone_dirt.name=Dark Stone with Dirt
 tile.dead_grass.name=Dead Grass
 tile.ebony_ore.name=Ebony Ore
 tile.steel_ore.name=Steel Ore
 tile.orichalcum_ore.name=Orichalcum Ore
+tile.ancient_ore.name=Ancient Ore
 tile.ancientpickaxe_ore.name=Ancient Pickaxe Ore
 tile.ancientaxe_ore.name=Ancient Axe Ore
 tile.ancientshovel_ore.name=Ancient Shovel Ore
@@ -106,4 +111,3 @@ tile.ancienthoe_ore.name=Ancient Hoe Ore
 tile.steel_block.name=Steel Block
 tile.teleporter_dark.name=Dark Dimension Teleporter
 tile.dark_portal.name=Dark Dimesion Portal
-

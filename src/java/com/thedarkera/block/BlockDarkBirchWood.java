@@ -2,18 +2,15 @@ package com.thedarkera.block;
 
 import java.util.Random;
 
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.render.RenderDarkBirchWood;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.render.RenderDarkBirchWood;
 
 public class BlockDarkBirchWood extends Block
 {
@@ -59,23 +56,13 @@ public class BlockDarkBirchWood extends Block
 	{
 		return true;
 	}
-
-	/**
-	 * Returns the ID of the items to drop on destruction.
-	 */
+	
 	@Override
-	public Item getItemDropped(int par1, Random par2Random, int par3)
+	public Item getItemDropped(int par1, Random rand, int par3)
 	{
 		return Items.stick;
-		/**
-		 * If you want to return a block
-		 * return Blocks.planks.getItem(null, 0, 0, 0);
-		 */
 	}
 
-	/**
-	 * ejects contained items into the world, and notifies neighbors of an update, as appropriate
-	 */
 	@Override
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta)
     {
@@ -100,15 +87,4 @@ public class BlockDarkBirchWood extends Block
             }
         }
     }
-
-	@SideOnly(Side.CLIENT)
-	@Override
-	/**
-	 * When this method is called, your block should register all the icons it needs with the given IconRegister. This
-	 * is the only chance you get to register icons.
-	 */
-	public void registerBlockIcons(IIconRegister par1IconRegister)
-	{
-		blockIcon = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + (this.getUnlocalizedName().substring(5)));
-	}
 }

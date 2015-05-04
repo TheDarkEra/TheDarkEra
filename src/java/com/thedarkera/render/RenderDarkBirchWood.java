@@ -16,7 +16,6 @@ public class RenderDarkBirchWood implements ISimpleBlockRenderingHandler
 {
 	public static int renderId = RenderingRegistry.getNextAvailableRenderId();
 
-	@Override
 	public void renderInventoryBlock(Block block, int metadata, int modelID, RenderBlocks renderer)
 	{
 		if (modelID == renderId)
@@ -26,7 +25,6 @@ public class RenderDarkBirchWood implements ISimpleBlockRenderingHandler
 		}
 	}
 
-	@Override
 	public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z, Block block, int modelID, RenderBlocks renderer)
 	{
 		if (modelID == renderId)
@@ -110,7 +108,6 @@ public class RenderDarkBirchWood implements ISimpleBlockRenderingHandler
 		return true;
 	}
 
-	@Override
 	public int getRenderId()
 	{
 		return renderId;
@@ -147,7 +144,6 @@ public class RenderDarkBirchWood implements ISimpleBlockRenderingHandler
 		GL11.glTranslatef(0.5F, 0.5F, 0.5F);
 	}
 
-	@Override
 	public boolean shouldRender3DInInventory(int modelId)
 	{
 		return false;

@@ -35,13 +35,6 @@ public class BlockSteel extends Block
 		setHarvestLevel("pickaxe", 3);
 	}
 
-	/*
-	@Override
-	public Item getItemDropped(int meta, Random rand, int fortune)
-	{
-		return ModItems.samdust;
-	}
-	*/
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister)
@@ -64,7 +57,7 @@ public class BlockSteel extends Block
 			return icons[0];
 		case 1:
 			if (ForgeDirection.getOrientation(par1) == ForgeDirection.UP
-					|| ForgeDirection.getOrientation(par1) == ForgeDirection.DOWN)
+			|| ForgeDirection.getOrientation(par1) == ForgeDirection.DOWN)
 				return icons[2];
 			else
 				return icons[1];
@@ -84,5 +77,5 @@ public class BlockSteel extends Block
 			par3List.add(new ItemStack(par1, 1, var4));
 		}
 	}
-	
+
 }

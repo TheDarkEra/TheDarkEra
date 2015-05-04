@@ -6,8 +6,8 @@ import net.minecraft.item.Item;
 
 public class ItemRottenWoodStick extends Item 
 {
-	 String name = "rotten_wood_stick";
-	
+	String name = "rotten_wood_stick";
+
 	public ItemRottenWoodStick()
 	{
 		setUnlocalizedName(name);

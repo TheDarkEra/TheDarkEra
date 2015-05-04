@@ -5,13 +5,14 @@ import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockDarkStoneFence extends BlockFence{
-
+public class BlockDarkStoneFence extends BlockFence
+{
 	String name = "dark_stone_fence";
 	String texture = "dark_stone";
 	
-	public BlockDarkStoneFence(String s){
-		super(s, Material.rock);
+	public BlockDarkStoneFence(String string)
+	{
+		super(string, Material.rock);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + texture);
 		setCreativeTab(TheDarkEra.tabTDE);

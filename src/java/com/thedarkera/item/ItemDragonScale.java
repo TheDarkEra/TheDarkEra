@@ -6,8 +6,8 @@ import com.thedarkera.TheDarkEra;
 
 public class ItemDragonScale extends Item 
 {
-	 String name = "dragon_scale";
-	
+	String name = "dragon_scale";
+
 	public ItemDragonScale()
 	{
 		setUnlocalizedName("dragon_scale");

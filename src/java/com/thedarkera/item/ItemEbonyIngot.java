@@ -6,8 +6,8 @@ import net.minecraft.item.Item;
 
 public class ItemEbonyIngot extends Item 
 {
-	 String name = "ebony_ingot";
-	
+	String name = "ebony_ingot";
+
 	public ItemEbonyIngot()
 	{
 		setUnlocalizedName("ebony_ingot");

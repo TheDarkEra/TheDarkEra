@@ -31,8 +31,5 @@ public class BlockAncientAxeOre extends Block {
 	{
 		return TDETools.ancient_axe;
 	}
-	
-
-
 }
 

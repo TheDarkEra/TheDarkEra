@@ -9,7 +9,6 @@ import net.minecraft.item.Item;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDETools;
 
-
 public class BlockAncientShovelOre extends Block {
 	
 	String name = "ancientshovel_ore";
@@ -31,9 +30,5 @@ public class BlockAncientShovelOre extends Block {
 	{
 		return TDETools.ancient_shovel;
 	}
-	
-	//Unlike ancient axe and pickaxe this ore will be in sand.
-
-
 }
 

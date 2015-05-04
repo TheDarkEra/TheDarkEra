@@ -48,43 +48,32 @@ import cpw.mods.fml.common.eventhandler.Event.Result;
 
 public class TDEChunkProvider implements IChunkProvider
 {
-    /** RNG. */
     private Random rand;
-    private NoiseGeneratorOctaves field_147431_j;
-    private NoiseGeneratorOctaves field_147432_k;
-    private NoiseGeneratorOctaves field_147429_l;
-    private NoiseGeneratorPerlin field_147430_m;
-    /** A NoiseGeneratorOctaves used in generating terrain */
+    private NoiseGeneratorOctaves noiseGen1;
+    private NoiseGeneratorOctaves noiseGen2;
+    private NoiseGeneratorOctaves noiseGen3;
+    private NoiseGeneratorPerlin noiseGen4;
     public NoiseGeneratorOctaves noiseGen5;
-    /** A NoiseGeneratorOctaves used in generating terrain */
     public NoiseGeneratorOctaves noiseGen6;
     public NoiseGeneratorOctaves mobSpawnerNoise;
-    /** Reference to the World object. */
     private World worldObj;
-    /** are map structures going to be generated (e.g. strongholds) */
     private final boolean mapFeaturesEnabled;
-    private WorldType field_147435_p;
-    private final double[] field_147434_q;
+    private WorldType worldType;
+    private final double[] d0;
     private final float[] parabolicField;
     private double[] stoneNoise = new double[256];
     private MapGenBase caveGenerator = new MapGenCaves();
-    /** Holds Stronghold Generator */
     private MapGenStronghold strongholdGenerator = new MapGenStronghold();
-    /** Holds Village Generator */
     private MapGenVillage villageGenerator = new MapGenVillage();
-    /** Holds Mineshaft Generator */
     private MapGenMineshaft mineshaftGenerator = new MapGenMineshaft();
     private MapGenScatteredFeature scatteredFeatureGenerator = new MapGenScatteredFeature();
-    /** Holds ravine generator */
     private MapGenBase ravineGenerator = new MapGenRavine();
-    /** The biomes that are used to generate the chunk */
     private BiomeGenBase[] biomesForGeneration;
-    double[] field_147427_d;
-    double[] field_147428_e;
-    double[] field_147425_f;
-    double[] field_147426_g;
-    int[][] field_73219_j = new int[32][32];
-    private static final String __OBFID = "CL_00000396";
+    double[] d1;
+    double[] d2;
+    double[] d3;
+    double[] d4;
+    int[][] i0 = new int[32][32];
 
     {
         caveGenerator = TerrainGen.getModdedMapGen(caveGenerator, CAVE);
@@ -99,16 +88,16 @@ public class TDEChunkProvider implements IChunkProvider
     {
         this.worldObj = par1World;
         this.mapFeaturesEnabled = par4;
-        this.field_147435_p = par1World.getWorldInfo().getTerrainType();
+        this.worldType = par1World.getWorldInfo().getTerrainType();
         this.rand = new Random(par2);
-        this.field_147431_j = new NoiseGeneratorOctaves(this.rand, 16);
-        this.field_147432_k = new NoiseGeneratorOctaves(this.rand, 16);
-        this.field_147429_l = new NoiseGeneratorOctaves(this.rand, 8);
-        this.field_147430_m = new NoiseGeneratorPerlin(this.rand, 4);
+        this.noiseGen1 = new NoiseGeneratorOctaves(this.rand, 16);
+        this.noiseGen2 = new NoiseGeneratorOctaves(this.rand, 16);
+        this.noiseGen3 = new NoiseGeneratorOctaves(this.rand, 8);
+        this.noiseGen4 = new NoiseGeneratorPerlin(this.rand, 4);
         this.noiseGen5 = new NoiseGeneratorOctaves(this.rand, 10);
         this.noiseGen6 = new NoiseGeneratorOctaves(this.rand, 16);
         this.mobSpawnerNoise = new NoiseGeneratorOctaves(this.rand, 8);
-        this.field_147434_q = new double[825];
+        this.d0 = new double[825];
         this.parabolicField = new float[25];
 
         for (int j = -2; j <= 2; ++j)
@@ -120,12 +109,12 @@ public class TDEChunkProvider implements IChunkProvider
             }
         }
 
-        NoiseGenerator[] noiseGens = {field_147431_j, field_147432_k, field_147429_l, field_147430_m, noiseGen5, noiseGen6, mobSpawnerNoise};
+        NoiseGenerator[] noiseGens = {noiseGen1, noiseGen2, noiseGen3, noiseGen4, noiseGen5, noiseGen6, mobSpawnerNoise};
         noiseGens = TerrainGen.getModdedNoiseGenerators(par1World, this.rand, noiseGens);
-        this.field_147431_j = (NoiseGeneratorOctaves)noiseGens[0];
-        this.field_147432_k = (NoiseGeneratorOctaves)noiseGens[1];
-        this.field_147429_l = (NoiseGeneratorOctaves)noiseGens[2];
-        this.field_147430_m = (NoiseGeneratorPerlin)noiseGens[3];
+        this.noiseGen1 = (NoiseGeneratorOctaves)noiseGens[0];
+        this.noiseGen2 = (NoiseGeneratorOctaves)noiseGens[1];
+        this.noiseGen3 = (NoiseGeneratorOctaves)noiseGens[2];
+        this.noiseGen4 = (NoiseGeneratorPerlin)noiseGens[3];
         this.noiseGen5 = (NoiseGeneratorOctaves)noiseGens[4];
         this.noiseGen6 = (NoiseGeneratorOctaves)noiseGens[5];
         this.mobSpawnerNoise = (NoiseGeneratorOctaves)noiseGens[6];
@@ -152,14 +141,14 @@ public class TDEChunkProvider implements IChunkProvider
                 for (int k2 = 0; k2 < 32; ++k2)
                 {
                     double d0 = 0.125D;
-                    double d1 = this.field_147434_q[k1 + k2];
-                    double d2 = this.field_147434_q[l1 + k2];
-                    double d3 = this.field_147434_q[i2 + k2];
-                    double d4 = this.field_147434_q[j2 + k2];
-                    double d5 = (this.field_147434_q[k1 + k2 + 1] - d1) * d0;
-                    double d6 = (this.field_147434_q[l1 + k2 + 1] - d2) * d0;
-                    double d7 = (this.field_147434_q[i2 + k2 + 1] - d3) * d0;
-                    double d8 = (this.field_147434_q[j2 + k2 + 1] - d4) * d0;
+                    double d1 = this.d0[k1 + k2];
+                    double d2 = this.d0[l1 + k2];
+                    double d3 = this.d0[i2 + k2];
+                    double d4 = this.d0[j2 + k2];
+                    double d5 = (this.d0[k1 + k2 + 1] - d1) * d0;
+                    double d6 = (this.d0[l1 + k2 + 1] - d2) * d0;
+                    double d7 = (this.d0[i2 + k2 + 1] - d3) * d0;
+                    double d8 = (this.d0[j2 + k2 + 1] - d4) * d0;
 
                     for (int l2 = 0; l2 < 8; ++l2)
                     {
@@ -208,14 +197,15 @@ public class TDEChunkProvider implements IChunkProvider
         }
     }
 
-    public void replaceBlocksForBiome(int p_147422_1_, int p_147422_2_, Block[] p_147422_3_, byte[] p_147422_4_, BiomeGenBase[] p_147422_5_)
+    @SuppressWarnings("deprecation")
+	public void replaceBlocksForBiome(int p_147422_1_, int p_147422_2_, Block[] p_147422_3_, byte[] p_147422_4_, BiomeGenBase[] p_147422_5_)
     {
         ChunkProviderEvent.ReplaceBiomeBlocks event = new ChunkProviderEvent.ReplaceBiomeBlocks(this, p_147422_1_, p_147422_2_, p_147422_3_, p_147422_4_, p_147422_5_);
         MinecraftForge.EVENT_BUS.post(event);
         if (event.getResult() == Result.DENY) return;
 
         double d0 = 0.03125D;
-        this.stoneNoise = this.field_147430_m.func_151599_a(this.stoneNoise, (double)(p_147422_1_ * 16), (double)(p_147422_2_ * 16), 16, 16, d0 * 2.0D, d0 * 2.0D, 1.0D);
+        this.stoneNoise = this.noiseGen4.func_151599_a(this.stoneNoise, (double)(p_147422_1_ * 16), (double)(p_147422_2_ * 16), 16, 16, d0 * 2.0D, d0 * 2.0D, 1.0D);
 
         for (int k = 0; k < 16; ++k)
         {
@@ -270,16 +260,17 @@ public class TDEChunkProvider implements IChunkProvider
         return chunk;
     }
 
-    private void func_147423_a(int p_147423_1_, int p_147423_2_, int p_147423_3_)
+    @SuppressWarnings("unused")
+	private void func_147423_a(int p_147423_1_, int p_147423_2_, int p_147423_3_)
     {
         double d0 = 684.412D;
         double d1 = 684.412D;
         double d2 = 512.0D;
         double d3 = 512.0D;
-        this.field_147426_g = this.noiseGen6.generateNoiseOctaves(this.field_147426_g, p_147423_1_, p_147423_3_, 5, 5, 200.0D, 200.0D, 0.5D);
-        this.field_147427_d = this.field_147429_l.generateNoiseOctaves(this.field_147427_d, p_147423_1_, p_147423_2_, p_147423_3_, 5, 33, 5, 8.555150000000001D, 4.277575000000001D, 8.555150000000001D);
-        this.field_147428_e = this.field_147431_j.generateNoiseOctaves(this.field_147428_e, p_147423_1_, p_147423_2_, p_147423_3_, 5, 33, 5, 684.412D, 684.412D, 684.412D);
-        this.field_147425_f = this.field_147432_k.generateNoiseOctaves(this.field_147425_f, p_147423_1_, p_147423_2_, p_147423_3_, 5, 33, 5, 684.412D, 684.412D, 684.412D);
+        this.d4 = this.noiseGen6.generateNoiseOctaves(this.d4, p_147423_1_, p_147423_3_, 5, 5, 200.0D, 200.0D, 0.5D);
+        this.d1 = this.noiseGen3.generateNoiseOctaves(this.d1, p_147423_1_, p_147423_2_, p_147423_3_, 5, 33, 5, 8.555150000000001D, 4.277575000000001D, 8.555150000000001D);
+        this.d2 = this.noiseGen1.generateNoiseOctaves(this.d2, p_147423_1_, p_147423_2_, p_147423_3_, 5, 33, 5, 684.412D, 684.412D, 684.412D);
+        this.d3 = this.noiseGen2.generateNoiseOctaves(this.d3, p_147423_1_, p_147423_2_, p_147423_3_, 5, 33, 5, 684.412D, 684.412D, 684.412D);
         boolean flag1 = false;
         boolean flag = false;
         int l = 0;
@@ -304,7 +295,7 @@ public class TDEChunkProvider implements IChunkProvider
                         float f3 = biomegenbase1.rootHeight;
                         float f4 = biomegenbase1.heightVariation;
 
-                        if (this.field_147435_p == WorldType.AMPLIFIED && f3 > 0.0F)
+                        if (this.worldType == WorldType.AMPLIFIED && f3 > 0.0F)
                         {
                             f3 = 1.0F + f3 * 2.0F;
                             f4 = 1.0F + f4 * 4.0F;
@@ -327,7 +318,7 @@ public class TDEChunkProvider implements IChunkProvider
                 f1 /= f2;
                 f = f * 0.9F + 0.1F;
                 f1 = (f1 * 4.0F - 1.0F) / 8.0F;
-                double d12 = this.field_147426_g[i1] / 8000.0D;
+                double d12 = this.d4[i1] / 8000.0D;
 
                 if (d12 < 0.0D)
                 {
@@ -374,9 +365,9 @@ public class TDEChunkProvider implements IChunkProvider
                         d6 *= 4.0D;
                     }
 
-                    double d7 = this.field_147428_e[l] / 512.0D;
-                    double d8 = this.field_147425_f[l] / 512.0D;
-                    double d9 = (this.field_147427_d[l] / 10.0D + 1.0D) / 2.0D;
+                    double d7 = this.d2[l] / 512.0D;
+                    double d8 = this.d3[l] / 512.0D;
+                    double d9 = (this.d1[l] / 10.0D + 1.0D) / 2.0D;
                     double d10 = MathHelper.denormalizeClamp(d7, d8, d9) - d6;
 
                     if (j2 > 29)
@@ -385,7 +376,7 @@ public class TDEChunkProvider implements IChunkProvider
                         d10 = d10 * (1.0D - d11) + -10.0D * d11;
                     }
 
-                    this.field_147434_q[l] = d10;
+                    this.d0[l] = d10;
                     ++l;
                 }
             }
@@ -533,7 +524,8 @@ public class TDEChunkProvider implements IChunkProvider
     /**
      * Returns a list of creatures of the specified type that can spawn at the given location.
      */
-    public List getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int par2, int par3, int par4)
+    @SuppressWarnings("rawtypes")
+	public List getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int par2, int par3, int par4)
     {
         BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(par2, par4);
         return par1EnumCreatureType == EnumCreatureType.monster && this.scatteredFeatureGenerator.func_143030_a(par2, par3, par4) ? this.scatteredFeatureGenerator.getScatteredFeatureSpawnList() : biomegenbase.getSpawnableList(par1EnumCreatureType);

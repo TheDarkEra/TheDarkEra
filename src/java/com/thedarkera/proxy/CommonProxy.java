@@ -1,14 +1,8 @@
 package com.thedarkera.proxy;
 
-
 public class CommonProxy
 {
-	public void registerTileEntities() {
-      
-    }
+	public void registerTileEntities() {}
 	
-	public void registerRenderers()
-	{
-		
-	}
+	public void registerRenderers() {}
 }

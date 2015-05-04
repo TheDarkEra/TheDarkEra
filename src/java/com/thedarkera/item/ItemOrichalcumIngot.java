@@ -6,8 +6,8 @@ import net.minecraft.item.Item;
 
 public class ItemOrichalcumIngot extends Item 
 {
-	 String name = "orichalcum_ingot";
-	
+	String name = "orichalcum_ingot";
+
 	public ItemOrichalcumIngot()
 	{
 		setUnlocalizedName("orichalcum_ingot");

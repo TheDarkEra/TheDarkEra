@@ -1,19 +1,19 @@
 package com.thedarkera.block;
 
-import com.thedarkera.TheDarkEra;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
-public class BlockRottenWoodLog extends BlockLog{
+import com.thedarkera.TheDarkEra;
 
+public class BlockRottenWoodLog extends BlockLog
+{
 	private IIcon[] icons = new IIcon[6];
 	String name = "rotten_wood_log";
-	
-	public BlockRottenWoodLog(Material m){
+
+	public BlockRottenWoodLog(Material m)
+	{
 		super();
 		setCreativeTab(TheDarkEra.tabTDE);
 		setBlockName(name);
@@ -23,35 +23,20 @@ public class BlockRottenWoodLog extends BlockLog{
 		setHardness(1F);
 		setResistance(3F);
 	}
-	
-	/**
-	 * Log top textures face North/South
-	 */
-	
+
+	//Log top textures face North/South
 	@Override
-	public void registerBlockIcons(IIconRegister iconRegister) {
+	public void registerBlockIcons(IIconRegister iconRegister)
+	{
 		for (int i = 0; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon("log_oak");
-	    }
-		for (int i = 1; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon("log_oak");
-	    }
-		for (int i = 2; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon("log_oak_top");
-	    }
-		for (int i = 3; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon("log_oak_top");
-	    }
-		for (int i = 4; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon("log_oak");
-	    }
-		for (int i = 5; i < icons.length; i++) {
-	        icons[i] = iconRegister.registerIcon("log_oak");
-	    }
+			icons[i] = iconRegister.registerIcon("log_oak");
+		}
+		icons[2] = iconRegister.registerIcon("log_oak_top");
+		icons[3] = iconRegister.registerIcon("log_oak_top");
 	}
-	
+
 	@Override
 	public IIcon getIcon(int side, int meta) {
-	    return icons[side];
+		return icons[side];
 	}
 }

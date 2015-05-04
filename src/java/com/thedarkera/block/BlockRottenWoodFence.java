@@ -5,12 +5,13 @@ import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockRottenWoodFence extends BlockFence{
-
+public class BlockRottenWoodFence extends BlockFence
+{
 	String name = "rotten_wood_fence";
 	String texture = "rotting_wood";
 	
-	public BlockRottenWoodFence(String s){
+	public BlockRottenWoodFence(String s)
+	{
 		super(s, Material.wood);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + texture);
@@ -20,5 +21,4 @@ public class BlockRottenWoodFence extends BlockFence{
 		setStepSound(soundTypeWood);
 		setHarvestLevel("axe", 0);
 	}
-
 }

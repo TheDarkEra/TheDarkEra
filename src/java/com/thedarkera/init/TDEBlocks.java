@@ -35,8 +35,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDEBlocks
 {
-	//Entity Blocks//
-	
 	//Blocks//
 	public static Block ebony_ore;
 	public static Block steel_ore;
@@ -44,13 +42,16 @@ public class TDEBlocks
 	public static Block ancient_ore;
 	public static Block ancientpickaxe_ore;
 	public static Block ancientaxe_ore;
+	/** Unlike ancient axe and pickaxe this ore will be in sand. */
 	public static Block ancientshovel_ore;
+	/** Unlike ancient axe and pickaxe this ore will be in dirt. */
 	public static Block ancienthoe_ore;
 	public static Block grape_plant;
 	public static Block dark_portal;
 	public static Block teleporter_dark;
-	
-	//village blocks, may want to lower block id's using meta blocks//
+
+	//village blocks //
+	//TODO: Use block metadata
 	public static Block dark_stone_ladder;
 	public static Block dark_stone;
 	public static Block dark_cobblestone;
@@ -64,18 +65,14 @@ public class TDEBlocks
 	public static Block rotten_wood_fence;
 	public static Block dead_grass;
 	public static Block dark_stone_dirt;
-	
+
 	//Tree blocks//
 	public static Block dark_birch_wood;
 	public static Block rotten_wood_log;
-	
+
 	public static void init()
 	{
-		
-			//Entity Blocks//
-		
-		
-			//Blocks//
+		//Blocks//
 		ancientpickaxe_ore = new BlockAncientPickaxeOre();
 		GameRegistry.registerBlock(ancientpickaxe_ore, ancientpickaxe_ore.getUnlocalizedName());
 		ancientaxe_ore = new BlockAncientAxeOre();
@@ -116,23 +113,23 @@ public class TDEBlocks
 		GameRegistry.registerBlock(dead_grass, dead_grass.getUnlocalizedName());
 		dark_stone_dirt = new BlockDarkStoneDirt();
 		GameRegistry.registerBlock(dark_stone_dirt, dark_stone_dirt.getUnlocalizedName());
-		
-			// Meta Blocks//
+
+		// Meta Blocks//
 		steel_ore = new BlockSteel();	
 		GameRegistry.registerBlock(steel_ore, ItemSteelOre.class, steel_ore.getUnlocalizedName());
-		
-		
-			//Plants//
+
+
+		//Plants//
 		grape_plant = new BlockGrapePlant();
 		GameRegistry.registerBlock(grape_plant, grape_plant.getUnlocalizedName());
-		    
-			//Portals//
+
+		//Portals//
 		dark_portal = new BlockPortalDark().setBlockName("dark_portal");
 		GameRegistry.registerBlock(dark_portal, dark_portal.getUnlocalizedName());
 		teleporter_dark = new BlockPortalDark().setBlockName("teleporter_dark");
 		GameRegistry.registerBlock(teleporter_dark, teleporter_dark.getUnlocalizedName());
-		
-			//Tree blocks//
+
+		//Tree blocks//
 		dark_birch_wood = new BlockDarkBirchWood();
 		GameRegistry.registerBlock(dark_birch_wood, dark_birch_wood.getUnlocalizedName());
 		rotten_wood_log = new BlockRottenWoodLog(Material.wood);

@@ -1,14 +1,11 @@
 package com.thedarkera.item.tool;
 
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemSpade;
 
 import com.thedarkera.TheDarkEra;
 
-
 public class ItemDarkStoneShovel extends ItemSpade
 {
-
 	public ItemDarkStoneShovel(ToolMaterial material, String name) 
 	{
 		super(material);
@@ -16,5 +13,4 @@ public class ItemDarkStoneShovel extends ItemSpade
 		setTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);
 	}
-
 }

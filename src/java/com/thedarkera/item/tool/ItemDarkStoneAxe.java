@@ -1,14 +1,11 @@
 package com.thedarkera.item.tool;
 
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemAxe;
 
 import com.thedarkera.TheDarkEra;
 
-
 public class ItemDarkStoneAxe extends ItemAxe 
 {
-
 	public ItemDarkStoneAxe(ToolMaterial material, String name) 
 	{
 		super(material);
@@ -16,5 +13,4 @@ public class ItemDarkStoneAxe extends ItemAxe
 		setTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);
 	}
-
 }

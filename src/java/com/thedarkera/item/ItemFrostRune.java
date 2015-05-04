@@ -6,8 +6,8 @@ import net.minecraft.item.Item;
 
 public class ItemFrostRune extends Item 
 {
-	 String name = "frost_rune";
-	
+	String name = "frost_rune";
+
 	public ItemFrostRune()
 	{
 		setUnlocalizedName("frost_rune");

@@ -5,11 +5,10 @@ import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
 
-
-public class BlockEbonyOre extends Block {
-	
+public class BlockEbonyOre extends Block
+{
 	String name = "ebony_ore";
-	
+
 	public BlockEbonyOre()
 	{
 		super(Material.rock);
@@ -21,11 +20,5 @@ public class BlockEbonyOre extends Block {
 		setStepSound(soundTypeStone);
 		setHarvestLevel("pickaxe", 4);
 	}
-	
-//	@Override
-//	public Item getItemDropped(int meta, Random rand, int fortune)
-	//{
-	//	return TheDarkEra.samdust;
-//	}
 }
 

@@ -1,20 +1,17 @@
 package com.thedarkera.block;
 
-import java.util.Random;
-
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.init.TDEBlocks;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 
-public class BlockRottenWood extends Block{
+import com.thedarkera.TheDarkEra;
 
+public class BlockRottenWood extends Block
+{
 	String name = "rotten_wood";
 	String texture = "rotting_wood";
 	
-	public BlockRottenWood(){
+	public BlockRottenWood()
+	{
 		super(Material.wood);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + texture);
@@ -23,5 +20,4 @@ public class BlockRottenWood extends Block{
 		setResistance(2F);
 		setStepSound(soundTypeWood);
 	}
-
 }

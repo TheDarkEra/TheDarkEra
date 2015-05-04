@@ -6,8 +6,8 @@ import com.thedarkera.TheDarkEra;
 
 public class ItemDragonBone extends Item 
 {
-	 String name = "dragon_bone";
-	
+	String name = "dragon_bone";
+
 	public ItemDragonBone()
 	{
 		setUnlocalizedName("dragon_bone");

@@ -17,8 +17,8 @@ import com.thedarkera.item.tool.ItemSteelShovel;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class TDETools {
-
+public class TDETools
+{
 	public static Item ancient_pickaxe;
 	public static Item dark_stone_pickaxe;
 	public static Item steel_pickaxe;
@@ -31,10 +31,9 @@ public class TDETools {
 	public static Item ancient_hoe;
 	public static Item dark_stone_hoe;
 	public static Item steel_hoe;
-	
 
 	public static void init()
-	 {
+	{
 		//pickaxe
 		ancient_pickaxe = new ItemAncientPickaxe(TDEMaterials.ancient, "ancient_pickaxe");
 		GameRegistry.registerItem(ancient_pickaxe, ancient_pickaxe.getUnlocalizedName());
@@ -42,7 +41,7 @@ public class TDETools {
 		GameRegistry.registerItem(dark_stone_pickaxe, dark_stone_pickaxe.getUnlocalizedName());
 		steel_pickaxe = new ItemSteelPickaxe(TDEMaterials.steel, "steel_pickaxe");
 		GameRegistry.registerItem(steel_pickaxe, steel_pickaxe.getUnlocalizedName());
-		
+
 		//axe
 		ancient_axe = new ItemAncientAxe(TDEMaterials.ancient, "ancient_axe");
 		GameRegistry.registerItem(ancient_axe, ancient_axe.getUnlocalizedName());
@@ -50,7 +49,7 @@ public class TDETools {
 		GameRegistry.registerItem(dark_stone_axe, dark_stone_axe.getUnlocalizedName());
 		steel_axe = new ItemSteelAxe(TDEMaterials.steel, "steel_axe");
 		GameRegistry.registerItem(steel_axe, steel_axe.getUnlocalizedName());
-		
+
 		//shovel
 		ancient_shovel = new ItemAncientShovel(TDEMaterials.ancient, "ancient_shovel");
 		GameRegistry.registerItem(ancient_shovel, ancient_shovel.getUnlocalizedName());
@@ -58,7 +57,7 @@ public class TDETools {
 		GameRegistry.registerItem(dark_stone_shovel, dark_stone_shovel.getUnlocalizedName());
 		steel_shovel = new ItemSteelShovel(TDEMaterials.steel, "steel_shovel");
 		GameRegistry.registerItem(steel_shovel, steel_shovel.getUnlocalizedName());
-		
+
 		//hoe
 		ancient_hoe = new ItemAncientHoe(TDEMaterials.ancient, "ancient_hoe");
 		GameRegistry.registerItem(ancient_hoe, ancient_hoe.getUnlocalizedName());
@@ -66,8 +65,5 @@ public class TDETools {
 		GameRegistry.registerItem(dark_stone_hoe, dark_stone_hoe.getUnlocalizedName());
 		steel_hoe = new ItemSteelHoe(TDEMaterials.steel, "steel_hoe");
 		GameRegistry.registerItem(steel_hoe, steel_hoe.getUnlocalizedName());
-		 
-		 
-		 
-	 }
+	}
 }

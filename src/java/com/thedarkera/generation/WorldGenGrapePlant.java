@@ -24,7 +24,6 @@ public class WorldGenGrapePlant extends WorldGenerator
                 world.setBlock(x1, y1, z1, TDEBlocks.grape_plant, rand.nextInt(3), 2);
             }
         }
-
         return true;
 	}
 }

@@ -6,8 +6,8 @@ import net.minecraft.item.Item;
 
 public class ItemDarkStoneRod extends Item 
 {
-	 String name = "dark_stone_rod";
-	
+	String name = "dark_stone_rod";
+
 	public ItemDarkStoneRod()
 	{
 		setUnlocalizedName(name);

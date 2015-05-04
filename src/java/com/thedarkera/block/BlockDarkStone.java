@@ -9,11 +9,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
-public class BlockDarkStone extends Block{
-
+public class BlockDarkStone extends Block
+{
 	String name = "dark_stone";
 	
-	public BlockDarkStone(){
+	public BlockDarkStone()
+	{
 		super(Material.rock);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
@@ -24,9 +25,9 @@ public class BlockDarkStone extends Block{
 		setHarvestLevel("pickaxe", 0);
 	}
 	
+	@Override
 	public Item getItemDropped(int a, Random b, int c)
     {
         return Item.getItemFromBlock(TDEBlocks.dark_cobblestone);
     }
-
 }

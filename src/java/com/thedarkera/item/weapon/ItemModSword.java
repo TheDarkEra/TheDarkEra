@@ -1,13 +1,11 @@
 package com.thedarkera.item.weapon;
 
+import net.minecraft.item.ItemSword;
+
 import com.thedarkera.TheDarkEra;
 
-import net.minecraft.item.ItemSword;
-import net.minecraft.item.Item.ToolMaterial;
-
-public class ItemModSword extends ItemSword{
-
-	
+public class ItemModSword extends ItemSword
+{
 	public ItemModSword(ToolMaterial material, String name) 
 	{
 		super(material);
@@ -15,5 +13,4 @@ public class ItemModSword extends ItemSword{
 		setTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);
 	}
-
 }

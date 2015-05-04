@@ -27,7 +27,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDEItems
 {
-		//Misc items//
+	//Misc items//
 	public static Item witch_feather;
 	public static Item ash_hopper_leg;
 	public static Item ash_hopper_jelly;
@@ -42,20 +42,19 @@ public class TDEItems
 	public static Item fire_rune;
 	public static Item frost_rune;
 	public static Item lightning_rune;
-	
-		//Ingot items//
+
+	//Ingot items//
 	public static Item steel_ingot;
 	public static Item ebony_ingot;
 	public static Item orichalcum_ingot;
 	public static Item ancient_ingot;
-	
-		
-		//Food items//
+
+	//Food items//
 	public static Item grape;
-	
-		//Seed items//
+
+	//Seed items//
 	public static Item grape_seed;
-	
+
 	public static void init()
 	{	
 		//Misc items init//
@@ -87,8 +86,7 @@ public class TDEItems
 		GameRegistry.registerItem(frost_rune, frost_rune.getUnlocalizedName());
 		lightning_rune = new ItemLightningRune();
 		GameRegistry.registerItem(lightning_rune, lightning_rune.getUnlocalizedName());
-		
-		
+
 		//Ingot items init//
 		steel_ingot = new ItemSteelIngot();
 		GameRegistry.registerItem(steel_ingot, steel_ingot.getUnlocalizedName());
@@ -98,14 +96,13 @@ public class TDEItems
 		GameRegistry.registerItem(orichalcum_ingot, orichalcum_ingot.getUnlocalizedName());
 		ancient_ingot = new ItemAncientIngot();
 		GameRegistry.registerItem(ancient_ingot, ancient_ingot.getUnlocalizedName());
-		
+
 		//Food items init//
 		grape = new ItemGrape(3, 0.3F, true, "grape");
 		GameRegistry.registerItem(grape, grape.getUnlocalizedName());
-		
+
 		//Seed items//
 		grape_seed = new ItemGrapeSeed(TDEBlocks.grape_plant);
 		GameRegistry.registerItem(grape_seed, grape_seed.getUnlocalizedName());
-		
 	}
 }

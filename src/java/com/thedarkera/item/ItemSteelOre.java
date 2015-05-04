@@ -11,7 +11,7 @@ public class ItemSteelOre extends ItemBlock
 		super(block);
 		setHasSubtypes(true);
 	}
-	
+
 	@Override
 	public String getUnlocalizedName(ItemStack itemstack)
 	{
@@ -31,10 +31,10 @@ public class ItemSteelOre extends ItemBlock
 		}
 		return getUnlocalizedName() + "_" + name;
 	}
-	
+
 	@Override
 	public int getMetadata(int par1)
-    {
-        return par1;
-    }
+	{
+		return par1;
+	}
 }

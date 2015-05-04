@@ -4,10 +4,8 @@ import com.thedarkera.TheDarkEra;
 
 import net.minecraft.item.ItemPickaxe;
 
-
 public class ItemAncientPickaxe extends ItemPickaxe 
 {
-
 	public ItemAncientPickaxe(ToolMaterial material, String name) 
 	{
 		super(material);
@@ -15,5 +13,4 @@ public class ItemAncientPickaxe extends ItemPickaxe
 		setTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);
 	}
-
 }
