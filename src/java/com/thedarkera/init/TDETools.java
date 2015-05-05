@@ -1,6 +1,7 @@
 package com.thedarkera.init;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 
 import com.thedarkera.item.tool.ItemAncientAxe;
 import com.thedarkera.item.tool.ItemAncientHoe;
@@ -14,6 +15,7 @@ import com.thedarkera.item.tool.ItemSteelAxe;
 import com.thedarkera.item.tool.ItemSteelHoe;
 import com.thedarkera.item.tool.ItemSteelPickaxe;
 import com.thedarkera.item.tool.ItemSteelShovel;
+import com.thedarkera.item.tool.ItemWeeder;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -31,7 +33,16 @@ public class TDETools
 	public static Item ancient_hoe;
 	public static Item dark_stone_hoe;
 	public static Item steel_hoe;
-
+	
+	public static Item wooden_weeder;
+	public static Item stone_weeder;
+	public static Item iron_weeder;
+	public static Item golden_weeder;
+	public static Item diamond_weeder;
+	public static Item ancient_weeder;
+	public static Item dark_stone_weeder;
+	public static Item steel_weeder;
+	
 	public static void init()
 	{
 		//pickaxe
@@ -65,5 +76,23 @@ public class TDETools
 		GameRegistry.registerItem(dark_stone_hoe, dark_stone_hoe.getUnlocalizedName());
 		steel_hoe = new ItemSteelHoe(TDEMaterials.steel, "steel_hoe");
 		GameRegistry.registerItem(steel_hoe, steel_hoe.getUnlocalizedName());
+		
+		//weeder
+		wooden_weeder = new ItemWeeder(ToolMaterial.WOOD, "wooden_weeder");
+		GameRegistry.registerItem(wooden_weeder, wooden_weeder.getUnlocalizedName());
+		stone_weeder = new ItemWeeder(ToolMaterial.STONE, "stone_weeder");
+		GameRegistry.registerItem(stone_weeder, stone_weeder.getUnlocalizedName());
+		iron_weeder = new ItemWeeder(ToolMaterial.IRON, "iron_weeder");
+		GameRegistry.registerItem(iron_weeder, iron_weeder.getUnlocalizedName());
+		golden_weeder = new ItemWeeder(ToolMaterial.GOLD, "golden_weeder");
+		GameRegistry.registerItem(golden_weeder, golden_weeder.getUnlocalizedName());
+		diamond_weeder = new ItemWeeder(ToolMaterial.EMERALD, "diamond_weeder");
+		GameRegistry.registerItem(diamond_weeder, diamond_weeder.getUnlocalizedName());
+		ancient_weeder = new ItemWeeder(TDEMaterials.ancient, "ancient_weeder");
+		GameRegistry.registerItem(ancient_weeder, ancient_weeder.getUnlocalizedName());
+		dark_stone_weeder = new ItemWeeder(TDEMaterials.dark_stone, "dark_stone_weeder");
+		GameRegistry.registerItem(dark_stone_weeder, dark_stone_weeder.getUnlocalizedName());
+		steel_weeder = new ItemWeeder(TDEMaterials.steel, "steel_weeder");
+		GameRegistry.registerItem(steel_weeder, steel_weeder.getUnlocalizedName());
 	}
 }
