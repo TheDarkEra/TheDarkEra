@@ -1,6 +1,5 @@
 package com.thedarkera.biome;
 
-import java.util.List;
 import java.util.Random;
 
 import net.minecraft.init.Blocks;
@@ -10,15 +9,16 @@ import net.minecraft.world.gen.feature.WorldGenDesertWells;
 
 public class BiomeDarkForrest extends BiomeGenBase{
 
-	private List DarkMonsters;
-	
 	public BiomeDarkForrest(int biomeID) {
 		super(biomeID);
 		topBlock = Blocks.grass;
 		fillerBlock = Blocks.dirt;
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
+<<<<<<< HEAD
 //		spawnableMonsterList.addAll(DarkMonsters);
+=======
+>>>>>>> origin/master
 		spawnableWaterCreatureList.clear();
 		flowers.clear();
 		addDefaultFlowers();
