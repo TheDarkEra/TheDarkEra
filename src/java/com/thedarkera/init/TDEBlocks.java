@@ -86,6 +86,9 @@ public class TDEBlocks
 	public static Block dark_birch_wood;
 	public static Block wisp_wood;
 	public static Block rotten_wood_log;
+	
+	//Test Jodel//
+	public static Block test1;
 
 	public static void init()
 	{
@@ -167,6 +170,11 @@ public class TDEBlocks
 		GameRegistry.registerBlock(wisp_wood, wisp_wood.getUnlocalizedName().substring(5));
 		rotten_wood_log = new BlockRottenWoodLog(Material.wood);
 		GameRegistry.registerBlock(rotten_wood_log, rotten_wood_log.getUnlocalizedName().substring(5));
-		
+
+		//Test Jodel//
+		test1 = new BlockTestJodel();
+	}
+	public static void RB(Block block) {
+		GameRegistry.registerBlock(block, block.getUnlocalizedName());
 	}
 }

@@ -18,6 +18,7 @@ import com.thedarkera.item.ItemOrichalcumIngot;
 import com.thedarkera.item.ItemRottenWoodStick;
 import com.thedarkera.item.ItemSoulGem;
 import com.thedarkera.item.ItemSteelIngot;
+import com.thedarkera.item.ItemTestJodel;
 import com.thedarkera.item.ItemWitchFeather;
 import com.thedarkera.item.food.ItemAshHopperMeat;
 import com.thedarkera.item.food.ItemGrape;
@@ -54,6 +55,9 @@ public class TDEItems
 
 	//Seed items//
 	public static Item grape_seed;
+	
+	//Test Jodel//
+	public static Item test1;
 
 	public static void init()
 	{	
@@ -104,5 +108,12 @@ public class TDEItems
 		//Seed items//
 		grape_seed = new ItemGrapeSeed(TDEBlocks.grape_plant);
 		GameRegistry.registerItem(grape_seed, grape_seed.getUnlocalizedName());
+		
+		//Test Jodel//
+		test1 = new ItemTestJodel();
+	}
+	
+	public static void RI(Item item) {
+		GameRegistry.registerItem(item, item.getUnlocalizedName());
 	}
 }
