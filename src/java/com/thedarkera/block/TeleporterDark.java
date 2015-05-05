@@ -39,7 +39,7 @@ public class TeleporterDark extends Teleporter
 	@Override
 	public void placeInPortal(Entity par1Entity, double par2, double par4, double par6, float par8)
 	{
-		if (worldServerInstance.provider.dimensionId != 1)
+		if (worldServerInstance.provider.dimensionId != 2)
 		{
 			if (!placeInExistingPortal(par1Entity, par2, par4, par6, par8))
 			{
@@ -65,7 +65,7 @@ public class TeleporterDark extends Teleporter
 						int l1 = j + j1;
 						int i2 = k + i1 * b1 - l * b0;
 						boolean flag = j1 < 0;
-						worldServerInstance.setBlock(k1, l1, i2, flag ? Blocks.sandstone : Blocks.air);
+						worldServerInstance.setBlock(k1, l1, i2, flag ? TDEBlocks.dark_stone : Blocks.air);
 					}
 				}
 			}
@@ -453,7 +453,7 @@ public class TeleporterDark extends Teleporter
 						j3 = j5 + l2;
 						i4 = j2 + (i3 - 1) * l5 - k2 * k5;
 						flag = l2 < 0;
-						worldServerInstance.setBlock(k3, j3, i4, flag ? Blocks.sandstone : Blocks.air);
+						worldServerInstance.setBlock(k3, j3, i4, flag ? TDEBlocks.dark_portal : Blocks.air);
 					}
 				}
 			}
@@ -469,7 +469,7 @@ public class TeleporterDark extends Teleporter
 					j3 = j5 + l2;
 					i4 = j2 + (i3 - 1) * l5;
 					flag = i3 == 0 || i3 == 3 || l2 == -1 || l2 == 3;
-					worldServerInstance.setBlock(k3, j3, i4, flag ? Blocks.sandstone : TDEBlocks.dark_portal, 0, 2);
+					worldServerInstance.setBlock(k3, j3, i4, flag ? TDEBlocks.dark_portal : TDEBlocks.dark_portal, 0, 2);
 				}
 			}
 
