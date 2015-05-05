@@ -7,8 +7,10 @@ import net.minecraftforge.common.DimensionManager;
 import org.apache.logging.log4j.Logger;
 
 import com.thedarkera.dimension.TDEWorldProvider;
+import com.thedarkera.handler.EnterBiomeHandler;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEArmors;
+import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
 import com.thedarkera.init.TDERecipes;
@@ -16,6 +18,7 @@ import com.thedarkera.init.TDETools;
 import com.thedarkera.init.TDEWeapons;
 import com.thedarkera.proxy.CommonProxy;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -59,8 +62,11 @@ public class TheDarkEra
 		TDERecipes.init();
 		TDETools.init();
 		TDEWeapons.init();
+		TDEBiomes.init();
 
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
+		
+		FMLCommonHandler.instance().bus().register(new EnterBiomeHandler());
 
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 1 successfully!");
 	}
