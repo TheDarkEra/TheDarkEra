@@ -9,6 +9,7 @@ import net.minecraft.world.gen.feature.WorldGenDesertWells;
 
 public class BiomeDarkForrest extends BiomeGenBase{
 
+	
 	public BiomeDarkForrest(int biomeID) {
 		super(biomeID);
 		topBlock = Blocks.grass;
@@ -39,9 +40,12 @@ public class BiomeDarkForrest extends BiomeGenBase{
 		}
 	}
 	
-	/*Need to add trees
+	/*ToDo: 
+	 *Need to add trees
 	 *Bushes
 	 *and more decorative blocks. 
+	 *
+	 *NEED MORE BIOME BLOCKS
 	 */
 
 }

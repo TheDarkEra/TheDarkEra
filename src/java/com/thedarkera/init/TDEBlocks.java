@@ -43,9 +43,14 @@ public class TDEBlocks
 	public static Block rotten_wood_stairs;
 	public static Block rotten_wood_slab;
 	public static Block rotten_wood_fence;
-	public static Block dead_grass;
 	public static Block dark_stone_dirt;
-
+	
+	//Biome Blocks //
+	public static Block dead_grass;
+	public static Block weedy_dirt;
+	public static Block dark_grass;
+	public static Block dark_dirt;
+	
 	//Tree blocks//
 	public static Block dark_birch_wood;
 	public static Block wisp_wood;
