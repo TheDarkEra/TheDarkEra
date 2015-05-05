@@ -31,8 +31,7 @@ public class BlockSmeltery extends BlockContainer
 	public void registerBlockIcons(IIconRegister reg)
 	{
 		icons[0] = reg.registerIcon(TheDarkEra.MODID + ":" + name + "_top");
-		icons[1] = reg.registerIcon("planks_oak"); //DEBUG
-		//icons[1] = reg.registerIcon(TheDarkEra.MODID + ":" + name + "_front"); //REAL
+		icons[1] = reg.registerIcon(TheDarkEra.MODID + ":" + name + "_front");
 		blockIcon = reg.registerIcon(TheDarkEra.MODID + ":" + name + "_side");
 	}
 	
