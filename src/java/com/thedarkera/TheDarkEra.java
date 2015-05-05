@@ -2,6 +2,7 @@ package com.thedarkera;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.DimensionManager;
 
 import org.apache.logging.log4j.Logger;
@@ -17,6 +18,7 @@ import com.thedarkera.init.TDERecipes;
 import com.thedarkera.init.TDETools;
 import com.thedarkera.init.TDEWeapons;
 import com.thedarkera.proxy.CommonProxy;
+import com.thedarkera.updatechecker.UpdateChecker;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -25,6 +27,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = TheDarkEra.MODID, name = TheDarkEra.NAME, version = TheDarkEra.VERSION)
@@ -46,6 +50,15 @@ public class TheDarkEra
 	public static CommonProxy proxy;
 
 	public static Logger logger;
+	
+	@SubscribeEvent
+	public void checkUpdate(PlayerEvent.PlayerLoggedInEvent event)
+	{
+		if (UpdateChecker.outdated)
+		{
+			event.player.addChatComponentMessage(new ChatComponentText("TheDarkEra is oudated"));
+		}
+	}
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
