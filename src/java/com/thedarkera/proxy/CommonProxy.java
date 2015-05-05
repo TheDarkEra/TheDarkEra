@@ -1,16 +1,24 @@
 package com.thedarkera.proxy;
 
-import com.thedarkera.tileentity.TESmasher;
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.handler.GuiHandler;
+import com.thedarkera.tileentity.*;
 
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class CommonProxy
 {
-	public void registerTileEntities() {
+	public void registerTileEntities()
+	{
+		GameRegistry.registerTileEntity(TESmasher.class, TESmasher.name);
+		GameRegistry.registerTileEntity(TESmeltery.class, "smeltery");
+	}
 
-	        GameRegistry.registerTileEntity(TESmasher.class, TESmasher.name);
-	    }
-	
-	
+	public void registerGuiHandler()
+	{
+		NetworkRegistry.INSTANCE.registerGuiHandler(TheDarkEra.instance, new GuiHandler());
+	}
+
 	public void registerRenderers() {}
 }

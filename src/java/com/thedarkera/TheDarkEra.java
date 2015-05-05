@@ -20,6 +20,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -33,7 +34,7 @@ public class TheDarkEra
 
 	public static int dimension = 2;
 
-	@Mod.Instance("thedarkera")
+	@Mod.Instance("TheDarkEra")
 	public static TheDarkEra instance;
 
 	WorldGenHandler worldGenHandler = new WorldGenHandler();
@@ -78,7 +79,6 @@ public class TheDarkEra
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");
 
 		proxy.registerTileEntities();
-       // NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
 		DimensionManager.registerDimension(dimension, dimension);
@@ -86,8 +86,19 @@ public class TheDarkEra
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 2 successfully!");
 	}
 	
+	@Mod.EventHandler
+	public void postInit(FMLPostInitializationEvent event)
+	{
+		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 3.");
+		
+		proxy.registerGuiHandler();
+
+		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 3 successfully!");
+	}
+	
 	public enum GuiID
 	{
-		SMASHER
+		SMASHER,
+		SMELTERY
 	}
 }
