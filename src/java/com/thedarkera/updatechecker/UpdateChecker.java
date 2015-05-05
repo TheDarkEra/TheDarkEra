@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import com.thedarkera.TheDarkEra;
 
 public class UpdateChecker
@@ -16,7 +15,7 @@ public class UpdateChecker
 
 	public static void checkForUpdates()
 	{
-		int currentVersion = TheDarkEra.VERSION;
+		int currentVersion = TheDarkEra.MODVERSION;
 		int nextVersion = getNewest();
 
 		if (currentVersion < nextVersion)
