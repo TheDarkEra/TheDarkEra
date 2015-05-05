@@ -9,16 +9,23 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.client.IRenderHandler;
 
 public class TDEWorldProvider extends WorldProvider
 {
 	public void registerWorldChunkManager()
 	{
-		this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.beach, 0.1F);
+//		/this.worldChunkMgr = new WorldChunkManagerHell(Biome Generator, Float for Rainfall);
 		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_land, 0.1F);
 		this.dimensionId = TheDarkEra.dimension;
 	}
 
+	
+	public boolean isSurfaceWorld()
+    {
+        return false;
+    }
+	
 	@Override
 	public String getSaveFolder()
 	{

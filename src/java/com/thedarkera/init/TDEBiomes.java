@@ -8,6 +8,10 @@ import net.minecraftforge.common.BiomeManager;
 public class TDEBiomes {
 	
 	public static BiomeGenBase dark_land;
+	public static BiomeGenBase dark_forrest;
+	public static BiomeGenBase dark_village;
+	public static BiomeGenBase dark_beach;
+	public static BiomeGenBase dark_hills;
 
 	public static void init() {
 		
