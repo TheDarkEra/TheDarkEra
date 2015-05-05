@@ -3,18 +3,10 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 
-import com.thedarkera.item.tool.ItemAncientAxe;
-import com.thedarkera.item.tool.ItemAncientHoe;
-import com.thedarkera.item.tool.ItemAncientPickaxe;
-import com.thedarkera.item.tool.ItemAncientShovel;
-import com.thedarkera.item.tool.ItemDarkStoneAxe;
-import com.thedarkera.item.tool.ItemDarkStoneHoe;
-import com.thedarkera.item.tool.ItemDarkStonePickaxe;
-import com.thedarkera.item.tool.ItemDarkStoneShovel;
-import com.thedarkera.item.tool.ItemSteelAxe;
-import com.thedarkera.item.tool.ItemSteelHoe;
-import com.thedarkera.item.tool.ItemSteelPickaxe;
-import com.thedarkera.item.tool.ItemSteelShovel;
+import com.thedarkera.item.tool.ItemModAxe;
+import com.thedarkera.item.tool.ItemModHoe;
+import com.thedarkera.item.tool.ItemModPickaxe;
+import com.thedarkera.item.tool.ItemModSpade;
 import com.thedarkera.item.tool.ItemWeeder;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -46,35 +38,35 @@ public class TDETools
 	public static void init()
 	{
 		//pickaxe
-		ancient_pickaxe = new ItemAncientPickaxe(TDEMaterials.ancient, "ancient_pickaxe");
+		ancient_pickaxe = new ItemModPickaxe(TDEMaterials.ancient, "ancient_pickaxe", "ancient_pickaxe");
 		GameRegistry.registerItem(ancient_pickaxe, ancient_pickaxe.getUnlocalizedName());
-		dark_stone_pickaxe = new ItemDarkStonePickaxe(TDEMaterials.dark_stone, "dark_stone_pickaxe");
+		dark_stone_pickaxe = new ItemModPickaxe(TDEMaterials.dark_stone, "dark_stone_pickaxe", "dark_stone_pickaxe");
 		GameRegistry.registerItem(dark_stone_pickaxe, dark_stone_pickaxe.getUnlocalizedName());
-		steel_pickaxe = new ItemSteelPickaxe(TDEMaterials.steel, "steel_pickaxe");
+		steel_pickaxe = new ItemModPickaxe(TDEMaterials.steel, "steel_pickaxe", "steel_pickaxe");
 		GameRegistry.registerItem(steel_pickaxe, steel_pickaxe.getUnlocalizedName());
 
 		//axe
-		ancient_axe = new ItemAncientAxe(TDEMaterials.ancient, "ancient_axe");
+		ancient_axe = new ItemModAxe(TDEMaterials.ancient, "ancient_axe", "ancient_axe");
 		GameRegistry.registerItem(ancient_axe, ancient_axe.getUnlocalizedName());
-		dark_stone_axe = new ItemDarkStoneAxe(TDEMaterials.dark_stone, "dark_stone_axe");
+		dark_stone_axe = new ItemModAxe(TDEMaterials.dark_stone, "dark_stone_axe", "ancient_axe");
 		GameRegistry.registerItem(dark_stone_axe, dark_stone_axe.getUnlocalizedName());
-		steel_axe = new ItemSteelAxe(TDEMaterials.steel, "steel_axe");
+		steel_axe = new ItemModAxe(TDEMaterials.steel, "steel_axe", "ancient_axe");
 		GameRegistry.registerItem(steel_axe, steel_axe.getUnlocalizedName());
 
 		//shovel
-		ancient_shovel = new ItemAncientShovel(TDEMaterials.ancient, "ancient_shovel");
+		ancient_shovel = new ItemModSpade(TDEMaterials.ancient, "ancient_shovel", "ancient_shovel");
 		GameRegistry.registerItem(ancient_shovel, ancient_shovel.getUnlocalizedName());
-		dark_stone_shovel = new ItemDarkStoneShovel(TDEMaterials.dark_stone, "dark_stone_shovel");
+		dark_stone_shovel = new ItemModSpade(TDEMaterials.dark_stone, "dark_stone_shovel", "dark_stone_shovel");
 		GameRegistry.registerItem(dark_stone_shovel, dark_stone_shovel.getUnlocalizedName());
-		steel_shovel = new ItemSteelShovel(TDEMaterials.steel, "steel_shovel");
+		steel_shovel = new ItemModSpade(TDEMaterials.steel, "steel_shovel", "steel_shovel");
 		GameRegistry.registerItem(steel_shovel, steel_shovel.getUnlocalizedName());
 
 		//hoe
-		ancient_hoe = new ItemAncientHoe(TDEMaterials.ancient, "ancient_hoe");
+		ancient_hoe = new ItemModHoe(TDEMaterials.ancient, "ancient_hoe", "ancient_hoe");
 		GameRegistry.registerItem(ancient_hoe, ancient_hoe.getUnlocalizedName());
-		dark_stone_hoe = new ItemDarkStoneHoe(TDEMaterials.dark_stone, "dark_stone_hoe");
+		dark_stone_hoe = new ItemModHoe(TDEMaterials.dark_stone, "dark_stone_hoe", "dark_stone_hoe");
 		GameRegistry.registerItem(dark_stone_hoe, dark_stone_hoe.getUnlocalizedName());
-		steel_hoe = new ItemSteelHoe(TDEMaterials.steel, "steel_hoe");
+		steel_hoe = new ItemModHoe(TDEMaterials.steel, "steel_hoe", "steel_hoe");
 		GameRegistry.registerItem(steel_hoe, steel_hoe.getUnlocalizedName());
 		
 		//weeder
