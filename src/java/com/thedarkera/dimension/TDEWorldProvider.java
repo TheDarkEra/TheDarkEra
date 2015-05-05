@@ -1,26 +1,26 @@
 package com.thedarkera.dimension;
 
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.init.TDEBiomes;
-
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.WorldProvider;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraftforge.client.IRenderHandler;
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.init.TDEBiomes;
 
 public class TDEWorldProvider extends WorldProvider
 {
 	public void registerWorldChunkManager()
 	{
-//		/this.worldChunkMgr = new WorldChunkManagerHell(Biome Generator, Float for Rainfall);
+        //this.worldChunkMgr = new WorldChunkManagerHell(Biome Generator, Float for Rainfall);
 		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_land, 0.1F);
+		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_forrest, 0.1F);
+		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_village, 0.1F);
+		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_beach, 0.1F);
+		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_hills, 0.1F);
 		this.dimensionId = TheDarkEra.dimension;
 	}
 
-	
 	public boolean isSurfaceWorld()
     {
         return false;

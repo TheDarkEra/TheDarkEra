@@ -26,6 +26,11 @@ public class EnterBiomeHandler {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.BLACK + "You entered the Dark Land biome"));
 			
 		}
+		if(player instanceof EntityPlayer && biome == TDEBiomes.dark_forrest) {
+			System.out.println("works!");
+			player.addChatMessage(new ChatComponentText(EnumChatFormatting.BLACK + "You entered the Dark Forrest biome"));
+			
+		}
 	}
 	
 }
