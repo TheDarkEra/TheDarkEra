@@ -16,10 +16,6 @@ public class BiomeDarkForrest extends BiomeGenBase{
 		fillerBlock = Blocks.dirt;
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
-<<<<<<< HEAD
-//		spawnableMonsterList.addAll(DarkMonsters);
-=======
->>>>>>> origin/master
 		spawnableWaterCreatureList.clear();
 		flowers.clear();
 		addDefaultFlowers();
