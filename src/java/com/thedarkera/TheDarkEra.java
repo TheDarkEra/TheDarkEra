@@ -85,4 +85,9 @@ public class TheDarkEra
 
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 2 successfully!");
 	}
+	
+	public enum GuiID
+	{
+		SMASHER
+	}
 }

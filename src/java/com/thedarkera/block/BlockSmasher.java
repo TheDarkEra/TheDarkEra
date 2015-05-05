@@ -1,15 +1,17 @@
 package com.thedarkera.block;
 
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.tileentity.TESmasher;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.TheDarkEra.GuiID;
+import com.thedarkera.tileentity.TESmasher;
+
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockSmasher extends Block implements ITileEntityProvider{
 
@@ -25,13 +27,12 @@ public class BlockSmasher extends Block implements ITileEntityProvider{
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int meta, float hitX, float hitY, float hitZ) {
         if (world.isRemote) {
             if (world.getTileEntity(x, y, z) != null)
-                player.openGui(TheDarkEra.instance, GUIs.SMASHER.ordinal(), world, x, y, z);
+                player.openGui(TheDarkEra.instance, GuiID.SMASHER.ordinal(), world, x, y, z);
             return true;
         }
         return true;
     }
 
-    @Override
     public TileEntity createNewTileEntity(World world, int meta) {
         return new TESmasher();
     }
@@ -39,9 +40,5 @@ public class BlockSmasher extends Block implements ITileEntityProvider{
     @Override
     public boolean hasTileEntity(int metadata) {
         return true;
-    }
-
-    public enum GUIs {
-        SMASHER
     }
 }
