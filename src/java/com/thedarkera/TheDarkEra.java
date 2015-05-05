@@ -4,9 +4,15 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.DimensionManager;
+import cpw.mods.fml.common.Loader;
 
 import org.apache.logging.log4j.Logger;
 
+import com.thedarkera.alloyaddon.init.BABlocks;
+import com.thedarkera.alloyaddon.init.BAItems;
+import com.thedarkera.alloyaddon.init.BARecipes;
+import com.thedarkera.alloyaddon.init.BATools;
+import com.thedarkera.alloyaddon.init.BAWeapons;
 import com.thedarkera.dimension.TDEWorldProvider;
 import com.thedarkera.handler.EnterBiomeHandler;
 import com.thedarkera.handler.WorldGenHandler;
@@ -109,6 +115,18 @@ public class TheDarkEra
 	public void postInit(FMLPostInitializationEvent event)
 	{
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 3.");
+		
+		/* For when I create a small addon to link it to my private mod.
+		 * I just need to get the first release of my mod before I start with this.
+		 */
+		if(Loader.isModLoaded("BlurrAlloys")){
+            BABlocks.init();
+            BAItems.init();
+            BATools.init();
+            BAWeapons.init();
+            BARecipes.init();
+            logger.info("Loaded Blurr Alloys successfully.");
+        }
 		
 		proxy.registerGuiHandler();
 
