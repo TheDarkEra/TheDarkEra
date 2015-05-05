@@ -1,9 +1,8 @@
 package com.thedarkera.init;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDERecipes 
 {
@@ -12,10 +11,9 @@ public class TDERecipes
 		//Blocks//
 		GameRegistry.addRecipe(new ItemStack(TDEBlocks.smeltery),  new Object[]{ 
 			"xxx",
-			"xyx",
+			"x x",
 			"xxx",
-			'x', Blocks.cobblestone,
-			'y', Blocks.furnace
+			'x', TDEBlocks.dark_cobblestone,
 		});
 		GameRegistry.addRecipe(new ItemStack(TDEBlocks.dark_stone_bricks, 4),  new Object[]{ 
 			"xx",
