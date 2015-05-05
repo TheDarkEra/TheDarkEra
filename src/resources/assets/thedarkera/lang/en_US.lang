@@ -112,3 +112,6 @@ tile.ancienthoe_ore.name=Ancient Hoe Ore
 tile.steel_block.name=Steel Block
 tile.teleporter_dark.name=Dark Dimension Teleporter
 tile.dark_portal.name=Dark Dimesion Portal
+
+//Container//
+container.smeltery=Smeltery
