@@ -1,6 +1,7 @@
 package com.thedarkera.dimension;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.init.TDEBiomes;
 
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.WorldProvider;
@@ -14,6 +15,7 @@ public class TDEWorldProvider extends WorldProvider
 	public void registerWorldChunkManager()
 	{
 		this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.beach, 0.1F);
+		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_land, 0.1F);
 		this.dimensionId = TheDarkEra.dimension;
 	}
 
