@@ -7,12 +7,12 @@ import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockDeadGrass extends Block
+public class BlockWeedyDirt extends Block
 {
 	private IIcon[] icons = new IIcon[6];
-	private String textureName = "dead_grass";
+	private String textureName = "weedy_dirt";
 	
-	public BlockDeadGrass(String name)
+	public BlockWeedyDirt(String name)
 	{
 		super(Material.grass);
 		setBlockName(name);

@@ -4,7 +4,38 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.block.*;
+import com.thedarkera.block.BlockAncientAxeOre;
+import com.thedarkera.block.BlockAncientHoeOre;
+import com.thedarkera.block.BlockAncientOre;
+import com.thedarkera.block.BlockAncientPickaxeOre;
+import com.thedarkera.block.BlockAncientShovelOre;
+import com.thedarkera.block.BlockDarkBirchPlanks;
+import com.thedarkera.block.BlockDarkBirchWood;
+import com.thedarkera.block.BlockDarkCobblestone;
+import com.thedarkera.block.BlockDarkDirt;
+import com.thedarkera.block.BlockDarkGrass;
+import com.thedarkera.block.BlockDarkStone;
+import com.thedarkera.block.BlockDarkStoneBricks;
+import com.thedarkera.block.BlockDarkStoneDirt;
+import com.thedarkera.block.BlockDarkStoneFence;
+import com.thedarkera.block.BlockDarkStoneLadder;
+import com.thedarkera.block.BlockDarkStoneSlab;
+import com.thedarkera.block.BlockDarkStoneStairs;
+import com.thedarkera.block.BlockDeadGrass;
+import com.thedarkera.block.BlockEbonyOre;
+import com.thedarkera.block.BlockGrapePlant;
+import com.thedarkera.block.BlockOrichalcumOre;
+import com.thedarkera.block.BlockPortalDark;
+import com.thedarkera.block.BlockRottenWood;
+import com.thedarkera.block.BlockRottenWoodFence;
+import com.thedarkera.block.BlockRottenWoodLog;
+import com.thedarkera.block.BlockRottenWoodSlab;
+import com.thedarkera.block.BlockRottenWoodStairs;
+import com.thedarkera.block.BlockSmasher;
+import com.thedarkera.block.BlockSmeltery;
+import com.thedarkera.block.BlockSteel;
+import com.thedarkera.block.BlockWeedyDirt;
+import com.thedarkera.block.BlockWispWood;
 import com.thedarkera.item.ItemSteelOre;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -95,8 +126,6 @@ public class TDEBlocks
 		GameRegistry.registerBlock(rotten_wood_stairs, rotten_wood_stairs.getUnlocalizedName().substring(5));
 		rotten_wood_slab = new BlockRottenWoodSlab(false, Material.wood);
 		GameRegistry.registerBlock(rotten_wood_slab, rotten_wood_slab.getUnlocalizedName().substring(5));
-		dead_grass = new BlockDeadGrass();
-		GameRegistry.registerBlock(dead_grass, dead_grass.getUnlocalizedName().substring(5));
 		dark_stone_dirt = new BlockDarkStoneDirt();
 		GameRegistry.registerBlock(dark_stone_dirt, dark_stone_dirt.getUnlocalizedName().substring(5));
 		smasher = new BlockSmasher();
@@ -121,6 +150,16 @@ public class TDEBlocks
 		teleporter_dark = new BlockPortalDark().setBlockName("teleporter_dark");
 		GameRegistry.registerBlock(teleporter_dark, teleporter_dark.getUnlocalizedName().substring(5));
 
+		//Biome Blocks
+		dead_grass = new BlockDeadGrass("dead_grass");
+		GameRegistry.registerBlock(dead_grass, dead_grass.getUnlocalizedName().substring(5));
+		dark_grass = new BlockDarkGrass("dark_grass");
+		GameRegistry.registerBlock(dark_grass, dark_grass.getUnlocalizedName().substring(5));
+		dark_dirt = new BlockDarkDirt("dark_dirt");
+		GameRegistry.registerBlock(dark_dirt, dark_dirt.getUnlocalizedName().substring(5));
+		weedy_dirt = new BlockWeedyDirt("weedy_dirt");
+		GameRegistry.registerBlock(weedy_dirt, weedy_dirt.getUnlocalizedName().substring(5));
+		
 		//Tree blocks//
 		dark_birch_wood = new BlockDarkBirchWood();
 		GameRegistry.registerBlock(dark_birch_wood, dark_birch_wood.getUnlocalizedName().substring(5));

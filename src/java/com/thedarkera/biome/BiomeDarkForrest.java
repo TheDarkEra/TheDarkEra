@@ -2,18 +2,19 @@ package com.thedarkera.biome;
 
 import java.util.Random;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenDesertWells;
+
+import com.thedarkera.init.TDEBlocks;
 
 public class BiomeDarkForrest extends BiomeGenBase{
 
 	
 	public BiomeDarkForrest(int biomeID) {
 		super(biomeID);
-		topBlock = Blocks.grass;
-		fillerBlock = Blocks.dirt;
+		topBlock = TDEBlocks.dark_grass;
+		fillerBlock = TDEBlocks.dark_dirt;
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
 		spawnableWaterCreatureList.clear();

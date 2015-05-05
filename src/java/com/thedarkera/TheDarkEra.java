@@ -140,3 +140,14 @@ public class TheDarkEra
 		SMELTERY
 	}
 }
+
+/* TODO: Dimension/Biome Stuff
+ * 								Textures: dead_grass, dead_grass_top, weedy_grass, weedy_grass_top, dark_dirt, dark_grass, dark_grass_top, dark_grass_side.
+ * 								Add new leaves (dead_leaves).
+ * 								Make tree using rotten wood log and dead leaves (Called dark_tree).
+ * 								Make a forest using dark trees in the Dark Forest Biome.
+ * 								Add recipes for the wood etc.
+ * 								Make dark dirt turn to dark grass after a while.
+ * 								Make dark grass drop dark dirt.
+ * 								Rename dark forrest to dark forest.
+ */
