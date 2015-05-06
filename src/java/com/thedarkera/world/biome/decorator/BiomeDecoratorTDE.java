@@ -2,13 +2,11 @@ package com.thedarkera.world.biome.decorator;
 
 import java.util.Random;
 
-import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.gen.WorldGenDarkBirchTree;
 
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.gen.feature.WorldGenMinable;
 
 public class BiomeDecoratorTDE extends BiomeDecorator {
 	/** The world the BiomeDecorator is currently decorating */
