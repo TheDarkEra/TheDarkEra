@@ -37,6 +37,7 @@ import com.thedarkera.block.BlockSmeltery;
 import com.thedarkera.block.BlockSteel;
 import com.thedarkera.block.BlockWeedyDirt;
 import com.thedarkera.block.BlockWispWood;
+import com.thedarkera.block.logs.BlockLogDead;
 import com.thedarkera.flatblocks.FlatBlockExample;
 import com.thedarkera.item.ItemSteelOre;
 import com.thedarkera.utils.RegUtils;
@@ -84,12 +85,14 @@ public class TDEBlocks
 	public static Block dark_dirt;
 	
 	//Tree blocks//
+	public static Block log_dead;
 	public static Block dark_birch_wood;
 	public static Block wisp_wood;
 	public static Block rotten_wood_log;
 	
 	//Placeable items//
 	public static Block example;
+	
 
 	public static void init()
 	{
@@ -171,6 +174,8 @@ public class TDEBlocks
 		reg(wisp_wood);
 		rotten_wood_log = new BlockRottenWoodLog(Material.wood);
 		reg(rotten_wood_log);
+		log_dead = new BlockLogDead();
+		reg(log_dead);
 
 		//Placeable items//
 		example = new FlatBlockExample();
