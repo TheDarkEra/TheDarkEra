@@ -34,6 +34,7 @@ import com.thedarkera.block.BlockRottenWoodStairs;
 import com.thedarkera.block.BlockSmasher;
 import com.thedarkera.block.BlockSmeltery;
 import com.thedarkera.block.BlockSteel;
+import com.thedarkera.block.BlockTestJodel;
 import com.thedarkera.block.BlockWeedyDirt;
 import com.thedarkera.block.BlockWispWood;
 import com.thedarkera.item.ItemSteelOre;
