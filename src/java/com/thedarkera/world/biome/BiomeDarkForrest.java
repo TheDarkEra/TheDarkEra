@@ -2,7 +2,6 @@ package com.thedarkera.world.biome;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenDesertWells;
@@ -10,13 +9,11 @@ import com.thedarkera.init.TDEBlocks;
 
 public class BiomeDarkForrest extends BiomeGenBase{
 
-	Block stoneBlock = TDEBlocks.dark_stone;
 	
 	public BiomeDarkForrest(int biomeID) {
 		super(biomeID);
 		topBlock = TDEBlocks.dark_grass;
 		fillerBlock = TDEBlocks.dark_dirt;
-		waterColorMultiplier = 0xE42D17;
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
 		spawnableWaterCreatureList.clear();
@@ -42,7 +39,6 @@ public class BiomeDarkForrest extends BiomeGenBase{
 	/*ToDo: 
 	 *Need to add trees
 	 *Bushes
-	 *Dark Stone replace stone
 	 *and more decorative blocks. 
 	 *
 	 *NEED MORE BIOME BLOCKS
