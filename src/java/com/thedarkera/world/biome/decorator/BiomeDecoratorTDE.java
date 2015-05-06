@@ -2,9 +2,13 @@ package com.thedarkera.world.biome.decorator;
 
 import java.util.Random;
 
+import com.thedarkera.init.TDEBlocks;
+import com.thedarkera.world.gen.WorldGenDarkBirchTree;
+
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.gen.feature.WorldGenMinable;
 
 public class BiomeDecoratorTDE extends BiomeDecorator
 {
@@ -25,26 +29,28 @@ public class BiomeDecoratorTDE extends BiomeDecorator
 //	public static WorldGenForestTrees smallTree;
 //	public static WorldGenForestBigTree bigTree;
 //	public static WorldGenEffectTree effectTree;
+	public static WorldGenDarkBirchTree dark_birch_tree;
 	
 	@SuppressWarnings("unused")
 	private static final String __OBFID = "CL_00000164";
 
 	public BiomeDecoratorTDE() {
-/*		coalGen = new WorldGenMinable(Blocks.coal_ore, 16, Blockss.lightStone);
-		ironGen = new WorldGenMinable(Blocks.iron_ore, 8, Blockss.lightStone);
-		goldGen = new WorldGenMinable(Blocks.gold_ore, 8, Blockss.lightStone);
-		redstoneGen = new WorldGenMinable(Blocks.redstone_ore, 7, Blockss.lightStone);
-		diamondGen = new WorldGenMinable(Blocks.diamond_ore, 7, Blockss.lightStone);
-		lapisGen = new WorldGenMinable(Blocks.lapis_ore, 6, Blockss.lightStone);
+		//coalGen = new WorldGenMinable(Blocks.coal_ore, 16, Blockss.lightStone);
+		//ironGen = new WorldGenMinable(Blocks.iron_ore, 8, Blockss.lightStone);
+		//goldGen = new WorldGenMinable(Blocks.gold_ore, 8, Blockss.lightStone);
+	//	redstoneGen = new WorldGenMinable(Blocks.redstone_ore, 7, Blockss.lightStone);
+		//diamondGen = new WorldGenMinable(Blocks.diamond_ore, 7, Blockss.lightStone);
+	//	lapisGen = new WorldGenMinable(Blocks.lapis_ore, 6, Blockss.lightStone);
+	//	ebonyGen = new WorldGenMinable(TDEBlocks.ebony_ore, 6 Blockss.lightStone);
 
 	
 
 		// TREES
-		smallTree = new WorldGenForestTrees(true);
-		bigTree = new WorldGenForestBigTree(true, 10, 1, 5);
-		effectTree = new WorldGenEffectTree(true);
-		
-		*/	
+		//smallTree = new WorldGenForestTrees(true);
+		//bigTree = new WorldGenForestBigTree(true, 10, 1, 5);
+		//effectTree = new WorldGenEffectTree(true);
+	//	dark_birch_tree = new WorldGenDarkBirchTree(true);
+			
 
 		// generates lakes and lava lakes in dimension.
 		generateLakes = true;

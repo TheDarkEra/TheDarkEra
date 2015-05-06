@@ -1,11 +1,11 @@
 package com.thedarkera.world.biome.decorator;
 
 import com.thedarkera.init.TDEBiomes;
+import com.thedarkera.world.biome.BiomeDarkLand;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
@@ -15,18 +15,18 @@ public class BiomeDecoratorHelper {
     private static WorldGenerator glowStone;
 
     public BiomeDecoratorHelper(){
-        //		glowStone = new WorldGenMinable(Blocks.glowstone, 30, Blockss.lightStone);
+        	//	glowStone = new WorldGenMinable(Blocks.glowstone, 30, Blockss.lightStone);
     }
 
     protected static void decorateBiome(BiomeGenBase biome) {
         MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(BiomeDecoratorTDE.currentWorld, BiomeDecoratorTDE.randomGenerator, BiomeDecoratorTDE.chunk_X, BiomeDecoratorTDE.chunk_Z));
         //perpere ores for generation
-    //    initOres();
+    //    InintOres();
         //GenerateOres
    //     generateOreInBiome(biome);
 
         if(biome == TDEBiomes.dark_forrest){
-     //   	BiomeDecoratorTDE.howMenyTrees = BiomeLightForest.treesPerChunk;
+   //    	BiomeDecoratorTDE.howMenyTrees = BiomeDarkLand.treesPerChunk;
             int i = BiomeDecoratorTDE.howMenyTrees;
             /** Chunk Postions **/
             int chunkX;
@@ -81,11 +81,11 @@ public class BiomeDecoratorHelper {
      * Geberate Ores In a Biome
      * @param biome
      */
-  //  private static void generateOreInBiome(BiomeGenBase biome){
-  //      if(biome == ModBiomes.forestLight){
-  //          genStandardOre(20, glowStone, 0, 128);
-  //      }
-  //  }
+    private static void generateOreInBiome(BiomeGenBase biome){
+        if(biome == TDEBiomes.dark_forrest){
+            genStandardOre(20, glowStone, 0, 128);
+        }
+    }
 
     /**
      * Generate ores in chunks.
