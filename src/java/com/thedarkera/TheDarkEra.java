@@ -38,13 +38,12 @@ import cpw.mods.fml.common.gameevent.PlayerEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = TheDarkEra.MODID, name = TheDarkEra.NAME, version = TheDarkEra.VERSION)
-
-public class TheDarkEra
-{
+public class TheDarkEra {
 	public static final String NAME = "The Dark Era";
 	public static final String MODID = "TheDarkEra";
-	public static final String VERSION = "1.7.10-A1.0"; //Alpha 1.0; feel free to change
-	public static  int MODVERSION = 1;
+	public static final String VERSION = "1.7.10-A1.0"; // Alpha 1.0; feel free
+														// to change
+	public static int MODVERSION = 1;
 
 	public static int dimension = 2;
 
@@ -57,22 +56,21 @@ public class TheDarkEra
 	public static CommonProxy proxy;
 
 	public static Logger logger;
-	
+
 	@SubscribeEvent
-	public void checkUpdate(PlayerEvent.PlayerLoggedInEvent event)
-	{
-		if (UpdateChecker.outdated)
-		{
-			event.player.addChatComponentMessage(new ChatComponentText("TheDarkEra is oudated"));
+	public void checkUpdate(PlayerEvent.PlayerLoggedInEvent event) {
+		if (UpdateChecker.outdated) {
+			event.player.addChatComponentMessage(new ChatComponentText(
+					"TheDarkEra is oudated"));
 		}
 	}
 
 	@Mod.EventHandler
-	public void preInit(FMLPreInitializationEvent event)
-	{
+	public void preInit(FMLPreInitializationEvent event) {
 		logger = event.getModLog();
 
-		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + ".");
+		logger.info("Loading " + TheDarkEra.NAME + " version "
+				+ TheDarkEra.VERSION + ".");
 
 		proxy.registerRenderers();
 
@@ -85,69 +83,71 @@ public class TheDarkEra
 		TDEBiomes.init();
 
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
-		
+
 		FMLCommonHandler.instance().bus().register(new EnterBiomeHandler());
 
-		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 1 successfully!");
+		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION
+				+ " loaded Phase 1 successfully!");
 	}
 
-	public static CreativeTabs tabTDE = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era")
-	{
+	public static CreativeTabs tabTDE = new CreativeTabs(
+			CreativeTabs.getNextID(), "the_dark_era") {
 		@Override
-		public Item getTabIconItem()
-		{
+		public Item getTabIconItem() {
 			return TDEArmors.daedric_helmet;
 		}
 	};
 
 	@EventHandler
-	public void init(FMLInitializationEvent event){
-		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");
+	public void init(FMLInitializationEvent event) {
+		logger.info("Loading " + TheDarkEra.NAME + " version "
+				+ TheDarkEra.VERSION + " Phase 2.");
 
 		proxy.registerTileEntities();
 
-		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
+		DimensionManager.registerProviderType(dimension,
+				TDEWorldProvider.class, false);
 		DimensionManager.registerDimension(dimension, dimension);
 
-		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 2 successfully!");
+		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION
+				+ " loaded Phase 2 successfully!");
 	}
-	
+
 	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent event)
-	{
-		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 3.");
-		
-		/* For when I create a small addon to link it to my private mod.
-		 * I just need to get the first release of my mod before I start with this.
+	public void postInit(FMLPostInitializationEvent event) {
+		logger.info("Loading " + TheDarkEra.NAME + " version "
+				+ TheDarkEra.VERSION + " Phase 3.");
+
+		/*
+		 * For when I create a small addon to link it to my private mod. I just
+		 * need to get the first release of my mod before I start with this.
 		 */
-		if(Loader.isModLoaded("BlurrAlloys")){
-            BABlocks.init();
-            BAItems.init();
-            BATools.init();
-            BAWeapons.init();
-            BARecipes.init();
-            logger.info("Loaded Blurr Alloys successfully.");
-        }
-		
+		if (Loader.isModLoaded("BlurrAlloys")) {
+			BABlocks.init();
+			BAItems.init();
+			BATools.init();
+			BAWeapons.init();
+			BARecipes.init();
+			logger.info("Loaded Blurr Alloys successfully.");
+		}
+
 		proxy.registerGuiHandler();
 
-		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 3 successfully!");
+		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION
+				+ " loaded Phase 3 successfully!");
 	}
-	
-	public enum GuiID
-	{
-		SMASHER,
-		SMELTERY
+
+	public enum GuiID {
+		SMASHER, SMELTERY
 	}
 }
 
-/* TODO: Dimension/Biome Stuff
- * 								Textures: dead_grass, dead_grass_top, weedy_grass, weedy_grass_top, dark_dirt, dark_grass, dark_grass_top, dark_grass_side.
- * 								Add new leaves (dead_leaves).
- * 								Make tree using rotten wood log and dead leaves (Called dark_tree).
- * 								Make a forest using dark trees in the Dark Forest Biome.
- * 								Add recipes for the wood etc.
- * 								Make dark dirt turn to dark grass after a while.
- * 								Make dark grass drop dark dirt.
- * 								Rename dark forrest to dark forest.
+/*
+ * TODO: Dimension/Biome Stuff Textures: dead_grass, dead_grass_top,
+ * weedy_grass, weedy_grass_top, dark_dirt, dark_grass, dark_grass_top,
+ * dark_grass_side. Add new leaves (dead_leaves). Make tree using rotten wood
+ * log and dead leaves (Called dark_tree). Make a forest using dark trees in the
+ * Dark Forest Biome. Add recipes for the wood etc. Make dark dirt turn to dark
+ * grass after a while. Make dark grass drop dark dirt. Rename dark forrest to
+ * dark forest.
  */

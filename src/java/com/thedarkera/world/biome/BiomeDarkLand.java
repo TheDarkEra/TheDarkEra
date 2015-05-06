@@ -9,10 +9,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenDesertWells;
 
-public class BiomeDarkLand extends BiomeGenBase
-{
-	public BiomeDarkLand(int biomeID)
-	{
+public class BiomeDarkLand extends BiomeGenBase {
+	public BiomeDarkLand(int biomeID) {
 		super(biomeID);
 		spawnableCreatureList.clear();
 		topBlock = TDEBlocks.dead_grass;
@@ -37,16 +35,15 @@ public class BiomeDarkLand extends BiomeGenBase
 	}
 
 	@Override
-	public void decorate(World world, Random rand, int chunkX, int chunkZ)
-	{
+	public void decorate(World world, Random rand, int chunkX, int chunkZ) {
 		super.decorate(world, rand, chunkX, chunkZ);
 
-		if (rand.nextInt(1000) == 0)
-		{
+		if (rand.nextInt(1000) == 0) {
 			int k = chunkX + rand.nextInt(16) + 8;
 			int l = chunkZ + rand.nextInt(16) + 8;
 			WorldGenDesertWells worldgendesertwells = new WorldGenDesertWells();
-			worldgendesertwells.generate(world, rand, k, world.getHeightValue(k, l) + 1, l);
+			worldgendesertwells.generate(world, rand, k,
+					world.getHeightValue(k, l) + 1, l);
 		}
 	}
 }

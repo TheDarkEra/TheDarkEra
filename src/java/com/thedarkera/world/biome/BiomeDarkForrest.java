@@ -8,13 +8,14 @@ import net.minecraft.world.gen.feature.WorldGenDesertWells;
 
 import com.thedarkera.init.TDEBlocks;
 
-public class BiomeDarkForrest extends BiomeGenBase{
+public class BiomeDarkForrest extends BiomeGenBase {
 
 	public BiomeDarkForrest(int biomeID) {
 		super(biomeID);
 		topBlock = TDEBlocks.dark_grass;
 		fillerBlock = TDEBlocks.dark_dirt;
-		//bottomBlock = TDEBlocks.dark_stone; TODO: This might mean making our own BiomeGenBase
+		// bottomBlock = TDEBlocks.dark_stone; TODO: This might mean making our
+		// own BiomeGenBase
 		waterColorMultiplier = 0x000000;
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
@@ -23,28 +24,25 @@ public class BiomeDarkForrest extends BiomeGenBase{
 		addDefaultFlowers();
 		theBiomeDecorator.deadBushPerChunk = 5;
 	}
-	
+
 	@Override
-	public void decorate(World world, Random rand, int chunkX, int chunkZ)
-	{
+	public void decorate(World world, Random rand, int chunkX, int chunkZ) {
 		super.decorate(world, rand, chunkX, chunkZ);
 
-		if (rand.nextInt(1000) == 0)
-		{
+		if (rand.nextInt(1000) == 0) {
 			int k = chunkX + rand.nextInt(16) + 8;
 			int l = chunkZ + rand.nextInt(16) + 8;
 			WorldGenDesertWells worldgendesertwells = new WorldGenDesertWells();
-			worldgendesertwells.generate(world, rand, k, world.getHeightValue(k, l) + 1, l);
+			worldgendesertwells.generate(world, rand, k,
+					world.getHeightValue(k, l) + 1, l);
 		}
 	}
-	
-	/*ToDo: 
-	 *Need to add trees
-	 *Bushes
-	 *Dark Stone replace stone
-	 *and more decorative blocks. 
-	 *
-	 *NEED MORE BIOME BLOCKS
+
+	/*
+	 * ToDo:Need to add treesBushesDark Stone replace stoneand more decorative
+	 * blocks.
+	 * 
+	 * NEED MORE BIOME BLOCKS
 	 */
 
 }
