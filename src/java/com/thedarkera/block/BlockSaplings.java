@@ -81,10 +81,10 @@ public class BlockSaplings extends BlockSapling {
 
 		switch (l) {
 		case 0:
-			object = new WorldGenDeadTree(TDEBlocks.log_dead, TDEBlocks.leaves_dead, 0, 0, false, 5, 10, false);
+			object = new WorldGenDeadTree(TDEBlocks.log_dead, TDEBlocks.blockLeaves, 0, 0, false, 5, 10, false);
 			break;
 		case 1:
-			object = new WorldGenDeadTree(Blocks.bookshelf, TDEBlocks.leaves_dead, 0, 0, false, 15, 15, false);
+			object = new WorldGenDeadTree(Blocks.bookshelf, TDEBlocks.blockLeaves, 0, 1, false, 15, 15, false);
 			break;
 		case 2:
 			break;
@@ -94,7 +94,7 @@ public class BlockSaplings extends BlockSapling {
 			break;
 		case 5:
 		default:
-			object = new WorldGenDeadTree(TDEBlocks.log_dead, TDEBlocks.leaves_dead, 0, 0, false, 10, 15, false);
+			object = new WorldGenDeadTree(TDEBlocks.log_dead, TDEBlocks.blockLeaves, 0, 0, false, 10, 15, false);
 			break;
 		}
 		Block block = Blocks.air;
@@ -146,7 +146,7 @@ public class BlockSaplings extends BlockSapling {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister p_149651_1_) {
 		for (int i = 0; i < saplingicon.length; ++i) {
-			saplingicon[i] = p_149651_1_.registerIcon(this.getUnlocalizedName().substring(5) + "_" + saplings[i]);
+			saplingicon[i] = p_149651_1_.registerIcon(TheDarkEra.MODID + ":" + this.getUnlocalizedName().substring(5));
 		}
 	}
 
