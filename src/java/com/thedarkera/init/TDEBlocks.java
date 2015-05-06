@@ -30,6 +30,7 @@ import com.thedarkera.block.BlockRottenWood;
 import com.thedarkera.block.BlockRottenWoodFence;
 import com.thedarkera.block.BlockRottenWoodSlab;
 import com.thedarkera.block.BlockRottenWoodStairs;
+import com.thedarkera.block.BlockSaplings;
 import com.thedarkera.block.BlockSmasher;
 import com.thedarkera.block.BlockSmeltery;
 import com.thedarkera.block.BlockSteel;
@@ -54,14 +55,17 @@ public class TDEBlocks
 	public static Block ancientshovel_ore;
 	/** Unlike ancient axe and pickaxe this ore will be in dirt. */
 	public static Block ancienthoe_ore;
-	public static Block grape_plant;
 	public static Block dark_portal;
 	public static Block teleporter_dark;
 	public static Block smasher;
 	public static Block dark_birch_planks; 
 	
 	public static Block smeltery;
-
+	
+	//plants//
+	public static Block grape_plant;
+	public static Block saplings;
+	
 	//village blocks //
 	//TODO: Use block metadata
 	public static Block dark_stone_ladder;
@@ -148,6 +152,9 @@ public class TDEBlocks
 		//Plants//
 		grape_plant = new BlockGrapePlant();
 		reg(grape_plant);
+		saplings = new BlockSaplings();
+		reg(saplings);
+		
 
 		//Portals//
 		dark_portal = new BlockPortalDark().setBlockName("dark_portal");

@@ -2,8 +2,8 @@ package com.thedarkera.flatblocks;
 
 import net.minecraft.item.Item;
 
+import com.thedarkera.iflatblocks.IItemBlock;
 import com.thedarkera.init.TDEItems;
-import com.thedarkera.jodeltest.IItemBlock;
 
 public class FlatBlockExample extends IItemBlock {
 

@@ -1,4 +1,4 @@
-package com.thedarkera.jodeltest;
+package com.thedarkera.iflatblocks;
 
 import net.minecraft.item.Item;
 
