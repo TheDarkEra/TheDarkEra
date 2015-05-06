@@ -79,7 +79,7 @@ public class BlockSaplings extends BlockSapling {
 
 		switch (l) {
 		case 0:
-			object = new WorldGenDeadTree();
+//			object = new WorldGenDeadTree();
 			break;
 		case 1:
 			break;
