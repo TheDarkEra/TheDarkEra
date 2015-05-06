@@ -6,8 +6,8 @@ import com.thedarkera.iflatblocks.IPlaceableItem;
 import com.thedarkera.init.TDEBlocks;
 
 public class ItemPlaceAbleExample extends IPlaceableItem {
-	
-	public  ItemPlaceAbleExample() {
+
+	public ItemPlaceAbleExample() {
 		super();
 	}
 
@@ -22,7 +22,5 @@ public class ItemPlaceAbleExample extends IPlaceableItem {
 	public Block ItemBlock() {
 		return TDEBlocks.example;
 	}
-
-
 
 }

@@ -5,7 +5,6 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-
 import net.minecraft.item.Item;
 
 import com.thedarkera.TheDarkEra;
@@ -15,8 +14,7 @@ public class BlockAncientOre extends Block {
 
 	String name = "ancient_ore";
 
-	public BlockAncientOre()
-	{
+	public BlockAncientOre() {
 		super(Material.gourd);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
@@ -28,9 +26,7 @@ public class BlockAncientOre extends Block {
 	}
 
 	@Override
-	public Item getItemDropped(int meta, Random rand, int fortune)
-	{
+	public Item getItemDropped(int meta, Random rand, int fortune) {
 		return TDETools.ancient_hoe;
 	}
 }
-

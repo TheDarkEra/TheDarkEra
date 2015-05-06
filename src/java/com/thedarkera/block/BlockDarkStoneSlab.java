@@ -5,13 +5,11 @@ import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockDarkStoneSlab extends BlockSlab
-{
+public class BlockDarkStoneSlab extends BlockSlab {
 	String name = "dark_stone_slab";
 	String texture = "dark_stone";
-	
-	public BlockDarkStoneSlab(boolean b, Material m)
-	{
+
+	public BlockDarkStoneSlab(boolean b, Material m) {
 		super(b, m);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + texture);
@@ -27,5 +25,5 @@ public class BlockDarkStoneSlab extends BlockSlab
 		return null;
 	}
 
-	//TODO: Add ability to stack slabs to make a block
+	// TODO: Add ability to stack slabs to make a block
 }

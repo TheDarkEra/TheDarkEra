@@ -4,10 +4,8 @@ import net.minecraft.item.ItemSword;
 
 import com.thedarkera.TheDarkEra;
 
-public class ItemModSword extends ItemSword
-{
-	public ItemModSword(ToolMaterial material, String name) 
-	{
+public class ItemModSword extends ItemSword {
+	public ItemModSword(ToolMaterial material, String name) {
 		super(material);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);

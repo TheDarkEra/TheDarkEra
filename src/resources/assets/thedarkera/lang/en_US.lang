@@ -123,6 +123,7 @@ tile.weedy_dirt.name=Weedy Dirt
 tile.smeltery.name=Smeltery
 tile.dark_grass.name=Dark Grass
 tile.dark_dirt.name=Dark Dirt
+tile.dark_gravel.name=Dark Gravel
 
 //Container//
 container.smeltery=Smeltery

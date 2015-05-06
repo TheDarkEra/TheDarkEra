@@ -4,20 +4,16 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemSteelOre extends ItemBlock
-{	
-	public ItemSteelOre(Block block) 
-	{
+public class ItemSteelOre extends ItemBlock {
+	public ItemSteelOre(Block block) {
 		super(block);
 		setHasSubtypes(true);
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack itemstack)
-	{
+	public String getUnlocalizedName(ItemStack itemstack) {
 		String name = "";
-		switch(itemstack.getItemDamage())
-		{
+		switch (itemstack.getItemDamage()) {
 		case 0:
 			name = "ore";
 			break;
@@ -33,8 +29,7 @@ public class ItemSteelOre extends ItemBlock
 	}
 
 	@Override
-	public int getMetadata(int par1)
-	{
+	public int getMetadata(int par1) {
 		return par1;
 	}
 }

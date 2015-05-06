@@ -10,11 +10,10 @@ import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDETools;
 
 public class BlockAncientShovelOre extends Block {
-	
+
 	String name = "ancientshovel_ore";
-	
-	public BlockAncientShovelOre()
-	{
+
+	public BlockAncientShovelOre() {
 		super(Material.sand);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
@@ -24,11 +23,9 @@ public class BlockAncientShovelOre extends Block {
 		setStepSound(soundTypeSand);
 		setHarvestLevel("shovel", 0);
 	}
-	
+
 	@Override
-	public Item getItemDropped(int meta, Random rand, int fortune)
-	{
+	public Item getItemDropped(int meta, Random rand, int fortune) {
 		return TDETools.ancient_shovel;
 	}
 }
-

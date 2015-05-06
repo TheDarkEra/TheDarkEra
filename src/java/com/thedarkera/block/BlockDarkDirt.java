@@ -5,15 +5,11 @@ import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockDarkDirt extends Block
-{
-	private String textureName = "dark_dirt";
-	
-	public BlockDarkDirt(String name)
-	{
+public class BlockDarkDirt extends Block {
+	public BlockDarkDirt(String name) {
 		super(Material.gourd);
 		setBlockName(name);
-		setBlockTextureName(TheDarkEra.MODID + ":" + textureName);
+		setBlockTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);
 		setHardness(0.3F);
 		setStepSound(soundTypeGravel);

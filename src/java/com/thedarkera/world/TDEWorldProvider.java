@@ -16,80 +16,75 @@ import com.thedarkera.world.renderers.SkyRenderer;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TDEWorldProvider extends WorldProvider
-{
-	public void registerWorldChunkManager()
-	{
-        //this.worldChunkMgr = new WorldChunkManagerHell(Biome Generator, Float for Rainfall);
-		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_land, 0.1F);
-		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_forrest, 0.1F);
-		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_village, 0.1F);
-		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_beach, 0.1F);
-		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_hills, 0.1F);
+public class TDEWorldProvider extends WorldProvider {
+	public void registerWorldChunkManager() {
+		// this.worldChunkMgr = new WorldChunkManagerHell(Biome Generator, Float
+		// for Rainfall);
+		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_land,
+				0.1F);
+		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_forrest,
+				0.1F);
+		// this.worldChunkMgr = new
+		// WorldChunkManagerHell(TDEBiomes.dark_village, 0.1F);
+		// this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_beach,
+		// 0.1F);
+		// this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_hills,
+		// 0.1F);
 		this.dimensionId = TheDarkEra.dimension;
 	}
 
-	public boolean isSurfaceWorld()
-    {
-        return false;
-    }
-	
+	public boolean isSurfaceWorld() {
+		return false;
+	}
+
 	@Override
-	public String getSaveFolder()
-	{
+	public String getSaveFolder() {
 		return "DIM-TheDark";
 	}
 
 	@Override
-	public String getWelcomeMessage()
-	{
+	public String getWelcomeMessage() {
 		return "Entering The Dark Dimension";
 	}
 
 	@Override
-	public String getDepartMessage()
-	{
+	public String getDepartMessage() {
 		return "Leaving The Dark Dimension";
 	}
 
 	@Override
-	public boolean canRespawnHere()
-	{
+	public boolean canRespawnHere() {
 		return true;
 	}
 
 	@Override
-	public IChunkProvider createChunkGenerator()
-	{
+	public IChunkProvider createChunkGenerator() {
 		return new TDEChunkProvider(worldObj, worldObj.getSeed(), true);
 	}
 
 	@Override
-	public String getDimensionName()
-	{
+	public String getDimensionName() {
 		return "The Dark Dimension";
 	}
 
 	@Override
-	public ChunkCoordinates getEntrancePortalLocation()
-	{
+	public ChunkCoordinates getEntrancePortalLocation() {
 		return null;
 	}
 
 	@Override
-	public boolean canDoLightning(Chunk chunk)
-	{
+	public boolean canDoLightning(Chunk chunk) {
 		return true;
 	}
 
 	@Override
-	public boolean canDoRainSnowIce(Chunk chunk)
-	{
+	public boolean canDoRainSnowIce(Chunk chunk) {
 		return false;
-		
+
 	}
+
 	@Override
 	public IRenderHandler getSkyRenderer() {
 		return new SkyRenderer();
-		}
 	}
+}

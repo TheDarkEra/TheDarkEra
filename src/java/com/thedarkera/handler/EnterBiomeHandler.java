@@ -14,23 +14,27 @@ public class EnterBiomeHandler {
 
 	@SubscribeEvent
 	public void enterBiome(PlayerEvent event) {
-		//Item item = event.player.getHeldItem().getItem();
+		// Item item = event.player.getHeldItem().getItem();
 		World world = event.player.worldObj;
 		EntityPlayer player = event.player;
 		int x = (int) player.posX;
 		int z = (int) player.posZ;
 		BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(x, z);
-		
-		if(player instanceof EntityPlayer && biome == TDEBiomes.dark_land) {
+
+		if (player instanceof EntityPlayer && biome == TDEBiomes.dark_land) {
 			System.out.println("works!");
-			player.addChatMessage(new ChatComponentText(EnumChatFormatting.BLACK + "You entered the Dark Land biome"));
-			
+			player.addChatMessage(new ChatComponentText(
+					EnumChatFormatting.BLACK
+							+ "You entered the Dark Land biome"));
+
 		}
-		if(player instanceof EntityPlayer && biome == TDEBiomes.dark_forrest) {
+		if (player instanceof EntityPlayer && biome == TDEBiomes.dark_forrest) {
 			System.out.println("works!");
-			player.addChatMessage(new ChatComponentText(EnumChatFormatting.BLACK + "You entered the Dark Forrest biome"));
-			
+			player.addChatMessage(new ChatComponentText(
+					EnumChatFormatting.BLACK
+							+ "You entered the Dark Forrest biome"));
+
 		}
 	}
-	
+
 }

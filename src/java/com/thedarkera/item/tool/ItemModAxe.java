@@ -4,7 +4,7 @@ import com.thedarkera.TheDarkEra;
 
 import net.minecraft.item.ItemAxe;
 
-public class ItemModAxe extends ItemAxe{
+public class ItemModAxe extends ItemAxe {
 
 	public ItemModAxe(ToolMaterial material, String name, String texture) {
 		super(material);

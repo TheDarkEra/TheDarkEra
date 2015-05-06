@@ -7,13 +7,11 @@ import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockDeadGrass extends Block
-{
+public class BlockDeadGrass extends Block {
 	private IIcon[] icons = new IIcon[6];
 	private String textureName = "dead_grass";
-	
-	public BlockDeadGrass(String name)
-	{
+
+	public BlockDeadGrass(String name) {
 		super(Material.grass);
 		setBlockName(name);
 		setCreativeTab(TheDarkEra.tabTDE);
@@ -23,19 +21,23 @@ public class BlockDeadGrass extends Block
 	}
 
 	@Override
-	public void registerBlockIcons(IIconRegister iconRegister)
-	{
-		icons[0] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_bottom");
-		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_top");
-		icons[2] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
-		icons[3] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
-		icons[4] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
-		icons[5] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
+	public void registerBlockIcons(IIconRegister iconRegister) {
+		icons[0] = iconRegister.registerIcon(TheDarkEra.MODID + ":"
+				+ textureName + "_bottom");
+		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + ":"
+				+ textureName + "_top");
+		icons[2] = iconRegister.registerIcon(TheDarkEra.MODID + ":"
+				+ textureName + "_side");
+		icons[3] = iconRegister.registerIcon(TheDarkEra.MODID + ":"
+				+ textureName + "_side");
+		icons[4] = iconRegister.registerIcon(TheDarkEra.MODID + ":"
+				+ textureName + "_side");
+		icons[5] = iconRegister.registerIcon(TheDarkEra.MODID + ":"
+				+ textureName + "_side");
 	}
 
 	@Override
-	public IIcon getIcon(int side, int meta)
-	{
+	public IIcon getIcon(int side, int meta) {
 		return icons[side];
 	}
 

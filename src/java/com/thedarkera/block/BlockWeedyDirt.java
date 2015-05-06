@@ -7,13 +7,11 @@ import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockWeedyDirt extends Block
-{
+public class BlockWeedyDirt extends Block {
 	private IIcon[] icons = new IIcon[6];
 	private String textureName = "weedy_dirt";
-	
-	public BlockWeedyDirt(String name)
-	{
+
+	public BlockWeedyDirt(String name) {
 		super(Material.grass);
 		setBlockName(name);
 		setCreativeTab(TheDarkEra.tabTDE);
@@ -23,17 +21,17 @@ public class BlockWeedyDirt extends Block
 	}
 
 	@Override
-	public void registerBlockIcons(IIconRegister iconRegister)
-	{
+	public void registerBlockIcons(IIconRegister iconRegister) {
 		for (int i = 0; i < icons.length; i++) {
-			icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName);
+			icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":"
+					+ textureName);
 		}
-		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_top");
+		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + ":"
+				+ textureName + "_top");
 	}
 
 	@Override
-	public IIcon getIcon(int side, int meta)
-	{
+	public IIcon getIcon(int side, int meta) {
 		return icons[side];
 	}
 

@@ -9,18 +9,14 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class WorldGenDarkBirchTree extends WorldGenerator
-{
+public class WorldGenDarkBirchTree extends WorldGenerator {
 	int height;
 	Block wood = TDEBlocks.dark_birch_log;
 	Block leaf = Blocks.leaves;
 
-	public boolean generate(World world, Random random, int x, int y, int z)
-	{
-		if (world.rand.nextInt(10) == 0)
-		{
-			while (world.isAirBlock(x, y - 1, z) && y > 55)
-			{
+	public boolean generate(World world, Random random, int x, int y, int z) {
+		if (world.rand.nextInt(10) == 0) {
+			while (world.isAirBlock(x, y - 1, z) && y > 55) {
 				--y;
 			}
 			if (!world.isAirBlock(x, y, z))
@@ -28,8 +24,7 @@ public class WorldGenDarkBirchTree extends WorldGenerator
 
 			height = 2 + random.nextInt(5);
 
-			for (int i = 0; i < height; i++)
-			{
+			for (int i = 0; i < height; i++) {
 				world.setBlock(x, y + i, z, wood);
 			}
 
@@ -40,12 +35,10 @@ public class WorldGenDarkBirchTree extends WorldGenerator
 			int front = 2 + random.nextInt(3);
 			int back = 2 + random.nextInt(3);
 
-			for (int i = 0; i < top; i++)
-			{
+			for (int i = 0; i < top; i++) {
 				setBlock(world, x, y + i, z, wood);
 
-				if (i > 0)
-				{
+				if (i > 0) {
 					setBlock(world, x + 1, y + i, z, leaf);
 					setBlock(world, x - 1, y + i, z, leaf);
 					setBlock(world, x, y + i, z + 1, leaf);
@@ -54,42 +47,34 @@ public class WorldGenDarkBirchTree extends WorldGenerator
 				}
 			}
 
-			for (int i = 0; i < left; i++)
-			{
+			for (int i = 0; i < left; i++) {
 				setBlock(world, x + i, y, z, wood);
 				setBlock(world, x + i, y + 1, z, leaf);
-				if (i > 0)
-				{
+				if (i > 0) {
 					setBlock(world, x + i, y, z + 1, leaf);
 					setBlock(world, x + i, y, z - 1, leaf);
 				}
 			}
-			for (int i = 0; i < right; i++)
-			{
+			for (int i = 0; i < right; i++) {
 				setBlock(world, x - i, y, z, wood);
 				setBlock(world, x - i, y + 1, z, leaf);
-				if (i > 0)
-				{
+				if (i > 0) {
 					setBlock(world, x - i, y, z + 1, leaf);
 					setBlock(world, x - i, y, z - 1, leaf);
 				}
 			}
-			for (int i = 0; i < front; i++)
-			{
+			for (int i = 0; i < front; i++) {
 				setBlock(world, x, y, z + i, wood);
 				setBlock(world, x, y + 1, z + i, leaf);
-				if (i > 0)
-				{
+				if (i > 0) {
 					setBlock(world, x - 1, y, z + i, leaf);
 					setBlock(world, x + 1, y, z + i, leaf);
 				}
 			}
-			for (int i = 0; i < back; i++)
-			{
+			for (int i = 0; i < back; i++) {
 				setBlock(world, x, y, z - i, wood);
 				setBlock(world, x, y + 1, z - i, leaf);
-				if (i > 0)
-				{
+				if (i > 0) {
 					setBlock(world, x - 1, y, z - i, leaf);
 					setBlock(world, x + 1, y, z - i, leaf);
 				}
@@ -101,13 +86,11 @@ public class WorldGenDarkBirchTree extends WorldGenerator
 			setBlock(world, x, y, z - back, leaf);
 
 			return true;
-		}
-		else
+		} else
 			return false;
 	}
 
-	public void setBlock(World world, int x, int y, int z, Block block)
-	{
+	public void setBlock(World world, int x, int y, int z, Block block) {
 		world.setBlock(x, y + height, z, block);
 	}
 }

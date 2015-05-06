@@ -5,12 +5,10 @@ import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockOrichalcumOre extends Block
-{
+public class BlockOrichalcumOre extends Block {
 	String name = "orichalcum_ore";
 
-	public BlockOrichalcumOre()
-	{
+	public BlockOrichalcumOre() {
 		super(Material.rock);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
