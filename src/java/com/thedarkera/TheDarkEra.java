@@ -13,7 +13,6 @@ import com.thedarkera.alloyaddon.init.BAItems;
 import com.thedarkera.alloyaddon.init.BARecipes;
 import com.thedarkera.alloyaddon.init.BATools;
 import com.thedarkera.alloyaddon.init.BAWeapons;
-import com.thedarkera.dimension.TDEWorldProvider;
 import com.thedarkera.handler.EnterBiomeHandler;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEArmors;
@@ -25,6 +24,7 @@ import com.thedarkera.init.TDETools;
 import com.thedarkera.init.TDEWeapons;
 import com.thedarkera.proxy.CommonProxy;
 import com.thedarkera.updatechecker.UpdateChecker;
+import com.thedarkera.world.TDEWorldProvider;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;

@@ -11,11 +11,11 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.world.BlockEvent;
 
-import com.thedarkera.generation.WorldGenDarkBirchTree;
-import com.thedarkera.generation.WorldGenGrapePlant;
-import com.thedarkera.generation.WorldGenWispTree;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
+import com.thedarkera.world.gen.WorldGenDarkBirchTree;
+import com.thedarkera.world.gen.WorldGenGrapePlant;
+import com.thedarkera.world.gen.WorldGenWispTree;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

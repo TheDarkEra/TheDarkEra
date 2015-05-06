@@ -1,4 +1,4 @@
-package com.thedarkera.generation;
+package com.thedarkera.world.gen;
 
 import java.util.Random;
 

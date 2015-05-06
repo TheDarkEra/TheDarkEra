@@ -18,8 +18,8 @@ import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.biome.features.WorldGenDeadTree;
 import com.thedarkera.init.TDEBlocks;
+import com.thedarkera.world.biome.features.WorldGenDeadTree;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

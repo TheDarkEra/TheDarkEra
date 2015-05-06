@@ -1,4 +1,4 @@
-package com.thedarkera.biome.features;
+package com.thedarkera.world.biome.features;
 
 import java.util.Random;
 
