@@ -46,6 +46,13 @@ item.dark_stone_shovel.name=Dark Shovel
 item.ancient_hoe.name=Ancient Hoe
 item.steel_hoe.name=Steel Hoe
 item.dark_stone_hoe.name=Dark Hoe
+item.ancient_weeder.name=Ancient Weeder
+item.dark_stone_weeder.name=Dark Stone Weeder
+item.diamond_weeder.name=Diamond Weeder
+item.iron_weeder.name=Iron Weeder
+item.stone_weeder.name=Stone Weeder
+item.wooden_weeder.name=Wooden Weeder
+
 
 //Item Food//
 item.grape.name=Grape
@@ -112,6 +119,10 @@ tile.ancienthoe_ore.name=Ancient Hoe Ore
 tile.steel_block.name=Steel Block
 tile.teleporter_dark.name=Dark Dimension Teleporter
 tile.dark_portal.name=Dark Dimesion Portal
+tile.weedy_dirt.name=Weedy Dirt
+tile.smeltery.name=Smeltery
+tile.dark_grass.name=Dark Grass
+tile.dark_dirt.name=Dark Dirt
 
 //Container//
 container.smeltery=Smeltery
