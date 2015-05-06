@@ -82,7 +82,6 @@ public class BlockSaplings extends BlockSapling {
 		switch (l) {
 		case 0:
 			object = new WorldGenDeadTree(TDEBlocks.log_dead, TDEBlocks.leaves_dead, 0, 0, false, 5, 10, false);
-//			object = new WorldGenDeadTree();
 			break;
 		case 1:
 			object = new WorldGenDeadTree(Blocks.bookshelf, TDEBlocks.leaves_dead, 0, 0, false, 15, 15, false);
