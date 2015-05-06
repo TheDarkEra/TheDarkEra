@@ -11,17 +11,14 @@ public class ItemTestJodel extends IPlaceableItem {
 		super();
 	}
 
-	@Override
 	public String getName() {
 		return "TDE_Test";
 	}
 
-	@Override
 	public String TextureLocation() {
 		return "Jodel/";
 	}
 
-	@Override
 	public Block ItemBlock() {
 		return TDEBlocks.test1;
 	}

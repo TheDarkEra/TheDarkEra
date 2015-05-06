@@ -6,8 +6,7 @@ import com.thedarkera.item.weapon.ItemDaedricArrow;
 import com.thedarkera.item.weapon.ItemDaedricBow;
 import com.thedarkera.item.weapon.ItemModDagger;
 import com.thedarkera.item.weapon.ItemModSword;
-
-import cpw.mods.fml.common.registry.GameRegistry;
+import com.thedarkera.utils.RegUtils;
 
 public class TDEWeapons
 {
@@ -21,20 +20,25 @@ public class TDEWeapons
 	{
 		// swords
 		steel_sword = new ItemModSword(TDEMaterials.steel, "steel_sword");
-		GameRegistry.registerItem(steel_sword, steel_sword.getUnlocalizedName());
+		reg(steel_sword);
 		dark_stone_sword = new ItemModSword(TDEMaterials.dark_stone, "dark_stone_sword");
-		GameRegistry.registerItem(dark_stone_sword, dark_stone_sword.getUnlocalizedName());
+		reg(dark_stone_sword);
 
 		// Bows
 		daedric_bow = new ItemDaedricBow("daedric_bow");
-		GameRegistry.registerItem(daedric_bow, daedric_bow.getUnlocalizedName());
+		reg(daedric_bow);
 
 		// Arrows
 		daedric_arrow = new ItemDaedricArrow("daedric_arrow");
-		GameRegistry.registerItem(daedric_arrow, daedric_arrow.getUnlocalizedName());
+		reg(daedric_arrow);
 
 		// Daggers
 		steel_dagger = new ItemModDagger(TDEMaterials.steel, "steel_dagger");
-		GameRegistry.registerItem(steel_dagger, steel_dagger.getUnlocalizedName());
+		reg(steel_dagger);
+	}
+	
+	public static void reg(Item item)
+	{
+		RegUtils.reg(item);
 	}
 }

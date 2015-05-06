@@ -10,8 +10,7 @@ import com.thedarkera.item.armor.ItemDragonHeavyArmor;
 import com.thedarkera.item.armor.ItemDragonLightArmor;
 import com.thedarkera.item.armor.ItemOrichalcumArmor;
 import com.thedarkera.item.armor.ItemSteelArmor;
-
-import cpw.mods.fml.common.registry.GameRegistry;
+import com.thedarkera.utils.RegUtils;
 
 public class TDEArmors
 {
@@ -61,62 +60,67 @@ public class TDEArmors
 	{
 		//Daedric armor//
 		daedric_helmet = new ItemDaedricArmor(daedric_armor, 0, "daedric_helmet");
-		GameRegistry.registerItem(daedric_helmet, daedric_helmet.getUnlocalizedName());
+		reg(daedric_helmet);
 		daedric_chestplate = new ItemDaedricArmor(daedric_armor, 1, "daedric_chestplate");
-		GameRegistry.registerItem(daedric_chestplate, daedric_chestplate.getUnlocalizedName());
+		reg(daedric_chestplate);
 		daedric_leggings = new ItemDaedricArmor(daedric_armor, 2, "daedric_leggings");
-		GameRegistry.registerItem(daedric_leggings, daedric_leggings.getUnlocalizedName());
+		reg(daedric_leggings);
 		daedric_boots = new ItemDaedricArmor(daedric_armor, 3, "daedric_boots");
-		GameRegistry.registerItem(daedric_boots, daedric_boots.getUnlocalizedName());
+		reg(daedric_boots);
 		
 		//Steel armor//
 		steel_helmet = new ItemSteelArmor(steel_armor, 0, "steel_helmet");
-		GameRegistry.registerItem(steel_helmet, steel_helmet.getUnlocalizedName());
+		reg(steel_helmet);
 		steel_chestplate = new ItemSteelArmor(steel_armor, 1, "steel_chestplate");
-		GameRegistry.registerItem(steel_chestplate, steel_chestplate.getUnlocalizedName());
+		reg(steel_chestplate);
 		steel_leggings = new ItemSteelArmor(steel_armor, 2, "steel_leggings");
-		GameRegistry.registerItem(steel_leggings, steel_leggings.getUnlocalizedName());
+		reg(steel_leggings);
 		steel_boots = new ItemSteelArmor(steel_armor, 3, "steel_boots");
-		GameRegistry.registerItem(steel_boots, steel_boots.getUnlocalizedName());
+		reg(steel_boots);
 		
 		//Dragon heavy armor//
 		dragon_heavy_helmet = new ItemDragonHeavyArmor(dragon_heavy_armor, 0, "dragon_heavy_helmet");
-		GameRegistry.registerItem(dragon_heavy_helmet, dragon_heavy_helmet.getUnlocalizedName());
+		reg(dragon_heavy_helmet);
 		dragon_heavy_chestplate = new ItemDragonHeavyArmor(dragon_heavy_armor, 1, "dragon_heavy_chestplate");
-		GameRegistry.registerItem(dragon_heavy_chestplate, dragon_heavy_chestplate.getUnlocalizedName());
+		reg(dragon_heavy_chestplate);
 		dragon_heavy_leggings = new ItemDragonHeavyArmor(dragon_heavy_armor, 2, "dragon_heavy_leggings");
-		GameRegistry.registerItem(dragon_heavy_leggings, dragon_heavy_leggings.getUnlocalizedName());
+		reg(dragon_heavy_leggings);
 		dragon_heavy_boots = new ItemDragonHeavyArmor(dragon_heavy_armor, 3, "dragon_heavy_boots");
-		GameRegistry.registerItem(dragon_heavy_boots, dragon_heavy_boots.getUnlocalizedName());
+		reg(dragon_heavy_boots);
 		
 		//Dragon light armor//
 		dragon_light_helmet = new ItemDragonLightArmor(dragon_light_armor, 0, "dragon_light_helmet");
-		GameRegistry.registerItem(dragon_light_helmet, dragon_light_helmet.getUnlocalizedName());
+		reg(dragon_light_helmet);
 		dragon_light_chestplate = new ItemDragonLightArmor(dragon_light_armor, 1, "dragon_light_chestplate");
-		GameRegistry.registerItem(dragon_light_chestplate, dragon_light_chestplate.getUnlocalizedName());
+		reg(dragon_light_chestplate);
 		dragon_light_leggings = new ItemDragonLightArmor(dragon_light_armor, 2, "dragon_light_leggings");
-		GameRegistry.registerItem(dragon_light_leggings, dragon_light_leggings.getUnlocalizedName());
+		reg(dragon_light_leggings);
 		dragon_light_boots = new ItemDragonLightArmor(dragon_light_armor, 3, "dragon_light_boots");
-		GameRegistry.registerItem(dragon_light_boots, dragon_light_boots.getUnlocalizedName());
+		reg(dragon_light_boots);
 		
 		//Orichalcum armor//
 		orichalcum_helmet = new ItemOrichalcumArmor(orichalcum_armor, 0, "orichalcum_helmet");
-		GameRegistry.registerItem(orichalcum_helmet, orichalcum_helmet.getUnlocalizedName());
+		reg(orichalcum_helmet);
 		orichalcum_chestplate = new ItemSteelArmor(orichalcum_armor, 1, "orichalcum_chestplate");
-		GameRegistry.registerItem(orichalcum_chestplate, orichalcum_chestplate.getUnlocalizedName());
+		reg(orichalcum_chestplate);
 		orichalcum_leggings = new ItemSteelArmor(orichalcum_armor, 2, "orichalcum_leggings");
-		GameRegistry.registerItem(orichalcum_leggings, orichalcum_leggings.getUnlocalizedName());
+		reg(orichalcum_leggings);
 		orichalcum_boots = new ItemSteelArmor(orichalcum_armor, 3, "orichalcum_boots");
-		GameRegistry.registerItem(orichalcum_boots, orichalcum_boots.getUnlocalizedName());
+		reg(orichalcum_boots);
 		
 		//Ancient Armor//
 		ancient_helmet = new ItemAncientArmor(ancient_armor, 0, "ancient_helmet");
-		GameRegistry.registerItem(ancient_helmet, ancient_helmet.getUnlocalizedName());
+		reg(ancient_helmet);
 		ancient_chestplate = new ItemAncientArmor(ancient_armor, 1, "ancient_chestplate");
-		GameRegistry.registerItem(ancient_chestplate, ancient_chestplate.getUnlocalizedName());
+		reg(ancient_chestplate);
 		ancient_leggings = new ItemAncientArmor(ancient_armor, 2, "ancient_leggings");
-		GameRegistry.registerItem(ancient_leggings, ancient_leggings.getUnlocalizedName());
+		reg(ancient_leggings);
 		ancient_boots = new ItemAncientArmor(ancient_armor, 3, "ancient_boots");
-		GameRegistry.registerItem(ancient_boots, ancient_boots.getUnlocalizedName());
+		reg(ancient_boots);
+	}
+	
+	public static void reg(Item item)
+	{
+		RegUtils.reg(item);
 	}
 }

@@ -23,8 +23,7 @@ import com.thedarkera.item.ItemWitchFeather;
 import com.thedarkera.item.food.ItemAshHopperMeat;
 import com.thedarkera.item.food.ItemGrape;
 import com.thedarkera.item.food.ItemGrapeSeed;
-
-import cpw.mods.fml.common.registry.GameRegistry;
+import com.thedarkera.utils.RegUtils;
 
 public class TDEItems
 {
@@ -63,57 +62,58 @@ public class TDEItems
 	{	
 		//Misc items init//
 		witch_feather = new ItemWitchFeather();
-		GameRegistry.registerItem(witch_feather, witch_feather.getUnlocalizedName());
+		reg(witch_feather);
 		ash_hopper_meat = new ItemAshHopperMeat(3, 0.3F, true, "ash_hopper_meat");
-		GameRegistry.registerItem(ash_hopper_meat, ash_hopper_meat.getUnlocalizedName());
+		reg(ash_hopper_meat);
 		ash_hopper_jelly = new ItemAshHopperJelly();
-		GameRegistry.registerItem(ash_hopper_jelly, ash_hopper_jelly.getUnlocalizedName());
+		reg(ash_hopper_jelly);
 		ash_hopper_leg = new ItemAshHopperLeg();
-		GameRegistry.registerItem(ash_hopper_leg, ash_hopper_leg.getUnlocalizedName());
+		reg(ash_hopper_leg);
 		rotten_wood_stick = new ItemRottenWoodStick();
-		GameRegistry.registerItem(rotten_wood_stick, rotten_wood_stick.getUnlocalizedName());
+		reg(rotten_wood_stick);
 		dark_stone_rod = new ItemDarkStoneRod();
-		GameRegistry.registerItem(dark_stone_rod, dark_stone_rod.getUnlocalizedName());
+		reg(dark_stone_rod);
 		soul_gem = new ItemSoulGem();
-		GameRegistry.registerItem(soul_gem, soul_gem.getUnlocalizedName());
+		reg(soul_gem);
 		leather_strip = new ItemLeatherStrip();
-		GameRegistry.registerItem(leather_strip, leather_strip.getUnlocalizedName());
+		reg(leather_strip);
 		daedra_heart = new ItemDaedraHeart();
-		GameRegistry.registerItem(daedra_heart, daedra_heart.getUnlocalizedName());
+		reg(daedra_heart);
 		dragon_bone = new ItemDragonBone();
-		GameRegistry.registerItem(dragon_bone, dragon_bone.getUnlocalizedName());
+		reg(dragon_bone);
 		dragon_scale = new ItemDragonScale();
-		GameRegistry.registerItem(dragon_scale, dragon_scale.getUnlocalizedName());
+		reg(dragon_scale);
 		fire_rune = new ItemFireRune();
-		GameRegistry.registerItem(fire_rune, fire_rune.getUnlocalizedName());
+		reg(fire_rune);
 		frost_rune = new ItemFrostRune();
-		GameRegistry.registerItem(frost_rune, frost_rune.getUnlocalizedName());
+		reg(frost_rune);
 		lightning_rune = new ItemLightningRune();
-		GameRegistry.registerItem(lightning_rune, lightning_rune.getUnlocalizedName());
+		reg(lightning_rune);
 
 		//Ingot items init//
 		steel_ingot = new ItemSteelIngot();
-		GameRegistry.registerItem(steel_ingot, steel_ingot.getUnlocalizedName());
+		reg(steel_ingot);
 		ebony_ingot = new ItemEbonyIngot();
-		GameRegistry.registerItem(ebony_ingot, ebony_ingot.getUnlocalizedName());
+		reg(ebony_ingot);
 		orichalcum_ingot = new ItemOrichalcumIngot();
-		GameRegistry.registerItem(orichalcum_ingot, orichalcum_ingot.getUnlocalizedName());
+		reg(orichalcum_ingot);
 		ancient_ingot = new ItemAncientIngot();
-		GameRegistry.registerItem(ancient_ingot, ancient_ingot.getUnlocalizedName());
+		reg(ancient_ingot);
 
 		//Food items init//
 		grape = new ItemGrape(3, 0.3F, true, "grape");
-		GameRegistry.registerItem(grape, grape.getUnlocalizedName());
+		reg(grape);
 
 		//Seed items//
 		grape_seed = new ItemGrapeSeed(TDEBlocks.grape_plant);
-		GameRegistry.registerItem(grape_seed, grape_seed.getUnlocalizedName());
+		reg(grape_seed);
 		
 		//Test Jodel//
 		test1 = new ItemTestJodel();
 	}
 	
-	public static void RI(Item item) {
-		GameRegistry.registerItem(item, item.getUnlocalizedName());
+	public static void reg(Item item)
+	{
+		RegUtils.reg(item);
 	}
 }

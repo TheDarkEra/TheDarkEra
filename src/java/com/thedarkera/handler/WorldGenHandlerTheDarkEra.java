@@ -6,7 +6,6 @@ import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
 
 import com.thedarkera.TheDarkEra;
 
@@ -18,7 +17,6 @@ public class WorldGenHandlerTheDarkEra implements IWorldGenerator {
 
 	public WorldGenHandlerTheDarkEra() {}
 	
-	@Override
 	public void generate(Random rand, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(chunkX, chunkZ);
 		

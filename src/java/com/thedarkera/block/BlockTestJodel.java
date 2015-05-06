@@ -1,27 +1,30 @@
 package com.thedarkera.block;
 
-import com.thedarkera.init.TDEItems;
+import net.minecraft.item.Item;
+
 import com.thedarkera.jodeltest.IItemBlock;
 
 public class BlockTestJodel extends IItemBlock {
 
 	public BlockTestJodel() {
 		super();
-
+	}
+	
+	public String getName()
+	{
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	@Override
-	public String getName() {
-		return "abcd";
+	public String TextureLocation()
+	{
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	@Override
-	public String TextureLocation() {
-		return "Jodel/";
-	}
-
-	@Override
-	public net.minecraft.item.Item Item() {
-		return TDEItems.test1;
+	public Item Item()
+	{
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

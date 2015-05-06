@@ -2,6 +2,7 @@ package com.thedarkera.init;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.block.BlockAncientAxeOre;
@@ -34,12 +35,10 @@ import com.thedarkera.block.BlockRottenWoodStairs;
 import com.thedarkera.block.BlockSmasher;
 import com.thedarkera.block.BlockSmeltery;
 import com.thedarkera.block.BlockSteel;
-import com.thedarkera.block.BlockTestJodel;
 import com.thedarkera.block.BlockWeedyDirt;
 import com.thedarkera.block.BlockWispWood;
 import com.thedarkera.item.ItemSteelOre;
-
-import cpw.mods.fml.common.registry.GameRegistry;
+import com.thedarkera.utils.RegUtils;
 
 public class TDEBlocks
 {
@@ -95,87 +94,94 @@ public class TDEBlocks
 	{
 		//Blocks//
 		ancientpickaxe_ore = new BlockAncientPickaxeOre();
-		GameRegistry.registerBlock(ancientpickaxe_ore, ancientpickaxe_ore.getUnlocalizedName().substring(5).substring(5));
+		reg(ancientpickaxe_ore);
 		ancientaxe_ore = new BlockAncientAxeOre();
-		GameRegistry.registerBlock(ancientaxe_ore, ancientaxe_ore.getUnlocalizedName().substring(5));
+		reg(ancientaxe_ore);
 		ancientshovel_ore = new BlockAncientShovelOre();
-		GameRegistry.registerBlock(ancientshovel_ore, ancientshovel_ore.getUnlocalizedName().substring(5));
+		reg(ancientshovel_ore);
 		ancienthoe_ore = new BlockAncientHoeOre();
-		GameRegistry.registerBlock(ancienthoe_ore, ancienthoe_ore.getUnlocalizedName().substring(5));
+		reg(ancienthoe_ore);
 		ancient_ore = new BlockAncientOre();
-		GameRegistry.registerBlock(ancient_ore, ancient_ore.getUnlocalizedName().substring(5));
+		reg(ancient_ore);
 		ebony_ore = new BlockEbonyOre();
-		GameRegistry.registerBlock(ebony_ore, ebony_ore.getUnlocalizedName().substring(5));		
+		reg(ebony_ore);		
 		orichalcum_ore = new BlockOrichalcumOre();
-		GameRegistry.registerBlock(orichalcum_ore, orichalcum_ore.getUnlocalizedName().substring(5));	
+		reg(orichalcum_ore);	
 		dark_stone_ladder = new BlockDarkStoneLadder();
-		GameRegistry.registerBlock(dark_stone_ladder, dark_stone_ladder.getUnlocalizedName().substring(5));
+		reg(dark_stone_ladder);
 		dark_stone = new BlockDarkStone();
-		GameRegistry.registerBlock(dark_stone, dark_stone.getUnlocalizedName().substring(5));
+		reg(dark_stone);
 		dark_cobblestone = new BlockDarkCobblestone();
-		GameRegistry.registerBlock(dark_cobblestone, dark_cobblestone.getUnlocalizedName().substring(5));
+		reg(dark_cobblestone);
 		dark_stone_bricks = new BlockDarkStoneBricks();
-		GameRegistry.registerBlock(dark_stone_bricks, dark_stone_bricks.getUnlocalizedName().substring(5));
+		reg(dark_stone_bricks);
 		dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
-		GameRegistry.registerBlock(dark_stone_fence, dark_stone_fence.getUnlocalizedName().substring(5));
+		reg(dark_stone_fence);
 		dark_stone_stairs = new BlockDarkStoneStairs(dark_stone, 0);
-		GameRegistry.registerBlock(dark_stone_stairs, dark_stone_stairs.getUnlocalizedName().substring(5));
+		reg(dark_stone_stairs);
 		dark_stone_slab = new BlockDarkStoneSlab(false, Material.rock);
-		GameRegistry.registerBlock(dark_stone_slab, dark_stone_slab.getUnlocalizedName().substring(5));
+		reg(dark_stone_slab);
 		rotten_wood = new BlockRottenWood();
-		GameRegistry.registerBlock(rotten_wood, rotten_wood.getUnlocalizedName().substring(5));
+		reg(rotten_wood);
 		rotten_wood_fence = new BlockRottenWoodFence(TheDarkEra.MODID + ":rotting_wood");
-		GameRegistry.registerBlock(rotten_wood_fence, rotten_wood_fence.getUnlocalizedName().substring(5));
+		reg(rotten_wood_fence);
 		rotten_wood_stairs = new BlockRottenWoodStairs(rotten_wood, 0);
-		GameRegistry.registerBlock(rotten_wood_stairs, rotten_wood_stairs.getUnlocalizedName().substring(5));
+		reg(rotten_wood_stairs);
 		rotten_wood_slab = new BlockRottenWoodSlab(false, Material.wood);
-		GameRegistry.registerBlock(rotten_wood_slab, rotten_wood_slab.getUnlocalizedName().substring(5));
+		reg(rotten_wood_slab);
 		dark_stone_dirt = new BlockDarkStoneDirt();
-		GameRegistry.registerBlock(dark_stone_dirt, dark_stone_dirt.getUnlocalizedName().substring(5));
+		reg(dark_stone_dirt);
 		smasher = new BlockSmasher();
 		dark_birch_planks = new BlockDarkBirchPlanks();
-		GameRegistry.registerBlock(dark_birch_planks, dark_birch_planks.getUnlocalizedName().substring(5));
+		reg(dark_birch_planks);
 
 		smeltery = new BlockSmeltery();
-		GameRegistry.registerBlock(smeltery, smeltery.getUnlocalizedName().substring(5));
+		reg(smeltery);
 		
 		// Meta Blocks//
 		steel_ore = new BlockSteel();	
-		GameRegistry.registerBlock(steel_ore, ItemSteelOre.class, steel_ore.getUnlocalizedName().substring(5));
+		reg(steel_ore, ItemSteelOre.class);
 
 
 		//Plants//
 		grape_plant = new BlockGrapePlant();
-		GameRegistry.registerBlock(grape_plant, grape_plant.getUnlocalizedName().substring(5));
+		reg(grape_plant);
 
 		//Portals//
 		dark_portal = new BlockPortalDark().setBlockName("dark_portal");
-		GameRegistry.registerBlock(dark_portal, dark_portal.getUnlocalizedName().substring(5));
+		reg(dark_portal);
 		teleporter_dark = new BlockPortalDark().setBlockName("teleporter_dark");
-		GameRegistry.registerBlock(teleporter_dark, teleporter_dark.getUnlocalizedName().substring(5));
+		reg(teleporter_dark);
 
 		//Biome Blocks
 		dead_grass = new BlockDeadGrass("dead_grass");
-		GameRegistry.registerBlock(dead_grass, dead_grass.getUnlocalizedName().substring(5));
+		reg(dead_grass);
 		dark_grass = new BlockDarkGrass("dark_grass");
-		GameRegistry.registerBlock(dark_grass, dark_grass.getUnlocalizedName().substring(5));
+		reg(dark_grass);
 		dark_dirt = new BlockDarkDirt("dark_dirt");
-		GameRegistry.registerBlock(dark_dirt, dark_dirt.getUnlocalizedName().substring(5));
+		reg(dark_dirt);
 		weedy_dirt = new BlockWeedyDirt("weedy_dirt");
-		GameRegistry.registerBlock(weedy_dirt, weedy_dirt.getUnlocalizedName().substring(5));
+		reg(weedy_dirt);
 		
 		//Tree blocks//
 		dark_birch_wood = new BlockDarkBirchWood();
-		GameRegistry.registerBlock(dark_birch_wood, dark_birch_wood.getUnlocalizedName().substring(5));
+		reg(dark_birch_wood);
 		wisp_wood = new BlockWispWood();
-		GameRegistry.registerBlock(wisp_wood, wisp_wood.getUnlocalizedName().substring(5));
+		reg(wisp_wood);
 		rotten_wood_log = new BlockRottenWoodLog(Material.wood);
-		GameRegistry.registerBlock(rotten_wood_log, rotten_wood_log.getUnlocalizedName().substring(5));
+		reg(rotten_wood_log);
 
 		//Test Jodel//
-		test1 = new BlockTestJodel();
+		//test1 = new BlockTestJodel();
 	}
-	public static void RB(Block block) {
-		GameRegistry.registerBlock(block, block.getUnlocalizedName());
+	
+	public static void reg(Block block)
+	{
+		RegUtils.reg(block);
+	}
+	
+	public static void reg(Block block, Class<? extends ItemBlock> itemBlock)
+	{
+		RegUtils.reg(block, itemBlock);
 	}
 }
