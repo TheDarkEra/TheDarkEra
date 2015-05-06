@@ -13,8 +13,7 @@ public class BlockAncientPickaxeOre extends Block {
 
 	String name = "ancientpickaxe_ore";
 
-	public BlockAncientPickaxeOre()
-	{
+	public BlockAncientPickaxeOre() {
 		super(Material.rock);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
@@ -26,9 +25,7 @@ public class BlockAncientPickaxeOre extends Block {
 	}
 
 	@Override
-	public Item getItemDropped(int meta, Random rand, int fortune)
-	{
+	public Item getItemDropped(int meta, Random rand, int fortune) {
 		return TDETools.ancient_pickaxe;
 	}
 }
-
