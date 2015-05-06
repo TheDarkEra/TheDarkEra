@@ -5,7 +5,3 @@
 !.gitattributes
 !*.md
 !.project
-src/resources/assets/thedarkera/textures/gui/Thumbs.db
-src/resources/assets/thedarkera/textures/blocks/Thumbs.db
-src/resources/assets/thedarkera/textures/blocks/Thumbs.db
-*.db

@@ -11,17 +11,14 @@ public class FlatBlockExample extends IItemBlock {
 		super();
 	}
 
-	@Override
 	public String getName() {
 		return "flatblockexample";
 	}
 
-	@Override
 	public String TextureLocation() {
 		return "flatblock/";
 	}
 
-	@Override
 	public Item Item() {
 		return TDEItems.example;
 	}
