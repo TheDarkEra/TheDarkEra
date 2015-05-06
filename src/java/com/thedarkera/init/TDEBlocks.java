@@ -11,7 +11,6 @@ import com.thedarkera.block.BlockAncientOre;
 import com.thedarkera.block.BlockAncientPickaxeOre;
 import com.thedarkera.block.BlockAncientShovelOre;
 import com.thedarkera.block.BlockDarkBirchPlanks;
-import com.thedarkera.block.BlockDarkBirchWood;
 import com.thedarkera.block.BlockDarkCobblestone;
 import com.thedarkera.block.BlockDarkDirt;
 import com.thedarkera.block.BlockDarkGrass;
@@ -29,15 +28,15 @@ import com.thedarkera.block.BlockOrichalcumOre;
 import com.thedarkera.block.BlockPortalDark;
 import com.thedarkera.block.BlockRottenWood;
 import com.thedarkera.block.BlockRottenWoodFence;
-import com.thedarkera.block.BlockRottenWoodLog;
 import com.thedarkera.block.BlockRottenWoodSlab;
 import com.thedarkera.block.BlockRottenWoodStairs;
 import com.thedarkera.block.BlockSmasher;
 import com.thedarkera.block.BlockSmeltery;
 import com.thedarkera.block.BlockSteel;
 import com.thedarkera.block.BlockWeedyDirt;
-import com.thedarkera.block.BlockWispWood;
+import com.thedarkera.block.logs.BlockLogDarkBirch;
 import com.thedarkera.block.logs.BlockLogDead;
+import com.thedarkera.block.logs.BlockLogWisp;
 import com.thedarkera.flatblocks.FlatBlockExample;
 import com.thedarkera.item.ItemSteelOre;
 import com.thedarkera.utils.RegUtils;
@@ -86,9 +85,8 @@ public class TDEBlocks
 	
 	//Tree blocks//
 	public static Block log_dead;
-	public static Block dark_birch_wood;
-	public static Block wisp_wood;
-	public static Block rotten_wood_log;
+	public static Block dark_birch_log;
+	public static Block wisp_log;
 	
 	//Placeable items//
 	public static Block example;
@@ -168,12 +166,10 @@ public class TDEBlocks
 		reg(weedy_dirt);
 		
 		//Tree blocks//
-		dark_birch_wood = new BlockDarkBirchWood();
-		reg(dark_birch_wood);
-		wisp_wood = new BlockWispWood();
-		reg(wisp_wood);
-		rotten_wood_log = new BlockRottenWoodLog(Material.wood);
-		reg(rotten_wood_log);
+		dark_birch_log = new BlockLogDarkBirch();
+		reg(dark_birch_log);
+		wisp_log = new BlockLogWisp();
+		reg(wisp_log);
 		log_dead = new BlockLogDead();
 		reg(log_dead);
 

@@ -12,7 +12,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 	public class WorldGenWispTree extends WorldGenerator
 	{
 		int height;
-		Block wood = TDEBlocks.wisp_wood;
+		Block wood = TDEBlocks.wisp_log;
 		Block leaf = Blocks.leaves;
 
 		public boolean generate(World world, Random random, int x, int y, int z)

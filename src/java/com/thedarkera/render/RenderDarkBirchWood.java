@@ -34,7 +34,7 @@ public class RenderDarkBirchWood implements ISimpleBlockRenderingHandler
 			renderer.renderStandardBlock(block, x, y, z);
 			
 			//top
-			if(world.getBlock(x, y + 1, z) == TDEBlocks.dark_birch_wood)
+			if(world.getBlock(x, y + 1, z) == TDEBlocks.dark_birch_log)
 			{
 				renderer.setRenderBounds(0.33f, 0.66f, 0.33f, 0.66f, 1f, 0.66f);
 				renderer.renderStandardBlock(block, x, y, z);
@@ -54,7 +54,7 @@ public class RenderDarkBirchWood implements ISimpleBlockRenderingHandler
 			}
 			
 			//left
-			if(world.getBlock(x + 1, y, z) == TDEBlocks.dark_birch_wood)
+			if(world.getBlock(x + 1, y, z) == TDEBlocks.dark_birch_log)
 			{
 				renderer.setRenderBounds(0.33f, 0.33f, 0.33f, 1f, 0.66f, 0.66f);
 				renderer.renderStandardBlock(block, x, y, z);
@@ -67,7 +67,7 @@ public class RenderDarkBirchWood implements ISimpleBlockRenderingHandler
 			}
 			
 			//right
-			if(world.getBlock(x - 1, y, z) == TDEBlocks.dark_birch_wood)
+			if(world.getBlock(x - 1, y, z) == TDEBlocks.dark_birch_log)
 			{
 				renderer.setRenderBounds(0f, 0.33f, 0.33f, 0.33f, 0.66f, 0.66f);
 				renderer.renderStandardBlock(block, x, y, z);
@@ -80,7 +80,7 @@ public class RenderDarkBirchWood implements ISimpleBlockRenderingHandler
 			}
 			
 			//front
-			if(world.getBlock(x, y, z + 1) == TDEBlocks.dark_birch_wood)
+			if(world.getBlock(x, y, z + 1) == TDEBlocks.dark_birch_log)
 			{
 				renderer.setRenderBounds(0.33f, 0.33f, 0.33f, 0.66f, 0.66f, 1f);
 				renderer.renderStandardBlock(block, x, y, z);
@@ -93,7 +93,7 @@ public class RenderDarkBirchWood implements ISimpleBlockRenderingHandler
 			}
 			
 			//behind
-			if(world.getBlock(x, y, z - 1) == TDEBlocks.dark_birch_wood)
+			if(world.getBlock(x, y, z - 1) == TDEBlocks.dark_birch_log)
 			{
 				renderer.setRenderBounds(0.33f, 0.33f, 0f, 0.66f, 0.66f, 0.33f);
 				renderer.renderStandardBlock(block, x, y, z);

@@ -1,4 +1,4 @@
-package com.thedarkera.block;
+package com.thedarkera.block.logs;
 
 import java.util.Random;
 
@@ -12,11 +12,11 @@ import net.minecraft.world.World;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.render.RenderDarkBirchWood;
 
-public class BlockDarkBirchWood extends Block
+public class BlockLogDarkBirch extends Block
 {
-	String name = "dark_birch_wood";
+	String name = "dark_birch_log";
 	
-	public BlockDarkBirchWood()
+	public BlockLogDarkBirch()
 	{
 		super(Material.wood);
 		setHardness(2.0F);

@@ -12,7 +12,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 public class WorldGenDarkBirchTree extends WorldGenerator
 {
 	int height;
-	Block wood = TDEBlocks.dark_birch_wood;
+	Block wood = TDEBlocks.dark_birch_log;
 	Block leaf = Blocks.leaves;
 
 	public boolean generate(World world, Random random, int x, int y, int z)

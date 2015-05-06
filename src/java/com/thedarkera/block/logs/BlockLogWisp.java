@@ -1,15 +1,15 @@
-package com.thedarkera.block;
+package com.thedarkera.block.logs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 	import com.thedarkera.TheDarkEra;
 
-	public class BlockWispWood extends Block
+	public class BlockLogWisp extends Block
 	{
-		String name = "wisp_wood";
+		String name = "wisp_log";
 	
-		public BlockWispWood()
+		public BlockLogWisp()
 		{
 			super(Material.wood);
 			setBlockName(name);
