@@ -25,9 +25,8 @@ import com.thedarkera.item.food.ItemGrapeSeed;
 import com.thedarkera.placeableitem.ItemPlaceAbleExample;
 import com.thedarkera.utils.RegUtils;
 
-public class TDEItems
-{
-	//Misc items//
+public class TDEItems {
+	// Misc items//
 	public static Item witch_feather;
 	public static Item ash_hopper_leg;
 	public static Item ash_hopper_jelly;
@@ -43,29 +42,29 @@ public class TDEItems
 	public static Item frost_rune;
 	public static Item lightning_rune;
 
-	//Ingot items//
+	// Ingot items//
 	public static Item steel_ingot;
 	public static Item ebony_ingot;
 	public static Item orichalcum_ingot;
 	public static Item ancient_ingot;
 
-	//Food items//
+	// Food items//
 	public static Item grape;
 
-	//Seed items//
+	// Seed items//
 	public static Item grape_seed;
-	
-	//Placeable items//
-	public static Item example;
-	
-	//Plant items//
 
-	public static void init()
-	{	
-		//Misc items init//
+	// Placeable items//
+	public static Item example;
+
+	// Plant items//
+
+	public static void init() {
+		// Misc items init//
 		witch_feather = new ItemWitchFeather();
 		reg(witch_feather);
-		ash_hopper_meat = new ItemAshHopperMeat(3, 0.3F, true, "ash_hopper_meat");
+		ash_hopper_meat = new ItemAshHopperMeat(3, 0.3F, true,
+				"ash_hopper_meat");
 		reg(ash_hopper_meat);
 		ash_hopper_jelly = new ItemAshHopperJelly();
 		reg(ash_hopper_jelly);
@@ -92,7 +91,7 @@ public class TDEItems
 		lightning_rune = new ItemLightningRune();
 		reg(lightning_rune);
 
-		//Ingot items init//
+		// Ingot items init//
 		steel_ingot = new ItemSteelIngot();
 		reg(steel_ingot);
 		ebony_ingot = new ItemEbonyIngot();
@@ -102,20 +101,19 @@ public class TDEItems
 		ancient_ingot = new ItemAncientIngot();
 		reg(ancient_ingot);
 
-		//Food items init//
+		// Food items init//
 		grape = new ItemGrape(3, 0.3F, true, "grape");
 		reg(grape);
 
-		//Seed items//
+		// Seed items//
 		grape_seed = new ItemGrapeSeed(TDEBlocks.grape_plant);
 		reg(grape_seed);
-		
-		//Placeable items//
+
+		// Placeable items//
 		example = new ItemPlaceAbleExample();
 	}
-	
-	public static void reg(Item item)
-	{
+
+	public static void reg(Item item) {
 		RegUtils.reg(item);
 	}
 }

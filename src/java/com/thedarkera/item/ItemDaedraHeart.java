@@ -4,12 +4,10 @@ import com.thedarkera.TheDarkEra;
 
 import net.minecraft.item.Item;
 
-public class ItemDaedraHeart extends Item 
-{
+public class ItemDaedraHeart extends Item {
 	String name = "daedra_heart";
 
-	public ItemDaedraHeart()
-	{
+	public ItemDaedraHeart() {
 		setUnlocalizedName("daedra_heart");
 		setTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);

@@ -48,9 +48,8 @@ import com.thedarkera.utils.RegUtils;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class TDEBlocks
-{
-	//Blocks//
+public class TDEBlocks {
+	// Blocks//
 	public static Block ebony_ore;
 	public static Block steel_ore;
 	public static Block orichalcum_ore;
@@ -64,16 +63,16 @@ public class TDEBlocks
 	public static Block dark_portal;
 	public static Block teleporter_dark;
 	public static Block smasher;
-	public static Block dark_birch_planks; 
-	
+	public static Block dark_birch_planks;
+
 	public static Block smeltery;
-	
-	//plants//
+
+	// plants//
 	public static Block grape_plant;
 	public static Block saplings;
-	
-	//village blocks //
-	//TODO: Use block metadata
+
+	// village blocks //
+	// TODO: Use block metadata
 	public static Block dark_stone_ladder;
 	public static Block dark_stone;
 	public static Block dark_cobblestone;
@@ -86,29 +85,27 @@ public class TDEBlocks
 	public static Block rotten_wood_slab;
 	public static Block rotten_wood_fence;
 	public static Block dark_stone_dirt;
-	
-	//Biome Blocks //
+
+	// Biome Blocks //
 	public static Block dead_grass;
 	public static Block weedy_dirt;
 	public static Block dark_grass;
 	public static Block dark_dirt;
 	public static Block dark_gravel;
-	
-	//Tree blocks//
+
+	// Tree blocks//
 	public static Block log_dead;
 	public static Block blockLog;
 	public static Block blockLeaves;
 	public static Block dark_birch_log;
 	public static Block wisp_log;
 	public static Block block_saplings;
-	
-	//Placeable items//
-	public static Block example;
-	
 
-	public static void init()
-	{
-		//Blocks//
+	// Placeable items//
+	public static Block example;
+
+	public static void init() {
+		// Blocks//
 		ancientpickaxe_ore = new BlockAncientPickaxeOre();
 		reg(ancientpickaxe_ore);
 		ancientaxe_ore = new BlockAncientAxeOre();
@@ -120,9 +117,9 @@ public class TDEBlocks
 		ancient_ore = new BlockAncientOre();
 		reg(ancient_ore);
 		ebony_ore = new BlockEbonyOre();
-		reg(ebony_ore);		
+		reg(ebony_ore);
 		orichalcum_ore = new BlockOrichalcumOre();
-		reg(orichalcum_ore);	
+		reg(orichalcum_ore);
 		dark_stone_ladder = new BlockDarkStoneLadder();
 		reg(dark_stone_ladder);
 		dark_stone = new BlockDarkStone();
@@ -131,7 +128,8 @@ public class TDEBlocks
 		reg(dark_cobblestone);
 		dark_stone_bricks = new BlockDarkStoneBricks();
 		reg(dark_stone_bricks);
-		dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
+		dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID
+				+ ":dark_stone");
 		reg(dark_stone_fence);
 		dark_stone_stairs = new BlockDarkStoneStairs(dark_stone, 0);
 		reg(dark_stone_stairs);
@@ -139,7 +137,8 @@ public class TDEBlocks
 		reg(dark_stone_slab);
 		rotten_wood = new BlockRottenWood();
 		reg(rotten_wood);
-		rotten_wood_fence = new BlockRottenWoodFence(TheDarkEra.MODID + ":rotting_wood");
+		rotten_wood_fence = new BlockRottenWoodFence(TheDarkEra.MODID
+				+ ":rotting_wood");
 		reg(rotten_wood_fence);
 		rotten_wood_stairs = new BlockRottenWoodStairs(rotten_wood, 0);
 		reg(rotten_wood_stairs);
@@ -153,28 +152,22 @@ public class TDEBlocks
 
 		smeltery = new BlockSmeltery();
 		reg(smeltery);
-		
+
 		// Meta Blocks//
-		steel_ore = new BlockSteel();	
+		steel_ore = new BlockSteel();
 		reg(steel_ore, ItemSteelOre.class);
 
-
-		//Plants//
+		// Plants//
 		grape_plant = new BlockGrapePlant();
 		reg(grape_plant);
 
-
-
-		
-		
-
-		//Portals//
+		// Portals//
 		dark_portal = new BlockPortalDark().setBlockName("dark_portal");
 		reg(dark_portal);
 		teleporter_dark = new BlockPortalDark().setBlockName("teleporter_dark");
 		reg(teleporter_dark);
 
-		//Biome Blocks
+		// Biome Blocks
 		dead_grass = new BlockDeadGrass("dead_grass");
 		reg(dead_grass);
 		dark_grass = new BlockDarkGrass("dark_grass");
@@ -185,33 +178,37 @@ public class TDEBlocks
 		reg(dark_gravel);
 		weedy_dirt = new BlockWeedyDirt("weedy_dirt");
 		reg(weedy_dirt);
-		
-		//Tree blocks//
+
+		// Tree blocks//
 		dark_birch_log = new BlockLogDarkBirch();
 		reg(dark_birch_log);
 		wisp_log = new BlockLogWisp();
 		reg(wisp_log);
-		
-		blockLog = new BlockLogs().setBlockName("log").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
-		
-		blockLeaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(blockLeaves, ItemLeafBlocks.class, blockLeaves.getUnlocalizedName().substring(5));
-		
-		saplings = new BlockSaplings().setBlockName("Sapling").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(saplings, ItemSaplingBlocks.class, saplings.getUnlocalizedName().substring(5));
 
-		//Placeable items//
+		blockLog = new BlockLogs().setBlockName("log").setCreativeTab(
+				TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog
+				.getUnlocalizedName().substring(5));
+
+		blockLeaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(
+				TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(blockLeaves, ItemLeafBlocks.class,
+				blockLeaves.getUnlocalizedName().substring(5));
+
+		saplings = new BlockSaplings().setBlockName("Sapling").setCreativeTab(
+				TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(saplings, ItemSaplingBlocks.class, saplings
+				.getUnlocalizedName().substring(5));
+
+		// Placeable items//
 		example = new FlatBlockExample();
 	}
-	
-	public static void reg(Block block)
-	{
+
+	public static void reg(Block block) {
 		RegUtils.reg(block);
 	}
-	
-	public static void reg(Block block, Class<? extends ItemBlock> itemBlock)
-	{
+
+	public static void reg(Block block, Class<? extends ItemBlock> itemBlock) {
 		RegUtils.reg(block, itemBlock);
 	}
 }

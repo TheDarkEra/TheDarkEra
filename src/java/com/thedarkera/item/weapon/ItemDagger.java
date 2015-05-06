@@ -18,13 +18,11 @@ import com.google.common.collect.Multimap;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemDagger extends Item
-{
+public class ItemDagger extends Item {
 	private float damage;
 	private final ToolMaterial material;
 
-	public ItemDagger(ToolMaterial material)
-	{
+	public ItemDagger(ToolMaterial material) {
 		this.material = material;
 		maxStackSize = 1;
 		setMaxDamage(material.getMaxUses());
@@ -32,36 +30,33 @@ public class ItemDagger extends Item
 		damage = 2.0F + material.getDamageVsEntity();
 	}
 
-	public float func_150931_i()
-	{
+	public float func_150931_i() {
 		return material.getDamageVsEntity();
 	}
 
-	public float func_150893_a(ItemStack stack, Block block)
-	{
-		if (block == Blocks.web)
-		{
+	public float func_150893_a(ItemStack stack, Block block) {
+		if (block == Blocks.web) {
 			return 15.0F;
-		}
-		else
-		{
+		} else {
 			Material material = block.getMaterial();
-			return material != Material.plants && material != Material.vine && material != Material.coral && material != Material.leaves && material != Material.gourd ? 1.0F : 1.5F;
+			return material != Material.plants && material != Material.vine
+					&& material != Material.coral
+					&& material != Material.leaves
+					&& material != Material.gourd ? 1.0F : 1.5F;
 		}
 	}
 
 	@Override
-	public boolean hitEntity(ItemStack stack, EntityLivingBase entity, EntityLivingBase receive)
-	{
+	public boolean hitEntity(ItemStack stack, EntityLivingBase entity,
+			EntityLivingBase receive) {
 		stack.damageItem(1, receive);
 		return true;
 	}
 
 	@Override
-	public boolean onBlockDestroyed(ItemStack stack, World world, Block block, int x, int y, int z, EntityLivingBase entity)
-	{
-		if ((double)block.getBlockHardness(world, x, y, z) != 0.0D)
-		{
+	public boolean onBlockDestroyed(ItemStack stack, World world, Block block,
+			int x, int y, int z, EntityLivingBase entity) {
+		if ((double) block.getBlockHardness(world, x, y, z) != 0.0D) {
 			stack.damageItem(2, entity);
 		}
 
@@ -70,61 +65,58 @@ public class ItemDagger extends Item
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public boolean isFull3D()
-	{
+	public boolean isFull3D() {
 		return true;
 	}
 
 	@Override
-	public EnumAction getItemUseAction(ItemStack stack)
-	{
+	public EnumAction getItemUseAction(ItemStack stack) {
 		return EnumAction.block;
 	}
 
 	@Override
-	public int getMaxItemUseDuration(ItemStack stack)
-	{
+	public int getMaxItemUseDuration(ItemStack stack) {
 		return 72000;
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
-	{
+	public ItemStack onItemRightClick(ItemStack stack, World world,
+			EntityPlayer player) {
 		player.setItemInUse(stack, getMaxItemUseDuration(stack));
 		return stack;
 	}
 
 	@Override
-	public boolean func_150897_b(Block block)
-	{
+	public boolean func_150897_b(Block block) {
 		return block == Blocks.web;
 	}
 
 	@Override
-	public int getItemEnchantability()
-	{
+	public int getItemEnchantability() {
 		return material.getEnchantability();
 	}
 
-	public String getToolMaterialName()
-	{
+	public String getToolMaterialName() {
 		return material.toString();
 	}
 
 	@Override
-	public boolean getIsRepairable(ItemStack stack, ItemStack repairWith)
-	{
+	public boolean getIsRepairable(ItemStack stack, ItemStack repairWith) {
 		ItemStack mat = material.getRepairItemStack();
-		if (mat != null && net.minecraftforge.oredict.OreDictionary.itemMatches(mat, repairWith, false)) return true;
+		if (mat != null
+				&& net.minecraftforge.oredict.OreDictionary.itemMatches(mat,
+						repairWith, false))
+			return true;
 		return super.getIsRepairable(stack, repairWith);
 	}
 
 	@Override
 	@SuppressWarnings({ "unchecked", "rawtypes", "deprecation" })
-	public Multimap getItemAttributeModifiers()
-	{
+	public Multimap getItemAttributeModifiers() {
 		Multimap multimap = super.getItemAttributeModifiers();
-		multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", (double)damage, 0));
+		multimap.put(SharedMonsterAttributes.attackDamage
+				.getAttributeUnlocalizedName(), new AttributeModifier(
+				field_111210_e, "Weapon modifier", (double) damage, 0));
 		return multimap;
 	}
 }

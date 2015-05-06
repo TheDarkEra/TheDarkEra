@@ -1,4 +1,5 @@
 package com.thedarkera.iflatblocks;
+
 import java.util.Random;
 
 import net.minecraft.block.Block;
@@ -28,12 +29,13 @@ public abstract class IItemBlock extends Block implements InterfaceItemBlocks {
 
 	}
 
-	public IIcon	top;
+	public IIcon top;
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
-		top = iconRegister.registerIcon(TheDarkEra.MODID + ":" + TextureLocation() + getName());
+		top = iconRegister.registerIcon(TheDarkEra.MODID + ":"
+				+ TextureLocation() + getName());
 	}
 
 	@Override
@@ -51,7 +53,8 @@ public abstract class IItemBlock extends Block implements InterfaceItemBlocks {
 	}
 
 	@Override
-	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int wx, int wy, int wz) {
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int wx,
+			int wy, int wz) {
 		return null;
 	}
 

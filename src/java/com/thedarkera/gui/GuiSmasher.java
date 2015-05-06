@@ -14,7 +14,7 @@ public class GuiSmasher extends GuiScreen{
     private World world;
     private int xSize, ySize;
 
-    public GuiSmasher(EntityPlayer player, World world, int x, int y, int z) {
+	public GuiSmasher(EntityPlayer player, World world, int x, int y, int z) {
 
         this.x = x;
         this.y = y;
