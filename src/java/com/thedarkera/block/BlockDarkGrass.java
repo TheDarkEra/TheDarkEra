@@ -11,6 +11,7 @@ public class BlockDarkGrass extends Block
 {
 	private IIcon[] icons = new IIcon[6];
 	private String textureName = "dark_grass";
+	private String textureName1 = "dark_dirt";
 	
 	public BlockDarkGrass(String name)
 	{
@@ -25,12 +26,12 @@ public class BlockDarkGrass extends Block
 	@Override
 	public void registerBlockIcons(IIconRegister iconRegister)
 	{
-		icons[0] = iconRegister.registerIcon(TheDarkEra.MODID + textureName);
-		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + textureName + "_top");
-		icons[2] = iconRegister.registerIcon(TheDarkEra.MODID + textureName + "_side");
-		icons[3] = iconRegister.registerIcon(TheDarkEra.MODID + textureName + "_side");
-		icons[4] = iconRegister.registerIcon(TheDarkEra.MODID + textureName + "_side");
-		icons[5] = iconRegister.registerIcon(TheDarkEra.MODID + textureName + "_side");
+		icons[0] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName1);
+		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_top");
+		icons[2] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
+		icons[3] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
+		icons[4] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
+		icons[5] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
 	}
 
 	@Override

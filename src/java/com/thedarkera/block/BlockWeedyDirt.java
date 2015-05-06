@@ -26,9 +26,9 @@ public class BlockWeedyDirt extends Block
 	public void registerBlockIcons(IIconRegister iconRegister)
 	{
 		for (int i = 0; i < icons.length; i++) {
-			icons[i] = iconRegister.registerIcon(textureName);
+			icons[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName);
 		}
-		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + textureName + "_top");
+		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_top");
 	}
 
 	@Override

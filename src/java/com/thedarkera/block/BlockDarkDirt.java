@@ -13,7 +13,7 @@ public class BlockDarkDirt extends Block
 	{
 		super(Material.gourd);
 		setBlockName(name);
-		setBlockTextureName(textureName);
+		setBlockTextureName(TheDarkEra.MODID + ":" + textureName);
 		setCreativeTab(TheDarkEra.tabTDE);
 		setHardness(0.3F);
 		setStepSound(soundTypeGravel);

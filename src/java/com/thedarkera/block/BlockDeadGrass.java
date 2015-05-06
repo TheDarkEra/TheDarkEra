@@ -25,10 +25,12 @@ public class BlockDeadGrass extends Block
 	@Override
 	public void registerBlockIcons(IIconRegister iconRegister)
 	{
-		for (int i = 0; i < icons.length; i++) {
-			icons[i] = iconRegister.registerIcon(textureName);
-		}
-		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + textureName + "_top");
+		icons[0] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_bottom");
+		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_top");
+		icons[2] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
+		icons[3] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
+		icons[4] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
+		icons[5] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + textureName + "_side");
 	}
 
 	@Override
