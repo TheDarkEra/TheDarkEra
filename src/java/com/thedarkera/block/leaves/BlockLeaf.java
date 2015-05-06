@@ -3,6 +3,7 @@ package com.thedarkera.block.leaves;
 import java.util.List;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.init.TDEBlocks;
 
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -17,8 +18,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLeaf extends BlockLeaves {
 
-	public static final String[][] leafTypes = new String[][] { { "LeafDead", "LeafTest" }, { "LeafDeadOpaque", "LeafTestOpaque" } };
-	public static String[] leaves = new String[] { "Dead", "Test" };
+	public static final String[][] leafTypes = TDEBlocks.leafTypes;
+	public static String[] leaves = TDEBlocks.treeTypes;
 
 	protected void func_150124_c(World world, int x, int y, int z, int side, int meta) {
 		if ((side & 3) == 1 && world.rand.nextInt(meta) == 0) {

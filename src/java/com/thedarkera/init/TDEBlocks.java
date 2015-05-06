@@ -50,6 +50,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDEBlocks
 {
+	public static String[] treeTypes = new String[]{"Dead", "Alive"};
+	public static String[][] leafTypes = new String[][] { {"Leaf_Dead", "Leaf_Alive"}, {"Leaf_Dead_Opaque", "Leaf_Alive_Opaque"} };
 	//Blocks//
 	public static Block ebony_ore;
 	public static Block steel_ore;
@@ -99,7 +101,6 @@ public class TDEBlocks
 	public static Block blockLeaves;
 	public static Block dark_birch_log;
 	public static Block wisp_log;
-	public static Block block_saplings;
 	
 	//Placeable items//
 	public static Block example;

@@ -25,7 +25,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockSaplings extends BlockSapling {
-	public static final String[] saplings = new String[] { "dead", "test" };
+	public static final String[] saplings = TDEBlocks.treeTypes;
 	private static final IIcon[] saplingicon = new IIcon[saplings.length];
 
 	public BlockSaplings() {
@@ -81,7 +81,7 @@ public class BlockSaplings extends BlockSapling {
 
 		switch (l) {
 		case 0:
-			object = new WorldGenDeadTree(TDEBlocks.log_dead, TDEBlocks.blockLeaves, 0, 0, false, 5, 10, false);
+			object = new WorldGenDeadTree(TDEBlocks.blockLog, TDEBlocks.blockLeaves, 1, 0, false, 5, 10, false);
 			break;
 		case 1:
 			object = new WorldGenDeadTree(Blocks.bookshelf, TDEBlocks.blockLeaves, 0, 1, false, 15, 15, false);
@@ -94,7 +94,7 @@ public class BlockSaplings extends BlockSapling {
 			break;
 		case 5:
 		default:
-			object = new WorldGenDeadTree(TDEBlocks.log_dead, TDEBlocks.blockLeaves, 0, 0, false, 10, 15, false);
+			object = new WorldGenDeadTree(TDEBlocks.blockLog, TDEBlocks.blockLeaves, 1, 0, false, 10, 15, false);
 			break;
 		}
 		Block block = Blocks.air;
@@ -119,23 +119,16 @@ public class BlockSaplings extends BlockSapling {
 			}
 		}
 	}
-	//isSameSapling
+
+	// isSameSapling
 	public boolean func_149880_a(World world, int x, int y, int z, int par1) {
 		return world.getBlock(x, y, z) == this && (world.getBlockMetadata(x, y, z) & 7) == par1;
 	}
 
-	/**
-	 * Determines the damage on the item the block drops. Used in cloth and
-	 * wood.
-	 */
 	public int damageDropped(int par1) {
 		return MathHelper.clamp_int(par1 & 7, 0, 5);
 	}
 
-	/**
-	 * returns a list of blocks with the same ID, but different meta (eg: wood
-	 * returns 4 blocks)
-	 */
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tab, List list) {
 		for (int i = 0; i < saplings.length; i++) {

@@ -1,12 +1,14 @@
 package com.thedarkera.item;
 
+import com.thedarkera.init.TDEBlocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
 public class ItemLogBlocks extends ItemBlock {
 	
-	public static final String[] logs = new String[] {"Dead", "Test"};
+	public static final String[] logs = TDEBlocks.treeTypes;
 
 	public ItemLogBlocks(Block block) {
 		super(block);

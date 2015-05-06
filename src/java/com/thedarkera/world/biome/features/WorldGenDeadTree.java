@@ -116,7 +116,7 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 						block = p_76484_1_.getBlock(p_76484_3_, p_76484_4_ + k1, p_76484_5_);
 
 						if (block.isAir(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_) || block.isLeaves(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_)) {
-							this.setBlockAndNotifyAdequately(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_, TDEBlocks.log_dead, this.metaWood);
+							this.setBlockAndNotifyAdequately(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_, TDEBlocks.blockLog, this.metaWood);
 
 							if (this.vinesGrow && k1 > 0) {
 								if (p_76484_2_.nextInt(3) > 0 && p_76484_1_.isAirBlock(p_76484_3_ - 1, p_76484_4_ + k1, p_76484_5_)) {

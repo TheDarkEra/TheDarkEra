@@ -3,6 +3,7 @@ package com.thedarkera.block.logs;
 import java.util.List;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.init.TDEBlocks;
 
 import net.minecraft.block.BlockLog;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -14,7 +15,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLogs extends BlockLog {
-	public static final String[] logs = new String[] { "Dead", "Test" };
+	public static final String[] logs = TDEBlocks.treeTypes;
 
 	@SideOnly(Side.CLIENT)
 	@Override
@@ -22,6 +23,7 @@ public class BlockLogs extends BlockLog {
 		for (int i = 0; i < logs.length; i++) {
 			list.add(new ItemStack(par1, 1, i));
 		}
+
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -29,9 +31,10 @@ public class BlockLogs extends BlockLog {
 		this.field_150167_a = new IIcon[logs.length];
 		this.field_150166_b = new IIcon[logs.length];
 
-		for (int i = 0; i < logs.length; ++i) {
-			this.field_150167_a[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + this.getTextureName() + "_" + logs[i] + "_Top");
-			this.field_150166_b[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + this.getTextureName() + "_" + logs[i] + "_Side");
+		for (int i = 0; i < this.field_150167_a.length; ++i) {
+			this.field_150167_a[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":logs/" + logs[i] + "_Side");
+			this.field_150166_b[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":logs/" + logs[i] + "_Top");
+
 		}
 	}
 }
