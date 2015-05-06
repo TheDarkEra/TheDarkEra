@@ -8,7 +8,7 @@ http://1drv.ms/1DGSH0l
 https://goo.gl/THH6wG
 
 ### Official Thread
-http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/wip-mods/2390470-the-dark-era-mod-in-progress-open-source
+http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/wip-mods/2420829-forge-thedarkera-wip-magic-medieval
 
 Thank you for the support.
 - TheDarkEra Team
