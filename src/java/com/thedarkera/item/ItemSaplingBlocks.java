@@ -10,19 +10,21 @@ public class ItemSaplingBlocks extends ItemBlock {
 
 	public static final String[] saplings = TDEBlocks.treeTypes;
 	
+
 	public ItemSaplingBlocks(Block block) {
 		super(block);
 		this.hasSubtypes = true;
 	}
 
-	public String getUnlocalizedName(ItemStack itemstack){
+	public String getUnlocalizedName(ItemStack itemstack) {
 		int i = itemstack.getItemDamage();
-		if (i < 0 || i>= saplings.length){
+		if (i < 0 || i >= saplings.length) {
 			i = 0;
 		}
 		return super.getUnlocalizedName() + "." + saplings[i];
 	}
-	public int getMetadata(int Meta){
+
+	public int getMetadata(int Meta) {
 		return Meta;
 	}
 }

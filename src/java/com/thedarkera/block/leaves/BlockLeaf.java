@@ -18,12 +18,16 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLeaf extends BlockLeaves {
 
+
 	public static final String[][] leafTypes = TDEBlocks.leafTypes;
 	public static String[] leaves = TDEBlocks.treeTypes;
 
-	protected void func_150124_c(World world, int x, int y, int z, int side, int meta) {
+
+	protected void func_150124_c(World world, int x, int y, int z, int side,
+			int meta) {
 		if ((side & 3) == 1 && world.rand.nextInt(meta) == 0) {
-			this.dropBlockAsItem(world, x, y, z, new ItemStack(Items.apple, 1, 0));
+			this.dropBlockAsItem(world, x, y, z, new ItemStack(Items.apple, 1,
+					0));
 		}
 	}
 
@@ -41,7 +45,8 @@ public class BlockLeaf extends BlockLeaves {
 			this.field_150129_M[i] = new IIcon[leafTypes[i].length];
 
 			for (int j = 0; j < leafTypes[i].length; ++j) {
-				this.field_150129_M[i][j] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + leafTypes[i][j]);
+				this.field_150129_M[i][j] = iconRegister
+						.registerIcon(TheDarkEra.MODID + ":" + leafTypes[i][j]);
 			}
 		}
 	}
@@ -55,7 +60,8 @@ public class BlockLeaf extends BlockLeaves {
 	}
 
 	public IIcon getIcon(int side, int meta) {
-		return (meta & 3) == 1 ? this.field_150129_M[this.field_150127_b][1] : this.field_150129_M[this.field_150127_b][0];
+		return (meta & 3) == 1 ? this.field_150129_M[this.field_150127_b][1]
+				: this.field_150129_M[this.field_150127_b][0];
 
 	}
 

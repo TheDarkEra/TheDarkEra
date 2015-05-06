@@ -13,15 +13,15 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.common.util.ForgeDirection;
 
 public class WorldGenDeadTree extends WorldGenAbstractTree {
-	
+
 	private final int minTreeHeight;
 	private final int randomTreeHight;
-	
+
 	private final boolean vinesGrow;
-	
+
 	private final Block wood;
 	private final Block leaves;
-	
+
 	private final int metaWood;
 	private final int metaLeaves;
 
@@ -33,7 +33,7 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 		super(doBlockNotify);
 		this.wood = wood;
 		this.leaves = leaves;
-		
+
 		this.minTreeHeight = minTreeHight;
 		this.randomTreeHight = randomTreeHight;
 		this.metaWood = metaWood;
