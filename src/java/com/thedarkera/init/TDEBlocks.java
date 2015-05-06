@@ -37,6 +37,7 @@ import com.thedarkera.block.BlockSmeltery;
 import com.thedarkera.block.BlockSteel;
 import com.thedarkera.block.BlockWeedyDirt;
 import com.thedarkera.block.BlockWispWood;
+import com.thedarkera.flatblocks.FlatBlockExample;
 import com.thedarkera.item.ItemSteelOre;
 import com.thedarkera.utils.RegUtils;
 
@@ -87,8 +88,8 @@ public class TDEBlocks
 	public static Block wisp_wood;
 	public static Block rotten_wood_log;
 	
-	//Test Jodel//
-	public static Block test1;
+	//Placeable items//
+	public static Block example;
 
 	public static void init()
 	{
@@ -171,8 +172,8 @@ public class TDEBlocks
 		rotten_wood_log = new BlockRottenWoodLog(Material.wood);
 		reg(rotten_wood_log);
 
-		//Test Jodel//
-		//test1 = new BlockTestJodel();
+		//Placeable items//
+		example = new FlatBlockExample();
 	}
 	
 	public static void reg(Block block)

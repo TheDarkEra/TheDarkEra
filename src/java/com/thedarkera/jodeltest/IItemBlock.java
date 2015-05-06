@@ -33,7 +33,7 @@ public abstract class IItemBlock extends Block implements InterfaceItemBlocks {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
-		top = iconRegister.registerIcon(TheDarkEra.MODID + ":" + getName());
+		top = iconRegister.registerIcon(TheDarkEra.MODID + ":" + TextureLocation() + getName());
 	}
 
 	@Override

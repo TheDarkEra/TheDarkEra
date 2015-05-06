@@ -1,26 +1,26 @@
-package com.thedarkera.item;
+package com.thedarkera.placeableitem;
 
 import net.minecraft.block.Block;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.jodeltest.IPlaceableItem;
 
-public class ItemTestJodel extends IPlaceableItem {
+public class ItemPlaceAbleExample extends IPlaceableItem {
 	
-	public  ItemTestJodel() {
+	public  ItemPlaceAbleExample() {
 		super();
 	}
 
 	public String getName() {
-		return "TDE_Test";
+		return "placeableexample";
 	}
 
 	public String TextureLocation() {
-		return "Jodel/";
+		return "placeableitem/";
 	}
 
 	public Block ItemBlock() {
-		return TDEBlocks.test1;
+		return TDEBlocks.example;
 	}
 
 

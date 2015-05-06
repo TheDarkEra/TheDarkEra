@@ -18,11 +18,11 @@ import com.thedarkera.item.ItemOrichalcumIngot;
 import com.thedarkera.item.ItemRottenWoodStick;
 import com.thedarkera.item.ItemSoulGem;
 import com.thedarkera.item.ItemSteelIngot;
-import com.thedarkera.item.ItemTestJodel;
 import com.thedarkera.item.ItemWitchFeather;
 import com.thedarkera.item.food.ItemAshHopperMeat;
 import com.thedarkera.item.food.ItemGrape;
 import com.thedarkera.item.food.ItemGrapeSeed;
+import com.thedarkera.placeableitem.ItemPlaceAbleExample;
 import com.thedarkera.utils.RegUtils;
 
 public class TDEItems
@@ -55,8 +55,8 @@ public class TDEItems
 	//Seed items//
 	public static Item grape_seed;
 	
-	//Test Jodel//
-	public static Item test1;
+	//Placeable items//
+	public static Item example;
 
 	public static void init()
 	{	
@@ -108,8 +108,8 @@ public class TDEItems
 		grape_seed = new ItemGrapeSeed(TDEBlocks.grape_plant);
 		reg(grape_seed);
 		
-		//Test Jodel//
-		test1 = new ItemTestJodel();
+		//Placeable items//
+		example = new ItemPlaceAbleExample();
 	}
 	
 	public static void reg(Item item)
