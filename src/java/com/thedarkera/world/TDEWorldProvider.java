@@ -1,8 +1,6 @@
 package com.thedarkera.world;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.util.ChunkCoordinates;
-import net.minecraft.util.Vec3;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.Chunk;
@@ -12,9 +10,6 @@ import net.minecraftforge.client.IRenderHandler;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.world.renderers.SkyRenderer;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class TDEWorldProvider extends WorldProvider {
 	public void registerWorldChunkManager() {
