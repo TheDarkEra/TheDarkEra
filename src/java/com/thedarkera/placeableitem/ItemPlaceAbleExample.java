@@ -2,8 +2,8 @@ package com.thedarkera.placeableitem;
 
 import net.minecraft.block.Block;
 
+import com.thedarkera.iflatblocks.IPlaceableItem;
 import com.thedarkera.init.TDEBlocks;
-import com.thedarkera.jodeltest.IPlaceableItem;
 
 public class ItemPlaceAbleExample extends IPlaceableItem {
 	
