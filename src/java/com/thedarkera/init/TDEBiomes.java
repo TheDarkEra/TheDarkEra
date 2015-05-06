@@ -3,8 +3,8 @@ package com.thedarkera.init;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeManager;
 
-import com.thedarkera.biome.BiomeDarkForrest;
-import com.thedarkera.biome.BiomeDarkLand;
+import com.thedarkera.world.biome.BiomeDarkForrest;
+import com.thedarkera.world.biome.BiomeDarkLand;
 
 public class TDEBiomes {
 	

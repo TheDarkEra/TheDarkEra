@@ -57,6 +57,8 @@ public class TDEItems
 	
 	//Placeable items//
 	public static Item example;
+	
+	//Plant items//
 
 	public static void init()
 	{	
