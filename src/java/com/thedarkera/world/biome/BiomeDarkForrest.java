@@ -2,21 +2,20 @@ package com.thedarkera.world.biome;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenDesertWells;
+
 import com.thedarkera.init.TDEBlocks;
 
 public class BiomeDarkForrest extends BiomeGenBase{
 
-	Block stoneBlock = TDEBlocks.dark_stone;
-	
 	public BiomeDarkForrest(int biomeID) {
 		super(biomeID);
 		topBlock = TDEBlocks.dark_grass;
 		fillerBlock = TDEBlocks.dark_dirt;
-		waterColorMultiplier = 0xE42D17;
+		//bottomBlock = TDEBlocks.dark_stone; TODO: This might mean making our own BiomeGenBase
+		waterColorMultiplier = 0x000000;
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
 		spawnableWaterCreatureList.clear();
