@@ -35,12 +35,18 @@ import com.thedarkera.block.BlockSmasher;
 import com.thedarkera.block.BlockSmeltery;
 import com.thedarkera.block.BlockSteel;
 import com.thedarkera.block.BlockWeedyDirt;
+import com.thedarkera.block.leaves.BlockLeaf;
+import com.thedarkera.block.leaves.BlockLeavesDead;
 import com.thedarkera.block.logs.BlockLogDarkBirch;
-import com.thedarkera.block.logs.BlockLogDead;
 import com.thedarkera.block.logs.BlockLogWisp;
+import com.thedarkera.block.logs.BlockLogs;
 import com.thedarkera.flatblocks.FlatBlockExample;
+import com.thedarkera.item.ItemLeafBlocks;
+import com.thedarkera.item.ItemLogBlocks;
 import com.thedarkera.item.ItemSteelOre;
 import com.thedarkera.utils.RegUtils;
+
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDEBlocks
 {
@@ -89,8 +95,12 @@ public class TDEBlocks
 	
 	//Tree blocks//
 	public static Block log_dead;
+	public static Block blockLog;
+	public static Block blockLeaves;
 	public static Block dark_birch_log;
 	public static Block wisp_log;
+	public static Block leaves_dead;
+	public static Block block_saplings;
 	
 	//Placeable items//
 	public static Block example;
@@ -152,8 +162,10 @@ public class TDEBlocks
 		//Plants//
 		grape_plant = new BlockGrapePlant();
 		reg(grape_plant);
-		saplings = new BlockSaplings();
-		reg(saplings);
+
+
+
+		
 		
 
 		//Portals//
@@ -177,8 +189,18 @@ public class TDEBlocks
 		reg(dark_birch_log);
 		wisp_log = new BlockLogWisp();
 		reg(wisp_log);
-		log_dead = new BlockLogDead();
-		reg(log_dead);
+		
+		blockLog = new BlockLogs().setBlockName("log").setCreativeTab(TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
+		
+		blockLeaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(blockLeaves, ItemLeafBlocks.class, blockLeaves.getUnlocalizedName().substring(5));
+		
+		saplings = new BlockSaplings().setBlockName("Sapling").setCreativeTab(TheDarkEra.tabTDE);
+//		reg(saplings);
+
+		leaves_dead = new BlockLeavesDead().setBlockName("leaves").setCreativeTab(TheDarkEra.tabTDE);
+		reg(leaves_dead);
 
 		//Placeable items//
 		example = new FlatBlockExample();

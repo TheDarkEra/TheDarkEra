@@ -9,8 +9,8 @@ public class BlockLeavesDead extends BlockModLeavesBase{
 	private String name = "dead_leaves";
 	Block sapling = Blocks.sapling;
 	
-	public BlockLeavesDead(Material material) {
-		super(material);
+	public BlockLeavesDead() {
+		super(Material.leaves);
 		setBlockName(name);
 		setBlockTextureName(name);
 	}

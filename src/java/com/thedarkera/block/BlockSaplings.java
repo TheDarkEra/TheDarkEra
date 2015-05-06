@@ -18,12 +18,14 @@ import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.biome.features.WorldGenDeadTree;
+import com.thedarkera.init.TDEBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockSaplings extends BlockSapling {
-	public static final String[] saplings = new String[] { "dead" };
+	public static final String[] saplings = new String[] { "dead", "test" };
 	private static final IIcon[] saplingicon = new IIcon[saplings.length];
 
 	public BlockSaplings() {
@@ -79,9 +81,10 @@ public class BlockSaplings extends BlockSapling {
 
 		switch (l) {
 		case 0:
-			object = new WorldGenDeadTree();
+			object = new WorldGenDeadTree(TDEBlocks.log_dead, TDEBlocks.leaves_dead, 0, 0, false, 5, 10, false);
 			break;
 		case 1:
+			object = new WorldGenDeadTree(Blocks.bookshelf, TDEBlocks.leaves_dead, 0, 0, false, 15, 15, false);
 			break;
 		case 2:
 			break;
@@ -91,6 +94,7 @@ public class BlockSaplings extends BlockSapling {
 			break;
 		case 5:
 		default:
+			object = new WorldGenDeadTree(TDEBlocks.log_dead, TDEBlocks.leaves_dead, 0, 0, false, 10, 15, false);
 			break;
 		}
 		Block block = Blocks.air;
@@ -115,17 +119,17 @@ public class BlockSaplings extends BlockSapling {
 			}
 		}
 	}
-
-	public boolean func_149880_a(World p_149880_1_, int p_149880_2_, int p_149880_3_, int p_149880_4_, int p_149880_5_) {
-		return p_149880_1_.getBlock(p_149880_2_, p_149880_3_, p_149880_4_) == this && (p_149880_1_.getBlockMetadata(p_149880_2_, p_149880_3_, p_149880_4_) & 7) == p_149880_5_;
+	//isSameSapling
+	public boolean func_149880_a(World world, int x, int y, int z, int par1) {
+		return world.getBlock(x, y, z) == this && (world.getBlockMetadata(x, y, z) & 7) == par1;
 	}
 
 	/**
 	 * Determines the damage on the item the block drops. Used in cloth and
 	 * wood.
 	 */
-	public int damageDropped(int p_149692_1_) {
-		return MathHelper.clamp_int(p_149692_1_ & 7, 0, 5);
+	public int damageDropped(int par1) {
+		return MathHelper.clamp_int(par1 & 7, 0, 5);
 	}
 
 	/**
