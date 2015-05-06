@@ -5,7 +5,6 @@ import java.util.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenDesertWells;
-
 import com.thedarkera.init.TDEBlocks;
 
 public class BiomeDarkForrest extends BiomeGenBase{
