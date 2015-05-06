@@ -8,6 +8,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.init.TDEBlocks;
 
 import cpw.mods.fml.common.IWorldGenerator;
 
@@ -23,10 +24,10 @@ public class WorldGenHandlerTheDarkEra implements IWorldGenerator {
 		chunkX *= 16;
 		chunkZ *= 16;
 		
-		//if(world.provider.getDimensionId() == DWID){
-		/*	genStandardOre1(world, ModBlocks.darkDirt, 20, 32, chunkX, 0, 256, chunkZ, rand);
-			genStandardOre1(world, ModBlocks.darkGravel, 10, 32, chunkX, 0, 256, chunkZ, rand);
-			
+		if(world.provider.dimensionId == DWID){
+			genStandardOre1(world, TDEBlocks.dark_dirt, 20, 32, chunkX, 0, 256, chunkZ, rand);
+			genStandardOre1(world, TDEBlocks.dark_gravel, 10, 32, chunkX, 0, 256, chunkZ, rand);
+			/*
 			genStandardOre1(world, ModBlocks.darkCoalOre, 20, 16, chunkX, 0, 128, chunkZ, rand);
 			genStandardOre1(world, ModBlocks.darkIronOre, 20, 8, chunkX, 0, 64, chunkZ, rand);
 			genStandardOre1(world, ModBlocks.darkGoldOre, 2, 8, chunkX, 0, 32, chunkZ, rand);
@@ -35,9 +36,7 @@ public class WorldGenHandlerTheDarkEra implements IWorldGenerator {
 			genStandardOre2(world, ModBlocks.darkLapisOre, 1, 6, chunkX, 16, 16, chunkZ, rand);
 		*/
 		}
-		
-		
-	//}
+	}
 	
 	protected void genStandardOre1(World world, Block block,int veins, int BPV, int chunkX, int chunkYSpecial, int chunkY, int chunkZ, Random rand)
     {

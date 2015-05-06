@@ -86,6 +86,7 @@ public class TDEBlocks
 	public static Block weedy_dirt;
 	public static Block dark_grass;
 	public static Block dark_dirt;
+	public static Block dark_gravel;
 	
 	//Tree blocks//
 	public static Block log_dead;
@@ -169,6 +170,8 @@ public class TDEBlocks
 		reg(dark_grass);
 		dark_dirt = new BlockDarkDirt("dark_dirt");
 		reg(dark_dirt);
+		dark_gravel = new BlockDarkDirt("dark_gravel");
+		reg(dark_gravel);
 		weedy_dirt = new BlockWeedyDirt("weedy_dirt");
 		reg(weedy_dirt);
 		

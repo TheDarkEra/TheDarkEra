@@ -17,11 +17,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLogDead extends BlockRotatedPillar {
 
+	private String name = "log_dead";
 		public BlockLogDead() {
 			super(Material.wood);
-			this.setCreativeTab(TheDarkEra.tabTDE);
-			this.setHardness(2.0F);
-			setBlockName("log_dead");
+			setCreativeTab(TheDarkEra.tabTDE);
+			setHardness(2.0F);
+			setBlockName(name);
 		}
 
 		@SideOnly(Side.CLIENT)
@@ -35,10 +36,10 @@ public class BlockLogDead extends BlockRotatedPillar {
 			side = new IIcon[3];
 
 			for (int i = 0; i < top.length; i++) {
-				top[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + "logs/" + (this.getUnlocalizedName().substring(5)) + "_Top" + i);
+				top[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + "logs/" + name + "_Top" + i);
 			}
 			for (int j = 0; j < side.length; j++) {
-				side[j] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + "logs/" + (this.getUnlocalizedName().substring(5)) + "_Side" + j);
+				side[j] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + "logs/" + name + "_Side" + j);
 			}
 		}
 
