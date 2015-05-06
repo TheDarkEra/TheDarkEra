@@ -5,12 +5,10 @@ import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockEbonyOre extends Block
-{
+public class BlockEbonyOre extends Block {
 	String name = "ebony_ore";
 
-	public BlockEbonyOre()
-	{
+	public BlockEbonyOre() {
 		super(Material.rock);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
@@ -21,4 +19,3 @@ public class BlockEbonyOre extends Block
 		setHarvestLevel("pickaxe", 4);
 	}
 }
-

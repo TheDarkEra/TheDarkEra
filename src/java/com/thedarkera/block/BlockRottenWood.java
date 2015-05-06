@@ -5,13 +5,11 @@ import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockRottenWood extends Block
-{
+public class BlockRottenWood extends Block {
 	String name = "rotten_wood";
 	String texture = "rotting_wood";
-	
-	public BlockRottenWood()
-	{
+
+	public BlockRottenWood() {
 		super(Material.wood);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + texture);

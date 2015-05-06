@@ -4,12 +4,10 @@ import com.thedarkera.TheDarkEra;
 
 import net.minecraft.block.BlockLadder;
 
-public class BlockDarkStoneLadder extends BlockLadder
-{	
+public class BlockDarkStoneLadder extends BlockLadder {
 	String name = "dark_stone_ladder";
-	
-	public BlockDarkStoneLadder()
-	{
+
+	public BlockDarkStoneLadder() {
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);

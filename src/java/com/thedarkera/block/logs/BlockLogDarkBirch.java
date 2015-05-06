@@ -12,12 +12,10 @@ import net.minecraft.world.World;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.render.RenderDarkBirchWood;
 
-public class BlockLogDarkBirch extends Block
-{
+public class BlockLogDarkBirch extends Block {
 	String name = "dark_birch_log";
-	
-	public BlockLogDarkBirch()
-	{
+
+	public BlockLogDarkBirch() {
 		super(Material.wood);
 		setHardness(2.0F);
 		setStepSound(soundTypeWood);
@@ -28,63 +26,57 @@ public class BlockLogDarkBirch extends Block
 	}
 
 	@Override
-	public void setBlockBoundsBasedOnState(IBlockAccess world, int x, int y, int z)
-	{
+	public void setBlockBoundsBasedOnState(IBlockAccess world, int x, int y,
+			int z) {
 		setBlockBounds(0.33f, 0.33f, 0.33f, 0.66f, 0.66f, 0.66f);
 	}
 
 	@Override
-	public boolean isOpaqueCube()
-	{
+	public boolean isOpaqueCube() {
 		return false;
 	}
 
 	@Override
-	public boolean renderAsNormalBlock()
-	{
+	public boolean renderAsNormalBlock() {
 		return false;
 	}
 
 	@Override
-	public int getRenderType()
-	{
+	public int getRenderType() {
 		return RenderDarkBirchWood.renderId;
 	}
 
 	@Override
-	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
-	{
+	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess,
+			int par2, int par3, int par4, int par5) {
 		return true;
 	}
-	
+
 	@Override
-	public Item getItemDropped(int par1, Random rand, int par3)
-	{
+	public Item getItemDropped(int par1, Random rand, int par3) {
 		return Items.stick;
 	}
 
 	@Override
-	public void breakBlock(World world, int x, int y, int z, Block block, int meta)
-    {
-        byte b0 = 4;
-        int i1 = b0 + 1;
+	public void breakBlock(World world, int x, int y, int z, Block block,
+			int meta) {
+		byte b0 = 4;
+		int i1 = b0 + 1;
 
-        if (world.checkChunksExist(x - i1, y - i1, z - i1, x + i1, y + i1, z + i1))
-        {
-            for (int j1 = -b0; j1 <= b0; ++j1)
-            {
-                for (int k1 = -b0; k1 <= b0; ++k1)
-                {
-                    for (int l1 = -b0; l1 <= b0; ++l1)
-                    {
-                        Block blockleave = world.getBlock(x + j1, y + k1, z + l1);
-                        if (blockleave.isLeaves(world, x + j1, y + k1, z + l1))
-                        {
-                            blockleave.beginLeavesDecay(world, x + j1, y + k1, z + l1);
-                        }
-                    }
-                }
-            }
-        }
-    }
+		if (world.checkChunksExist(x - i1, y - i1, z - i1, x + i1, y + i1, z
+				+ i1)) {
+			for (int j1 = -b0; j1 <= b0; ++j1) {
+				for (int k1 = -b0; k1 <= b0; ++k1) {
+					for (int l1 = -b0; l1 <= b0; ++l1) {
+						Block blockleave = world.getBlock(x + j1, y + k1, z
+								+ l1);
+						if (blockleave.isLeaves(world, x + j1, y + k1, z + l1)) {
+							blockleave.beginLeavesDecay(world, x + j1, y + k1,
+									z + l1);
+						}
+					}
+				}
+			}
+		}
+	}
 }

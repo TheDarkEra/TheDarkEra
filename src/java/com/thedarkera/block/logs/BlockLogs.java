@@ -30,8 +30,10 @@ public class BlockLogs extends BlockLog {
 		this.field_150166_b = new IIcon[logs.length];
 
 		for (int i = 0; i < logs.length; ++i) {
-			this.field_150167_a[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + this.getTextureName() + "_" + logs[i] + "_Top");
-			this.field_150166_b[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + this.getTextureName() + "_" + logs[i] + "_Side");
+			this.field_150167_a[i] = iconRegister.registerIcon(TheDarkEra.MODID
+					+ ":" + this.getTextureName() + "_" + logs[i] + "_Top");
+			this.field_150166_b[i] = iconRegister.registerIcon(TheDarkEra.MODID
+					+ ":" + this.getTextureName() + "_" + logs[i] + "_Side");
 		}
 	}
 }

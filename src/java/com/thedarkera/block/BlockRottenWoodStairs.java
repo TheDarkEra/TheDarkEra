@@ -5,12 +5,10 @@ import net.minecraft.block.BlockStairs;
 
 import com.thedarkera.TheDarkEra;
 
-public class BlockRottenWoodStairs extends BlockStairs
-{
+public class BlockRottenWoodStairs extends BlockStairs {
 	String name = "rotten_wood_stairs";
-	
-	public BlockRottenWoodStairs(Block b, int i)
-	{
+
+	public BlockRottenWoodStairs(Block b, int i) {
 		super(b, i);
 		setBlockName(name);
 		setCreativeTab(TheDarkEra.tabTDE);
