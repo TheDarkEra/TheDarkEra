@@ -19,6 +19,7 @@ item.daedra_heart.name=Daedra Heart
 item.fire_rune.name=Fire Rune
 item.frost_rune.name=Frost Rune
 item.lightning_rune.name=Lightning Rune
+item.achievement_book.name=Achievement Book 
 
 //Item Ingot//
 item.ebony_ingot.name=Ebony Ingot
@@ -52,6 +53,7 @@ item.diamond_weeder.name=Diamond Weeder
 item.iron_weeder.name=Iron Weeder
 item.stone_weeder.name=Stone Weeder
 item.wooden_weeder.name=Wooden Weeder
+item.steel_weeder.name=Steel Weeder
 
 
 //Item Food//
@@ -127,6 +129,16 @@ tile.dark_gravel.name=Dark Gravel
 tile.dark_birch_log=Dark Birch Log
 tile.wisp_log.name=Wisp Log
 tile.log.Dead.name=Dead log
+
+//Tree Blocks//
+tile.sapling.Dead.name=Dead Sapling
+tile.sapling.Wisp.name=Wisp Sapling
+tile.sapling.Dark_Birch.name=Dark Birch Sapling
+tile.sapling.Royal_Oak.name=Royal Oak Sapling
+tile.leaf.Dead.name=Dead Leaves
+tile.leaf.Wisp.name=Wisp Leaves
+tile.leaf.Dark_Birch.name=Dark Birch Leaves
+tile.leaf.Royal_Oak.name=Royal Oak Leaves
 
 //Container//
 container.smeltery=Smeltery

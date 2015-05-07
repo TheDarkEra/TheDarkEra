@@ -14,9 +14,7 @@ import com.thedarkera.inventory.ContainerSmeltery;
 import com.thedarkera.tileentity.TESmeltery;
 
 public class GuiSmeltery extends GuiContainer {
-	private ResourceLocation texture = new ResourceLocation(
-			TheDarkEra.MODID.toLowerCase(),
-			"textures/gui/container/smeltery.png");
+	private ResourceLocation texture = new ResourceLocation(TheDarkEra.MODID.toLowerCase(), "textures/gui/container/smeltery.png");
 
 	private InventoryPlayer inventory;
 	private TESmeltery te;
@@ -38,16 +36,18 @@ public class GuiSmeltery extends GuiContainer {
 		int y = (height - ySize) / 2;
 
 		drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
+		
+		if (te.isBurning()) {
+			int scaled = te.getBurnTimeRemainingScaled(13);
+			drawTexturedModalRect(x + 56, y + 36 + 12 - scaled, 176, 12 - scaled, 14, scaled + 1);
+			scaled = te.getCookProgressScaled(13);
+			drawTexturedModalRect(x + 79, y + 34, 176, 14, scaled + 1, 16);
+		}
 	}
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		fontRendererObj.drawString(
-				I18n.format(te.getInventoryName()),
-				(xSize / 2)
-						- (fontRendererObj.getStringWidth(I18n.format(te
-								.getInventoryName())) / 2), 6, 2500134, false);
-		fontRendererObj.drawString(I18n.format(inventory.getInventoryName()),
-				8, ySize - 96 + 2, 2500134);
+		fontRendererObj.drawString(I18n.format(te.getInventoryName()), (xSize / 2) - (fontRendererObj.getStringWidth(I18n.format(te.getInventoryName())) / 2), 6, 2500134, false);
+		fontRendererObj.drawString(I18n.format(inventory.getInventoryName()), 8, ySize - 96 + 2, 2500134);
 	}
 }

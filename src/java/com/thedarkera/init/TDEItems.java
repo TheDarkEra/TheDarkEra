@@ -2,6 +2,7 @@ package com.thedarkera.init;
 
 import net.minecraft.item.Item;
 
+import com.thedarkera.item.ItemAchievementBook;
 import com.thedarkera.item.ItemAncientIngot;
 import com.thedarkera.item.ItemAshHopperJelly;
 import com.thedarkera.item.ItemAshHopperLeg;
@@ -41,6 +42,7 @@ public class TDEItems {
 	public static Item fire_rune;
 	public static Item frost_rune;
 	public static Item lightning_rune;
+	public static Item achievement_book;
 
 	// Ingot items//
 	public static Item steel_ingot;
@@ -90,6 +92,8 @@ public class TDEItems {
 		reg(frost_rune);
 		lightning_rune = new ItemLightningRune();
 		reg(lightning_rune);
+		achievement_book = new ItemAchievementBook();
+		reg(achievement_book);
 
 		// Ingot items init//
 		steel_ingot = new ItemSteelIngot();

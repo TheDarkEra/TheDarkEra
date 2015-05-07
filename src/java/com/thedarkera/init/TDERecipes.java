@@ -49,10 +49,19 @@ public class TDERecipes {
 				new Object[] { "x", "x", 'x', TDEBlocks.rotten_wood });
 
 		// Ingots//
+		GameRegistry.addSmelting(Items.chainmail_boots, new ItemStack(
+				TDEItems.steel_ingot, 2), 0.8F);
+		GameRegistry.addSmelting(Items.chainmail_chestplate, new ItemStack(
+				TDEItems.steel_ingot, 8), 0.8F);
+		GameRegistry.addSmelting(Items.chainmail_leggings, new ItemStack(
+				TDEItems.steel_ingot, 6), 0.8F);
+		GameRegistry.addSmelting(Items.chainmail_helmet, new ItemStack(
+				TDEItems.steel_ingot, 4), 0.8F);
+		GameRegistry.addSmelting(Items.iron_ingot, new ItemStack(
+				TDEItems.steel_ingot), 0.8F);
+		
 		GameRegistry.addSmelting(TDEBlocks.ebony_ore, new ItemStack(
 				TDEItems.ebony_ingot), 0.8F);
-		GameRegistry.addSmelting(TDEBlocks.steel_ore, new ItemStack(
-				TDEItems.steel_ingot), 0.4F);
 		GameRegistry.addSmelting(TDEBlocks.orichalcum_ore, new ItemStack(
 				TDEItems.orichalcum_ingot), 0.5F);
 		GameRegistry.addSmelting(TDEBlocks.orichalcum_ore, new ItemStack(
