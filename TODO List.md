@@ -18,6 +18,15 @@ Errors that need to be fixed:
 
 Texture:
 
+
+# TheDarkEra Todo List
+When adding code that requires textures, please add the texture to the text and when You have added the code, or texture, you can remove the TODO.
+
+blocks/dark_coal_ore.png
+blocks/dark_iron_ore.png
+blocks/dark_gold_ore.png
+blocks/dark_diamond_ore.png
+blocks/dark_emerald_ore.png
 blocks/Leaf_Black_Wood_Tree.png
 blocks/logs/Mangroves_Top.png
 blocks/sapling.png
@@ -134,7 +143,3 @@ blocks/Leaf_Rotten_Tree_Opaque.png
 items/dragon_heavy_helmet.png
 blocks/logs/Wisp_Top.png
 blocks/Leaf_Paper_Birch_Tree_Opaque.png
-
- 
-
-
