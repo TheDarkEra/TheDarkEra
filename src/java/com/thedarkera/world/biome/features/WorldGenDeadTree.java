@@ -105,7 +105,7 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 									Block block1 = p_76484_1_.getBlock(i2, k1, k2);
 
 									if (block1.isAir(p_76484_1_, i2, k1, k2) || block1.isLeaves(p_76484_1_, i2, k1, k2)) {
-										this.setBlockAndNotifyAdequately(p_76484_1_, i2, k1, k2, TDEBlocks.blockLeaves, this.metaLeaves);
+										this.setBlockAndNotifyAdequately(p_76484_1_, i2, k1, k2, TDEBlocks.block_leaves, this.metaLeaves);
 									}
 								}
 							}
