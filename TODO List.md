@@ -1,8 +1,8 @@
 TODO List:
-Important: When adding code that requires textures, please add the texture needed to the doc.
+Important:	When adding code that requires textures, please add the texture to the text. 
+			And when You have added the code, or texture, you can remove the TODO.
+		
 
-Mark it green when done.
-Mark it blue, if it is important.
  
 Code:
 
