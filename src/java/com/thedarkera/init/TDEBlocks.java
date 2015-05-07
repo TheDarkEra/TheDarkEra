@@ -107,15 +107,11 @@ public class TDEBlocks {
 	public static Block dark_gravel;
 
 	// Tree blocks//
-<<<<<<< HEAD
 	public static Block blockLog1;
 	public static Block blockLog2;
 	public static Block blockLog3;
-	public static Block blockLeaves;
-=======
-	public static Block block_log;
+
 	public static Block block_leaves;
->>>>>>> origin/master
 
 	public static Block dark_birch_log;
 	public static Block wisp_log;

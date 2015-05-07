@@ -30,29 +30,22 @@ public class BlockSaplings extends BlockSapling {
 
 	public BlockSaplings() {
 		float f = 0.4F;
-		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F,
-				0.5F + f);
+		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
 		this.setCreativeTab(TheDarkEra.tabTDE);
 		this.setBlockName("sapling");
 	}
 
-	/**
-	 * Ticks the block if it's been scheduled
-	 */
-	public void updateTick(World world, int x, int y, int z, Random p_149674_5_) {
-		if (!world.isRemote) {
-			super.updateTick(world, x, y, z, p_149674_5_);
 
-			if (world.getBlockLightValue(x, y + 1, z) >= 9
-					&& p_149674_5_.nextInt(7) == 0) {
-				this.func_149879_c(world, x, y, z, p_149674_5_);
+	public void updateTick(World world, int x, int y, int z, Random rand) {
+		if (!world.isRemote) {
+			super.updateTick(world, x, y, z, rand);
+
+			if (world.getBlockLightValue(x, y + 1, z) >= 9 && rand.nextInt(7) == 0) {
+				this.func_149879_c(world, x, y, z, rand);
 			}
 		}
 	}
 
-	/**
-	 * Gets the block's texture. Args: side, meta
-	 */
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
 		meta &= 7;
@@ -72,24 +65,19 @@ public class BlockSaplings extends BlockSapling {
 
 	// growTree
 	@Override
-	public void func_149878_d(World world, int x, int y, int z,
-			Random p_149878_5_) {
-		if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(
-				world, p_149878_5_, x, y, y))
+	public void func_149878_d(World world, int x, int y, int z, Random rand) {
+		if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(world, rand, x, y, y))
 			return;
 		int l = world.getBlockMetadata(x, y, z) & 7;
-		Object object = p_149878_5_.nextInt(10) == 0 ? new WorldGenBigTree(true)
-				: new WorldGenTrees(true);
+		Object object = rand.nextInt(10) == 0 ? new WorldGenBigTree(true) : new WorldGenTrees(true);
 		int i1 = 0;
 		int j1 = 0;
 		boolean flag = false;
-
 		switch (l) {
 		case 0:
+			object = new WorldGenDeadTree();
 			break;
 		case 1:
-			object = new WorldGenDeadTree(Blocks.bookshelf,
-					TDEBlocks.block_leaves, 0, 1, false, 15, 15, false);
 			break;
 		case 2:
 			break;
@@ -99,7 +87,6 @@ public class BlockSaplings extends BlockSapling {
 			break;
 		case 5:
 		default:
-			object = new WorldGenDeadTree(TDEBlocks.blockLog1, TDEBlocks.blockLeaves, 1, 0, false, 10, 15, false);
 			break;
 		}
 		Block block = Blocks.air;
@@ -113,8 +100,7 @@ public class BlockSaplings extends BlockSapling {
 			world.setBlock(x, y, z, block, 0, 4);
 		}
 
-		if (!((WorldGenerator) object).generate(world, p_149878_5_, x + i1, y,
-				z + j1)) {
+		if (!((WorldGenerator) object).generate(world, rand, x + i1, y, z + j1)) {
 			if (flag) {
 				world.setBlock(x + i1, y, z + j1, this, l, 4);
 				world.setBlock(x + i1 + 1, y, z + j1, this, l, 4);
@@ -128,8 +114,7 @@ public class BlockSaplings extends BlockSapling {
 
 	// isSameSapling
 	public boolean func_149880_a(World world, int x, int y, int z, int par1) {
-		return world.getBlock(x, y, z) == this
-				&& (world.getBlockMetadata(x, y, z) & 7) == par1;
+		return world.getBlock(x, y, z) == this && (world.getBlockMetadata(x, y, z) & 7) == par1;
 	}
 
 	public int damageDropped(int par1) {
@@ -146,24 +131,19 @@ public class BlockSaplings extends BlockSapling {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister p_149651_1_) {
 		for (int i = 0; i < saplingicon.length; ++i) {
-			saplingicon[i] = p_149651_1_.registerIcon(TheDarkEra.MODID + ":"
-					+ this.getUnlocalizedName().substring(5));
+			saplingicon[i] = p_149651_1_.registerIcon(TheDarkEra.MODID + ":" + this.getUnlocalizedName().substring(5));
 		}
 	}
 
-	public boolean func_149851_a(World p_149851_1_, int p_149851_2_,
-			int p_149851_3_, int p_149851_4_, boolean p_149851_5_) {
+	public boolean func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, boolean p_149851_5_) {
 		return true;
 	}
 
-	public boolean func_149852_a(World p_149852_1_, Random p_149852_2_,
-			int p_149852_3_, int p_149852_4_, int p_149852_5_) {
+	public boolean func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_) {
 		return (double) p_149852_1_.rand.nextFloat() < 0.45D;
 	}
 
-	public void func_149853_b(World p_149853_1_, Random p_149853_2_,
-			int p_149853_3_, int p_149853_4_, int p_149853_5_) {
-		this.func_149879_c(p_149853_1_, p_149853_3_, p_149853_4_, p_149853_5_,
-				p_149853_2_);
+	public void func_149853_b(World p_149853_1_, Random p_149853_2_, int p_149853_3_, int p_149853_4_, int p_149853_5_) {
+		this.func_149879_c(p_149853_1_, p_149853_3_, p_149853_4_, p_149853_5_, p_149853_2_);
 	}
 }

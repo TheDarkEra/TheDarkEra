@@ -9,7 +9,7 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 import com.thedarkera.init.TDEBlocks;
 
-public class WorldGenDeadTree extends WorldGenAbstractTree {
+public class WorldGenDeadTree2 extends WorldGenAbstractTree {
 //
 //	private final int minTreeHeight;
 //	private final int randomTreeHight;
@@ -36,7 +36,7 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 //		this.metaWood = metaWood;
 //		this.metaLeaves = metaLeaves;
 //		this.vinesGrow = vinesGrow;
-	public WorldGenDeadTree() {
+	public WorldGenDeadTree2() {
 	super(false);	
 }
 

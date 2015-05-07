@@ -22,7 +22,7 @@ public class ItemLogBlocks2 extends ItemBlock {
 		if (i < 0 || i >= logs.length) {
 			i = 0;
 		}
-		return super.getUnlocalizedName() + "." + logs[i];
+		return super.getUnlocalizedName() + "_" + logs[i];
 	}
 
 	@Override

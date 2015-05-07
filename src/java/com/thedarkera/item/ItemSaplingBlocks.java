@@ -21,7 +21,7 @@ public class ItemSaplingBlocks extends ItemBlock {
 		if (i < 0 || i >= saplings.length) {
 			i = 0;
 		}
-		return super.getUnlocalizedName() + "." + saplings[i];
+		return super.getUnlocalizedName() + "_" + saplings[i];
 	}
 
 	public int getMetadata(int Meta) {

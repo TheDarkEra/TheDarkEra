@@ -22,7 +22,7 @@ public class ItemLeafBlocks extends ItemBlock {
 		if (i < 0 || i >= leaves.length) {
 			i = 0;
 		}
-		return super.getUnlocalizedName() + "." + leaves[i];
+		return super.getUnlocalizedName() + "_" + leaves[i];
 	}
 
 	@Override
