@@ -46,7 +46,6 @@ import com.thedarkera.item.ItemLogBlocks1;
 import com.thedarkera.item.ItemLogBlocks2;
 import com.thedarkera.item.ItemLogBlocks3;
 import com.thedarkera.item.ItemSaplingBlocks;
-import com.thedarkera.item.ItemSteelOre;
 import com.thedarkera.utils.RegUtils;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -107,11 +106,23 @@ public class TDEBlocks {
 	public static Block dark_gravel;
 
 	// Tree blocks//
+<<<<<<< HEAD
 	public static Block blockLog1;
 	public static Block blockLog2;
 	public static Block blockLog3;
 
 	public static Block block_leaves;
+=======
+
+	public static Block blockLog1;
+	public static Block blockLog2;
+	public static Block blockLog3;
+	public static Block blockLeaves;
+
+	public static Block block_log;
+	public static Block block_leaves;
+
+>>>>>>> 595548cff4e6fb97cb11be4dd6b237d8bc38ede3
 
 	public static Block dark_birch_log;
 	public static Block wisp_log;
