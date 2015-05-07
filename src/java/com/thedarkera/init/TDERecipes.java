@@ -51,8 +51,6 @@ public class TDERecipes {
 		// Ingots//
 		GameRegistry.addSmelting(TDEBlocks.ebony_ore, new ItemStack(
 				TDEItems.ebony_ingot), 0.8F);
-		GameRegistry.addSmelting(TDEBlocks.steel_ore, new ItemStack(
-				TDEItems.steel_ingot), 0.4F);
 		GameRegistry.addSmelting(TDEBlocks.orichalcum_ore, new ItemStack(
 				TDEItems.orichalcum_ingot), 0.5F);
 		GameRegistry.addSmelting(TDEBlocks.orichalcum_ore, new ItemStack(

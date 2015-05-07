@@ -33,7 +33,6 @@ import com.thedarkera.block.BlockRottenWoodStairs;
 import com.thedarkera.block.BlockSaplings;
 import com.thedarkera.block.BlockSmasher;
 import com.thedarkera.block.BlockSmeltery;
-import com.thedarkera.block.BlockSteel;
 import com.thedarkera.block.BlockWeedyDirt;
 import com.thedarkera.block.leaves.BlockLeaf;
 import com.thedarkera.block.logs.BlockLogDarkBirch;
@@ -65,7 +64,6 @@ public class TDEBlocks {
 
 	// Blocks//
 	public static Block ebony_ore;
-	public static Block steel_ore;
 	public static Block orichalcum_ore;
 	public static Block ancient_ore;
 	public static Block ancientpickaxe_ore;
@@ -165,8 +163,6 @@ public class TDEBlocks {
 		reg(smeltery);
 
 		// Meta Blocks//
-		steel_ore = new BlockSteel();
-		reg(steel_ore, ItemSteelOre.class);
 
 		// Plants//
 		grape_plant = new BlockGrapePlant();
