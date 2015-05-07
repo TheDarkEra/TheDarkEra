@@ -1,5 +1,6 @@
+<<<<<<< HEAD
 # TheDarkEra Todo List
-Important: When adding code that requires textures, please add the texture needed to the doc.
+When adding code that requires textures, please add the texture to the text and when You have added the code, or texture, you can remove the TODO.
 ## Textures
 blocks/dark_coal_ore.png
 blocks/dark_iron_ore.png
