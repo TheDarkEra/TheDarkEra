@@ -146,6 +146,12 @@ tile.dark_birch_log=Dark Birch Log
 tile.wisp_log.name=Wisp Log
 tile.log.Dead.name=Dead log
 
+tile.dark_coal_ore.name=Dark Coal Ore
+tile.dark_iron_ore.name=Dark Iron Ore
+tile.dark_gold_ore.name=Dark Gold Ore
+tile.dark_diamond_ore.name=Dark Diamond Ore
+tile.dark_emerald_ore.name=Dark Emerald Ore
+
 //Tree Blocks//
 tile.sapling.Dead.name=Dead Sapling
 tile.sapling.Wisp.name=Wisp Sapling
