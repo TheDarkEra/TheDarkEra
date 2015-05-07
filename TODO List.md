@@ -1,6 +1,9 @@
-<<<<<<< HEAD
 # TheDarkEra Todo List
 When adding code that requires textures, please add the texture to the text and when You have added the code, or texture, you can remove the TODO.
+
+## Code
+Achievement Book - Needs Gui made with tick boxes next the objectives.
+
 ## Textures
 blocks/dark_coal_ore.png
 blocks/dark_iron_ore.png
