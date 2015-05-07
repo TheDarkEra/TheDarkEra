@@ -108,8 +108,8 @@ public class TDEBlocks {
 	public static Block dark_gravel;
 
 	// Tree blocks//
-	public static Block blockLog;
-	public static Block blockLeaves;
+	public static Block block_log;
+	public static Block block_leaves;
 
 	public static Block dark_birch_log;
 	public static Block wisp_log;
@@ -197,13 +197,13 @@ public class TDEBlocks {
 		wisp_log = new BlockLogWisp();
 		reg(wisp_log);
 
-		blockLog = new BlockLogs().setBlockName("log").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
+		block_log = new BlockLogs().setBlockName("log").setCreativeTab(TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(block_log, ItemLogBlocks.class, block_log.getUnlocalizedName().substring(5));
 
-		blockLeaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(blockLeaves, ItemLeafBlocks.class, blockLeaves.getUnlocalizedName().substring(5));
+		block_leaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(block_leaves, ItemLeafBlocks.class, block_leaves.getUnlocalizedName().substring(5));
 
-		saplings = new BlockSaplings().setBlockName("Sapling").setCreativeTab(TheDarkEra.tabTDE);
+		saplings = new BlockSaplings().setBlockName("sapling").setCreativeTab(TheDarkEra.tabTDE);
 		GameRegistry.registerBlock(saplings, ItemSaplingBlocks.class, saplings.getUnlocalizedName().substring(5));
 
 		// Placeable items//

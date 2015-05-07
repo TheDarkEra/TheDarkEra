@@ -33,7 +33,7 @@ public class BlockSaplings extends BlockSapling {
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F,
 				0.5F + f);
 		this.setCreativeTab(TheDarkEra.tabTDE);
-		this.setBlockName("Sapling");
+		this.setBlockName("sapling");
 	}
 
 	/**
@@ -87,12 +87,12 @@ public class BlockSaplings extends BlockSapling {
 		switch (l) {
 		case 0:
 
-			object = new WorldGenDeadTree(TDEBlocks.blockLog, TDEBlocks.blockLeaves, 1, 0, false, 5, 10, false);
+			object = new WorldGenDeadTree(TDEBlocks.block_log, TDEBlocks.block_leaves, 1, 0, false, 5, 10, false);
 
 			break;
 		case 1:
 			object = new WorldGenDeadTree(Blocks.bookshelf,
-					TDEBlocks.blockLeaves, 0, 1, false, 15, 15, false);
+					TDEBlocks.block_leaves, 0, 1, false, 15, 15, false);
 			break;
 		case 2:
 			break;
@@ -103,7 +103,7 @@ public class BlockSaplings extends BlockSapling {
 		case 5:
 		default:
 			
-			object = new WorldGenDeadTree(TDEBlocks.blockLog, TDEBlocks.blockLeaves, 1, 0, false, 10, 15, false);
+			object = new WorldGenDeadTree(TDEBlocks.block_log, TDEBlocks.block_leaves, 1, 0, false, 10, 15, false);
 
 			break;
 		}

@@ -105,7 +105,7 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 									Block block1 = p_76484_1_.getBlock(i2, k1, k2);
 
 									if (block1.isAir(p_76484_1_, i2, k1, k2) || block1.isLeaves(p_76484_1_, i2, k1, k2)) {
-										this.setBlockAndNotifyAdequately(p_76484_1_, i2, k1, k2, TDEBlocks.blockLeaves, this.metaLeaves);
+										this.setBlockAndNotifyAdequately(p_76484_1_, i2, k1, k2, TDEBlocks.block_leaves, this.metaLeaves);
 									}
 								}
 							}
@@ -116,7 +116,7 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 						block = p_76484_1_.getBlock(p_76484_3_, p_76484_4_ + k1, p_76484_5_);
 
 						if (block.isAir(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_) || block.isLeaves(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_)) {
-							this.setBlockAndNotifyAdequately(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_, TDEBlocks.blockLog, this.metaWood);
+							this.setBlockAndNotifyAdequately(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_, TDEBlocks.block_log, this.metaWood);
 
 							if (this.vinesGrow && k1 > 0) {
 								if (p_76484_2_.nextInt(3) > 0 && p_76484_1_.isAirBlock(p_76484_3_ - 1, p_76484_4_ + k1, p_76484_5_)) {
