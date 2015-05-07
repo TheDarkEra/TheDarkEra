@@ -3,8 +3,8 @@ package com.thedarkera;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.world.WorldType;
 import net.minecraftforge.common.DimensionManager;
-import cpw.mods.fml.common.Loader;
 
 import org.apache.logging.log4j.Logger;
 
@@ -27,6 +27,7 @@ import com.thedarkera.updatechecker.UpdateChecker;
 import com.thedarkera.world.TDEWorldProvider;
 
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -81,7 +82,7 @@ public class TheDarkEra {
 		TDETools.init();
 		TDEWeapons.init();
 		TDEBiomes.init();
-
+		
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
 
 		FMLCommonHandler.instance().bus().register(new EnterBiomeHandler());
