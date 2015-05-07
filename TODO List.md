@@ -1,4 +1,5 @@
 TODO List:
+
 Important:	When adding code that requires textures, please add the texture to the text. 
 			And when You have added the code, or texture, you can remove the TODO.
 		
@@ -16,6 +17,7 @@ Errors that need to be fixed:
 
 
 Texture:
+
 blocks/Leaf_Black_Wood_Tree.png
 blocks/logs/Mangroves_Top.png
 blocks/sapling.png
