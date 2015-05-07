@@ -29,10 +29,26 @@ item.orichalcum_ingot.name=Orichalcum Ingot
 
 //Item Weapon//
 item.steel_sword.name=Steel Sword
-item.steel_dagger.name=Steel Dagger
+item.ancient_sword.name=Ancient Sword
 item.dark_stone_sword.name=Dark Sword
 item.daedric_bow.name=Daedric Bow
 item.daedric_arrow.name=Daedric Arrow
+item.steel_dagger.name=Steel Dagger
+item.dark_stone_dagger.name=Dark Dagger
+item.ancient_dagger.name=Ancient Dagger
+item.wood_dagger.name=Wooden Dagger
+item.stone_dagger.name=Stone Dagger
+item.iron_dagger.name=Iron Dagger
+item.gold_dagger.name=Gold Dagger
+item.diamond_dagger.name=Diamond Dagger
+item.steel_mace.name=Steel Mace
+item.dark_stone_mace.name=Dark Mace
+item.ancient_mace.name=Ancient Mace
+item.wood_mace.name=Wooden Mace
+item.stone_mace.name=Stone Mace
+item.iron_mace.name=Iron Mace
+item.gold_mace.name=Gold Mace
+item.diamond_mace.name=Diamond Mace
 
 //Item Tool//
 item.ancient_pickaxe.name=Ancient Pickaxe
