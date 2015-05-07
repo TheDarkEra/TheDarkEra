@@ -25,7 +25,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockSaplings extends BlockSapling {
-	public static final String[] saplings = TDEBlocks.treeTypes;
+	public static final String[] saplings = TDEBlocks.treeTypes1;
 	private static final IIcon[] saplingicon = new IIcon[saplings.length];
 
 	public BlockSaplings() {

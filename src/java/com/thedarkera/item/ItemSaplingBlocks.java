@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 
 public class ItemSaplingBlocks extends ItemBlock {
 
-	public static final String[] saplings = TDEBlocks.treeTypes;
+	public static final String[] saplings = TDEBlocks.treeTypes1;
 	
 
 	public ItemSaplingBlocks(Block block) {

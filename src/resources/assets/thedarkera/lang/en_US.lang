@@ -124,6 +124,9 @@ tile.smeltery.name=Smeltery
 tile.dark_grass.name=Dark Grass
 tile.dark_dirt.name=Dark Dirt
 tile.dark_gravel.name=Dark Gravel
+tile.dark_birch_log=Dark Birch Log
+tile.wisp_log.name=Wisp Log
+tile.log.Dead.name=Dead log
 
 //Container//
 container.smeltery=Smeltery

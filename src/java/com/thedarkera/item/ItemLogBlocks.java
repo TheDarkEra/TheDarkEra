@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 
 public class ItemLogBlocks extends ItemBlock {
 	
-	public static final String[] logs = TDEBlocks.treeTypes;
+	public static final String[] logs = TDEBlocks.treeTypes1;
 
 
 	public ItemLogBlocks(Block block) {

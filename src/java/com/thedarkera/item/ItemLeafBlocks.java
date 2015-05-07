@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 
 public class ItemLeafBlocks extends ItemBlock {
 	
-	public static final String[] leaves = TDEBlocks.treeTypes;
+	public static final String[] leaves = TDEBlocks.treeTypes1;
 
 
 	public ItemLeafBlocks(Block block) {

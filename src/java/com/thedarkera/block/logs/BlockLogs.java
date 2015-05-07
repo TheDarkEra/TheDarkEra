@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLogs extends BlockLog {
-	public static final String[] logs = TDEBlocks.treeTypes;
+	public static final String[] logs = TDEBlocks.treeTypes1;
 
 	@SideOnly(Side.CLIENT)
 	@Override
