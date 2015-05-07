@@ -14,8 +14,8 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockLogs extends BlockLog {
-	public static final String[] logs = TDEBlocks.treeTypes1;
+public class BlockLogs3 extends BlockLog {
+	public static final String[] logs = TDEBlocks.treeTypes3;
 
 	@SideOnly(Side.CLIENT)
 	@Override

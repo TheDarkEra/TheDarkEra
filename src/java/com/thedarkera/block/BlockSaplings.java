@@ -25,7 +25,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockSaplings extends BlockSapling {
-	public static final String[] saplings = TDEBlocks.treeTypes1;
+	public static final String[] saplings = TDEBlocks.allTreeTypes;
 	private static final IIcon[] saplingicon = new IIcon[saplings.length];
 
 	public BlockSaplings() {
@@ -87,7 +87,7 @@ public class BlockSaplings extends BlockSapling {
 		switch (l) {
 		case 0:
 
-			object = new WorldGenDeadTree(TDEBlocks.blockLog, TDEBlocks.blockLeaves, 1, 0, false, 5, 10, false);
+			object = new WorldGenDeadTree(TDEBlocks.blockLog1, TDEBlocks.blockLeaves, 1, 0, false, 5, 10, false);
 
 			break;
 		case 1:
@@ -102,8 +102,8 @@ public class BlockSaplings extends BlockSapling {
 			break;
 		case 5:
 		default:
-			
-			object = new WorldGenDeadTree(TDEBlocks.blockLog, TDEBlocks.blockLeaves, 1, 0, false, 10, 15, false);
+			 
+			object = new WorldGenDeadTree(TDEBlocks.blockLog1, TDEBlocks.blockLeaves, 1, 0, false, 10, 15, false);
 
 			break;
 		}

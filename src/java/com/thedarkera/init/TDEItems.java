@@ -106,8 +106,8 @@ public class TDEItems {
 		reg(grape);
 
 		// Seed items//
-		grape_seed = new ItemGrapeSeed(TDEBlocks.grape_plant);
-		reg(grape_seed);
+//		grape_seed = new ItemGrapeSeed(TDEBlocks.grape_plant);
+//		reg(grape_seed);
 
 		// Placeable items//
 		example = new ItemPlaceAbleExample();

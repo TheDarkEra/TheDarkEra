@@ -19,8 +19,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockLeaf extends BlockLeaves {
 
 
-	public static final String[][] leafTypes = TDEBlocks.leafTypes2;
-	public static String[] leaves = TDEBlocks.treeTypes1;
+	public static final String[][] leafTypes = TDEBlocks.leafTypes;
+	public static String[] leaves = TDEBlocks.allTreeTypes;
 
 
 	protected void func_150124_c(World world, int x, int y, int z, int side,

@@ -6,12 +6,12 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemLogBlocks extends ItemBlock {
+public class ItemLogBlocks2 extends ItemBlock {
 	
-	public static final String[] logs = TDEBlocks.treeTypes1;
+	public static final String[] logs = TDEBlocks.treeTypes2;
 
 
-	public ItemLogBlocks(Block block) {
+	public ItemLogBlocks2(Block block) {
 		super(block);
 		this.hasSubtypes = true;
 	}

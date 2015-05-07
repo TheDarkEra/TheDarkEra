@@ -38,10 +38,14 @@ import com.thedarkera.block.BlockWeedyDirt;
 import com.thedarkera.block.leaves.BlockLeaf;
 import com.thedarkera.block.logs.BlockLogDarkBirch;
 import com.thedarkera.block.logs.BlockLogWisp;
-import com.thedarkera.block.logs.BlockLogs;
+import com.thedarkera.block.logs.BlockLogs1;
+import com.thedarkera.block.logs.BlockLogs2;
+import com.thedarkera.block.logs.BlockLogs3;
 import com.thedarkera.flatblocks.FlatBlockExample;
 import com.thedarkera.item.ItemLeafBlocks;
-import com.thedarkera.item.ItemLogBlocks;
+import com.thedarkera.item.ItemLogBlocks1;
+import com.thedarkera.item.ItemLogBlocks2;
+import com.thedarkera.item.ItemLogBlocks3;
 import com.thedarkera.item.ItemSaplingBlocks;
 import com.thedarkera.item.ItemSteelOre;
 import com.thedarkera.utils.RegUtils;
@@ -52,17 +56,14 @@ public class TDEBlocks {
 	// This adds all the trees. DO NOT CHANGE THE NAMES!
 	public static String[] treeTypes1 = new String[] { "Dead", "Wisp", "Dark_Birch", "Royal_Oak" };
 
-	public static String[][] leafTypes1 = new String[][] { { "Leaf_Dead", "Leaf_Wisp", "Leaf_Dark_Birch", "Leaf_Royal_Oak" },
-			{ "Leaf_Dead_Opaque", "Leaf_Wisp_Opaque", "Leaf_Dark_Birch_Opaque", "Leaf_Royal_Oak_Opaque" } };
-	public static String[] treeTypes2 = new String[] { "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves" };
-
-	public static String[][] leafTypes2 = new String[][] { { "Leaf_Black_Wood_Tree", "Leaf_Paper_Birch_Tree", "Leaf_Maple_Tree", "Leaf_Rotten_Tree", "Leaf_Black_Willow", "Leaf_Mangroves" },
-			{ "Leaf_Black_Wood_Tree_Opaque", "Leaf_Paper_Birch_Tree_Opaque", "Leaf_Maple_Tree_Opaque", "Leaf_Rotten_Tree_Opaque", "Leaf_Black_Willow_Opaque", "Leaf_Mangroves_Opaque" } };
-	public static String[] treeTypes3 = new String[] { "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves" };
-
-	public static String[][] leafTypes3 = new String[][] { { "Leaf_Rotten_Tree", "Leaf_Black_Willow", "Leaf_Mangroves" },
-			{ "Leaf_Rotten_Tree_Opaque", "Leaf_Black_Willow_Opaque", "Leaf_Mangroves_Opaque" } };
-
+	public static String[][] leafTypes = new String[][] {
+			{ "Leaf_Dead", "Leaf_Wisp", "Leaf_Dark_Birch", "Leaf_Royal_Oak", "Leaf_Black_Wood_Tree", "Leaf_Paper_Birch_Tree", "Leaf_Maple_Tree", "Leaf_Rotten_Tree", "Leaf_Black_Willow",
+					"Leaf_Mangroves" },
+			{ "Leaf_Dead_Opaque", "Leaf_Wisp_Opaque", "Leaf_Dark_Birch_Opaque", "Leaf_Royal_Oak_Opaque", "Leaf_Black_Wood_Tree_Opaque", "Leaf_Paper_Birch_Tree_Opaque", "Leaf_Maple_Tree_Opaque",
+					"Leaf_Rotten_Tree_Opaque", "Leaf_Black_Willow_Opaque", "Leaf_Mangroves_Opaque" } };
+	public static String[] treeTypes2 = new String[] { "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree" };
+	public static String[] treeTypes3 = new String[] { "Black_Willow", "Mangroves" };
+	public static String[] allTreeTypes = new String[] {"Dead", "Wisp", "Dark_Birch", "Royal_Oak", "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves"};
 	// Blocks//
 	public static Block ebony_ore;
 	public static Block steel_ore;
@@ -108,7 +109,9 @@ public class TDEBlocks {
 	public static Block dark_gravel;
 
 	// Tree blocks//
-	public static Block blockLog;
+	public static Block blockLog1;
+	public static Block blockLog2;
+	public static Block blockLog3;
 	public static Block blockLeaves;
 
 	public static Block dark_birch_log;
@@ -197,8 +200,12 @@ public class TDEBlocks {
 		wisp_log = new BlockLogWisp();
 		reg(wisp_log);
 
-		blockLog = new BlockLogs().setBlockName("log").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
+		blockLog1 = new BlockLogs1().setBlockName("log1").setCreativeTab(TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(blockLog1, ItemLogBlocks1.class, blockLog1.getUnlocalizedName().substring(5));
+		blockLog2 = new BlockLogs2().setBlockName("log2").setCreativeTab(TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(blockLog2, ItemLogBlocks2.class, blockLog2.getUnlocalizedName().substring(5));
+		blockLog3 = new BlockLogs3().setBlockName("log3").setCreativeTab(TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(blockLog3, ItemLogBlocks3.class, blockLog3.getUnlocalizedName().substring(5));
 
 		blockLeaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDE);
 		GameRegistry.registerBlock(blockLeaves, ItemLeafBlocks.class, blockLeaves.getUnlocalizedName().substring(5));
