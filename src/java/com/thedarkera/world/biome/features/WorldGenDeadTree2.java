@@ -94,6 +94,7 @@ public class WorldGenDeadTree2 extends WorldGenAbstractTree {
 	}
 
 	public void generateBranch(World world, Random rand, int x, int y, int z, int p) {
+		
 		for (int i = -1; i < 2; i++){
 			for (int j = -1; j < 2; j++){
 				buildBlock(world, x + i, y, z + j, TDEBlocks.block_leaves, 1);

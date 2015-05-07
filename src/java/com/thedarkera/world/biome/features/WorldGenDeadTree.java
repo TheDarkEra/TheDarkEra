@@ -68,7 +68,7 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 			}
 			int c = 1;
 			for (int i = 0; i < branches; i++){
-				generateBranch(world, rand, x, y+h, z, c);
+//				generateBranch(world, rand, x, y+h, z, c);
 				c++;
 				h+=2;
 			}
