@@ -27,7 +27,7 @@ public class BlockDarkOre extends Block { //BlockOre
 	
 	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
-        return this == TDEBlocks.dark_coal_ore ? Items.coal : (this == TDEBlocks.dark_diamond_ore ? Items.diamond :  (this == TDEBlocks.dark_emerald_ore ? Items.emerald : (this == TDEBlocks.dark_iron_ore ? Items.iron_ingot : (this == TDEBlocks.dark_gold_ore ? Items.gold_ingot : Item.getItemFromBlock(this)))));
+        return this == TDEBlocks.dark_coal_ore ? Items.coal : (this == TDEBlocks.dark_diamond_ore ? Items.diamond :  (this == TDEBlocks.dark_emerald_ore ? Items.emerald : Item.getItemFromBlock(this)));
     }
 
 	public int quantityDroppedWithBonus(int p_149679_1_, Random p_149679_2_)
@@ -58,24 +58,13 @@ public class BlockDarkOre extends Block { //BlockOre
         {
             int j1 = 0;
 
-            if (this == TDEBlocks.dark_coal_ore)
-            {
+            if (this == TDEBlocks.dark_coal_ore) {
                 j1 = MathHelper.getRandomIntegerInRange(rand, 0, 2);
             }
-            else if (this == TDEBlocks.dark_iron_ore)
-            {
-                j1 = MathHelper.getRandomIntegerInRange(rand, 0, 2);
-            }
-            else if (this == TDEBlocks.dark_gold_ore)
-            {
-                j1 = MathHelper.getRandomIntegerInRange(rand, 0, 2);
-            }
-            else if (this == TDEBlocks.dark_diamond_ore)
-            {
+            else if (this == TDEBlocks.dark_diamond_ore) {
                 j1 = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
-            else if (this == TDEBlocks.dark_emerald_ore)
-            {
+            else if (this == TDEBlocks.dark_emerald_ore) {
                 j1 = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
 

@@ -188,5 +188,8 @@ public class TDERecipes {
 				.addRecipe(new ItemStack(TDETools.steel_hoe), new Object[] {
 						"xx", "y ", "y ", 'X', TDEItems.steel_ingot, 'Y',
 						Items.stick });
+		
+		GameRegistry.addSmelting(TDEBlocks.dark_iron_ore, new ItemStack(Items.iron_ingot), 1F);
+		GameRegistry.addSmelting(TDEBlocks.dark_gold_ore, new ItemStack(Items.gold_ingot), 1F);
 	}
 }
