@@ -1,6 +1,16 @@
 # TheDarkEra Todo List
 When adding code that requires textures, please add the texture to the text and when You have added the code, or texture, you can remove the TODO.
 
+## Village
+Village Needs building
+Village blocks - Cracked Glass, Cracked Glass Pane, Lamp.
+Village needs to be coppied using MCEdit
+Village needs to be added to the game
+
+## Dimension
+We need to add more biomes, villages and mobs
+
+
 ## Code
 Achievement Book - Needs Gui made with tick boxes next the objectives.
 Trees - Trees need to only spawn if below block is dark dirt, weedy dirt, dead grass or dark grass. (This should spawn tree's in the biomes)
@@ -41,7 +51,6 @@ items/gold_mace.png
 items/wood_mace.png
 items/dragon_light_boots.png
 items/steel_ingot.png
-blocks/dark_gravel.png
 items/ancient_leggings.png
 blocks/Leaf_Wisp_Opaque.png
 blocks/Leaf_Maple_Tree.png
