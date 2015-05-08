@@ -3,7 +3,8 @@ When adding code that requires textures, please add the texture to the text and 
 
 ## Code
 Achievement Book - Needs Gui made with tick boxes next the objectives.
-WordGenHandler - The tree spawn has to be fixed, so they spawn only in specific biomes, and a lot of them on one bunch, not 1 every chunk.
+Trees - Trees need to only spawn if below block is dark dirt, weedy dirt, dead grass or dark grass. (This should spawn tree's in the biomes)
+The Dark Dimension WorldGen - Make a ore gen, inside ore gen add mod ores. add dark stone replacing stone, redstone ore and lapis ore. add dark coal ore replacing coal ore, same with iron, gold, diamond and emerald.
 
 ## Textures
 blocks/Leaf_Black_Wood_Tree.png
