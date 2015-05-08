@@ -2,14 +2,22 @@ package com.thedarkera.world.biome;
 
 import java.util.Random;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenDesertWells;
+import net.minecraft.world.gen.feature.WorldGenLiquids;
+import net.minecraft.world.gen.feature.WorldGenSavannaTree;
+import net.minecraft.world.gen.feature.WorldGenerator;
 
+import com.thedarkera.biome.jodel.WorldGenDeadTrees;
 import com.thedarkera.init.TDEBlocks;
 
 public class BiomeDarkForrest extends BiomeGenBase {
-
+    private static final WorldGenSavannaTree field_150627_aC = new WorldGenSavannaTree(false);
+	private WorldGenerator WorldGenDeadTrees;
+	private WorldGenerator WorldGenLakes;
 	public BiomeDarkForrest(int biomeID) {
 		super(biomeID);
 		topBlock = TDEBlocks.dark_grass;
@@ -20,9 +28,12 @@ public class BiomeDarkForrest extends BiomeGenBase {
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
 		spawnableWaterCreatureList.clear();
+		this.theBiomeDecorator.treesPerChunk = 50;
 		flowers.clear();
 		addDefaultFlowers();
 		theBiomeDecorator.deadBushPerChunk = 5;
+		this.WorldGenDeadTrees = new WorldGenDeadTrees(false);
+		this.WorldGenLakes = new WorldGenLiquids(Blocks.water);
 	}
 
 	@Override
@@ -37,7 +48,16 @@ public class BiomeDarkForrest extends BiomeGenBase {
 					world.getHeightValue(k, l) + 1, l);
 		}
 	}
-
+	@Override
+    public WorldGenAbstractTree func_150567_a(Random p_150567_1_)
+    {
+        return (WorldGenAbstractTree)(p_150567_1_.nextInt(5) > 0 ? field_150627_aC : this.worldGeneratorTrees);
+    }
+//	@Override
+//	public WorldGenerator getRandomWorldGenForTrees(Random par1Random)
+//	{
+//		return (WorldGenerator)(par1Random.nextInt(5) == 0 ? this.WorldGenLakes : (par1Random.nextInt(10) == 0 ? this.WorldGenDeadTrees : this.WorldGenDeadTrees));
+//	}
 	/*
 	 * ToDo:Need to add treesBushesDark Stone replace stoneand more decorative
 	 * blocks.

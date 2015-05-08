@@ -122,13 +122,14 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 	// E = x+
 	// S = z+
 	// W = x-
+	
 	public void createBranch(World world, int x, int y, int z, Block block, int meta, String direction) {
 		Random rand = new Random();
-		int r = 1 + rand.nextInt(5);
+		int r = 1	 + rand.nextInt(5);
 		int j = -1 + rand.nextInt(2);
 		if (direction == "E") {
 			for (int i = 1; i < r; i++) {
-				if (world.isAirBlock(x, y - 1, z) == true && world.isAirBlock(x, y-2, z) == true) {
+				if (world.isAirBlock(x, y - 1, z) == true && world.isAirBlock(x, y - 2, z) == true) {
 					if (j != 0) {
 						buildBlock(world, x, y, z, block, meta);
 						buildBlock(world, x + 1, y, z, block, meta);
@@ -137,9 +138,10 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 					}
 					buildBlock(world, x + i, y + 1, z + j, block, meta);
 				}
+//				buildBlock(world, x + r, y, z + j, block, meta);
 			}
 		} else if (direction == "W") {
-			if (world.isAirBlock(x, y - 1, z) == true && world.isAirBlock(x, y-2, z) == true) {
+			if (world.isAirBlock(x, y - 1, z) == true && world.isAirBlock(x, y - 2, z) == true) {
 				for (int i = 1; i < r; i++) {
 					if (j != 0) {
 						buildBlock(world, x, y, z, block, meta);
@@ -149,9 +151,10 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 					}
 					buildBlock(world, x - i, y + 1, z + j, block, meta);
 				}
+//				buildBlock(world, x - r, y, z + j, block, meta);
 			}
 		} else if (direction == "S") {
-			if (world.isAirBlock(x, y - 1, z) == true && world.isAirBlock(x, y-2, z) == true) {
+			if (world.isAirBlock(x, y - 1, z) == true && world.isAirBlock(x, y - 2, z) == true) {
 				for (int i = 1; i < r; i++) {
 					if (j != 0) {
 						buildBlock(world, x, y, z, block, meta);
@@ -161,9 +164,10 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 					}
 					buildBlock(world, x + j, y + 1, z + i, block, meta);
 				}
+//				buildBlock(world, x + j, y, z + r, block, meta);
 			}
 		} else if (direction == "N") {
-			if (world.isAirBlock(x, y - 1, z) == true && world.isAirBlock(x, y-2, z) == true) {
+			if (world.isAirBlock(x, y - 1, z) == true && world.isAirBlock(x, y - 2, z) == true) {
 			}
 			for (int i = 1; i < r; i++) {
 				if (j != 0) {
@@ -174,6 +178,7 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 				}
 				buildBlock(world, x + j, y + 1, z - i, block, meta);
 			}
+//			buildBlock(world, x + j, y, z - r, block, meta);
 		}
 	}
 
