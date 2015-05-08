@@ -3,16 +3,10 @@ package com.thedarkera;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.ChatComponentText;
-import net.minecraft.world.WorldType;
 import net.minecraftforge.common.DimensionManager;
 
 import org.apache.logging.log4j.Logger;
 
-import com.thedarkera.alloyaddon.init.BABlocks;
-import com.thedarkera.alloyaddon.init.BAItems;
-import com.thedarkera.alloyaddon.init.BARecipes;
-import com.thedarkera.alloyaddon.init.BATools;
-import com.thedarkera.alloyaddon.init.BAWeapons;
 import com.thedarkera.handler.EnterBiomeHandler;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEArmors;
@@ -27,7 +21,6 @@ import com.thedarkera.updatechecker.UpdateChecker;
 import com.thedarkera.world.TDEWorldProvider;
 
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -106,8 +99,7 @@ public class TheDarkEra {
 
 		proxy.registerTileEntities();
 
-		DimensionManager.registerProviderType(dimension,
-				TDEWorldProvider.class, false);
+		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
 		DimensionManager.registerDimension(dimension, dimension);
 
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION
@@ -119,20 +111,7 @@ public class TheDarkEra {
 		logger.info("Loading " + TheDarkEra.NAME + " version "
 				+ TheDarkEra.VERSION + " Phase 3.");
 
-		/*
-		 * For when I create a small addon to link it to my private mod. I just
-		 * need to get the first release of my mod before I start with this.
-		 */
-		if (Loader.isModLoaded("BlurrAlloys")) {
-			BABlocks.init();
-			BAItems.init();
-			BATools.init();
-			BAWeapons.init();
-			BARecipes.init();
-			logger.info("Loaded Blurr Alloys successfully.");
-		}
-
-		proxy.registerGuiHandler();
+				proxy.registerGuiHandler();
 
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION
 				+ " loaded Phase 3 successfully!");
