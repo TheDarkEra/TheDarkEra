@@ -10,6 +10,8 @@ import com.thedarkera.block.BlockAncientHoeOre;
 import com.thedarkera.block.BlockAncientOre;
 import com.thedarkera.block.BlockAncientPickaxeOre;
 import com.thedarkera.block.BlockAncientShovelOre;
+import com.thedarkera.block.BlockCrackedGlass;
+import com.thedarkera.block.BlockCrackedGlassPane;
 import com.thedarkera.block.BlockDarkBirchPlanks;
 import com.thedarkera.block.BlockDarkCobblestone;
 import com.thedarkera.block.BlockDarkDirt;
@@ -25,6 +27,7 @@ import com.thedarkera.block.BlockDarkStoneStairs;
 import com.thedarkera.block.BlockDeadGrass;
 import com.thedarkera.block.BlockEbonyOre;
 import com.thedarkera.block.BlockGrapePlant;
+import com.thedarkera.block.BlockLamp;
 import com.thedarkera.block.BlockOrichalcumOre;
 import com.thedarkera.block.BlockPortalDark;
 import com.thedarkera.block.BlockRottenWood;
@@ -104,6 +107,9 @@ public class TDEBlocks {
 	public static Block rotten_wood_slab;
 	public static Block rotten_wood_fence;
 	public static Block dark_stone_dirt;
+	public static Block cracked_glass_pane; 
+	public static Block cracked_glass;
+	public static Block lamp;
 
 	// Biome Blocks //
 	public static Block dead_grass;
@@ -168,6 +174,12 @@ public class TDEBlocks {
 		smasher = new BlockSmasher();
 		dark_birch_planks = new BlockDarkBirchPlanks();
 		reg(dark_birch_planks);
+		cracked_glass_pane = new BlockCrackedGlassPane(TheDarkEra.MODID + ":cracked_glass", "cracked_glass", Material.glass, false);
+		reg(cracked_glass_pane);
+		cracked_glass = new BlockCrackedGlass(Material.glass, false);
+		reg(cracked_glass);
+		lamp = new BlockLamp();
+		reg(lamp);
 		
 		dark_diamond_ore = new BlockDarkOre(Material.rock, "dark_diamond_ore");
 		reg(dark_diamond_ore);

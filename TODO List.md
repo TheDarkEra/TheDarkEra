@@ -3,13 +3,12 @@ When adding code that requires textures, please add the texture to the text and 
 
 ## Village
 Village Needs building
-Village blocks - Cracked Glass, Cracked Glass Pane, Lamp.
-Village needs to be coppied using MCEdit
+Village needs to be copied using MCEdit
 Village needs to be added to the game
 
 ## Dimension
 We need to add more biomes, villages and mobs
-
+Trees need to be added to apropiate biomes in dimension
 
 ## Code
 Achievement Book - Needs Gui made with tick boxes next the objectives.
@@ -17,6 +16,8 @@ Trees - Trees need to only spawn if below block is dark dirt, weedy dirt, dead g
 The Dark Dimension WorldGen - Make a ore gen, inside ore gen add mod ores. add dark stone replacing stone, redstone ore and lapis ore. add dark coal ore replacing coal ore, same with iron, gold, diamond and emerald.
 
 ## Textures
+blocks/lamp.png
+blocks/cracked_glass.png
 blocks/Leaf_Black_Wood_Tree.png
 blocks/logs/Mangroves_Top.png
 blocks/sapling.png
