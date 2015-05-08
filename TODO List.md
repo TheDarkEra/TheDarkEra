@@ -3,6 +3,7 @@ When adding code that requires textures, please add the texture to the text and 
 
 ## Code
 Achievement Book - Needs Gui made with tick boxes next the objectives.
+WordGenHandler - The tree spawn has to be fixed, so they spawn only in specific biomes, and a lot of them on one bunch, not 1 every chunk.
 
 ## Textures
 blocks/Leaf_Black_Wood_Tree.png
