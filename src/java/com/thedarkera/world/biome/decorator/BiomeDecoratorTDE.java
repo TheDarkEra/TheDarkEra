@@ -1,12 +1,21 @@
 package com.thedarkera.world.biome.decorator;
 
-import java.util.Random;
+import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.SAND;
+import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.SAND_PASS2;
+import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.TREE;
 
-import com.thedarkera.world.gen.WorldGenDarkBirchTree;
+import java.util.Random;
 
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
+import net.minecraftforge.event.terraingen.TerrainGen;
+
+import com.thedarkera.biome.jodel.WorldGenDeadTrees;
+import com.thedarkera.world.gen.WorldGenDarkBirchTree;
 
 public class BiomeDecoratorTDE extends BiomeDecorator {
 	/** The world the BiomeDecorator is currently decorating */
@@ -23,6 +32,7 @@ public class BiomeDecoratorTDE extends BiomeDecorator {
 	public static int howMenyTrees;
 
 	/** Dimension Trees **/
+	 public static WorldGenDeadTrees deadTree;
 	// public static WorldGenForestTrees smallTree;
 	// public static WorldGenForestBigTree bigTree;
 	// public static WorldGenEffectTree effectTree;
@@ -48,6 +58,7 @@ public class BiomeDecoratorTDE extends BiomeDecorator {
 		// Blockss.lightStone);
 
 		// TREES
+			deadTree = new WorldGenDeadTrees(false);
 		// smallTree = new WorldGenForestTrees(true);
 		// bigTree = new WorldGenForestBigTree(true, 10, 1, 5);
 		// effectTree = new WorldGenEffectTree(true);
@@ -71,6 +82,52 @@ public class BiomeDecoratorTDE extends BiomeDecorator {
 			randomGenerator = null;
 		}
 	}
+	@Override
+    protected void genDecorations(BiomeGenBase p_150513_1_)
+    {
+        MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(currentWorld, randomGenerator, chunk_X, chunk_Z));
+        int i;
+        int j;
+        int k;
+
+        boolean doGen = TerrainGen.decorate(currentWorld, randomGenerator, chunk_X, chunk_Z, SAND);
+        for (i = 0; doGen && i < this.sandPerChunk2; ++i)
+        {
+            j = BiomeDecoratorTDE.chunk_X + BiomeDecoratorTDE.randomGenerator.nextInt(16) + 8;
+            k = BiomeDecoratorTDE.chunk_Z + BiomeDecoratorTDE.randomGenerator.nextInt(16) + 8;
+            this.deadTree.generate(BiomeDecoratorTDE.currentWorld, BiomeDecoratorTDE.randomGenerator, j, BiomeDecoratorTDE.currentWorld.getTopSolidOrLiquidBlock(j, k), k);
+        }
+        doGen = TerrainGen.decorate(currentWorld, randomGenerator, chunk_X, chunk_Z, SAND_PASS2);
+        for (i = 0; doGen && i < this.sandPerChunk; ++i)
+        {
+            j = this.chunk_X + BiomeDecoratorTDE.randomGenerator.nextInt(16) + 8;
+            k = this.chunk_Z + BiomeDecoratorTDE.randomGenerator.nextInt(16) + 8;
+            this.gravelAsSandGen.generate(this.currentWorld, this.randomGenerator, j, this.currentWorld.getTopSolidOrLiquidBlock(j, k), k);
+        }
+
+        i = this.treesPerChunk;
+
+        if (this.randomGenerator.nextInt(10) == 0)
+        {
+            ++i;
+        }
+
+        int l;
+        int i1;
+
+        doGen = TerrainGen.decorate(currentWorld, randomGenerator, chunk_X, chunk_Z, TREE);
+        for (j = 0; doGen && j < i; ++j)
+        {
+            k = this.chunk_X + this.randomGenerator.nextInt(16) + 8;
+            l = this.chunk_Z + this.randomGenerator.nextInt(16) + 8;
+            i1 = this.currentWorld.getHeightValue(k, l);
+
+            if (deadTree.generate(this.currentWorld, this.randomGenerator, k, i1, l))
+            {
+            	deadTree.func_150524_b(this.currentWorld, this.randomGenerator, k, i1, l);
+            }
+        }
+    }
 
 	/**
 	 * Decorate's biome.
