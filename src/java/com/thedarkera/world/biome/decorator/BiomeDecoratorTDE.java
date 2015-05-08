@@ -14,10 +14,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import net.minecraftforge.event.terraingen.TerrainGen;
 
-import com.thedarkera.biome.jodel.WorldGenDeadTrees;
 import com.thedarkera.world.gen.WorldGenDarkBirchTree;
+import com.thedarkera.world.gen.WorldGenDeadTrees;
 
 public class BiomeDecoratorTDE extends BiomeDecorator {
+	
 	/** The world the BiomeDecorator is currently decorating */
 	public static World currentWorld;
 	/** The Biome Decorator's random number generator. */
@@ -42,6 +43,7 @@ public class BiomeDecoratorTDE extends BiomeDecorator {
 	private static final String __OBFID = "CL_00000164";
 
 	public BiomeDecoratorTDE() {
+		System.out.println("BIOME CALLED");
 		// coalGen = new WorldGenMinable(Blocks.coal_ore, 16,
 		// Blockss.lightStone);
 		// ironGen = new WorldGenMinable(Blocks.iron_ore, 8,

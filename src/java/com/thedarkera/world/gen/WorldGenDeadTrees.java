@@ -1,4 +1,4 @@
-package com.thedarkera.biome.jodel;
+package com.thedarkera.world.gen;
 
 import java.util.Random;
 
