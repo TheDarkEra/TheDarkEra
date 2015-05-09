@@ -35,44 +35,33 @@ public class TDETools {
 
 	public static void init() {
 		// pickaxe
-		ancient_pickaxe = new ItemModPickaxe(TDEMaterials.ancient,
-				"ancient_pickaxe", "ancient_pickaxe");
+		ancient_pickaxe = new ItemModPickaxe(TDEMaterials.ancient, "ancient_pickaxe", "ancient_pickaxe");
 		reg(ancient_pickaxe);
-		dark_stone_pickaxe = new ItemModPickaxe(TDEMaterials.dark_stone,
-				"dark_stone_pickaxe", "dark_stone_pickaxe");
+		dark_stone_pickaxe = new ItemModPickaxe(TDEMaterials.dark_stone, "dark_stone_pickaxe", "dark_stone_pickaxe");
 		reg(dark_stone_pickaxe);
-		steel_pickaxe = new ItemModPickaxe(TDEMaterials.steel, "steel_pickaxe",
-				"steel_pickaxe");
+		steel_pickaxe = new ItemModPickaxe(TDEMaterials.steel, "steel_pickaxe", "steel_pickaxe");
 		reg(steel_pickaxe);
 
 		// axe
-		ancient_axe = new ItemModAxe(TDEMaterials.ancient, "ancient_axe",
-				"ancient_axe");
+		ancient_axe = new ItemModAxe(TDEMaterials.ancient, "ancient_axe", "ancient_axe");
 		reg(ancient_axe);
-		dark_stone_axe = new ItemModAxe(TDEMaterials.dark_stone,
-				"dark_stone_axe", "ancient_axe");
+		dark_stone_axe = new ItemModAxe(TDEMaterials.dark_stone, "dark_stone_axe", "dark_stone_axe");
 		reg(dark_stone_axe);
-		steel_axe = new ItemModAxe(TDEMaterials.steel, "steel_axe",
-				"ancient_axe");
+		steel_axe = new ItemModAxe(TDEMaterials.steel, "steel_axe", "steel_axe");
 		reg(steel_axe);
 
 		// shovel
-		ancient_shovel = new ItemModSpade(TDEMaterials.ancient,
-				"ancient_shovel", "ancient_shovel");
+		ancient_shovel = new ItemModSpade(TDEMaterials.ancient, "ancient_shovel", "ancient_shovel");
 		reg(ancient_shovel);
-		dark_stone_shovel = new ItemModSpade(TDEMaterials.dark_stone,
-				"dark_stone_shovel", "dark_stone_shovel");
+		dark_stone_shovel = new ItemModSpade(TDEMaterials.dark_stone, "dark_stone_shovel", "dark_stone_shovel");
 		reg(dark_stone_shovel);
-		steel_shovel = new ItemModSpade(TDEMaterials.steel, "steel_shovel",
-				"steel_shovel");
+		steel_shovel = new ItemModSpade(TDEMaterials.steel, "steel_shovel", "steel_shovel");
 		reg(steel_shovel);
 
 		// hoe
-		ancient_hoe = new ItemModHoe(TDEMaterials.ancient, "ancient_hoe",
-				"ancient_hoe");
+		ancient_hoe = new ItemModHoe(TDEMaterials.ancient, "ancient_hoe", "ancient_hoe");
 		reg(ancient_hoe);
-		dark_stone_hoe = new ItemModHoe(TDEMaterials.dark_stone,
-				"dark_stone_hoe", "dark_stone_hoe");
+		dark_stone_hoe = new ItemModHoe(TDEMaterials.dark_stone, "dark_stone_hoe", "dark_stone_hoe");
 		reg(dark_stone_hoe);
 		steel_hoe = new ItemModHoe(TDEMaterials.steel, "steel_hoe", "steel_hoe");
 		reg(steel_hoe);
@@ -90,8 +79,7 @@ public class TDETools {
 		reg(diamond_weeder);
 		ancient_weeder = new ItemWeeder(TDEMaterials.ancient, "ancient_weeder");
 		reg(ancient_weeder);
-		dark_stone_weeder = new ItemWeeder(TDEMaterials.dark_stone,
-				"dark_stone_weeder");
+		dark_stone_weeder = new ItemWeeder(TDEMaterials.dark_stone, "dark_stone_weeder");
 		reg(dark_stone_weeder);
 		steel_weeder = new ItemWeeder(TDEMaterials.steel, "steel_weeder");
 		reg(steel_weeder);

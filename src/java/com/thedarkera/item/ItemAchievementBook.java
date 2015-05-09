@@ -12,7 +12,7 @@ public class ItemAchievementBook extends Item {
 	public ItemAchievementBook() {
 		super();
 		setUnlocalizedName(name);
-		setTextureName(TheDarkEra.MODID + name);
+		setTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);
 		setFull3D();
 		setMaxStackSize(1);
