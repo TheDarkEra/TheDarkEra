@@ -156,7 +156,7 @@ public class TDEBlocks {
 		reg(dark_stone_bricks);
 		dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
 		reg(dark_stone_fence);
-		dark_stone_stairs = new BlockDarkStoneStairs(dark_stone, 0);
+		dark_stone_stairs = new BlockDarkStoneStairs(dark_cobblestone, 0);
 		reg(dark_stone_stairs);
 		dark_stone_slab = new BlockDarkStoneSlab(false, Material.rock);
 		reg(dark_stone_slab);
