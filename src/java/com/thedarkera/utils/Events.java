@@ -8,7 +8,6 @@ import com.thedarkera.ztesting.SoulBar;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class Events {
-	int width = 0;
 
 	@SubscribeEvent
 	public void onRenderGameOverlay(RenderGameOverlayEvent event) {
@@ -16,6 +15,8 @@ public class Events {
 	}
 	@SubscribeEvent
 	public void ItemTossEvent(ItemTossEvent event) {
-		SoulBar.addMana(1);
+		SoulBar.addMana(10);
+		System.out.println(SoulBar.getMana());
+		System.out.println(SoulBar.getManaBar());
 	}
 }
