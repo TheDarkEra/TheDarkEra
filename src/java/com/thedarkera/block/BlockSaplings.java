@@ -5,8 +5,10 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -20,6 +22,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
+import com.thedarkera.ztesting.EntityTreeFX;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -35,7 +38,6 @@ public class BlockSaplings extends BlockSapling {
 		this.setBlockName("sapling");
 	}
 
-
 	public void updateTick(World world, int x, int y, int z, Random rand) {
 		if (!world.isRemote) {
 			super.updateTick(world, x, y, z, rand);
@@ -44,6 +46,67 @@ public class BlockSaplings extends BlockSapling {
 				this.func_149879_c(world, x, y, z, rand);
 			}
 		}
+	}
+
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
+		Random rng = new Random();
+		for (int l = 0; l < 4; ++l) {
+		}
+		double d0 = (double) ((float) x + rng.nextFloat());
+		double d1 = (double) ((float) y + rng.nextFloat());
+		double d2 = (double) ((float) z + rng.nextFloat());
+		double d3 = 0.0D;
+		double d4 = 0.0D;
+		double d5 = 0.0D;
+		int i1 = rng.nextInt(2) * 2 - 1;
+		d3 = ((double) rng.nextFloat() - 0.5D) * 0.5D;
+		d4 = ((double) rng.nextFloat() - 0.5D) * 0.5D;
+		d5 = ((double) rng.nextFloat() - 0.5D) * 0.5D;
+
+		if (world.getBlock(x - 1, y, z) != this && world.getBlock(x + 1, y, z) != this) {
+			d0 = (double) x + 0.5D + 0.25D * (double) i1;
+			d3 = (double) (rng.nextFloat() * 2.0F * (float) i1);
+		} else {
+			d2 = (double) z + 0.5D + 0.25D * (double) i1;
+			d5 = (double) (rng.nextFloat() * 2.0F * (float) i1);
+		}
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 202f, 35f, 22f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 210f, 61f, 22f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 217f, 91f, 15f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 220f, 110f, 13f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 237f, 158f, 10f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 247f, 189f, 0f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 251f, 213f, 10f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 230f, 226f, 9f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 197f, 211f, 0f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 165f, 197f, 15f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 146f, 192f, 14f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 113f, 179f, 14f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 85f, 164f, 28f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 58f, 155f, 32f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 43f, 155f, 34f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 3f, 147f, 49f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 12f, 140f, 75f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 8f, 141f, 108f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 11f, 141f, 148f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 13f, 155f, 196f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 20f, 141f, 198f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 12f, 123f, 187f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 19f, 90f, 158f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 13f, 66f, 132f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 18f, 49f, 121f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 27f, 26f, 95f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 30f, 16f, 89f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 58f, 11f, 89f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 115f, 8f, 97f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 139f, 10f, 98f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 194f, 15f, 104f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 198f, 0f, 75f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 197f, 11f, 33f));
+		Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 195f, 51f, 43f));
+
+		return true;
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -61,6 +124,11 @@ public class BlockSaplings extends BlockSapling {
 		} else {
 			this.func_149878_d(world, x, y, z, rand);
 		}
+	}
+
+	@Override
+	protected boolean canPlaceBlockOn(Block block) {
+		return block == Blocks.grass || block == Blocks.dirt || block == Blocks.farmland || block == TDEBlocks.dark_dirt || block == TDEBlocks.dark_grass;
 	}
 
 	// growTree
@@ -131,7 +199,7 @@ public class BlockSaplings extends BlockSapling {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister p_149651_1_) {
 		for (int i = 0; i < saplingicon.length; ++i) {
-			saplingicon[i] = p_149651_1_.registerIcon(TheDarkEra.MODID  + ":saplings/" + saplings[i] + "_sapling");
+			saplingicon[i] = p_149651_1_.registerIcon(TheDarkEra.MODID + ":saplings/" + saplings[i] + "_sapling");
 		}
 	}
 
