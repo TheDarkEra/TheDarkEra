@@ -20,6 +20,17 @@ public class ItemSounds extends SoundType {
 		this.frequency = p_i45393_3_;
 	}
 
+	
+	public float getVolume()
+    {
+        return this.volume;
+    }
+
+    public float getPitch()
+    {
+        return this.frequency;
+    }
+    
 	/**
 	 * Used when a block breaks, e.g.: Player break, Sheep eating grass, etc..
 	 */
@@ -32,5 +43,10 @@ public class ItemSounds extends SoundType {
 	public String getStepResourcePath() {
 		return TheDarkEra.MODID + ":" + "step." + this.name;
 	}
+	
+	public String func_150496_b()
+    {
+        return this.getBreakSound();
+    }
 
 }
