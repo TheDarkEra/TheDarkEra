@@ -131,7 +131,7 @@ public class BlockSaplings extends BlockSapling {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister p_149651_1_) {
 		for (int i = 0; i < saplingicon.length; ++i) {
-			saplingicon[i] = p_149651_1_.registerIcon(TheDarkEra.MODID + ":" + this.getUnlocalizedName().substring(5));
+			saplingicon[i] = p_149651_1_.registerIcon(TheDarkEra.MODID  + ":saplings/" + saplings[i] + "_sapling");
 		}
 	}
 
