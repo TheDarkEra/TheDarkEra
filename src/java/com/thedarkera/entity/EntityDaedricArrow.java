@@ -47,6 +47,12 @@ public class EntityDaedricArrow extends Entity implements IProjectile {
 
 	}
 
+	@SideOnly(Side.CLIENT)
+    public boolean canRenderOnFire()
+    {
+        return this.isBurning();
+    }
+	
 	public EntityDaedricArrow(World p_i1754_1_, double p_i1754_2_,
 			double p_i1754_4_, double p_i1754_6_) {
 		super(p_i1754_1_);
@@ -54,6 +60,7 @@ public class EntityDaedricArrow extends Entity implements IProjectile {
 		setSize(0.5F, 0.5F);
 		setPosition(p_i1754_2_, p_i1754_4_, p_i1754_6_);
 		yOffset = 0.0F;
+		setInvisible(false);
 	}
 
 	public EntityDaedricArrow(World p_i1755_1_, EntityLivingBase p_i1755_2_,
