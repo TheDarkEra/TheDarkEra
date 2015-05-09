@@ -7,7 +7,7 @@ import com.thedarkera.item.tool.ItemModAxe;
 import com.thedarkera.item.tool.ItemModHoe;
 import com.thedarkera.item.tool.ItemModPickaxe;
 import com.thedarkera.item.tool.ItemModSpade;
-import com.thedarkera.item.tool.ItemWeeder;
+import com.thedarkera.item.tool.ItemWand;
 import com.thedarkera.utils.RegUtils;
 
 public class TDETools {
@@ -24,14 +24,14 @@ public class TDETools {
 	public static Item dark_stone_hoe;
 	public static Item steel_hoe;
 
-	public static Item wooden_weeder;
-	public static Item stone_weeder;
-	public static Item iron_weeder;
-	public static Item golden_weeder;
-	public static Item diamond_weeder;
-	public static Item ancient_weeder;
-	public static Item dark_stone_weeder;
-	public static Item steel_weeder;
+	public static Item wooden_wand;
+	public static Item stone_wand;
+	public static Item iron_wand;
+	public static Item golden_wand;
+	public static Item diamond_wand;
+	public static Item ancient_wand;
+	public static Item dark_stone_wand;
+	public static Item steel_wand;
 
 	public static void init() {
 		// pickaxe
@@ -66,23 +66,23 @@ public class TDETools {
 		steel_hoe = new ItemModHoe(TDEMaterials.steel, "steel_hoe", "steel_hoe");
 		reg(steel_hoe);
 
-		// weeder
-		wooden_weeder = new ItemWeeder(ToolMaterial.WOOD, "wooden_weeder");
-		reg(wooden_weeder);
-		stone_weeder = new ItemWeeder(ToolMaterial.STONE, "stone_weeder");
-		reg(stone_weeder);
-		iron_weeder = new ItemWeeder(ToolMaterial.IRON, "iron_weeder");
-		reg(iron_weeder);
-		golden_weeder = new ItemWeeder(ToolMaterial.GOLD, "golden_weeder");
-		reg(golden_weeder);
-		diamond_weeder = new ItemWeeder(ToolMaterial.EMERALD, "diamond_weeder");
-		reg(diamond_weeder);
-		ancient_weeder = new ItemWeeder(TDEMaterials.ancient, "ancient_weeder");
-		reg(ancient_weeder);
-		dark_stone_weeder = new ItemWeeder(TDEMaterials.dark_stone, "dark_stone_weeder");
-		reg(dark_stone_weeder);
-		steel_weeder = new ItemWeeder(TDEMaterials.steel, "steel_weeder");
-		reg(steel_weeder);
+		// wand
+		wooden_wand = new ItemWand(ToolMaterial.WOOD, "wooden_wand");
+		reg(wooden_wand);
+		stone_wand = new ItemWand(ToolMaterial.STONE, "stone_wand");
+		reg(stone_wand);
+		iron_wand = new ItemWand(ToolMaterial.IRON, "iron_wand");
+		reg(iron_wand);
+		golden_wand = new ItemWand(ToolMaterial.GOLD, "golden_wand");
+		reg(golden_wand);
+		diamond_wand = new ItemWand(ToolMaterial.EMERALD, "diamond_wand");
+		reg(diamond_wand);
+		ancient_wand = new ItemWand(TDEMaterials.ancient, "ancient_wand");
+		reg(ancient_wand);
+		dark_stone_wand = new ItemWand(TDEMaterials.dark_stone, "dark_stone_wand");
+		reg(dark_stone_wand);
+		steel_wand = new ItemWand(TDEMaterials.steel, "steel_wand");
+		reg(steel_wand);
 	}
 
 	public static void reg(Item item) {
