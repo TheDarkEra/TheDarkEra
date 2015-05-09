@@ -4,6 +4,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.common.MinecraftForge;
 
 import org.apache.logging.log4j.Logger;
 
@@ -18,6 +19,7 @@ import com.thedarkera.init.TDETools;
 import com.thedarkera.init.TDEWeapons;
 import com.thedarkera.proxy.CommonProxy;
 import com.thedarkera.updatechecker.UpdateChecker;
+import com.thedarkera.utils.Events;
 import com.thedarkera.world.TDEWorldProvider;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -54,8 +56,7 @@ public class TheDarkEra {
 	@SubscribeEvent
 	public void checkUpdate(PlayerEvent.PlayerLoggedInEvent event) {
 		if (UpdateChecker.outdated) {
-			event.player.addChatComponentMessage(new ChatComponentText(
-					"TheDarkEra is oudated"));
+			event.player.addChatComponentMessage(new ChatComponentText("TheDarkEra is oudated"));
 		}
 	}
 
@@ -63,8 +64,7 @@ public class TheDarkEra {
 	public void preInit(FMLPreInitializationEvent event) {
 		logger = event.getModLog();
 
-		logger.info("Loading " + TheDarkEra.NAME + " version "
-				+ TheDarkEra.VERSION + ".");
+		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + ".");
 
 		proxy.registerRenderers();
 
@@ -75,17 +75,15 @@ public class TheDarkEra {
 		TDETools.init();
 		TDEWeapons.init();
 		TDEBiomes.init();
-		
+
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
 
 		FMLCommonHandler.instance().bus().register(new EnterBiomeHandler());
 
-		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION
-				+ " loaded Phase 1 successfully!");
+		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 1 successfully!");
 	}
 
-	public static CreativeTabs tabTDE = new CreativeTabs(
-			CreativeTabs.getNextID(), "the_dark_era") {
+	public static CreativeTabs tabTDE = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era") {
 		@Override
 		public Item getTabIconItem() {
 			return TDEArmors.daedric_helmet;
@@ -94,27 +92,25 @@ public class TheDarkEra {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		logger.info("Loading " + TheDarkEra.NAME + " version "
-				+ TheDarkEra.VERSION + " Phase 2.");
+		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");
 
 		proxy.registerTileEntities();
 
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
 		DimensionManager.registerDimension(dimension, dimension);
 
-		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION
-				+ " loaded Phase 2 successfully!");
+		MinecraftForge.EVENT_BUS.register(new Events());
+
+		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 2 successfully!");
 	}
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		logger.info("Loading " + TheDarkEra.NAME + " version "
-				+ TheDarkEra.VERSION + " Phase 3.");
+		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 3.");
 
-				proxy.registerGuiHandler();
+		proxy.registerGuiHandler();
 
-		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION
-				+ " loaded Phase 3 successfully!");
+		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 3 successfully!");
 	}
 
 	public enum GuiID {
