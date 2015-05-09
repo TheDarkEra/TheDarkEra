@@ -11,6 +11,7 @@ import net.minecraftforge.event.entity.player.UseHoeEvent;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEBlocks;
+import com.thedarkera.sounds.ItemSounds;
 
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.relauncher.Side;
@@ -53,8 +54,9 @@ public class ItemWand extends Item {
 			/** Dirt */
 			if (p_77648_7_ != 0 && p_77648_3_.getBlock(p_77648_4_, p_77648_5_ + 1, p_77648_6_).isAir(p_77648_3_, p_77648_4_, p_77648_5_ + 1, p_77648_6_) && (block == TDEBlocks.dark_dirt)) {
 				Block block1 = Blocks.dirt;
-				p_77648_3_.playSoundEffect((double) ((float) p_77648_4_ + 0.5F), (double) ((float) p_77648_5_ + 0.5F), (double) ((float) p_77648_6_ + 0.5F), block1.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 1.0F) / 2.0F, block1.stepSound.getPitch() * 40F);
-
+				//p_77648_3_.playSoundEffect((double) ((float) p_77648_4_ + 0.5F), (double) ((float) p_77648_5_ + 0.5F), (double) ((float) p_77648_6_ + 0.5F), block1.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 1.0F) / 2.0F, block1.stepSound.getPitch() * 40F);
+				p_77648_3_.playSoundEffect((double) ((float) p_77648_4_ + 0.5F), (double) ((float) p_77648_5_ + 0.5F), (double) ((float) p_77648_6_ + 0.5F), ItemSounds.soundWand.getStepResourcePath(), 100.0F, 1.0F);
+				
 				if (p_77648_3_.isRemote) {
 					return true;
 				} else {
@@ -64,7 +66,7 @@ public class ItemWand extends Item {
 				}
 			}else if (p_77648_7_ != 0 && p_77648_3_.getBlock(p_77648_4_, p_77648_5_ + 1, p_77648_6_).isAir(p_77648_3_, p_77648_4_, p_77648_5_ + 1, p_77648_6_) && (block == Blocks.dirt)) {
 				Block block1 = TDEBlocks.dark_dirt;
-				p_77648_3_.playSoundEffect((double) ((float) p_77648_4_ + 0.5F), (double) ((float) p_77648_5_ + 0.5F), (double) ((float) p_77648_6_ + 0.5F), block1.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 1.0F) / 2.0F, block1.stepSound.getPitch() * 40F);
+				p_77648_3_.playSoundEffect((double) ((float) p_77648_4_ + 0.5F), (double) ((float) p_77648_5_ + 0.5F), (double) ((float) p_77648_6_ + 0.5F), block1.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 2.0F) / 2.0F, block1.stepSound.getPitch() * 40F);
 
 				if (p_77648_3_.isRemote) {
 					return true;
