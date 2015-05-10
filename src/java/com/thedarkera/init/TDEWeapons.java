@@ -5,6 +5,8 @@ import net.minecraft.item.Item.ToolMaterial;
 
 import com.thedarkera.item.weapon.ItemDaedricArrow;
 import com.thedarkera.item.weapon.ItemDaedricBow;
+import com.thedarkera.item.weapon.ItemDragonArrow;
+import com.thedarkera.item.weapon.ItemDragonBow;
 import com.thedarkera.item.weapon.ItemModDagger;
 import com.thedarkera.item.weapon.ItemModMace;
 import com.thedarkera.item.weapon.ItemModSword;
@@ -18,9 +20,11 @@ public class TDEWeapons {
 	
 	//Bows
 	public static Item daedric_bow;
+	public static Item dragon_bow;
 	
 	//Arrows
 	public static Item daedric_arrow;
+	public static Item dragon_arrow;
 	
 	// Daggers
 	public static Item wood_dagger;
@@ -54,10 +58,14 @@ public class TDEWeapons {
 		// Bows
 		daedric_bow = new ItemDaedricBow("daedric_bow");
 		reg(daedric_bow);
-
+		dragon_bow = new ItemDragonBow("dragon_bow");
+		reg(dragon_bow);
+		
 		// Arrows
 		daedric_arrow = new ItemDaedricArrow("daedric_arrow");
 		reg(daedric_arrow);
+		dragon_arrow = new ItemDragonArrow("dragon_arrow");
+		reg(dragon_arrow);
 
 		// Daggers
 		wood_dagger = new ItemModDagger(ToolMaterial.WOOD, "wood_dagger");

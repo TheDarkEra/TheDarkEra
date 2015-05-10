@@ -15,18 +15,17 @@ import net.minecraftforge.event.entity.player.ArrowNockEvent;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.entity.EntityDaedricArrow;
-import com.thedarkera.entity.EntityDragonArrow;
 import com.thedarkera.init.TDEWeapons;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemDaedricBow extends Item {
+public class ItemDragonBow extends Item {
 	public static final String[] bowPullIconNameArray = new String[] { "pulling_0", "pulling_1", "pulling_2" };
 	@SideOnly(Side.CLIENT)
 	private IIcon[] iconArray;
 
-	public ItemDaedricBow(String name) {
+	public ItemDragonBow(String name) {
 		maxStackSize = 1;
 		setMaxDamage(384);
 		setUnlocalizedName(name);
@@ -53,7 +52,7 @@ public class ItemDaedricBow extends Item {
 
 		boolean flag = player.capabilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantment.infinity.effectId, stack) > 0;
 
-		if (flag || player.inventory.hasItem(TDEWeapons.daedric_arrow)) {
+		if (flag || player.inventory.hasItem(TDEWeapons.dragon_arrow)) {
 			float f = (float) j / 20.0F;
 			f = (f * f + f * 2.0F) / 3.0F;
 
@@ -65,7 +64,7 @@ public class ItemDaedricBow extends Item {
 				f = 1.0F;
 			}
 
-			EntityDragonArrow entityarrow = new EntityDragonArrow(world, player, f * 2.0F);
+			EntityDaedricArrow entityarrow = new EntityDaedricArrow(world, player, f * 2.0F);
 
 			entityarrow.setFire(100);
 			entityarrow.setDamage(entityarrow.getDamage() + 1.0D + 1.0D);
@@ -98,7 +97,7 @@ public class ItemDaedricBow extends Item {
 			if (flag) {
 				entityarrow.canBePickedUp = 2;
 			} else {
-				player.inventory.consumeInventoryItem(TDEWeapons.daedric_arrow);
+				player.inventory.consumeInventoryItem(TDEWeapons.dragon_arrow);
 			}
 
 			if (!world.isRemote) {
@@ -125,7 +124,7 @@ public class ItemDaedricBow extends Item {
 			return event.result;
 		}
 
-		if (player.capabilities.isCreativeMode || player.inventory.hasItem(TDEWeapons.daedric_arrow)) {
+		if (player.capabilities.isCreativeMode || player.inventory.hasItem(TDEWeapons.dragon_arrow)) {
 			player.setItemInUse(stack, getMaxItemUseDuration(stack));
 		}
 
