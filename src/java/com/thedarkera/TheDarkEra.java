@@ -1,5 +1,6 @@
 package com.thedarkera;
 
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.ChatComponentText;
@@ -7,6 +8,7 @@ import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 
 import org.apache.logging.log4j.Logger;
+import org.lwjgl.input.Keyboard;
 
 import com.thedarkera.handler.EnterBiomeHandler;
 import com.thedarkera.handler.WorldGenHandler;
@@ -21,6 +23,8 @@ import com.thedarkera.proxy.CommonProxy;
 import com.thedarkera.updatechecker.UpdateChecker;
 import com.thedarkera.utils.Events;
 import com.thedarkera.world.TDEWorldProvider;
+import com.thedarkera.ztesting.KeyInputHandler;
+import com.thedarkera.ztesting.TDEKeyBindings;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -75,6 +79,9 @@ public class TheDarkEra {
 		TDETools.init();
 		TDEWeapons.init();
 		TDEBiomes.init();
+		TDEKeyBindings.init();
+		
+		FMLCommonHandler.instance().bus().register(new KeyInputHandler());
 
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
 
@@ -116,6 +123,7 @@ public class TheDarkEra {
 	public enum GuiID {
 		SMASHER, SMELTERY
 	}
+	
 }
 
 /*

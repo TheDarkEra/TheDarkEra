@@ -389,7 +389,7 @@ public class TDEChunkProvider implements IChunkProvider {
 			l1 = this.rand.nextInt(256);
 			i2 = l + this.rand.nextInt(16) + 8;
 			(new WorldGenLakes(Blocks.water)).generate(this.worldObj, this.rand, k1, l1, i2);
-            (new WorldGenDeadTree()).generate(worldObj, rand, k1, l1, i2);
+			(new WorldGenDeadTree()).generate(worldObj, rand, k1, l1, i2);
 		}
 
 		if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAVA) && !flag && this.rand.nextInt(8) == 0) {
@@ -430,80 +430,69 @@ public class TDEChunkProvider implements IChunkProvider {
 					this.worldObj.setBlock(k1 + k, i2, l1 + l, Blocks.snow_layer, 0, 2);
 				}
 			}
-			
+
 		}
-		//BASIC TREES
+		// BASIC TREES
 		int var4 = par2 * 16;
 		int var5 = par3 * 16;
-        for (int c = 60; c > 0; c--)
-        {
-                int j2 = var4 + rand.nextInt(16) + 8;
-                int l3 = rand.nextInt(120);
-                int j5 = var5 + rand.nextInt(16) + 8;
-                if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass))
-                        new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-                }
-        for (int c = 50; c > 0; c--)
-        {
-                int j2 = var4 + rand.nextInt(16) + 8;
-                int l3 = rand.nextInt(120);
-                int j5 = var5 + rand.nextInt(16) + 8;
-                if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass))
-                {
-                        new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-                }
-        }
-        for (int c = 50; c > 0; c--)
-        {
-                int j2 = var4 + rand.nextInt(16) + 8;
-                int l3 = rand.nextInt(120);
-                int j5 = var5 + rand.nextInt(16) + 8;
-                if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass))
-                {
-                        new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-                }
-        }
-        for (int c = 50; c > 0; c--)
-        {
-                int j2 = var4 + rand.nextInt(16) + 8;
-                int l3 = rand.nextInt(120);
-                int j5 = var5 + rand.nextInt(16) + 8;
-                if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass))
-                {
-                        new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-                }
-        }
-        for (int c = 50; c > 0; c--)
-        {
-                int j2 = var4 + rand.nextInt(16) + 8;
-                int l3 = rand.nextInt(120);
-                int j5 = var5 + rand.nextInt(16) + 8;
-                if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass))
-                {
-                        new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-                }
-        }
-        for (int c = 60; c > 0; c--)
-        {
-                int j2 = var4 + rand.nextInt(16) + 8;
-                int l3 = rand.nextInt(120);
-                int j5 = var5 + rand.nextInt(16) + 8;
-                if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass))
-                {
-                        new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-                }
-        }
-        //Forest Trees
-        for (int c = 60; c > 0; c--)
-        {
-                int j2 = var4 + rand.nextInt(16) + 8;
-                int l3 = rand.nextInt(120);
-                int j5 = var5 + rand.nextInt(16) + 8;
-                if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass))
-                {
-                        new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-                }
-        }
+//		for (int d = 10; d > 0; d--) {
+//			for (int c = 6; c > 0; c--) {
+//				int j2 = var4 + rand.nextInt(16) + 8;
+//				int l3 = rand.nextInt(120);
+//				int j5 = var5 + rand.nextInt(16) + 8;
+//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass))
+//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
+//			}
+//			for (int c = 50; c > 0; c--) {
+//				int j2 = var4 + rand.nextInt(16) + 8;
+//				int l3 = rand.nextInt(120);
+//				int j5 = var5 + rand.nextInt(16) + 8;
+//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
+//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
+//				}
+//			}
+//			for (int c = 50; c > 0; c--) {
+//				int j2 = var4 + rand.nextInt(16) + 8;
+//				int l3 = rand.nextInt(120);
+//				int j5 = var5 + rand.nextInt(16) + 8;
+//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
+//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
+//				}
+//			}
+//			for (int c = 50; c > 0; c--) {
+//				int j2 = var4 + rand.nextInt(16) + 8;
+//				int l3 = rand.nextInt(120);
+//				int j5 = var5 + rand.nextInt(16) + 8;
+//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
+//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
+//				}
+//			}
+//			for (int c = 50; c > 0; c--) {
+//				int j2 = var4 + rand.nextInt(16) + 8;
+//				int l3 = rand.nextInt(120);
+//				int j5 = var5 + rand.nextInt(16) + 8;
+//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
+//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
+//				}
+//			}
+//			for (int c = 60; c > 0; c--) {
+//				int j2 = var4 + rand.nextInt(16) + 8;
+//				int l3 = rand.nextInt(120);
+//				int j5 = var5 + rand.nextInt(16) + 8;
+//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
+//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
+//				}
+//			}
+//			// Forest Trees
+//			for (int c = 60; c > 0; c--) {
+//				int j2 = var4 + rand.nextInt(16) + 8;
+//				int l3 = rand.nextInt(120);
+//				int j5 = var5 + rand.nextInt(16) + 8;
+//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
+//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
+//				}
+//			}
+//		}
 		MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Post(par1IChunkProvider, worldObj, rand, par2, par3, flag));
 
 		BlockFalling.fallInstantly = false;

@@ -1,6 +1,7 @@
 package com.thedarkera.ztesting;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
@@ -25,47 +26,57 @@ public class SoulBar {
 				mc.renderEngine.bindTexture(new ResourceLocation(TheDarkEra.MODID + ":textures/gui/SoulBar.png"));
 
 				mc.ingameGUI.drawTexturedModalRect(posX, posY, 0, 0, 50, 5);
-				mc.ingameGUI.drawTexturedModalRect(posX + 1, posY + 1, 0, 6, (int)manaBar, 3);
+				mc.ingameGUI.drawTexturedModalRect(posX + 1, posY + 1, 0, 6, (int) manaBar, 3);
+				addMana(0.05);
 			}
 		}
 	}
 
-	public static void addMana(int addedMana) {
-//		ReadManaFromNBT();
+	public static void addMana(double addedMana) {
 		mana = mana + addedMana;
 		if (mana >= 100) {
 			mana = 100;
 		}
 
 		manaBar = mana * manaConstant;
-		System.out.println("manaBar: " + manaBar);
-		writeManaToNBT(mana);
 	}
 
-	public static void removeMana(int removedMana) {
-//		ReadManaFromNBT();
-		mana = mana + removedMana;
+	public static void removeMana(double removedMana) {
+		mana = mana - removedMana;
+		if (mana <= 0) {
+			mana = 0;
+		}
+
 		manaBar = (mana * manaConstant);
-		writeManaToNBT(mana);
 		
+
 	}
 
 	public static double getMana() {
 		return mana;
 	}
+
 	public static double getManaBar() {
 		return manaBar;
 	}
 
-	public static void writeManaToNBT(double manaLevel) {
-		NBTTagCompound nbt = new NBTTagCompound();
-		nbt.setDouble("TDEMana", manaLevel);
-		System.out.println("Set NBT to: " + mana);
-	}
-
-	public static void ReadManaFromNBT() {
-		NBTTagCompound nbt = new NBTTagCompound();
-		mana = nbt.getDouble("TDEMana");
-		System.out.println("Got NBT " + mana);
-	}
+//	public static void writeManaToNBT(double manaLevel, Entity player) {
+//		NBTTagCompound nbt = new NBTTagCompound();
+//		player.getEntityData().getDouble("TDEMana");
+//
+//		NBTTagCompound tag = player.getEntityData();
+//		tag.setDouble("TDEMana", mana);
+//		player.writeToNBT(tag);
+//
+//		nbt.setDouble("TDEMana", manaLevel);
+//		System.out.println("Set NBT to: " + mana);
+//	}
+//
+//	public static void ReadManaFromNBT(Entity player) {
+//		if (player.getEntityData().hasKey("TDEMana")) {
+//			System.out.println("Read data!");
+//		}
+//		mana = player.getEntityData().getDouble("TDEMana");
+//		System.out.println("Got NBT " + mana);
+//	}
 }
