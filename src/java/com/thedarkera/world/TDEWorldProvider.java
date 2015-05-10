@@ -15,10 +15,10 @@ public class TDEWorldProvider extends WorldProvider {
 	public void registerWorldChunkManager() {
 		// this.worldChunkMgr = new WorldChunkManagerHell(Biome Generator, Float
 		// for Rainfall);
-		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_land,
+		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.test_biome,
 				0.1F);
-		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_forrest,
-				0.1F);
+		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_forrest,
+		//		0.1F);
 		// this.worldChunkMgr = new
 		// WorldChunkManagerHell(TDEBiomes.dark_village, 0.1F);
 		// this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_beach,
