@@ -22,7 +22,6 @@ import com.thedarkera.item.ItemSteelIngot;
 import com.thedarkera.item.ItemWitchFeather;
 import com.thedarkera.item.food.ItemAshHopperMeat;
 import com.thedarkera.item.food.ItemGrape;
-import com.thedarkera.item.food.ItemGrapeSeed;
 import com.thedarkera.placeableitem.ItemPlaceAbleExample;
 import com.thedarkera.utils.RegUtils;
 
