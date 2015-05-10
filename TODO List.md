@@ -16,6 +16,7 @@ Trees - Trees need to only spawn if below block is dark dirt, weedy dirt, dead g
 The Dark Dimension WorldGen - Make a ore gen, inside ore gen add mod ores. add dark stone replacing stone, redstone ore and lapis ore. add dark coal ore replacing coal ore, same with iron, gold, diamond and emerald.
 Make dark dirt turn to dark grass after a random amount of time if above block = air.
 
+
 ## Textures
 blocks/lamp.png
 blocks/cracked_glass.png
@@ -101,3 +102,7 @@ blocks/Leaf_Rotten_Tree_Opaque.png
 items/dragon_heavy_helmet.png
 blocks/logs/Wisp_Top.png
 blocks/Leaf_Paper_Birch_Tree_Opaque.png
+items/dragon_bow.png
+items/dragon_arrow.png
+
+
