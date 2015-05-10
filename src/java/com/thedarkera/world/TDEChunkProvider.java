@@ -77,14 +77,14 @@ public class TDEChunkProvider implements IChunkProvider {
 	double[] d4;
 	int[][] i0 = new int[32][32];
 
-	{
-		caveGenerator = TerrainGen.getModdedMapGen(caveGenerator, CAVE);
-		strongholdGenerator = (MapGenStronghold) TerrainGen.getModdedMapGen(strongholdGenerator, STRONGHOLD);
-		villageGenerator = (MapGenVillage) TerrainGen.getModdedMapGen(villageGenerator, VILLAGE);
-		mineshaftGenerator = (MapGenMineshaft) TerrainGen.getModdedMapGen(mineshaftGenerator, MINESHAFT);
-		scatteredFeatureGenerator = (MapGenScatteredFeature) TerrainGen.getModdedMapGen(scatteredFeatureGenerator, SCATTERED_FEATURE);
-		ravineGenerator = TerrainGen.getModdedMapGen(ravineGenerator, RAVINE);
-	}
+	/*{ TODO
+		caveGenerator = TerrainGen.getModdedMapGen(caveGenerator, DARKCAVE);
+		strongholdGenerator = (MapGenStronghold) TerrainGen.getModdedMapGen(strongholdGenerator, DARKSTRONGHOLD);
+		villageGenerator = (MapGenVillage) TerrainGen.getModdedMapGen(villageGenerator, DARKVILLAGE);
+		mineshaftGenerator = (MapGenMineshaft) TerrainGen.getModdedMapGen(mineshaftGenerator, DARKMINESHAFT);
+		scatteredFeatureGenerator = (MapGenScatteredFeature) TerrainGen.getModdedMapGen(scatteredFeatureGenerator, DARKSCATTERED_FEATURE);
+		ravineGenerator = TerrainGen.getModdedMapGen(ravineGenerator, DARKRAVINE);
+	}*/
 
 	public TDEChunkProvider(World par1World, long par2, boolean par4) {
 		this.worldObj = par1World;
@@ -162,7 +162,7 @@ public class TDEChunkProvider implements IChunkProvider {
 
 							for (int k3 = 0; k3 < 4; ++k3) {
 								if ((d15 += d16) > 0.0D) {
-									p_147424_3_[j3 += short1] = Blocks.stone;
+									p_147424_3_[j3 += short1] = TDEBlocks.dark_stone;
 								} else if (k2 * 8 + l2 < b0) {
 									p_147424_3_[j3 += short1] = Blocks.water;
 								} else {

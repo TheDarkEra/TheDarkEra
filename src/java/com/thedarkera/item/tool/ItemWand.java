@@ -53,7 +53,8 @@ public class ItemWand extends Item {
 			/** Dirt */
 			if (p_77648_7_ != 0 && p_77648_3_.getBlock(p_77648_4_, p_77648_5_ + 1, p_77648_6_).isAir(p_77648_3_, p_77648_4_, p_77648_5_ + 1, p_77648_6_) && (block == TDEBlocks.dark_dirt)) {
 				Block block1 = Blocks.dirt;
-				p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
+				p_77648_3_.playSoundEffect((double)((float)p_77648_4_ + 0.5F), (double)((float)p_77648_5_ + 0.5F), (double)((float)p_77648_6_ + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
+				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
 				
 				if (p_77648_3_.isRemote) {
 					return true;
