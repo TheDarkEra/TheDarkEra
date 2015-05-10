@@ -1,5 +1,6 @@
 package com.thedarkera.utils;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 

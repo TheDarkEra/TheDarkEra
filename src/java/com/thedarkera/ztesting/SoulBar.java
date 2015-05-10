@@ -31,7 +31,7 @@ public class SoulBar {
 	}
 
 	public static void addMana(int addedMana) {
-		ReadManaFromNBT();
+//		ReadManaFromNBT();
 		mana = mana + addedMana;
 		if (mana >= 100) {
 			mana = 100;
@@ -43,7 +43,7 @@ public class SoulBar {
 	}
 
 	public static void removeMana(int removedMana) {
-		ReadManaFromNBT();
+//		ReadManaFromNBT();
 		mana = mana + removedMana;
 		manaBar = (mana * manaConstant);
 		writeManaToNBT(mana);
