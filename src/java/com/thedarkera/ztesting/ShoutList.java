@@ -56,4 +56,7 @@ public class ShoutList {
 		}
 		FontDuration = 40;
 	}
+	public static int getShout(){
+		return Shout;
+	}
 }
