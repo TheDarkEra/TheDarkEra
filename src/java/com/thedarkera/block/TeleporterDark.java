@@ -58,7 +58,7 @@ public class TeleporterDark extends Teleporter {
 						int i2 = k + i1 * b1 - l * b0;
 						boolean flag = j1 < 0;
 						worldServerInstance.setBlock(k1, l1, i2,
-								flag ? TDEBlocks.dragon_bone : Blocks.air, 5, 2);
+								flag ? TDEBlocks.dragon_bone : Blocks.air, 5, 3);
 					}
 				}
 			}
@@ -419,7 +419,7 @@ public class TeleporterDark extends Teleporter {
 						i4 = j2 + (i3 - 1) * l5 - k2 * k5;
 						flag = l2 < 0;
 						worldServerInstance.setBlock(k3, j3, i4,
-								flag ? TDEBlocks.dragon_bone : Blocks.air, 5, 2);
+								flag ? TDEBlocks.dragon_bone : Blocks.air, 5, 3);
 					}
 				}
 			}

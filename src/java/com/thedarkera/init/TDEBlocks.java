@@ -1,10 +1,12 @@
 package com.thedarkera.init;
 
+import com.thedarkera.block.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
+<<<<<<< HEAD
 import com.thedarkera.block.BlockAncientAxeOre;
 import com.thedarkera.block.BlockAncientHoeOre;
 import com.thedarkera.block.BlockAncientOre;
@@ -40,6 +42,8 @@ import com.thedarkera.block.BlockSaplings;
 import com.thedarkera.block.BlockSmasher;
 import com.thedarkera.block.BlockSmeltery;
 import com.thedarkera.block.BlockWeedyDirt;
+=======
+>>>>>>> origin/master
 import com.thedarkera.block.leaves.BlockLeaf;
 import com.thedarkera.block.logs.BlockLogDarkBirch;
 import com.thedarkera.block.logs.BlockLogWisp;
