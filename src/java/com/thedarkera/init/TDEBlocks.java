@@ -7,7 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
-<<<<<<< HEAD
+
 import com.thedarkera.block.BlockAncientAxeOre;
 import com.thedarkera.block.BlockAncientHoeOre;
 import com.thedarkera.block.BlockAncientOre;
@@ -41,8 +41,7 @@ import com.thedarkera.block.BlockSaplings;
 import com.thedarkera.block.BlockSmasher;
 import com.thedarkera.block.BlockSmeltery;
 import com.thedarkera.block.BlockWeedyDirt;
-=======
->>>>>>> origin/master
+
 import com.thedarkera.block.leaves.BlockLeaf;
 import com.thedarkera.block.logs.BlockLogDarkBirch;
 import com.thedarkera.block.logs.BlockLogWisp;
@@ -69,8 +68,8 @@ public class TDEBlocks {
 	// Blocks//
 	public static Block ebony_ore;
 	public static Block orichalcum_ore;
-	public static Block dragon_bone_ore;
 	public static Block ancient_ore;
+	public static Block dragon_bone_ore;
 	public static Block ancientpickaxe_ore;
 	public static Block ancientaxe_ore;
 	/** Unlike ancient axe and pickaxe this ore will be in sand. */
@@ -142,14 +141,14 @@ public class TDEBlocks {
 		reg(ancientaxe_ore);
 		ancientshovel_ore = new BlockAncientShovelOre();
 		reg(ancientshovel_ore);
+		dragon_bone_ore = new BlockDragonBoneOre();
+		reg(dragon_bone_ore);
 		ancienthoe_ore = new BlockAncientHoeOre();
 		reg(ancienthoe_ore);
 		ancient_ore = new BlockAncientOre();
 		reg(ancient_ore);
 		ebony_ore = new BlockEbonyOre();
 		reg(ebony_ore);
-		dragon_bone_ore = new BlockDragonBoneOre();
-		reg(dragon_bone_ore);
 		orichalcum_ore = new BlockOrichalcumOre();
 		reg(orichalcum_ore);
 		dark_stone_ladder = new BlockDarkStoneLadder();
@@ -248,7 +247,7 @@ public class TDEBlocks {
 
 		// Placeable items//
 		example = new FlatBlockExample();
-        dragon_bone = new BlockDragonBone();
+		dragon_bone = new BlockDragonBone();
 	}
 
 	public static void reg(Block block) {
