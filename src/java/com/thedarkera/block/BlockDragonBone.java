@@ -81,4 +81,9 @@ public class BlockDragonBone extends Block {
         return false;
     }
 
+    @Override
+    public boolean isSideSolid(IBlockAccess world, int x, int y, int z, ForgeDirection side) {
+        int meta = world.getBlockMetadata(x, y, z);
+        return side == ForgeDirection.UP;
+    }
 }
