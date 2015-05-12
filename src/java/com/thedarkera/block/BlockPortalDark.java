@@ -59,13 +59,13 @@ public class BlockPortalDark extends BlockPortal {
 		byte b0 = 0;
 		byte b1 = 0;
 
-		if (par1World.getBlock(par2 - 1, par3, par4) == Blocks.sandstone
-				|| par1World.getBlock(par2 + 1, par3, par4) == Blocks.sandstone) {
+		if (par1World.getBlock(par2 - 1, par3, par4) == TDEBlocks.dragon_bone
+				|| par1World.getBlock(par2 + 1, par3, par4) == TDEBlocks.dragon_bone) {
 			b0 = 1;
 		}
 
-		if (par1World.getBlock(par2, par3, par4 - 1) == Blocks.sandstone
-				|| par1World.getBlock(par2, par3, par4 + 1) == Blocks.sandstone) {
+		if (par1World.getBlock(par2, par3, par4 - 1) == TDEBlocks.dragon_bone
+				|| par1World.getBlock(par2, par3, par4 + 1) == TDEBlocks.dragon_bone) {
 			b1 = 1;
 		}
 
@@ -91,10 +91,10 @@ public class BlockPortalDark extends BlockPortal {
 								par2 + b0 * l, par3 + i1, par4 + b1 * l);
 
 						if (flag) {
-							if (j1 != Blocks.sandstone) {
+							if (j1 != TDEBlocks.dragon_bone) {
 								return false;
 							}
-						} else if (!isAirBlock && j1 != Blocks.fire) {
+						} else if (!isAirBlock && j1 != TDEBlocks.dark_fire) {
 							return false;
 						}
 					}
@@ -130,7 +130,7 @@ public class BlockPortalDark extends BlockPortal {
 			;
 		}
 
-		if (par1World.getBlock(par2, i1 - 1, par4) != Blocks.sandstone) {
+		if (par1World.getBlock(par2, i1 - 1, par4) != TDEBlocks.dragon_bone) {
 			par1World.setBlockToAir(par2, par3, par4);
 		} else {
 			int j1;
@@ -141,7 +141,7 @@ public class BlockPortalDark extends BlockPortal {
 			}
 
 			if (j1 == 3
-					&& par1World.getBlock(par2, i1 + j1, par4) == Blocks.sandstone) {
+					&& par1World.getBlock(par2, i1 + j1, par4) == TDEBlocks.dragon_bone) {
 				boolean flag = par1World.getBlock(par2 - 1, par3, par4) == this
 						|| par1World.getBlock(par2 + 1, par3, par4) == this;
 				boolean flag1 = par1World.getBlock(par2, par3, par4 - 1) == this
@@ -150,9 +150,9 @@ public class BlockPortalDark extends BlockPortal {
 				if (flag && flag1) {
 					par1World.setBlockToAir(par2, par3, par4);
 				} else {
-					if ((par1World.getBlock(par2 + b0, par3, par4 + b1) != Blocks.sandstone || par1World
+					if ((par1World.getBlock(par2 + b0, par3, par4 + b1) != TDEBlocks.dragon_bone || par1World
 							.getBlock(par2 - b0, par3, par4 - b1) != this)
-							&& (par1World.getBlock(par2 - b0, par3, par4 - b1) != Blocks.sandstone || par1World
+							&& (par1World.getBlock(par2 - b0, par3, par4 - b1) != TDEBlocks.dragon_bone || par1World
 									.getBlock(par2 + b0, par3, par4 + b1) != this)) {
 						par1World.setBlockToAir(par2, par3, par4);
 					}

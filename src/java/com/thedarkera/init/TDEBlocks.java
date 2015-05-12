@@ -1,10 +1,13 @@
 package com.thedarkera.init;
 
+import com.thedarkera.block.*;
+import com.thedarkera.item.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
+<<<<<<< HEAD
 import com.thedarkera.block.BlockAncientAxeOre;
 import com.thedarkera.block.BlockAncientHoeOre;
 import com.thedarkera.block.BlockAncientOre;
@@ -24,6 +27,7 @@ import com.thedarkera.block.BlockDarkStoneLadder;
 import com.thedarkera.block.BlockDarkStoneSlab;
 import com.thedarkera.block.BlockDarkStoneStairs;
 import com.thedarkera.block.BlockDeadGrass;
+import com.thedarkera.block.BlockDragonBoneOre;
 import com.thedarkera.block.BlockEbonyOre;
 import com.thedarkera.block.BlockGrapePlant;
 import com.thedarkera.block.BlockLamp;
@@ -37,6 +41,8 @@ import com.thedarkera.block.BlockSaplings;
 import com.thedarkera.block.BlockSmasher;
 import com.thedarkera.block.BlockSmeltery;
 import com.thedarkera.block.BlockWeedyDirt;
+=======
+>>>>>>> origin/master
 import com.thedarkera.block.leaves.BlockLeaf;
 import com.thedarkera.block.logs.BlockLogDarkBirch;
 import com.thedarkera.block.logs.BlockLogWisp;
@@ -44,11 +50,6 @@ import com.thedarkera.block.logs.BlockLogs1;
 import com.thedarkera.block.logs.BlockLogs2;
 import com.thedarkera.block.logs.BlockLogs3;
 import com.thedarkera.flatblocks.FlatBlockExample;
-import com.thedarkera.item.ItemLeafBlocks;
-import com.thedarkera.item.ItemLogBlocks1;
-import com.thedarkera.item.ItemLogBlocks2;
-import com.thedarkera.item.ItemLogBlocks3;
-import com.thedarkera.item.ItemSaplingBlocks;
 import com.thedarkera.utils.RegUtils;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -68,6 +69,7 @@ public class TDEBlocks {
 	// Blocks//
 	public static Block ebony_ore;
 	public static Block orichalcum_ore;
+	public static Block dragon_bone_ore;
 	public static Block ancient_ore;
 	public static Block ancientpickaxe_ore;
 	public static Block ancientaxe_ore;
@@ -75,10 +77,11 @@ public class TDEBlocks {
 	public static Block ancientshovel_ore;
 	/** Unlike ancient axe and pickaxe this ore will be in dirt. */
 	public static Block ancienthoe_ore;
-	public static Block dark_portal;
+	public static BlockPortalDark dark_portal;
 	public static Block teleporter_dark;
 	public static Block smasher;
 	public static Block dark_birch_planks;
+	public static Block dark_fire;
 	
 	public static Block dark_diamond_ore;
 	public static Block dark_emerald_ore;
@@ -129,6 +132,7 @@ public class TDEBlocks {
 
 	// Placeable items//
 	public static Block example;
+	public static Block dragon_bone;
 
 	public static void init() {
 		// Blocks//
@@ -144,6 +148,8 @@ public class TDEBlocks {
 		reg(ancient_ore);
 		ebony_ore = new BlockEbonyOre();
 		reg(ebony_ore);
+		dragon_bone_ore = new BlockDragonBoneOre();
+		reg(dragon_bone_ore);
 		orichalcum_ore = new BlockOrichalcumOre();
 		reg(orichalcum_ore);
 		dark_stone_ladder = new BlockDarkStoneLadder();
@@ -173,6 +179,8 @@ public class TDEBlocks {
 		smasher = new BlockSmasher();
 		dark_birch_planks = new BlockDarkBirchPlanks();
 		reg(dark_birch_planks);
+		dark_fire = new BlockDarkFire();
+		reg(dark_fire);
 		cracked_glass_pane = new BlockCrackedGlassPane(TheDarkEra.MODID + ":cracked_glass", "cracked_glass", Material.glass, false);
 		reg(cracked_glass_pane);
 		cracked_glass = new BlockCrackedGlass(Material.glass, false);
@@ -201,7 +209,7 @@ public class TDEBlocks {
 		reg(grape_plant);
 
 		// Portals//
-		dark_portal = new BlockPortalDark().setBlockName("dark_portal");
+		dark_portal = (BlockPortalDark) new BlockPortalDark().setBlockName("dark_portal");
 		reg(dark_portal);
 		teleporter_dark = new BlockPortalDark().setBlockName("teleporter_dark");
 		reg(teleporter_dark);
@@ -240,6 +248,7 @@ public class TDEBlocks {
 
 		// Placeable items//
 		example = new FlatBlockExample();
+        dragon_bone = new BlockDragonBone();
 	}
 
 	public static void reg(Block block) {

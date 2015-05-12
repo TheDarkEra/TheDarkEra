@@ -1,25 +1,8 @@
 package com.thedarkera.init;
 
+import com.thedarkera.item.*;
 import net.minecraft.item.Item;
 
-import com.thedarkera.item.ItemAchievementBook;
-import com.thedarkera.item.ItemAncientIngot;
-import com.thedarkera.item.ItemAshHopperJelly;
-import com.thedarkera.item.ItemAshHopperLeg;
-import com.thedarkera.item.ItemDaedraHeart;
-import com.thedarkera.item.ItemDarkStoneRod;
-import com.thedarkera.item.ItemDragonBone;
-import com.thedarkera.item.ItemDragonScale;
-import com.thedarkera.item.ItemEbonyIngot;
-import com.thedarkera.item.ItemFireRune;
-import com.thedarkera.item.ItemFrostRune;
-import com.thedarkera.item.ItemLeatherStrip;
-import com.thedarkera.item.ItemLightningRune;
-import com.thedarkera.item.ItemOrichalcumIngot;
-import com.thedarkera.item.ItemRottenWoodStick;
-import com.thedarkera.item.ItemSoulGem;
-import com.thedarkera.item.ItemSteelIngot;
-import com.thedarkera.item.ItemWitchFeather;
 import com.thedarkera.item.food.ItemAshHopperMeat;
 import com.thedarkera.item.food.ItemGrape;
 import com.thedarkera.item.tool.ItemShout;
@@ -37,13 +20,13 @@ public class TDEItems {
 	public static Item soul_gem;
 	public static Item leather_strip;
 	public static Item daedra_heart;
-	public static Item dragon_bone;
 	public static Item dragon_scale;
 	public static Item fire_rune;
 	public static Item frost_rune;
 	public static Item lightning_rune;
 	public static Item achievement_book;
 	public static Item shout;
+	public static Item bone_and_steel;
 
 	// Ingot items//
 	public static Item steel_ingot;
@@ -59,6 +42,7 @@ public class TDEItems {
 
 	// Placeable items//
 	public static Item example;
+	public static Item dragon_bone;
 
 	// Plant items//
 
@@ -83,8 +67,6 @@ public class TDEItems {
 		reg(leather_strip);
 		daedra_heart = new ItemDaedraHeart();
 		reg(daedra_heart);
-		dragon_bone = new ItemDragonBone();
-		reg(dragon_bone);
 		dragon_scale = new ItemDragonScale();
 		reg(dragon_scale);
 		fire_rune = new ItemFireRune();
@@ -97,6 +79,8 @@ public class TDEItems {
 		reg(achievement_book);
 		shout = new ItemShout();
 		reg(shout);
+//		bone_and_steel = new ItemBoneAndSteel();
+		reg(bone_and_steel);
 
 		// Ingot items init//
 		steel_ingot = new ItemSteelIngot();
@@ -118,6 +102,7 @@ public class TDEItems {
 
 		// Placeable items//
 		example = new ItemPlaceAbleExample();
+		dragon_bone = new ItemDragonBone();
 	}
 
 	public static void reg(Item item) {
