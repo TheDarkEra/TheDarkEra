@@ -1,25 +1,8 @@
 package com.thedarkera.init;
 
+import com.thedarkera.item.*;
 import net.minecraft.item.Item;
 
-import com.thedarkera.item.ItemAchievementBook;
-import com.thedarkera.item.ItemAncientIngot;
-import com.thedarkera.item.ItemAshHopperJelly;
-import com.thedarkera.item.ItemAshHopperLeg;
-import com.thedarkera.item.ItemDaedraHeart;
-import com.thedarkera.item.ItemDarkStoneRod;
-import com.thedarkera.item.ItemDragonBone;
-import com.thedarkera.item.ItemDragonScale;
-import com.thedarkera.item.ItemEbonyIngot;
-import com.thedarkera.item.ItemFireRune;
-import com.thedarkera.item.ItemFrostRune;
-import com.thedarkera.item.ItemLeatherStrip;
-import com.thedarkera.item.ItemLightningRune;
-import com.thedarkera.item.ItemOrichalcumIngot;
-import com.thedarkera.item.ItemRottenWoodStick;
-import com.thedarkera.item.ItemSoulGem;
-import com.thedarkera.item.ItemSteelIngot;
-import com.thedarkera.item.ItemWitchFeather;
 import com.thedarkera.item.food.ItemAshHopperMeat;
 import com.thedarkera.item.food.ItemGrape;
 import com.thedarkera.placeableitem.ItemPlaceAbleExample;
@@ -41,6 +24,7 @@ public class TDEItems {
 	public static Item frost_rune;
 	public static Item lightning_rune;
 	public static Item achievement_book;
+	public static Item bone_and_steel;
 
 	// Ingot items//
 	public static Item steel_ingot;
@@ -91,6 +75,8 @@ public class TDEItems {
 		reg(lightning_rune);
 		achievement_book = new ItemAchievementBook();
 		reg(achievement_book);
+		bone_and_steel = new ItemBoneAndSteel();
+		reg(bone_and_steel);
 
 		// Ingot items init//
 		steel_ingot = new ItemSteelIngot();

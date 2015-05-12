@@ -40,10 +40,11 @@ public class TDEBlocks {
 	public static Block ancientshovel_ore;
 	/** Unlike ancient axe and pickaxe this ore will be in dirt. */
 	public static Block ancienthoe_ore;
-	public static Block dark_portal;
+	public static BlockPortalDark dark_portal;
 	public static Block teleporter_dark;
 	public static Block smasher;
 	public static Block dark_birch_planks;
+	public static Block dark_fire;
 	
 	public static Block dark_diamond_ore;
 	public static Block dark_emerald_ore;
@@ -139,6 +140,8 @@ public class TDEBlocks {
 		smasher = new BlockSmasher();
 		dark_birch_planks = new BlockDarkBirchPlanks();
 		reg(dark_birch_planks);
+		dark_fire = new BlockDarkFire();
+		reg(dark_fire);
 		cracked_glass_pane = new BlockCrackedGlassPane(TheDarkEra.MODID + ":cracked_glass", "cracked_glass", Material.glass, false);
 		reg(cracked_glass_pane);
 		cracked_glass = new BlockCrackedGlass(Material.glass, false);
@@ -167,7 +170,7 @@ public class TDEBlocks {
 		reg(grape_plant);
 
 		// Portals//
-		dark_portal = new BlockPortalDark().setBlockName("dark_portal");
+		dark_portal = (BlockPortalDark) new BlockPortalDark().setBlockName("dark_portal");
 		reg(dark_portal);
 		teleporter_dark = new BlockPortalDark().setBlockName("teleporter_dark");
 		reg(teleporter_dark);
