@@ -24,6 +24,7 @@ import com.thedarkera.block.BlockDarkStoneLadder;
 import com.thedarkera.block.BlockDarkStoneSlab;
 import com.thedarkera.block.BlockDarkStoneStairs;
 import com.thedarkera.block.BlockDeadGrass;
+import com.thedarkera.block.BlockDragonBoneOre;
 import com.thedarkera.block.BlockEbonyOre;
 import com.thedarkera.block.BlockGrapePlant;
 import com.thedarkera.block.BlockLamp;
@@ -68,6 +69,7 @@ public class TDEBlocks {
 	// Blocks//
 	public static Block ebony_ore;
 	public static Block orichalcum_ore;
+	public static Block dragon_bone_ore;
 	public static Block ancient_ore;
 	public static Block ancientpickaxe_ore;
 	public static Block ancientaxe_ore;
@@ -144,6 +146,8 @@ public class TDEBlocks {
 		reg(ancient_ore);
 		ebony_ore = new BlockEbonyOre();
 		reg(ebony_ore);
+		dragon_bone_ore = new BlockDragonBoneOre();
+		reg(dragon_bone_ore);
 		orichalcum_ore = new BlockOrichalcumOre();
 		reg(orichalcum_ore);
 		dark_stone_ladder = new BlockDarkStoneLadder();

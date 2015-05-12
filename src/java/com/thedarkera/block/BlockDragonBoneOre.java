@@ -4,29 +4,28 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-
 import net.minecraft.item.Item;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.init.TDETools;
+import com.thedarkera.init.TDEItems;
 
-public class BlockAncientOre extends Block {
+public class BlockDragonBoneOre extends Block {
 
-	String name = "ancient_ore";
+	String name = "dragon_bone_ore";
 
-	public BlockAncientOre() {
-		super(Material.gourd);
+	public BlockDragonBoneOre() {
+		super(Material.rock);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TheDarkEra.tabTDE);
 		setHardness(1F);
 		setResistance(5F);
 		setStepSound(soundTypeStone);
-		setHarvestLevel("pickaxe", 2);
+		setHarvestLevel("pickaxe", 4);
 	}
 
 	@Override
 	public Item getItemDropped(int meta, Random rand, int fortune) {
-		return TDETools.ancient_hoe;
+		return TDEItems.dragon_bone;
 	}
 }
