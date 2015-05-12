@@ -25,6 +25,7 @@ import com.thedarkera.block.BlockDarkStoneLadder;
 import com.thedarkera.block.BlockDarkStoneSlab;
 import com.thedarkera.block.BlockDarkStoneStairs;
 import com.thedarkera.block.BlockDeadGrass;
+import com.thedarkera.block.BlockDragonBone;
 import com.thedarkera.block.BlockDragonBoneOre;
 import com.thedarkera.block.BlockEbonyOre;
 import com.thedarkera.block.BlockGrapePlant;
@@ -249,7 +250,7 @@ public class TDEBlocks {
 
 		// Placeable items//
 		example = new FlatBlockExample();
-//        dragon_bone = new BlockDragonBone();
+        dragon_bone = new BlockDragonBone();
 	}
 
 	public static void reg(Block block) {
