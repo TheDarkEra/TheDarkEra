@@ -22,6 +22,7 @@ import com.thedarkera.item.ItemSteelIngot;
 import com.thedarkera.item.ItemWitchFeather;
 import com.thedarkera.item.food.ItemAshHopperMeat;
 import com.thedarkera.item.food.ItemGrape;
+import com.thedarkera.item.tool.ItemShout;
 import com.thedarkera.placeableitem.ItemPlaceAbleExample;
 import com.thedarkera.utils.RegUtils;
 
@@ -42,6 +43,7 @@ public class TDEItems {
 	public static Item frost_rune;
 	public static Item lightning_rune;
 	public static Item achievement_book;
+	public static Item shout;
 
 	// Ingot items//
 	public static Item steel_ingot;
@@ -93,6 +95,8 @@ public class TDEItems {
 		reg(lightning_rune);
 		achievement_book = new ItemAchievementBook();
 		reg(achievement_book);
+		shout = new ItemShout();
+		reg(shout);
 
 		// Ingot items init//
 		steel_ingot = new ItemSteelIngot();
