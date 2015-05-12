@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 
 import com.thedarkera.item.food.ItemAshHopperMeat;
 import com.thedarkera.item.food.ItemGrape;
+import com.thedarkera.item.tool.ItemShout;
 import com.thedarkera.placeableitem.ItemPlaceAbleExample;
 import com.thedarkera.utils.RegUtils;
 
@@ -24,6 +25,7 @@ public class TDEItems {
 	public static Item frost_rune;
 	public static Item lightning_rune;
 	public static Item achievement_book;
+	public static Item shout;
 	public static Item bone_and_steel;
 
 	// Ingot items//
@@ -75,7 +77,9 @@ public class TDEItems {
 		reg(lightning_rune);
 		achievement_book = new ItemAchievementBook();
 		reg(achievement_book);
-		bone_and_steel = new ItemBoneAndSteel();
+		shout = new ItemShout();
+		reg(shout);
+//		bone_and_steel = new ItemBoneAndSteel();
 		reg(bone_and_steel);
 
 		// Ingot items init//
