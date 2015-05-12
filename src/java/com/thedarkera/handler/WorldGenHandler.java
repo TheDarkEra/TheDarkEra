@@ -13,9 +13,7 @@ import net.minecraftforge.event.world.BlockEvent;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
-import com.thedarkera.world.gen.WorldGenDarkBirchTree;
 import com.thedarkera.world.gen.WorldGenGrapePlant;
-import com.thedarkera.world.gen.WorldGenWispTree;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -52,17 +50,9 @@ public class WorldGenHandler implements IWorldGenerator {
 				16, 16, 5 + random.nextInt(5), 4, 20, 60);
 		addOreSpawn(TDEBlocks.orichalcum_ore, 0, Blocks.stone, world, random,
 				x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
-		addOreSpawn(TDEBlocks.ancientpickaxe_ore, 0, Blocks.stone, world,
+		addOreSpawn(TDEBlocks.ancient_ore, 0, Blocks.stone, world,
 				random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
-		addOreSpawn(TDEBlocks.ancientaxe_ore, 0, Blocks.stone, world, random,
-				x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60); // TODO: needs
-																	// adjusting
-		addOreSpawn(TDEBlocks.ancientshovel_ore, 0, Blocks.sand, world, random,
-				x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60); // TODO: needs
-																	// adjusting
-		addOreSpawn(TDEBlocks.ancienthoe_ore, 0, Blocks.dirt, world, random, x,
-				z, 16, 16, 5 + random.nextInt(5), 4, 20, 60); // TODO: needs
-																// adjusting
+
 
 		for (int i = 0; i < 3; i++) {
 			int posX = x + random.nextInt(16);
