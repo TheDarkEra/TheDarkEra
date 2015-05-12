@@ -16,6 +16,7 @@ public class ItemBoneAndSteel extends Item {
         this.setTextureName(TheDarkEra.MODID + ":" + name);
         this.setMaxStackSize(1);
         this.setMaxDamage(35);
+        this.setCreativeTab(TheDarkEra.tabTDE);
     }
 
     public boolean onItemUse(ItemStack itemStack, EntityPlayer player, World world, int x, int y, int z, int side, float par8, float par9, float par10){

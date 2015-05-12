@@ -15,27 +15,36 @@ public class ItemDragonBone extends IPlaceableItem {
 	}
 
     @Override
-    public boolean onItemUse(ItemStack itemStack, EntityPlayer player, World world, int x, int y, int z, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_) {
+    public boolean onItemUse(ItemStack itemStack, EntityPlayer player, World world, int x, int y, int z, int side, float p_77648_8_, float p_77648_9_, float p_77648_10_) {
         int meta = world.getBlockMetadata(x, y, z);
+        int nx = x;
+        int ny = y;
+        int nz = z;
 
-        if (world.getBlock(x, y, z) == TDEBlocks.dragon_bone) {
-            if (meta < 5) {
-                world.setBlockMetadataWithNotify(x, y, z, meta + 1, 2);
-                --itemStack.stackSize;
-            }
-            if (world.getBlock(x, y +1, z) == Blocks.air && meta == 5) {
-                world.setBlock(x, y + 1, z, ItemBlock());
-                --itemStack.stackSize;
-            }
+        switch(side){
+            case 0: {ny--; break;}
+            case 1: {ny++; break;}
+            case 2: {nz--; break;}
+            case 3: {nz++; break;}
+            case 4: {nx--; break;}
+            case 5: {nx++; break;}
+        }
+
+        if (world.getBlock(x, y, z) == TDEBlocks.dragon_bone && meta < 5) {
+            world.setBlockMetadataWithNotify(x, y, z, meta + 1, 2);
+            --itemStack.stackSize;
             return true;
-        } else if (world.getBlock(x, y +1, z) == Blocks.air) {
-            world.setBlock(x, y + 1, z, ItemBlock());
+        } else if (world.getBlock(nx, ny, nz) == Blocks.air) {
+            world.setBlock(nx, ny, nz, ItemBlock());
             --itemStack.stackSize;
             return true;
         } else {
             return false;
         }
+    }
 
+    private boolean fixItemUse(ItemStack itemStack, EntityPlayer player, World world, int x, int y, int z, int side, float p_77648_8_, float p_77648_9_, float p_77648_10_){
+        return false;
     }
 
     @Override

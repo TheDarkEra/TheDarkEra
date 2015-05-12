@@ -31,13 +31,27 @@ public abstract class IPlaceableItem extends Item implements
 	}
 
 	public boolean onItemUse(ItemStack itemStack, EntityPlayer player,
-			World World, int x, int y, int z, int p_77648_7_, float p_77648_8_,
+			World World, int x, int y, int z, int side, float p_77648_8_,
 			float p_77648_9_, float p_77648_10_) {
-		if (World.getBlock(x, y + 1, z) == Blocks.air) {
+
+		int nx = x;
+		int ny = y;
+		int nz = z;
+
+		switch(side){
+			case 0: {ny--; break;}
+			case 1: {ny++; break;}
+			case 2: {nz--; break;}
+			case 3: {nz++; break;}
+			case 4: {nx--; break;}
+			case 5: {nx++; break;}
+		}
+
+		if (World.getBlock(nx, ny, nz) == Blocks.air) {
 			if (World.getBlock(x, y, z) instanceof IItemBlock) {
 				return false;
 			} else {
-				World.setBlock(x, y + 1, z, ItemBlock());
+				World.setBlock(nx, ny, nz, ItemBlock());
 				--itemStack.stackSize;
 				return true;
 			}
