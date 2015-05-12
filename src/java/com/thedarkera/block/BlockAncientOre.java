@@ -1,11 +1,11 @@
 package com.thedarkera.block;
 
-import java.util.Random;
+import java.util.ArrayList;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDETools;
@@ -26,7 +26,22 @@ public class BlockAncientOre extends Block {
 	}
 
 	@Override
-	public Item getItemDropped(int meta, Random rand, int fortune) {
-		return TDETools.ancient_hoe;
+	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
+	    ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
+	   // drops.add(new ItemStack(Items.coal, world.rand.nextInt(3) + 1)); 
+	    if (world.rand.nextFloat() < 0.1F)
+	        drops.add(new ItemStack(TDETools.ancient_wand));
+	    else if (world.rand.nextFloat() < 0.1F)
+	    	drops.add(new ItemStack(TDETools.ancient_axe));
+	    else if (world.rand.nextFloat() < 0.1F)
+	    	drops.add(new ItemStack(TDETools.ancient_hoe));
+	    else if (world.rand.nextFloat() < 0.1F)
+	    	drops.add(new ItemStack(TDETools.ancient_pickaxe));
+	    else if (world.rand.nextFloat() < 0.1F)
+	    	drops.add(new ItemStack(TDETools.ancient_shovel));
+	    else if (world.rand.nextFloat() < 0.6F)
+	    	drops.add(new ItemStack(this));
+	    return drops;
 	}
+	
 }
