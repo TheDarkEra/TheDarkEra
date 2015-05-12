@@ -1,5 +1,6 @@
 package com.thedarkera.block;
 
+import com.thedarkera.TheDarkEra;
 import net.minecraft.world.Teleporter;
 
 import java.util.ArrayList;
@@ -35,17 +36,17 @@ public class TeleporterDark extends Teleporter {
 	 * Place an entity in a nearby portal, creating one if necessary.
 	 */
 	@Override
-	public void placeInPortal(Entity par1Entity, double par2, double par4,
-			double par6, float par8) {
-		if (worldServerInstance.provider.dimensionId != 2) {
-			if (!placeInExistingPortal(par1Entity, par2, par4, par6, par8)) {
-				makePortal(par1Entity);
-				placeInExistingPortal(par1Entity, par2, par4, par6, par8);
+	public void placeInPortal(Entity entity, double x, double y,
+			double z, float f) {
+		if (worldServerInstance.provider.dimensionId != 1) {
+			if (!placeInExistingPortal(entity, x, y, z, f)) {
+				makePortal(entity);
+				placeInExistingPortal(entity, x, y, z, f);
 			}
 		} else {
-			int i = MathHelper.floor_double(par1Entity.posX);
-			int j = MathHelper.floor_double(par1Entity.posY) - 1;
-			int k = MathHelper.floor_double(par1Entity.posZ);
+			int i = MathHelper.floor_double(entity.posX);
+			int j = MathHelper.floor_double(entity.posY) - 1;
+			int k = MathHelper.floor_double(entity.posZ);
 			byte b0 = 1;
 			byte b1 = 0;
 
@@ -57,14 +58,14 @@ public class TeleporterDark extends Teleporter {
 						int i2 = k + i1 * b1 - l * b0;
 						boolean flag = j1 < 0;
 						worldServerInstance.setBlock(k1, l1, i2,
-								flag ? TDEBlocks.dark_stone : Blocks.air);
+								flag ? TDEBlocks.dragon_bone : Blocks.air, 5, 2);
 					}
 				}
 			}
 
-			par1Entity.setLocationAndAngles((double) i, (double) j, (double) k,
-					par1Entity.rotationYaw, 0.0F);
-			par1Entity.motionX = par1Entity.motionY = par1Entity.motionZ = 0.0D;
+			entity.setLocationAndAngles((double) i, (double) j, (double) k,
+					entity.rotationYaw, 0.0F);
+			entity.motionX = entity.motionY = entity.motionZ = 0.0D;
 		}
 	}
 
@@ -418,7 +419,7 @@ public class TeleporterDark extends Teleporter {
 						i4 = j2 + (i3 - 1) * l5 - k2 * k5;
 						flag = l2 < 0;
 						worldServerInstance.setBlock(k3, j3, i4,
-								flag ? TDEBlocks.dark_portal : Blocks.air);
+								flag ? TDEBlocks.dragon_bone : Blocks.air, 5, 2);
 					}
 				}
 			}
@@ -432,8 +433,8 @@ public class TeleporterDark extends Teleporter {
 					i4 = j2 + (i3 - 1) * l5;
 					flag = i3 == 0 || i3 == 3 || l2 == -1 || l2 == 3;
 					worldServerInstance.setBlock(k3, j3, i4,
-							flag ? TDEBlocks.dark_portal
-									: TDEBlocks.dark_portal, 0, 2);
+							flag ? TDEBlocks.dragon_bone
+									: TDEBlocks.dark_portal, 5, 2);
 				}
 			}
 

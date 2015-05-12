@@ -104,7 +104,7 @@ public class BlockPortalDark extends BlockPortal {
 			for (l = 0; l < 2; ++l) {
 				for (i1 = 0; i1 < 3; ++i1) {
 					par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l,
-							TDEBlocks.dark_portal, 0, 2);
+							TDEBlocks.dark_portal, 5, 2);
 				}
 			}
 
