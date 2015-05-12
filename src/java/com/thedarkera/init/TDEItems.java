@@ -79,8 +79,8 @@ public class TDEItems {
 		reg(achievement_book);
 		shout = new ItemShout();
 		reg(shout);
-//		bone_and_steel = new ItemBoneAndSteel();
-//		reg(bone_and_steel);
+		bone_and_steel = new ItemBoneAndSteel();
+		reg(bone_and_steel);
 
 		// Ingot items init//
 		steel_ingot = new ItemSteelIngot();
