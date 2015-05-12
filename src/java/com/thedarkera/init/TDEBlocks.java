@@ -1,42 +1,12 @@
 package com.thedarkera.init;
 
+import com.thedarkera.block.*;
+import com.thedarkera.item.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.block.BlockAncientAxeOre;
-import com.thedarkera.block.BlockAncientHoeOre;
-import com.thedarkera.block.BlockAncientOre;
-import com.thedarkera.block.BlockAncientPickaxeOre;
-import com.thedarkera.block.BlockAncientShovelOre;
-import com.thedarkera.block.BlockCrackedGlass;
-import com.thedarkera.block.BlockCrackedGlassPane;
-import com.thedarkera.block.BlockDarkBirchPlanks;
-import com.thedarkera.block.BlockDarkCobblestone;
-import com.thedarkera.block.BlockDarkDirt;
-import com.thedarkera.block.BlockDarkGrass;
-import com.thedarkera.block.BlockDarkStone;
-import com.thedarkera.block.BlockDarkStoneBricks;
-import com.thedarkera.block.BlockDarkStoneDirt;
-import com.thedarkera.block.BlockDarkStoneFence;
-import com.thedarkera.block.BlockDarkStoneLadder;
-import com.thedarkera.block.BlockDarkStoneSlab;
-import com.thedarkera.block.BlockDarkStoneStairs;
-import com.thedarkera.block.BlockDeadGrass;
-import com.thedarkera.block.BlockEbonyOre;
-import com.thedarkera.block.BlockGrapePlant;
-import com.thedarkera.block.BlockLamp;
-import com.thedarkera.block.BlockOrichalcumOre;
-import com.thedarkera.block.BlockPortalDark;
-import com.thedarkera.block.BlockRottenWood;
-import com.thedarkera.block.BlockRottenWoodFence;
-import com.thedarkera.block.BlockRottenWoodSlab;
-import com.thedarkera.block.BlockRottenWoodStairs;
-import com.thedarkera.block.BlockSaplings;
-import com.thedarkera.block.BlockSmasher;
-import com.thedarkera.block.BlockSmeltery;
-import com.thedarkera.block.BlockWeedyDirt;
 import com.thedarkera.block.leaves.BlockLeaf;
 import com.thedarkera.block.logs.BlockLogDarkBirch;
 import com.thedarkera.block.logs.BlockLogWisp;
@@ -44,11 +14,6 @@ import com.thedarkera.block.logs.BlockLogs1;
 import com.thedarkera.block.logs.BlockLogs2;
 import com.thedarkera.block.logs.BlockLogs3;
 import com.thedarkera.flatblocks.FlatBlockExample;
-import com.thedarkera.item.ItemLeafBlocks;
-import com.thedarkera.item.ItemLogBlocks1;
-import com.thedarkera.item.ItemLogBlocks2;
-import com.thedarkera.item.ItemLogBlocks3;
-import com.thedarkera.item.ItemSaplingBlocks;
 import com.thedarkera.utils.RegUtils;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -129,6 +94,7 @@ public class TDEBlocks {
 
 	// Placeable items//
 	public static Block example;
+	public static Block dragon_bone;
 
 	public static void init() {
 		// Blocks//
@@ -240,6 +206,7 @@ public class TDEBlocks {
 
 		// Placeable items//
 		example = new FlatBlockExample();
+        dragon_bone = new BlockDragonBone();
 	}
 
 	public static void reg(Block block) {

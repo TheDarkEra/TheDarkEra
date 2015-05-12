@@ -36,7 +36,6 @@ public class TDEItems {
 	public static Item soul_gem;
 	public static Item leather_strip;
 	public static Item daedra_heart;
-	public static Item dragon_bone;
 	public static Item dragon_scale;
 	public static Item fire_rune;
 	public static Item frost_rune;
@@ -57,6 +56,7 @@ public class TDEItems {
 
 	// Placeable items//
 	public static Item example;
+	public static Item dragon_bone;
 
 	// Plant items//
 
@@ -81,8 +81,6 @@ public class TDEItems {
 		reg(leather_strip);
 		daedra_heart = new ItemDaedraHeart();
 		reg(daedra_heart);
-		dragon_bone = new ItemDragonBone();
-		reg(dragon_bone);
 		dragon_scale = new ItemDragonScale();
 		reg(dragon_scale);
 		fire_rune = new ItemFireRune();
@@ -114,6 +112,7 @@ public class TDEItems {
 
 		// Placeable items//
 		example = new ItemPlaceAbleExample();
+		dragon_bone = new ItemDragonBone();
 	}
 
 	public static void reg(Item item) {
