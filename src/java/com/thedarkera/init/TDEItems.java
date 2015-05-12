@@ -80,7 +80,7 @@ public class TDEItems {
 		shout = new ItemShout();
 		reg(shout);
 //		bone_and_steel = new ItemBoneAndSteel();
-		reg(bone_and_steel);
+//		reg(bone_and_steel);
 
 		// Ingot items init//
 		steel_ingot = new ItemSteelIngot();
