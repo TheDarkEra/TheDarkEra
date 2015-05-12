@@ -1,8 +1,7 @@
 package com.thedarkera.ztesting;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
@@ -18,7 +17,6 @@ public class SoulBar {
 	public static void SoulBarRun(RenderGameOverlayEvent event) {
 		if (!event.isCancelable() && event.type == ElementType.EXPERIENCE) {
 			Minecraft mc = Minecraft.getMinecraft();
-
 			if (!mc.thePlayer.capabilities.isCreativeMode) {
 				int posX = event.resolution.getScaledWidth() / 2 + 10;
 				int posY = event.resolution.getScaledHeight() - 48;
