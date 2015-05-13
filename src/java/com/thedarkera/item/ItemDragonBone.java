@@ -43,10 +43,6 @@ public class ItemDragonBone extends IPlaceableItem {
         }
     }
 
-    private boolean fixItemUse(ItemStack itemStack, EntityPlayer player, World world, int x, int y, int z, int side, float p_77648_8_, float p_77648_9_, float p_77648_10_){
-        return false;
-    }
-
     @Override
 	public String getName() {
 		return "dragon_bone";

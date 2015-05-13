@@ -21,12 +21,12 @@ public class BlockPortalDark extends BlockPortal {
 	}
 
 	@Override
-	public void onEntityCollidedWithBlock(World par1World, int par2, int par3,
-			int par4, Entity par5Entity) {
-		if ((par5Entity.ridingEntity == null)
-				&& (par5Entity.riddenByEntity == null)
-				&& ((par5Entity instanceof EntityPlayerMP))) {
-			EntityPlayerMP player = (EntityPlayerMP) par5Entity;
+	public void onEntityCollidedWithBlock(World world, int x, int y,
+			int z, Entity entity) {
+		if ((entity.ridingEntity == null)
+				&& (entity.riddenByEntity == null)
+				&& ((entity instanceof EntityPlayerMP))) {
+			EntityPlayerMP player = (EntityPlayerMP) entity;
 
 			MinecraftServer mServer = MinecraftServer.getServer();
 
@@ -55,110 +55,95 @@ public class BlockPortalDark extends BlockPortal {
 	}
 
 	@Override
-	public boolean func_150000_e(World par1World, int par2, int par3, int par4) {
-		byte b0 = 0;
+	public boolean func_150000_e(World world, int x, int y, int z) {
+		byte b = 0;
 		byte b1 = 0;
 
-		if (par1World.getBlock(par2 - 1, par3, par4) == TDEBlocks.dragon_bone
-				|| par1World.getBlock(par2 + 1, par3, par4) == TDEBlocks.dragon_bone) {
-			b0 = 1;
-		}
+		if(world.getBlock(x-1, y, z) == TDEBlocks.dragon_bone || world.getBlock(x+1, y, z) == TDEBlocks.dragon_bone) b = 1;
 
-		if (par1World.getBlock(par2, par3, par4 - 1) == TDEBlocks.dragon_bone
-				|| par1World.getBlock(par2, par3, par4 + 1) == TDEBlocks.dragon_bone) {
-			b1 = 1;
-		}
+		if(world.getBlock(x, y, z-1) == TDEBlocks.dragon_bone || world.getBlock(x, y, z+1) == TDEBlocks.dragon_bone) b1 = 1;
 
-		if (b0 == b1) {
-			return false;
-		} else {
-			if (par1World.isAirBlock(par2 - b0, par3, par4 - b1)) {
-				par2 -= b0;
-				par4 -= b1;
+		if(b == b1) return false;
+		else{
+			if(world.isAirBlock(x-b, y, z-b1)){
+				x-=b;
+				z-=b1;
 			}
 
-			int l;
-			int i1;
+			for(int i = -1; i <= 2; i++){
+				for(int j = -1; j <=3; j++){
+					boolean flag = (i == -1 || i == 2 || j == -1 || j == 3);
 
-			for (l = -1; l <= 2; ++l) {
-				for (i1 = -1; i1 <= 3; ++i1) {
-					boolean flag = l == -1 || l == 2 || i1 == -1 || i1 == 3;
+					if(i != -1 && i != 2 || j != -1 && j != 3){
+						Block k = world.getBlock(x + (b*i), y+j, z+(b1*i));
+						boolean isAirBlock = world.isAirBlock(x + b * i, y + j, z + b1 * i);
 
-					if (l != -1 && l != 2 || i1 != -1 && i1 != 3) {
-						Block j1 = par1World.getBlock(par2 + b0 * l, par3 + i1,
-								par4 + b1 * l);
-						boolean isAirBlock = par1World.isAirBlock(
-								par2 + b0 * l, par3 + i1, par4 + b1 * l);
-
-						if (flag) {
-							if (j1 != TDEBlocks.dragon_bone) {
-								return false;
-							}
-						} else if (!isAirBlock && j1 != TDEBlocks.dark_fire) {
+						if(flag){
+							if(k != TDEBlocks.dragon_bone) return false;
+						}else if(!isAirBlock && k != TDEBlocks.dark_fire){
 							return false;
 						}
 					}
 				}
 			}
-
-			for (l = 0; l < 2; ++l) {
-				for (i1 = 0; i1 < 3; ++i1) {
-					par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l,
-							TDEBlocks.dark_portal, 0, 2);
+			for(int l = 0; l < 2; l++){
+				for(int l2 = 0; l2 < 3; l2++){
+					world.setBlock(x + b * l, y + l2, z + b1 * l, TDEBlocks.dark_portal, 0, 2);
 				}
 			}
 
 			return true;
+
 		}
 	}
 
 	@Override
-	public void onNeighborBlockChange(World par1World, int par2, int par3,
-			int par4, Block par5) {
+	public void onNeighborBlockChange(World world, int x, int y,
+			int z, Block neighborBlock) {
 		byte b0 = 0;
 		byte b1 = 1;
 
-		if (par1World.getBlock(par2 - 1, par3, par4) == this
-				|| par1World.getBlock(par2 + 1, par3, par4) == this) {
+		if (world.getBlock(x - 1, y, z) == this
+				|| world.getBlock(x + 1, y, z) == this) {
 			b0 = 1;
 			b1 = 0;
 		}
 
 		int i1;
 
-		for (i1 = par3; par1World.getBlock(par2, i1 - 1, par4) == this; --i1) {
+		for (i1 = y; world.getBlock(x, i1 - 1, z) == this; --i1) {
 			;
 		}
 
-		if (par1World.getBlock(par2, i1 - 1, par4) != TDEBlocks.dragon_bone) {
-			par1World.setBlockToAir(par2, par3, par4);
+		if (world.getBlock(x, i1 - 1, z) != TDEBlocks.dragon_bone) {
+			world.setBlockToAir(x, y, z);
 		} else {
 			int j1;
 
 			for (j1 = 1; j1 < 4
-					&& par1World.getBlock(par2, i1 + j1, par4) == this; ++j1) {
+					&& world.getBlock(x, i1 + j1, z) == this; ++j1) {
 				;
 			}
 
 			if (j1 == 3
-					&& par1World.getBlock(par2, i1 + j1, par4) == TDEBlocks.dragon_bone) {
-				boolean flag = par1World.getBlock(par2 - 1, par3, par4) == this
-						|| par1World.getBlock(par2 + 1, par3, par4) == this;
-				boolean flag1 = par1World.getBlock(par2, par3, par4 - 1) == this
-						|| par1World.getBlock(par2, par3, par4 + 1) == this;
+					&& world.getBlock(x, i1 + j1, z) == TDEBlocks.dragon_bone) {
+				boolean flag = world.getBlock(x - 1, y, z) == this
+						|| world.getBlock(x + 1, y, z) == this;
+				boolean flag1 = world.getBlock(x, y, z - 1) == this
+						|| world.getBlock(x, y, z + 1) == this;
 
 				if (flag && flag1) {
-					par1World.setBlockToAir(par2, par3, par4);
+					world.setBlockToAir(x, y, z);
 				} else {
-					if ((par1World.getBlock(par2 + b0, par3, par4 + b1) != TDEBlocks.dragon_bone || par1World
-							.getBlock(par2 - b0, par3, par4 - b1) != this)
-							&& (par1World.getBlock(par2 - b0, par3, par4 - b1) != TDEBlocks.dragon_bone || par1World
-									.getBlock(par2 + b0, par3, par4 + b1) != this)) {
-						par1World.setBlockToAir(par2, par3, par4);
+					if ((world.getBlock(x + b0, y, z + b1) != TDEBlocks.dragon_bone || world
+							.getBlock(x - b0, y, z - b1) != this)
+							&& (world.getBlock(x - b0, y, z - b1) != TDEBlocks.dragon_bone || world
+									.getBlock(x + b0, y, z + b1) != this)) {
+						world.setBlockToAir(x, y, z);
 					}
 				}
 			} else {
-				par1World.setBlockToAir(par2, par3, par4);
+				world.setBlockToAir(x, y, z);
 			}
 		}
 	}
