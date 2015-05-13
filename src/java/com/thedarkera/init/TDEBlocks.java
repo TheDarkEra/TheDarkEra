@@ -79,7 +79,7 @@ public class TDEBlocks {
 	public static Block teleporter_dark;
 	public static Block smasher;
 	public static Block dark_birch_planks;
-	public static Block dark_fire;
+	public static BlockDarkFire dark_fire;
 	
 	public static Block dark_diamond_ore;
 	public static Block dark_emerald_ore;
@@ -239,6 +239,8 @@ public class TDEBlocks {
 		// Placeable items//
 		example = new FlatBlockExample();
         dragon_bone = new BlockDragonBone();
+
+        BlockDarkFire.func_149843_e();
 	}
 
 	public static void reg(Block block) {

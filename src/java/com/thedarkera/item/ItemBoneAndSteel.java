@@ -21,12 +21,12 @@ public class ItemBoneAndSteel extends Item {
 
     public boolean onItemUse(ItemStack itemStack, EntityPlayer player, World world, int x, int y, int z, int side, float par8, float par9, float par10){
         switch(side){
-            case 0: y--;
-            case 1: y++;
-            case 2: z--;
-            case 3: z++;
-            case 4: x--;
-            case 5: x++;
+            case 0: {y--; break;}
+            case 1: {y++; break;}
+            case 2: {z--; break;}
+            case 3: {z++; break;}
+            case 4: {x--; break;}
+            case 5: {x++; break;}
         }
 
         if(!player.canPlayerEdit(x, y, z, side, itemStack)){
