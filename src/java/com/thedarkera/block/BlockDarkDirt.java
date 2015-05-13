@@ -17,11 +17,10 @@ public class BlockDarkDirt extends Block { // BlockDirt
 		setHarvestLevel("shovel", 0);
 	}
 	
-	
 	/**
      * Get the block's damage value (for use with pick block).
      */
-    public int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_)
+/*    public int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_)
     {
         int l = p_149643_1_.getBlockMetadata(p_149643_2_, p_149643_3_, p_149643_4_);
 
@@ -31,10 +30,5 @@ public class BlockDarkDirt extends Block { // BlockDirt
         }
 
         return l;
-    }
-	
-	
-	
-	
-
+    }*/
 }
