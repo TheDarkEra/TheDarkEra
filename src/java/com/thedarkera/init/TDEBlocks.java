@@ -5,11 +5,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.block.BlockAncientAxeOre;
-import com.thedarkera.block.BlockAncientHoeOre;
 import com.thedarkera.block.BlockAncientOre;
-import com.thedarkera.block.BlockAncientPickaxeOre;
-import com.thedarkera.block.BlockAncientShovelOre;
 import com.thedarkera.block.BlockCrackedGlass;
 import com.thedarkera.block.BlockCrackedGlassPane;
 import com.thedarkera.block.BlockDarkBirchPlanks;
@@ -138,16 +134,8 @@ public class TDEBlocks {
 
 	public static void init() {
 		// Blocks//
-		ancientpickaxe_ore = new BlockAncientPickaxeOre();
-		reg(ancientpickaxe_ore);
-		ancientaxe_ore = new BlockAncientAxeOre();
-		reg(ancientaxe_ore);
-		ancientshovel_ore = new BlockAncientShovelOre();
-		reg(ancientshovel_ore);
 		dragon_bone_ore = new BlockDragonBoneOre();
 		reg(dragon_bone_ore);
-		ancienthoe_ore = new BlockAncientHoeOre();
-		reg(ancienthoe_ore);
 		ancient_ore = new BlockAncientOre();
 		reg(ancient_ore);
 		ebony_ore = new BlockEbonyOre();
