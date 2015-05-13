@@ -11,6 +11,8 @@ import net.minecraftforge.event.entity.player.UseHoeEvent;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEBlocks;
+import com.thedarkera.ztesting.SoulBar;
+import com.thedarkera.ztesting.UseShout;
 
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.relauncher.Side;
