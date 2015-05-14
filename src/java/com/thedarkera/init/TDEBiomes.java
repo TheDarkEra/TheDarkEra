@@ -5,7 +5,6 @@ import net.minecraftforge.common.BiomeManager;
 
 import com.thedarkera.world.biome.BiomeDarkForrest;
 import com.thedarkera.world.biome.BiomeDarkLand;
-import com.thedarkera.world.biome.TestBiome;
 
 public class TDEBiomes {
 
@@ -22,8 +21,6 @@ public class TDEBiomes {
 		BiomeManager.addSpawnBiome(dark_land);
 		dark_forrest = (new BiomeDarkForrest(53)).setColor(9286496).setBiomeName("dark_forrest");
 		BiomeManager.addSpawnBiome(dark_forrest);
-		test_biome = (new TestBiome(54)).setColor(9286496).setBiomeName("test_biome");
-		BiomeManager.addSpawnBiome(test_biome);
 
 
 	}
