@@ -5,50 +5,48 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.block.BlockAncientOre;
-import com.thedarkera.block.BlockCrackedGlass;
-import com.thedarkera.block.BlockCrackedGlassPane;
-import com.thedarkera.block.BlockDarkBirchPlanks;
-import com.thedarkera.block.BlockDarkCobblestone;
-import com.thedarkera.block.BlockDarkDirt;
-import com.thedarkera.block.BlockDarkFire;
-import com.thedarkera.block.BlockDarkGrass;
-import com.thedarkera.block.BlockDarkOre;
-import com.thedarkera.block.BlockDarkStone;
-import com.thedarkera.block.BlockDarkStoneBricks;
-import com.thedarkera.block.BlockDarkStoneDirt;
-import com.thedarkera.block.BlockDarkStoneFence;
-import com.thedarkera.block.BlockDarkStoneLadder;
-import com.thedarkera.block.BlockDarkStoneSlab;
-import com.thedarkera.block.BlockDarkStoneStairs;
-import com.thedarkera.block.BlockDeadGrass;
-import com.thedarkera.block.BlockDragonBone;
-import com.thedarkera.block.BlockDragonBoneOre;
-import com.thedarkera.block.BlockEbonyOre;
-import com.thedarkera.block.BlockGrapePlant;
-import com.thedarkera.block.BlockLamp;
-import com.thedarkera.block.BlockOrichalcumOre;
-import com.thedarkera.block.BlockPortalDark;
-import com.thedarkera.block.BlockRottenWood;
-import com.thedarkera.block.BlockRottenWoodFence;
-import com.thedarkera.block.BlockRottenWoodSlab;
-import com.thedarkera.block.BlockRottenWoodStairs;
-import com.thedarkera.block.BlockSaplings;
-import com.thedarkera.block.BlockSmasher;
-import com.thedarkera.block.BlockSmeltery;
-import com.thedarkera.block.BlockWeedyDirt;
 import com.thedarkera.block.leaves.BlockLeaf;
-import com.thedarkera.block.logs.BlockLogDarkBirch;
-import com.thedarkera.block.logs.BlockLogWisp;
 import com.thedarkera.block.logs.BlockLogs1;
 import com.thedarkera.block.logs.BlockLogs2;
 import com.thedarkera.block.logs.BlockLogs3;
-import com.thedarkera.flatblocks.FlatBlockExample;
-import com.thedarkera.item.ItemLeafBlocks;
-import com.thedarkera.item.ItemLogBlocks1;
-import com.thedarkera.item.ItemLogBlocks2;
-import com.thedarkera.item.ItemLogBlocks3;
-import com.thedarkera.item.ItemSaplingBlocks;
+import com.thedarkera.ingameobjects.block.BlockAncientOre;
+import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
+import com.thedarkera.ingameobjects.block.BlockCrackedGlassPane;
+import com.thedarkera.ingameobjects.block.BlockDarkBirchPlanks;
+import com.thedarkera.ingameobjects.block.BlockDarkCobblestone;
+import com.thedarkera.ingameobjects.block.BlockDarkDirt;
+import com.thedarkera.ingameobjects.block.BlockDarkFire;
+import com.thedarkera.ingameobjects.block.BlockDarkGrass;
+import com.thedarkera.ingameobjects.block.BlockDarkOre;
+import com.thedarkera.ingameobjects.block.BlockDarkStone;
+import com.thedarkera.ingameobjects.block.BlockDarkStoneBricks;
+import com.thedarkera.ingameobjects.block.BlockDarkStoneDirt;
+import com.thedarkera.ingameobjects.block.BlockDarkStoneFence;
+import com.thedarkera.ingameobjects.block.BlockDarkStoneLadder;
+import com.thedarkera.ingameobjects.block.BlockDarkStoneSlab;
+import com.thedarkera.ingameobjects.block.BlockDarkStoneStairs;
+import com.thedarkera.ingameobjects.block.BlockDeadGrass;
+import com.thedarkera.ingameobjects.block.BlockDragonBone;
+import com.thedarkera.ingameobjects.block.BlockDragonBoneOre;
+import com.thedarkera.ingameobjects.block.BlockEbonyOre;
+import com.thedarkera.ingameobjects.block.BlockGrapePlant;
+import com.thedarkera.ingameobjects.block.BlockLamp;
+import com.thedarkera.ingameobjects.block.BlockOrichalcumOre;
+import com.thedarkera.ingameobjects.block.BlockPortalDark;
+import com.thedarkera.ingameobjects.block.BlockRottenWood;
+import com.thedarkera.ingameobjects.block.BlockRottenWoodFence;
+import com.thedarkera.ingameobjects.block.BlockRottenWoodSlab;
+import com.thedarkera.ingameobjects.block.BlockRottenWoodStairs;
+import com.thedarkera.ingameobjects.block.BlockSaplings;
+import com.thedarkera.ingameobjects.block.BlockSmasher;
+import com.thedarkera.ingameobjects.block.BlockSmeltery;
+import com.thedarkera.ingameobjects.block.BlockWeedyDirt;
+import com.thedarkera.ingameobjects.flatblocks.FlatBlockExample;
+import com.thedarkera.ingameobjects.item.ItemLeafBlocks;
+import com.thedarkera.ingameobjects.item.ItemLogBlocks1;
+import com.thedarkera.ingameobjects.item.ItemLogBlocks2;
+import com.thedarkera.ingameobjects.item.ItemLogBlocks3;
+import com.thedarkera.ingameobjects.item.ItemSaplingBlocks;
 import com.thedarkera.utils.RegUtils;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -118,9 +116,6 @@ public class TDEBlocks {
 	public static Block blockLog3;
 
 	public static Block block_leaves;
-
-	public static Block dark_birch_log;
-	public static Block wisp_log;
 
 	// Placeable items//
 	public static Block example;
@@ -207,13 +202,6 @@ public class TDEBlocks {
 		reg(dark_gravel);
 		weedy_dirt = new BlockWeedyDirt("weedy_dirt");
 		reg(weedy_dirt);
-
-		// Tree blocks//
-		dark_birch_log = new BlockLogDarkBirch();
-		reg(dark_birch_log);
-
-		wisp_log = new BlockLogWisp();
-		reg(wisp_log);
 
 		blockLog1 = new BlockLogs1().setBlockName("log1").setCreativeTab(TheDarkEra.tabTDE);
 		GameRegistry.registerBlock(blockLog1, ItemLogBlocks1.class, blockLog1.getUnlocalizedName().substring(5));

@@ -22,6 +22,7 @@ public class BiomeDarkForrest extends BiomeGenBase {
 
 	public BiomeDarkForrest(int biomeID) {
 		super(biomeID);
+		this.setColor(0x000014);
 		topBlock = TDEBlocks.dark_grass;
 		fillerBlock = TDEBlocks.dark_dirt;
 		// bottomBlock = TDEBlocks.dark_stone; TODO: This might mean making our
@@ -37,6 +38,7 @@ public class BiomeDarkForrest extends BiomeGenBase {
 		this.WorldGenDeadTrees = new WorldGenDeadTrees(false);
 		this.WorldGenLakes = new WorldGenLiquids(Blocks.water);
 	}
+
 
 	// @Override
 	// public void decorate(World world, Random rand, int chunkX, int chunkZ) {

@@ -72,7 +72,7 @@ public class TDEChunkProvider implements IChunkProvider {
 	private MapGenVillage villageGenerator = new MapGenVillage();
 	private MapGenMineshaft mineshaftGenerator = new MapGenMineshaft();
 	private MapGenScatteredFeature scatteredFeatureGenerator = new MapGenScatteredFeature();
-	private MapGenBase ravineGenerator = new MapGenRavineTDE();//TODO
+	private MapGenBase ravineGenerator = new MapGenRavineTDE();// TODO
 	private BiomeGenBase[] biomesForGeneration;
 	double[] d1;
 	double[] d2;
@@ -83,7 +83,7 @@ public class TDEChunkProvider implements IChunkProvider {
 	{
 		caveGenerator = TerrainGen.getModdedMapGen(caveGenerator, CAVE);
 		strongholdGenerator = (MapGenStronghold) TerrainGen.getModdedMapGen(strongholdGenerator, STRONGHOLD);
-		villageGenerator = (MapGenVillage) TerrainGen.getModdedMapGen(villageGenerator,  VILLAGE);
+		villageGenerator = (MapGenVillage) TerrainGen.getModdedMapGen(villageGenerator, VILLAGE);
 		mineshaftGenerator = (MapGenMineshaft) TerrainGen.getModdedMapGen(mineshaftGenerator, MINESHAFT);
 		scatteredFeatureGenerator = (MapGenScatteredFeature) TerrainGen.getModdedMapGen(scatteredFeatureGenerator, SCATTERED_FEATURE);
 		ravineGenerator = TerrainGen.getModdedMapGen(ravineGenerator, RAVINE);
@@ -386,13 +386,21 @@ public class TDEChunkProvider implements IChunkProvider {
 		int l1;
 		int i2;
 
-		if (biomegenbase != BiomeGenBase.desert && biomegenbase != BiomeGenBase.desertHills && !flag && this.rand.nextInt(4) == 0
-				&& TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAKE)) {
+		if (biomegenbase != BiomeGenBase.desert && biomegenbase != BiomeGenBase.desertHills && !flag && this.rand.nextInt(4) == 0 && TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAKE)) {
 			k1 = k + this.rand.nextInt(16) + 8;
 			l1 = this.rand.nextInt(256);
 			i2 = l + this.rand.nextInt(16) + 8;
 			(new WorldGenLakesTDE(Blocks.water)).generate(this.worldObj, this.rand, k1, l1, i2);
-			(new WorldGenDeadTree()).generate(worldObj, rand, k1, l1, i2);
+		}
+		for (int j = 0; j < 4; j++) {
+			for (int i = 0; i < 2 + rand.nextInt(5); i++) {
+				if (biomegenbase != BiomeGenBase.desert && biomegenbase != BiomeGenBase.desertHills && !flag && this.rand.nextInt(4) == 0 && TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAKE)) {
+					k1 = k + this.rand.nextInt(16) + 8;
+					l1 = this.rand.nextInt(256);
+					i2 = l + this.rand.nextInt(16) + 8;
+					(new WorldGenDeadTree()).generate(worldObj, rand, k1, l1, i2);
+				}
+			}
 		}
 
 		if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAVA) && !flag && this.rand.nextInt(8) == 0) {
@@ -435,67 +443,7 @@ public class TDEChunkProvider implements IChunkProvider {
 			}
 
 		}
-		// BASIC TREES
-		int var4 = par2 * 16;
-		int var5 = par3 * 16;
-//		for (int d = 10; d > 0; d--) {
-//			for (int c = 6; c > 0; c--) {
-//				int j2 = var4 + rand.nextInt(16) + 8;
-//				int l3 = rand.nextInt(120);
-//				int j5 = var5 + rand.nextInt(16) + 8;
-//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass))
-//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-//			}
-//			for (int c = 50; c > 0; c--) {
-//				int j2 = var4 + rand.nextInt(16) + 8;
-//				int l3 = rand.nextInt(120);
-//				int j5 = var5 + rand.nextInt(16) + 8;
-//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
-//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-//				}
-//			}
-//			for (int c = 50; c > 0; c--) {
-//				int j2 = var4 + rand.nextInt(16) + 8;
-//				int l3 = rand.nextInt(120);
-//				int j5 = var5 + rand.nextInt(16) + 8;
-//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
-//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-//				}
-//			}
-//			for (int c = 50; c > 0; c--) {
-//				int j2 = var4 + rand.nextInt(16) + 8;
-//				int l3 = rand.nextInt(120);
-//				int j5 = var5 + rand.nextInt(16) + 8;
-//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
-//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-//				}
-//			}
-//			for (int c = 50; c > 0; c--) {
-//				int j2 = var4 + rand.nextInt(16) + 8;
-//				int l3 = rand.nextInt(120);
-//				int j5 = var5 + rand.nextInt(16) + 8;
-//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
-//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-//				}
-//			}
-//			for (int c = 60; c > 0; c--) {
-//				int j2 = var4 + rand.nextInt(16) + 8;
-//				int l3 = rand.nextInt(120);
-//				int j5 = var5 + rand.nextInt(16) + 8;
-//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
-//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-//				}
-//			}
-//			// Forest Trees
-//			for (int c = 60; c > 0; c--) {
-//				int j2 = var4 + rand.nextInt(16) + 8;
-//				int l3 = rand.nextInt(120);
-//				int j5 = var5 + rand.nextInt(16) + 8;
-//				if ((worldObj.getBlock(j2, l3, j5) == null) && (worldObj.getBlock(j2, l3 - 1, j5) == TDEBlocks.dark_grass)) {
-//					new WorldGenDeadTree().generate(worldObj, rand, j2, l3, j5);
-//				}
-//			}
-//		}
+
 		MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Post(par1IChunkProvider, worldObj, rand, par2, par3, flag));
 
 		BlockFalling.fallInstantly = false;
@@ -546,8 +494,7 @@ public class TDEChunkProvider implements IChunkProvider {
 	@SuppressWarnings("rawtypes")
 	public List getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int par2, int par3, int par4) {
 		BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(par2, par4);
-		return par1EnumCreatureType == EnumCreatureType.monster && this.scatteredFeatureGenerator.func_143030_a(par2, par3, par4) ? this.scatteredFeatureGenerator.getScatteredFeatureSpawnList()
-				: biomegenbase.getSpawnableList(par1EnumCreatureType);
+		return par1EnumCreatureType == EnumCreatureType.monster && this.scatteredFeatureGenerator.func_143030_a(par2, par3, par4) ? this.scatteredFeatureGenerator.getScatteredFeatureSpawnList() : biomegenbase.getSpawnableList(par1EnumCreatureType);
 	}
 
 	public ChunkPosition func_147416_a(World p_147416_1_, String p_147416_2_, int p_147416_3_, int p_147416_4_, int p_147416_5_) {

@@ -19,18 +19,17 @@ public class EnterBiomeHandler {
 		EntityPlayer player = event.player;
 		int x = (int) player.posX;
 		int z = (int) player.posZ;
+		String x1 = ""+x;
+		String z1 = ""+z;
+		player.addChatMessage(new ChatComponentText(x1 + " _ " + z1));
 		BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(x, z);
 
 		if (biome == TDEBiomes.dark_land) {
-			player.addChatMessage(new ChatComponentText(
-					EnumChatFormatting.DARK_GRAY
-							+ "You entered the Dark Land biome"));
+			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Land biome"));
 
 		}
 		if (biome == TDEBiomes.dark_forrest) {
-			player.addChatMessage(new ChatComponentText(
-					EnumChatFormatting.DARK_GRAY
-							+ "You entered the Dark Forrest biome"));
+			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Forrest biome"));
 
 		}
 	}

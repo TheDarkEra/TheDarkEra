@@ -6,7 +6,7 @@ import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-import com.thedarkera.tileentity.TESmeltery;
+import com.thedarkera.ingameobjects.tileentity.TESmeltery;
 
 public class ContainerSmeltery extends Container {
 	private TESmeltery te;

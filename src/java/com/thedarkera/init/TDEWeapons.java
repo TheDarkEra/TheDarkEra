@@ -3,13 +3,13 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 
-import com.thedarkera.item.weapon.ItemDaedricArrow;
-import com.thedarkera.item.weapon.ItemDaedricBow;
-import com.thedarkera.item.weapon.ItemDragonArrow;
-import com.thedarkera.item.weapon.ItemDragonBow;
-import com.thedarkera.item.weapon.ItemModDagger;
-import com.thedarkera.item.weapon.ItemModMace;
-import com.thedarkera.item.weapon.ItemModSword;
+import com.thedarkera.ingameobjects.item.weapon.ItemDaedricArrow;
+import com.thedarkera.ingameobjects.item.weapon.ItemDaedricBow;
+import com.thedarkera.ingameobjects.item.weapon.ItemDragonArrow;
+import com.thedarkera.ingameobjects.item.weapon.ItemDragonBow;
+import com.thedarkera.ingameobjects.item.weapon.ItemModDagger;
+import com.thedarkera.ingameobjects.item.weapon.ItemModMace;
+import com.thedarkera.ingameobjects.item.weapon.ItemModSword;
 import com.thedarkera.utils.RegUtils;
 
 public class TDEWeapons {

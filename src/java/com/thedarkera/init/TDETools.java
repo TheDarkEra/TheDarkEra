@@ -3,11 +3,11 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 
-import com.thedarkera.item.tool.ItemModAxe;
-import com.thedarkera.item.tool.ItemModHoe;
-import com.thedarkera.item.tool.ItemModPickaxe;
-import com.thedarkera.item.tool.ItemModSpade;
-import com.thedarkera.item.tool.ItemWand;
+import com.thedarkera.ingameobjects.item.tool.ItemModAxe;
+import com.thedarkera.ingameobjects.item.tool.ItemModHoe;
+import com.thedarkera.ingameobjects.item.tool.ItemModPickaxe;
+import com.thedarkera.ingameobjects.item.tool.ItemModSpade;
+import com.thedarkera.ingameobjects.item.tool.ItemWand;
 import com.thedarkera.utils.RegUtils;
 
 public class TDETools {

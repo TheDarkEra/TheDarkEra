@@ -11,6 +11,9 @@ import org.apache.logging.log4j.Logger;
 import org.lwjgl.input.Keyboard;
 
 import com.thedarkera.handler.EnterBiomeHandler;
+import com.thedarkera.handler.Events;
+import com.thedarkera.handler.KeyInputHandler;
+import com.thedarkera.handler.TDEKeyBindings;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBiomes;
@@ -20,11 +23,8 @@ import com.thedarkera.init.TDERecipes;
 import com.thedarkera.init.TDETools;
 import com.thedarkera.init.TDEWeapons;
 import com.thedarkera.proxy.CommonProxy;
-import com.thedarkera.updatechecker.UpdateChecker;
-import com.thedarkera.utils.Events;
+import com.thedarkera.utils.UpdateChecker;
 import com.thedarkera.world.TDEWorldProvider;
-import com.thedarkera.ztesting.KeyInputHandler;
-import com.thedarkera.ztesting.TDEKeyBindings;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -35,7 +35,10 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = TheDarkEra.MODID, name = TheDarkEra.NAME, version = TheDarkEra.VERSION)
 public class TheDarkEra {
@@ -49,12 +52,12 @@ public class TheDarkEra {
 
 	@Mod.Instance("TheDarkEra")
 	public static TheDarkEra instance;
+	public static SimpleNetworkWrapper network;
 
 	WorldGenHandler worldGenHandler = new WorldGenHandler();
 
 	@SidedProxy(clientSide = "com.thedarkera.proxy.ClientProxy", serverSide = "com.thedarkera.proxy.CommonProxy")
 	public static CommonProxy proxy;
-
 	public static Logger logger;
 
 	@SubscribeEvent
@@ -63,7 +66,6 @@ public class TheDarkEra {
 			event.player.addChatComponentMessage(new ChatComponentText("TheDarkEra is oudated"));
 		}
 	}
-
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		logger = event.getModLog();
@@ -80,7 +82,7 @@ public class TheDarkEra {
 		TDEWeapons.init();
 		TDEBiomes.init();
 		TDEKeyBindings.init();
-		
+
 		FMLCommonHandler.instance().bus().register(new KeyInputHandler());
 
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
@@ -123,7 +125,7 @@ public class TheDarkEra {
 	public enum GuiID {
 		SMASHER, SMELTERY
 	}
-	
+
 }
 
 /*

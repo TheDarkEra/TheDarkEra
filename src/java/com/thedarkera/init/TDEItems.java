@@ -1,11 +1,12 @@
 package com.thedarkera.init;
 
-import com.thedarkera.item.*;
+import com.thedarkera.ingameobjects.item.*;
+import com.thedarkera.ingameobjects.item.food.ItemAshHopperMeat;
+import com.thedarkera.ingameobjects.item.food.ItemGrape;
+import com.thedarkera.ingameobjects.item.tool.ItemShout;
+
 import net.minecraft.item.Item;
 
-import com.thedarkera.item.food.ItemAshHopperMeat;
-import com.thedarkera.item.food.ItemGrape;
-import com.thedarkera.item.tool.ItemShout;
 import com.thedarkera.placeableitem.ItemPlaceAbleExample;
 import com.thedarkera.utils.RegUtils;
 

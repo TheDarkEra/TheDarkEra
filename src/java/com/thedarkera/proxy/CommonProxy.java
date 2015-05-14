@@ -2,7 +2,7 @@ package com.thedarkera.proxy;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.handler.GuiHandler;
-import com.thedarkera.tileentity.*;
+import com.thedarkera.ingameobjects.tileentity.*;
 
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;

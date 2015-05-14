@@ -12,7 +12,7 @@ import net.minecraft.init.Blocks;
 
 public class UseShout {
 
-	public static void CostMana(int manaCost, int x, int y, int z) {
+	public static boolean CostMana(int manaCost, int x, int y, int z) {
 //		EntityClientPlayerMP player = Minecraft.getMinecraft().thePlayer;
 		System.out.println(x + ", " + y + ", " + z);
 		WorldClient world = Minecraft.getMinecraft().theWorld;
@@ -39,11 +39,17 @@ public class UseShout {
 			double motionX = rand.nextGaussian() * 0.02D;
 			double motionY = rand.nextGaussian() * 0.02D;
 			double motionZ = rand.nextGaussian() * 0.02D;
-			world.spawnParticle("happyVillager", x + rand.nextFloat() * 1 * 2.0F - 1, y + 0.5D + rand.nextFloat() * 1, z + rand.nextFloat() * 1 * 2.0F - 1, motionX, motionY, motionZ);
-			Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 11f, 141f, 148f));
+		    if(world.isRemote) {
+				world.spawnParticle("happyVillager", x + rand.nextFloat() * 1 * 2.0F - 1, y + 0.5D + rand.nextFloat() * 1, z + rand.nextFloat() * 1 * 2.0F - 1, motionX, motionY, motionZ);
+				Minecraft.getMinecraft().effectRenderer.addEffect(new EntityTreeFX(world, d0, d1, d2, d3, d4, d5, 11f, 141f, 148f));
+				return false;
+		    }
+
 			world.setBlock(x, y, z, Blocks.bedrock);
 			System.out.println(player.posX  +" POSX");
+			world.markBlockForUpdate(x, y, z);
 //		}
+			return true;
 
 	}
 	public static void Shout(int manaCost, int x, int y, int z){

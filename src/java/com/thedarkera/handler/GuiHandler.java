@@ -5,9 +5,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra.GuiID;
-import com.thedarkera.gui.GuiSmeltery;
+import com.thedarkera.client.gui.GuiSmeltery;
+import com.thedarkera.ingameobjects.tileentity.TESmeltery;
 import com.thedarkera.inventory.ContainerSmeltery;
-import com.thedarkera.tileentity.TESmeltery;
 
 import cpw.mods.fml.common.network.IGuiHandler;
 
