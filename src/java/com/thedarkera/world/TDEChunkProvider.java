@@ -18,6 +18,9 @@ import java.util.Random;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
 
+import com.thedarkera.world.gen.MapGenCavesTDE;
+import com.thedarkera.world.gen.MapGenRavineTDE;
+import com.thedarkera.world.gen.feature.WorldGenLakesTDE;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.entity.EnumCreatureType;
@@ -64,12 +67,12 @@ public class TDEChunkProvider implements IChunkProvider {
 	private final double[] d0;
 	private final float[] parabolicField;
 	private double[] stoneNoise = new double[256];
-	private MapGenBase caveGenerator = new MapGenCaves();
+	private MapGenBase caveGenerator = new MapGenCavesTDE();
 	private MapGenStronghold strongholdGenerator = new MapGenStronghold();
 	private MapGenVillage villageGenerator = new MapGenVillage();
 	private MapGenMineshaft mineshaftGenerator = new MapGenMineshaft();
 	private MapGenScatteredFeature scatteredFeatureGenerator = new MapGenScatteredFeature();
-	private MapGenBase ravineGenerator = new MapGenRavine();
+	private MapGenBase ravineGenerator = new MapGenRavineTDE();//TODO
 	private BiomeGenBase[] biomesForGeneration;
 	double[] d1;
 	double[] d2;
@@ -77,14 +80,14 @@ public class TDEChunkProvider implements IChunkProvider {
 	double[] d4;
 	int[][] i0 = new int[32][32];
 
-	/*{ TODO
-		caveGenerator = TerrainGen.getModdedMapGen(caveGenerator, DARKCAVE);
-		strongholdGenerator = (MapGenStronghold) TerrainGen.getModdedMapGen(strongholdGenerator, DARKSTRONGHOLD);
-		villageGenerator = (MapGenVillage) TerrainGen.getModdedMapGen(villageGenerator, DARKVILLAGE);
-		mineshaftGenerator = (MapGenMineshaft) TerrainGen.getModdedMapGen(mineshaftGenerator, DARKMINESHAFT);
-		scatteredFeatureGenerator = (MapGenScatteredFeature) TerrainGen.getModdedMapGen(scatteredFeatureGenerator, DARKSCATTERED_FEATURE);
-		ravineGenerator = TerrainGen.getModdedMapGen(ravineGenerator, DARKRAVINE);
-	}*/
+	{
+		caveGenerator = TerrainGen.getModdedMapGen(caveGenerator, CAVE);
+		strongholdGenerator = (MapGenStronghold) TerrainGen.getModdedMapGen(strongholdGenerator, STRONGHOLD);
+		villageGenerator = (MapGenVillage) TerrainGen.getModdedMapGen(villageGenerator,  VILLAGE);
+		mineshaftGenerator = (MapGenMineshaft) TerrainGen.getModdedMapGen(mineshaftGenerator, MINESHAFT);
+		scatteredFeatureGenerator = (MapGenScatteredFeature) TerrainGen.getModdedMapGen(scatteredFeatureGenerator, SCATTERED_FEATURE);
+		ravineGenerator = TerrainGen.getModdedMapGen(ravineGenerator, RAVINE);
+	}
 
 	public TDEChunkProvider(World par1World, long par2, boolean par4) {
 		this.worldObj = par1World;
@@ -388,7 +391,7 @@ public class TDEChunkProvider implements IChunkProvider {
 			k1 = k + this.rand.nextInt(16) + 8;
 			l1 = this.rand.nextInt(256);
 			i2 = l + this.rand.nextInt(16) + 8;
-			(new WorldGenLakes(Blocks.water)).generate(this.worldObj, this.rand, k1, l1, i2);
+			(new WorldGenLakesTDE(Blocks.water)).generate(this.worldObj, this.rand, k1, l1, i2);
 			(new WorldGenDeadTree()).generate(worldObj, rand, k1, l1, i2);
 		}
 
@@ -398,7 +401,7 @@ public class TDEChunkProvider implements IChunkProvider {
 			i2 = l + this.rand.nextInt(16) + 8;
 
 			if (l1 < 63 || this.rand.nextInt(10) == 0) {
-				(new WorldGenLakes(Blocks.lava)).generate(this.worldObj, this.rand, k1, l1, i2);
+				(new WorldGenLakesTDE(Blocks.lava)).generate(this.worldObj, this.rand, k1, l1, i2);
 			}
 		}
 
