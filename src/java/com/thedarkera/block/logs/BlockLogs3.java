@@ -2,15 +2,19 @@ package com.thedarkera.block.logs;
 
 import java.util.List;
 
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.init.TDEBlocks;
-
 import net.minecraft.block.BlockLog;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.init.TDEBlocks;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -36,5 +40,15 @@ public class BlockLogs3 extends BlockLog {
 			this.field_150166_b[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":logs/" + logs[i] + "_Top");
 
 		}
+	}
+    @Override
+    public boolean isWood(IBlockAccess world, int x, int y, int z)
+    {
+        return true;
+    }
+    @Override
+	public boolean isFireSource(World world, int x, int y, int z, ForgeDirection side) {
+		return true;
+
 	}
 }

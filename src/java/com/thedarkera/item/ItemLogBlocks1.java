@@ -29,4 +29,5 @@ public class ItemLogBlocks1 extends ItemBlock {
 	public int getMetadata(int Meta) {
 		return Meta;
 	}
+	
 }

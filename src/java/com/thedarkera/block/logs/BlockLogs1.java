@@ -8,9 +8,13 @@ import com.thedarkera.init.TDEBlocks;
 import net.minecraft.block.BlockLog;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -37,4 +41,26 @@ public class BlockLogs1 extends BlockLog {
 
 		}
 	}
+
+	@Override
+	public boolean isWood(IBlockAccess world, int x, int y, int z) {
+		return true;
+	}
+
+	public boolean isFireSource(World world, int x, int y, int z, ForgeDirection side) {
+		return true;
+
+	}
+	@Override
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face)
+    {
+        return 250;
+    }
+    @Override
+    public boolean canSustainLeaves(IBlockAccess world, int x, int y, int z)
+    {
+        return true;
+    }
+
+	
 }

@@ -76,7 +76,6 @@ public class TDEBlocks {
 	/** Unlike ancient axe and pickaxe this ore will be in dirt. */
 	public static Block ancienthoe_ore;
 	public static BlockPortalDark dark_portal;
-	public static Block teleporter_dark;
 	public static Block smasher;
 	public static Block dark_birch_planks;
 	public static Block dark_fire;
@@ -201,8 +200,6 @@ public class TDEBlocks {
 		// Portals//
 		dark_portal = (BlockPortalDark) new BlockPortalDark().setBlockName("dark_portal");
 		reg(dark_portal);
-		teleporter_dark = new BlockPortalDark().setBlockName("teleporter_dark");
-		reg(teleporter_dark);
 
 		// Biome Blocks
 		dead_grass = new BlockDeadGrass("dead_grass");

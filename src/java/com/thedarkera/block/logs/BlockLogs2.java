@@ -11,6 +11,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -36,5 +39,14 @@ public class BlockLogs2 extends BlockLog {
 			this.field_150166_b[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":logs/" + logs[i] + "_Top");
 
 		}
+	}
+    @Override
+    public boolean isWood(IBlockAccess world, int x, int y, int z)
+    {
+        return true;
+    }
+	public boolean isFireSource(World world, int x, int y, int z, ForgeDirection side) {
+		return true;
+
 	}
 }
