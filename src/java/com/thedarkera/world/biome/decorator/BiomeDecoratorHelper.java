@@ -1,18 +1,23 @@
 package com.thedarkera.world.biome.decorator;
 
-import com.thedarkera.init.TDEBiomes;
-import com.thedarkera.world.biome.BiomeDarkLand;
+import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
+import com.thedarkera.init.TDEBiomes;
+import com.thedarkera.world.biome.features.WorldGenDeadTree;
+
 public class BiomeDecoratorHelper {
 
 	private static WorldGenerator glowStone;
+	private static  WorldGenDeadTree deadTree = new WorldGenDeadTree();
 
 	public BiomeDecoratorHelper() {
 		// glowStone = new WorldGenMinable(Blocks.glowstone, 30,
@@ -31,7 +36,9 @@ public class BiomeDecoratorHelper {
 
 		if (biome == TDEBiomes.dark_forrest) {
 			// BiomeDecoratorTDE.howMenyTrees = BiomeDarkLand.treesPerChunk;
-			int i = BiomeDecoratorTDE.howMenyTrees;
+			int i = BiomeDecoratorTDE.treesPerChunk;
+			Random rand = new Random();
+			WorldClient world = Minecraft.getMinecraft().theWorld;
 			/** Chunk Postions **/
 			int chunkX;
 			int chunkZ;
@@ -57,7 +64,7 @@ public class BiomeDecoratorHelper {
 							// BiomeDecoratorTDE.smallTree.generate(BiomeDecoratorTDE.currentWorld,
 							// BiomeDecoratorTDE.randomGenerator, chunkX, y,
 							// chunkZ);
-						}
+							deadTree.generate(world, rand, chunkX, y, chunkZ);
 					}
 				}
 				/** Generates Big tree **/
@@ -77,12 +84,14 @@ public class BiomeDecoratorHelper {
 							// BiomeDecoratorTDE.bigTree.generate(BiomeDecoratorTDE.currentWorld,
 							// BiomeDecoratorTDE.randomGenerator, chunkX, y,
 							// chunkZ);
+							deadTree.generate(world, rand, chunkX, y, chunkZ);	
 						}
 					}
 				}
 			}
 			if (biome == TDEBiomes.dark_beach) {
 				// GENERARTE DARK BEACH STUFF HERE
+			}
 			}
 		}
 	}

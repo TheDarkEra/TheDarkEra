@@ -51,10 +51,6 @@ public class BiomeDarkForrest extends BiomeGenBase {
 	// }
 	// }
 	
-	@Override
-	public WorldGenAbstractTree func_150567_a(Random p_150567_1_) {
-		return (WorldGenAbstractTree) (p_150567_1_.nextInt(5) > 0 ? field_150627_aC : this.WorldGenDeadTrees);
-	}
 	// @Override
 	// public WorldGenerator getRandomWorldGenForTrees(Random par1Random)
 	// {
