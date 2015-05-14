@@ -30,7 +30,6 @@ public class BlockDragonBone extends Block {
         setStepSound(soundTypeCloth);
         setHardness(1.0F);
         setResistance(1.0F);
-        GameRegistry.registerBlock(this, name);
     }
 
     @Override

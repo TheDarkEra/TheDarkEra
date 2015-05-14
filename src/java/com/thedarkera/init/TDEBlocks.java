@@ -240,8 +240,8 @@ public class TDEBlocks {
 		example = new FlatBlockExample();
 		
 		// Misc //
-//		dragon_bone = new BlockDragonBone();
-//		reg(dragon_bone);
+		dragon_bone = new BlockDragonBone();
+		reg(dragon_bone);
 }
 
 	public static void reg(Block block) {
