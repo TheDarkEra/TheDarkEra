@@ -21,15 +21,13 @@ public class EnterBiomeHandler {
 		int z = (int) player.posZ;
 		BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(x, z);
 
-		if (player instanceof EntityPlayer && biome == TDEBiomes.dark_land) {
-			System.out.println("works!");
+		if (biome == TDEBiomes.dark_land) {
 			player.addChatMessage(new ChatComponentText(
 					EnumChatFormatting.DARK_GRAY
 							+ "You entered the Dark Land biome"));
 
 		}
-		if (player instanceof EntityPlayer && biome == TDEBiomes.dark_forrest) {
-			System.out.println("works!");
+		if (biome == TDEBiomes.dark_forrest) {
 			player.addChatMessage(new ChatComponentText(
 					EnumChatFormatting.DARK_GRAY
 							+ "You entered the Dark Forrest biome"));
