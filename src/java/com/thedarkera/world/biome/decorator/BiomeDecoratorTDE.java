@@ -30,7 +30,7 @@ public class BiomeDecoratorTDE extends BiomeDecorator {
 	/** True if decorator should generate surface lava & water */
 	public static boolean generateLakes;
 	/** How meny trees per chunk, set in each biome class **/
-	public static int howMenyTrees;
+	public static int treesPerChunk;
 
 	/** Dimension Trees **/
 	 public static WorldGenDeadTrees deadTree;
