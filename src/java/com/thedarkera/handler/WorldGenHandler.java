@@ -39,6 +39,8 @@ public class WorldGenHandler implements IWorldGenerator {
 			generateSurface(world, random, chunkX * 16, chunkZ * 16);
 		case 1:
 			generateEnd(world, random, chunkX * 16, chunkZ * 16);
+		case 2:
+			generateTheDarkDimension(world, random, chunkX * 16, chunkZ * 16);
 		}
 	}
 
@@ -78,6 +80,13 @@ public class WorldGenHandler implements IWorldGenerator {
 
 	private void generateNether(World world, Random random, int x, int z) {
 	}
+	
+	private void generateTheDarkDimension(World world, Random random, int x, int z)
+	 {
+		addOreSpawn(TDEBlocks.ebony_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
+				16, 16, 5 + random.nextInt(5), 4, 20, 60);
+	 }
+	 
 
 	@SuppressWarnings("unused")
 	public void addOreSpawn(Block block, int metadata, Block target,

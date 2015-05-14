@@ -12,19 +12,11 @@ import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.world.renderers.SkyRenderer;
 
 public class TDEWorldProvider extends WorldProvider {
+
+	@Override
 	public void registerWorldChunkManager() {
-		// this.worldChunkMgr = new WorldChunkManagerHell(Biome Generator, Float
-		// for Rainfall);
-		this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_land,
-				0.1F);
-		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_forrest,
-		//		0.1F);
-		// this.worldChunkMgr = new
-		// WorldChunkManagerHell(TDEBiomes.dark_village, 0.1F);
-		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_beach,
-		//	0.1F);
-		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_hills,
-		//	0.1F);
+	
+		this.worldChunkMgr = new WorldChunkManagerTDE(worldObj.getSeed(), terrainType);
 		this.dimensionId = TheDarkEra.dimension;
 	}
 
@@ -71,7 +63,7 @@ public class TDEWorldProvider extends WorldProvider {
 	public boolean canDoLightning(Chunk chunk) {
 		return true;
 	}
-
+	
 	@Override
 	public boolean canDoRainSnowIce(Chunk chunk) {
 		return false;
