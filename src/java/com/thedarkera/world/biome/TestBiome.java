@@ -70,189 +70,97 @@ public class TestBiome extends BiomeGenBase	{
         super.decorate(p_76728_1_, p_76728_2_, p_76728_3_, p_76728_4_);
     }
 
-    public void genTerrainBlocks(World p_150573_1_, Random p_150573_2_, Block[] p_150573_3_, byte[] p_150573_4_, int p_150573_5_, int p_150573_6_, double p_150573_7_)
+    public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
     {
-        if (this.field_150621_aC == null || this.field_150622_aD != p_150573_1_.getSeed())
-        {
-            this.func_150619_a(p_150573_1_.getSeed());
-        }
-
-        if (this.field_150623_aE == null || this.field_150624_aF == null || this.field_150622_aD != p_150573_1_.getSeed())
-        {
-            Random random1 = new Random(this.field_150622_aD);
-            this.field_150623_aE = new NoiseGeneratorPerlin(random1, 4);
-            this.field_150624_aF = new NoiseGeneratorPerlin(random1, 1);
-        }
-
-        this.field_150622_aD = p_150573_1_.getSeed();
-        double d5 = 0.0D;
-        int k;
-        int l;
-
-        if (this.field_150626_aH)
-        {
-            k = (p_150573_5_ & -16) + (p_150573_6_ & 15);
-            l = (p_150573_6_ & -16) + (p_150573_5_ & 15);
-            double d1 = Math.min(Math.abs(p_150573_7_), this.field_150623_aE.func_151601_a((double)k * 0.25D, (double)l * 0.25D));
-
-            if (d1 > 0.0D)
-            {
-                double d2 = 0.001953125D;
-                double d3 = Math.abs(this.field_150624_aF.func_151601_a((double)k * d2, (double)l * d2));
-                d5 = d1 * d1 * 2.5D;
-                double d4 = Math.ceil(d3 * 50.0D) + 14.0D;
-
-                if (d5 > d4)
-                {
-                    d5 = d4;
-                }
-
-                d5 += 64.0D;
-            }
-        }
-
-        k = p_150573_5_ & 15;
-        l = p_150573_6_ & 15;
         boolean flag = true;
-        Block block = TDEBlocks.dark_stone;
-        Block block2 = this.fillerBlock;
-        int i1 = (int)(p_150573_7_ / 3.0D + 3.0D + p_150573_2_.nextDouble() * 0.25D);
-        boolean flag1 = Math.cos(p_150573_7_ / 3.0D * Math.PI) > 0.0D;
-        int j1 = -1;
-        boolean flag2 = false;
-        int k1 = p_150573_3_.length / 256;
+        Block block = this.topBlock;
+        byte b0 = (byte)(this.field_150604_aj & 255);
+        Block block1 = this.fillerBlock;
+        int k = -1;
+        int l = (int)(p_150560_7_ / 3.0D + 3.0D + rand.nextDouble() * 0.25D);
+        int i1 = p_150560_5_ & 15;
+        int j1 = p_150560_6_ & 15;
+        int k1 = p_150560_3_.length / 256;
 
         for (int l1 = 255; l1 >= 0; --l1)
         {
-            int i2 = (l * 16 + k) * k1 + l1;
+            int i2 = (j1 * 16 + i1) * k1 + l1;
 
-            if ((p_150573_3_[i2] == null || p_150573_3_[i2].getMaterial() == Material.air) && l1 < (int)d5)
+            if (l1 <= 0 + rand.nextInt(5))
             {
-                p_150573_3_[i2] = Blocks.stone;
-            }
-
-            if (l1 <= 0 + p_150573_2_.nextInt(5))
-            {
-                p_150573_3_[i2] = Blocks.bedrock;
+                p_150560_3_[i2] = Blocks.bedrock;
             }
             else
             {
-                Block block1 = p_150573_3_[i2];
+                Block block2 = p_150560_3_[i2];
 
-                if (block1 != null && block1.getMaterial() != Material.air)
+                if (block2 != null && block2.getMaterial() != Material.air)
                 {
-                    if (block1 == Blocks.stone)
+                    if (block2 == TDEBlocks.dark_stone)
                     {
-                        byte b0;
-
-                        if (j1 == -1)
+                        if (k == -1)
                         {
-                            flag2 = false;
-
-                            if (i1 <= 0)
+                            if (l <= 0)
                             {
                                 block = null;
-                                block2 = Blocks.stone;
+                                b0 = 0;
+                                block1 = TDEBlocks.dark_stone;
                             }
                             else if (l1 >= 59 && l1 <= 64)
                             {
-                                block = TDEBlocks.dark_stone;
-                                block2 = this.fillerBlock;
+                                block = this.topBlock;
+                                b0 = (byte)(this.field_150604_aj & 255);
+                                block1 = this.fillerBlock;
                             }
 
                             if (l1 < 63 && (block == null || block.getMaterial() == Material.air))
                             {
-                                block = Blocks.water;
+                                if (this.getFloatTemperature(p_150560_5_, l1, p_150560_6_) < 0.15F)
+                                {
+                                    block = Blocks.ice;
+                                    b0 = 0;
+                                }
+                                else
+                                {
+                                    block = Blocks.water;
+                                    b0 = 0;
+                                }
                             }
 
-                            j1 = i1 + Math.max(0, l1 - 63);
+                            k = l;
 
                             if (l1 >= 62)
                             {
-                                if (this.field_150620_aI && l1 > 86 + i1 * 2)
-                                {
-                                    if (flag1)
-                                    {
-                                        p_150573_3_[i2] = Blocks.dirt;
-                                        p_150573_4_[i2] = 1;
-                                    }
-                                    else
-                                    {
-                                        p_150573_3_[i2] = Blocks.grass;
-                                    }
-                                }
-                                else if (l1 > 66 + i1)
-                                {
-                                    b0 = 16;
-
-                                    if (l1 >= 64 && l1 <= 127)
-                                    {
-                                        if (!flag1)
-                                        {
-                                            b0 = this.func_150618_d(p_150573_5_, l1, p_150573_6_);
-                                        }
-                                    }
-                                    else
-                                    {
-                                        b0 = 1;
-                                    }
-
-                                    if (b0 < 16)
-                                    {
-                                        p_150573_3_[i2] = TDEBlocks.dark_stone;
-                                        p_150573_4_[i2] = (byte)b0;
-                                    }
-                                    else
-                                    {
-                                        p_150573_3_[i2] = TDEBlocks.dark_stone;
-                                    }
-                                }
-                                else
-                                {
-                                    p_150573_3_[i2] = this.topBlock;
-                                    p_150573_4_[i2] = (byte)this.field_150604_aj;
-                                    flag2 = true;
-                                }
+                                p_150560_3_[i2] = block;
+                                p_150560_4_[i2] = b0;
+                            }
+                            else if (l1 < 56 - l)
+                            {
+                                block = null;
+                                block1 = TDEBlocks.dark_stone;
+                                p_150560_3_[i2] = Blocks.gravel;
                             }
                             else
                             {
-                                p_150573_3_[i2] = block2;
-
-                                if (block2 == TDEBlocks.dark_stone)
-                                {
-                                    p_150573_4_[i2] = 1;
-                                }
+                                p_150560_3_[i2] = block1;
                             }
                         }
-                        else if (j1 > 0)
+                        else if (k > 0)
                         {
-                            --j1;
+                            --k;
+                            p_150560_3_[i2] = block1;
 
-                            if (flag2)
+                            if (k == 0 && block1 == Blocks.sand)
                             {
-                                p_150573_3_[i2] = TDEBlocks.dark_stone;
-                                p_150573_4_[i2] = 1;
-                            }
-                            else
-                            {
-                                b0 = this.func_150618_d(p_150573_5_, l1, p_150573_6_);
-
-                                if (b0 < 16)
-                                {
-                                    p_150573_3_[i2] = TDEBlocks.dark_stone;
-                                    p_150573_4_[i2] = b0;
-                                }
-                                else
-                                {
-                                    p_150573_3_[i2] = TDEBlocks.dark_stone;
-                                }
+                                k = rand.nextInt(4) + Math.max(0, l1 - 63);
+                                block1 = Blocks.sandstone;
                             }
                         }
                     }
                 }
                 else
                 {
-                    j1 = -1;
+                    k = -1;
                 }
             }
         }
