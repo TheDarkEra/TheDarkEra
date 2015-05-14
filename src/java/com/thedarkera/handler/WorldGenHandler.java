@@ -14,7 +14,6 @@ import net.minecraftforge.event.world.BlockEvent;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
 import com.thedarkera.world.gen.WorldGenGrapePlant;
-import com.thedarkera.world.gen.WorldGenMinableTDE;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
