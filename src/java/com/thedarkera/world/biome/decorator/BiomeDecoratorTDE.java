@@ -109,14 +109,7 @@ public class BiomeDecoratorTDE extends BiomeDecorator {
         {
             ++i;
         }
-
     }
-
-	/**
-	 * Decorate's biome.
-	 * 
-	 * @param biome
-	 */
 	protected void genDecorationsForBiome(BiomeGenBase biome) {
 		BiomeDecoratorHelper.decorateBiome(biome);
 	}

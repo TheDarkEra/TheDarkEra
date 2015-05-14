@@ -48,14 +48,10 @@ public class WorldGenHandler implements IWorldGenerator {
 	}
 
 	private void generateSurface(World world, Random random, int x, int z) {
-		addOreSpawn(TDEBlocks.ebony_ore, 0, Blocks.stone, world, random, x, z,
-				16, 16, 5 + random.nextInt(5), 4, 20, 60);
-		addOreSpawn(TDEBlocks.orichalcum_ore, 0, Blocks.stone, world, random,
-				x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
 		addOreSpawn(TDEBlocks.ancient_ore, 0, Blocks.stone, world,
-				random, x, z, 16, 16, 5 + random.nextInt(5), 4, 20, 60);
+				random, x, z, 16, 16, 8, 20, 0, 64);
         addOreSpawn(TDEBlocks.dragon_bone_ore, 0, Blocks.stone, world,
-                random, x, z, 16, 16, 1 + random.nextInt(2), 4, 20, 60);
+                random, x, z, 16, 16, 4, 10, 0, 32);
 
 
 		for (int i = 0; i < 3; i++) {
@@ -86,19 +82,21 @@ public class WorldGenHandler implements IWorldGenerator {
 	private void generateTheDarkDimension(World world, Random random, int x, int z)
 	 {
 		addOreSpawn(TDEBlocks.ebony_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
-				16, 16, 5 + random.nextInt(5), 4, 20, 60);
+				16, 16, 8, 20, 0, 64);
 		addOreSpawn(TDEBlocks.dark_diamond_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
-				16, 16, 5 + random.nextInt(5), 4, 20, 60);
+				16, 16, 7, 1, 0, 16);
 		addOreSpawn(TDEBlocks.dark_coal_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
-				16, 16, 5 + random.nextInt(5), 4, 20, 60);
+				16, 16, 16, 20, 0, 128);
 		addOreSpawn(TDEBlocks.dark_iron_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
-				16, 16, 5 + random.nextInt(5), 4, 20, 60);
+				16, 16, 8, 20, 0, 64);
 		addOreSpawn(TDEBlocks.dark_gold_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
-				16, 16, 5 + random.nextInt(5), 4, 20, 60);
+				16, 16, 8, 2, 0, 32);
 		addOreSpawn(TDEBlocks.dark_emerald_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
-				16, 16, 5 + random.nextInt(5), 4, 20, 60);
+				16, 16, 7, 1, 0, 32);
 		addOreSpawn(TDEBlocks.dark_gravel, 0, TDEBlocks.dark_stone, world, random, x, z,
-				16, 16, 5 + random.nextInt(5), 4, 20, 60);
+				16, 16, 32, 10, 0, 256);
+        addOreSpawn(TDEBlocks.dark_dirt, 0, TDEBlocks.dark_stone, world, random, x, z,
+                16, 16, 32, 20, 0, 256);
 	}
 		  
 

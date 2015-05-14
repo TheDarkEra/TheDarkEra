@@ -15,6 +15,7 @@ import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.Ev
 import java.util.List;
 import java.util.Random;
 
+import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
 
@@ -387,6 +388,7 @@ public class TDEChunkProvider implements IChunkProvider {
 		int i2;
 
 		if (biomegenbase != BiomeGenBase.desert && biomegenbase != BiomeGenBase.desertHills && !flag && this.rand.nextInt(4) == 0 && TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAKE)) {
+
 			k1 = k + this.rand.nextInt(16) + 8;
 			l1 = this.rand.nextInt(256);
 			i2 = l + this.rand.nextInt(16) + 8;
