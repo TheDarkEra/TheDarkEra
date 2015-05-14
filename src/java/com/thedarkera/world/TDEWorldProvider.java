@@ -21,10 +21,10 @@ public class TDEWorldProvider extends WorldProvider {
 		//		0.1F);
 		// this.worldChunkMgr = new
 		// WorldChunkManagerHell(TDEBiomes.dark_village, 0.1F);
-		// this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_beach,
-		// 0.1F);
-		// this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_hills,
-		// 0.1F);
+		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_beach,
+		//	0.1F);
+		//this.worldChunkMgr = new WorldChunkManagerHell(TDEBiomes.dark_hills,
+		//	0.1F);
 		this.dimensionId = TheDarkEra.dimension;
 	}
 
