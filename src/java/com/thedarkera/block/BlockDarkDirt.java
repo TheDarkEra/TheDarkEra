@@ -2,7 +2,6 @@ package com.thedarkera.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
 
