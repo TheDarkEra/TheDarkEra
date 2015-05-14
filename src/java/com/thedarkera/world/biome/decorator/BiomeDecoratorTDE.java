@@ -129,7 +129,7 @@ public class BiomeDecoratorTDE extends BiomeDecorator {
             	deadTree.func_150524_b(this.currentWorld, this.randomGenerator, k, i1, l);
             }
         }
-    }
+    }	
 
 	/**
 	 * Decorate's biome.

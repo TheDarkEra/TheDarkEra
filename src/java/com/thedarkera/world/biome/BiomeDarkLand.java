@@ -21,9 +21,9 @@ public class BiomeDarkLand extends BiomeGenBase {
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
 		spawnableWaterCreatureList.clear();
-
-		theBiomeDecorator.cactiPerChunk = 0;
-		theBiomeDecorator.deadBushPerChunk = 3;
+		
+		this.theBiomeDecorator.cactiPerChunk = 0;
+		this.theBiomeDecorator.deadBushPerChunk = 3;
 
 		flowers.clear();
 		addFlower(Blocks.red_flower, 4, 3);
@@ -47,8 +47,8 @@ public class BiomeDarkLand extends BiomeGenBase {
 			worldgendesertwells.generate(world, rand, k,
 					world.getHeightValue(k, l) + 1, l);
 		}
+		
 	}
-
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
     {
         boolean flag = true;
