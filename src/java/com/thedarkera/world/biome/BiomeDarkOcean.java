@@ -8,6 +8,7 @@ public class BiomeDarkOcean extends BiomeGenBase {
         super(id);
         setHeight(height_Oceans);
         spawnableCreatureList.clear();
+        spawnableWaterCreatureList.clear();
         waterColorMultiplier = 0x000014;
     }
 
