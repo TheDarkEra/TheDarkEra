@@ -14,6 +14,7 @@ import net.minecraftforge.event.world.BlockEvent;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
 import com.thedarkera.world.gen.WorldGenGrapePlant;
+import com.thedarkera.world.gen.WorldGenMinableTDE;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -39,8 +40,8 @@ public class WorldGenHandler implements IWorldGenerator {
 			generateSurface(world, random, chunkX * 16, chunkZ * 16);
 		case 1:
 			generateEnd(world, random, chunkX * 16, chunkZ * 16);
-		case 2:
-			generateTheDarkDimension(world, random, chunkX * 16, chunkZ * 16);
+	//	case 2:
+	//		generateTheDarkDimension(world, random, chunkX * 16, chunkZ * 16);
 		}
 	}
 
@@ -81,12 +82,24 @@ public class WorldGenHandler implements IWorldGenerator {
 	private void generateNether(World world, Random random, int x, int z) {
 	}
 	
-	private void generateTheDarkDimension(World world, Random random, int x, int z)
+/*	private void generateTheDarkDimension(World world, Random random, int chunkX, int chunkZ)
 	 {
-		addOreSpawn(TDEBlocks.ebony_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
-				16, 16, 5 + random.nextInt(5), 4, 20, 60);
-	 }
-	 
+		 // the 4 below is for how rare it will be
+		 for(int i = 0; i < 4;="")
+		 {
+		 //this below just tells me if its generating or not
+		 System.out.println("Generating Leaf in the dimension");
+
+		 int xCoord = chunkX + random.nextInt(16);
+		 int yCoord = random.nextInt(128);// the 128 is the max height the ore/block will generate
+		 int zCoord = chunkZ + random.nextInt(16);
+
+		 //The 230 on the line below is how meny will generate per vain, as an example i think diamond is like 2 or 4
+		 //and the Block.blockIron is what it will spawn
+		 (new WorldGenMinableTDE(TDEBlocks.dark_gold_ore.blockID, 20)).generate(world, random, xCoord, yCoord, zCoord);
+		 }
+		 }	*/
+		  
 
 	@SuppressWarnings("unused")
 	public void addOreSpawn(Block block, int metadata, Block target,

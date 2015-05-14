@@ -10,7 +10,7 @@ public class GenLayerBiomes extends GenLayer {
 
 	// TODO: spawning with temperatures
     protected BiomeGenBase[] allowedBiomes = {
-        TDEBiomes.dark_forrest, TDEBiomes.test_biome,
+        TDEBiomes.dark_forrest, TDEBiomes.test_biome, TDEBiomes.dark_land,
     };
     
     public GenLayerBiomes(long seed) {
