@@ -17,7 +17,7 @@ public class BiomeDarkLand extends BiomeGenBase {
 		spawnableCreatureList.clear();
 		topBlock = TDEBlocks.dead_grass;
 		fillerBlock = TDEBlocks.dark_dirt;
-		waterColorMultiplier = 0x000000;
+		waterColorMultiplier = 0x000014;
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
 		spawnableWaterCreatureList.clear();

@@ -8,7 +8,7 @@ public class BiomeDarkOcean extends BiomeGenBase {
         super(id);
         setHeight(height_Oceans);
         spawnableCreatureList.clear();
-        waterColorMultiplier = 0x000028;
+        waterColorMultiplier = 0x000014;
     }
 
     public BiomeGenBase.TempCategory getTempCategory()

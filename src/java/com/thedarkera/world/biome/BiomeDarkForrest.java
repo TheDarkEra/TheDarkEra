@@ -26,7 +26,7 @@ public class BiomeDarkForrest extends BiomeGenBase {
 		fillerBlock = TDEBlocks.dark_dirt;
 		// bottomBlock = TDEBlocks.dark_stone; TODO: This might mean making our
 		// own BiomeGenBase
-		waterColorMultiplier = 0x000000;
+		waterColorMultiplier = 0x000014;
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
 		spawnableWaterCreatureList.clear();
