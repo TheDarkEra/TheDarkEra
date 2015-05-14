@@ -48,10 +48,6 @@ public class WorldGenHandler implements IWorldGenerator {
 	}
 
 	private void generateSurface(World world, Random random, int x, int z) {
-		addOreSpawn(TDEBlocks.ebony_ore, 0, Blocks.stone, world, random, x, z,
-				16, 16, 8, 20, 0, 64);
-		addOreSpawn(TDEBlocks.orichalcum_ore, 0, Blocks.stone, world, random,
-				x, z, 16, 16, 8, 20, 0, 64);
 		addOreSpawn(TDEBlocks.ancient_ore, 0, Blocks.stone, world,
 				random, x, z, 16, 16, 8, 20, 0, 64);
         addOreSpawn(TDEBlocks.dragon_bone_ore, 0, Blocks.stone, world,
