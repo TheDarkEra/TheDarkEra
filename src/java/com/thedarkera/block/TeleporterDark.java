@@ -1,6 +1,5 @@
 package com.thedarkera.block;
 
-import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.world.Teleporter;

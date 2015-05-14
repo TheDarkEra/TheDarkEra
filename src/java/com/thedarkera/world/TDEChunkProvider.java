@@ -15,7 +15,6 @@ import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.Ev
 import java.util.List;
 import java.util.Random;
 
-import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
 
