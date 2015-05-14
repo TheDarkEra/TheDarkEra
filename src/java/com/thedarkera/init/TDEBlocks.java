@@ -242,6 +242,8 @@ public class TDEBlocks {
 		// Misc //
 		dragon_bone = new BlockDragonBone();
 		reg(dragon_bone);
+
+        BlockDarkFire.func_149843_e();
 }
 
 	public static void reg(Block block) {

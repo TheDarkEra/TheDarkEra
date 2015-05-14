@@ -37,28 +37,7 @@ public class BlockDarkFire extends BlockFire {
 
 	// we might need this later!
 	public static void func_149843_e() {
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.double_wooden_slab, 5, 20);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.wooden_slab, 5, 20);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.fence, 5, 20);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.oak_stairs, 5, 20);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.birch_stairs, 5, 20);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.spruce_stairs, 5, 20);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.jungle_stairs, 5, 20);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.log, 5, 5);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.log2, 5, 5);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.leaves, 30, 60);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.leaves2, 30, 60);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.bookshelf, 30, 20);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.tnt, 15, 100);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.tallgrass, 60, 100);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.double_plant, 60, 100);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.yellow_flower, 60, 100);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.red_flower, 60, 100);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.wool, 30, 60);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.vine, 15, 100);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.coal_block, 5, 5);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.hay_block, 60, 20);
-		((BlockFire) TDEBlocks.dark_fire).setFireInfo(Blocks.carpet, 60, 20);
+        ((BlockFire) TDEBlocks.dark_fire).setFireInfo(TDEBlocks.blockLog1, 5, 20);
 	}
 
 	public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
@@ -86,7 +65,7 @@ public class BlockDarkFire extends BlockFire {
 	 * ================================= Forge Start
 	 * ======================================
 	 */
-	private static class FireInfo {
+/*	private static class FireInfo {
 		private int encouragement = 0;
 		private int flammibility = 0;
 	}
@@ -158,7 +137,7 @@ public class BlockDarkFire extends BlockFire {
 	 *            The side the fire is coming from
 	 * @return True if the face can catch fire.
 	 */
-	public boolean canCatchFire(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+/*	public boolean canCatchFire(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
 		return world.getBlock(x, y, z).isFlammable(world, x, y, z, face);
 	}
 
@@ -180,7 +159,7 @@ public class BlockDarkFire extends BlockFire {
 	 * @return The chance of the block catching fire, or oldChance if it is
 	 *         higher
 	 */
-	public int getChanceToEncourageFire(IBlockAccess world, int x, int y, int z, int oldChance, ForgeDirection face) {
+/*	public int getChanceToEncourageFire(IBlockAccess world, int x, int y, int z, int oldChance, ForgeDirection face) {
 		int newChance = world.getBlock(x, y, z).getFireSpreadSpeed(world, x, y, z, face);
 		return (newChance > oldChance ? newChance : oldChance);
 	}
