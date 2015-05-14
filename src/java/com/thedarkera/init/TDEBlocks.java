@@ -13,6 +13,7 @@ import com.thedarkera.block.BlockDarkCobblestone;
 import com.thedarkera.block.BlockDarkDirt;
 import com.thedarkera.block.BlockDarkFire;
 import com.thedarkera.block.BlockDarkGrass;
+import com.thedarkera.block.BlockDarkOre;
 import com.thedarkera.block.BlockDarkStone;
 import com.thedarkera.block.BlockDarkStoneBricks;
 import com.thedarkera.block.BlockDarkStoneDirt;
@@ -69,12 +70,6 @@ public class TDEBlocks {
 	public static Block orichalcum_ore;
 	public static Block ancient_ore;
 	public static Block dragon_bone_ore;
-	public static Block ancientpickaxe_ore;
-	public static Block ancientaxe_ore;
-	/** Unlike ancient axe and pickaxe this ore will be in sand. */
-	public static Block ancientshovel_ore;
-	/** Unlike ancient axe and pickaxe this ore will be in dirt. */
-	public static Block ancienthoe_ore;
 	public static BlockPortalDark dark_portal;
 	public static Block smasher;
 	public static Block dark_birch_planks;
@@ -177,16 +172,16 @@ public class TDEBlocks {
 		lamp = new BlockLamp();
 		reg(lamp);
 		
-//		dark_diamond_ore = new BlockDarkOre(Material.rock, "dark_diamond_ore");
-//		reg(dark_diamond_ore);
-//		dark_coal_ore = new BlockDarkOre(Material.rock, "dark_coal_ore");
-//		reg(dark_coal_ore);
-//		dark_emerald_ore = new BlockDarkOre(Material.rock, "dark_emerald_ore");
-//		reg(dark_emerald_ore);
-//		dark_iron_ore = new BlockDarkOre(Material.rock, "dark_iron_ore");
-//		reg(dark_iron_ore);
-//		dark_gold_ore = new BlockDarkOre(Material.rock, "dark_gold_ore");
-//		reg(dark_gold_ore);
+		dark_diamond_ore = new BlockDarkOre(Material.rock, "dark_diamond_ore");
+		reg(dark_diamond_ore);
+		dark_coal_ore = new BlockDarkOre(Material.rock, "dark_coal_ore");
+		reg(dark_coal_ore);
+		dark_emerald_ore = new BlockDarkOre(Material.rock, "dark_emerald_ore");
+		reg(dark_emerald_ore);
+		dark_iron_ore = new BlockDarkOre(Material.rock, "dark_iron_ore");
+		reg(dark_iron_ore);
+		dark_gold_ore = new BlockDarkOre(Material.rock, "dark_gold_ore");
+		reg(dark_gold_ore);
 
 		smeltery = new BlockSmeltery();
 		reg(smeltery);
