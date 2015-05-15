@@ -5,8 +5,6 @@ import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
 import com.thedarkera.init.TDEBlocks;
@@ -34,13 +32,15 @@ public class getManaPacket extends AbstractPacket {
 	}
 
 	public void handleServerSide(EntityPlayer player) {
+
 		World world = Minecraft.getMinecraft().theWorld;
 		int x = Minecraft.getMinecraft().objectMouseOver.blockX;
 		int y = Minecraft.getMinecraft().objectMouseOver.blockY;
 		int z = Minecraft.getMinecraft().objectMouseOver.blockZ;
-		if (!(world.getBlock(x, y, z) == Blocks.air)){
-		world.setBlock(x, y, z, TDEBlocks.ancient_ore);
-		System.out.println(x + y + z);
+		if (!(world.getBlock(x, y, z) == Blocks.air)) {
+			world.setBlock(x, y, z, Blocks.bookshelf, 0, 2);
+//			world.setBlock(x, y, z+1, TDEBlocks.blockLog1, 0, 0);
+			System.out.println(x + y + z);
 		}
 	}
 }
