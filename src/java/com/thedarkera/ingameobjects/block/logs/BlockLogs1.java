@@ -1,4 +1,4 @@
-package com.thedarkera.block.logs;
+package com.thedarkera.ingameobjects.block.logs;
 
 import java.util.List;
 

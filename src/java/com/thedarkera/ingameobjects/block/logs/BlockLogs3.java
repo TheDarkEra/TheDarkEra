@@ -1,9 +1,6 @@
-package com.thedarkera.block.logs;
+package com.thedarkera.ingameobjects.block.logs;
 
 import java.util.List;
-
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.init.TDEBlocks;
 
 import net.minecraft.block.BlockLog;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -14,11 +11,15 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.init.TDEBlocks;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockLogs2 extends BlockLog {
-	public static final String[] logs = TDEBlocks.treeTypes2;
+public class BlockLogs3 extends BlockLog {
+	public static final String[] logs = TDEBlocks.treeTypes3;
 
 	@SideOnly(Side.CLIENT)
 	@Override
@@ -45,6 +46,7 @@ public class BlockLogs2 extends BlockLog {
     {
         return true;
     }
+    @Override
 	public boolean isFireSource(World world, int x, int y, int z, ForgeDirection side) {
 		return true;
 

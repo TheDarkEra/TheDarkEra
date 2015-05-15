@@ -18,6 +18,6 @@ public class CommonProxy {
 				new GuiHandler());
 	}
 
-	public void registerRenderers() {
+	public void registerProxies() {
 	}
 }

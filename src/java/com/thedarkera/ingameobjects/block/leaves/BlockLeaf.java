@@ -1,4 +1,4 @@
-package com.thedarkera.block.leaves;
+package com.thedarkera.ingameobjects.block.leaves;
 
 import java.util.List;
 

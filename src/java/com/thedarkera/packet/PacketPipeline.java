@@ -2,6 +2,7 @@ package com.thedarkera.packet;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToMessageCodec;
 
@@ -21,10 +22,12 @@ import com.thedarkera.utils.Ref;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.FMLEmbeddedChannel;
+import cpw.mods.fml.common.network.FMLOutboundHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.internal.FMLProxyPacket;
 import cpw.mods.fml.relauncher.Side;
 
+@ChannelHandler.Sharable
 public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, AbstractPacket> {
 
 	private EnumMap<Side, FMLEmbeddedChannel> channels;
@@ -71,6 +74,8 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
 	}
 	
 	public void registerPackets() {
+		
+		registerPacket(getManaPacket.class);
 
 	}
 
@@ -112,10 +117,15 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
 		case SERVER:
 			INetHandler iNetHandler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
 			player = ((NetHandlerPlayServer) iNetHandler).playerEntity;
+			abstractPacket.handleServerSide(player);
 			break;
 		default:
 		}
 		out.add(abstractPacket);
+	}
+	public void sendToServer(AbstractPacket message){
+		this.channels.get(Side.CLIENT).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.TOSERVER);
+		this.channels.get(Side.CLIENT).writeAndFlush(message);
 	}
 
 }

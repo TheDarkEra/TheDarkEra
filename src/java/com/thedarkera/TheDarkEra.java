@@ -1,6 +1,5 @@
 package com.thedarkera;
 
-import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.ChatComponentText;
@@ -8,12 +7,9 @@ import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 
 import org.apache.logging.log4j.Logger;
-import org.lwjgl.input.Keyboard;
 
 import com.thedarkera.handler.EnterBiomeHandler;
 import com.thedarkera.handler.Events;
-import com.thedarkera.handler.KeyInputHandler;
-import com.thedarkera.handler.TDEKeyBindings;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBiomes;
@@ -22,6 +18,7 @@ import com.thedarkera.init.TDEItems;
 import com.thedarkera.init.TDERecipes;
 import com.thedarkera.init.TDETools;
 import com.thedarkera.init.TDEWeapons;
+import com.thedarkera.packet.PacketPipeline;
 import com.thedarkera.proxy.CommonProxy;
 import com.thedarkera.utils.UpdateChecker;
 import com.thedarkera.world.TDEWorldProvider;
@@ -29,16 +26,15 @@ import com.thedarkera.world.TDEWorldProvider;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
-import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = TheDarkEra.MODID, name = TheDarkEra.NAME, version = TheDarkEra.VERSION)
 public class TheDarkEra {
@@ -49,8 +45,10 @@ public class TheDarkEra {
 	public static int MODVERSION = 1;
 
 	public static int dimension = 2;
+	
+	public static final PacketPipeline packetPipeline = new PacketPipeline();
 
-	@Mod.Instance("TheDarkEra")
+	@Instance(MODID)
 	public static TheDarkEra instance;
 	public static SimpleNetworkWrapper network;
 
@@ -72,7 +70,7 @@ public class TheDarkEra {
 
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + ".");
 
-		proxy.registerRenderers();
+		proxy.registerProxies();
 
 		TDEItems.init();
 		TDEBlocks.init();
@@ -81,9 +79,6 @@ public class TheDarkEra {
 		TDETools.init();
 		TDEWeapons.init();
 		TDEBiomes.init();
-		TDEKeyBindings.init();
-
-		FMLCommonHandler.instance().bus().register(new KeyInputHandler());
 
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
 
@@ -103,6 +98,8 @@ public class TheDarkEra {
 	public void init(FMLInitializationEvent event) {
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");
 
+		packetPipeline.initialize();
+		
 		proxy.registerTileEntities();
 
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
@@ -113,11 +110,13 @@ public class TheDarkEra {
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 2 successfully!");
 	}
 
-	@Mod.EventHandler
+	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 3.");
 
 		proxy.registerGuiHandler();
+		
+		packetPipeline.postInitialize();
 
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 3 successfully!");
 	}
