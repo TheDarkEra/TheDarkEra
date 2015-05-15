@@ -1,17 +1,11 @@
 package com.thedarkera.world;
 
 import net.minecraft.util.ChunkCoordinates;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.WorldProvider;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraftforge.client.IRenderHandler;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.init.TDEBiomes;
-import com.thedarkera.world.renderers.SkyRenderer;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -58,14 +52,7 @@ public class TDEWorldProvider extends WorldProvider {
 	@Override
 	public String getDimensionName() {
 		return "The Dark Dimension";
-	}
-	@Override
-	@SideOnly(Side.CLIENT)
-	    public float[] calcSunriseSunsetColors(float p_76560_1_, float p_76560_2_)
-	    {
-	        return null;
-	    }
-
+	}	
 
 	@Override
 	public ChunkCoordinates getEntrancePortalLocation() {
