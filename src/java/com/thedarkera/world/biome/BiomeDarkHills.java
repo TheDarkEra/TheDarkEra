@@ -91,7 +91,7 @@ public class BiomeDarkHills extends BiomeGenBase {
                             {
                                 block = null;
                                 block1 = TDEBlocks.dark_stone;
-                                p_150560_3_[i2] = Blocks.gravel;
+                                p_150560_3_[i2] = TDEBlocks.dark_gravel;
                             }
                             else
                             {
