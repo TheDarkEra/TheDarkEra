@@ -14,6 +14,8 @@ public class BiomeDarkOcean extends BiomeGenBase {
 
     public BiomeDarkOcean(int id) {
         super(id);
+        this.topBlock = TDEBlocks.dark_grass;
+        this.fillerBlock = TDEBlocks.dark_dirt;
         setHeight(height_Oceans);
         spawnableCreatureList.clear();
         spawnableWaterCreatureList.clear();
