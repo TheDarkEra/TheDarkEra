@@ -11,8 +11,8 @@ import net.minecraftforge.event.entity.player.UseHoeEvent;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEBlocks;
-import com.thedarkera.ztesting.SoulBar;
-import com.thedarkera.ztesting.UseShout;
+import com.thedarkera.shouts.SoulBar;
+import com.thedarkera.shouts.UseShout;
 
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.relauncher.Side;
@@ -42,7 +42,6 @@ public class ItemWand extends Item {
 			return false;
 		} else {
 			
-			UseShout.Shout(2, x, y, z);
 			
 			UseHoeEvent event = new UseHoeEvent(player, stack, p_77648_3_, x, y, z);
 			if (MinecraftForge.EVENT_BUS.post(event)) {

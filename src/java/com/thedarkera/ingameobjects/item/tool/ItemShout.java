@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.ztesting.UseShout;
+import com.thedarkera.shouts.UseShout;
 
 public class ItemShout extends Item {
 	public ItemShout() {

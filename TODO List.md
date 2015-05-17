@@ -15,6 +15,7 @@ Achievement Book - Needs Gui made with tick boxes next the objectives.
 Trees - Trees need to only spawn if below block is dark dirt, weedy dirt, dead grass or dark grass. (This should spawn tree's in the biomes)
 The Dark Dimension WorldGen - Make a ore gen, inside ore gen add mod ores. add dark stone replacing stone, redstone ore and lapis ore. add dark coal ore replacing coal ore, same with iron, gold, diamond and emerald.
 ItemWand - Wand only change blocks if player has atleast 2 mana.
+Add everything to the oredictionary
 
 ## Textures
 blocks/lamp.png

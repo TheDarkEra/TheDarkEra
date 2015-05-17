@@ -1,6 +1,9 @@
 package com.thedarkera.init;
 
 import com.thedarkera.world.biome.*;
+import com.thedarkera.world.biome.BiomeDarkHills;
+import com.thedarkera.world.biome.BiomeDarkJungle;
+import com.thedarkera.world.biome.BiomeDarkOcean;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeManager;
 
@@ -14,6 +17,7 @@ public class TDEBiomes {
 	public static BiomeGenBase dark_hills;
     public static BiomeGenBase dead_land;
     public static BiomeGenBase dark_roofed_forest;
+	public static BiomeGenBase dark_jungle;
 	//public static BiomeGenBase test_biome;
 
 	public static void init() {
@@ -29,6 +33,8 @@ public class TDEBiomes {
         BiomeManager.addSpawnBiome(dead_land);
         dark_roofed_forest = (new BiomeDarkForest(56, 3)).setColor(4215066).setBiomeName("Dark Roofed Forest");
         BiomeManager.addSpawnBiome(dark_roofed_forest);
+        dark_jungle = (new BiomeDarkJungle(55)).setColor(6316129).setBiomeName("Dark Jungle");
+        BiomeManager.addSpawnBiome(dark_jungle);
 	}
 
 }
