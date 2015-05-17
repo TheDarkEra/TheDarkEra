@@ -38,11 +38,15 @@ public class BiomeDarkForest extends BiomeGenBase {
         this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityCow.class, 8, 4, 4));
         this.spawnableCaveCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityBat.class, 10, 8, 8));
 
-        if(type == 0) {
-            this.theBiomeDecorator.treesPerChunk = 50;
-        }
-        if(type == 3){
-            this.theBiomeDecorator.treesPerChunk = 12;
+        switch(type){
+            case 0:
+                this.theBiomeDecorator.treesPerChunk = 50; break;
+            case 1:
+                this.theBiomeDecorator.treesPerChunk = 12; break;
+            case 2:
+                this.theBiomeDecorator.treesPerChunk = 50;
+                this.setHeight(height_LowPlains);
+                this.spawnableCreatureList.clear(); break;
         }
 
 	}

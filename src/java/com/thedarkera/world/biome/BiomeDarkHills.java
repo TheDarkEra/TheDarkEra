@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class BiomeDarkHills extends BiomeGenBase{
 
-    public BiomeDarkHills(int id){
+    public BiomeDarkHills(int id, int type){
         super(id);
         this.topBlock = TDEBlocks.dark_grass;
         this.fillerBlock = TDEBlocks.dark_dirt;
@@ -19,8 +19,15 @@ public class BiomeDarkHills extends BiomeGenBase{
         spawnableMonsterList.clear();
         spawnableWaterCreatureList.clear();
         waterColorMultiplier = 0x000014;
-        setHeight(height_MidHills);
         setTemperatureRainfall(0.2F, 0.3F);
+
+        switch (type){
+            case 0:
+                setHeight(height_MidHills);
+            case 1:
+                setHeight(height_MidHills);
+                //setHeight(new BiomeGenBase.Height(2.0F, 0.5F));
+        }
     }
 
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
