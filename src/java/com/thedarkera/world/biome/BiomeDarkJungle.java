@@ -80,10 +80,10 @@ public class BiomeDarkJungle extends BiomeGenBase {
 	// }
 	// }
 
-	@Override
-	public WorldGenerator getRandomWorldGenForTrees(Random par1Random) {
-		return (WorldGenerator) (par1Random.nextInt(5) == 0 ? this.WorldGenLakes : (par1Random.nextInt(10) == 0 ? this.WorldGenDeadTrees : this.WorldGenDeadTrees));
-	}
+//	@Override
+//	public WorldGenerator getRandomWorldGenForTrees(Random par1Random) {
+//		return (WorldGenerator) (par1Random.nextInt(5) == 0 ? this.WorldGenLakes : (par1Random.nextInt(10) == 0 ? this.WorldGenDeadTrees : this.WorldGenDeadTrees));
+//	}
 
 	/*
 	 * ToDo:Need to add treesBushesDark Stone replace stoneand more decorative
