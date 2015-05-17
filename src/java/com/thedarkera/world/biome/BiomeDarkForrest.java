@@ -44,7 +44,7 @@ public class BiomeDarkForrest extends BiomeGenBase {
 		flowers.clear();
 		addDefaultFlowers();
 		theBiomeDecorator.deadBushPerChunk = 5;
-		this.WorldGenDeadTrees = new WorldGenDeadTrees(false);
+		this.WorldGenDeadTrees = new WorldGenDeadTrees(true);
 		this.WorldGenLakes = new WorldGenLiquids(Blocks.water);
 		this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntitySheep.class, 12, 4, 4));
         this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityPig.class, 10, 4, 4));

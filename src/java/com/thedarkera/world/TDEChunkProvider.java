@@ -394,17 +394,7 @@ public class TDEChunkProvider implements IChunkProvider {
 			i2 = l + this.rand.nextInt(16) + 8;
 			(new WorldGenLakesTDE(Blocks.water)).generate(this.worldObj, this.rand, k1, l1, i2);
 		}
-		for (int j = 0; j < 4; j++) {
-			for (int i = 0; i < 2 + rand.nextInt(5); i++) {
-				if (biomegenbase != BiomeGenBase.desert && biomegenbase != BiomeGenBase.desertHills && !flag && this.rand.nextInt(4) == 0 && TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAKE)) {
-					k1 = k + this.rand.nextInt(16) + 8;
-					l1 = this.rand.nextInt(256);
-					i2 = l + this.rand.nextInt(16) + 8;
-					(new WorldGenDeadTree()).generate(worldObj, rand, k1, l1, i2);
-				}
-			}
-		}
-
+		
 		if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAVA) && !flag && this.rand.nextInt(8) == 0) {
 			k1 = k + this.rand.nextInt(16) + 8;
 			l1 = this.rand.nextInt(this.rand.nextInt(248) + 8);

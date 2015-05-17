@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 import com.thedarkera.handler.EnterBiomeHandler;
 import com.thedarkera.handler.Events;
 import com.thedarkera.handler.WorldGenHandler;
+import com.thedarkera.handler.WorldGenTreeHandler;
 import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.init.TDEBlocks;
@@ -53,6 +54,7 @@ public class TheDarkEra {
 	public static SimpleNetworkWrapper network;
 
 	WorldGenHandler worldGenHandler = new WorldGenHandler();
+	WorldGenTreeHandler worldGenTreeHandler = new WorldGenTreeHandler();
 
 	@SidedProxy(clientSide = "com.thedarkera.proxy.ClientProxy", serverSide = "com.thedarkera.proxy.CommonProxy")
 	public static CommonProxy proxy;
@@ -81,6 +83,7 @@ public class TheDarkEra {
 		TDEBiomes.init();
 
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
+		GameRegistry.registerWorldGenerator(worldGenTreeHandler, 1);
 
 		FMLCommonHandler.instance().bus().register(new EnterBiomeHandler());
 
@@ -106,7 +109,7 @@ public class TheDarkEra {
 		DimensionManager.registerDimension(dimension, dimension);
 
 		MinecraftForge.EVENT_BUS.register(new Events());
-
+		
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 2 successfully!");
 	}
 
