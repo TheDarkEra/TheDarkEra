@@ -54,12 +54,12 @@ public class WorldGenHandler implements IWorldGenerator {
                 random, x, z, 16, 16, 4, 10, 0, 32);
 
 
-		for (int i = 0; i < 3; i++) {
-			int posX = x + random.nextInt(16);
-			int posY = 50 + random.nextInt(35);
-			int posZ = z + random.nextInt(16);
-			new WorldGenGrapePlant().generate(world, random, posX, posY, posZ);
-		}
+	//	for (int i = 0; i < 3; i++) {
+	//		int posX = x + random.nextInt(16);
+	//		int posY = 50 + random.nextInt(35);
+	//		int posZ = z + random.nextInt(16);
+	//		new WorldGenGrapePlant().generate(world, random, posX, posY, posZ);
+	//	}
 
 	/*	for (int i = 0; i < 3; i++) {
 			int posX = x + random.nextInt(16);

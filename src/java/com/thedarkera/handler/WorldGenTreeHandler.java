@@ -15,6 +15,7 @@ import net.minecraftforge.event.world.BlockEvent;
 import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.init.TDEItems;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
+import com.thedarkera.world.gen.WorldGenGrapePlant;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -68,10 +69,17 @@ public class WorldGenTreeHandler implements IWorldGenerator {
              int Zcoord1 = z + random.nextInt(16); //where in chunk it generates
              	new WorldGenDeadTree().generate(world, random, Xcoord1, Ycoord1, Zcoord1);
 		}
+		
+	//	if (biomeGenBase == TDEBiomes.dark_hills)
+	//		for (int i = 0; i < 40; i++) {
+	//			int posX = x + random.nextInt(16);
+	//			int posY = 50 + random.nextInt(35);
+	//			int posZ = z + random.nextInt(16);
+	//			new WorldGenDeadTree().generate(world, random, posX, posY, posZ);
+	//		}
 
-	
-	}
-		  
+		}
+
 
 	@SuppressWarnings("unused")
 	public void addOreSpawn(Block block, int metadata, Block target,

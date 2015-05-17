@@ -32,7 +32,7 @@ public class BiomeDecoratorTDE extends BiomeDecorator {
 	public static int treesPerChunk;
 
 	/** Dimension Trees **/
-	 public static WorldGenDeadTrees deadTree;
+	// public static WorldGenDeadTrees deadTree;
 	// public static WorldGenForestTrees smallTree;
 	// public static WorldGenForestBigTree bigTree;
 	// public static WorldGenEffectTree effectTree;
@@ -58,7 +58,7 @@ public class BiomeDecoratorTDE extends BiomeDecorator {
 		// Blockss.lightStone);
 
 		// TREES
-		deadTree = new WorldGenDeadTrees(true);
+		//deadTree = new WorldGenDeadTrees(true);
 		// smallTree = new WorldGenForestTrees(true);
 		// bigTree = new WorldGenForestBigTree(true, 10, 1, 5);
 		// effectTree = new WorldGenEffectTree(true);

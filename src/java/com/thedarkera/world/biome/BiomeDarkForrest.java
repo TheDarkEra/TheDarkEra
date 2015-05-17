@@ -26,8 +26,6 @@ import com.thedarkera.world.gen.WorldGenDeadTrees;
 
 public class BiomeDarkForrest extends BiomeGenBase {
 	private static final WorldGenSavannaTree field_150627_aC = new WorldGenSavannaTree(false);
-	private WorldGenerator WorldGenDeadTrees;
-	private WorldGenerator WorldGenLakes;
 
 	public BiomeDarkForrest(int biomeID) {
 		super(biomeID);
@@ -44,8 +42,6 @@ public class BiomeDarkForrest extends BiomeGenBase {
 		flowers.clear();
 		addDefaultFlowers();
 		theBiomeDecorator.deadBushPerChunk = 5;
-		this.WorldGenDeadTrees = new WorldGenDeadTrees(true);
-		this.WorldGenLakes = new WorldGenLiquids(Blocks.water);
 		this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntitySheep.class, 12, 4, 4));
         this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityPig.class, 10, 4, 4));
         this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityChicken.class, 10, 4, 4));
