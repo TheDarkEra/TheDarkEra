@@ -13,7 +13,8 @@ import net.minecraftforge.common.MinecraftForge;
 import org.apache.logging.log4j.Logger;
 
 import com.thedarkera.handler.EnterBiomeHandler;
-import com.thedarkera.handler.Events;
+import com.thedarkera.handler.TDEEventHandler;
+import com.thedarkera.handler.TDEPotionEffectHandler;
 import com.thedarkera.handler.WorldGenHandler;
 import com.thedarkera.handler.WorldGenTreeHandler;
 import com.thedarkera.init.TDEArmors;
@@ -139,7 +140,8 @@ public class TheDarkEra {
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
 		DimensionManager.registerDimension(dimension, dimension);
 
-		MinecraftForge.EVENT_BUS.register(new Events());
+		MinecraftForge.EVENT_BUS.register(new TDEEventHandler());
+		MinecraftForge.EVENT_BUS.register(new TDEPotionEffectHandler());
 		
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 2 successfully!");
 	}

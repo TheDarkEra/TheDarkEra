@@ -1,4 +1,4 @@
-package com.thedarkera.ztesting;
+package com.thedarkera.shouts;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayerMP;

@@ -1,4 +1,4 @@
-package com.thedarkera.ztesting;
+package com.thedarkera.shouts;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
@@ -44,7 +44,7 @@ public class ShoutList {
 	}
 
 	public static void NextShout() {
-		if (!(Shout >= 2)) {
+		if (!(Shout >= ShoutNames.length-1)) {
 			Shout++;
 		}
 		FontDuration = 40;
@@ -55,6 +55,9 @@ public class ShoutList {
 			Shout--;
 		}
 		FontDuration = 40;
+	}
+	public static void SelectShout(int shout){
+		Shout = shout;
 	}
 	public static int getShout(){
 		return Shout;

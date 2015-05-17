@@ -1,4 +1,4 @@
-package com.thedarkera.packet;
+package com.thedarkera.packet.packets;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -13,17 +13,20 @@ import net.minecraft.world.World;
 import com.thedarkera.ingameobjects.potioneffects.PotionEffectDarkness;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEPotionEffects;
+import com.thedarkera.packet.AbstractPacket;
+import com.thedarkera.shouts.ShoutList;
+import com.thedarkera.shouts.UseShout;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 
-public class getManaPacket extends AbstractPacket {
+public class PacketGetMana extends AbstractPacket {
 
 	private int mana, x, y, z;
 
-	public getManaPacket() {
+	public PacketGetMana() {
 	}
 
-	public getManaPacket(int x, int y, int z) {
+	public PacketGetMana(int x, int y, int z) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
@@ -49,20 +52,12 @@ public class getManaPacket extends AbstractPacket {
 	public void handleClientSide(EntityPlayer player) {
 	}
 
-	public void handleServerSide(EntityPlayer player) {
-		World world = player.worldObj;
-		TileEntity te = world.getTileEntity(x, y, z);
-		if (!(world.getBlock(x, y, z) == Blocks.air && !FMLCommonHandler.instance().getMinecraftServerInstance().isBlockProtected(world, x, y, z, player) && !(te instanceof TileEntityChest) && te != null) && isMovable(te) == true) {
-			world.setBlock(x, y, z, TDEBlocks.blockLog1, 0, 3);
-			System.out.println(x + "_" + y + "_" + z);
-//			player.addPotionEffect(new PotionEffect(TDEPotionEffects.DarknessID, 200, 1,  true));
-		}
-	}
 
-	private boolean isMovable(TileEntity te) {
-		if (te instanceof TileEntity) {
-			return false;
-		}
-		return true;
+	public void handleServerSide(EntityPlayer player) {
+		int XPlayer = (int) player.posX;
+		int YPlayer = (int) player.posY;
+		int ZPlayer = (int) player.posZ;
+		int shout = ShoutList.getShout();
+		UseShout.Shout(10, XPlayer, YPlayer, ZPlayer);
 	}
 }

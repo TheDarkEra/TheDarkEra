@@ -7,13 +7,13 @@ import net.minecraftforge.event.entity.player.EntityInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerUseItemEvent;
 
 import com.google.common.eventbus.Subscribe;
-import com.thedarkera.ztesting.ShoutList;
-import com.thedarkera.ztesting.SoulBar;
+import com.thedarkera.shouts.ShoutList;
+import com.thedarkera.shouts.SoulBar;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 
-public class Events {
+public class TDEEventHandler {
 
 	@SubscribeEvent
 	public void onRenderGameOverlay(RenderGameOverlayEvent event) {
