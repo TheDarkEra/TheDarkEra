@@ -113,7 +113,6 @@ public class TheDarkEra {
 	        }
 		
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
-		GameRegistry.registerWorldGenerator(worldGenTreeHandler, 1);
 
 		FMLCommonHandler.instance().bus().register(new EnterBiomeHandler());
 
