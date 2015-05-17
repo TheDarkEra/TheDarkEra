@@ -34,7 +34,7 @@ public class BiomeDarkJungle extends BiomeGenBase {
 	private WorldGenAbstractTree WorldGenDeadTree;
 	private BiomeDecoratorTDE customBiomeDecorator;
 
-
+	
 	public BiomeDarkJungle(int biomeID) {
 		super(biomeID);
 		this.setColor(0x000014);
