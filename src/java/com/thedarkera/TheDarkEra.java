@@ -1,7 +1,11 @@
 package com.thedarkera;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Potion;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,6 +20,7 @@ import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.init.TDEItems;
+import com.thedarkera.init.TDEPotionEffects;
 import com.thedarkera.init.TDERecipes;
 import com.thedarkera.init.TDETools;
 import com.thedarkera.init.TDEWeapons;
@@ -81,7 +86,33 @@ public class TheDarkEra {
 		TDETools.init();
 		TDEWeapons.init();
 		TDEBiomes.init();
+		TDEPotionEffects.init();
+		
+		 Potion[] potionTypes = null;
 
+	        for (Field f : Potion.class.getDeclaredFields())
+	        {
+	            f.setAccessible(true);
+
+	            try
+	            {
+	                if (f.getName().equals("potionTypes") || f.getName().equals("field_76425_a"))
+	                {
+	                    Field modfield = Field.class.getDeclaredField("modifiers");
+	                    modfield.setAccessible(true);
+	                    modfield.setInt(f, f.getModifiers() & ~Modifier.FINAL);
+	                    potionTypes = (Potion[]) f.get(null);
+	                    final Potion[] newPotionTypes = new Potion[256];
+	                    System.arraycopy(potionTypes, 0, newPotionTypes, 0, potionTypes.length);
+	                    f.set(null, newPotionTypes);
+	                }
+	            } catch (Exception e)
+	            {
+	                System.err.println("(Potions!) Severe error, please report this to the mod author:");
+	                System.err.println(e);
+	            }
+	        }
+		
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
 		GameRegistry.registerWorldGenerator(worldGenTreeHandler, 1);
 

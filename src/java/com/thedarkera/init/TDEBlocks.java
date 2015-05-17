@@ -13,6 +13,7 @@ import com.thedarkera.ingameobjects.block.BlockDarkCobblestone;
 import com.thedarkera.ingameobjects.block.BlockDarkDirt;
 import com.thedarkera.ingameobjects.block.BlockDarkFire;
 import com.thedarkera.ingameobjects.block.BlockDarkGrass;
+import com.thedarkera.ingameobjects.block.BlockDarkGravel;
 import com.thedarkera.ingameobjects.block.BlockDarkOre;
 import com.thedarkera.ingameobjects.block.BlockDarkStone;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneBricks;
@@ -198,7 +199,7 @@ public class TDEBlocks {
 		reg(dark_grass);
 		dark_dirt = new BlockDarkDirt("dark_dirt");
 		reg(dark_dirt);
-		dark_gravel = new BlockDarkDirt("dark_gravel");
+		dark_gravel = new BlockDarkGravel("dark_gravel");
 		reg(dark_gravel);
 		weedy_dirt = new BlockWeedyDirt("weedy_dirt");
 		reg(weedy_dirt);

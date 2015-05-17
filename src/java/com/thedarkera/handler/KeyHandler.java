@@ -1,5 +1,6 @@
 package com.thedarkera.handler;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.settings.KeyBinding;
 
@@ -40,7 +41,13 @@ public class KeyHandler {
 			
 			if(isDown && key == keyValues[SHOUT_KEY]){
 				System.out.println("IT IS WORKING");
-				TheDarkEra.packetPipeline.sendToServer(new getManaPacket());
+				Minecraft mc = Minecraft.getMinecraft();
+
+				int x = mc.objectMouseOver.blockX;
+				int y = mc.objectMouseOver.blockY;
+				int z = mc.objectMouseOver.blockZ;
+				System.out.println(" got x: " + x + " got y: " + y + " got z: " + z);
+				TheDarkEra.packetPipeline.sendToServer(new getManaPacket(x, y, z));
 			}
 		}
 	}

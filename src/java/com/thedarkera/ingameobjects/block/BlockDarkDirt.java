@@ -1,7 +1,11 @@
 package com.thedarkera.ingameobjects.block;
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 
 import com.thedarkera.TheDarkEra;
 
@@ -15,19 +19,13 @@ public class BlockDarkDirt extends Block { // BlockDirt
 		setStepSound(soundTypeGravel);
 		setHarvestLevel("shovel", 0);
 	}
-	
-	/**
-     * Get the block's damage value (for use with pick block).
-     */
-/*    public int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_)
-    {
-        int l = p_149643_1_.getBlockMetadata(p_149643_2_, p_149643_3_, p_149643_4_);
 
-        if (l == 1)
-        {
-            l = 0;
-        }
+	public Item getItemDropped(int par1, Random rand, int par2) {
+		if (par2 > 3) {
+			par2 = 3;
+		}
 
-        return l;
-    }*/
+		return rand.nextInt(10 - par2 * 3) == 0 ? Items.flint : Item.getItemFromBlock(this);
+	}
+
 }
