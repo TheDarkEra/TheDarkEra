@@ -12,7 +12,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenDesertWells;
 
 public class BiomeDarkLand extends BiomeGenBase {
-	public BiomeDarkLand(int biomeID) {
+	public BiomeDarkLand(int biomeID, int type) {
 		super(biomeID);
         setHeight(height_LowPlains);
 		spawnableCreatureList.clear();
@@ -22,18 +22,23 @@ public class BiomeDarkLand extends BiomeGenBase {
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
 		spawnableWaterCreatureList.clear();
-		
-		this.theBiomeDecorator.cactiPerChunk = 0;
 
-		flowers.clear();
-		addFlower(Blocks.red_flower, 4, 3);
-		addFlower(Blocks.red_flower, 5, 3);
-		addFlower(Blocks.red_flower, 6, 3);
-		addFlower(Blocks.red_flower, 7, 3);
-		addFlower(Blocks.red_flower, 0, 20);
-		addFlower(Blocks.red_flower, 3, 20);
-		addFlower(Blocks.red_flower, 8, 20);
-		addFlower(Blocks.yellow_flower, 0, 30);
+        switch (type){
+            case 0:
+                this.theBiomeDecorator.cactiPerChunk = 0;
+
+                flowers.clear();
+                addFlower(Blocks.red_flower, 4, 3);
+                addFlower(Blocks.red_flower, 5, 3);
+                addFlower(Blocks.red_flower, 6, 3);
+                addFlower(Blocks.red_flower, 7, 3);
+                addFlower(Blocks.red_flower, 0, 20);
+                addFlower(Blocks.red_flower, 3, 20);
+                addFlower(Blocks.red_flower, 8, 20);
+                addFlower(Blocks.yellow_flower, 0, 30);
+            case 1:
+                topBlock = TDEBlocks.dead_grass;
+        }
 	}
 
 	@Override

@@ -1,28 +1,17 @@
 package com.thedarkera.world.biome;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
+import com.thedarkera.init.TDEBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.entity.passive.EntityBat;
-import net.minecraft.entity.passive.EntityChicken;
-import net.minecraft.entity.passive.EntityCow;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.entity.passive.EntitySheep;
-import net.minecraft.entity.passive.EntitySquid;
+import net.minecraft.entity.passive.*;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.gen.feature.WorldGenAbstractTree;
-import net.minecraft.world.gen.feature.WorldGenLiquids;
 import net.minecraft.world.gen.feature.WorldGenSavannaTree;
-import net.minecraft.world.gen.feature.WorldGenerator;
 
-import com.thedarkera.init.TDEBlocks;
-import com.thedarkera.world.gen.WorldGenDeadTrees;
+import java.util.List;
+import java.util.Random;
 
 public class BiomeDarkForest extends BiomeGenBase {
 	private static final WorldGenSavannaTree field_150627_aC = new WorldGenSavannaTree(false);
@@ -49,11 +38,15 @@ public class BiomeDarkForest extends BiomeGenBase {
         this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityCow.class, 8, 4, 4));
         this.spawnableCaveCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityBat.class, 10, 8, 8));
 
-        if(type == 0) {
-            this.theBiomeDecorator.treesPerChunk = 50;
-        }
-        if(type == 3){
-            this.theBiomeDecorator.treesPerChunk = 12;
+        switch(type){
+            case 0:
+                this.theBiomeDecorator.treesPerChunk = 50; break;
+            case 1:
+                this.theBiomeDecorator.treesPerChunk = 12; break;
+            case 2:
+                this.theBiomeDecorator.treesPerChunk = 50;
+                this.setHeight(height_LowPlains);
+                this.spawnableCreatureList.clear(); break;
         }
 
 	}
