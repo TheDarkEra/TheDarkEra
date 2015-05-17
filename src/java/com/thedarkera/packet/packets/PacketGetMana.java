@@ -3,21 +3,10 @@ package com.thedarkera.packet.packets;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.world.World;
 
-import com.thedarkera.ingameobjects.potioneffects.PotionEffectDarkness;
-import com.thedarkera.init.TDEBlocks;
-import com.thedarkera.init.TDEPotionEffects;
 import com.thedarkera.packet.AbstractPacket;
 import com.thedarkera.shouts.ShoutList;
 import com.thedarkera.shouts.UseShout;
-
-import cpw.mods.fml.common.FMLCommonHandler;
 
 public class PacketGetMana extends AbstractPacket {
 
@@ -50,6 +39,7 @@ public class PacketGetMana extends AbstractPacket {
 	}
 
 	public void handleClientSide(EntityPlayer player) {
+		UseShout.Shout(10, x, y, z, player);
 	}
 
 
@@ -57,7 +47,6 @@ public class PacketGetMana extends AbstractPacket {
 		int XPlayer = (int) player.posX;
 		int YPlayer = (int) player.posY;
 		int ZPlayer = (int) player.posZ;
-		int shout = ShoutList.getShout();
-		UseShout.Shout(10, XPlayer, YPlayer, ZPlayer);
+		UseShout.Shout(10, XPlayer, YPlayer, ZPlayer, player);
 	}
 }

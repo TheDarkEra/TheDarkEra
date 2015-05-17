@@ -13,7 +13,6 @@ import com.thedarkera.TheDarkEra;
 import com.thedarkera.packet.packets.PacketGetMana;
 import com.thedarkera.packet.packets.PacketUseShout;
 import com.thedarkera.shouts.ShoutList;
-import com.thedarkera.shouts.UseShout;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.ClientRegistry;

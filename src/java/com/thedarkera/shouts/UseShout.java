@@ -1,31 +1,33 @@
 package com.thedarkera.shouts;
 
-import java.util.Random;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.multiplayer.WorldClient;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+
+import com.thedarkera.shouts.shouts.Shout;
+import com.thedarkera.shouts.shouts.ShoutBreatheInDarkness;
+
 
 public class UseShout {
 
 	public static boolean CostMana(int manaCost, int x, int y, int z) {
-		int shout = ShoutList.getShout();
+		Shout shout;
+		int shoutNumber = ShoutList.getShout();
 		SoulBar.removeMana(manaCost);
-		switch (shout) {
+		switch (shoutNumber) {
 		case 0:
-			System.out.println("1");
+			shout = new ShoutBreatheInDarkness(1);
 			break;
 		case 1:
-			System.out.println("2");
+			System.out.println("SHOUT 2");
 			break;
 		case 2:
-			System.out.println("3");
+			System.out.println("SHOUT 3");
 			break;
 		default:
-			break;
+			return false;
 
 		}
-		return false;
+		return true;
 	}
 
 	public static void Shout(int manaCost, int x, int y, int z, int lookingAtX, int lookingAtY, int lookingAtZ) {
@@ -36,7 +38,7 @@ public class UseShout {
 
 	}
 
-	public static void Shout(int manaCost, int x, int y, int z) {
+	public static void Shout(int manaCost, int x, int y, int z, EntityPlayer player) {
 		double i = SoulBar.getMana();
 		if (i > manaCost) {
 			UseShout.CostMana(20, x, y, z);
