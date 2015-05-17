@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
@@ -43,5 +44,10 @@ public class BlockAncientOre extends Block {
 	    	drops.add(new ItemStack(this));
 	    return drops;
 	}
+	@Override
+	public int getExpDrop(IBlockAccess world, int metadata, int fortune)
+    {
+        return 3;
+    }
 	
 }

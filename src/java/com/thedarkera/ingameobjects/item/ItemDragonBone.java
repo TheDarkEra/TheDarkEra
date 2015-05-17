@@ -44,17 +44,14 @@ public class ItemDragonBone extends IPlaceableItem {
         }
     }
 
-    @Override
-	public String getName() {
+    public String getName() {
 		return "dragon_bone";
 	}
 
-	@Override
 	public String TextureLocation() {
 		return "";
 	}
 
-	@Override
 	public Block ItemBlock() {
 		return TDEBlocks.dragon_bone;
 	}
