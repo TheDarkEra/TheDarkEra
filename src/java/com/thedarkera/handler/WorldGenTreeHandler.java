@@ -2,6 +2,7 @@ package com.thedarkera.handler;
 
 import java.util.Random;
 
+import com.thedarkera.TheDarkEra;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -60,15 +61,17 @@ public class WorldGenTreeHandler implements IWorldGenerator {
 	}
 	private void generateTheDarkDimension(World world, Random random, int x, int z) {
 		
-		BiomeGenBase biomeGenBase = world.getWorldChunkManager().getBiomeGenAt(x + 16, z + 16);
+		BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(x + 16, z + 16);
 		
-		if (biomeGenBase == TDEBiomes.dark_land)
+		if (biome == TDEBiomes.dark_land)
 		for (int i = 0; i < 10; i++){
              int Xcoord1 = x + random.nextInt(16); //where in chuck it generates
              int Ycoord1 = random.nextInt(100); //how high it generates
              int Zcoord1 = z + random.nextInt(16); //where in chunk it generates
              	new WorldGenDeadTree().generate(world, random, Xcoord1, Ycoord1, Zcoord1);
 		}
+
+        if(biome == TDEBiomes.dark_roofed_forest) TheDarkEra.logger.info("Biome:"+x + " - " + z);
 		
 	//	if (biomeGenBase == TDEBiomes.dark_hills)
 	//		for (int i = 0; i < 40; i++) {

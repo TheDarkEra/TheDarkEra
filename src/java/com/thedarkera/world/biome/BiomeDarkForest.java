@@ -24,29 +24,38 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.gen.WorldGenDeadTrees;
 
-public class BiomeDarkForrest extends BiomeGenBase {
+public class BiomeDarkForest extends BiomeGenBase {
 	private static final WorldGenSavannaTree field_150627_aC = new WorldGenSavannaTree(false);
 
-	public BiomeDarkForrest(int biomeID) {
+	public BiomeDarkForest(int biomeID, int type) {
 		super(biomeID);
 		this.setColor(0x000014);
-		topBlock = TDEBlocks.dark_grass;
-		fillerBlock = TDEBlocks.dark_dirt;
-		// bottomBlock = TDEBlocks.dark_stone; TODO: This might mean making our
-		// own BiomeGenBase
-		waterColorMultiplier = 0x000014;
-		spawnableCreatureList.clear();
-		spawnableMonsterList.clear();
-		spawnableWaterCreatureList.clear();
-		this.theBiomeDecorator.treesPerChunk = 50;
-		flowers.clear();
-		addDefaultFlowers();
-		theBiomeDecorator.deadBushPerChunk = 5;
-		this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntitySheep.class, 12, 4, 4));
+
+        topBlock = TDEBlocks.dark_grass;
+        fillerBlock = TDEBlocks.dark_dirt;
+        // bottomBlock = TDEBlocks.dark_stone; TODO: This might mean making our
+        // own BiomeGenBase
+        waterColorMultiplier = 0x000014;
+        spawnableCreatureList.clear();
+        spawnableMonsterList.clear();
+        spawnableWaterCreatureList.clear();
+
+        flowers.clear();
+        addDefaultFlowers();
+        theBiomeDecorator.deadBushPerChunk = 5;
+        this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntitySheep.class, 12, 4, 4));
         this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityPig.class, 10, 4, 4));
         this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityChicken.class, 10, 4, 4));
         this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityCow.class, 8, 4, 4));
         this.spawnableCaveCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityBat.class, 10, 8, 8));
+
+        if(type == 0) {
+            this.theBiomeDecorator.treesPerChunk = 50;
+        }
+        if(type == 3){
+            this.theBiomeDecorator.treesPerChunk = 12;
+        }
+
 	}
 
 

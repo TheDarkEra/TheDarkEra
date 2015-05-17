@@ -34,7 +34,7 @@ public class BiomeDecoratorHelper {
 		// GenerateOres
 		// generateOreInBiome(biome);
 
-		if (biome == TDEBiomes.dark_forrest) {
+		if (biome == TDEBiomes.dark_forest) {
 			// BiomeDecoratorTDE.howMenyTrees = BiomeDarkLand.treesPerChunk;
 			int i = BiomeDecoratorTDE.treesPerChunk;
 			Random rand = new Random();
@@ -111,7 +111,7 @@ public class BiomeDecoratorHelper {
 	 * @param biome
 	 */
 	private static void generateOreInBiome(BiomeGenBase biome) {
-		if (biome == TDEBiomes.dark_forrest) {
+		if (biome == TDEBiomes.dark_forest) {
 			genStandardOre(20, glowStone, 0, 128);
 		}
 	}
