@@ -9,7 +9,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 import java.util.Random;
 
-public class BiomeDarkHills extends BiomeGenBase {
+public class BiomeDarkHills extends BiomeGenBase{
 
     public BiomeDarkHills(int id){
         super(id);

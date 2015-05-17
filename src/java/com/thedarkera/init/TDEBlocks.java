@@ -47,6 +47,7 @@ import com.thedarkera.ingameobjects.item.ItemLeafBlocks;
 import com.thedarkera.ingameobjects.item.ItemLogBlocks1;
 import com.thedarkera.ingameobjects.item.ItemLogBlocks2;
 import com.thedarkera.ingameobjects.item.ItemLogBlocks3;
+import com.thedarkera.ingameobjects.item.ItemLogBlocks4;
 import com.thedarkera.ingameobjects.item.ItemSaplingBlocks;
 import com.thedarkera.utils.RegUtils;
 
@@ -63,6 +64,7 @@ public class TDEBlocks {
 					"Leaf_Rotten_Tree_Opaque", "Leaf_Black_Willow_Opaque", "Leaf_Mangroves_Opaque" } };
 	public static String[] treeTypes2 = new String[] { "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree" };
 	public static String[] treeTypes3 = new String[] { "Black_Willow", "Mangroves" };
+	public static String[] treeTypes4 = new String[] { "Black_Willow", "Mangroves" };
 	public static String[] allTreeTypes = new String[] {"Dead", "Wisp", "Dark_Birch", "Royal_Oak", "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves"};
 	// Blocks//
 	public static Block ebony_ore;
@@ -115,6 +117,7 @@ public class TDEBlocks {
 	public static Block blockLog1;
 	public static Block blockLog2;
 	public static Block blockLog3;
+	public static Block blockLog4;
 
 	public static Block block_leaves;
 
@@ -210,6 +213,9 @@ public class TDEBlocks {
 		GameRegistry.registerBlock(blockLog2, ItemLogBlocks2.class, blockLog2.getUnlocalizedName().substring(5));
 		blockLog3 = new BlockLogs3().setBlockName("log3").setCreativeTab(TheDarkEra.tabTDE);
 		GameRegistry.registerBlock(blockLog3, ItemLogBlocks3.class, blockLog3.getUnlocalizedName().substring(5));
+		blockLog4 = new BlockLogs3().setBlockName("log4").setCreativeTab(TheDarkEra.tabTDE);
+		GameRegistry.registerBlock(blockLog4, ItemLogBlocks4.class, blockLog4.getUnlocalizedName().substring(5));
+		
 
 		block_leaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDE);
 		GameRegistry.registerBlock(block_leaves, ItemLeafBlocks.class, block_leaves.getUnlocalizedName().substring(5));
