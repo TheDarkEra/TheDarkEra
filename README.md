@@ -7,6 +7,9 @@ http://1drv.ms/1DGSH0l
 ### Ideas Document
 https://goo.gl/THH6wG
 
+### Biome Info Document
+https://goo.gl/JvKv9N
+
 ### Official Thread
 http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/wip-mods/2420829-forge-thedarkera-wip-magic-medieval
 
