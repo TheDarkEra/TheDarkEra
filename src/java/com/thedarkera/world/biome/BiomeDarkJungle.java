@@ -22,13 +22,18 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
+
+import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
+
 import com.thedarkera.world.biome.features.WorldGenOriginalTree;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
+
 
 public class BiomeDarkJungle extends BiomeGenBase {
 
 	private WorldGenAbstractTree WorldGenDeadTree;
 	private BiomeDecoratorTDE customBiomeDecorator;
+
 
 	public BiomeDarkJungle(int biomeID) {
 		super(biomeID);

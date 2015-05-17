@@ -1,13 +1,8 @@
 package com.thedarkera.ingameobjects.potioneffects;
 
-import com.thedarkera.TheDarkEra;
-
+import net.minecraft.potion.Potion;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.Minecraft;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ResourceLocation;
 
 public class PotionEffectDarkness extends Potion {
 
@@ -33,8 +28,4 @@ public class PotionEffectDarkness extends Potion {
 		return false;
 	}
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void renderInventoryEffect(int x, int y, PotionEffect effect, net.minecraft.client.Minecraft mc) {
-	}
 }
