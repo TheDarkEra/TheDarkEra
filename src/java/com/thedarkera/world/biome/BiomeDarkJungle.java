@@ -22,7 +22,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
-import com.thedarkera.world.biome.features.WorldGenOriginalTree;
+import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
 
 public class BiomeDarkJungle extends BiomeGenBase {
 
@@ -41,7 +41,7 @@ public BiomeDarkJungle(int biomeID) {
 	//this.spawnableCreatureList.add(new SpawnListEntry(Entitychocolatechicken.class, 6, 6, 9));
 	this.customBiomeDecorator.treesPerChunk = 25;
 	this.customBiomeDecorator.grassPerChunk = 2;
-//	this.WorldGenDeadTree = new WorldGenDeadTree(false);
+	//this.WorldGenDeadTree = new WorldGenDeadTree(false);
 
 }
 	@Override
