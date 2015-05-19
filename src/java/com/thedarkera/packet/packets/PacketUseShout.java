@@ -28,12 +28,6 @@ public class PacketUseShout extends AbstractPacket {
 	}
 
 	public void handleClientSide(EntityPlayer player) {
-//		int XPlayer = (int) player.posX;
-//		int YPlayer = (int) player.posY;
-//		int ZPlayer = (int) player.posZ;
-//		int shout = ShoutList.getShout();
-//		player.addChatComponentMessage(new ChatComponentText("Shout!"));
-//		UseShout.Shout(10, XPlayer, YPlayer, ZPlayer, player);
 	}
 
 
@@ -43,6 +37,6 @@ public class PacketUseShout extends AbstractPacket {
 		int ZPlayer = (int) player.posZ;
 		int shout = ShoutList.getShout();
 		player.addChatComponentMessage(new ChatComponentText("Shout!"));
-		UseShout.Shout(10, XPlayer, YPlayer, ZPlayer, player);
+		UseShout.Shout(10, player, XPlayer, YPlayer, ZPlayer);
 	}
 }

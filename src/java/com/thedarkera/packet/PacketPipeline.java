@@ -62,25 +62,24 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
 	public void postInitialize(){
 		if(isPostInitialized)
 			return;
-		
+
 		isPostInitialized = true;
 		Collections.sort(this.packets, new Comparator<Class<? extends AbstractPacket>>(){
-			@Override
 			public int compare(Class<? extends AbstractPacket> o1, Class<? extends AbstractPacket> o2){
 				int com = String.CASE_INSENSITIVE_ORDER.compare(o1.getCanonicalName(), o2.getCanonicalName());
 				if (com == 0)
 					com = o1.getCanonicalName().compareTo(o2.getCanonicalName());
-				
+
 				return com;
 			}
 		});
 	}
-	
+
 	public void registerPackets() {
-		
 		registerPacket(PacketGetMana.class);
 		registerPacket(PacketUseShout.class);
 		registerPacket(PacketUseShoutOnBlock.class);
+
 	}
 
 	@Override

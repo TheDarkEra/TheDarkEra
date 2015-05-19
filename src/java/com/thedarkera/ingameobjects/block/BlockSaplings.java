@@ -14,11 +14,13 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenBigTree;
+import net.minecraft.world.gen.feature.WorldGenMegaJungle;
 import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEBlocks;
+import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
 
 import cpw.mods.fml.relauncher.Side;
@@ -82,6 +84,7 @@ public class BlockSaplings extends BlockSapling {
 			object = new WorldGenDeadTree();
 			break;
 		case 1:
+			object = new WorldGenDarkJungleTree(30);
 			break;
 		case 2:
 			break;
@@ -117,7 +120,7 @@ public class BlockSaplings extends BlockSapling {
 	}
 
 	// isSameSapling
-	public boolean func_149880_a(World world, int x, int y, int z, int par1) {
+	public boolean getBlockAndMetadata(World world, int x, int y, int z, int par1) {
 		return world.getBlock(x, y, z) == this && (world.getBlockMetadata(x, y, z) & 7) == par1;
 	}
 
@@ -133,9 +136,9 @@ public class BlockSaplings extends BlockSapling {
 	}
 
 	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister p_149651_1_) {
-		for (int i = 0; i < saplingicon.length; ++i) {
-			saplingicon[i] = p_149651_1_.registerIcon(TheDarkEra.MODID + ":saplings/" + saplings[i] + "_sapling");
+	public void registerBlockIcons(IIconRegister iconRegister) {
+		for (int i = 0; i < saplings.length; ++i) {
+			saplingicon[i] = iconRegister.registerIcon(TheDarkEra.MODID + ":saplings/" + saplings[i] + "_sapling");
 		}
 	}
 

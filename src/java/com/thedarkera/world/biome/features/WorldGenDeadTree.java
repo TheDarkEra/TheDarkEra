@@ -13,35 +13,6 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import com.thedarkera.init.TDEBlocks;
 
 public class WorldGenDeadTree extends WorldGenAbstractTree {
-	//
-	// private final int minTreeHeight;
-	// private final int randomTreeHight;
-	//
-	// private final boolean vinesGrow;
-	//
-	// private final Block wood;
-	// private final Block leaves;
-	//
-	// private final int metaWood;
-	// private final int metaLeaves;
-	//
-	// public WorldGenDeadTree(Block wood, Block leaves, int metaWood, int
-	// metaLeaves) {
-	// this(wood, leaves, metaWood, metaLeaves, false, 4, 3, false);
-	// }
-	//
-	// public WorldGenDeadTree(Block wood, Block leaves, int metaWood, int
-	// metaLeaves, boolean doBlockNotify, int minTreeHight, int randomTreeHight,
-	// boolean vinesGrow) {
-	// super(doBlockNotify);
-	// this.wood = wood;
-	// this.leaves = leaves;
-	//
-	// this.minTreeHeight = minTreeHight;
-	// this.randomTreeHight = randomTreeHight;
-	// this.metaWood = metaWood;
-	// this.metaLeaves = metaLeaves;
-	// this.vinesGrow = vinesGrow;
 
 	public WorldGenDeadTree() {
 		super(false);

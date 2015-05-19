@@ -16,6 +16,7 @@ import com.thedarkera.handler.EnterBiomeHandler;
 import com.thedarkera.handler.TDEEventHandler;
 import com.thedarkera.handler.TDEPotionEffectHandler;
 import com.thedarkera.handler.WorldGenHandler;
+import com.thedarkera.handler.serverTickHandler;
 import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.init.TDEBlocks;
@@ -115,6 +116,7 @@ public class TheDarkEra {
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
 
 		FMLCommonHandler.instance().bus().register(new EnterBiomeHandler());
+		FMLCommonHandler.instance().bus().register(new serverTickHandler());
 
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 1 successfully!");
 	}

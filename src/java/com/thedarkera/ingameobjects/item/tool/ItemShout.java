@@ -16,7 +16,7 @@ public class ItemShout extends Item {
 	}
 
 	public boolean onItemUse(ItemStack Item, EntityPlayer player, World world, int x, int y, int z, int side, float px, float py, float pz) {
-		UseShout.Shout(10, x, y, z, player);
+//		UseShout.Shout(10, x, y, z, player);
 		return true;
 	}
 

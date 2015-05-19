@@ -14,10 +14,10 @@ public class CommonProxy {
 	}
 
 	public void registerGuiHandler() {
-		NetworkRegistry.INSTANCE.registerGuiHandler(TheDarkEra.instance,
-				new GuiHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(TheDarkEra.instance, new GuiHandler());
 	}
 
 	public void registerProxies() {
 	}
+
 }

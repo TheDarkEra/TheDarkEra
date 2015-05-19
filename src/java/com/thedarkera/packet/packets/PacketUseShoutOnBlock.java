@@ -54,7 +54,7 @@ public class PacketUseShoutOnBlock extends AbstractPacket {
 		int YPlayer = (int) player.posY;
 		int ZPlayer = (int) player.posZ;
 		int shout = ShoutList.getShout();
-		UseShout.Shout(10, XPlayer, YPlayer, ZPlayer, px, py, pz);
+		UseShout.Shout(10, player, XPlayer, YPlayer, ZPlayer, px, py, pz);
 	}
 
 	private boolean isMovable(TileEntity te) {

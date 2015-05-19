@@ -5,7 +5,6 @@ import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.entity.player.EntityPlayer;
 
 import com.thedarkera.packet.AbstractPacket;
-import com.thedarkera.shouts.ShoutList;
 import com.thedarkera.shouts.UseShout;
 
 public class PacketGetMana extends AbstractPacket {
@@ -39,7 +38,7 @@ public class PacketGetMana extends AbstractPacket {
 	}
 
 	public void handleClientSide(EntityPlayer player) {
-		UseShout.Shout(10, x, y, z, player);
+		UseShout.Shout(10, player, x, y, z);
 	}
 
 
@@ -47,6 +46,6 @@ public class PacketGetMana extends AbstractPacket {
 		int XPlayer = (int) player.posX;
 		int YPlayer = (int) player.posY;
 		int ZPlayer = (int) player.posZ;
-		UseShout.Shout(10, XPlayer, YPlayer, ZPlayer, player);
+		UseShout.Shout(10, player, XPlayer, YPlayer, ZPlayer);
 	}
 }
