@@ -68,7 +68,7 @@ public class BiomeDarkLand extends BiomeGenBase {
 	}
 	@Override
 	public WorldGenAbstractTree func_150567_a(Random p_150567_1_) {
-		return (WorldGenAbstractTree) (p_150567_1_.nextInt(10) == 0 ? this.WorldGenDarkJungleTree : this.worldGeneratorBigTree);	
+		return (WorldGenAbstractTree) (p_150567_1_.nextInt(10) == 0 ? this.WorldGenDarkJungleTree : this.worldGeneratorTrees);	
 	}
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
     {

@@ -4,7 +4,6 @@ import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.Ev
 import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.SAND;
 import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.SAND_PASS2;
 import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.TREE;
-
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
@@ -23,6 +22,7 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 			public int grassPerChunk;
 
 			public int treesPerChunk;
+			
 
 			public BiomeDecoratorTDE(BiomeGenBase biomegenbase)
 			{
@@ -30,6 +30,8 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 
 			this.flowersPerChunk = 2;
 			this.grassPerChunk = 1;
+		
+
 		//	this.plantYellowGen = new WorldGenTallGrass(ChocolateMod.chocolateflower.blockID, 0);
 		//	this.plantRedGen = new WorldGenTallGrass(ChocolateMod.chocolateflower.blockID, 4);
 		//	this.mushroomBrownGen = new WorldGenFlowers(ChocolateMod.chocolatemushroomwhite.blockID);
@@ -92,9 +94,9 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 	        {
 	            worldgenabstracttree.func_150524_b(this.currentWorld, this.randomGenerator, k, i1, l);
 	        }
-	    }
-    }
+	        
 
-	
-	}
+	        }
+    }
+		}		
 
