@@ -28,10 +28,10 @@ public class WorldGenDarkJungleTree extends WorldGenAbstractTree {
 	private void onPlantGrow(World world, int x, int y, int z, int sourceX, int sourceY, int sourceZ) {
 		world.getBlock(x, y, z).onPlantGrow(world, x, y, z, sourceX, sourceY, sourceZ);
 	}
-
+	
 	private boolean func_150532_c(World world, Random rand, int x, int y, int z) {
 		Block block = world.getBlock(x, y - 1, z);
-
+		
 		boolean isSoil = block.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP, (BlockSapling) Blocks.sapling);
 		if (isSoil && y >= 2) {
 			onPlantGrow(world, x, y - 1, z, x, y, z);
