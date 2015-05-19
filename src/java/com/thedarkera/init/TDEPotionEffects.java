@@ -11,7 +11,7 @@ public class TDEPotionEffects {
 	public static int DarknessID = 30;
 
 	public static void init() {
-		Darkness = (new PotionEffectDarkness(DarknessID, true, 0)).setIconIndex(0, 0).setPotionName("Darkness suffocation");
+		Darkness = (new PotionEffectDarkness(DarknessID, true, 0)).setIconIndex(0, 0).setPotionName("Suffocation");
 
 	}
 }

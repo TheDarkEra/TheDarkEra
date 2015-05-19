@@ -6,7 +6,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
 
 import com.thedarkera.packet.AbstractPacket;
-import com.thedarkera.shouts.ShoutList;
 import com.thedarkera.shouts.UseShout;
 
 public class PacketUseShout extends AbstractPacket {
@@ -35,7 +34,6 @@ public class PacketUseShout extends AbstractPacket {
 		int XPlayer = (int) player.posX;
 		int YPlayer = (int) player.posY;
 		int ZPlayer = (int) player.posZ;
-		int shout = ShoutList.getShout();
 		player.addChatComponentMessage(new ChatComponentText("Shout!"));
 		UseShout.Shout(10, player, XPlayer, YPlayer, ZPlayer);
 	}

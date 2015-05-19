@@ -1,5 +1,11 @@
 package com.thedarkera.handler;
 
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.potion.PotionEffect;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.init.TDEPotionEffects;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 
@@ -7,7 +13,10 @@ public class serverTickHandler {
 
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-
+		EntityPlayer thePlayer = event.player;
+		if (event.player.dimension == TheDarkEra.dimension){
+			thePlayer.addPotionEffect(new PotionEffect(TDEPotionEffects.DarknessID, 10, 0, true));
+		}
 	}
 
 	// Called when the client ticks.

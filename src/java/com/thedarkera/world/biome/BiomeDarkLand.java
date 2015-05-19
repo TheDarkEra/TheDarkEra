@@ -33,7 +33,7 @@ public class BiomeDarkLand extends BiomeGenBase {
 		fillerBlock = TDEBlocks.dark_dirt;
 		this.theBiomeDecorator = new BiomeDecoratorTDE(this);
 		this.customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
-		this.WorldGenDarkJungleTree = new WorldGenDarkJungleTree();
+		this.WorldGenDarkJungleTree = new WorldGenDarkJungleTree(20);
 		this.customBiomeDecorator.treesPerChunk = 25;
 		this.customBiomeDecorator.grassPerChunk = 2;
 		waterColorMultiplier = 0x000014;
@@ -74,7 +74,7 @@ public class BiomeDarkLand extends BiomeGenBase {
 	@Override
 	public WorldGenAbstractTree func_150567_a(Random p_150567_1_) {
 		//return (WorldGenAbstractTree) (p_150567_1_.nextInt(10) == 0 ? this.WorldGenDarkJungleTree : this.worldGeneratorBigTree);	
-		return (WorldGenAbstractTree)(p_150567_1_.nextInt(10) == 0 ? this.worldGeneratorBigTree : (p_150567_1_.nextInt(2) == 0 ? new WorldGenDarkJungleTree(false, 10, 20, 3, 3) : new WorldGenTrees(false, 4 + p_150567_1_.nextInt(7), 3, 3, true)));
+		return (WorldGenAbstractTree)(p_150567_1_.nextInt(10) == 0 ? this.worldGeneratorBigTree : (p_150567_1_.nextInt(2) == 0 ? new WorldGenDarkJungleTree(20) : new WorldGenTrees(false, 4 + p_150567_1_.nextInt(7), 3, 3, true)));
 		
 	}
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)

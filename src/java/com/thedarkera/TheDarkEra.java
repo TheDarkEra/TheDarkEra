@@ -51,7 +51,7 @@ public class TheDarkEra {
 														// to change
 	public static int MODVERSION = 1;
 
-	public static int dimension = 2;
+	public static int dimension = -10;
 	
 	public static final PacketPipeline packetPipeline = new PacketPipeline();
 
