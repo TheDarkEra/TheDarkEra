@@ -4,7 +4,6 @@ import java.util.Random;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
-import com.thedarkera.world.biome.features.WorldGenDeadTree;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,13 +11,9 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
-import net.minecraft.world.gen.feature.WorldGenBigTree;
 import net.minecraft.world.gen.feature.WorldGenDesertWells;
-import net.minecraft.world.gen.feature.WorldGenMegaJungle;
-import net.minecraft.world.gen.feature.WorldGenShrub;
-import net.minecraft.world.gen.feature.WorldGenTrees;
 
-import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
+import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;;
 
 public class BiomeDarkLand extends BiomeGenBase {
 	
@@ -33,7 +28,7 @@ public class BiomeDarkLand extends BiomeGenBase {
 		fillerBlock = TDEBlocks.dark_dirt;
 		this.theBiomeDecorator = new BiomeDecoratorTDE(this);
 		this.customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
-		this.WorldGenDarkJungleTree = new WorldGenDarkJungleTree();
+	//	this.WorldGenDarkJungleTree = new WorldGenDarkJungleTree();
 		this.customBiomeDecorator.treesPerChunk = 25;
 		this.customBiomeDecorator.grassPerChunk = 2;
 		waterColorMultiplier = 0x000014;
@@ -73,9 +68,7 @@ public class BiomeDarkLand extends BiomeGenBase {
 	}
 	@Override
 	public WorldGenAbstractTree func_150567_a(Random p_150567_1_) {
-		//return (WorldGenAbstractTree) (p_150567_1_.nextInt(10) == 0 ? this.WorldGenDarkJungleTree : this.worldGeneratorBigTree);	
-		return (WorldGenAbstractTree)(p_150567_1_.nextInt(10) == 0 ? this.worldGeneratorBigTree : (p_150567_1_.nextInt(2) == 0 ? new WorldGenDarkJungleTree(false, 10, 20, 3, 3) : new WorldGenTrees(false, 4 + p_150567_1_.nextInt(7), 3, 3, true)));
-		
+		return (WorldGenAbstractTree) (p_150567_1_.nextInt(10) == 0 ? this.WorldGenDarkJungleTree : this.worldGeneratorBigTree);	
 	}
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
     {
