@@ -1,33 +1,51 @@
 package com.thedarkera.world.biome;
 
 import com.thedarkera.init.TDEBlocks;
+import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
+import com.thedarkera.world.biome.features.WorldGenDeadTree;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 import java.util.Random;
+ 
+public class BiomeDeadLand extends BiomeGenBase {
 
-public class BiomeDeadLand extends BiomeGenBase{
+        private WorldGenAbstractTree WorldGenDeadTree;
+        private BiomeDecoratorTDE customBiomeDecorator;
+        private int Test;
+       	
+        public BiomeDeadLand(int id) {
+        	super(id);
+        	setColor(0x000014);
+        	topBlock = TDEBlocks.dead_grass;
+        	fillerBlock = TDEBlocks.dark_dirt;
+        	theBiomeDecorator = new BiomeDecoratorTDE(this);
+        	customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
+        	spawnableCreatureList.clear();
+        	spawnableWaterCreatureList.clear();
+        	customBiomeDecorator.treesPerChunk = 25;
+        	customBiomeDecorator.grassPerChunk = 2;
+        	WorldGenDeadTree = new WorldGenDeadTree();
+        	
+        	   if (this.Test == 1)
+               {
+                   this.customBiomeDecorator.treesPerChunk = 6;
+                   this.customBiomeDecorator.flowersPerChunk = 100;
+                   this.customBiomeDecorator.grassPerChunk = 1;
+               }
 
-    public BiomeDeadLand(int id){
-        super(id);
-        setHeight(height_LowPlains);
-        spawnableCreatureList.clear();
-        topBlock = TDEBlocks.dead_grass;
-        fillerBlock = TDEBlocks.dark_dirt;
-        waterColorMultiplier = 0x000014;
-        spawnableCreatureList.clear();
-        spawnableMonsterList.clear();
-        spawnableWaterCreatureList.clear();
-
-        this.theBiomeDecorator.cactiPerChunk = 0;
-        this.theBiomeDecorator.deadBushPerChunk = 3;
-
-        flowers.clear();
     }
-
+    
+    @Override
+	public WorldGenAbstractTree func_150567_a(Random random) {
+		return (WorldGenAbstractTree) (random.nextInt(10) == 1 ? this.WorldGenDeadTree : this.worldGeneratorTrees);
+    //	return (WorldGenAbstractTree)(random.nextInt(3) > 0 ? this.WorldGenDeadTree : super.func_150567_a(random));
+    }
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
     {
         boolean flag = true;

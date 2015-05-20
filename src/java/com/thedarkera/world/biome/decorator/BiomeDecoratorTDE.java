@@ -95,8 +95,8 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 	            worldgenabstracttree.func_150524_b(this.currentWorld, this.randomGenerator, k, i1, l);
 	        }
 	        
-
-	        }
-    }
-		}		
+	    }
+	        
+    	}
+}		
 

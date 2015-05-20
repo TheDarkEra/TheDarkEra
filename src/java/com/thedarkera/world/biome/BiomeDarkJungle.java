@@ -13,7 +13,6 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
-
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
 
 
@@ -21,28 +20,27 @@ public class BiomeDarkJungle extends BiomeGenBase {
 
 	private WorldGenAbstractTree WorldGenDeadTree;
 	private BiomeDecoratorTDE customBiomeDecorator;
-
 	
 	public BiomeDarkJungle(int biomeID) {
 		super(biomeID);
-		this.setColor(0x000014);
+		setColor(0x000014);
 		topBlock = TDEBlocks.dark_grass;
 		fillerBlock = TDEBlocks.dark_dirt;
-		this.theBiomeDecorator = new BiomeDecoratorTDE(this);
-		this.customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
-		this.spawnableCreatureList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.customBiomeDecorator.treesPerChunk = 25;
-		this.customBiomeDecorator.grassPerChunk = 2;
-		this.WorldGenDeadTree = new WorldGenDeadTree();
+		theBiomeDecorator = new BiomeDecoratorTDE(this);
+		customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
+		spawnableCreatureList.clear();
+		spawnableWaterCreatureList.clear();
+		customBiomeDecorator.treesPerChunk = 25;
+		customBiomeDecorator.grassPerChunk = 2;
+		WorldGenDeadTree = new WorldGenDeadTree();
 
 	}
 
 	@Override
-	public WorldGenAbstractTree func_150567_a(Random p_150567_1_) {
-		return (WorldGenAbstractTree) (p_150567_1_.nextInt(10) == 0 ? this.WorldGenDeadTree : this.worldGeneratorTrees);
+	public WorldGenAbstractTree func_150567_a(Random random) {
+		return (WorldGenAbstractTree) (random.nextInt(10) == 0 ? this.WorldGenDeadTree : this.worldGeneratorTrees);
+	//	return (WorldGenAbstractTree)(random.nextInt(3) > 0 ? this.WorldGenDeadTree : super.func_150567_a(random));
 	}
-
 	public List getSpawnableList(EnumCreatureType p_76747_1_) {
 		return p_76747_1_ == EnumCreatureType.monster ? this.spawnableMonsterList : (p_76747_1_ == EnumCreatureType.creature ? this.spawnableCreatureList : (p_76747_1_ == EnumCreatureType.waterCreature ? this.spawnableWaterCreatureList : (p_76747_1_ == EnumCreatureType.ambient ? this.spawnableCaveCreatureList : null)));
 	}
