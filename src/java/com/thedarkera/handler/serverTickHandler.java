@@ -1,6 +1,7 @@
 package com.thedarkera.handler;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 
 import com.thedarkera.TheDarkEra;
@@ -14,8 +15,10 @@ public class serverTickHandler {
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		EntityPlayer thePlayer = event.player;
-		if (event.player.dimension == TheDarkEra.dimension){
-			thePlayer.addPotionEffect(new PotionEffect(TDEPotionEffects.DarknessID, 10, 0, true));
+		if (event.player.dimension == TheDarkEra.dimension) {
+			if (!thePlayer.isPotionActive(TDEPotionEffects.BreatheID)) {
+				thePlayer.addPotionEffect(new PotionEffect(TDEPotionEffects.DarknessID, 10, 0, true));
+			}
 		}
 	}
 

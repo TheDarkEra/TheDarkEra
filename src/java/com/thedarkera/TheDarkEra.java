@@ -3,6 +3,7 @@ package com.thedarkera;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
@@ -29,6 +30,7 @@ import com.thedarkera.packet.PacketPipeline;
 import com.thedarkera.proxy.CommonProxy;
 import com.thedarkera.utils.UpdateChecker;
 import com.thedarkera.world.TDEWorldProvider;
+import com.thedarkera.ztesting.GuiManaBar;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -87,6 +89,9 @@ public class TheDarkEra {
 		TDEWeapons.init();
 		TDEBiomes.init();
 		TDEPotionEffects.init();
+		
+		if (FMLCommonHandler.instance().getEffectiveSide().isClient())
+			MinecraftForge.EVENT_BUS.register(new GuiManaBar(Minecraft.getMinecraft()));
 		
 		 Potion[] potionTypes = null;
 

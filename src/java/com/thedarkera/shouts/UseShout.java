@@ -26,7 +26,7 @@ public class UseShout {
 			return false;
 
 		}
-		shout.executeShoutFor();
+		shout.executeShoutFor(player);
 		return true;
 	}
 

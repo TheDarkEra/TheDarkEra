@@ -4,9 +4,9 @@ import net.minecraft.potion.Potion;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class PotionEffectDarkness extends Potion {
+public class PotionEffectBreatheInDarkness extends Potion {
 
-	public PotionEffectDarkness(int ID, boolean isBad, int color) {
+	public PotionEffectBreatheInDarkness(int ID, boolean isBad, int color) {
 		super(ID, isBad, color);
 	}
 

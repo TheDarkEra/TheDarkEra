@@ -3,12 +3,14 @@ package com.thedarkera.handler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
+import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
 import net.minecraftforge.event.entity.player.EntityInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerUseItemEvent;
 
 import com.google.common.eventbus.Subscribe;
 import com.thedarkera.shouts.ShoutList;
 import com.thedarkera.shouts.SoulBar;
+import com.thedarkera.ztesting.ExtendedPlayer;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
@@ -36,8 +38,18 @@ public class TDEEventHandler {
 	}
 
 	@Subscribe
-    public void entityInteractEvent(EntityInteractEvent event){
+	public void entityInteractEvent(EntityInteractEvent event) {
 		System.out.println("INTERACT");
-	  event.entityPlayer.mountEntity(event.target);
+		event.entityPlayer.mountEntity(event.target);
 	}
+
+	@SubscribeEvent
+	public void onEntityConstructing(EntityConstructing event) {
+		if (event.entity instanceof EntityPlayer && ExtendedPlayer.get((EntityPlayer) event.entity) == null)
+			ExtendedPlayer.register((EntityPlayer) event.entity);
+
+		if (event.entity instanceof EntityPlayer && event.entity.getExtendedProperties(ExtendedPlayer.EXT_PROP_NAME) == null)
+			event.entity.registerExtendedProperties(ExtendedPlayer.EXT_PROP_NAME, new ExtendedPlayer((EntityPlayer) event.entity));
+	}
+	
 }
