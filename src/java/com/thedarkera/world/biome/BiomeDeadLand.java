@@ -15,9 +15,9 @@ import java.util.Random;
  
 public class BiomeDeadLand extends BiomeGenBase {
 
-        private WorldGenAbstractTree WorldGenDeadTree;
+    //    private WorldGenAbstractTree WorldGenDeadTree;
+        private static final WorldGenDeadTree WorldGenDeadTree = new WorldGenDeadTree();
         private BiomeDecoratorTDE customBiomeDecorator;
-        private int Test;
        	
         public BiomeDeadLand(int id) {
         	super(id);
@@ -30,21 +30,16 @@ public class BiomeDeadLand extends BiomeGenBase {
         	spawnableWaterCreatureList.clear();
         	customBiomeDecorator.treesPerChunk = 25;
         	customBiomeDecorator.grassPerChunk = 2;
-        	WorldGenDeadTree = new WorldGenDeadTree();
-        	
-        	   if (this.Test == 1)
-               {
-                   this.customBiomeDecorator.treesPerChunk = 6;
-                   this.customBiomeDecorator.flowersPerChunk = 100;
-                   this.customBiomeDecorator.grassPerChunk = 1;
-               }
-
+        //	WorldGenDeadTree = new WorldGenDeadTree();
+        
     }
     
     @Override
 	public WorldGenAbstractTree func_150567_a(Random random) {
-		return (WorldGenAbstractTree) (random.nextInt(10) == 1 ? this.WorldGenDeadTree : this.worldGeneratorTrees);
+		//return (WorldGenAbstractTree) (random.nextInt(10) == 1 ? this.WorldGenDeadTree : this.worldGeneratorTrees);
     //	return (WorldGenAbstractTree)(random.nextInt(3) > 0 ? this.WorldGenDeadTree : super.func_150567_a(random));
+	//	return (WorldGenAbstractTree) (random.nextInt(10) == 0 ? this.WorldGenDeadTree : this.worldGeneratorTrees);
+		return (WorldGenAbstractTree)(random.nextInt(5) > 0 ? WorldGenDeadTree : this.worldGeneratorTrees);
     }
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
     {
