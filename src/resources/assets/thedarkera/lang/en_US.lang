@@ -1,6 +1,7 @@
 itemGroup.the_dark_era=The Dark Era
 
 //Item Misc//
+item.dark_flint.name=Dark Flint
 item.ash_hopper_meat.name=Ash Hopper Meat
 item.ash_hopper_leg.name=Ash Hopper Leg
 item.ash_hopper_jelly.name=Ash Hopper Jelly
@@ -29,6 +30,7 @@ item.ancient_ingot.name=Ancient Ingot
 item.orichalcum_ingot.name=Orichalcum Ingot	
 
 //Item Weapon//
+item.death_sword.name=Death Sword
 item.steel_sword.name=Steel Sword
 item.ancient_sword.name=Ancient Sword
 item.dark_stone_sword.name=Dark Sword

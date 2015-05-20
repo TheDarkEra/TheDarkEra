@@ -3,6 +3,7 @@ package com.thedarkera.init;
 import com.thedarkera.ingameobjects.item.*;
 import com.thedarkera.ingameobjects.item.food.ItemAshHopperMeat;
 import com.thedarkera.ingameobjects.item.food.ItemGrape;
+import com.thedarkera.ingameobjects.item.tool.ItemBoneAndSteel;
 import com.thedarkera.ingameobjects.item.tool.ItemShout;
 
 import net.minecraft.item.Item;
@@ -12,6 +13,7 @@ import com.thedarkera.utils.RegUtils;
 
 public class TDEItems {
 	// Misc items//
+	public static Item dark_flint;
 	public static Item witch_feather;
 	public static Item ash_hopper_leg;
 	public static Item ash_hopper_jelly;
@@ -49,10 +51,11 @@ public class TDEItems {
 
 	public static void init() {
 		// Misc items init//
+		dark_flint = new ItemDarkFlint();
+		reg(dark_flint);
 		witch_feather = new ItemWitchFeather();
 		reg(witch_feather);
-		ash_hopper_meat = new ItemAshHopperMeat(3, 0.3F, true,
-				"ash_hopper_meat");
+		ash_hopper_meat = new ItemAshHopperMeat(3, 0.3F, true, "ash_hopper_meat");
 		reg(ash_hopper_meat);
 		ash_hopper_jelly = new ItemAshHopperJelly();
 		reg(ash_hopper_jelly);
@@ -98,8 +101,8 @@ public class TDEItems {
 		reg(grape);
 
 		// Seed items//
-//		grape_seed = new ItemGrapeSeed(TDEBlocks.grape_plant);
-//		reg(grape_seed);
+		// grape_seed = new ItemGrapeSeed(TDEBlocks.grape_plant);
+		// reg(grape_seed);
 
 		// Placeable items//
 		example = new ItemPlaceAbleExample();

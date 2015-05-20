@@ -20,12 +20,5 @@ public class BlockDarkDirt extends Block { // BlockDirt
 		setHarvestLevel("shovel", 0);
 	}
 
-	public Item getItemDropped(int par1, Random rand, int par2) {
-		if (par2 > 3) {
-			par2 = 3;
-		}
-
-		return rand.nextInt(10 - par2 * 3) == 0 ? Items.flint : Item.getItemFromBlock(this);
-	}
 
 }

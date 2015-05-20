@@ -1,4 +1,4 @@
-package com.thedarkera.ingameobjects.item;
+package com.thedarkera.ingameobjects.item.tool;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEBlocks;

@@ -5,6 +5,7 @@ import net.minecraft.item.Item.ToolMaterial;
 
 import com.thedarkera.ingameobjects.item.weapon.ItemDaedricArrow;
 import com.thedarkera.ingameobjects.item.weapon.ItemDaedricBow;
+import com.thedarkera.ingameobjects.item.weapon.ItemDeathSword;
 import com.thedarkera.ingameobjects.item.weapon.ItemDragonArrow;
 import com.thedarkera.ingameobjects.item.weapon.ItemDragonBow;
 import com.thedarkera.ingameobjects.item.weapon.ItemModDagger;
@@ -13,19 +14,20 @@ import com.thedarkera.ingameobjects.item.weapon.ItemModSword;
 import com.thedarkera.utils.RegUtils;
 
 public class TDEWeapons {
-	
-	//Swords
+
+	// Swords
 	public static Item steel_sword;
 	public static Item dark_stone_sword;
-	
-	//Bows
+	public static Item death_sword;
+
+	// Bows
 	public static Item daedric_bow;
 	public static Item dragon_bow;
-	
-	//Arrows
+
+	// Arrows
 	public static Item daedric_arrow;
 	public static Item dragon_arrow;
-	
+
 	// Daggers
 	public static Item wood_dagger;
 	public static Item stone_dagger;
@@ -35,7 +37,7 @@ public class TDEWeapons {
 	public static Item steel_dagger;
 	public static Item dark_stone_dagger;
 	public static Item ancient_dagger;
-	
+
 	// Mace
 	public static Item wood_mace;
 	public static Item stone_mace;
@@ -45,22 +47,22 @@ public class TDEWeapons {
 	public static Item steel_mace;
 	public static Item dark_stone_mace;
 	public static Item ancient_mace;
-	
-	
+
 	public static void init() {
 		// swords
 		steel_sword = new ItemModSword(TDEMaterials.steel, "steel_sword");
 		reg(steel_sword);
-		dark_stone_sword = new ItemModSword(TDEMaterials.dark_stone,
-				"dark_stone_sword");
+		dark_stone_sword = new ItemModSword(TDEMaterials.dark_stone, "dark_stone_sword");
 		reg(dark_stone_sword);
+		death_sword = new ItemDeathSword(ToolMaterial.EMERALD, "death_sword");
+		reg(death_sword);
 
 		// Bows
 		daedric_bow = new ItemDaedricBow("daedric_bow");
 		reg(daedric_bow);
 		dragon_bow = new ItemDragonBow("dragon_bow");
 		reg(dragon_bow);
-		
+
 		// Arrows
 		daedric_arrow = new ItemDaedricArrow("daedric_arrow");
 		reg(daedric_arrow);
@@ -84,7 +86,7 @@ public class TDEWeapons {
 		reg(dark_stone_dagger);
 		ancient_dagger = new ItemModDagger(TDEMaterials.ancient, "ancient_dagger");
 		reg(ancient_dagger);
-		
+
 		// Mace
 		wood_mace = new ItemModMace(ToolMaterial.WOOD, "wood_mace");
 		reg(wood_mace);
