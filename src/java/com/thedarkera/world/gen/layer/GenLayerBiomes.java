@@ -1,7 +1,5 @@
 package com.thedarkera.world.gen.layer;
 
-import com.thedarkera.init.TDEBiomes;
-
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.IntCache;
@@ -12,7 +10,7 @@ public class GenLayerBiomes extends GenLayer {
 
 	// TODO: spawning with temperatures
     protected BiomeGenBase[] allowedBiomes = {
-        dead_land,
+    		 dark_forest, dark_land, dark_ocean, dark_hills, dead_land, dark_roofed_forest, dark_jungle, magical_forest, ancient_land,
     };
     
     public GenLayerBiomes(long seed) {
