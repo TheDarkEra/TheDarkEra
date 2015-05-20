@@ -41,7 +41,7 @@ public class ItemWand extends Item {
 		if (!player.canPlayerEdit(x, y, z, p_77648_7_, stack) & (mana <= 2)) {
 			return false;
 		} else {
-			
+			UseShout.Shout(2, player, x, y, z);
 			
 			UseHoeEvent event = new UseHoeEvent(player, stack, p_77648_3_, x, y, z);
 			if (MinecraftForge.EVENT_BUS.post(event)) {
@@ -56,7 +56,7 @@ public class ItemWand extends Item {
 			Block block = p_77648_3_.getBlock(x, y, z);
 
 			/** Dirt */
-			if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == TDEBlocks.dark_dirt)) {
+			if (p_77648_7_ != 0 && (block == TDEBlocks.dark_dirt)) {
 				Block block1 = Blocks.dirt;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -68,7 +68,7 @@ public class ItemWand extends Item {
 					stack.damageItem(1, player);
 					return true;
 				}
-			}else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == Blocks.dirt)) {
+			}else if (p_77648_7_ != 0 &&   (block == Blocks.dirt)) {
 				Block block1 = TDEBlocks.dark_dirt;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -83,7 +83,7 @@ public class ItemWand extends Item {
 			
 		    }
 			/** Grass */
-			else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == Blocks.grass)) {
+			else if (p_77648_7_ != 0 &&   (block == Blocks.grass)) {
 				Block block1 = TDEBlocks.dark_grass;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -96,7 +96,7 @@ public class ItemWand extends Item {
 					return true;
 				}
 			
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == TDEBlocks.dark_grass)) {
+		    }else if (p_77648_7_ != 0 &&   (block == TDEBlocks.dark_grass)) {
 				Block block1 = Blocks.grass;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -110,7 +110,7 @@ public class ItemWand extends Item {
 				}
 			
 				/** Stone */
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == Blocks.stone)) {
+		    }else if (p_77648_7_ != 0 &&   (block == Blocks.stone)) {
 				Block block1 = TDEBlocks.dark_stone;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -123,7 +123,7 @@ public class ItemWand extends Item {
 					return true;
 				}
 			
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == TDEBlocks.dark_stone)) {
+		    }else if (p_77648_7_ != 0 &&   (block == TDEBlocks.dark_stone)) {
 				Block block1 = Blocks.stone;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -137,7 +137,7 @@ public class ItemWand extends Item {
 				}
 			
 				/** Cobblestone */
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == Blocks.cobblestone)) {
+		    }else if (p_77648_7_ != 0 &&   (block == Blocks.cobblestone)) {
 				Block block1 = TDEBlocks.dark_cobblestone;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -150,7 +150,7 @@ public class ItemWand extends Item {
 					return true;
 				}
 			
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == TDEBlocks.dark_cobblestone)) {
+		    }else if (p_77648_7_ != 0 &&   (block == TDEBlocks.dark_cobblestone)) {
 				Block block1 = Blocks.cobblestone;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -164,7 +164,7 @@ public class ItemWand extends Item {
 				}
 			
 				/** Gravel */
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == Blocks.gravel)) {
+		    }else if (p_77648_7_ != 0 &&   (block == Blocks.gravel)) {
 				Block block1 = TDEBlocks.dark_gravel;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -177,7 +177,7 @@ public class ItemWand extends Item {
 					return true;
 				}
 			
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == TDEBlocks.dark_gravel)) {
+		    }else if (p_77648_7_ != 0 &&   (block == TDEBlocks.dark_gravel)) {
 				Block block1 = Blocks.gravel;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -191,7 +191,7 @@ public class ItemWand extends Item {
 				}
 			
 				/** Stone Bricks */
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == Blocks.stonebrick)) {
+		    }else if (p_77648_7_ != 0 &&   (block == Blocks.stonebrick)) {
 				Block block1 = TDEBlocks.dark_stone_bricks;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -204,7 +204,7 @@ public class ItemWand extends Item {
 					return true;
 				}
 			
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == TDEBlocks.dark_stone_bricks)) {
+		    }else if (p_77648_7_ != 0 &&   (block == TDEBlocks.dark_stone_bricks)) {
 				Block block1 = Blocks.stonebrick;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -218,7 +218,7 @@ public class ItemWand extends Item {
 				}
 			
 				/** Stone Stairs */
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == Blocks.stone_stairs)) {
+		    }else if (p_77648_7_ != 0 &&   (block == Blocks.stone_stairs)) {
 				Block block1 = TDEBlocks.dark_stone_stairs;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -231,7 +231,7 @@ public class ItemWand extends Item {
 					return true;
 				}
 			
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == TDEBlocks.dark_stone_stairs)) {
+		    }else if (p_77648_7_ != 0 &&   (block == TDEBlocks.dark_stone_stairs)) {
 				Block block1 = Blocks.stone_stairs;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -245,7 +245,7 @@ public class ItemWand extends Item {
 				}
 			
 				/** Stone Slab */
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == Blocks.stone_slab)) {
+		    }else if (p_77648_7_ != 0 &&   (block == Blocks.stone_slab)) {
 				Block block1 = TDEBlocks.dark_stone_slab;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
@@ -258,7 +258,7 @@ public class ItemWand extends Item {
 					return true;
 				}
 			
-		    }else if (p_77648_7_ != 0 && p_77648_3_.getBlock(x, y + 1, z).isAir(p_77648_3_, x, y + 1, z) && (block == TDEBlocks.dark_stone_slab)) {
+		    }else if (p_77648_7_ != 0 &&   (block == TDEBlocks.dark_stone_slab)) {
 				Block block1 = Blocks.stone_slab;
 				p_77648_3_.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), Blocks.grass.stepSound.getStepResourcePath(), (block1.stepSound.getVolume() + 8.0F), block1.stepSound.getPitch() * 40.8F);
 				//p_77648_3_.playSoundEffect(20, 70, 20, TheDarkEra.MODID + ":" + "wand", 1, 1);
