@@ -34,7 +34,7 @@ public class PacketSyncMana extends AbstractPacket {
 		// create a new tag compound
 		data = new NBTTagCompound();
 		// and save our player's data into it
-		ExtendedPlayer.get(player).saveNBTData(data);
+//		ExtendedPlayer.get(player).saveNBTData(data);
 	}
 
 	@Override
@@ -53,7 +53,7 @@ public class PacketSyncMana extends AbstractPacket {
 	public void handleClientSide(EntityPlayer player) {
 		// now we can just load the NBTTagCompound data directly; one and done,
 		// folks
-		ExtendedPlayer.get(player).loadNBTData(data);
+//		ExtendedPlayer.get(player).loadNBTData(data);
 	}
 
 	@Override

@@ -10,8 +10,6 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.packet.packets.PacketGetMana;
-import com.thedarkera.packet.packets.PacketUseShout;
 import com.thedarkera.shouts.ShoutList;
 import com.thedarkera.ztesting.ExtendedPlayer;
 
@@ -25,6 +23,7 @@ public class KeyHandler {
 	private final static String[] keyDesc = { "Shout", "Shout_Left", "Shout_Right" };
 	private static final int[] keyValues = { Keyboard.KEY_Y, Keyboard.KEY_O, Keyboard.KEY_P };
 	private final KeyBinding[] keys;
+
 	public KeyHandler() {
 		keys = new KeyBinding[keyValues.length];
 		for (int i = 0; i < keyValues.length; i++) {
@@ -34,23 +33,24 @@ public class KeyHandler {
 		}
 
 	}
+
 	@SubscribeEvent
-	public void onMouseInput(InputEvent.MouseInputEvent event){
+	public void onMouseInput(InputEvent.MouseInputEvent event) {
 		if (!FMLClientHandler.instance().isGUIOpen(GuiChat.class)) {
 			Minecraft mc = Minecraft.getMinecraft();
 			EntityPlayer thePlayer = mc.getMinecraft().thePlayer;
-			ExtendedPlayer prop = ExtendedPlayer.get((EntityPlayer) thePlayer);
 			ItemStack hand = thePlayer.getCurrentEquippedItem();
+			ExtendedPlayer props = ExtendedPlayer.get((EntityPlayer) thePlayer);
 			int x = mc.objectMouseOver.blockX;
 			int y = mc.objectMouseOver.blockY;
 			int z = mc.objectMouseOver.blockZ;
-			if (Mouse.isButtonDown(1) && hand == null) 
-				prop.consumeMana(10);
-//				TheDarkEra.packetPipeline.sendToServer(new PacketUseShout(x, y, z));
-			}
+			if (Mouse.isButtonDown(1) && hand == null)
+				props.useMana(10);
+			// TheDarkEra.packetPipeline.sendToServer(new PacketUseShout(x, y,
+			// z));
 		}
+	}
 
-	
 	@SubscribeEvent
 	public void onKeyInput(InputEvent.KeyInputEvent event) {
 		if (!FMLClientHandler.instance().isGUIOpen(GuiChat.class)) {
@@ -75,7 +75,6 @@ public class KeyHandler {
 				default:
 					break;
 				}
-				
 
 			}
 		}
