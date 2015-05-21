@@ -37,12 +37,14 @@ public class GuiManaBar extends Gui {
 			int posX = event.resolution.getScaledWidth() / 2 + 10;
 			int posY = event.resolution.getScaledHeight() - 48;
 					ExtendedPlayer props = ExtendedPlayer.get((EntityPlayer) mc.getMinecraft().thePlayer);
+			 int manabarwidth = (int) ((float) props.getMana()/props.getMaxMana() * 48); 
 			// props.getMaxMana() * 48));
 			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 			GL11.glDisable(GL11.GL_LIGHTING);
 			this.mc.getTextureManager().bindTexture(texturepath);
 			mc.renderEngine.bindTexture(new ResourceLocation(TheDarkEra.MODID + ":textures/gui/SoulBar.png"));
 			mc.ingameGUI.drawTexturedModalRect(posX, posY, 0, 0, 50, 5);
+			mc.ingameGUI.drawTexturedModalRect(posX + 1, posY + 1, 0, 6, manabarwidth, 3);
 		}
 	}
 }
