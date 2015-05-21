@@ -12,13 +12,13 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenDesertWells;
+import net.minecraft.world.gen.feature.WorldGenTallGrass;
+import net.minecraft.world.gen.feature.WorldGenerator;
 
-import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
 
 public class BiomeDeadLand extends BiomeGenBase {
 	
-	//private WorldGenAbstractTree WorldGenDarkJungleTree;
 	private BiomeDecoratorTDE customBiomeDecorator;
 	
 	public BiomeDeadLand(int biomeID, int type) {
@@ -29,9 +29,8 @@ public class BiomeDeadLand extends BiomeGenBase {
 		fillerBlock = TDEBlocks.dark_dirt;
 		this.theBiomeDecorator = new BiomeDecoratorTDE(this);
 		this.customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
-		//this.WorldGenDarkJungleTree = new WorldGenDarkJungleTree(2);
 		this.customBiomeDecorator.treesPerChunk = 2;
-		this.customBiomeDecorator.grassPerChunk = 2;
+		this.customBiomeDecorator.grassPerChunk = 6;
 		waterColorMultiplier = 0x000014;
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
@@ -39,7 +38,7 @@ public class BiomeDeadLand extends BiomeGenBase {
 
         switch (type){
             case 0:
-                this.theBiomeDecorator.cactiPerChunk = 0;
+                this.customBiomeDecorator.cactiPerChunk = 0;
 
                 flowers.clear();
                 addFlower(Blocks.red_flower, 4, 3);
@@ -54,6 +53,10 @@ public class BiomeDeadLand extends BiomeGenBase {
                 topBlock = TDEBlocks.dead_grass;
         }
 	}
+      public int getModdedBiomeGrassColor(int colour) {  
+    	  return 0xD27000;
+	}
+      
 
 	@Override
 	public void decorate(World world, Random rand, int chunkX, int chunkZ) {
@@ -67,6 +70,12 @@ public class BiomeDeadLand extends BiomeGenBase {
 					world.getHeightValue(k, l) + 1, l);
 		}
 	}
+	
+	public WorldGenerator getRandomWorldGenForGrass(Random p_76730_1_)
+    {
+        return p_76730_1_.nextInt(5) > 0 ? new WorldGenTallGrass(Blocks.tallgrass, 2) : new WorldGenTallGrass(Blocks.tallgrass, 1);
+    }
+	
 	@Override
 	public WorldGenAbstractTree func_150567_a(Random random) {
 		return (WorldGenAbstractTree)(random.nextInt(3) == 0 ? new WorldGenDeadTree() : this.worldGeneratorTrees);

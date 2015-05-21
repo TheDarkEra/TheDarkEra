@@ -1,6 +1,7 @@
 package com.thedarkera.world.biome.decorator;
 
 import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.CLAY;
+import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.GRASS;
 import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.SAND;
 import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.SAND_PASS2;
 import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.TREE;
@@ -152,8 +153,16 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 	            worldgenabstracttree.func_150524_b(this.currentWorld, this.randomGenerator, k, i1, l);
 	        }
 	    }
-	        
+	    doGen = TerrainGen.decorate(currentWorld, randomGenerator, chunk_X, chunk_Z, GRASS);
+        for (j = 0; doGen && j < this.grassPerChunk; ++j)
+        {
+            k = this.chunk_X + this.randomGenerator.nextInt(16) + 8;
+            l = this.chunk_Z + this.randomGenerator.nextInt(16) + 8;
+            i1 = nextInt(this.currentWorld.getHeightValue(k, l) * 2);
+            WorldGenerator worldgenerator = p_150513_1_.getRandomWorldGenForGrass(this.randomGenerator);
+            worldgenerator.generate(this.currentWorld, this.randomGenerator, k, i1, l);
 	    }
+    }
 	    /**
 	     * Standard ore generation helper. Generates most ores.
 	     */

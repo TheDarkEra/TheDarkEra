@@ -22,6 +22,7 @@ import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
 import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
+import com.thedarkera.world.biome.features.WorldGenOriginalTree;
 
 
 public class BiomeDarkJungle extends BiomeGenBase {
@@ -57,7 +58,8 @@ public class BiomeDarkJungle extends BiomeGenBase {
 	    @Override
 	    public WorldGenAbstractTree func_150567_a(Random random)
 	    {
-	    	return (WorldGenAbstractTree)(random.nextInt(3) == 0 ? new WorldGenDarkJungleTree(2) : this.worldGeneratorTrees);
+	    	//return (WorldGenAbstractTree)(random.nextInt(3) == 0 ? new WorldGenDarkJungleTree(2) : this.worldGeneratorTrees);
+	    	return new WorldGenOriginalTree(TDEBlocks.dark_emerald_ore, Blocks.leaves, 4, 7, false);
 	    }
 	public List getSpawnableList(EnumCreatureType p_76747_1_) {
 		return p_76747_1_ == EnumCreatureType.monster ? this.spawnableMonsterList : (p_76747_1_ == EnumCreatureType.creature ? this.spawnableCreatureList : (p_76747_1_ == EnumCreatureType.waterCreature ? this.spawnableWaterCreatureList : (p_76747_1_ == EnumCreatureType.ambient ? this.spawnableCaveCreatureList : null)));
