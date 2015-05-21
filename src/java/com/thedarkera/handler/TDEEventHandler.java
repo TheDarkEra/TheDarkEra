@@ -25,6 +25,7 @@ public class TDEEventHandler {
 	public void onRenderGameOverlay(RenderGameOverlayEvent event) {
 		SoulBar.SoulBarRun(event);
 		ShoutList.ShoutBarRun(event);
+		
 	}
 
 	@SubscribeEvent

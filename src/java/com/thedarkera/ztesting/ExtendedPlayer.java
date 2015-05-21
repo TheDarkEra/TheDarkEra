@@ -95,7 +95,7 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 
 	public final void addMana(int amount) {
 		if (amount + this.currentMana >= this.maxMana) {
-			int i = this.currentMana + amount;
+			int i = this.currentMana;
 			this.player.getDataWatcher().updateObject(MANA_WATCHER, (i));
 		}
 
