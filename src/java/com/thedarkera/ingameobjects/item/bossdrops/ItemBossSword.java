@@ -1,4 +1,4 @@
-package com.thedarkera.ingameobjects.item.weapon;
+package com.thedarkera.ingameobjects.item.bossdrops;
 
 import java.util.List;
 
@@ -93,13 +93,13 @@ public class ItemBossSword extends Item {
 		return block == Blocks.web;
 	}
 
-	/** To add text under item name **/
+	/** Override this in sword classes
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer player, List tooltip, boolean advanced) {
 		tooltip.add("");
 		tooltip.add("Attack Damage:" + EnumChatFormatting.DARK_RED + " Enough...");
-		tooltip.add("Obtained by killing the Boss: " + EnumChatFormatting.DARK_BLUE + "Death Lord");
-	}
+		tooltip.add("Obtained by killing the Boss: " + EnumChatFormatting.DARK_BLUE + "Need to add Boss");
+	} **/
 	
 }

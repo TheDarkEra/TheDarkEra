@@ -3,9 +3,9 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 
+import com.thedarkera.ingameobjects.item.bossdrops.deathlord.ItemDeathSword;
 import com.thedarkera.ingameobjects.item.weapon.ItemDaedricArrow;
 import com.thedarkera.ingameobjects.item.weapon.ItemDaedricBow;
-import com.thedarkera.ingameobjects.item.weapon.ItemDeathSword;
 import com.thedarkera.ingameobjects.item.weapon.ItemDragonArrow;
 import com.thedarkera.ingameobjects.item.weapon.ItemDragonBow;
 import com.thedarkera.ingameobjects.item.weapon.ItemModDagger;
