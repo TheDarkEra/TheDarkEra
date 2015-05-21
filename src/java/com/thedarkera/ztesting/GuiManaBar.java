@@ -16,48 +16,39 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class GuiManaBar extends Gui
-{
+public class GuiManaBar extends Gui {
 	private Minecraft mc;
 
 	private static final ResourceLocation texturepath = new ResourceLocation(TheDarkEra.MODID + ":textures/gui/SoulBar.png");
 
-	public GuiManaBar(Minecraft mc)
-	{
+	public GuiManaBar(Minecraft mc) {
 		super();
 		this.mc = mc;
 	}
 
 	@SubscribeEvent(priority = EventPriority.NORMAL)
-	public void onRenderExperienceBar(RenderGameOverlayEvent event)
-	{
-		
-		if (event.isCancelable() || event.type != ElementType.EXPERIENCE)
-		{
+	public void onRenderExperienceBar(RenderGameOverlayEvent event) {
+
+		if (event.isCancelable() || event.type != ElementType.EXPERIENCE) {
 			return;
 		}
-		
-		
+
 		ExtendedPlayer props = ExtendedPlayer.get(this.mc.thePlayer);
 
-		if (props == null || props.getMaxMana() == 0)
-		{
+		if (props == null || props.getMaxMana() == 0) {
 			return;
 		}
-
-		int xPos = 2;
-		int yPos = 2;
-		
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		
-		GL11.glDisable(GL11.GL_LIGHTING);
-		
-		this.mc.getTextureManager().bindTexture(texturepath);
-		
-		this.drawTexturedModalRect(xPos, yPos, 0, 0, 50, 4);
-
-		int manabarwidth = (int)(((float) props.getCurrentMana() / props.getMaxMana()) * 50);
-		System.out.println("[GUI MANA] Current mana bar width: " + manabarwidth);
-		this.drawTexturedModalRect(xPos, yPos + 1, 0, 4, manabarwidth, 2);
+		if (!mc.thePlayer.capabilities.isCreativeMode) {
+			int posX = event.resolution.getScaledWidth() / 2 + 10;
+			int posY = event.resolution.getScaledHeight() - 48;
+			int manabarwidth = (int) (((float) props.getCurrentMana() / props.getMaxMana() * 48));
+			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glDisable(GL11.GL_LIGHTING);
+			this.mc.getTextureManager().bindTexture(texturepath);
+			mc.renderEngine.bindTexture(new ResourceLocation(TheDarkEra.MODID + ":textures/gui/SoulBar.png"));
+			mc.ingameGUI.drawTexturedModalRect(posX, posY, 0, 0, 50, 5);
+			mc.ingameGUI.drawTexturedModalRect(posX + 1, posY + 1, 0, 6, (int) manabarwidth, 3);
+			props.addMana(1);
+		}
 	}
 }

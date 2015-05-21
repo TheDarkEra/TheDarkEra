@@ -24,9 +24,8 @@ public class SoulBar {
 
 				mc.renderEngine.bindTexture(new ResourceLocation(TheDarkEra.MODID + ":textures/gui/SoulBar.png"));
 
-				mc.ingameGUI.drawTexturedModalRect(posX, posY, 0, 0, 50, 5);
-				mc.ingameGUI.drawTexturedModalRect(posX + 1, posY + 1, 0, 6, (int) manaBar, 3);
-				addMana(0.05);
+//				mc.ingameGUI.drawTexturedModalRect(posX, posY, 0, 0, 50, 5);
+//				mc.ingameGUI.drawTexturedModalRect(posX + 1, posY + 1, 0, 6, (int) manaBar, 3);
 			}
 		}
 	}
