@@ -1,18 +1,37 @@
 package com.thedarkera.init;
 
-import com.thedarkera.ingameobjects.item.*;
+import net.minecraft.item.Item;
+
+import com.thedarkera.ingameobjects.item.ItemAchievementBook;
+import com.thedarkera.ingameobjects.item.ItemAncientIngot;
+import com.thedarkera.ingameobjects.item.ItemAshHopperJelly;
+import com.thedarkera.ingameobjects.item.ItemAshHopperLeg;
+import com.thedarkera.ingameobjects.item.ItemDaedraHeart;
+import com.thedarkera.ingameobjects.item.ItemDarkFlint;
+import com.thedarkera.ingameobjects.item.ItemDarkStoneRod;
+import com.thedarkera.ingameobjects.item.ItemDragonBone;
+import com.thedarkera.ingameobjects.item.ItemDragonScale;
+import com.thedarkera.ingameobjects.item.ItemEbonyIngot;
+import com.thedarkera.ingameobjects.item.ItemFireRune;
+import com.thedarkera.ingameobjects.item.ItemFrostRune;
+import com.thedarkera.ingameobjects.item.ItemLeatherStrip;
+import com.thedarkera.ingameobjects.item.ItemLightningRune;
+import com.thedarkera.ingameobjects.item.ItemOrichalcumIngot;
+import com.thedarkera.ingameobjects.item.ItemRottenWoodStick;
+import com.thedarkera.ingameobjects.item.ItemSoulGem;
+import com.thedarkera.ingameobjects.item.ItemSteelIngot;
+import com.thedarkera.ingameobjects.item.ItemWitchFeather;
+import com.thedarkera.ingameobjects.item.bossdrops.deathlord.ItemDeathLordSkull;
 import com.thedarkera.ingameobjects.item.food.ItemAshHopperMeat;
 import com.thedarkera.ingameobjects.item.food.ItemGrape;
 import com.thedarkera.ingameobjects.item.tool.ItemBoneAndSteel;
 import com.thedarkera.ingameobjects.item.tool.ItemShout;
-
-import net.minecraft.item.Item;
-
 import com.thedarkera.placeableitem.ItemPlaceAbleExample;
 import com.thedarkera.utils.RegUtils;
 
 public class TDEItems {
 	// Misc items//
+	public static Item death_lord_skull;
 	public static Item dark_flint;
 	public static Item witch_feather;
 	public static Item ash_hopper_leg;
@@ -51,6 +70,8 @@ public class TDEItems {
 
 	public static void init() {
 		// Misc items init//
+		death_lord_skull = new ItemDeathLordSkull("death_lord_skull");
+		reg(death_lord_skull);
 		dark_flint = new ItemDarkFlint();
 		reg(dark_flint);
 		witch_feather = new ItemWitchFeather();
