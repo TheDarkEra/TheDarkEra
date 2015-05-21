@@ -19,6 +19,7 @@ import net.minecraft.network.NetHandlerPlayServer;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.packet.packets.PacketGetMana;
+import com.thedarkera.packet.packets.PacketSyncMana;
 import com.thedarkera.packet.packets.PacketUseShout;
 import com.thedarkera.packet.packets.PacketUseShoutOnBlock;
 import com.thedarkera.utils.Ref;
@@ -79,7 +80,7 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
 		registerPacket(PacketGetMana.class);
 		registerPacket(PacketUseShout.class);
 		registerPacket(PacketUseShoutOnBlock.class);
-
+		registerPacket(PacketSyncMana.class);
 	}
 
 	@Override

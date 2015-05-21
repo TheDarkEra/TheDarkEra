@@ -13,6 +13,7 @@ import com.thedarkera.TheDarkEra;
 import com.thedarkera.packet.packets.PacketGetMana;
 import com.thedarkera.packet.packets.PacketUseShout;
 import com.thedarkera.shouts.ShoutList;
+import com.thedarkera.ztesting.ExtendedPlayer;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.ClientRegistry;
@@ -38,13 +39,14 @@ public class KeyHandler {
 		if (!FMLClientHandler.instance().isGUIOpen(GuiChat.class)) {
 			Minecraft mc = Minecraft.getMinecraft();
 			EntityPlayer thePlayer = mc.getMinecraft().thePlayer;
+			ExtendedPlayer prop = ExtendedPlayer.get((EntityPlayer) thePlayer);
 			ItemStack hand = thePlayer.getCurrentEquippedItem();
 			int x = mc.objectMouseOver.blockX;
 			int y = mc.objectMouseOver.blockY;
 			int z = mc.objectMouseOver.blockZ;
 			if (Mouse.isButtonDown(1) && hand == null) 
-
-				TheDarkEra.packetPipeline.sendToServer(new PacketUseShout(x, y, z));
+				prop.consumeMana(10);
+//				TheDarkEra.packetPipeline.sendToServer(new PacketUseShout(x, y, z));
 			}
 		}
 
@@ -62,7 +64,7 @@ public class KeyHandler {
 					int x = mc.objectMouseOver.blockX;
 					int y = mc.objectMouseOver.blockY;
 					int z = mc.objectMouseOver.blockZ;
-					TheDarkEra.packetPipeline.sendToServer(new PacketGetMana(x, y, z));
+
 					break;
 				case Keyboard.KEY_O:
 					ShoutList.PreviousShout();
