@@ -2,6 +2,7 @@ package com.thedarkera.world.biome;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
+import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
 
 import net.minecraft.block.Block;
@@ -16,20 +17,21 @@ import java.util.Random;
 public class BiomeDeadLand extends BiomeGenBase {
 
     //    private WorldGenAbstractTree WorldGenDeadTree;
-        private static final WorldGenDeadTree WorldGenDeadTree = new WorldGenDeadTree();
+       // private static WorldGenDeadTree WorldGenDeadTree = new WorldGenDeadTree();
         private BiomeDecoratorTDE customBiomeDecorator;
-       	
+        private static final String __OBFID = "CL_00000186";
+        
         public BiomeDeadLand(int id) {
         	super(id);
         	setColor(0x000014);
-        	topBlock = TDEBlocks.dead_grass;
-        	fillerBlock = TDEBlocks.dark_dirt;
+        	//topBlock = TDEBlocks.dead_grass;
+        	//fillerBlock = TDEBlocks.dark_dirt;
         	theBiomeDecorator = new BiomeDecoratorTDE(this);
         	customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
         	spawnableCreatureList.clear();
         	spawnableWaterCreatureList.clear();
-        	customBiomeDecorator.treesPerChunk = 25;
-        	customBiomeDecorator.grassPerChunk = 2;
+        	theBiomeDecorator.treesPerChunk = 25;
+        	theBiomeDecorator.grassPerChunk = 2;
         //	WorldGenDeadTree = new WorldGenDeadTree();
         
     }
@@ -39,7 +41,7 @@ public class BiomeDeadLand extends BiomeGenBase {
 		//return (WorldGenAbstractTree) (random.nextInt(10) == 1 ? this.WorldGenDeadTree : this.worldGeneratorTrees);
     //	return (WorldGenAbstractTree)(random.nextInt(3) > 0 ? this.WorldGenDeadTree : super.func_150567_a(random));
 	//	return (WorldGenAbstractTree) (random.nextInt(10) == 0 ? this.WorldGenDeadTree : this.worldGeneratorTrees);
-		return (WorldGenAbstractTree)(random.nextInt(5) > 0 ? WorldGenDeadTree : this.worldGeneratorTrees);
+    	return (WorldGenAbstractTree) (random.nextInt(3) == 0 ? new WorldGenDeadTree() : new WorldGenDarkJungleTree(3));
     }
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
     {

@@ -32,11 +32,11 @@ public class TDEBiomes {
 		BiomeManager.addSpawnBiome(dark_forest);
         dark_hills = (new BiomeDarkHills(54, 0)).setColor(6316128).setBiomeName("Dark Extreme Hills");
         BiomeManager.addSpawnBiome(dark_hills);
-        dead_land = (new BiomeDarkLand(55, 1)).setColor(0).setBiomeName("Dead Land");
+        dead_land = (new BiomeDarkLand(55, 2)).setColor(6316124).setBiomeName("Dead Land");
         BiomeManager.addSpawnBiome(dead_land);
         dark_roofed_forest = (new BiomeDarkForest(56, 1)).setColor(4215066).setBiomeName("Dark Roofed Forest");
         BiomeManager.addSpawnBiome(dark_roofed_forest);
-        dark_jungle = (new BiomeDarkJungle(57)).setColor(6316129).setBiomeName("Dark Jungle");
+        dark_jungle = (new BiomeDarkJungle(57, 1)).setColor(6316129).setBiomeName("Dark Jungle");
         BiomeManager.addSpawnBiome(dark_jungle);
         magical_forest = (new BiomeDarkForest(58, 2)).setColor(1234567).setBiomeName("Magical Forest");
         BiomeManager.addSpawnBiome(magical_forest);

@@ -16,7 +16,7 @@ public class WorldGenDarkJungleTree extends WorldGenAbstractTree {
 	private int BaseHeight;
 
 	public WorldGenDarkJungleTree(int BaseHeight) {
-		super(true);
+		super(false);
 		this.BaseHeight = BaseHeight;
 	}
 
@@ -29,8 +29,21 @@ public class WorldGenDarkJungleTree extends WorldGenAbstractTree {
 		world.getBlock(x, y, z).onPlantGrow(world, x, y, z, sourceX, sourceY, sourceZ);
 	}
 	
-	private boolean func_150532_c(World world, Random rand, int x, int y, int z) {
-		Block block = world.getBlock(x, y - 1, z);
+		public boolean func_150532_c(World world, Random rand, int x, int y, int z) {
+			while (world.isAirBlock(x, y, z) && y > 2) {
+				y--;
+			}
+			Block block = world.getBlock(x, y, z);
+			if (block != Blocks.grass && block != Blocks.dirt && block != TDEBlocks.dark_grass && block != TDEBlocks.dark_dirt ) {
+				return false;
+			} else {
+				for (int i = -2; i <= 2; i++) {
+					for (int j = -2; j <= 2; j++) {
+						if (world.isAirBlock(x + i, y - 1, z + j) && world.isAirBlock(x + i, y - 2, z + j) && !world.isAirBlock(x + i, y, z + j)) {
+							return false;
+						}
+					}
+				}
 		
 		boolean isSoil = block.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP, (BlockSapling) Blocks.sapling);
 		if (isSoil && y >= 2) {
@@ -40,9 +53,10 @@ public class WorldGenDarkJungleTree extends WorldGenAbstractTree {
 			onPlantGrow(world, x + 1, y - 1, z + 1, x, y, z);
 			return true;
 		} else {
-			return false;
-		}
+			return false;		
 	}
+			}
+		}
 
 	protected boolean func_150537_a(World world, Random rand, int x, int y, int z, int p_150537_6_) {
 		return this.func_150536_b(world, rand, x, y, z, p_150537_6_) && this.func_150532_c(world, rand, x, y, z);
@@ -273,7 +287,7 @@ public class WorldGenDarkJungleTree extends WorldGenAbstractTree {
 			Block block = p_150540_1_.getBlock(p_150540_2_, l, p_150540_4_);
 
 			if (block.canSustainPlant(p_150540_1_, p_150540_2_, l, p_150540_4_, ForgeDirection.UP, (BlockSapling) Blocks.sapling)) {
-				this.setBlockAndNotifyAdequately(p_150540_1_, p_150540_2_, l, p_150540_4_, Blocks.dirt, 2);
+				this.setBlockAndNotifyAdequately(p_150540_1_, p_150540_2_, l, p_150540_4_, TDEBlocks.dark_grass, 2);
 				break;
 			}
 

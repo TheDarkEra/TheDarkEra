@@ -17,13 +17,13 @@ public class WorldGenDeadTree extends WorldGenAbstractTree {
 	public WorldGenDeadTree() {
 		super(false);
 	}
-
+	@Override
 	public boolean generate(World world, Random rand, int x, int y, int z) {
 		while (world.isAirBlock(x, y, z) && y > 2) {
 			y--;
 		}
 		Block block = world.getBlock(x, y, z);
-		if (block != Blocks.grass && block != Blocks.dirt && block != TDEBlocks.dark_dirt && block != TDEBlocks.dead_grass && block != TDEBlocks.dark_grass) {
+		if (block != Blocks.grass && block != Blocks.dirt  && block != TDEBlocks.dead_grass && block != TDEBlocks.dark_dirt && block != TDEBlocks.dark_grass) {
 			return false;
 		} else {
 			for (int i = -2; i <= 2; i++) {

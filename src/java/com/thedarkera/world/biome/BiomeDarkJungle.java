@@ -6,41 +6,92 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+import net.minecraft.world.gen.feature.WorldGenBlockBlob;
+import net.minecraft.world.gen.feature.WorldGenMegaJungle;
+import net.minecraft.world.gen.feature.WorldGenMegaPineTree;
+import net.minecraft.world.gen.feature.WorldGenTaiga1;
+import net.minecraft.world.gen.feature.WorldGenTaiga2;
+import net.minecraft.world.gen.feature.WorldGenTrees;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
+import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
 
 
 public class BiomeDarkJungle extends BiomeGenBase {
 
-	private WorldGenAbstractTree WorldGenDeadTree;
-	private BiomeDecoratorTDE customBiomeDecorator;
+//	private WorldGenAbstractTree WorldGenDeadTree;
+//	private BiomeDecoratorTDE customBiomeDecorator;
+//	
+//	public BiomeDarkJungle(int biomeID) {
+//		super(biomeID);
+//		setColor(0x000014);
+//		topBlock = TDEBlocks.dark_grass;
+//		fillerBlock = TDEBlocks.dark_dirt;
+//		theBiomeDecorator = new BiomeDecoratorTDE(this);
+//		customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
+//		spawnableCreatureList.clear();
+//		spawnableWaterCreatureList.clear();
+//		customBiomeDecorator.treesPerChunk = 25;
+//		customBiomeDecorator.grassPerChunk = 2;
+//		WorldGenDeadTree = new WorldGenDeadTree();
+//
+//	}
+//
+//	@Override
+//	public WorldGenAbstractTree func_150567_a(Random random) {
+//		return (WorldGenAbstractTree) (random.nextInt(10) == 0 ? this.WorldGenDeadTree : this.worldGeneratorTrees &&  this.WorldGenDeadTree : this.worldGeneratorTrees);
+//	//	return (WorldGenAbstractTree)(random.nextInt(3) > 0 ? this.WorldGenDeadTree : super.func_150567_a(random));
+//        return (WorldGenAbstractTree)((this.field_150644_aH == 1 || this.field_150644_aH == 2) && p_150567_1_.nextInt(3) == 0 ? (this.field_150644_aH != 2 && p_150567_1_.nextInt(13) != 0 ? field_150641_aE : field_150642_aF) : (p_150567_1_.nextInt(3) == 0 ? field_150639_aC : field_150640_aD));
 	
-	public BiomeDarkJungle(int biomeID) {
-		super(biomeID);
-		setColor(0x000014);
-		topBlock = TDEBlocks.dark_grass;
-		fillerBlock = TDEBlocks.dark_dirt;
-		theBiomeDecorator = new BiomeDecoratorTDE(this);
-		customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
-		spawnableCreatureList.clear();
-		spawnableWaterCreatureList.clear();
-		customBiomeDecorator.treesPerChunk = 25;
-		customBiomeDecorator.grassPerChunk = 2;
-		WorldGenDeadTree = new WorldGenDeadTree();
+	private static final WorldGenTaiga1 field_150639_aC = new WorldGenTaiga1();
+	    private static final WorldGenTaiga2 field_150640_aD = new WorldGenTaiga2(false);
+	    private static final WorldGenMegaPineTree field_150641_aE = new WorldGenMegaPineTree(false, false);
+	    private static final WorldGenMegaPineTree field_150642_aF = new WorldGenMegaPineTree(false, true);
+      //  private static WorldGenDeadTree WorldGenDeadTree = new WorldGenDeadTree();
+    //    private static WorldGenDarkJungleTree WorldGenDarkJungleTree = new WorldGenDarkJungleTree(1);
+	    private int field_150644_aH;
+	    private static final String __OBFID = "CL_00000186";
+	  //  protected WorldGenTrees worldGeneratorTrees;
 
-	}
+	    public BiomeDarkJungle(int biomeID, int p_i45385_2_)
+	    {
+	        super(biomeID);
+	        topBlock = TDEBlocks.dark_grass;
+			fillerBlock = TDEBlocks.dark_dirt;
+	        this.field_150644_aH = p_i45385_2_;
+	        this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityWolf.class, 8, 4, 4));
+	        this.theBiomeDecorator.treesPerChunk = 10;
+	       // WorldGenDeadTree = new WorldGenDeadTree();
+	    //    WorldGenDarkJungleTree = new WorldGenDarkJungleTree(1);
+	      //  this.worldGeneratorTrees = new WorldGenTrees(false);
 
-	@Override
-	public WorldGenAbstractTree func_150567_a(Random random) {
-		return (WorldGenAbstractTree) (random.nextInt(10) == 0 ? this.WorldGenDeadTree : this.worldGeneratorTrees);
-	//	return (WorldGenAbstractTree)(random.nextInt(3) > 0 ? this.WorldGenDeadTree : super.func_150567_a(random));
-	}
+	        if (p_i45385_2_ != 1 && p_i45385_2_ != 2)
+	        {
+	            this.theBiomeDecorator.grassPerChunk = 1;
+	            this.theBiomeDecorator.mushroomsPerChunk = 1;
+	        }
+	        else
+	        {
+	            this.theBiomeDecorator.grassPerChunk = 7;
+	            this.theBiomeDecorator.deadBushPerChunk = 1;
+	            this.theBiomeDecorator.mushroomsPerChunk = 3;
+	        }
+	    }
+	    @Override
+	    public WorldGenAbstractTree func_150567_a(Random random)
+	    {
+	    	//return random.nextInt(3) == 0 ? new WorldGenDeadTree : this worldGeneratorTrees);
+			return (WorldGenAbstractTree)//(random.nextInt(5) > 0 ? new WorldGenDeadTree(false)  && (random.nextInt(3) > 0 ? WorldGenDeadTree : this.worldGeneratorTrees));
+			(random.nextInt(3) == 0 ? new WorldGenDeadTree() : new WorldGenDarkJungleTree(3));
+	      //  return (WorldGenAbstractTree)((this.field_150644_aH == 1 || this.field_150644_aH == 2) && random.nextInt(3) == 0 ? (this.field_150644_aH != 2 && random.nextInt(13) != 0 ? field_150641_aE : field_150642_aF) : (random.nextInt(3) == 0 ? field_150639_aC : field_150640_aD));
+	    }
 	public List getSpawnableList(EnumCreatureType p_76747_1_) {
 		return p_76747_1_ == EnumCreatureType.monster ? this.spawnableMonsterList : (p_76747_1_ == EnumCreatureType.creature ? this.spawnableCreatureList : (p_76747_1_ == EnumCreatureType.waterCreature ? this.spawnableWaterCreatureList : (p_76747_1_ == EnumCreatureType.ambient ? this.spawnableCaveCreatureList : null)));
 	}
@@ -117,3 +168,4 @@ public class BiomeDarkJungle extends BiomeGenBase {
 	}
 
 }
+
