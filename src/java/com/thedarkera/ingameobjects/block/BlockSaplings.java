@@ -66,7 +66,7 @@ public class BlockSaplings extends BlockSapling {
 
 	@Override
 	protected boolean canPlaceBlockOn(Block block) {
-		return block == Blocks.grass || block == Blocks.dirt || block == Blocks.farmland || block == TDEBlocks.dark_dirt || block == TDEBlocks.dark_grass;
+		return block == Blocks.grass || block == Blocks.dirt || block == Blocks.farmland || block == TDEBlocks.dark_dirt || block == TDEBlocks.dark_grass || block == TDEBlocks.dead_grass;
 	}
 
 	// growTree
