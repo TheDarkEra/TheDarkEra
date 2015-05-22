@@ -3,6 +3,8 @@ package com.thedarkera;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
+import com.thedarkera.handler.*;
+import com.thedarkera.init.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -13,19 +15,6 @@ import net.minecraftforge.common.MinecraftForge;
 
 import org.apache.logging.log4j.Logger;
 
-import com.thedarkera.handler.EnterBiomeHandler;
-import com.thedarkera.handler.TDEEventHandler;
-import com.thedarkera.handler.TDEPotionEffectHandler;
-import com.thedarkera.handler.WorldGenHandler;
-import com.thedarkera.handler.serverTickHandler;
-import com.thedarkera.init.TDEArmors;
-import com.thedarkera.init.TDEBiomes;
-import com.thedarkera.init.TDEBlocks;
-import com.thedarkera.init.TDEItems;
-import com.thedarkera.init.TDEPotionEffects;
-import com.thedarkera.init.TDERecipes;
-import com.thedarkera.init.TDETools;
-import com.thedarkera.init.TDEWeapons;
 import com.thedarkera.packet.PacketPipeline;
 import com.thedarkera.proxy.CommonProxy;
 import com.thedarkera.utils.UpdateChecker;
@@ -89,6 +78,7 @@ public class TheDarkEra {
 		TDEWeapons.init();
 		TDEBiomes.init();
 		TDEPotionEffects.init();
+        TDEAchievements.init();
 		
 		if (FMLCommonHandler.instance().getEffectiveSide().isClient())
 			MinecraftForge.EVENT_BUS.register(new GuiManaBar(Minecraft.getMinecraft()));

@@ -1,6 +1,8 @@
 package com.thedarkera.client.gui.achievementbook;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.handler.AchievementHandler;
+import com.thedarkera.init.TDEAchievements;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
@@ -9,6 +11,8 @@ import org.lwjgl.opengl.GL11;
 public class GuiAchievementsBook extends GuiScreen {
 
     private ResourceLocation texture = new ResourceLocation(TheDarkEra.MODID.toLowerCase(), "textures/gui/achievement_book.png");
+
+    private AchievementHandler achievements = new AchievementHandler();
 
     private int guiWidth = 256;
     private int guiHeight = 180;
@@ -22,6 +26,7 @@ public class GuiAchievementsBook extends GuiScreen {
     @Override
     public void initGui() {
         currentPage = 0;
+        maxPages = achievements.getPagesNeeded();
         x = (width - guiWidth) / 2;
         y = (height - guiHeight) / 2;
 
@@ -47,7 +52,8 @@ public class GuiAchievementsBook extends GuiScreen {
         if(button.enabled){
 
             if (button.id == 1) currentPage -= maxPages;
-            if (button.id == 2) currentPage += 2;
+            //if (button.id == 2) currentPage += 2;
+            if(button.id == 2) achievements.setAchieved(TDEAchievements.test);
 
             updateContent();
         }
@@ -62,4 +68,9 @@ public class GuiAchievementsBook extends GuiScreen {
         if (currentPage % 2 == 1) currentPage--;
         if (currentPage < 0) currentPage = 0;
     }
-}
+
+/*    @Override
+    public boolean doesGuiPauseGame() {
+        return false;
+    }
+*/}
