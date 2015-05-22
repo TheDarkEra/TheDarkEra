@@ -162,7 +162,7 @@ public class TheDarkEra {
 	}
 
 	public enum GuiID {
-		SMASHER, SMELTERY
+		SMASHER, SMELTERY, ACHIEVEMENTBOOK
 	}
 
 }

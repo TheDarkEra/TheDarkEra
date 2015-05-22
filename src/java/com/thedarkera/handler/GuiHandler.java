@@ -1,5 +1,6 @@
 package com.thedarkera.handler;
 
+import com.thedarkera.client.gui.achievementbook.GuiAchievementsBook;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -28,6 +29,8 @@ public class GuiHandler implements IGuiHandler {
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
 		TileEntity te = world.getTileEntity(x, y, z);
+
+        if(ID == GuiID.ACHIEVEMENTBOOK.ordinal()) return new GuiAchievementsBook();
 
 		if (te != null) {
 			// if (ID == GuiID.SMASHER.ordinal())
