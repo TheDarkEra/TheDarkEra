@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class WorldGenOriginalTree extends WorldGenAbstractTree{
+public class TDEWorldGenOriginalTree extends WorldGenAbstractTree{
     private final int minTreeHeight;
     private final int randomTreeHeight;
     
@@ -24,22 +24,22 @@ public class WorldGenOriginalTree extends WorldGenAbstractTree{
     private final int metaWood;
     private final int metaLeaves;
 
-    public WorldGenOriginalTree(Block wood, Block leaves)
+    public TDEWorldGenOriginalTree(Block wood, Block leaves)
     {
         this(wood, leaves, 0, 0);
     }
     
-    public WorldGenOriginalTree(Block wood, Block leaves, int minTreeHeight, int randomTreeHeight, boolean vinesGrow)
+    public TDEWorldGenOriginalTree(Block wood, Block leaves, int minTreeHeight, int randomTreeHeight, boolean vinesGrow)
     {
         this(wood, leaves, 0, 0, false, minTreeHeight, randomTreeHeight, vinesGrow);
     }
     
-    public WorldGenOriginalTree(Block wood, Block leaves, int metaWood, int metaLeaves)
+    public TDEWorldGenOriginalTree(Block wood, Block leaves, int metaWood, int metaLeaves)
     {
         this(wood, leaves, metaWood, metaLeaves, false, 4, 3, false);
     }
 
-    public WorldGenOriginalTree(Block wood, Block leaves, int metaWood, int metaLeaves, boolean doBlockNotify, int minTreeHeight, int randomTreeHeight, boolean vinesGrow)
+    public TDEWorldGenOriginalTree(Block wood, Block leaves, int metaWood, int metaLeaves, boolean doBlockNotify, int minTreeHeight, int randomTreeHeight, boolean vinesGrow)
     {
         super(doBlockNotify);
         
@@ -110,7 +110,7 @@ public class WorldGenOriginalTree extends WorldGenAbstractTree{
 
                 boolean isSoil;
                 
-                if(wood == TDEBlocks.blockLog3) isSoil = block2.canSustainPlant(par1World, par3, par4 - 1, par5, ForgeDirection.UP, (BlockSapling)Blocks.sapling);
+                if(wood == TDEBlocks.blockLog1) isSoil = block2.canSustainPlant(par1World, par3, par4 - 1, par5, ForgeDirection.UP, (BlockSapling)Blocks.sapling);
                         
                {
                     block2.onPlantGrow(par1World, par3, par4 - 1, par5, par3, par4, par5);

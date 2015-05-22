@@ -20,25 +20,24 @@ import net.minecraft.world.gen.feature.WorldGenTrees;
 
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
+import com.thedarkera.world.biome.features.TDEWorldGenBigTree;
+import com.thedarkera.world.biome.features.TDEWorldGenHugeTree;
 import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
-import com.thedarkera.world.biome.features.WorldGenOriginalTree;
+import com.thedarkera.world.biome.features.TDEWorldGenOriginalTree;
+import com.thedarkera.world.biome.features.WorldGenTestTree;
 
 
 public class BiomeDarkJungle extends BiomeGenBase {
 
-		private static final WorldGenTaiga1 field_150639_aC = new WorldGenTaiga1();
-	    private static final WorldGenTaiga2 field_150640_aD = new WorldGenTaiga2(false);
-	    private static final WorldGenMegaPineTree field_150641_aE = new WorldGenMegaPineTree(false, false);
-	    private static final WorldGenMegaPineTree field_150642_aF = new WorldGenMegaPineTree(false, true);
 	    private int field_150644_aH;
 	    private static final String __OBFID = "CL_00000186";
 
 	    public BiomeDarkJungle(int biomeID, int p_i45385_2_)
 	    {
 	        super(biomeID);
-	        topBlock = TDEBlocks.dark_grass;
-			fillerBlock = TDEBlocks.dark_dirt;
+	       // topBlock = TDEBlocks.dark_grass;
+		//	fillerBlock = TDEBlocks.dark_dirt;
 	        this.field_150644_aH = p_i45385_2_;
 	        this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityWolf.class, 8, 4, 4));
 	        this.theBiomeDecorator.treesPerChunk = 10;
@@ -55,11 +54,12 @@ public class BiomeDarkJungle extends BiomeGenBase {
 	            this.theBiomeDecorator.mushroomsPerChunk = 3;
 	        }
 	    }
-	    @Override
 	    public WorldGenAbstractTree func_150567_a(Random random)
 	    {
-	    	//return (WorldGenAbstractTree)(random.nextInt(3) == 0 ? new WorldGenDarkJungleTree(2) : this.worldGeneratorTrees);
-	    	return new WorldGenOriginalTree(TDEBlocks.dark_emerald_ore, Blocks.leaves, 4, 7, false);
+	    	//return (WorldGenAbstractTree)(random.nextInt(3) == 0 ? new WorldGenDarkJungleTree(false, 10, 20, 3, 3) : this.worldGeneratorTrees);
+	    	//return new WorldGenOriginalTree(TDEBlocks.dark_emerald_ore, Blocks.leaves, 4, 7, false);
+	    	//return new TDEWorldGenBigTree(false);
+	    	return new WorldGenTestTree(false, 10, 20, 1, 3);
 	    }
 	public List getSpawnableList(EnumCreatureType p_76747_1_) {
 		return p_76747_1_ == EnumCreatureType.monster ? this.spawnableMonsterList : (p_76747_1_ == EnumCreatureType.creature ? this.spawnableCreatureList : (p_76747_1_ == EnumCreatureType.waterCreature ? this.spawnableWaterCreatureList : (p_76747_1_ == EnumCreatureType.ambient ? this.spawnableCaveCreatureList : null)));
