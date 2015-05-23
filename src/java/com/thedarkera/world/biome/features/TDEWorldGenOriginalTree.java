@@ -56,6 +56,21 @@ public class TDEWorldGenOriginalTree extends WorldGenAbstractTree{
 
     public boolean generate(World par1World, Random par2Random, int par3, int par4, int par5)
     {
+    	while (par1World.isAirBlock(par3, par4, par5) && par4 > 2) {
+    		par4--;
+		}
+		Block block = par1World.getBlock(par3, par4, par5);
+		if (block != Blocks.grass && block != Blocks.dirt  && block != TDEBlocks.dead_grass && block != TDEBlocks.dark_dirt && block != TDEBlocks.dark_grass) {
+			return false;
+		} else {
+			for (int i = -2; i <= 2; i++) {
+				for (int j = -2; j <= 2; j++) {
+					if (par1World.isAirBlock(par3 + i, par4 - 1, par5 + j) && par1World.isAirBlock(par3 + i, par4 - 2, par5 + j) && !par1World.isAirBlock(par3 + i, par4, par5 + j)) {
+						return false;
+					}
+				}
+			}
+    	
         int l = par2Random.nextInt(this.randomTreeHeight) + this.minTreeHeight;
         boolean flag = true;
 
@@ -63,7 +78,6 @@ public class TDEWorldGenOriginalTree extends WorldGenAbstractTree{
         {
             byte b0;
             int k1;
-            Block block;
 
             for (int i1 = par4; i1 <= par4 + 1 + l; ++i1)
             {
@@ -245,6 +259,7 @@ public class TDEWorldGenOriginalTree extends WorldGenAbstractTree{
         {
             return false;
         }
+	}
     }
 
     /**

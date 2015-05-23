@@ -1,6 +1,8 @@
 package com.thedarkera.world.biome;
 
 import com.thedarkera.init.TDEBlocks;
+import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
@@ -10,22 +12,35 @@ import net.minecraft.world.biome.BiomeGenBase;
 import java.util.Random;
 
 public class BiomeDarkHills extends BiomeGenBase{
+	
+	private BiomeDecoratorTDE customBiomeDecorator;
 
-    public BiomeDarkHills(int id, int type){
-        super(id);
+    public BiomeDarkHills(int BiomeID, int type)
+    {
+        super(BiomeID);
+        setColor(0x000014);
         this.topBlock = TDEBlocks.dark_grass;
         this.fillerBlock = TDEBlocks.dark_dirt;
-        spawnableCreatureList.clear();
-        spawnableMonsterList.clear();
-        spawnableWaterCreatureList.clear();
-        waterColorMultiplier = 0x000014;
+    	waterColorMultiplier = 0x000014;
         setTemperatureRainfall(0.2F, 0.3F);
+    	
+    	spawnableCreatureList.clear();
+		spawnableMonsterList.clear();
+		spawnableWaterCreatureList.clear();
+    	
+		theBiomeDecorator = new BiomeDecoratorTDE(this);
+		customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
+		
+		customBiomeDecorator.treesPerChunk = 10;
+		customBiomeDecorator.grassPerChunk = 6;
 
         switch (type){
             case 0:
-                setHeight(height_MidHills);
+            	setHeight(height_MidHills);
+            	theBiomeDecorator.treesPerChunk = 50; break;
             case 1:
                 setHeight(height_MidHills);
+                theBiomeDecorator.treesPerChunk = 12;  
                 //setHeight(new BiomeGenBase.Height(2.0F, 0.5F));
         }
     }

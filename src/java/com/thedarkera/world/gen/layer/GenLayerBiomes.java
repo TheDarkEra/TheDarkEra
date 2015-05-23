@@ -12,7 +12,9 @@ public class GenLayerBiomes extends GenLayer {
     protected BiomeGenBase[] allowedBiomes = {
     		 dead_land, 
     		 dark_jungle, 
-    		// dark_land, 
+    		 dark_forest,
+    		 ancient_land,
+    		
     };
     
     public GenLayerBiomes(long seed) {

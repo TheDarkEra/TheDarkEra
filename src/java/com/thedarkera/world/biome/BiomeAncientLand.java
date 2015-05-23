@@ -1,39 +1,68 @@
 package com.thedarkera.world.biome;
 
+
+import java.util.Random;
+
 import com.thedarkera.init.TDEBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.passive.EntitySquid;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 
-import java.util.Random;
+import net.minecraft.world.gen.feature.WorldGenTallGrass;
+import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class BiomeDarkOcean extends BiomeGenBase {
+import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
+
+public class BiomeAncientLand extends BiomeGenBase{
+
+	private BiomeDecoratorTDE customBiomeDecorator;
 	
-	public BiomeDarkOcean(int biomeID)
+	public BiomeAncientLand(int biomeID, int type)
 	{
-		super(biomeID);
-		
-		setColor(0x000014);
+	    super(biomeID);
+	    	
+	    setColor(0x000014);
 		topBlock = TDEBlocks.dark_grass;
 		fillerBlock = TDEBlocks.dark_dirt;
 		waterColorMultiplier = 0x000014;
-				
-		setHeight(height_Oceans);
-			    
+			
+		setHeight(height_LowPlains);
+		    
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
 		spawnableWaterCreatureList.clear();
-		spawnableWaterCreatureList.add(new BiomeGenBase.SpawnListEntry(EntitySquid.class, 10, 4, 4));	
-	 
+		    
+		theBiomeDecorator = new BiomeDecoratorTDE(this);
+		customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
+		
+		customBiomeDecorator.treesPerChunk = 10;
+		customBiomeDecorator.grassPerChunk = 6;
+	        
+		switch(type){
+		 	case 0:
+		 		theBiomeDecorator.treesPerChunk = 50; break;
+		 	case 1:
+		 		theBiomeDecorator.treesPerChunk = 12; break;
+		 	case 2:
+		 		theBiomeDecorator.treesPerChunk = 50;
+		 		spawnableCreatureList.clear(); break;
+	        }
 	    }
 
-    public BiomeGenBase.TempCategory getTempCategory()
+   // public WorldGenAbstractTree func_150567_a(Random random)
+  //  {
+      
+   // }
+
+    /**
+     * Gets a WorldGen appropriate for this biome.
+     */
+    public WorldGenerator getRandomWorldGenForGrass(Random p_76730_1_)
     {
-        return BiomeGenBase.TempCategory.OCEAN;
+        return p_76730_1_.nextInt(5) > 0 ? new WorldGenTallGrass(Blocks.tallgrass, 2) : new WorldGenTallGrass(Blocks.tallgrass, 1);
     }
 
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
@@ -130,6 +159,5 @@ public class BiomeDarkOcean extends BiomeGenBase {
                 }
             }
         }
-    }
-
+    }   
 }

@@ -22,6 +22,7 @@ import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
+import com.thedarkera.world.biome.features.WorldGenTestTree;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -87,6 +88,7 @@ public class BlockSaplings extends BlockSapling {
 			object = new WorldGenDarkJungleTree(30);
 			break;
 		case 2:
+			object = new WorldGenTestTree(false, 10, 20, 1, 3);
 			break;
 		case 3:
 			break;

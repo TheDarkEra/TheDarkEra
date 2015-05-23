@@ -1,6 +1,11 @@
 package com.thedarkera.world.biome;
 
+import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.init.TDEBlocks;
+import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
+import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
+import com.thedarkera.world.biome.features.WorldGenDeadTree;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EnumCreatureType;
@@ -8,81 +13,69 @@ import net.minecraft.entity.passive.*;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.gen.feature.WorldGenSavannaTree;
+import net.minecraft.world.biome.BiomeGenForest;
+import net.minecraft.world.biome.BiomeGenMutated;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 import java.util.List;
 import java.util.Random;
 
 public class BiomeDarkForest extends BiomeGenBase {
-	private static final WorldGenSavannaTree field_150627_aC = new WorldGenSavannaTree(false);
+	
+    private int field_150632_aF;
+    protected static final WorldGenDeadTree dead_tree = new WorldGenDeadTree();
+    protected static final WorldGenDarkJungleTree dark_jungle_tree = new WorldGenDarkJungleTree(8);
+    private BiomeDecoratorTDE customBiomeDecorator;
 
-	public BiomeDarkForest(int biomeID, int type) {
+	public BiomeDarkForest(int biomeID, int type) 
+	{
 		super(biomeID);
-		this.setColor(0x000014);
 
-        topBlock = TDEBlocks.dark_grass;
-        fillerBlock = TDEBlocks.dark_dirt;
-        // bottomBlock = TDEBlocks.dark_stone; TODO: This might mean making our
-        // own BiomeGenBase
-        waterColorMultiplier = 0x000014;
-        spawnableCreatureList.clear();
-        spawnableMonsterList.clear();
-        spawnableWaterCreatureList.clear();
-
-        flowers.clear();
-        addDefaultFlowers();
-        theBiomeDecorator.deadBushPerChunk = 5;
-        this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntitySheep.class, 12, 4, 4));
-        this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityPig.class, 10, 4, 4));
-        this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityChicken.class, 10, 4, 4));
-        this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityCow.class, 8, 4, 4));
-        this.spawnableCaveCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityBat.class, 10, 8, 8));
+		setColor(0x000014);
+		topBlock = TDEBlocks.dark_grass;
+		fillerBlock = TDEBlocks.dark_dirt;
+		waterColorMultiplier = 0x000014;
+		
+		spawnableCreatureList.clear();
+		spawnableMonsterList.clear();
+		spawnableWaterCreatureList.clear();
+		spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntitySheep.class, 12, 4, 4));
+        spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityPig.class, 10, 4, 4));
+        spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityChicken.class, 10, 4, 4));
+        spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityCow.class, 8, 4, 4));
+        spawnableCaveCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityBat.class, 10, 8, 8));
+		
+		theBiomeDecorator = new BiomeDecoratorTDE(this);
+		customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
+		
+		customBiomeDecorator.treesPerChunk = 10;
+		customBiomeDecorator.grassPerChunk = 6;
+		customBiomeDecorator.deadBushPerChunk = 5;
 
         switch(type){
             case 0:
-                this.theBiomeDecorator.treesPerChunk = 50; break;
+                theBiomeDecorator.treesPerChunk = 50; break;
             case 1:
-                this.theBiomeDecorator.treesPerChunk = 12; break;
+                theBiomeDecorator.treesPerChunk = 12; break;
             case 2:
-                this.theBiomeDecorator.treesPerChunk = 50;
-                this.setHeight(height_LowPlains);
-                this.spawnableCreatureList.clear(); break;
+                theBiomeDecorator.treesPerChunk = 50;
+                setHeight(height_LowPlains);
+                spawnableCreatureList.clear(); break;
         }
-
+	}
+	
+	@Override
+	public WorldGenAbstractTree func_150567_a(Random random) {
+		    {
+		        return (WorldGenAbstractTree)(this.field_150632_aF == 1 && random.nextInt(3) > 0 ? dark_jungle_tree : (this.field_150632_aF != 2 && random.nextInt(5) != 0 ? this.worldGeneratorTrees : dead_tree));
+		    }
 	}
 
-
-	// @Override
-	// public void decorate(World world, Random rand, int chunkX, int chunkZ) {
-	// super.decorate(world, rand, chunkX, chunkZ);
-	//
-	// if (rand.nextInt(1000) == 0) {
-	// int k = chunkX + rand.nextInt(16) + 8;
-	// int l = chunkZ + rand.nextInt(16) + 8;
-	// WorldGenDesertWells worldgendesertwells = new WorldGenDesertWells();
-	// worldgendesertwells.generate(world, rand, k,
-	// world.getHeightValue(k, l) + 1, l);
-	// }
-	// }
-	
-	// @Override
-	// public WorldGenerator getRandomWorldGenForTrees(Random par1Random)
-	// {
-	// return (WorldGenerator)(par1Random.nextInt(5) == 0 ? this.WorldGenLakes :
-	// (par1Random.nextInt(10) == 0 ? this.WorldGenDeadTrees :
-	// this.WorldGenDeadTrees));
-	// }
-	/*
-	 * ToDo:Need to add treesBushesDark Stone replace stoneand more decorative
-	 * blocks.
-	 * 
-	 * NEED MORE BIOME BLOCKS
-	 */
 	public List getSpawnableList(EnumCreatureType p_76747_1_)
 	    {
 	        return p_76747_1_ == EnumCreatureType.monster ? this.spawnableMonsterList : (p_76747_1_ == EnumCreatureType.creature ? this.spawnableCreatureList : (p_76747_1_ == EnumCreatureType.waterCreature ? this.spawnableWaterCreatureList : (p_76747_1_ == EnumCreatureType.ambient ? this.spawnableCaveCreatureList : null)));
 	    }
-
+	
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
     {
         boolean flag = true;
@@ -177,6 +170,7 @@ public class BiomeDarkForest extends BiomeGenBase {
                 }
             }
         }
-    }
-
+    }   
 }
+
+

@@ -21,40 +21,50 @@ public class BiomeDeadLand extends BiomeGenBase {
 	
 	private BiomeDecoratorTDE customBiomeDecorator;
 	
-	public BiomeDeadLand(int biomeID, int type) {
+	public BiomeDeadLand(int biomeID, int type) 
+	{
 		super(biomeID);
-        setHeight(height_LowPlains);
-		spawnableCreatureList.clear();
-		topBlock = TDEBlocks.dark_grass;
+		
+		setColor(0x000014);
+		topBlock = TDEBlocks.dead_grass;
 		fillerBlock = TDEBlocks.dark_dirt;
-		this.theBiomeDecorator = new BiomeDecoratorTDE(this);
-		this.customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
-		this.customBiomeDecorator.treesPerChunk = 2;
-		this.customBiomeDecorator.grassPerChunk = 6;
 		waterColorMultiplier = 0x000014;
+		
+        setHeight(height_LowPlains);
+        
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
 		spawnableWaterCreatureList.clear();
-
-        switch (type){
-            case 0:
-                this.customBiomeDecorator.cactiPerChunk = 0;
-
-                flowers.clear();
-                addFlower(Blocks.red_flower, 4, 3);
-                addFlower(Blocks.red_flower, 5, 3);
-                addFlower(Blocks.red_flower, 6, 3);
-                addFlower(Blocks.red_flower, 7, 3);
-                addFlower(Blocks.red_flower, 0, 20);
-                addFlower(Blocks.red_flower, 3, 20);
-                addFlower(Blocks.red_flower, 8, 20);
-                addFlower(Blocks.yellow_flower, 0, 30);
-            case 1:
-                topBlock = TDEBlocks.dead_grass;
-        }
+		
+		theBiomeDecorator = new BiomeDecoratorTDE(this);
+		customBiomeDecorator = (BiomeDecoratorTDE) theBiomeDecorator;
+		
+		customBiomeDecorator.treesPerChunk = 2;
+		customBiomeDecorator.grassPerChunk = 6;
+		
+		switch(type){
+	 	case 0:
+	 		theBiomeDecorator.treesPerChunk = 50; break;
+	 	case 1:
+	 		theBiomeDecorator.treesPerChunk = 12; break;
+	 	case 2:
+	 		theBiomeDecorator.treesPerChunk = 50;
+	 		spawnableCreatureList.clear(); break;
+        
+//	        if (type != 1 && type != 2)
+//	        {
+//	            customBiomeDecorator.grassPerChunk = 1;
+//	            this.customBiomeDecorator.mushroomsPerChunk = 1;
+//	        }
+//	        else
+//	        {
+//	            this.customBiomeDecorator.grassPerChunk = 7;
+//	            this.customBiomeDecorator.deadBushPerChunk = 1;
+//	            this.customBiomeDecorator.mushroomsPerChunk = 3;
+	        }
 	}
-      public int getModdedBiomeGrassColor(int colour) {  
-    	  return 0xD27000;
+    public int getModdedBiomeGrassColor(int colour) {  
+    	return 0xD27000;
 	}
       
 

@@ -55,7 +55,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDEBlocks {
 	// This adds all the trees. DO NOT CHANGE THE NAMES!
-	public static String[] treeTypes1 = new String[] { "Dead", "Dark_Jungle", "Dark_Birch", "Royal_Oak" };
+	public static String[] treeTypes1 = new String[] { "Dead", "Dark_Jungle", "Dark_Birch", "Royal_Oak", "Dark_Oak" };
 
 	public static String[][] leafTypes = new String[][] {
 			{ "Leaf_Dead", "Leaf_Dark_Jungle", "Leaf_Dark_Birch", "Leaf_Royal_Oak", "Leaf_Black_Wood_Tree", "Leaf_Paper_Birch_Tree", "Leaf_Maple_Tree", "Leaf_Rotten_Tree", "Leaf_Black_Willow",
@@ -65,7 +65,7 @@ public class TDEBlocks {
 	public static String[] treeTypes2 = new String[] { "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree" };
 	public static String[] treeTypes3 = new String[] { "Black_Willow", "Mangroves" };
 	public static String[] treeTypes4 = new String[] { "Black_Willow", "Mangroves" };
-	public static String[] allTreeTypes = new String[] {"Dead", "Dark_Jungle", "Dark_Birch", "Royal_Oak", "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves"};
+	public static String[] allTreeTypes = new String[] {"Dead",	"Dark_Jungle", "Dark_Birch", "Royal_Oak", "Dark_Oak", "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves"};
 	// Blocks//
 	public static Block ebony_ore;
 	public static Block orichalcum_ore;

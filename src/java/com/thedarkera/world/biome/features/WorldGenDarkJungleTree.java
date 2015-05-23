@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
+import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -30,7 +31,7 @@ public class WorldGenDarkJungleTree extends WorldGenAbstractTree {
 	}
 
 
-	
+		
 		public boolean func_150532_c(World world, Random rand, int x, int y, int z) {
 			while (world.isAirBlock(x, y, z) && y > 2) {
 				y--;
@@ -113,7 +114,8 @@ public class WorldGenDarkJungleTree extends WorldGenAbstractTree {
 	public boolean generate(World world, Random p_76484_2_, int p_76484_3_, int p_76484_4_, int p_76484_5_) {
 		{
 			int l = this.getHeight(p_76484_2_);
-
+			
+		
 			if (!this.func_150537_a(world, p_76484_2_, p_76484_3_, p_76484_4_, p_76484_5_, l)) {
 				return false;
 			} else {
@@ -142,6 +144,21 @@ public class WorldGenDarkJungleTree extends WorldGenAbstractTree {
 
 				for (int l2 = 0; l2 < l; ++l2) {
 					Block block = world.getBlock(p_76484_3_, p_76484_4_ + l2, p_76484_5_);
+//					
+//					while (world.isAirBlock(p_76484_3_, p_76484_4_, p_76484_5_) && p_76484_4_ > 2) {
+//						p_76484_4_--;
+//					}
+//					Block block = world.getBlock(p_76484_3_, p_76484_4_, p_76484_5_);
+//					if (block != Blocks.grass && block != Blocks.dirt  && block != TDEBlocks.dead_grass && block != TDEBlocks.dark_dirt && block != TDEBlocks.dark_grass) {
+//						return false;
+//					} else {
+//						for (int i = -2; i <= 2; i++) {
+//							for (int j = -2; j <= 2; j++) {
+//								if (world.isAirBlock(p_76484_3_ + i, p_76484_4_ - 1, p_76484_5_ + j) && world.isAirBlock(p_76484_3_ + i, p_76484_4_ - 2, p_76484_5_ + j) && !world.isAirBlock(p_76484_3_ + i, p_76484_4_, p_76484_5_ + j)) {
+//									return false;
+//								}
+//							}
+//						}
 
 					if (block.isAir(world, p_76484_3_, p_76484_4_ + l2, p_76484_5_) || block.isLeaves(world, p_76484_3_, p_76484_4_ + l2, p_76484_5_)) {
 						this.setBlockAndNotifyAdequately(world, p_76484_3_, p_76484_4_ + l2, p_76484_5_, TDEBlocks.blockLog1, 1);
@@ -209,9 +226,11 @@ public class WorldGenDarkJungleTree extends WorldGenAbstractTree {
 				}
 
 				return true;
-			}
+						}
+					}
 		}
-	}
+
+	
 
 	protected void func_150534_b(World p_150534_1_, int p_150534_2_, int p_150534_3_, int p_150534_4_, int p_150534_5_, Random p_150534_6_) {
 		int i1 = p_150534_5_ * p_150534_5_;

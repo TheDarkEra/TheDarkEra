@@ -2,8 +2,11 @@ package com.thedarkera.world.biome.features;
 
 import java.util.Random;
 
+import com.thedarkera.init.TDEBlocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
+import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
@@ -42,6 +45,10 @@ public abstract class TDEWorldGenHugeTree extends WorldGenAbstractTree
         }
 
         return i;
+    }
+    protected boolean func_150523_a(Block p_150523_1_)
+    {
+        return p_150523_1_.getMaterial() == Material.air || p_150523_1_.getMaterial() == Material.leaves || p_150523_1_ == Blocks.grass || p_150523_1_ == TDEBlocks.dark_grass|| p_150523_1_ == TDEBlocks.dark_dirt|| p_150523_1_ == Blocks.dirt || p_150523_1_ == Blocks.log || p_150523_1_ == Blocks.log2 || p_150523_1_ == Blocks.sapling || p_150523_1_ == Blocks.vine;
     }
 
     private boolean func_150536_b(World p_150536_1_, Random p_150536_2_, int p_150536_3_, int p_150536_4_, int p_150536_5_, int p_150536_6_)

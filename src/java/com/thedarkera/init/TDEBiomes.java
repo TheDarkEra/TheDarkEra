@@ -1,9 +1,7 @@
 package com.thedarkera.init;
 
 import com.thedarkera.world.biome.*;
-import com.thedarkera.world.biome.BiomeDarkHills;
-import com.thedarkera.world.biome.BiomeDarkJungle;
-import com.thedarkera.world.biome.BiomeDarkOcean;
+
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeManager;
 
@@ -40,7 +38,7 @@ public class TDEBiomes {
         BiomeManager.addSpawnBiome(dark_jungle);
         magical_forest = (new BiomeDarkForest(58, 2)).setColor(1234567).setBiomeName("Magical Forest");
         BiomeManager.addSpawnBiome(magical_forest);
-        ancient_land = (new BiomeDeadLand(59, 2)).setColor(1111111).setBiomeName("Ancient Land");
+        ancient_land = (new BiomeAncientLand(59, 2)).setColor(1111111).setBiomeName("Ancient Land");
         BiomeManager.addSpawnBiome(ancient_land);
         misty_mountains = (new BiomeDarkHills(60, 1)).setColor(999999).setBiomeName("Misty Mountains");
         BiomeManager.addSpawnBiome(misty_mountains);
