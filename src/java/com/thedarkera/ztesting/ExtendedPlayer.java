@@ -1,5 +1,6 @@
 package com.thedarkera.ztesting;
 
+import net.minecraft.entity.DataWatcher;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
@@ -13,23 +14,27 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 	public static final String identifier = TheDarkEra.MODID + "_properties";
 
 	private final EntityPlayer player;
+	
+	public final int DataWatcher = 30;
 
-	private int mana, maxMana;
+	private static int mana, maxMana = 100;
 
 	public ExtendedPlayer(EntityPlayer player) {
 		this.player = player;
-		this.setMaxMana(100);
-
+		DataWatcher dw = player.getDataWatcher();
+		dw.addObject(DataWatcher, ExtendedPlayer.maxMana);
 	}
 
 	@Override
 	public void saveNBTData(NBTTagCompound compound) {
 		compound.setInteger("mana", mana);
+		compound.setInteger("maxMana", player.getDataWatcher().getWatchableObjectInt(DataWatcher));
 	}
 
 	@Override
 	public void loadNBTData(NBTTagCompound compound) {
 		mana = compound.getInteger("mana");
+		player.getDataWatcher().updateObject(DataWatcher, compound.getInteger("maxMana"));
 	}
 
 	@Override
@@ -46,11 +51,11 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 	}
 
 	public int getMaxMana() {
-		return maxMana;
+		return player.getDataWatcher().getWatchableObjectInt(DataWatcher);
 	}
 
-	public void setMaxMana(int maxMana) {
-		this.maxMana = maxMana;
+	public void setMaxMana(int maxManaa) {
+		player.getDataWatcher().updateObject(DataWatcher, maxManaa);
 	}
 
 	public int getMana() {
@@ -58,20 +63,20 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 	}
 
 	public void setMana(int mana) {
-		this.mana = mana;
+		ExtendedPlayer.mana = mana;
 	}
 
 	public void addMana(int i) {
-		if (mana + i >= this.maxMana) {
-			this.mana = this.maxMana;
+		if (mana + i >= player.getDataWatcher().getWatchableObjectInt(DataWatcher)) {
+			ExtendedPlayer.mana = player.getDataWatcher().getWatchableObjectInt(DataWatcher);
 		} else {
-			this.mana = this.mana + i;
+			ExtendedPlayer.mana = ExtendedPlayer.mana + i;
 		}
 	}
 
 	public void useMana(int i) {
 		if (!(mana - i <= 0)) {
-			this.mana = this.mana - i;
+			ExtendedPlayer.mana = ExtendedPlayer.mana - i;
 		}
 	}
 }

@@ -10,6 +10,7 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.packet.packets.PacketGetMana;
 import com.thedarkera.shouts.ShoutList;
 import com.thedarkera.ztesting.ExtendedPlayer;
 
@@ -64,7 +65,9 @@ public class KeyHandler {
 					int x = mc.objectMouseOver.blockX;
 					int y = mc.objectMouseOver.blockY;
 					int z = mc.objectMouseOver.blockZ;
-
+					ExtendedPlayer props = ExtendedPlayer.get((EntityPlayer) Minecraft.getMinecraft().thePlayer);
+					int a = props.getMaxMana();
+					TheDarkEra.packetPipeline.sendToServer(new PacketGetMana(a + 10));
 					break;
 				case Keyboard.KEY_O:
 					ShoutList.PreviousShout();
