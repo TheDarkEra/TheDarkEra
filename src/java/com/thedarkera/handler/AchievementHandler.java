@@ -32,9 +32,7 @@ public class AchievementHandler {
     public void setAchieved(Achievement achievement) {
         String name = achievement.getName();
         if (achievements.containsKey(name)) {
-            if(achievements.get(name).isAchieved()){
-                //TheDarkEra.logger.info(name + " is already achieved :D");
-            }else {
+            if(!achievements.get(name).isAchieved()){
                 achievements.get(name).setAchieved(true);
             }
         }else{

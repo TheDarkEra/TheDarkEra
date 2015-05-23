@@ -8,6 +8,8 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
+import java.util.Arrays;
+
 public class GuiAchievementsBook extends GuiScreen {
 
     private ResourceLocation texture = new ResourceLocation(TheDarkEra.MODID.toLowerCase(), "textures/gui/achievement_book.png");
@@ -22,6 +24,7 @@ public class GuiAchievementsBook extends GuiScreen {
     private int maxPages;
     private PageButton bButton;
     private PageButton nButton;
+    private GuiAchievement test;
 
     @Override
     public void initGui() {
@@ -30,10 +33,12 @@ public class GuiAchievementsBook extends GuiScreen {
         x = (width - guiWidth) / 2;
         y = (height - guiHeight) / 2;
 
-        bButton = new PageButton(1, x + 20, y +  guiHeight - 20, false);
+        bButton = new PageButton(1, x + 20, y + guiHeight - 20, false);
         nButton = new PageButton(2, x + guiWidth - 36, y + guiHeight - 20, true);
+        test = new GuiAchievement(3, x + 15, y + 20, "Master GUI's", true);
         this.buttonList.add(bButton);
         this.buttonList.add(nButton);
+        this.buttonList.add(test);
     }
 
     @Override
@@ -45,6 +50,10 @@ public class GuiAchievementsBook extends GuiScreen {
         this.drawTexturedModalRect(x, y, 0, 0, guiWidth, guiHeight);
 
         super.drawScreen(mouseX, mouseY, partialTicks);
+
+        if(test.func_146115_a()){
+            this.drawCreativeTabHoveringText("A description", mouseX, mouseY);
+        }
     }
 
     @Override
@@ -52,8 +61,8 @@ public class GuiAchievementsBook extends GuiScreen {
         if(button.enabled){
 
             if (button.id == 1) currentPage -= maxPages;
-            //if (button.id == 2) currentPage += 2;
-            if(button.id == 2) achievements.setAchieved(TDEAchievements.test);
+            if (button.id == 2) currentPage += 2;
+            //if(button.id == 2) achievements.setAchieved(TDEAchievements.test);
 
             updateContent();
         }
@@ -67,10 +76,7 @@ public class GuiAchievementsBook extends GuiScreen {
         }
         if (currentPage % 2 == 1) currentPage--;
         if (currentPage < 0) currentPage = 0;
-    }
 
-/*    @Override
-    public boolean doesGuiPauseGame() {
-        return false;
+
     }
-*/}
+}
