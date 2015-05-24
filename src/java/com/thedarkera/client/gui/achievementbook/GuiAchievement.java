@@ -1,10 +1,14 @@
 package com.thedarkera.client.gui.achievementbook;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.utils.Achievement;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GuiAchievement extends GuiButton{
 
@@ -13,9 +17,12 @@ public class GuiAchievement extends GuiButton{
     private boolean isAchieved;
     private int boxWidth;
 
-    public GuiAchievement(int id, int x, int y, String displayString,boolean isAchieved){
-        super(id, x, y,displayString);
-        this.isAchieved = isAchieved;
+    public String description;
+
+    public GuiAchievement(int id, int x, int y, Achievement achievement){
+        super(id, x, y, achievement.getName());
+        this.isAchieved = achievement.isAchieved();
+        this.description = achievement.getDescription();
         this.boxWidth = 10;
         this.height = 12;
         this.width = boxWidth + 2 + Minecraft.getMinecraft().fontRenderer.getStringWidth(displayString);

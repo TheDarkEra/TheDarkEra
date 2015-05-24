@@ -2,13 +2,14 @@ package com.thedarkera.client.gui.achievementbook;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.handler.AchievementHandler;
-import com.thedarkera.init.TDEAchievements;
+import com.thedarkera.utils.Achievement;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GuiAchievementsBook extends GuiScreen {
 
@@ -24,21 +25,38 @@ public class GuiAchievementsBook extends GuiScreen {
     private int maxPages;
     private PageButton bButton;
     private PageButton nButton;
-    private GuiAchievement test;
+    //private GuiAchievement test;
+    private List<GuiAchievement> achievementList = new ArrayList<>();
 
     @Override
     public void initGui() {
         currentPage = 0;
         maxPages = achievements.getPagesNeeded();
+        //maxPages = 6;
         x = (width - guiWidth) / 2;
         y = (height - guiHeight) / 2;
 
         bButton = new PageButton(1, x + 20, y + guiHeight - 20, false);
         nButton = new PageButton(2, x + guiWidth - 36, y + guiHeight - 20, true);
-        test = new GuiAchievement(3, x + 15, y + 20, "Master GUI's", true);
+        //test = new GuiAchievement(3, x + 15, y + 20, "Master GUI's", true);
         this.buttonList.add(bButton);
         this.buttonList.add(nButton);
-        this.buttonList.add(test);
+        for(int i = 0; i < AchievementHandler.getAmount(); i++){
+            int id = i + 3;
+            int xx = 15;
+            int j = i;
+            Achievement achievement = AchievementHandler.get(AchievementHandler.achievementNames.get(i));
+
+            double k = (i / 8D);
+            //if(Math.floor(k) % 2 == 0) ;
+            if(Math.floor(k) % 2 == 1) {
+                xx = (guiWidth / 2) + 15;
+                j = i - 8 * (int)Math.floor(k);
+            }
+            int yy = 10 + j * 20;
+
+            this.achievementList.add(new GuiAchievement(id, x + xx, y + yy, achievement));
+        }
     }
 
     @Override
@@ -51,8 +69,17 @@ public class GuiAchievementsBook extends GuiScreen {
 
         super.drawScreen(mouseX, mouseY, partialTicks);
 
-        if(test.func_146115_a()){
-            this.drawCreativeTabHoveringText("A description", mouseX, mouseY);
+        for (int k = 0; k < this.achievementList.size(); ++k)
+        {
+            (this.achievementList.get(k)).drawButton(this.mc, mouseX, mouseY);
+            if(k >= 16) (this.achievementList.get(k)).visible = false;
+        }
+
+        for(int i = 0; i < achievementList.size(); i ++){
+            GuiAchievement button = this.achievementList.get(i);
+            if(button.func_146115_a() && button.visible){
+                this.drawCreativeTabHoveringText(button.description, mouseX, mouseY);
+            }
         }
     }
 
@@ -64,11 +91,11 @@ public class GuiAchievementsBook extends GuiScreen {
             if (button.id == 2) currentPage += 2;
             //if(button.id == 2) achievements.setAchieved(TDEAchievements.test);
 
-            updateContent();
+            updateContent(button);
         }
     }
 
-    void updateContent() {
+    void updateContent(GuiButton button) {
         if (maxPages % 2 == 1) {
             if (currentPage > maxPages) currentPage = maxPages;
         } else {
@@ -77,6 +104,17 @@ public class GuiAchievementsBook extends GuiScreen {
         if (currentPage % 2 == 1) currentPage--;
         if (currentPage < 0) currentPage = 0;
 
-
+        //everything under here may or may not work correctly!
+        int k = (int)Math.floor(achievementList.size() / 8D);
+        if(k <= maxPages){
+            for(int i = 0; i < (k*8) + 15; i++) {
+                if (i < achievementList.size()){
+                    GuiAchievement achievement = this.achievementList.get(i);
+                    if (button.id == 2 && i >= (k * 16)) achievement.visible = true;
+                    if (button.id == 1 && i < (k * 16)) achievement.visible = true;
+                    else achievement.visible = false;
+                }
+            }
+        }
     }
 }
