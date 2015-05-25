@@ -84,11 +84,13 @@ public class BiomeDeadLand extends BiomeGenBase {
 	public WorldGenerator getRandomWorldGenForGrass(Random p_76730_1_)
     {
         return p_76730_1_.nextInt(5) > 0 ? new WorldGenTallGrass(Blocks.tallgrass, 2) : new WorldGenTallGrass(Blocks.tallgrass, 1);
+      
     }
 	
 	@Override
 	public WorldGenAbstractTree func_150567_a(Random random) {
-		return (WorldGenAbstractTree)(random.nextInt(3) == 0 ? new WorldGenDeadTree() : this.worldGeneratorTrees);
+	//	return (WorldGenAbstractTree)(random.nextInt(3) == 0 ? new WorldGenDeadTree() : this.worldGeneratorTrees);
+		  return new WorldGenDeadTree();
 	}
     public void genTerrainBlocks(World world, Random rand, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_)
     {

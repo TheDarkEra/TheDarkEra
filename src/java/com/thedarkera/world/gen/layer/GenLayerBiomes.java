@@ -3,7 +3,6 @@ package com.thedarkera.world.gen.layer;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.IntCache;
-
 import static com.thedarkera.init.TDEBiomes.*;
 
 public class GenLayerBiomes extends GenLayer {
@@ -14,7 +13,7 @@ public class GenLayerBiomes extends GenLayer {
     		 dark_jungle, 
     		 dark_forest,
     		 ancient_land,
-    		
+    		 misty_mountains,
     };
     
     public GenLayerBiomes(long seed) {

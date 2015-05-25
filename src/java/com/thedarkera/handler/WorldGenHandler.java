@@ -39,7 +39,7 @@ public class WorldGenHandler implements IWorldGenerator {
 			generateSurface(world, random, chunkX * 16, chunkZ * 16);
 		case 1:
 			generateEnd(world, random, chunkX * 16, chunkZ * 16);
-		case 2:
+		case -10:
 			generateTheDarkDimension(world, random, chunkX * 16, chunkZ * 16);
 		}
 	}
@@ -52,6 +52,8 @@ public class WorldGenHandler implements IWorldGenerator {
 				random, x, z, 16, 16, 8, 20, 0, 64);
         addOreSpawn(TDEBlocks.dragon_bone_ore, 0, Blocks.stone, world,
                 random, x, z, 16, 16, 4, 10, 0, 32);
+
+
 
 
 	//	for (int i = 0; i < 3; i++) {
@@ -82,13 +84,15 @@ public class WorldGenHandler implements IWorldGenerator {
 	private void generateTheDarkDimension(World world, Random random, int x, int z)
 	 {
 		addOreSpawn(TDEBlocks.ebony_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
-				16, 16, 8, 20, 0, 64);
+				16, 16, 3 + random.nextInt(3), 5, 20, 30);
+		addOreSpawn(TDEBlocks.orichalcum_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
+				16, 16, 4 + random.nextInt(2), 5, 20, 30);
 		addOreSpawn(TDEBlocks.dark_diamond_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
 				16, 16, 7, 1, 0, 16);
 		addOreSpawn(TDEBlocks.dark_coal_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
 				16, 16, 16, 20, 0, 128);
 		addOreSpawn(TDEBlocks.dark_iron_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
-				16, 16, 8, 20, 0, 64);
+				16, 16, 8, 10, 0, 64);
 		addOreSpawn(TDEBlocks.dark_gold_ore, 0, TDEBlocks.dark_stone, world, random, x, z,
 				16, 16, 8, 2, 0, 32);
 		addOreSpawn(TDEBlocks.dark_emerald_ore, 0, TDEBlocks.dark_stone, world, random, x, z,

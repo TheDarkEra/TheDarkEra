@@ -16,6 +16,8 @@ import static net.minecraftforge.event.terraingen.OreGenEvent.GenerateMinable.Ev
 
 import java.util.Random;
 
+import com.thedarkera.init.TDEBlocks;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
@@ -42,18 +44,18 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 			
 			public Random randomGenerator;
 			
-			public WorldGenerator dirtGen;
-			public WorldGenerator gravelGen;
-			public WorldGenerator coalGen;
-			public WorldGenerator ironGen;
+			public WorldGenerator dark_dirtGen;
+			public WorldGenerator dark_gravelGen;
+			public WorldGenerator dark_coalGen;
+			public WorldGenerator dark_ironGen;
 			    /** Field that holds gold WorldGenMinable */
-			public WorldGenerator goldGen;
+			public WorldGenerator dark_goldGen;
 			    /** Field that holds redstone WorldGenMinable */
-			public WorldGenerator redstoneGen;
+			public WorldGenerator dark_redstoneGen;
 			    /** Field that holds diamond WorldGenMinable */
-			public WorldGenerator diamondGen;
+			public WorldGenerator dark_diamondGen;
 			    /** Field that holds Lapis WorldGenMinable */
-			public WorldGenerator lapisGen;
+
 			
 
 			public BiomeDecoratorTDE(BiomeGenBase biomegenbase)
@@ -61,14 +63,15 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 				
 			this.flowersPerChunk = 2;
 			this.grassPerChunk = 1;
-			this.dirtGen = new WorldGenMinable(Blocks.dirt, 32);
-		    this.gravelGen = new WorldGenMinable(Blocks.gravel, 32);
-		    this.coalGen = new WorldGenMinable(Blocks.coal_ore, 16);
-		    this.ironGen = new WorldGenMinable(Blocks.iron_ore, 8);
-		    this.goldGen = new WorldGenMinable(Blocks.gold_ore, 8);
-		    this.redstoneGen = new WorldGenMinable(Blocks.redstone_ore, 7);
-		    this.diamondGen = new WorldGenMinable(Blocks.diamond_ore, 7);
-		    this.lapisGen = new WorldGenMinable(Blocks.lapis_ore, 6);
+			
+			this.dark_dirtGen = new WorldGenMinable(TDEBlocks.dark_dirt, 32);
+		    this.dark_gravelGen = new WorldGenMinable(TDEBlocks.dark_gravel, 32);
+		    this.dark_coalGen = new WorldGenMinable(TDEBlocks.dark_coal_ore, 16);
+		    this.dark_ironGen = new WorldGenMinable(TDEBlocks.dark_iron_ore, 8);
+		    this.dark_goldGen = new WorldGenMinable(TDEBlocks.dark_gold_ore, 8);
+		    this.dark_diamondGen = new WorldGenMinable(TDEBlocks.dark_diamond_ore, 7);
+		    
+		    
 		
 
 		//	this.plantYellowGen = new WorldGenTallGrass(ChocolateMod.chocolateflower.blockID, 0);
@@ -128,6 +131,7 @@ import net.minecraftforge.event.terraingen.TerrainGen;
             k = this.chunk_Z + this.randomGenerator.nextInt(16) + 8;
             this.gravelAsSandGen.generate(this.currentWorld, this.randomGenerator, j, this.currentWorld.getTopSolidOrLiquidBlock(j, k), k);
         }
+        
 
         i = this.treesPerChunk;
 
@@ -166,7 +170,7 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 	    /**
 	     * Standard ore generation helper. Generates most ores.
 	     */
-	    protected void genStandardOre1(int p_76795_1_, WorldGenerator p_76795_2_, int p_76795_3_, int p_76795_4_)
+	    protected void genStandardOre3(int p_76795_1_, WorldGenerator p_76795_2_, int p_76795_3_, int p_76795_4_)
 	    {
 	        for (int l = 0; l < p_76795_1_; ++l)
 	        {
@@ -178,41 +182,23 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 	    }
 
 	    /**
-	     * Standard ore generation helper. Generates Lapis Lazuli.
-	     */
-	    protected void genStandardOre2(int p_76793_1_, WorldGenerator p_76793_2_, int p_76793_3_, int p_76793_4_)
-	    {
-	        for (int l = 0; l < p_76793_1_; ++l)
-	        {
-	            int i1 = this.chunk_X + this.randomGenerator.nextInt(16);
-	            int j1 = this.randomGenerator.nextInt(p_76793_4_) + this.randomGenerator.nextInt(p_76793_4_) + (p_76793_3_ - p_76793_4_);
-	            int k1 = this.chunk_Z + this.randomGenerator.nextInt(16);
-	            p_76793_2_.generate(this.currentWorld, this.randomGenerator, i1, j1, k1);
-	        }
-	    }
-
-	    /**
 	     * Generates ores in the current chunk
 	     */
 	    protected void generateOres()
 	    {
 	        MinecraftForge.ORE_GEN_BUS.post(new OreGenEvent.Pre(currentWorld, randomGenerator, chunk_X, chunk_Z));
 	        if (TerrainGen.generateOre(currentWorld, randomGenerator, dirtGen, chunk_X, chunk_Z, DIRT))
-	        this.genStandardOre1(20, this.dirtGen, 0, 256);
+	        this.genStandardOre3(20, this.dark_dirtGen, 0, 256);
 	        if (TerrainGen.generateOre(currentWorld, randomGenerator, gravelGen, chunk_X, chunk_Z, GRAVEL))
-	        this.genStandardOre1(10, this.gravelGen, 0, 256);
+	        this.genStandardOre3(10, this.dark_gravelGen, 0, 256);
 	        if (TerrainGen.generateOre(currentWorld, randomGenerator, coalGen, chunk_X, chunk_Z, COAL))
-	        this.genStandardOre1(20, this.coalGen, 0, 128);
+	        this.genStandardOre3(20, this.dark_coalGen, 0, 128);
 	        if (TerrainGen.generateOre(currentWorld, randomGenerator, ironGen, chunk_X, chunk_Z, IRON))
-	        this.genStandardOre1(20, this.ironGen, 0, 64);
+	        this.genStandardOre3(20, this.dark_ironGen, 0, 64);
 	        if (TerrainGen.generateOre(currentWorld, randomGenerator, goldGen, chunk_X, chunk_Z, GOLD))
-	        this.genStandardOre1(2, this.goldGen, 0, 32);
-	        if (TerrainGen.generateOre(currentWorld, randomGenerator, redstoneGen, chunk_X, chunk_Z, REDSTONE))
-	        this.genStandardOre1(8, this.redstoneGen, 0, 16);
+	        this.genStandardOre3(2, this.dark_goldGen, 0, 32);
 	        if (TerrainGen.generateOre(currentWorld, randomGenerator, diamondGen, chunk_X, chunk_Z, DIAMOND))
-	        this.genStandardOre1(1, this.diamondGen, 0, 16);
-	        if (TerrainGen.generateOre(currentWorld, randomGenerator, lapisGen, chunk_X, chunk_Z, LAPIS))
-	        this.genStandardOre2(1, this.lapisGen, 16, 16);
+	        this.genStandardOre3(1, this.dark_diamondGen, 0, 16);
 	        MinecraftForge.ORE_GEN_BUS.post(new OreGenEvent.Post(currentWorld, randomGenerator, chunk_X, chunk_Z));
 	    }
 

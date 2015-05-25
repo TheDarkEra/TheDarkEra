@@ -5,6 +5,7 @@ import java.util.List;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEBlocks;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -41,7 +42,6 @@ public class BlockLogs1 extends BlockLog {
 
 		}
 	}
-
 	@Override
 	public boolean isWood(IBlockAccess world, int x, int y, int z) {
 		return true;

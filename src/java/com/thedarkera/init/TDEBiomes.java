@@ -5,7 +5,11 @@ import com.thedarkera.world.biome.*;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeManager;
 
+	
+
 public class TDEBiomes {
+	
+    protected static final BiomeGenBase.Height height_BigHills = new BiomeGenBase.Height(10F, 6F);
 
     public static BiomeGenBase dark_ocean;
 	public static BiomeGenBase dark_land;
@@ -19,7 +23,6 @@ public class TDEBiomes {
     public static BiomeGenBase magical_forest;
     public static BiomeGenBase ancient_land;
     public static BiomeGenBase misty_mountains;
-	//public static BiomeGenBase test_biome;
 
 	public static void init() {
 
@@ -40,7 +43,7 @@ public class TDEBiomes {
         BiomeManager.addSpawnBiome(magical_forest);
         ancient_land = (new BiomeAncientLand(59, 2)).setColor(1111111).setBiomeName("Ancient Land");
         BiomeManager.addSpawnBiome(ancient_land);
-        misty_mountains = (new BiomeDarkHills(60, 1)).setColor(999999).setBiomeName("Misty Mountains");
+        misty_mountains = (new BiomeDarkHills(60, 1)).setColor(999999).setBiomeName("Misty Mountains").setHeight(height_BigHills);
         BiomeManager.addSpawnBiome(misty_mountains);
 	}
 

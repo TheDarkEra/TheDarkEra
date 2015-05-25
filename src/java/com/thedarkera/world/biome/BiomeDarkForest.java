@@ -1,6 +1,5 @@
 package com.thedarkera.world.biome;
 
-import com.thedarkera.init.TDEBiomes;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.decorator.BiomeDecoratorTDE;
 import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
@@ -13,8 +12,6 @@ import net.minecraft.entity.passive.*;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.BiomeGenForest;
-import net.minecraft.world.biome.BiomeGenMutated;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 import java.util.List;

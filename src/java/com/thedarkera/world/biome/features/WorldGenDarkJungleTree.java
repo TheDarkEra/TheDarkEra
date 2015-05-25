@@ -30,8 +30,6 @@ public class WorldGenDarkJungleTree extends WorldGenAbstractTree {
 		world.getBlock(x, y, z).onPlantGrow(world, x, y, z, sourceX, sourceY, sourceZ);
 	}
 
-
-		
 		public boolean func_150532_c(World world, Random rand, int x, int y, int z) {
 			while (world.isAirBlock(x, y, z) && y > 2) {
 				y--;
