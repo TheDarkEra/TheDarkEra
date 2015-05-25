@@ -2,6 +2,11 @@ package com.thedarkera.handler;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.utils.Achievement;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
+import net.minecraftforge.common.IExtendedEntityProperties;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -58,6 +63,7 @@ public class AchievementHandler {
         return (int) Math.ceil(amount) - 2;
     }
 
+    public static void checkNBT(EntityPlayer player){
 
-
+    }
 }

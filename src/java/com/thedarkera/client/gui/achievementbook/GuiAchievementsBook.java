@@ -5,6 +5,7 @@ import com.thedarkera.handler.AchievementHandler;
 import com.thedarkera.utils.Achievement;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
@@ -27,6 +28,11 @@ public class GuiAchievementsBook extends GuiScreen {
     private PageButton nButton;
     //private GuiAchievement test;
     private List<GuiAchievement> achievementList = new ArrayList<>();
+    private EntityPlayer player;
+
+    public GuiAchievementsBook(EntityPlayer player){
+        this.player = player;
+    }
 
     @Override
     public void initGui() {
@@ -35,6 +41,7 @@ public class GuiAchievementsBook extends GuiScreen {
         //maxPages = 6;
         x = (width - guiWidth) / 2;
         y = (height - guiHeight) / 2;
+        AchievementHandler.checkNBT(player);
 
         bButton = new PageButton(1, x + 20, y + guiHeight - 20, false);
         nButton = new PageButton(2, x + guiWidth - 36, y + guiHeight - 20, true);
