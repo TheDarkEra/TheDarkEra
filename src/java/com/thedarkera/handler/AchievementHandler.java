@@ -43,7 +43,7 @@ public class AchievementHandler {
         return achievements.get(name);
     }
 
-    public static void setAchieved(Achievement achievement) {
+    public static void setAchieved(EntityPlayer player, Achievement achievement) {
         String name = achievement.getName();
         if (achievements.containsKey(name)) {
             if(!achievements.get(name).isAchieved()){
