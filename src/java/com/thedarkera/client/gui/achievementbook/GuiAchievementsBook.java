@@ -37,7 +37,7 @@ public class GuiAchievementsBook extends GuiScreen {
     @Override
     public void initGui() {
         currentPage = 0;
-        maxPages = achievements.getPagesNeeded();
+        maxPages = achievements.getPagesNeeded() * 2;
         //maxPages = 6;
         x = (width - guiWidth) / 2;
         y = (height - guiHeight) / 2;
@@ -76,10 +76,11 @@ public class GuiAchievementsBook extends GuiScreen {
 
         super.drawScreen(mouseX, mouseY, partialTicks);
 
-        for (int k = 0; k < this.achievementList.size(); ++k)
+        for (int i = 0; i < achievementList.size(); ++i)
         {
-            (this.achievementList.get(k)).drawButton(this.mc, mouseX, mouseY);
-            if(k >= 16) (this.achievementList.get(k)).visible = false;
+            (this.achievementList.get(i)).drawButton(this.mc, mouseX, mouseY);
+            if(i >= 16 && currentPage == 0);
+                //(this.achievementList.get(i)).visible = false;
         }
 
         for(int i = 0; i < achievementList.size(); i ++){
@@ -88,13 +89,15 @@ public class GuiAchievementsBook extends GuiScreen {
                 this.drawCreativeTabHoveringText(button.description, mouseX, mouseY);
             }
         }
+
+        boolean test = this.achievementList.get(21).visible;
     }
 
     @Override
     protected void actionPerformed(GuiButton button) {
         if(button.enabled){
 
-            if (button.id == 1) currentPage -= maxPages;
+            if (button.id == 1) currentPage -= 2;
             if (button.id == 2) currentPage += 2;
             //if(button.id == 2) achievements.setAchieved(TDEAchievements.test);
 
@@ -103,13 +106,18 @@ public class GuiAchievementsBook extends GuiScreen {
     }
 
     void updateContent(GuiButton button) {
-        if (maxPages % 2 == 1) {
-            if (currentPage > maxPages) currentPage = maxPages;
-        } else {
-            if (currentPage >= maxPages) currentPage = maxPages - 2;
+        if (maxPages % 2 == 1){
+            if (currentPage > maxPages)
+                currentPage = maxPages;
         }
-        if (currentPage % 2 == 1) currentPage--;
-        if (currentPage < 0) currentPage = 0;
+        else{
+            if (currentPage > maxPages)
+                currentPage = maxPages - 2;
+        }
+        if (currentPage % 2 == 1)
+            currentPage--;
+        if (currentPage < 0)
+            currentPage = 0;
 
         //everything under here may or may not work correctly!
         int k = (int)Math.floor(achievementList.size() / 8D);
@@ -117,8 +125,10 @@ public class GuiAchievementsBook extends GuiScreen {
             for(int i = 0; i < (k*8) + 15; i++) {
                 if (i < achievementList.size()){
                     GuiAchievement achievement = this.achievementList.get(i);
-                    if (button.id == 2 && i >= (k * 16)) achievement.visible = true;
-                    if (button.id == 1 && i < (k * 16)) achievement.visible = true;
+                    if (button.id == 2 && i >= (k * 16) - 16)
+                        achievement.visible = true;
+                    else if (button.id == 1 && i < (k * 16) - 16)
+                        achievement.visible = true;
                     else achievement.visible = false;
                 }
             }
