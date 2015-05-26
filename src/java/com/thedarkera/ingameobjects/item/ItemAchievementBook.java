@@ -35,7 +35,7 @@ public class ItemAchievementBook extends Item {
     public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player) {
 
         player.openGui(TheDarkEra.instance, GuiID.ACHIEVEMENTBOOK.ordinal(), world, (int)player.posX, (int)player.posY, (int)player.posZ);
-        FMLClientHandler.instance().displayGuiScreen(player, new GuiAchievementsBook());
+        FMLClientHandler.instance().displayGuiScreen(player, new GuiAchievementsBook(player));
 
         return item;
     }

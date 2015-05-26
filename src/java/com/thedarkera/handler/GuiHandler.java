@@ -30,7 +30,7 @@ public class GuiHandler implements IGuiHandler {
 			int x, int y, int z) {
 		TileEntity te = world.getTileEntity(x, y, z);
 
-        if(ID == GuiID.ACHIEVEMENTBOOK.ordinal()) return new GuiAchievementsBook();
+        if(ID == GuiID.ACHIEVEMENTBOOK.ordinal()) return new GuiAchievementsBook(player);
 
 		if (te != null) {
 			// if (ID == GuiID.SMASHER.ordinal())
