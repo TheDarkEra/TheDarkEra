@@ -82,7 +82,7 @@ public class GuiAchievementsBook extends GuiScreen {
         for(int i = 0; i < achievementList.size(); i ++){
             GuiAchievement button = this.achievementList.get(i);
             if(button.func_146115_a() && button.visible){
-                this.drawCreativeTabHoveringText(button.description, mouseX, mouseY);
+                this.func_146283_a(button.description, mouseX, mouseY);
             }
         }
     }

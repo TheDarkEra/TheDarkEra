@@ -7,6 +7,8 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
+import java.util.List;
+
 public class GuiAchievement extends GuiButton{
 
     private ResourceLocation texture = new ResourceLocation(TheDarkEra.MODID.toLowerCase(), "textures/gui/achievement_book.png");
@@ -14,7 +16,7 @@ public class GuiAchievement extends GuiButton{
     private boolean isAchieved;
     private int boxWidth;
 
-    public String description;
+    public List description;
 
     public GuiAchievement(int id, int x, int y, Achievement achievement){
         super(id, x, y, achievement.getName());

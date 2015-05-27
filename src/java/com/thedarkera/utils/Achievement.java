@@ -1,11 +1,14 @@
 package com.thedarkera.utils;
 
+import java.util.List;
+
 public class Achievement {
 
-    private String name, desc;
+    private String name;
+    private List desc;
     private boolean achieved = false;
 
-    public Achievement(String name, String desc){
+    public Achievement(String name, List desc){
         this.name = name;
         this.desc = desc;
     }
@@ -14,7 +17,7 @@ public class Achievement {
         return name;
     }
 
-    public String getDescription(){
+    public List getDescription(){
         return desc;
     }
 
