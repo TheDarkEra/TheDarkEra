@@ -5,17 +5,6 @@ import com.thedarkera.utils.Achievement;
 
 public class TDEAchievements {
 
-	public static Achievement test = new Achievement("Test", "Test Achievement");
-	public static Achievement test1 = new Achievement("Test1", "Test Achievement");
-	public static Achievement test2 = new Achievement("Test2", "Test Achievement");
-	public static Achievement test3 = new Achievement("Test3", "Test Achievement");
-	public static Achievement test4 = new Achievement("Test4", "Test Achievement");
-	public static Achievement test5 = new Achievement("Test5", "Test Achievement");
-	public static Achievement test6 = new Achievement("Test6", "Test Achievement");
-	public static Achievement test7 = new Achievement("Test7", "Test Achievement");
-	public static Achievement test8 = new Achievement("Test8", "Test Achievement");
-	public static Achievement test9 = new Achievement("Test9", "Test Achievement");
-
     //Real Achievements
     public static Achievement village = new Achievement("Dark Village", "Locate the Dark Village! This is the beginning!");
     public static Achievement travelling = new Achievement("The Dark", "Teleport To The Dark!");
@@ -37,16 +26,6 @@ public class TDEAchievements {
     
     
     public static void init(){
-    	AchievementHandler.add(test);
-    	AchievementHandler.add(test1);
-    	AchievementHandler.add(test2);
-    	AchievementHandler.add(test3);
-    	AchievementHandler.add(test4);
-    	AchievementHandler.add(test5);
-    	AchievementHandler.add(test6);
-    	AchievementHandler.add(test7);
-    	AchievementHandler.add(test8);
-    	AchievementHandler.add(test9);
 
         //Real Achievements
         AchievementHandler.add(village);

@@ -3,7 +3,6 @@ package com.thedarkera.handler;
 import com.thedarkera.ztesting.ExtendedPlayerAchievements;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Blocks;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
 import net.minecraftforge.event.entity.player.PlayerUseItemEvent;
