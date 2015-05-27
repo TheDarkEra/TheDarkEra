@@ -34,9 +34,9 @@ public class TDEAchievements {
     public static Achievement biome5 = new Achievement("Dark Ocean", Arrays.asList("Find the Dark Ocean Biome"));
     public static Achievement biome6= new Achievement("Dark Land", Arrays.asList("Find the Dark Land Biome"));
     public static Achievement biome7 = new Achievement("Ancient Land", Arrays.asList("Find the Ancient Land Biome"));
-    public static Achievement biome8 = new Achievement("Misty Mountains", Arrays.asList("Find the Misty Mountains Biome - Located inside the Dark Hills biome only", "Dan your extra info here!"));
+    public static Achievement biome8 = new Achievement("Misty Mountains", Arrays.asList("Find the Misty Mountains Biome", "Located inside the Dark Hills biome only"));
     public static Achievement biome9 = new Achievement("Magical Forest", Arrays.asList("Find the Magical Forrest Biome"));
-    public static Achievement biome10 = new Achievement("Dark Roofed Forrest", Arrays.asList("Find the Dark Roofed Forrest - Located inside the Dark Forrest biome only"));
+    public static Achievement biome10 = new Achievement("Roofed Forrest", Arrays.asList("Find the Dark Roofed Forrest", "Located inside the Dark Forrest biome only"));
     
     
     public static void init(){
