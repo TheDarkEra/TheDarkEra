@@ -36,7 +36,7 @@ public class AchievedHandler {
 		EntityPlayer player = event.player;
 		Item item = event.pickedUp.getEntityItem().getItem();
 		
-		if(item.equals(TDETools.ancient_pickaxe)){
+		if(item.equals(TDETools.ancient_pickaxe) || item.equals(TDETools.ancient_axe) || item.equals(TDETools.ancient_shovel) || item.equals(TDETools.ancient_hoe) || item.equals(TDEWeapons.ancient_dagger) || item.equals(TDEWeapons.ancient_sword)){
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GREEN + "Achievement Get: " + EnumChatFormatting.DARK_RED + "Stone Upgrade!"));
 			AchievementHandler.setAchieved(TDEAchievements.ancient_upgrade);
 		}

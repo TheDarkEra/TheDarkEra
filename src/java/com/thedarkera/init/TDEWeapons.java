@@ -19,6 +19,7 @@ public class TDEWeapons {
 	public static Item steel_sword;
 	public static Item dark_stone_sword;
 	public static Item death_sword;
+	public static Item ancient_sword;
 
 	// Bows
 	public static Item daedric_bow;
@@ -56,6 +57,8 @@ public class TDEWeapons {
 		reg(dark_stone_sword);
 		death_sword = new ItemDeathSword(ToolMaterial.EMERALD, "death_sword");
 		reg(death_sword);
+		ancient_sword = new ItemModSword(TDEMaterials.ancient, "ancient_sword");
+		reg(ancient_sword);
 
 		// Bows
 		daedric_bow = new ItemDaedricBow("daedric_bow");
