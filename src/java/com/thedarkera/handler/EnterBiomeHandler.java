@@ -24,6 +24,8 @@ public class EnterBiomeHandler {
 		String z1 = ""+z;
 		player.addChatMessage(new ChatComponentText(x1 + " _ " + z1));
 		BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(x, z);
+		
+		
 
 		if (biome == TDEBiomes.dark_forest) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Forrest biome"));

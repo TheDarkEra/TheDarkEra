@@ -17,9 +17,9 @@ public class TDEAchievements {
     //Real Achievements
     public static Achievement village = new Achievement("Dark Village", "Locate the Dark Village! This is the beginning!");
     public static Achievement travelling = new Achievement("The Dark", "Teleport To The Dark!");
-    public static Achievement stone_upgrade = new Achievement("Dark Stone Tools", "Upgrade to Dark Stone Tools.");
-    public static Achievement steel_upgrade = new Achievement("Dark Steel Tools", "Upgrade to Steel Tools.");
-    public static Achievement ancient_tools = new Achievement("Ancient Tools", "Get a fall set of Ancient Tools.");
+    public static Achievement stone_upgrade = new Achievement("Stone Upgrade", "Upgrade to Dark Stone Tools.");
+    public static Achievement steel_upgrade = new Achievement("Steel Upgrade", "Upgrade to Steel Tools.");
+    public static Achievement ancient_upgrade = new Achievement("Ancient Upgrade", "Get a fall set of Ancient Tools.");
     public static Achievement dragon_slayer = new Achievement("Dragon Slayer", "Kill a dragon!");
     
     //Biomes	
@@ -44,16 +44,14 @@ public class TDEAchievements {
     	AchievementHandler.add(test5);
     	AchievementHandler.add(test6);
     	*/
+    	// TODO: Needs ordering better to suit book better.
     	
-        //Real Achievements
         AchievementHandler.add(village);
         AchievementHandler.add(travelling);
         AchievementHandler.add(stone_upgrade);
         AchievementHandler.add(steel_upgrade);
-        AchievementHandler.add(ancient_tools);
+        AchievementHandler.add(ancient_upgrade);
         AchievementHandler.add(dragon_slayer);
-        
-        //Biomes
         AchievementHandler.add(biome);
         AchievementHandler.add(biome1);
         AchievementHandler.add(biome2);
