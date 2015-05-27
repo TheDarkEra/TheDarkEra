@@ -39,9 +39,10 @@ public class TDEEventHandler {
 
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public void onEntityConstructing(EntityConstructing event) {
-		if (event.entity instanceof EntityPlayer && ExtendedPlayer.get((EntityPlayer) event.entity) == null)
-			event.entity.registerExtendedProperties(ExtendedPlayer.identifier, new ExtendedPlayer((EntityPlayer) event.entity));
-            event.entity.registerExtendedProperties(ExtendedPlayerAchievements.identifier, new ExtendedPlayerAchievements((EntityPlayer) event.entity));
+		if (event.entity instanceof EntityPlayer && ExtendedPlayer.get((EntityPlayer) event.entity) == null) {
+            event.entity.registerExtendedProperties(ExtendedPlayer.identifier, new ExtendedPlayer((EntityPlayer) event.entity));
+            //event.entity.registerExtendedProperties(ExtendedPlayerAchievements.identifier, new ExtendedPlayerAchievements((EntityPlayer) event.entity));
+        }
 	}
 }
 

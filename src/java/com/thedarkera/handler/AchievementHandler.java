@@ -59,8 +59,8 @@ public class AchievementHandler {
     }
 
     public int getPagesNeeded(){
-        double amount = (double)achievements.size() / 8D;
-        return (int) Math.ceil(amount) - 2;
+        double amount = (double)achievements.size() / 16D;
+        return (int) Math.ceil(amount) * 2;
     }
 
     public static void checkNBT(EntityPlayer player){
