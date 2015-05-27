@@ -28,7 +28,7 @@ public class ExtendedPlayerAchievements implements IExtendedEntityProperties {
     public void saveNBTData(NBTTagCompound compound) {
         NBTTagCompound properties = new NBTTagCompound();
         for(int i = 0; i < AchievementHandler.achievementNames.size(); i++) {
-            Achievement achievement = AchievementHandler.achievements.get(i);
+            Achievement achievement = AchievementHandler.achievements.get(AchievementHandler.achievementNames.get(i));
             String name = achievement.getName();
             boolean isAchieved = achievement.isAchieved();
             properties.setBoolean(name, isAchieved);
@@ -40,7 +40,7 @@ public class ExtendedPlayerAchievements implements IExtendedEntityProperties {
     public void loadNBTData(NBTTagCompound compound) {
         NBTTagCompound properties = (NBTTagCompound) compound.getTag(identifier);
         for(int i = 0; i < AchievementHandler.achievementNames.size(); i++) {
-            Achievement achievement = AchievementHandler.achievements.get(i);
+            Achievement achievement = AchievementHandler.achievements.get(AchievementHandler.achievementNames.get(i));
             String name = achievement.getName();
             achievement.setAchieved(properties.getBoolean(name));
         }

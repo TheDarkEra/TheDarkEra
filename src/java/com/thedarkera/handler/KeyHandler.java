@@ -68,6 +68,7 @@ public class KeyHandler {
 					ExtendedPlayer props = ExtendedPlayer.get((EntityPlayer) Minecraft.getMinecraft().thePlayer);
 					int a = props.getMaxMana();
 					TheDarkEra.packetPipeline.sendToServer(new PacketGetMana(a + 10));
+                    AchievementHandler.setAchieved(AchievementHandler.achievements.get("Test"));
 					break;
 				case Keyboard.KEY_O:
 					ShoutList.PreviousShout();

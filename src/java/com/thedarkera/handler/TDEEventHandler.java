@@ -3,6 +3,7 @@ package com.thedarkera.handler;
 import com.thedarkera.ztesting.ExtendedPlayerAchievements;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Blocks;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
 import net.minecraftforge.event.entity.player.PlayerUseItemEvent;
@@ -41,7 +42,7 @@ public class TDEEventHandler {
 	public void onEntityConstructing(EntityConstructing event) {
 		if (event.entity instanceof EntityPlayer && ExtendedPlayer.get((EntityPlayer) event.entity) == null) {
             event.entity.registerExtendedProperties(ExtendedPlayer.identifier, new ExtendedPlayer((EntityPlayer) event.entity));
-            //event.entity.registerExtendedProperties(ExtendedPlayerAchievements.identifier, new ExtendedPlayerAchievements((EntityPlayer) event.entity));
+            event.entity.registerExtendedProperties(ExtendedPlayerAchievements.identifier, new ExtendedPlayerAchievements((EntityPlayer) event.entity));
         }
 	}
 }
