@@ -72,6 +72,16 @@ public class EnterBiomeHandler {
 			AchievementHandler.setAchieved(TDEAchievements.biome8);
 		}
 		
+		/*if (biome == TDEBiomes.magical_forrest) {
+			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Magical Forrest biome"));
+			AchievementHandler.setAchieved(TDEAchievements.biome9);
+		}*/
+		
+		/*if (biome == TDEBiomes.dark_roofed_forrest) {
+			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Roofed Forrest biome"));
+			AchievementHandler.setAchieved(TDEAchievements.biome10);
+		}*/
+		
 	}
 
 }

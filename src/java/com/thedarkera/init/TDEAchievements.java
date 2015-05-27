@@ -31,7 +31,9 @@ public class TDEAchievements {
     public static Achievement biome5 = new Achievement("Dark Ocean", "Find the Dark Ocean Biome");
     public static Achievement biome6= new Achievement("Dark Land", "Find the Dark Land Biome");
     public static Achievement biome7 = new Achievement("Ancient Land", "Find the Ancient Land Biome");
-    public static Achievement biome8 = new Achievement("Misty Mountains", "Find the Misty Mountains Biome");
+    public static Achievement biome8 = new Achievement("Misty Mountains", "Find the Misty Mountains Biome - Located inside the Dark Hills biome only");
+    public static Achievement biome9 = new Achievement("Magical Forest", "Find the Magical Forrest Biome");
+    public static Achievement biome10 = new Achievement("Dark Roofed Forrest", "Find the Dark Roofed Forrest - Located inside the Dark Forrest biome only");
     
     
     public static void init(){
@@ -46,21 +48,23 @@ public class TDEAchievements {
     	*/
     	// TODO: Needs ordering better to suit book better.
     	
+    	AchievementHandler.add(ancient_upgrade);
         AchievementHandler.add(village);
         AchievementHandler.add(travelling);
         AchievementHandler.add(stone_upgrade);
         AchievementHandler.add(steel_upgrade);
-        AchievementHandler.add(ancient_upgrade);
         AchievementHandler.add(dragon_slayer);
-        AchievementHandler.add(biome);
-        AchievementHandler.add(biome1);
-        AchievementHandler.add(biome2);
-        AchievementHandler.add(biome3);
-        AchievementHandler.add(biome4);
-        AchievementHandler.add(biome5);
-        AchievementHandler.add(biome6);
-        AchievementHandler.add(biome7);
-        AchievementHandler.add(biome8);
+        AchievementHandler.add(biome);   // Dark Forrest
+        AchievementHandler.add(biome1);  // Dark Jungle
+        AchievementHandler.add(biome2);  // Dark Plains
+        AchievementHandler.add(biome3);  // Dark Hills
+        AchievementHandler.add(biome4);  // Dark Land
+        AchievementHandler.add(biome5);  // Dark Ocean
+        AchievementHandler.add(biome6);  // Dark Land
+        AchievementHandler.add(biome7);  // Ancient Land
+        AchievementHandler.add(biome8);  // Misty Mountains
+        AchievementHandler.add(biome9);  // Magical Forrest
+        AchievementHandler.add(biome10); // Dark Roofed Forrest        
         
         
     }
