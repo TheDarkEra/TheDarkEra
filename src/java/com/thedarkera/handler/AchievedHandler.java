@@ -38,7 +38,7 @@ public class AchievedHandler {
 		
 		if(item.equals(TDETools.ancient_pickaxe)){
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GREEN + "Achievement Get: " + EnumChatFormatting.DARK_RED + "Stone Upgrade!"));
-			AchievementHandler.setAchieved(TDEAchievements.stone_upgrade);
+			AchievementHandler.setAchieved(TDEAchievements.ancient_upgrade);
 		}
 	}
 	

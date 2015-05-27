@@ -136,6 +136,8 @@ public class TheDarkEra {
 
 		MinecraftForge.EVENT_BUS.register(new TDEEventHandler());
 		MinecraftForge.EVENT_BUS.register(new TDEPotionEffectHandler());
+
+        FMLCommonHandler.instance().bus().register(new AchievedHandler());
 		
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 2 successfully!");
 	}
