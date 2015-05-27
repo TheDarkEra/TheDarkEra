@@ -5,6 +5,15 @@ import com.thedarkera.utils.Achievement;
 
 public class TDEAchievements {
 
+	/*
+	public static Achievement test = new Achievement("test1","test1");
+	public static Achievement test2 = new Achievement("test2","test2");
+	public static Achievement test3 = new Achievement("test3","test3");
+	public static Achievement test4 = new Achievement("test4","test4");
+	public static Achievement test5 = new Achievement("test5","test5");
+	public static Achievement test6 = new Achievement("test6","test6");
+	*/
+	
     //Real Achievements
     public static Achievement village = new Achievement("Dark Village", "Locate the Dark Village! This is the beginning!");
     public static Achievement travelling = new Achievement("The Dark", "Teleport To The Dark!");
@@ -22,11 +31,20 @@ public class TDEAchievements {
     public static Achievement biome5 = new Achievement("Dark Ocean", "Find the Dark Ocean Biome");
     public static Achievement biome6= new Achievement("Dark Land", "Find the Dark Land Biome");
     public static Achievement biome7 = new Achievement("Ancient Land", "Find the Ancient Land Biome");
-    public static Achievement biome8 = new Achievement("Misty Mountain", "Find the Misty Mountain Biome");
+    public static Achievement biome8 = new Achievement("Misty Mountains", "Find the Misty Mountains Biome");
     
     
     public static void init(){
 
+    	/*
+    	AchievementHandler.add(test);
+    	AchievementHandler.add(test2);
+    	AchievementHandler.add(test3);
+    	AchievementHandler.add(test4);
+    	AchievementHandler.add(test5);
+    	AchievementHandler.add(test6);
+    	*/
+    	
         //Real Achievements
         AchievementHandler.add(village);
         AchievementHandler.add(travelling);

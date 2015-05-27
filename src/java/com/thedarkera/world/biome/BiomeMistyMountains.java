@@ -11,7 +11,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class BiomeMistyMoutains extends BiomeGenBase
+public class BiomeMistyMountains extends BiomeGenBase
 {
     private WorldGenerator theWorldGenerator;
     private int field_150635_aE;
@@ -20,7 +20,7 @@ public class BiomeMistyMoutains extends BiomeGenBase
     private int field_150638_aH;
     private static final String __OBFID = "CL_00000168";
 
-    public BiomeMistyMoutains(int BiomeID, boolean type)
+    public BiomeMistyMountains(int BiomeID, boolean type)
     {
         super(BiomeID);
         this.theWorldGenerator = new WorldGenMinable(Blocks.monster_egg, 8);
