@@ -18,11 +18,6 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class TDEEventHandler {
 
-	@SubscribeEvent
-	public void onRightClick(PlayerUseItemEvent event) {
-		System.out.println(event.entityPlayer.getCurrentEquippedItem());
-	}
-
 	public void onUpdate(PlayerUseItemEvent event) {
 		EntityPlayer entity = event.entityPlayer;
 		if (entity instanceof EntityPlayerMP && ((EntityPlayerMP) entity).getCurrentEquippedItem() == null) {
