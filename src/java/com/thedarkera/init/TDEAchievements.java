@@ -25,6 +25,7 @@ public class TDEAchievements {
     public static Achievement steel_upgrade = new Achievement("Steel Upgrade", Arrays.asList("Upgrade to Steel Tools", EnumChatFormatting.AQUA + "Tools"));
     public static Achievement ancient_upgrade = new Achievement("Ancient Upgrade", Arrays.asList("Find a Ancient Tool", EnumChatFormatting.AQUA + "Tools"));
     public static Achievement dragon_slayer = new Achievement("Dragon Slayer", Arrays.asList("Kill a dragon", EnumChatFormatting.BLUE + "Combat"));
+    public static Achievement death_lord = new Achievement("Death Killer", Arrays.asList("Kill the Death Lord and pickup the Death Sword", EnumChatFormatting.BLUE + "Combat"));
     public static Achievement workbench = new Achievement("Workbench Crafter", Arrays.asList("Make a workbench", EnumChatFormatting.GOLD + "Crafting"));
     public static Achievement smeltery = new Achievement("Dark Smelter", Arrays.asList("Make a smeltery", EnumChatFormatting.GOLD + "Crafting"));
     public static Achievement forge = new Achievement("Armor Crafter", Arrays.asList("Make a smithing forge", EnumChatFormatting.GOLD + "Crafting"));
@@ -70,6 +71,7 @@ public class TDEAchievements {
     	
     	//Killing Mobs
         AchievementHandler.add(dragon_slayer);
+        AchievementHandler.add(death_lord);;
     	
     	//Travelling
         AchievementHandler.add(village);

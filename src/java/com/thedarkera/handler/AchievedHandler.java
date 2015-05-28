@@ -2,8 +2,6 @@ package com.thedarkera.handler;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.EnumChatFormatting;
 
 import com.thedarkera.init.TDEAchievements;
 import com.thedarkera.init.TDETools;
@@ -17,7 +15,6 @@ public class AchievedHandler {
 
 	@SubscribeEvent
 	public void onCrafted(ItemCraftedEvent event) {
-		EntityPlayer player = event.player;
 		Item item = event.crafting.getItem();
 
 		if (item.equals(TDETools.dark_stone_pickaxe) || item.equals(TDETools.dark_stone_axe) || item.equals(TDETools.dark_stone_shovel) || item.equals(TDETools.dark_stone_hoe) || item.equals(TDEWeapons.dark_stone_sword)) {
@@ -31,11 +28,13 @@ public class AchievedHandler {
 
 	@SubscribeEvent
 	public void onItemPickup(ItemPickupEvent event){
-		EntityPlayer player = event.player;
 		Item item = event.pickedUp.getEntityItem().getItem();
 		
 		if(item.equals(TDETools.ancient_pickaxe) || item.equals(TDETools.ancient_axe) || item.equals(TDETools.ancient_shovel) || item.equals(TDETools.ancient_hoe) || item.equals(TDEWeapons.ancient_dagger) || item.equals(TDEWeapons.ancient_sword)){
 			AchievementHandler.setAchieved(TDEAchievements.ancient_upgrade);
+		}
+		if(item.equals(TDEWeapons.death_sword)){
+			AchievementHandler.setAchieved(TDEAchievements.death_lord);
 		}
 	}
 	
