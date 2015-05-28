@@ -16,6 +16,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class CommonProxy {
 	private static final Map<String, NBTTagCompound> extendedEntityData = new HashMap<String, NBTTagCompound>();
 
+    public void init() {}
+
 	public void registerTileEntities() {
 		GameRegistry.registerTileEntity(TESmasher.class, TESmasher.name);
 		GameRegistry.registerTileEntity(TESmeltery.class, "smeltery");

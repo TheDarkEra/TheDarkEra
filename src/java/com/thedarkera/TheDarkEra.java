@@ -10,6 +10,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ChatComponentText;
+import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -130,6 +131,7 @@ public class TheDarkEra {
 		packetPipeline.initialize();
 		
 		proxy.registerTileEntities();
+        proxy.init();
 
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
 		DimensionManager.registerDimension(dimension, dimension);

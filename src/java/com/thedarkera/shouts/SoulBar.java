@@ -19,8 +19,8 @@ public class SoulBar {
 		if (!event.isCancelable() && event.type == ElementType.EXPERIENCE) {
 			Minecraft mc = Minecraft.getMinecraft();
 			if (!mc.thePlayer.capabilities.isCreativeMode) {
-				int posX = event.resolution.getScaledWidth() / 2 + 10;
-				int posY = event.resolution.getScaledHeight() - 48;
+				//int posX = event.resolution.getScaledWidth() / 2 + 10;
+				//int posY = event.resolution.getScaledHeight() - 48;
 
 				mc.renderEngine.bindTexture(new ResourceLocation(TheDarkEra.MODID + ":textures/gui/SoulBar.png"));
 

@@ -1,5 +1,6 @@
 package com.thedarkera.packet;
 
+import cpw.mods.fml.relauncher.SideOnly;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;
@@ -115,7 +116,7 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
 		EntityPlayer player;
 		switch (FMLCommonHandler.instance().getEffectiveSide()) {
 		case CLIENT:
-			player = Minecraft.getMinecraft().thePlayer;
+			player = this.getClientPlayer();
 			abstractPacket.handleClientSide(player);
 			break;
 		case SERVER:
@@ -125,11 +126,17 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
 			break;
 		default:
 		}
-		out.add(abstractPacket);
+		//out.add(abstractPacket);
 	}
 	public void sendToServer(AbstractPacket message){
 		this.channels.get(Side.CLIENT).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.TOSERVER);
 		this.channels.get(Side.CLIENT).writeAndFlush(message);
 	}
+
+    @SideOnly(Side.CLIENT)
+    private EntityPlayer getClientPlayer ()
+    {
+        return Minecraft.getMinecraft().thePlayer;
+    }
 
 }

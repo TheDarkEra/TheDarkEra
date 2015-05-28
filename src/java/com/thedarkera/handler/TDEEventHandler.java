@@ -1,6 +1,8 @@
 package com.thedarkera.handler;
 
 import com.thedarkera.ztesting.ExtendedPlayerAchievements;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
@@ -15,13 +17,6 @@ import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class TDEEventHandler {
-
-	@SubscribeEvent
-	public void onRenderGameOverlay(RenderGameOverlayEvent event) {
-		SoulBar.SoulBarRun(event);
-		ShoutList.ShoutBarRun(event);
-
-	}
 
 	@SubscribeEvent
 	public void onRightClick(PlayerUseItemEvent event) {

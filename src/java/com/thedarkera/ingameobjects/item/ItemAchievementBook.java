@@ -2,6 +2,8 @@ package com.thedarkera.ingameobjects.item;
 
 import com.thedarkera.client.gui.achievementbook.GuiAchievementsBook;
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -33,9 +35,8 @@ public class ItemAchievementBook extends Item {
 
     @Override
     public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player) {
-
-        player.openGui(TheDarkEra.instance, GuiID.ACHIEVEMENTBOOK.ordinal(), world, (int)player.posX, (int)player.posY, (int)player.posZ);
-        FMLClientHandler.instance().displayGuiScreen(player, new GuiAchievementsBook());
+            player.openGui(TheDarkEra.instance, GuiID.ACHIEVEMENTBOOK.ordinal(), world, (int) player.posX, (int) player.posY, (int) player.posZ);
+            //FMLClientHandler.instance().displayGuiScreen(player, new GuiAchievementsBook());
 
         return item;
     }
