@@ -19,6 +19,20 @@ public class TDEAchievements {
 	 * Crafting = Yellow	
 	*/
 	
+	/*public static Achievement test = new Achievement("Test", Arrays.asList("Test", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test2 = new Achievement("Test 2", Arrays.asList("Test2", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test3 = new Achievement("Test 3", Arrays.asList("Test3", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test4 = new Achievement("Test 4", Arrays.asList("Test4", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test5 = new Achievement("Test 5", Arrays.asList("Test5", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test6 = new Achievement("Test 6", Arrays.asList("Test6", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test7 = new Achievement("Test 7", Arrays.asList("Test7", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test8 = new Achievement("Test 8", Arrays.asList("Test8", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test9 = new Achievement("Test 9", Arrays.asList("Test9", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test10 = new Achievement("Test 10", Arrays.asList("Test10", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test11 = new Achievement("Test 11", Arrays.asList("Test11", EnumChatFormatting.GREEN + "Test Achievement"));
+	public static Achievement test12 = new Achievement("Test 12", Arrays.asList("Test12", EnumChatFormatting.GREEN + "Test Achievement"));
+	*/
+	
     public static Achievement village = new Achievement("Dark Village", Arrays.asList("Locate the Dark Village", EnumChatFormatting.GREEN + "Structures"));
     public static Achievement travelling = new Achievement("The Dark", Arrays.asList("Teleport To The Dark", EnumChatFormatting.GRAY + "Dimensions"));
     public static Achievement stone_upgrade = new Achievement("Stone Upgrade", Arrays.asList("Upgrade to Dark Stone Tools", EnumChatFormatting.AQUA + "Tools"));
@@ -55,6 +69,12 @@ public class TDEAchievements {
     	AchievementHandler.add(test4);
     	AchievementHandler.add(test5);
     	AchievementHandler.add(test6);
+    	AchievementHandler.add(test7);
+    	AchievementHandler.add(test8);
+    	AchievementHandler.add(test9);
+    	AchievementHandler.add(test10);
+    	AchievementHandler.add(test11);
+    	AchievementHandler.add(test12);
     	*/
     	
     	//Crafting/Pickups
