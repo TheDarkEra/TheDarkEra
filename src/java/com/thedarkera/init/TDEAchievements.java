@@ -10,7 +10,7 @@ import net.minecraft.util.EnumChatFormatting;
 
 public class TDEAchievements {
 
-	/**
+	/** --Categories--
 	 * Biomes = Dark Green
 	 * Combat = Blue
 	 * Tools = Aqua
