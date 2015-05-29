@@ -119,13 +119,15 @@ public class GuiAchievementsBook extends GuiScreen {
             for(int i = 0; i < (maxPages*16); i++) {
                 int k = (int)Math.floor(i / 16D);
                 if (i < 8 * currentPage) k += currentPage / 2;
-                if (currentPage == 0) k += 1;
+                if (button.id == 2 && currentPage == 0) k += 1;
                 if (i < achievementList.size()){
                     GuiAchievement achievement = this.achievementList.get(i);
-                    if (button.id == 2 && i >= (k * 16))
-                            achievement.visible = true;
-                    else if (button.id == 1 && i < (k * 16))
+                    if (button.id == 2 && i >= (k * 16) && i <= (currentPage * 16) -1)
                         achievement.visible = true;
+                    else if (button.id == 1 && i >= (k * 16)) {
+                        if (currentPage == 0 || i <= (currentPage * 16) - 1) achievement.visible = true;
+                        else achievement.visible = false;
+                    }
                     else achievement.visible = false;
                 }
             }
