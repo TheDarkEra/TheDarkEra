@@ -1,21 +1,10 @@
 package com.thedarkera.ingameobjects.block;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-import com.thedarkera.TheDarkEra;
+public class BlockOrichalcumOre extends ModBlock {
 
-public class BlockOrichalcumOre extends Block {
-	String name = "orichalcum_ore";
-
-	public BlockOrichalcumOre() {
-		super(Material.rock);
-		setBlockName(name);
-		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
-		setHardness(2F);
-		setResistance(5F);
-		setStepSound(soundTypeStone);
-		setHarvestLevel("pickaxe", 4);
+	public BlockOrichalcumOre(Material material, Float hardness, Float resistance, String name, String tool, int lvl) {
+		super(material, hardness, resistance, name, tool, lvl);
 	}
 }

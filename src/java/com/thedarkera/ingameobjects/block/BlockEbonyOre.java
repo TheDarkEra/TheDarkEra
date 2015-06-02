@@ -1,21 +1,11 @@
 package com.thedarkera.ingameobjects.block;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-import com.thedarkera.TheDarkEra;
+public class BlockEbonyOre extends ModBlock {
 
-public class BlockEbonyOre extends Block {
-	String name = "ebony_ore";
-
-	public BlockEbonyOre() {
-		super(Material.rock);
-		setBlockName(name);
-		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
-		setHardness(2F);
-		setResistance(5F);
+	public BlockEbonyOre(Material material, Float hardness, Float resistance, String name, String tool, int lvl) {
+		super(material, hardness, resistance, name, tool, lvl);
 		setStepSound(soundTypeStone);
-		setHarvestLevel("pickaxe", 4);
 	}
 }

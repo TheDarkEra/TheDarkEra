@@ -9,19 +9,11 @@ import net.minecraft.item.Item;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEItems;
 
-public class BlockDragonBoneOre extends Block {
+public class BlockDragonBoneOre extends ModBlock {
 
-	String name = "dragon_bone_ore";
-
-	public BlockDragonBoneOre() {
-		super(Material.rock);
-		setBlockName(name);
-		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
-		setHardness(1F);
-		setResistance(5F);
+	public BlockDragonBoneOre(Material material, Float hardness, Float resistance, String name, String tool, int lvl) {
+		super(material, hardness, resistance, name, tool, lvl);
 		setStepSound(soundTypeStone);
-		setHarvestLevel("pickaxe", 4);
 	}
 
 	@Override

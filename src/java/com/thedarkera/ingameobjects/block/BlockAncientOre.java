@@ -11,19 +11,11 @@ import net.minecraft.world.World;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDETools;
 
-public class BlockAncientOre extends Block {
+public class BlockAncientOre extends ModBlock {
 
-	String name = "ancient_ore";
-
-	public BlockAncientOre() {
-		super(Material.gourd);
-		setBlockName(name);
-		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
-		setHardness(1F);
-		setResistance(5F);
+	public BlockAncientOre(Material material, Float hardness, Float resistance, String name, String tool, int lvl) {
+		super(material, hardness, resistance, name, tool, lvl);
 		setStepSound(soundTypeStone);
-		setHarvestLevel("pickaxe", 2);
 	}
 
 	@Override

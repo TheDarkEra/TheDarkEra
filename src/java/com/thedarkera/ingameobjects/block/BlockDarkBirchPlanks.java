@@ -5,17 +5,10 @@ import com.thedarkera.TheDarkEra;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockDarkBirchPlanks extends Block {
-	String name = "dark_birch_planks";
+public class BlockDarkBirchPlanks extends ModBlock {
 
-	public BlockDarkBirchPlanks() {
-		super(Material.wood);
-		setBlockName(name);
-		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
-		setHardness(1.5F);
-		setResistance(10F);
+	public BlockDarkBirchPlanks(Material material, Float hardness, Float resistance, String name, String tool, int lvl) {
+		super(material, hardness, resistance, name, tool, lvl);
 		setStepSound(soundTypeStone);
-		setHarvestLevel("axe", 0);
 	}
 }

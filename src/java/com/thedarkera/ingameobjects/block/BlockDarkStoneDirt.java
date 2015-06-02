@@ -1,23 +1,17 @@
 package com.thedarkera.ingameobjects.block;
 
-import com.thedarkera.TheDarkEra;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
-public class BlockDarkStoneDirt extends Block {
-	private IIcon[] icons = new IIcon[6];
-	String name = "dark_stone_dirt";
+import com.thedarkera.TheDarkEra;
 
-	public BlockDarkStoneDirt() {
-		super(Material.grass);
-		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDE);
-		setHardness(1F);
+public class BlockDarkStoneDirt extends ModBlock {
+	private IIcon[] icons = new IIcon[6];
+
+	public BlockDarkStoneDirt(Material material, Float hardness, Float resistance, String name, String tool, int lvl) {
+		super(material, hardness, resistance, name, tool, lvl);
 		setStepSound(soundTypeGrass);
-		setHarvestLevel("shovel", 1);
 	}
 
 	@Override
@@ -25,7 +19,7 @@ public class BlockDarkStoneDirt extends Block {
 		for (int i = 0; i < icons.length; i++) {
 			icons[i] = iconRegister.registerIcon("dirt");
 		}
-		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + name);
+		icons[1] = iconRegister.registerIcon(TheDarkEra.MODID + ":" + "dark_stone_dirt");
 	}
 
 	@Override

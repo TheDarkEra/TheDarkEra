@@ -9,12 +9,15 @@ import com.thedarkera.ingameobjects.block.BlockAncientOre;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlassPane;
 import com.thedarkera.ingameobjects.block.BlockDarkBirchPlanks;
+import com.thedarkera.ingameobjects.block.BlockDarkClay;
 import com.thedarkera.ingameobjects.block.BlockDarkCobblestone;
 import com.thedarkera.ingameobjects.block.BlockDarkDirt;
 import com.thedarkera.ingameobjects.block.BlockDarkFire;
 import com.thedarkera.ingameobjects.block.BlockDarkGrass;
 import com.thedarkera.ingameobjects.block.BlockDarkGravel;
 import com.thedarkera.ingameobjects.block.BlockDarkOre;
+import com.thedarkera.ingameobjects.block.BlockDarkSand;
+import com.thedarkera.ingameobjects.block.BlockDarkSandstone;
 import com.thedarkera.ingameobjects.block.BlockDarkStone;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneBricks;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneDirt;
@@ -22,6 +25,7 @@ import com.thedarkera.ingameobjects.block.BlockDarkStoneFence;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneLadder;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneSlab;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneStairs;
+import com.thedarkera.ingameobjects.block.BlockDarkWool;
 import com.thedarkera.ingameobjects.block.BlockDeadGrass;
 import com.thedarkera.ingameobjects.block.BlockDragonBone;
 import com.thedarkera.ingameobjects.block.BlockDragonBoneOre;
@@ -56,33 +60,35 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class TDEBlocks {
 	// This adds all the trees. DO NOT CHANGE THE NAMES!
 	public static String[] treeTypes1 = new String[] { "Dead", "Dark_Jungle", "Dark_Birch", "Royal_Oak", "Dark_Oak" };
-
-	public static String[][] leafTypes = new String[][] {
-			{ "Leaf_Dead", "Leaf_Dark_Jungle", "Leaf_Dark_Birch", "Leaf_Royal_Oak", "Leaf_Black_Wood_Tree", "Leaf_Paper_Birch_Tree", "Leaf_Maple_Tree", "Leaf_Rotten_Tree", "Leaf_Black_Willow",
-					"Leaf_Mangroves" },
-			{ "Leaf_Dead_Opaque", "Leaf_Dark_Jungle	_Opaque", "Leaf_Dark_Birch_Opaque", "Leaf_Royal_Oak_Opaque", "Leaf_Black_Wood_Tree_Opaque", "Leaf_Paper_Birch_Tree_Opaque", "Leaf_Maple_Tree_Opaque",
-					"Leaf_Rotten_Tree_Opaque", "Leaf_Black_Willow_Opaque", "Leaf_Mangroves_Opaque" } };
+	public static String[][] leafTypes = new String[][] { { "Leaf_Dead", "Leaf_Dark_Jungle", "Leaf_Dark_Birch", "Leaf_Royal_Oak", "Leaf_Black_Wood_Tree", "Leaf_Paper_Birch_Tree", "Leaf_Maple_Tree", "Leaf_Rotten_Tree", "Leaf_Black_Willow", "Leaf_Mangroves" }, { "Leaf_Dead_Opaque", "Leaf_Dark_Jungle	_Opaque", "Leaf_Dark_Birch_Opaque", "Leaf_Royal_Oak_Opaque", "Leaf_Black_Wood_Tree_Opaque", "Leaf_Paper_Birch_Tree_Opaque", "Leaf_Maple_Tree_Opaque", "Leaf_Rotten_Tree_Opaque", "Leaf_Black_Willow_Opaque", "Leaf_Mangroves_Opaque" } };
 	public static String[] treeTypes2 = new String[] { "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree" };
 	public static String[] treeTypes3 = new String[] { "Black_Willow", "Mangroves" };
 	public static String[] treeTypes4 = new String[] { "Black_Willow", "Mangroves" };
-	public static String[] allTreeTypes = new String[] {"Dead",	"Dark_Jungle", "Dark_Birch", "Royal_Oak", "Dark_Oak", "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves"};
+	public static String[] allTreeTypes = new String[] { "Dead", "Dark_Jungle", "Dark_Birch", "Royal_Oak", "Dark_Oak", "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves" };
+	
+	
 	// Blocks//
 	public static Block ebony_ore;
 	public static Block orichalcum_ore;
 	public static Block ancient_ore;
 	public static Block dragon_bone_ore;
 	public static BlockPortalDark dark_portal;
-	public static Block smasher;
 	public static Block dark_birch_planks;
 	public static Block dark_fire;
-	
+
 	public static Block dark_diamond_ore;
 	public static Block dark_emerald_ore;
 	public static Block dark_coal_ore;
 	public static Block dark_iron_ore;
 	public static Block dark_gold_ore;
 
+	// TE
 	public static Block smeltery;
+	public static Block smasher;
+
+	// Wool/Clay
+	public static Block dark_red_wool;
+	public static Block dark_red_clay;
 
 	// plants//
 	public static Block grape_plant;
@@ -102,7 +108,7 @@ public class TDEBlocks {
 	public static Block rotten_wood_slab;
 	public static Block rotten_wood_fence;
 	public static Block dark_stone_dirt;
-	public static Block cracked_glass_pane; 
+	public static Block cracked_glass_pane;
 	public static Block cracked_glass;
 	public static Block lamp;
 
@@ -112,6 +118,9 @@ public class TDEBlocks {
 	public static Block dark_grass;
 	public static Block dark_dirt;
 	public static Block dark_gravel;
+	public static Block dark_sandstone;
+	public static Block dark_sand;
+	public static Block dark_sandstone_bricks;
 
 	// Tree blocks//
 	public static Block blockLog1;
@@ -120,70 +129,78 @@ public class TDEBlocks {
 	public static Block blockLog4;
 
 	public static Block block_leaves;
-	
+
 	// Placeable items//
 	public static Block example;
 	public static Block dragon_bone;
 
 	public static void init() {
-		// Blocks//
-		dragon_bone_ore = new BlockDragonBoneOre();
-		reg(dragon_bone_ore);
-		ancient_ore = new BlockAncientOre();
-		reg(ancient_ore);
-		ebony_ore = new BlockEbonyOre();
-		reg(ebony_ore);
-		orichalcum_ore = new BlockOrichalcumOre();
-		reg(orichalcum_ore);
+		// Special Blocks //
 		dark_stone_ladder = new BlockDarkStoneLadder();
 		reg(dark_stone_ladder);
-		dark_stone = new BlockDarkStone();
-		reg(dark_stone);
-		dark_cobblestone = new BlockDarkCobblestone();
-		reg(dark_cobblestone);
-		dark_stone_bricks = new BlockDarkStoneBricks();
-		reg(dark_stone_bricks);
-		dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
-		reg(dark_stone_fence);
 		dark_stone_stairs = new BlockDarkStoneStairs(dark_cobblestone, 0);
 		reg(dark_stone_stairs);
+		dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
+		reg(dark_stone_fence);
 		dark_stone_slab = new BlockDarkStoneSlab(false, Material.rock);
 		reg(dark_stone_slab);
-		rotten_wood = new BlockRottenWood();
-		reg(rotten_wood);
 		rotten_wood_fence = new BlockRottenWoodFence(TheDarkEra.MODID + ":rotting_wood");
 		reg(rotten_wood_fence);
 		rotten_wood_stairs = new BlockRottenWoodStairs(rotten_wood, 0);
 		reg(rotten_wood_stairs);
 		rotten_wood_slab = new BlockRottenWoodSlab(false, Material.wood);
 		reg(rotten_wood_slab);
-		dark_stone_dirt = new BlockDarkStoneDirt();
-		reg(dark_stone_dirt);
-		smasher = new BlockSmasher();
-		dark_birch_planks = new BlockDarkBirchPlanks();
-		reg(dark_birch_planks);
-		dark_fire = new BlockDarkFire();
-		reg(dark_fire);
 		cracked_glass_pane = new BlockCrackedGlassPane(TheDarkEra.MODID + ":cracked_glass", "cracked_glass", Material.glass, false);
 		reg(cracked_glass_pane);
 		cracked_glass = new BlockCrackedGlass(Material.glass, false);
 		reg(cracked_glass);
 		lamp = new BlockLamp();
 		reg(lamp);
+		dark_fire = new BlockDarkFire();
+		reg(dark_fire);
 		
-		dark_diamond_ore = new BlockDarkOre(Material.rock, "dark_diamond_ore");
+		
+		// Blocks //
+		dragon_bone_ore = new BlockDragonBoneOre(Material.rock, 1f, 5f, "dragon_bone_ore", "pickaxe", 1);
+		reg(dragon_bone_ore);
+		ancient_ore = new BlockAncientOre(Material.rock, 1f, 5f, "ancient_ore", "pickaxe", 1);
+		reg(ancient_ore);
+		ebony_ore = new BlockEbonyOre(Material.rock, 2f, 5f, "ebony_ore", "pickaxe", 3);
+		reg(ebony_ore);
+		orichalcum_ore = new BlockOrichalcumOre(Material.rock, 2f, 5f, "orichalcum_ore", "pickaxe", 3);
+		reg(orichalcum_ore);
+		dark_stone = new BlockDarkStone(Material.rock, 1f, 10f, "orichalcum_ore", "pickaxe", 3);
+		reg(dark_stone);
+		dark_cobblestone = new BlockDarkCobblestone(Material.rock, 2f, 10f, "dark_cobblestone", "pickaxe", 0);
+		reg(dark_cobblestone);
+		dark_stone_bricks = new BlockDarkStoneBricks(Material.rock, 1.5f, 10f, "dark_stone_bricks", "pickaxe", 0);
+		reg(dark_stone_bricks);
+		rotten_wood = new BlockRottenWood(Material.wood, 1.5f, 2f, "rotten_wood", "axe", 0);
+		reg(rotten_wood);
+		dark_stone_dirt = new BlockDarkStoneDirt(Material.gourd, 1f, 5f, "dark_stone_dirt", "shovel", 1);
+		reg(dark_stone_dirt);
+		dark_birch_planks = new BlockDarkBirchPlanks(Material.wood, 1.5f, 10f, "dark_birch_planks", "axe", 0);
+		reg(dark_birch_planks);
+		dark_diamond_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_diamond_ore", "pickaxe", 3);
 		reg(dark_diamond_ore);
-		dark_coal_ore = new BlockDarkOre(Material.rock, "dark_coal_ore");
+		dark_coal_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_coal_ore", "pickaxe", 0);
 		reg(dark_coal_ore);
-		dark_emerald_ore = new BlockDarkOre(Material.rock, "dark_emerald_ore");
+		dark_emerald_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_emerald_ore", "pickaxe", 3);
 		reg(dark_emerald_ore);
-		dark_iron_ore = new BlockDarkOre(Material.rock, "dark_iron_ore");
+		dark_iron_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_iron_ore", "pickaxe", 2);
 		reg(dark_iron_ore);
-		dark_gold_ore = new BlockDarkOre(Material.rock, "dark_gold_ore");
+		dark_gold_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_gold_ore", "pickaxe", 2);
 		reg(dark_gold_ore);
 
+		// TE
 		smeltery = new BlockSmeltery();
 		reg(smeltery);
+
+		// Wool/Clay
+		dark_red_wool = new BlockDarkWool(Material.cloth, "red");
+		reg(dark_red_wool);
+		dark_red_clay = new BlockDarkClay(Material.clay, "red");
+		reg(dark_red_clay);
 
 		// Meta Blocks//
 
@@ -206,6 +223,12 @@ public class TDEBlocks {
 		reg(dark_gravel);
 		weedy_dirt = new BlockWeedyDirt("weedy_dirt");
 		reg(weedy_dirt);
+		dark_sand = new BlockDarkSand(Material.sand, 2f, 2f, "dark_sand", "shovel", 0);
+		reg(dark_sand);
+		dark_sandstone = new BlockDarkSandstone(Material.rock, 2f, 2f, "dark_sandstone", "pickaxe", 0);
+		reg(dark_sandstone);
+		dark_sandstone_bricks = new BlockDarkSandstone(Material.rock, 2f, 2f, "dark_sandstone_bricks", "pickaxe", 0);
+		reg(dark_sandstone_bricks);
 
 		blockLog1 = new BlockLogs1().setBlockName("log1").setCreativeTab(TheDarkEra.tabTDE);
 		GameRegistry.registerBlock(blockLog1, ItemLogBlocks1.class, blockLog1.getUnlocalizedName().substring(5));
@@ -215,7 +238,6 @@ public class TDEBlocks {
 		GameRegistry.registerBlock(blockLog3, ItemLogBlocks3.class, blockLog3.getUnlocalizedName().substring(5));
 		blockLog4 = new BlockLogs3().setBlockName("log4").setCreativeTab(TheDarkEra.tabTDE);
 		GameRegistry.registerBlock(blockLog4, ItemLogBlocks4.class, blockLog4.getUnlocalizedName().substring(5));
-		
 
 		block_leaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDE);
 		GameRegistry.registerBlock(block_leaves, ItemLeafBlocks.class, block_leaves.getUnlocalizedName().substring(5));
@@ -225,13 +247,13 @@ public class TDEBlocks {
 
 		// Placeable items//
 		example = new FlatBlockExample();
-		
+
 		// Misc //
 		dragon_bone = new BlockDragonBone();
 		reg(dragon_bone);
 
-        BlockDarkFire.func_149843_e();
-}
+		BlockDarkFire.func_149843_e();
+	}
 
 	public static void reg(Block block) {
 		RegUtils.reg(block);
