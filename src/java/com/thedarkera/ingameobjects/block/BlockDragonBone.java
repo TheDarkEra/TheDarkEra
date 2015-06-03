@@ -1,9 +1,8 @@
 package com.thedarkera.ingameobjects.block;
 
-import com.thedarkera.init.TDEItems;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import java.util.List;
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -12,21 +11,20 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import java.util.List;
-import java.util.Random;
+import com.thedarkera.ingameobjects.ModBlock;
+import com.thedarkera.init.TDEItems;
 
-public class BlockDragonBone extends Block {
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+public class BlockDragonBone extends ModBlock {
     private static String name = "dragon_bones";
 
     //todo: make a 3D model
 
-    public BlockDragonBone() {
-        super(Material.ground);
-        setBlockName(name);
+    public BlockDragonBone(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
+        super(material, hardness, resistance, name, tool, lvl, sound);
         setLightOpacity(1);
-        setStepSound(soundTypeCloth);
-        setHardness(1.0F);
-        setResistance(1.0F);
     }
 
     @Override

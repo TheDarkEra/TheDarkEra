@@ -12,9 +12,8 @@ import com.thedarkera.init.TDEItems;
 
 public class BlockDragonBoneOre extends ModBlock {
 
-	public BlockDragonBoneOre(Material material, Float hardness, Float resistance, String name, String tool, int lvl) {
-		super(material, hardness, resistance, name, tool, lvl);
-		setStepSound(soundTypeStone);
+	public BlockDragonBoneOre(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
+		super(material, hardness, resistance, name, tool, lvl, sound);
 	}
 
 	@Override

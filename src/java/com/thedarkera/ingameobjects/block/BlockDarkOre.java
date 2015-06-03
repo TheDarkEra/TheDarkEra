@@ -2,6 +2,7 @@ package com.thedarkera.ingameobjects.block;
 
 import java.util.Random;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -14,8 +15,9 @@ import com.thedarkera.init.TDEBlocks;
 public class BlockDarkOre extends ModBlock { //BlockOre
 
 	
-	public BlockDarkOre(Material material, Float hardness, Float resistance, String name, String tool, int lvl) {
-		super(material, hardness, resistance, name, tool, lvl);
+	public BlockDarkOre(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
+		super(material, hardness, resistance, name, tool, lvl, sound);
+		setHarvestLevel(tool, lvl);
 	}
 	
 	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)

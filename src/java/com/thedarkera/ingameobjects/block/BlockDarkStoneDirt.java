@@ -1,5 +1,6 @@
 package com.thedarkera.ingameobjects.block;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
@@ -10,9 +11,8 @@ import com.thedarkera.ingameobjects.ModBlock;
 public class BlockDarkStoneDirt extends ModBlock {
 	private IIcon[] icons = new IIcon[6];
 
-	public BlockDarkStoneDirt(Material material, Float hardness, Float resistance, String name, String tool, int lvl) {
-		super(material, hardness, resistance, name, tool, lvl);
-		setStepSound(soundTypeGrass);
+	public BlockDarkStoneDirt(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
+		super(material, hardness, resistance, name, tool, lvl, sound);
 	}
 
 	@Override

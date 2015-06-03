@@ -6,18 +6,14 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.ingameobjects.ModBlock;
 
-public class BlockWeedyDirt extends Block {
+public class BlockWeedyDirt extends ModBlock {
 	private IIcon[] icons = new IIcon[6];
 	private String textureName = "weedy_dirt";
 
-	public BlockWeedyDirt(String name) {
-		super(Material.grass);
-		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDE);
-		setHardness(0.4F);
-		setStepSound(soundTypeGrass);
-		setHarvestLevel("shovel", 0);
+	public BlockWeedyDirt(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
+		super(material, hardness, resistance, name, tool, lvl, sound);
 	}
 
 	@Override

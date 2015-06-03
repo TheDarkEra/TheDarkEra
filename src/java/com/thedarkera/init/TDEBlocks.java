@@ -1,6 +1,7 @@
 package com.thedarkera.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
@@ -137,35 +138,35 @@ public class TDEBlocks {
 	public static void init() {
 		
 		// Blocks //
-		dragon_bone_ore = new BlockDragonBoneOre(Material.rock, 1f, 5f, "dragon_bone_ore", "pickaxe", 1);
+		dragon_bone_ore = new BlockDragonBoneOre(Material.rock, 1f, 5f, "dragon_bone_ore", "pickaxe", 1, Block.soundTypeStone);
 		reg(dragon_bone_ore);
-		ancient_ore = new BlockAncientOre(Material.rock, 1f, 5f, "ancient_ore", "pickaxe", 1);
+		ancient_ore = new BlockAncientOre(Material.rock, 1f, 5f, "ancient_ore", "pickaxe", 1, Block.soundTypeStone);
 		reg(ancient_ore);
-		ebony_ore = new BlockEbonyOre(Material.rock, 2f, 5f, "ebony_ore", "pickaxe", 3);
+		ebony_ore = new BlockEbonyOre(Material.rock, 2f, 5f, "ebony_ore", "pickaxe", 3, Block.soundTypeStone);
 		reg(ebony_ore);
-		orichalcum_ore = new BlockOrichalcumOre(Material.rock, 2f, 5f, "orichalcum_ore", "pickaxe", 3);
+		orichalcum_ore = new BlockOrichalcumOre(Material.rock, 2f, 5f, "orichalcum_ore", "pickaxe", 3, Block.soundTypeStone);
 		reg(orichalcum_ore);
-		dark_stone = new BlockDarkStone(Material.rock, 1f, 10f, "dark_stone", "pickaxe", 0);
+		dark_stone = new BlockDarkStone(Material.rock, 1f, 10f, "dark_stone", "pickaxe", 0, Block.soundTypeStone);
 		reg(dark_stone);
-		dark_cobblestone = new BlockDarkCobblestone(Material.rock, 2f, 10f, "dark_cobblestone", "pickaxe", 0);
+		dark_cobblestone = new BlockDarkCobblestone(Material.rock, 2f, 10f, "dark_cobblestone", "pickaxe", 0, Block.soundTypeStone);
 		reg(dark_cobblestone);
-		dark_stone_bricks = new BlockDarkStoneBricks(Material.rock, 1.5f, 10f, "dark_stone_bricks", "pickaxe", 0);
+		dark_stone_bricks = new BlockDarkStoneBricks(Material.rock, 1.5f, 10f, "dark_stone_bricks", "pickaxe", 0, Block.soundTypeStone);
 		reg(dark_stone_bricks);
-		rotten_wood = new BlockRottenWood(Material.wood, 1.5f, 2f, "rotten_wood", "axe", 0);
+		rotten_wood = new BlockRottenWood(Material.wood, 1.5f, 2f, "rotten_wood", "axe", 0, Block.soundTypeWood);
 		reg(rotten_wood);
-		dark_stone_dirt = new BlockDarkStoneDirt(Material.gourd, 1f, 5f, "dark_stone_dirt", "shovel", 1);
+		dark_stone_dirt = new BlockDarkStoneDirt(Material.gourd, 1f, 5f, "dark_stone_dirt", "shovel", 1, Block.soundTypeGravel);
 		reg(dark_stone_dirt);
-		dark_birch_planks = new BlockDarkBirchPlanks(Material.wood, 1.5f, 10f, "dark_birch_planks", "axe", 0);
+		dark_birch_planks = new BlockDarkBirchPlanks(Material.wood, 1.5f, 10f, "dark_birch_planks", "axe", 0, Block.soundTypeWood);
 		reg(dark_birch_planks);
-		dark_diamond_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_diamond_ore", "pickaxe", 3);
+		dark_diamond_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_diamond_ore", "pickaxe", 3, Block.soundTypeStone);
 		reg(dark_diamond_ore);
-		dark_coal_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_coal_ore", "pickaxe", 0);
+		dark_coal_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_coal_ore", "pickaxe", 0, Block.soundTypeStone);
 		reg(dark_coal_ore);
-		dark_emerald_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_emerald_ore", "pickaxe", 3);
+		dark_emerald_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_emerald_ore", "pickaxe", 3, Block.soundTypeStone);
 		reg(dark_emerald_ore);
-		dark_iron_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_iron_ore", "pickaxe", 2);
+		dark_iron_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_iron_ore", "pickaxe", 2, Block.soundTypeStone);
 		reg(dark_iron_ore);
-		dark_gold_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_gold_ore", "pickaxe", 2);
+		dark_gold_ore = new BlockDarkOre(Material.rock, 2f, 5f, "dark_gold_ore", "pickaxe", 2, Block.soundTypeStone);
 		reg(dark_gold_ore);
 
 		// TE
@@ -189,21 +190,21 @@ public class TDEBlocks {
 		reg(dark_portal);
 
 		// Biome Blocks
-		dead_grass = new BlockDeadGrass("dead_grass");
+		dead_grass = new BlockDeadGrass(Material.grass, 0.4f, 2f, "dead_grass", "shovel", 0, Block.soundTypeGrass);
 		reg(dead_grass);
-		dark_grass = new BlockDarkGrass("dark_grass");
+		dark_grass = new BlockDarkGrass(Material.grass, 0.4f, 2f, "dark_grass", "shovel", 0, Block.soundTypeGrass);
 		reg(dark_grass);
-		dark_dirt = new BlockDarkDirt("dark_dirt");
+		dark_dirt = new BlockDarkDirt(Material.gourd, 0.3f, 2f, "dark_dirt", "shovel", 1, Block.soundTypeGravel);
 		reg(dark_dirt);
 		dark_gravel = new BlockDarkGravel("dark_gravel");
 		reg(dark_gravel);
-		weedy_dirt = new BlockWeedyDirt("weedy_dirt");
+		weedy_dirt = new BlockWeedyDirt(Material.gourd, 0.4f, 2.1f, "weedy_dirt", "", 0, Block.soundTypeGravel);
 		reg(weedy_dirt);
-		dark_sand = new BlockDarkSand(Material.sand, 2f, 2f, "dark_sand", "shovel", 0);
+		dark_sand = new BlockDarkSand(Material.sand, 2f, 2f, "dark_sand", "shovel", 0, Block.soundTypeSand);
 		reg(dark_sand);
-		dark_sandstone = new BlockDarkSandstone(Material.rock, 2f, 2f, "dark_sandstone", "pickaxe", 0);
+		dark_sandstone = new BlockDarkSandstone(Material.rock, 2f, 2f, "dark_sandstone", "pickaxe", 0, Block.soundTypeStone);
 		reg(dark_sandstone);
-		dark_sandstone_bricks = new BlockDarkSandstone(Material.rock, 2f, 2f, "dark_sandstone_bricks", "pickaxe", 0);
+		dark_sandstone_bricks = new BlockDarkSandstone(Material.rock, 2f, 2f, "dark_sandstone_bricks", "pickaxe", 0, Block.soundTypeStone);
 		reg(dark_sandstone_bricks);
 
 		blockLog1 = new BlockLogs1().setBlockName("log1").setCreativeTab(TheDarkEra.tabTDE);
@@ -223,9 +224,7 @@ public class TDEBlocks {
 
 		// Placeable items//
 		example = new FlatBlockExample();
-
-		// Misc //
-		dragon_bone = new BlockDragonBone();
+		dragon_bone = new BlockDragonBone(Material.cloth, 1f, 1f, "dragon_bone", "pickaxe", 0, Block.soundTypeStone);
 		reg(dragon_bone);
 		
 	

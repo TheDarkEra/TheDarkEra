@@ -9,8 +9,8 @@ public class BlockCrackedGlass extends BlockGlass{ //Blocks
 
 	private String name = "cracked_glass";
 	
-	public BlockCrackedGlass(Material material, boolean p_i45408_2_) {
-		super(material, p_i45408_2_);
+	public BlockCrackedGlass(Material material, boolean par2) {
+		super(material, par2);
 		setCreativeTab(TheDarkEra.tabTDE);
 		setHardness(0.3F);
 		setResistance(0F);

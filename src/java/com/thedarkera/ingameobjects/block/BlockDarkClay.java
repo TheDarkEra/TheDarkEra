@@ -20,6 +20,8 @@ public class BlockDarkClay extends Block{ //Block
 		setCreativeTab(TheDarkEra.tabTDE);
 		setHardness(1F);
 		setResistance(1F);
+		setHarvestLevel("pickaxe", 0);
+		setStepSound(soundTypeStone);
 	}
 	
 	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)

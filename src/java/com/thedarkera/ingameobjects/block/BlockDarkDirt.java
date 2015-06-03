@@ -1,23 +1,13 @@
 package com.thedarkera.ingameobjects.block;
 
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 
-import com.thedarkera.TheDarkEra;
+import com.thedarkera.ingameobjects.ModBlock;
 
-public class BlockDarkDirt extends Block { // BlockDirt
-	public BlockDarkDirt(String name) {
-		super(Material.gourd);
-		setBlockName(name);
-		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
-		setHardness(0.3F);
-		setStepSound(soundTypeGravel);
-		setHarvestLevel("shovel", 0);
+public class BlockDarkDirt extends ModBlock { // BlockDirt
+	public BlockDarkDirt(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
+		super(material, hardness, resistance, name, tool, lvl, sound);
 	}
 
 
