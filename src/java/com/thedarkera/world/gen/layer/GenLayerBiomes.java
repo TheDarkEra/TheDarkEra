@@ -14,6 +14,7 @@ public class GenLayerBiomes extends GenLayer {
     		 dark_forest,
     		 ancient_land,
     		 misty_mountains,
+    		 big_crater,
     };
     
     public GenLayerBiomes(long seed) {

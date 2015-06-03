@@ -9,7 +9,9 @@ import net.minecraftforge.common.BiomeManager;
 
 public class TDEBiomes {
 	
-    protected static final BiomeGenBase.Height height_BigHills = new BiomeGenBase.Height(10F, 6F);
+    protected static final BiomeGenBase.Height height_BigHills = new BiomeGenBase.Height(3.0F, 1.5F);
+    protected static final BiomeGenBase.Height height_Hills = new BiomeGenBase.Height(1.2F, 0.6F);
+    protected static final BiomeGenBase.Height height_Crater = new BiomeGenBase.Height(-3.2F, -0.6F);
 
     public static BiomeGenBase dark_ocean;
 	public static BiomeGenBase dark_land;
@@ -23,6 +25,7 @@ public class TDEBiomes {
     public static BiomeGenBase magical_forest;
     public static BiomeGenBase ancient_land;
     public static BiomeGenBase misty_mountains;
+    public static BiomeGenBase big_crater;
 
 	public static void init() {
 
@@ -33,7 +36,7 @@ public class TDEBiomes {
 		BiomeManager.addSpawnBiome(dark_forest);
         dark_hills = (new BiomeDarkHills(54, 0)).setColor(6316128).setBiomeName("Dark Extreme Hills");
         BiomeManager.addSpawnBiome(dark_hills);
-        dead_land = (new BiomeDeadLand(55, 0)).setColor(6316124).setBiomeName("Dead Land");
+        dead_land = (new BiomeDeadLand(55, 0)).setColor(6316124).setBiomeName("Dead Land").setHeight(height_BigHills);;
         BiomeManager.addSpawnBiome(dead_land);
         dark_roofed_forest = (new BiomeDarkForest(56, 1)).setColor(4215066).setBiomeName("Dark Roofed Forest");
         BiomeManager.addSpawnBiome(dark_roofed_forest);
@@ -45,6 +48,8 @@ public class TDEBiomes {
         BiomeManager.addSpawnBiome(ancient_land);
         misty_mountains = (new BiomeDarkHills(60, 1)).setColor(999999).setBiomeName("Misty Mountains").setHeight(height_BigHills);
         BiomeManager.addSpawnBiome(misty_mountains);
+        big_crater = (new BiomeDarkHills(61, 1)).setColor(999899).setBiomeName("Big_Crater").setHeight(height_Crater);
+        BiomeManager.addSpawnBiome(big_crater);
 	}
 
 }
