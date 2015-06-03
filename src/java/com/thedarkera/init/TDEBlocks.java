@@ -135,30 +135,6 @@ public class TDEBlocks {
 	public static Block dragon_bone;
 
 	public static void init() {
-		// Special Blocks //
-		dark_stone_ladder = new BlockDarkStoneLadder();
-		reg(dark_stone_ladder);
-		dark_stone_stairs = new BlockDarkStoneStairs(dark_cobblestone, 0);
-		reg(dark_stone_stairs);
-		dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
-		reg(dark_stone_fence);
-		dark_stone_slab = new BlockDarkStoneSlab(false, Material.rock);
-		reg(dark_stone_slab);
-		rotten_wood_fence = new BlockRottenWoodFence(TheDarkEra.MODID + ":rotting_wood");
-		reg(rotten_wood_fence);
-		rotten_wood_stairs = new BlockRottenWoodStairs(rotten_wood, 0);
-		reg(rotten_wood_stairs);
-		rotten_wood_slab = new BlockRottenWoodSlab(false, Material.wood);
-		reg(rotten_wood_slab);
-		cracked_glass_pane = new BlockCrackedGlassPane(TheDarkEra.MODID + ":cracked_glass", "cracked_glass", Material.glass, false);
-		reg(cracked_glass_pane);
-		cracked_glass = new BlockCrackedGlass(Material.glass, false);
-		reg(cracked_glass);
-		lamp = new BlockLamp();
-		reg(lamp);
-		dark_fire = new BlockDarkFire();
-		reg(dark_fire);
-		
 		
 		// Blocks //
 		dragon_bone_ore = new BlockDragonBoneOre(Material.rock, 1f, 5f, "dragon_bone_ore", "pickaxe", 1);
@@ -169,7 +145,7 @@ public class TDEBlocks {
 		reg(ebony_ore);
 		orichalcum_ore = new BlockOrichalcumOre(Material.rock, 2f, 5f, "orichalcum_ore", "pickaxe", 3);
 		reg(orichalcum_ore);
-		dark_stone = new BlockDarkStone(Material.rock, 1f, 10f, "orichalcum_ore", "pickaxe", 3);
+		dark_stone = new BlockDarkStone(Material.rock, 1f, 10f, "dark_stone", "pickaxe", 0);
 		reg(dark_stone);
 		dark_cobblestone = new BlockDarkCobblestone(Material.rock, 2f, 10f, "dark_cobblestone", "pickaxe", 0);
 		reg(dark_cobblestone);
@@ -251,8 +227,34 @@ public class TDEBlocks {
 		// Misc //
 		dragon_bone = new BlockDragonBone();
 		reg(dragon_bone);
-
-		BlockDarkFire.func_149843_e();
+		
+	
+		// Special Blocks //
+				dark_stone_ladder = new BlockDarkStoneLadder();
+				reg(dark_stone_ladder);
+				dark_stone_stairs = new BlockDarkStoneStairs(dark_cobblestone, 0);
+				reg(dark_stone_stairs);
+				dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
+				reg(dark_stone_fence);
+				dark_stone_slab = new BlockDarkStoneSlab(false, Material.rock);
+				reg(dark_stone_slab);
+				rotten_wood_fence = new BlockRottenWoodFence(TheDarkEra.MODID + ":rotting_wood");
+				reg(rotten_wood_fence);
+				rotten_wood_stairs = new BlockRottenWoodStairs(rotten_wood, 0);
+				reg(rotten_wood_stairs);
+				rotten_wood_slab = new BlockRottenWoodSlab(false, Material.wood);
+				reg(rotten_wood_slab);
+				cracked_glass_pane = new BlockCrackedGlassPane(TheDarkEra.MODID + ":cracked_glass", "cracked_glass", Material.glass, false);
+				reg(cracked_glass_pane);
+				cracked_glass = new BlockCrackedGlass(Material.glass, false);
+				reg(cracked_glass);
+				lamp = new BlockLamp();
+				reg(lamp);
+				dark_fire = new BlockDarkFire();
+				reg(dark_fire);
+				BlockDarkFire.func_149843_e();
+				
+				
 	}
 
 	public static void reg(Block block) {

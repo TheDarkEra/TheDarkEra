@@ -1,4 +1,4 @@
-package com.thedarkera.ingameobjects.block;
+package com.thedarkera.ingameobjects;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

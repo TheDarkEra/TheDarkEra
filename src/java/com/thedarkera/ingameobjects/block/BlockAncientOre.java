@@ -9,6 +9,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.ingameobjects.ModBlock;
 import com.thedarkera.init.TDETools;
 
 public class BlockAncientOre extends ModBlock {

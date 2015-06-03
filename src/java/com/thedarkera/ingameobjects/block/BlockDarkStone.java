@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
+import com.thedarkera.ingameobjects.ModBlock;
 import com.thedarkera.init.TDEBlocks;
 
 public class BlockDarkStone extends ModBlock {

@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 
+import com.thedarkera.ingameobjects.ModBlock;
 import com.thedarkera.init.TDEBlocks;
 
 public class BlockDarkOre extends ModBlock { //BlockOre

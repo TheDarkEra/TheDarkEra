@@ -1,6 +1,7 @@
 package com.thedarkera.ingameobjects.block;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.ingameobjects.ModBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

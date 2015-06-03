@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.ingameobjects.ModBlock;
 import com.thedarkera.init.TDEItems;
 
 public class BlockDragonBoneOre extends ModBlock {
