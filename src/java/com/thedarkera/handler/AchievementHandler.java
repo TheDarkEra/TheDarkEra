@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class AchievementHandler {
 
-    public static Map<String, Achievement> achievements = new HashMap<>(); //
+    public static Map<String, Achievement> achievements = new HashMap<>();
     public static List<String> achievementNames = new ArrayList<>();
 
     public static void add(Achievement achievement){

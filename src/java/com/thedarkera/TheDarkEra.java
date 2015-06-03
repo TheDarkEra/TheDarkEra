@@ -39,7 +39,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class TheDarkEra {
 	public static final String NAME = "The Dark Era";
 	public static final String MODID = "TheDarkEra";
-	public static final String VERSION = "1.7.10-A1.0"; // Alpha 1.0; feel free to change
+	public static final String VERSION = "1.7.10-A1.0";
 	public static int MODVERSION = 1;
 
 	public static int dimension = -10;
@@ -83,7 +83,7 @@ public class TheDarkEra {
 		if (FMLCommonHandler.instance().getEffectiveSide().isClient())
 			MinecraftForge.EVENT_BUS.register(new GuiManaBar(Minecraft.getMinecraft()));
 		
-		 Potion[] potionTypes = null;
+		 Potion[] potionTypes;
 
 	        for (Field f : Potion.class.getDeclaredFields())
 	        {
@@ -159,13 +159,3 @@ public class TheDarkEra {
 	}
 
 }
-
-/*
- * TODO: Dimension/Biome Stuff Textures: dead_grass, dead_grass_top,
- * weedy_grass, weedy_grass_top, dark_dirt, dark_grass, dark_grass_top,
- * dark_grass_side. Add new leaves (dead_leaves). Make tree using rotten wood
- * log and dead leaves (Called dark_tree). Make a forest using dark trees in the
- * Dark Forest Biome. Add recipes for the wood etc. Make dark dirt turn to dark
- * grass after a while. Make dark grass drop dark dirt. Rename dark forrest to
- * dark forest.
- */

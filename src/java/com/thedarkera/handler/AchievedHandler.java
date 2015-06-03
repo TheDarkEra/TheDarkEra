@@ -1,6 +1,5 @@
 package com.thedarkera.handler;
 
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 
 import com.thedarkera.init.TDEAchievements;

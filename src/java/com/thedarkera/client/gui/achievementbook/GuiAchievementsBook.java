@@ -26,7 +26,6 @@ public class GuiAchievementsBook extends GuiScreen {
     private int maxPages;
     private PageButton bButton;
     private PageButton nButton;
-    //private GuiAchievement test;
     private List<GuiAchievement> achievementList = new ArrayList<>();
 
     @Override
@@ -34,13 +33,11 @@ public class GuiAchievementsBook extends GuiScreen {
         currentPage = 0;
         oldPage = 0;
         maxPages = achievements.getPagesNeeded()-2;
-        //maxPages = 6;
         x = (width - guiWidth) / 2;
         y = (height - guiHeight) / 2;
 
         bButton = new PageButton(1, x + 20, y + guiHeight - 20, false);
         nButton = new PageButton(2, x + guiWidth - 36, y + guiHeight - 20, true);
-        //test = new GuiAchievement(3, x + 15, y + 20, "Master GUI's", true);
         this.buttonList.add(bButton);
         this.buttonList.add(nButton);
         for(int i = 0; i < AchievementHandler.getAmount(); i++){
@@ -93,7 +90,6 @@ public class GuiAchievementsBook extends GuiScreen {
 
             if (button.id == 1 && currentPage != 0) currentPage -= 2;
             if (button.id == 2 && currentPage != maxPages) currentPage += 2;
-            //if(button.id == 2) achievements.setAchieved(TDEAchievements.test);
 
             updateContent(button);
         }
@@ -113,7 +109,7 @@ public class GuiAchievementsBook extends GuiScreen {
         if (currentPage < 0)
             currentPage = 0;
 
-        //everything under here may or may not work correctly!
+        //everything under here *should* work correctly!
         int j = (int)Math.floor(achievementList.size() / 16D);
         if(currentPage != oldPage){
             for(int i = 0; i < (maxPages*16); i++) {
