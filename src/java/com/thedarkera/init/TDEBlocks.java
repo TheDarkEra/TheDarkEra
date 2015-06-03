@@ -1,7 +1,6 @@
 package com.thedarkera.init;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
@@ -40,7 +39,6 @@ import com.thedarkera.ingameobjects.block.BlockRottenWoodFence;
 import com.thedarkera.ingameobjects.block.BlockRottenWoodSlab;
 import com.thedarkera.ingameobjects.block.BlockRottenWoodStairs;
 import com.thedarkera.ingameobjects.block.BlockSaplings;
-import com.thedarkera.ingameobjects.block.BlockSmasher;
 import com.thedarkera.ingameobjects.block.BlockSmeltery;
 import com.thedarkera.ingameobjects.block.BlockWeedyDirt;
 import com.thedarkera.ingameobjects.block.leaves.BlockLeaf;
@@ -55,8 +53,6 @@ import com.thedarkera.ingameobjects.item.ItemLogBlocks3;
 import com.thedarkera.ingameobjects.item.ItemLogBlocks4;
 import com.thedarkera.ingameobjects.item.ItemSaplingBlocks;
 import com.thedarkera.utils.RegUtils;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDEBlocks {
 	// This adds all the trees. DO NOT CHANGE THE NAMES!
@@ -208,19 +204,19 @@ public class TDEBlocks {
 		reg(dark_sandstone_bricks);
 
 		blockLog1 = new BlockLogs1().setBlockName("log1").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(blockLog1, ItemLogBlocks1.class, blockLog1.getUnlocalizedName().substring(5));
+		reg(blockLog1, ItemLogBlocks1.class);
 		blockLog2 = new BlockLogs2().setBlockName("log2").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(blockLog2, ItemLogBlocks2.class, blockLog2.getUnlocalizedName().substring(5));
+		reg(blockLog2, ItemLogBlocks2.class);
 		blockLog3 = new BlockLogs3().setBlockName("log3").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(blockLog3, ItemLogBlocks3.class, blockLog3.getUnlocalizedName().substring(5));
+		reg(blockLog3, ItemLogBlocks3.class);
 		blockLog4 = new BlockLogs3().setBlockName("log4").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(blockLog4, ItemLogBlocks4.class, blockLog4.getUnlocalizedName().substring(5));
+		reg(blockLog4, ItemLogBlocks4.class);
 
 		block_leaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(block_leaves, ItemLeafBlocks.class, block_leaves.getUnlocalizedName().substring(5));
+		reg(block_leaves, ItemLeafBlocks.class);
 
 		saplings = new BlockSaplings().setBlockName("sapling").setCreativeTab(TheDarkEra.tabTDE);
-		GameRegistry.registerBlock(saplings, ItemSaplingBlocks.class, saplings.getUnlocalizedName().substring(5));
+		reg(saplings, ItemSaplingBlocks.class);
 
 		// Placeable items//
 		example = new FlatBlockExample();
