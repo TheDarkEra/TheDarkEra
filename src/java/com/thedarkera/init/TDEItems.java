@@ -2,6 +2,7 @@ package com.thedarkera.init;
 
 import net.minecraft.item.Item;
 
+import com.thedarkera.api.items.TabLogo;
 import com.thedarkera.api.items.ModDye;
 import com.thedarkera.ingameobjects.item.ItemAchievementBook;
 import com.thedarkera.ingameobjects.item.ItemAncientIngot;
@@ -30,6 +31,9 @@ import com.thedarkera.placeableitem.ItemPlaceAbleExample;
 import com.thedarkera.utils.RegUtils;
 
 public class TDEItems {
+	public static Item tab_logo_0;
+	public static Item tab_logo_1;
+	
 	// Misc items//
 	public static Item death_lord_skull;
 	public static Item dark_flint;
@@ -73,6 +77,12 @@ public class TDEItems {
 	// Plant items//
 
 	public static void init() {
+		tab_logo_0 = new TabLogo("tab_logo_0");
+		reg(tab_logo_0);
+		tab_logo_1 = new TabLogo("tab_logo_1");
+		reg(tab_logo_1);
+		
+		
 		// Misc items init//
 		dark_flint = new ItemDarkFlint("dark_flint");
 		reg(dark_flint);
