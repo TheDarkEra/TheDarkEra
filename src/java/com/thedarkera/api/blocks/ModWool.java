@@ -24,6 +24,7 @@ public class ModWool extends ModBlock{
  * Make Id's the same as the clay Id's and Dye Id's to make it easier!!
  * 
  * Id's
- * 1 - Red
- * 2 - Blue
+ * 0 - Red
+ * 1 - Blue
+ * 2 - Green
  */
