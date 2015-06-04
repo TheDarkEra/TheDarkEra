@@ -1,5 +1,18 @@
 itemGroup.the_dark_era=The Dark Era
 
+//Meta items and blocks//
+//dyes//
+item.dark_dye_0.name=Dark Red Dye
+item.dark_dye_1.name=Dark Blue Dye
+
+//wool//
+tile.dark_wool_0.name=Dark Red Wool
+tile.dark_wool_1.name=Dark Blue Wool
+
+//clay//
+tile.dark_clay_0.name=Dark Red Clay
+tile.dark_clay_1.name=Dark Blue Clay
+
 //Item Misc//
 item.death_lord_skull.name=Death Lord's Skull
 item.dark_flint.name=Dark Flint

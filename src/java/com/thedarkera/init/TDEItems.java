@@ -50,9 +50,8 @@ public class TDEItems {
 	public static Item shout;
 	public static Item bone_and_steel;
 
-	// Dye's //
-	public static Item dark_dye_1;
-	public static Item dark_dye_2;
+	// Meta's //
+	public static Item dark_dye;
 	
 	// Ingot items//
 	public static Item steel_ingot;
@@ -111,10 +110,8 @@ public class TDEItems {
 		reg(bone_and_steel);
 
 		// Dye's //
-		dark_dye_1 = new ModDye("dark_dye", "red", 1);
-		reg(dark_dye_1);
-		dark_dye_2 = new ModDye("dark_dye", "blue", 2);
-		reg(dark_dye_2);
+		dark_dye = new ModDye("dark_dye");
+		reg(dark_dye);
 		
 		// Ingot items init//
 		steel_ingot = new ItemSteelIngot("steel_ingot");
