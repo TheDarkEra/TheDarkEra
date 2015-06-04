@@ -3,11 +3,10 @@ package com.thedarkera.api;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-import com.thedarkera.TheDarkEra;
 import com.thedarkera.init.TDEArmors;
 import com.thedarkera.init.TDEBlocks;
 
-public class TDE extends TheDarkEra {
+public class TDE {
 	
 	public static CreativeTabs tabTDEBlocks = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era_blocks") {
 		@Override
