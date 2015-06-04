@@ -7,12 +7,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.ingameobjects.item.bossdrops.ItemBossSword;
+import com.thedarkera.api.items.ModBossSword;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemDeathSword extends ItemBossSword {
+public class ItemDeathSword extends ModBossSword {
 	
 	public ItemDeathSword(ToolMaterial material, String name) {
 		super(material);

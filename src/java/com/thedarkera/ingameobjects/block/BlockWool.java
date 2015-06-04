@@ -1,15 +1,17 @@
-package com.thedarkera.api.blocks;
+package com.thedarkera.ingameobjects.block;
 
 import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.blocks.ModBlock;
 
-public class ModWool extends ModBlock{
+public class BlockWool extends ModBlock{
 
-	public ModWool(Material material, Float hardness, Float resistance, String name, String tool, int lvl, SoundType sound, String color, int id) {
+	public BlockWool(Material material, Float hardness, Float resistance, String name, String tool, int lvl, SoundType sound) {
 		super(material, hardness, resistance, name, tool, lvl, sound);
-		String BlockId = name + "." + id;
-		String resource = TheDarkEra.MODID + ":" + name + "_" + color;
+		String BlockId = name;
+		String i = "will be the meta eventually";
+		String resource = TheDarkEra.MODID + ":" + name + "_" + i;
 		
 		setBlockName(BlockId); // Blocks are called name.id but use name_id in recipes etc
 		setBlockTextureName(resource); // Texture are name_color

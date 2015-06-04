@@ -6,9 +6,8 @@ import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
-import com.thedarkera.api.blocks.ModClay;
-import com.thedarkera.api.blocks.ModWool;
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
+import com.thedarkera.ingameobjects.block.BlockClay;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlassPane;
 import com.thedarkera.ingameobjects.block.BlockDarkBirchPlanks;
@@ -41,6 +40,7 @@ import com.thedarkera.ingameobjects.block.BlockRottenWoodStairs;
 import com.thedarkera.ingameobjects.block.BlockSaplings;
 import com.thedarkera.ingameobjects.block.BlockSmeltery;
 import com.thedarkera.ingameobjects.block.BlockWeedyDirt;
+import com.thedarkera.ingameobjects.block.BlockWool;
 import com.thedarkera.ingameobjects.block.heads.HeadDeathLord;
 import com.thedarkera.ingameobjects.block.leaves.BlockLeaf;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs1;
@@ -84,9 +84,9 @@ public class TDEBlocks {
 	public static Block smasher;
 
 	// Wool/Clay
-	public static Block dark_wool_1;
+	public static Block dark_wool;
 	public static Block dark_wool_2;
-	public static Block dark_clay_1;
+	public static Block dark_clay;
 	public static Block dark_clay_2;
 
 	// plants//
@@ -174,18 +174,13 @@ public class TDEBlocks {
 		smeltery = new BlockSmeltery();
 		reg(smeltery);
 
-		// Wool/Clay
-		dark_wool_1 = new ModWool(Material.cloth, 1f, 1f, "dark_wool", "shovel", 1, Block.soundTypeCloth, "red", 1);
-		reg(dark_wool_1);
-		dark_wool_2 = new ModWool(Material.cloth, 1f, 1f, "dark_wool", "shovel", 1, Block.soundTypeCloth, "blue", 2);
-		reg(dark_wool_2);
-		dark_clay_1 = new ModClay(Material.clay, 1f, 1f, "dark_clay", "shovel", 1, Block.soundTypeGravel, "red", 1);
-		reg(dark_clay_1);
-		dark_clay_2 = new ModClay(Material.clay, 1f, 1f, "dark_clay", "shovel", 1, Block.soundTypeGravel, "blue", 2);
-		reg(dark_clay_2);
-
 		// Meta Blocks//
-
+	   // Wool/Clay  //
+		dark_wool = new BlockWool(Material.cloth, 0.9f, 1.7f, "dark_wool", "shovel", 1, Block.soundTypeCloth);
+		reg(dark_wool);
+		dark_clay = new BlockClay(Material.clay, 0.7f, 1.5f, "dark_clay", "shovel", 1, Block.soundTypeGravel);
+		reg(dark_clay);
+		
 		// Plants//
 		grape_plant = new BlockGrapePlant();
 		reg(grape_plant);

@@ -1,4 +1,4 @@
-package com.thedarkera.ingameobjects.item.bossdrops;
+package com.thedarkera.api.items;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -15,12 +15,12 @@ import com.thedarkera.api.TDE;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemBossSword extends Item {
+public class ModBossSword extends Item {
 	private float field_150934_a;
 	private final Item.ToolMaterial field_150933_b;
 	private static final String __OBFID = "CL_00000072";
 
-	public ItemBossSword(ToolMaterial material) {
+	public ModBossSword(ToolMaterial material) {
 		setCreativeTab(TDE.tabTDEItems);
 
 		field_150933_b = material;
