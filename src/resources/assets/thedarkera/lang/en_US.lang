@@ -1,4 +1,5 @@
-itemGroup.the_dark_era=The Dark Era
+itemGroup.the_dark_era_items=The Dark Era Items
+itemGroup.the_dark_era_blocks=The Dark Era Blocks
 
 //Meta items and blocks//
 //dyes//
@@ -35,6 +36,7 @@ item.frost_rune.name=Frost Rune
 item.lightning_rune.name=Lightning Rune
 item.achievement_book.name=Achievement Book
 item.null.name=null
+item.bone_and_steel.name=Bone and Steel
 
 //Item Ingot//
 item.ebony_ingot.name=Ebony Ingot
@@ -81,13 +83,13 @@ item.dark_stone_shovel.name=Dark Shovel
 item.ancient_hoe.name=Ancient Hoe
 item.steel_hoe.name=Steel Hoe
 item.dark_stone_hoe.name=Dark Hoe
-item.ancient_weeder.name=Ancient Weeder
-item.dark_stone_weeder.name=Dark Stone Weeder
-item.diamond_weeder.name=Diamond Weeder
-item.iron_weeder.name=Iron Weeder
-item.stone_weeder.name=Stone Weeder
-item.wooden_weeder.name=Wooden Weeder
-item.steel_weeder.name=Steel Weeder
+item.ancient_wand.name=Ancient Wand
+item.dark_stone_wand.name=Dark Stone Wand
+item.diamond_wand.name=Diamond Wand
+item.iron_wand.name=Iron Wand
+item.stone_wand.name=Stone Wand
+item.wooden_wand.name=Wooden Wand
+item.steel_wand.name=Steel Wand
 
 
 //Item Food//
@@ -167,6 +169,9 @@ tile.log.Dead.name=Dead log
 tile.lamp.name=Lamp
 tile.cracked_glass_pane.name=Cracked Glass Pane
 tile.cracked_glass.name=Cracked Glass
+tile.dark_sand.name=Dark Sand
+tile.dark_sandstone.name=Dark Sandstone
+tile.dark_sandstone_bricks.name=Dark Sandstone Bricks
 
 //Ore Blocks//
 tile.dark_coal_ore.name=Dark Coal Ore
