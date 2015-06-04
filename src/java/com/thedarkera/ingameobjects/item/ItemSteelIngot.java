@@ -1,15 +1,10 @@
 package com.thedarkera.ingameobjects.item;
 
-import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.items.ModItem;
 
-import net.minecraft.item.Item;
+public class ItemSteelIngot extends ModItem {
 
-public class ItemSteelIngot extends Item {
-	String name = "steel_ingot";
-
-	public ItemSteelIngot() {
-		setUnlocalizedName("steel_ingot");
-		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+	public ItemSteelIngot(String name) {
+		super(name);
 	}
 }

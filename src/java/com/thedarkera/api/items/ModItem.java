@@ -1,4 +1,4 @@
-package com.thedarkera.ingameobjects;
+package com.thedarkera.api.items;
 
 import com.thedarkera.TheDarkEra;
 
@@ -13,6 +13,7 @@ public class ModItem extends Item{
 		setCreativeTab(TheDarkEra.tabTDE);
 		setUnlocalizedName(item);
 		setTextureName(resource);
+		this.setCreativeTab(TheDarkEra.tabTDE);
 	}
 
 }

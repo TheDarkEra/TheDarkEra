@@ -1,15 +1,10 @@
 package com.thedarkera.ingameobjects.item;
 
-import net.minecraft.item.Item;
+import com.thedarkera.api.items.ModItem;
 
-import com.thedarkera.TheDarkEra;
+public class ItemDragonScale extends ModItem {
 
-public class ItemDragonScale extends Item {
-	String name = "dragon_scale";
-
-	public ItemDragonScale() {
-		setUnlocalizedName("dragon_scale");
-		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+	public ItemDragonScale(String name) {
+		super(name);
 	}
 }

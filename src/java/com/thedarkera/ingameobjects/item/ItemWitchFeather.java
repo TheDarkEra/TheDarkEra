@@ -1,15 +1,10 @@
 package com.thedarkera.ingameobjects.item;
 
-import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.items.ModItem;
 
-import net.minecraft.item.Item;
+public class ItemWitchFeather extends ModItem {
 
-public class ItemWitchFeather extends Item {
-	String name = "ash_hopper_jelly";
-
-	public ItemWitchFeather() {
-		setUnlocalizedName(name);
-		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+	public ItemWitchFeather(String name) {
+		super(name);
 	}
 }

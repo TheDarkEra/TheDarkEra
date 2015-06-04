@@ -1,15 +1,10 @@
 package com.thedarkera.ingameobjects.item;
 
-import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.items.ModItem;
 
-import net.minecraft.item.Item;
+public class ItemFrostRune extends ModItem {
 
-public class ItemFrostRune extends Item {
-	String name = "frost_rune";
-
-	public ItemFrostRune() {
-		setUnlocalizedName("frost_rune");
-		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+	public ItemFrostRune(String name) {
+		super(name);
 	}
 }

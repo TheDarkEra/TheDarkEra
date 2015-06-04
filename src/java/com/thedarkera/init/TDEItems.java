@@ -2,6 +2,7 @@ package com.thedarkera.init;
 
 import net.minecraft.item.Item;
 
+import com.thedarkera.api.items.ModDye;
 import com.thedarkera.ingameobjects.item.ItemAchievementBook;
 import com.thedarkera.ingameobjects.item.ItemAncientIngot;
 import com.thedarkera.ingameobjects.item.ItemAshHopperJelly;
@@ -21,7 +22,6 @@ import com.thedarkera.ingameobjects.item.ItemRottenWoodStick;
 import com.thedarkera.ingameobjects.item.ItemSoulGem;
 import com.thedarkera.ingameobjects.item.ItemSteelIngot;
 import com.thedarkera.ingameobjects.item.ItemWitchFeather;
-import com.thedarkera.ingameobjects.item.bossdrops.deathlord.ItemDeathLordSkull;
 import com.thedarkera.ingameobjects.item.food.ItemAshHopperMeat;
 import com.thedarkera.ingameobjects.item.food.ItemGrape;
 import com.thedarkera.ingameobjects.item.tool.ItemBoneAndSteel;
@@ -50,6 +50,10 @@ public class TDEItems {
 	public static Item shout;
 	public static Item bone_and_steel;
 
+	// Dye's //
+	public static Item dark_dye_1;
+	public static Item dark_dye_2;
+	
 	// Ingot items//
 	public static Item steel_ingot;
 	public static Item ebony_ingot;
@@ -65,56 +69,61 @@ public class TDEItems {
 	// Placeable items//
 	public static Item example;
 	public static Item dragon_bone;
+	
 
 	// Plant items//
 
 	public static void init() {
 		// Misc items init//
-		death_lord_skull = new ItemDeathLordSkull("death_lord_skull");
-		reg(death_lord_skull);
-		dark_flint = new ItemDarkFlint();
+		dark_flint = new ItemDarkFlint("dark_flint");
 		reg(dark_flint);
-		witch_feather = new ItemWitchFeather();
+		witch_feather = new ItemWitchFeather("witch_feather");
 		reg(witch_feather);
 		ash_hopper_meat = new ItemAshHopperMeat(3, 0.3F, true, "ash_hopper_meat");
 		reg(ash_hopper_meat);
-		ash_hopper_jelly = new ItemAshHopperJelly();
+		ash_hopper_jelly = new ItemAshHopperJelly("ash_hopper_jelly");
 		reg(ash_hopper_jelly);
-		ash_hopper_leg = new ItemAshHopperLeg();
+		ash_hopper_leg = new ItemAshHopperLeg("ash_hopper_leg");
 		reg(ash_hopper_leg);
-		rotten_wood_stick = new ItemRottenWoodStick();
+		rotten_wood_stick = new ItemRottenWoodStick("rotten_wood_stick");
 		reg(rotten_wood_stick);
-		dark_stone_rod = new ItemDarkStoneRod();
+		dark_stone_rod = new ItemDarkStoneRod("dark_stone_rod");
 		reg(dark_stone_rod);
 		soul_gem = new ItemSoulGem();
 		reg(soul_gem);
-		leather_strip = new ItemLeatherStrip();
+		leather_strip = new ItemLeatherStrip("leather_strip");
 		reg(leather_strip);
-		daedra_heart = new ItemDaedraHeart();
+		daedra_heart = new ItemDaedraHeart("daedra_heart");
 		reg(daedra_heart);
-		dragon_scale = new ItemDragonScale();
+		dragon_scale = new ItemDragonScale("dragon_scale");
 		reg(dragon_scale);
-		fire_rune = new ItemFireRune();
+		fire_rune = new ItemFireRune("fire_rune");
 		reg(fire_rune);
-		frost_rune = new ItemFrostRune();
+		frost_rune = new ItemFrostRune("frost_rune");
 		reg(frost_rune);
-		lightning_rune = new ItemLightningRune();
+		lightning_rune = new ItemLightningRune("lightning_rune");
 		reg(lightning_rune);
-		achievement_book = new ItemAchievementBook();
+		achievement_book = new ItemAchievementBook("achievement_book");
 		reg(achievement_book);
 		shout = new ItemShout();
 		reg(shout);
-		bone_and_steel = new ItemBoneAndSteel();
+		bone_and_steel = new ItemBoneAndSteel("bone_and_steel");
 		reg(bone_and_steel);
 
+		// Dye's //
+		dark_dye_1 = new ModDye("dark_dye", "red", 1);
+		reg(dark_dye_1);
+		dark_dye_2 = new ModDye("dark_dye", "blue", 2);
+		reg(dark_dye_2);
+		
 		// Ingot items init//
-		steel_ingot = new ItemSteelIngot();
+		steel_ingot = new ItemSteelIngot("steel_ingot");
 		reg(steel_ingot);
-		ebony_ingot = new ItemEbonyIngot();
+		ebony_ingot = new ItemEbonyIngot("ebony_ingot");
 		reg(ebony_ingot);
-		orichalcum_ingot = new ItemOrichalcumIngot();
+		orichalcum_ingot = new ItemOrichalcumIngot("orichalcum_ingot");
 		reg(orichalcum_ingot);
-		ancient_ingot = new ItemAncientIngot();
+		ancient_ingot = new ItemAncientIngot("ancient_ingot");
 		reg(ancient_ingot);
 
 		// Food items init//

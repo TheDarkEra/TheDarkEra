@@ -1,17 +1,11 @@
 package com.thedarkera.ingameobjects.item;
 
-import net.minecraft.item.Item;
+import com.thedarkera.api.items.ModItem;
 
-import com.thedarkera.TheDarkEra;
-
-public class ItemDarkFlint extends Item{
+public class ItemDarkFlint extends ModItem{
 	
-	private String name = "dark_flint";
-	
-	public ItemDarkFlint(){
-		setUnlocalizedName(name);
-		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+	public ItemDarkFlint(String name){
+		super(name);
 	}
 	
 }

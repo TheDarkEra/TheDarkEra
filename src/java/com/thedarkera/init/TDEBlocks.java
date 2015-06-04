@@ -5,11 +5,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.blocks.ModClay;
+import com.thedarkera.api.blocks.ModWool;
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlassPane;
 import com.thedarkera.ingameobjects.block.BlockDarkBirchPlanks;
-import com.thedarkera.ingameobjects.block.BlockDarkClay;
 import com.thedarkera.ingameobjects.block.BlockDarkCobblestone;
 import com.thedarkera.ingameobjects.block.BlockDarkDirt;
 import com.thedarkera.ingameobjects.block.BlockDarkFire;
@@ -25,9 +26,7 @@ import com.thedarkera.ingameobjects.block.BlockDarkStoneFence;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneLadder;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneSlab;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneStairs;
-import com.thedarkera.ingameobjects.block.BlockDarkWool;
 import com.thedarkera.ingameobjects.block.BlockDeadGrass;
-import com.thedarkera.ingameobjects.block.BlockDragonBone;
 import com.thedarkera.ingameobjects.block.BlockDragonBoneOre;
 import com.thedarkera.ingameobjects.block.BlockEbonyOre;
 import com.thedarkera.ingameobjects.block.BlockGrapePlant;
@@ -41,6 +40,7 @@ import com.thedarkera.ingameobjects.block.BlockRottenWoodStairs;
 import com.thedarkera.ingameobjects.block.BlockSaplings;
 import com.thedarkera.ingameobjects.block.BlockSmeltery;
 import com.thedarkera.ingameobjects.block.BlockWeedyDirt;
+import com.thedarkera.ingameobjects.block.heads.HeadDeathLord;
 import com.thedarkera.ingameobjects.block.leaves.BlockLeaf;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs1;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs2;
@@ -62,8 +62,7 @@ public class TDEBlocks {
 	public static String[] treeTypes3 = new String[] { "Black_Willow", "Mangroves" };
 	public static String[] treeTypes4 = new String[] { "Black_Willow", "Mangroves" };
 	public static String[] allTreeTypes = new String[] { "Dead", "Dark_Jungle", "Dark_Birch", "Royal_Oak", "Dark_Oak", "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves" };
-	
-	
+
 	// Blocks//
 	public static Block ebony_ore;
 	public static Block orichalcum_ore;
@@ -84,8 +83,10 @@ public class TDEBlocks {
 	public static Block smasher;
 
 	// Wool/Clay
-	public static Block dark_red_wool;
-	public static Block dark_red_clay;
+	public static Block dark_wool_1;
+	public static Block dark_wool_2;
+	public static Block dark_clay_1;
+	public static Block dark_clay_2;
 
 	// plants//
 	public static Block grape_plant;
@@ -131,8 +132,11 @@ public class TDEBlocks {
 	public static Block example;
 	public static Block dragon_bone;
 
+	// Boss Heads //
+	public static Block death_lord_head;
+
 	public static void init() {
-		
+
 		// Blocks //
 		dragon_bone_ore = new BlockDragonBoneOre(Material.rock, 1f, 5f, "dragon_bone_ore", "pickaxe", 1, Block.soundTypeStone);
 		reg(dragon_bone_ore);
@@ -170,10 +174,14 @@ public class TDEBlocks {
 		reg(smeltery);
 
 		// Wool/Clay
-		dark_red_wool = new BlockDarkWool(Material.cloth, "red");
-		reg(dark_red_wool);
-		dark_red_clay = new BlockDarkClay(Material.clay, "red");
-		reg(dark_red_clay);
+		dark_wool_1 = new ModWool(Material.cloth, 1f, 1f, "dark_wool", "shovel", 1, Block.soundTypeCloth, "red", 1);
+		reg(dark_wool_1);
+		dark_wool_2 = new ModWool(Material.cloth, 1f, 1f, "dark_wool", "shovel", 1, Block.soundTypeCloth, "blue", 2);
+		reg(dark_wool_2);
+		dark_clay_1 = new ModClay(Material.clay, 1f, 1f, "dark_clay", "shovel", 1, Block.soundTypeGravel, "red", 1);
+		reg(dark_clay_1);
+		dark_clay_2 = new ModClay(Material.clay, 1f, 1f, "dark_clay", "shovel", 1, Block.soundTypeGravel, "blue", 2);
+		reg(dark_clay_2);
 
 		// Meta Blocks//
 
@@ -220,36 +228,38 @@ public class TDEBlocks {
 
 		// Placeable items//
 		example = new FlatBlockExample();
-		dragon_bone = new BlockDragonBone(Material.cloth, 1f, 1f, "dragon_bone", "pickaxe", 0, Block.soundTypeStone);
-		reg(dragon_bone);
-		
-	
+		//dragon_bone = new BlockDragonBone(Material.cloth, 1f, 1f, "dragon_bone", "pickaxe", 0, Block.soundTypeStone);
+		//reg(dragon_bone);
+
 		// Special Blocks //
-				dark_stone_ladder = new BlockDarkStoneLadder();
-				reg(dark_stone_ladder);
-				dark_stone_stairs = new BlockDarkStoneStairs(dark_cobblestone, 0);
-				reg(dark_stone_stairs);
-				dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
-				reg(dark_stone_fence);
-				dark_stone_slab = new BlockDarkStoneSlab(false, Material.rock);
-				reg(dark_stone_slab);
-				rotten_wood_fence = new BlockRottenWoodFence(TheDarkEra.MODID + ":rotting_wood");
-				reg(rotten_wood_fence);
-				rotten_wood_stairs = new BlockRottenWoodStairs(rotten_wood, 0);
-				reg(rotten_wood_stairs);
-				rotten_wood_slab = new BlockRottenWoodSlab(false, Material.wood);
-				reg(rotten_wood_slab);
-				cracked_glass_pane = new BlockCrackedGlassPane(TheDarkEra.MODID + ":cracked_glass", "cracked_glass", Material.glass, false);
-				reg(cracked_glass_pane);
-				cracked_glass = new BlockCrackedGlass(Material.glass, false);
-				reg(cracked_glass);
-				lamp = new BlockLamp();
-				reg(lamp);
-				dark_fire = new BlockDarkFire();
-				reg(dark_fire);
-				BlockDarkFire.func_149843_e();
-				
-				
+		dark_stone_ladder = new BlockDarkStoneLadder();
+		reg(dark_stone_ladder);
+		dark_stone_stairs = new BlockDarkStoneStairs(dark_cobblestone, 0);
+		reg(dark_stone_stairs);
+		dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
+		reg(dark_stone_fence);
+		dark_stone_slab = new BlockDarkStoneSlab(false, Material.rock);
+		reg(dark_stone_slab);
+		rotten_wood_fence = new BlockRottenWoodFence(TheDarkEra.MODID + ":rotting_wood");
+		reg(rotten_wood_fence);
+		rotten_wood_stairs = new BlockRottenWoodStairs(rotten_wood, 0);
+		reg(rotten_wood_stairs);
+		rotten_wood_slab = new BlockRottenWoodSlab(false, Material.wood);
+		reg(rotten_wood_slab);
+		cracked_glass_pane = new BlockCrackedGlassPane(TheDarkEra.MODID + ":cracked_glass", "cracked_glass", Material.glass, false);
+		reg(cracked_glass_pane);
+		cracked_glass = new BlockCrackedGlass(Material.glass, false);
+		reg(cracked_glass);
+		lamp = new BlockLamp();
+		reg(lamp);
+		dark_fire = new BlockDarkFire();
+		reg(dark_fire);
+		BlockDarkFire.func_149843_e();
+
+		// Boss Heads //
+		death_lord_head = new HeadDeathLord(Material.cloth, 0.1f, 0.1f, "death_lord_head", "axe", 0, Block.soundTypeCloth);
+		reg(death_lord_head);
+
 	}
 
 	public static void reg(Block block) {

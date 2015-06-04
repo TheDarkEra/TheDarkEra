@@ -1,26 +1,17 @@
 package com.thedarkera.ingameobjects.item;
 
-import com.thedarkera.client.gui.achievementbook.GuiAchievementsBook;
-import cpw.mods.fml.client.FMLClientHandler;
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.relauncher.Side;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.TheDarkEra.GuiID;
-import net.minecraft.world.World;
+import com.thedarkera.api.items.ModItem;
 
-public class ItemAchievementBook extends Item {
+public class ItemAchievementBook extends ModItem {
 
-	private String name = "achievement_book";
-
-	public ItemAchievementBook() {
-		super();
-		setUnlocalizedName(name);
-		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+	public ItemAchievementBook(String name) {
+		super(name);
 		setFull3D();
 		setMaxStackSize(1);
 	}

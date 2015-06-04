@@ -1,15 +1,10 @@
 package com.thedarkera.ingameobjects.item;
 
-import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.items.ModItem;
 
-import net.minecraft.item.Item;
+public class ItemAshHopperLeg extends ModItem {
 
-public class ItemAshHopperLeg extends Item {
-	String name = "ash_hopper_leg";
-
-	public ItemAshHopperLeg() {
-		setUnlocalizedName(name);
-		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+	public ItemAshHopperLeg(String name) {
+		super(name);
 	}
 }

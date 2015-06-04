@@ -3,7 +3,7 @@ package com.thedarkera.ingameobjects.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-import com.thedarkera.ingameobjects.ModBlock;
+import com.thedarkera.api.blocks.ModBlock;
 
 public class BlockDarkBirchPlanks extends ModBlock {
 

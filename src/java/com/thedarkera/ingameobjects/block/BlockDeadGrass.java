@@ -10,7 +10,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.ingameobjects.ModBlock;
+import com.thedarkera.api.blocks.ModBlock;
 import com.thedarkera.init.TDEBlocks;
 
 public class BlockDeadGrass extends ModBlock {

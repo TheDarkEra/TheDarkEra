@@ -11,14 +11,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import com.thedarkera.ingameobjects.ModBlock;
+import com.thedarkera.api.blocks.ModBlock;
 import com.thedarkera.init.TDEItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockDragonBone extends ModBlock {
-    private static String name = "dragon_bones";
 
     //todo: make a 3D model
 

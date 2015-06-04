@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.ingameobjects.ModBlock;
+import com.thedarkera.api.blocks.ModBlock;
 
 public class BlockDarkStoneDirt extends ModBlock {
 	private IIcon[] icons = new IIcon[6];

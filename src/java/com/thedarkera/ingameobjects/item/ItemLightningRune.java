@@ -1,14 +1,10 @@
 package com.thedarkera.ingameobjects.item;
 
-import com.thedarkera.TheDarkEra;
-import net.minecraft.item.Item;
+import com.thedarkera.api.items.ModItem;
 
-public class ItemLightningRune extends Item {
-	String name = "lightning_rune";
+public class ItemLightningRune extends ModItem {
 
-	public ItemLightningRune() {
-		setUnlocalizedName("lightning_rune");
-		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+	public ItemLightningRune(String name) {
+		super(name);
 	}
 }
