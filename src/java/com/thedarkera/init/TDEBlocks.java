@@ -6,6 +6,8 @@ import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
+import com.thedarkera.api.blocks.ModItemMetadataExample;
+import com.thedarkera.api.blocks.ModMetadataExample;
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
 import com.thedarkera.ingameobjects.block.BlockClay;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
@@ -54,6 +56,8 @@ import com.thedarkera.ingameobjects.item.ItemLogBlocks3;
 import com.thedarkera.ingameobjects.item.ItemLogBlocks4;
 import com.thedarkera.ingameobjects.item.ItemSaplingBlocks;
 import com.thedarkera.utils.RegUtils;
+
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDEBlocks {
 	// This adds all the trees. DO NOT CHANGE THE NAMES!
@@ -135,6 +139,11 @@ public class TDEBlocks {
 
 	// Boss Heads //
 	public static Block death_lord_head;
+	
+	//MetaData blocks//
+	public static Block mod_metadata_example;
+
+	
 
 	public static void init() {
 
@@ -173,8 +182,7 @@ public class TDEBlocks {
 		// TE
 		smeltery = new BlockSmeltery();
 		reg(smeltery);
-
-		// Meta Blocks//
+		
 	   // Wool/Clay  //
 		dark_wool = new BlockWool(Material.cloth, 0.9f, 1.7f, "dark_wool", "shovel", 1, Block.soundTypeCloth);
 		reg(dark_wool);
@@ -255,6 +263,10 @@ public class TDEBlocks {
 		// Boss Heads //
 		death_lord_head = new HeadDeathLord(Material.cloth, 0.1f, 0.1f, "death_lord_head", "axe", 0, Block.soundTypeCloth);
 		reg(death_lord_head);
+		
+		// Meta Blocks//
+		mod_metadata_example = new ModMetadataExample(Material.rock, 0.1f, 0.1f, "mod_metadata_example", "pickaxe", 0, Block.soundTypeGravel);
+		GameRegistry.registerBlock(mod_metadata_example, ModItemMetadataExample.class, "mod_metadata_example");
 
 	}
 
