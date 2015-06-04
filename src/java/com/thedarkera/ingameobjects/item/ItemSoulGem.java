@@ -2,14 +2,16 @@ package com.thedarkera.ingameobjects.item;
 
 import java.util.List;
 
-import com.thedarkera.TheDarkEra;
-
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -22,7 +24,7 @@ public class ItemSoulGem extends Item {
 	public ItemSoulGem() {
 		setUnlocalizedName("soul_gem");
 		setHasSubtypes(true);
-		setCreativeTab(TheDarkEra.tabTDEItems);
+		setCreativeTab(TDE.tabTDEItems);
 	}
 
 	@Override

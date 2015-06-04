@@ -1,8 +1,5 @@
 package com.thedarkera.ingameobjects.block;
 
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.init.TDEBlocks;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPortal;
 import net.minecraft.entity.Entity;
@@ -10,13 +7,17 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
+import com.thedarkera.init.TDEBlocks;
+
 public class BlockPortalDark extends BlockPortal {
 	private String name = "dark_portal";
 
 	public BlockPortalDark() {
 		super();
 		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 	}
 
 	@Override

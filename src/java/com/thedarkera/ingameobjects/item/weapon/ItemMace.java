@@ -2,7 +2,6 @@ package com.thedarkera.ingameobjects.item.weapon;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
@@ -14,7 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.google.common.collect.Multimap;
-import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -27,7 +26,7 @@ public class ItemMace extends Item{ // ItemSword
 		this.material = material;
 		maxStackSize = 1;
 		setMaxDamage(material.getMaxUses());
-		setCreativeTab(TheDarkEra.tabTDEItems);
+		setCreativeTab(TDE.tabTDEItems);
 		damage = 3.0F + material.getDamageVsEntity();
 	}
 

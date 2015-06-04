@@ -1,8 +1,9 @@
 package com.thedarkera.api.items;
 
-import com.thedarkera.TheDarkEra;
-
 import net.minecraft.item.Item;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class ModItem extends Item{
 	
@@ -10,7 +11,7 @@ public class ModItem extends Item{
 		String item = name;
 		String resource = TheDarkEra.MODID + ":" + item;
 		
-		setCreativeTab(TheDarkEra.tabTDEItems);
+		setCreativeTab(TDE.tabTDEItems);
 		setUnlocalizedName(item);
 		setTextureName(resource);
 	}

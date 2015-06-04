@@ -5,6 +5,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 import com.thedarkera.api.blocks.ModClay;
 import com.thedarkera.api.blocks.ModWool;
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
@@ -211,19 +212,19 @@ public class TDEBlocks {
 		dark_sandstone_bricks = new BlockDarkSandstone(Material.rock, 2f, 2f, "dark_sandstone_bricks", "pickaxe", 0, Block.soundTypeStone);
 		reg(dark_sandstone_bricks);
 
-		blockLog1 = new BlockLogs1().setBlockName("log1").setCreativeTab(TheDarkEra.tabTDEBlocks);
+		blockLog1 = new BlockLogs1().setBlockName("log1").setCreativeTab(TDE.tabTDEBlocks);
 		reg(blockLog1, ItemLogBlocks1.class);
-		blockLog2 = new BlockLogs2().setBlockName("log2").setCreativeTab(TheDarkEra.tabTDEBlocks);
+		blockLog2 = new BlockLogs2().setBlockName("log2").setCreativeTab(TDE.tabTDEBlocks);
 		reg(blockLog2, ItemLogBlocks2.class);
-		blockLog3 = new BlockLogs3().setBlockName("log3").setCreativeTab(TheDarkEra.tabTDEBlocks);
+		blockLog3 = new BlockLogs3().setBlockName("log3").setCreativeTab(TDE.tabTDEBlocks);
 		reg(blockLog3, ItemLogBlocks3.class);
-		blockLog4 = new BlockLogs3().setBlockName("log4").setCreativeTab(TheDarkEra.tabTDEBlocks);
+		blockLog4 = new BlockLogs3().setBlockName("log4").setCreativeTab(TDE.tabTDEBlocks);
 		reg(blockLog4, ItemLogBlocks4.class);
 
-		block_leaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDEBlocks);
+		block_leaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TDE.tabTDEBlocks);
 		reg(block_leaves, ItemLeafBlocks.class);
 
-		saplings = new BlockSaplings().setBlockName("sapling").setCreativeTab(TheDarkEra.tabTDEBlocks);
+		saplings = new BlockSaplings().setBlockName("sapling").setCreativeTab(TDE.tabTDEBlocks);
 		reg(saplings, ItemSaplingBlocks.class);
 
 		// Placeable items//

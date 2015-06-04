@@ -4,6 +4,7 @@ import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class BlockDarkStoneFence extends BlockFence {
 	String name = "dark_stone_fence";
@@ -13,7 +14,7 @@ public class BlockDarkStoneFence extends BlockFence {
 		super(string, Material.rock);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + texture);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 		setHardness(1.5F);
 		setResistance(10F);
 		setStepSound(soundTypeStone);

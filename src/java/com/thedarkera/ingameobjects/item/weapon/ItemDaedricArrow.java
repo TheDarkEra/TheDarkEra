@@ -1,13 +1,14 @@
 package com.thedarkera.ingameobjects.item.weapon;
 
-import com.thedarkera.TheDarkEra;
-
 import net.minecraft.item.Item;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class ItemDaedricArrow extends Item {
 	public ItemDaedricArrow(String name) {
 		super();
-		setCreativeTab(TheDarkEra.tabTDEItems);
+		setCreativeTab(TDE.tabTDEItems);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
 	}

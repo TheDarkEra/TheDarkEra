@@ -4,6 +4,7 @@ import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class BlockRottenWoodFence extends BlockFence {
 	String name = "rotten_wood_fence";
@@ -13,7 +14,7 @@ public class BlockRottenWoodFence extends BlockFence {
 		super(s, Material.wood);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + texture);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 		setHardness(1F);
 		setResistance(2.5F);
 		setStepSound(soundTypeWood);

@@ -9,6 +9,7 @@ import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.TheDarkEra.GuiID;
+import com.thedarkera.api.TDE;
 import com.thedarkera.ingameobjects.tileentity.TESmasher;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -20,7 +21,7 @@ public class BlockSmasher extends Block implements ITileEntityProvider {
 	public BlockSmasher() {
 		super(Material.rock);
 		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 		GameRegistry.registerBlock(this, name);
 	}
 

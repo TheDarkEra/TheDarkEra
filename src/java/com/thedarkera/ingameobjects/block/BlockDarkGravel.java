@@ -2,19 +2,20 @@ package com.thedarkera.ingameobjects.block;
 
 import java.util.Random;
 
-import com.thedarkera.TheDarkEra;
-
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class BlockDarkGravel extends BlockFalling {
 	public BlockDarkGravel(String name) {
 		super(Material.gourd);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 		setHardness(0.3F);
 		setStepSound(soundTypeGravel);
 		setHarvestLevel("shovel", 0);

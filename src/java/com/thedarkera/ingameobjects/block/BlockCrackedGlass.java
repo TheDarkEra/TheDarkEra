@@ -4,6 +4,7 @@ import net.minecraft.block.BlockGlass;
 import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class BlockCrackedGlass extends BlockGlass{ //Blocks
 
@@ -11,7 +12,7 @@ public class BlockCrackedGlass extends BlockGlass{ //Blocks
 	
 	public BlockCrackedGlass(Material material, boolean par2) {
 		super(material, par2);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 		setHardness(0.3F);
 		setResistance(0F);
 		setStepSound(soundTypeGlass);

@@ -1,7 +1,5 @@
 package com.thedarkera.ingameobjects.item.food;
 
-import com.thedarkera.TheDarkEra;
-
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -11,6 +9,9 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class ItemGrapeSeed extends Item implements IPlantable {
 	private Block plant;
@@ -22,7 +23,7 @@ public class ItemGrapeSeed extends Item implements IPlantable {
 		this.plant = plant;
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDEItems);
+		setCreativeTab(TDE.tabTDEItems);
 	}
 
 	public boolean onItemUse(ItemStack par1ItemStack,

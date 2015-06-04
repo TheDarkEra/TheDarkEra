@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class ModBlock extends Block{
 	
@@ -15,7 +16,7 @@ public class ModBlock extends Block{
 		//setHarvestLevel(tool, lvl); //Just add this to the block class its self
 		setBlockName(block);
 		setBlockTextureName(resource);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 		setResistance(resistance);
 		setHardness(hardness);
 		setStepSound(sound);

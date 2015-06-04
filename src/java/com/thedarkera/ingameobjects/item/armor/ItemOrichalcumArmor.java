@@ -1,8 +1,5 @@
 package com.thedarkera.ingameobjects.item.armor;
 
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.init.TDEArmors;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;
@@ -11,13 +8,17 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
+import com.thedarkera.init.TDEArmors;
+
 public class ItemOrichalcumArmor extends ItemArmor {
 	public ItemOrichalcumArmor(ArmorMaterial material, int armorType,
 			String name) {
 		super(material, 0, armorType);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDEItems);
+		setCreativeTab(TDE.tabTDEItems);
 	}
 
 	@Override

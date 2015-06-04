@@ -3,7 +3,7 @@ package com.thedarkera.ingameobjects.block;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 
-import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class BlockCrackedGlassPane extends BlockPane {
 
@@ -11,7 +11,7 @@ public class BlockCrackedGlassPane extends BlockPane {
 	
 	public BlockCrackedGlassPane(String texture, String par2, Material material, boolean par4) {
 		super(texture, par2, material, par4);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 		setBlockName(name);
 		setHardness(0.3F);
 		setResistance(0F);

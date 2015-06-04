@@ -3,7 +3,7 @@ package com.thedarkera.ingameobjects.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 
-import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class BlockDarkStoneStairs extends BlockStairs {
 	String name = "dark_stone_stairs";
@@ -11,7 +11,7 @@ public class BlockDarkStoneStairs extends BlockStairs {
 	public BlockDarkStoneStairs(Block block, int par2) {
 		super(block, par2);
 		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 		setHardness(2F);
 		setResistance(10F);
 		setStepSound(soundTypeStone);

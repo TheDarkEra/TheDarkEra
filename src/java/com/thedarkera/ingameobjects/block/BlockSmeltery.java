@@ -13,6 +13,7 @@ import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.TheDarkEra.GuiID;
+import com.thedarkera.api.TDE;
 import com.thedarkera.ingameobjects.tileentity.TESmeltery;
 
 public class BlockSmeltery extends BlockContainer {
@@ -22,7 +23,7 @@ public class BlockSmeltery extends BlockContainer {
 	public BlockSmeltery() {
 		super(Material.rock);
 		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 	}
 
 	@Override

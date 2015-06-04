@@ -1,13 +1,14 @@
 package com.thedarkera.ingameobjects.item.food;
 
-import com.thedarkera.TheDarkEra;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class ItemGrape extends ItemFood {
 	private int secondpotionId;
@@ -21,7 +22,7 @@ public class ItemGrape extends ItemFood {
 		setTextureName(TheDarkEra.MODID + ":" + name);
 		setPotionEffect(Potion.moveSpeed.id, 15, 0, 1F);
 		setSecondPotionEffect(Potion.digSpeed.id, 15, 0, 1F);
-		setCreativeTab(TheDarkEra.tabTDEItems);
+		setCreativeTab(TDE.tabTDEItems);
 		setAlwaysEdible();
 	}
 

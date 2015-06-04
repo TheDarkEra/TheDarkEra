@@ -1,13 +1,15 @@
 package com.thedarkera.ingameobjects.iflatblocks;
 
-import com.thedarkera.TheDarkEra;
-
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -18,7 +20,7 @@ public abstract class IPlaceableItem extends Item implements
 	public IPlaceableItem() {
 		super();
 		this.setUnlocalizedName(getName());
-		this.setCreativeTab(TheDarkEra.tabTDEBlocks);
+		this.setCreativeTab(TDE.tabTDEBlocks);
 		GameRegistry.registerItem(this, getName());
 
 	}

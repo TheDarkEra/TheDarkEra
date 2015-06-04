@@ -6,12 +6,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.shouts.UseShout;
+import com.thedarkera.api.TDE;
 
 public class ItemShout extends Item {
 	public ItemShout() {
 		super();
-		setCreativeTab(TheDarkEra.tabTDEItems);
+		setCreativeTab(TDE.tabTDEItems);
 		setTextureName(TheDarkEra.MODID + ":");
 	}
 

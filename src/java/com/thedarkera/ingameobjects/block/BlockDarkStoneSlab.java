@@ -6,6 +6,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class BlockDarkStoneSlab extends BlockSlab {
 	String name = "dark_stone_slab";
@@ -15,7 +16,7 @@ public class BlockDarkStoneSlab extends BlockSlab {
 		super(b, m);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 		setHardness(2F);
 		setResistance(10F);
 		setStepSound(soundTypeStone);

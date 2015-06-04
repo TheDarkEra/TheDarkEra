@@ -1,23 +1,16 @@
 package com.thedarkera.ingameobjects.item.bossdrops;
 
-import java.util.List;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
-import com.google.common.collect.Multimap;
-import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -28,7 +21,7 @@ public class ItemBossSword extends Item {
 	private static final String __OBFID = "CL_00000072";
 
 	public ItemBossSword(ToolMaterial material) {
-		setCreativeTab(TheDarkEra.tabTDEItems);
+		setCreativeTab(TDE.tabTDEItems);
 
 		field_150933_b = material;
 		maxStackSize = 1;

@@ -4,6 +4,7 @@ import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.TDE;
 
 public class BlockRottenWoodSlab extends BlockSlab {
 	String name = "rotten_wood_slab";
@@ -13,7 +14,7 @@ public class BlockRottenWoodSlab extends BlockSlab {
 		super(b, m);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + texture);
-		setCreativeTab(TheDarkEra.tabTDEBlocks);
+		setCreativeTab(TDE.tabTDEBlocks);
 		setHardness(1F);
 		setResistance(2.5F);
 		setStepSound(soundTypeWood);
