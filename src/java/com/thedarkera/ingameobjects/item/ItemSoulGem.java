@@ -22,7 +22,7 @@ public class ItemSoulGem extends Item {
 	public ItemSoulGem() {
 		setUnlocalizedName("soul_gem");
 		setHasSubtypes(true);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 	}
 
 	@Override

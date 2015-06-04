@@ -11,7 +11,7 @@ import com.thedarkera.shouts.UseShout;
 public class ItemShout extends Item {
 	public ItemShout() {
 		super();
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setTextureName(TheDarkEra.MODID + ":");
 	}
 

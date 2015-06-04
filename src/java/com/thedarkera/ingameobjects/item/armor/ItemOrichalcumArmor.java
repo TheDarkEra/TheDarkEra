@@ -17,7 +17,7 @@ public class ItemOrichalcumArmor extends ItemArmor {
 		super(material, 0, armorType);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 	}
 
 	@Override

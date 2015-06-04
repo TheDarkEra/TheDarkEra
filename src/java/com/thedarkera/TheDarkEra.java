@@ -43,7 +43,7 @@ public class TheDarkEra {
 	public static int MODVERSION = 1;
 
 	public static int dimension = -10;
-	
+
 	public static final PacketPipeline packetPipeline = new PacketPipeline();
 
 	@Instance(MODID)
@@ -62,6 +62,7 @@ public class TheDarkEra {
 			event.player.addChatComponentMessage(new ChatComponentText("TheDarkEra is oudated"));
 		}
 	}
+
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		logger = event.getModLog();
@@ -78,36 +79,32 @@ public class TheDarkEra {
 		TDEWeapons.init();
 		TDEBiomes.init();
 		TDEPotionEffects.init();
-        TDEAchievements.init();
-		
+		TDEAchievements.init();
+
 		if (FMLCommonHandler.instance().getEffectiveSide().isClient())
 			MinecraftForge.EVENT_BUS.register(new GuiManaBar(Minecraft.getMinecraft()));
-		
-		 Potion[] potionTypes;
 
-	        for (Field f : Potion.class.getDeclaredFields())
-	        {
-	            f.setAccessible(true);
+		Potion[] potionTypes;
 
-	            try
-	            {
-	                if (f.getName().equals("potionTypes") || f.getName().equals("field_76425_a"))
-	                {
-	                    Field modfield = Field.class.getDeclaredField("modifiers");
-	                    modfield.setAccessible(true);
-	                    modfield.setInt(f, f.getModifiers() & ~Modifier.FINAL);
-	                    potionTypes = (Potion[]) f.get(null);
-	                    final Potion[] newPotionTypes = new Potion[256];
-	                    System.arraycopy(potionTypes, 0, newPotionTypes, 0, potionTypes.length);
-	                    f.set(null, newPotionTypes);
-	                }
-	            } catch (Exception e)
-	            {
-	                System.err.println("(Potions!) Severe error, please report this to the mod author:");
-	                System.err.println(e);
-	            }
-	        }
-		
+		for (Field f : Potion.class.getDeclaredFields()) {
+			f.setAccessible(true);
+
+			try {
+				if (f.getName().equals("potionTypes") || f.getName().equals("field_76425_a")) {
+					Field modfield = Field.class.getDeclaredField("modifiers");
+					modfield.setAccessible(true);
+					modfield.setInt(f, f.getModifiers() & ~Modifier.FINAL);
+					potionTypes = (Potion[]) f.get(null);
+					final Potion[] newPotionTypes = new Potion[256];
+					System.arraycopy(potionTypes, 0, newPotionTypes, 0, potionTypes.length);
+					f.set(null, newPotionTypes);
+				}
+			} catch (Exception e) {
+				System.err.println("(Potions!) Severe error, please report this to the mod author:");
+				System.err.println(e);
+			}
+		}
+
 		GameRegistry.registerWorldGenerator(worldGenHandler, 0);
 
 		FMLCommonHandler.instance().bus().register(new EnterBiomeHandler());
@@ -116,7 +113,13 @@ public class TheDarkEra {
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 1 successfully!");
 	}
 
-	public static CreativeTabs tabTDE = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era") {
+	public static CreativeTabs tabTDEBlocks = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era_blocks") {
+		@Override
+		public Item getTabIconItem() {
+			return TDEBlocks.dark_cobblestone.getItem(null, 0, 0, 0);
+		}
+	};
+	public static CreativeTabs tabTDEItems = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era_items") {
 		@Override
 		public Item getTabIconItem() {
 			return TDEArmors.daedric_helmet;
@@ -128,9 +131,9 @@ public class TheDarkEra {
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");
 
 		packetPipeline.initialize();
-		
+
 		proxy.registerTileEntities();
-        proxy.init();
+		proxy.init();
 
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
 		DimensionManager.registerDimension(dimension, dimension);
@@ -138,8 +141,8 @@ public class TheDarkEra {
 		MinecraftForge.EVENT_BUS.register(new TDEEventHandler());
 		MinecraftForge.EVENT_BUS.register(new TDEPotionEffectHandler());
 
-        FMLCommonHandler.instance().bus().register(new AchievedHandler());
-		
+		FMLCommonHandler.instance().bus().register(new AchievedHandler());
+
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 2 successfully!");
 	}
 
@@ -148,7 +151,7 @@ public class TheDarkEra {
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 3.");
 
 		proxy.registerGuiHandler();
-		
+
 		packetPipeline.postInitialize();
 
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 3 successfully!");

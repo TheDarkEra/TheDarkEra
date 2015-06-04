@@ -21,7 +21,7 @@ public class ItemGrape extends ItemFood {
 		setTextureName(TheDarkEra.MODID + ":" + name);
 		setPotionEffect(Potion.moveSpeed.id, 15, 0, 1F);
 		setSecondPotionEffect(Potion.digSpeed.id, 15, 0, 1F);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setAlwaysEdible();
 	}
 

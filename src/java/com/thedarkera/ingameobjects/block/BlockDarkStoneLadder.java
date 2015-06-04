@@ -10,7 +10,7 @@ public class BlockDarkStoneLadder extends BlockLadder {
 	public BlockDarkStoneLadder() {
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setHardness(1.5F);
 		setResistance(10F);
 		setStepSound(soundTypeStone);

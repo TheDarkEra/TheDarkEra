@@ -18,7 +18,7 @@ public abstract class IPlaceableItem extends Item implements
 	public IPlaceableItem() {
 		super();
 		this.setUnlocalizedName(getName());
-		this.setCreativeTab(TheDarkEra.tabTDE);
+		this.setCreativeTab(TheDarkEra.tabTDEBlocks);
 		GameRegistry.registerItem(this, getName());
 
 	}

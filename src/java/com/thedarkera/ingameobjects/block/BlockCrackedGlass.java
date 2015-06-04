@@ -11,7 +11,7 @@ public class BlockCrackedGlass extends BlockGlass{ //Blocks
 	
 	public BlockCrackedGlass(Material material, boolean par2) {
 		super(material, par2);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setHardness(0.3F);
 		setResistance(0F);
 		setStepSound(soundTypeGlass);

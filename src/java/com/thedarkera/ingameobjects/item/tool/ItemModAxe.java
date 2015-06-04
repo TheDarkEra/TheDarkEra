@@ -8,7 +8,7 @@ public class ItemModAxe extends ItemAxe {
 
 	public ItemModAxe(ToolMaterial material, String name, String texture) {
 		super(material);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + texture);
 	}

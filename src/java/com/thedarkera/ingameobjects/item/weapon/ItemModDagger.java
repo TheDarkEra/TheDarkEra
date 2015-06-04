@@ -7,6 +7,5 @@ public class ItemModDagger extends ItemDagger {
 		super(material);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
 	}
 }

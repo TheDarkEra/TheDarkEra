@@ -7,6 +7,5 @@ public class ItemModMace extends ItemMace {
 		super(material);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
 	}
 }

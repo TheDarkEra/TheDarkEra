@@ -15,7 +15,7 @@ public class ModBlock extends Block{
 		//setHarvestLevel(tool, lvl); //Just add this to the block class its self
 		setBlockName(block);
 		setBlockTextureName(resource);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setResistance(resistance);
 		setHardness(hardness);
 		setStepSound(sound);

@@ -14,7 +14,7 @@ public class BlockDarkGravel extends BlockFalling {
 		super(Material.gourd);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setHardness(0.3F);
 		setStepSound(soundTypeGravel);
 		setHarvestLevel("shovel", 0);

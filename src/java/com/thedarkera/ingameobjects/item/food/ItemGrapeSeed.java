@@ -22,7 +22,7 @@ public class ItemGrapeSeed extends Item implements IPlantable {
 		this.plant = plant;
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 	}
 
 	public boolean onItemUse(ItemStack par1ItemStack,

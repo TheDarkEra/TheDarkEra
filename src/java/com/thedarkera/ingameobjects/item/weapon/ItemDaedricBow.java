@@ -31,7 +31,7 @@ public class ItemDaedricBow extends Item {
 		setMaxDamage(384);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 	}
 	
 	@Override

@@ -211,19 +211,19 @@ public class TDEBlocks {
 		dark_sandstone_bricks = new BlockDarkSandstone(Material.rock, 2f, 2f, "dark_sandstone_bricks", "pickaxe", 0, Block.soundTypeStone);
 		reg(dark_sandstone_bricks);
 
-		blockLog1 = new BlockLogs1().setBlockName("log1").setCreativeTab(TheDarkEra.tabTDE);
+		blockLog1 = new BlockLogs1().setBlockName("log1").setCreativeTab(TheDarkEra.tabTDEBlocks);
 		reg(blockLog1, ItemLogBlocks1.class);
-		blockLog2 = new BlockLogs2().setBlockName("log2").setCreativeTab(TheDarkEra.tabTDE);
+		blockLog2 = new BlockLogs2().setBlockName("log2").setCreativeTab(TheDarkEra.tabTDEBlocks);
 		reg(blockLog2, ItemLogBlocks2.class);
-		blockLog3 = new BlockLogs3().setBlockName("log3").setCreativeTab(TheDarkEra.tabTDE);
+		blockLog3 = new BlockLogs3().setBlockName("log3").setCreativeTab(TheDarkEra.tabTDEBlocks);
 		reg(blockLog3, ItemLogBlocks3.class);
-		blockLog4 = new BlockLogs3().setBlockName("log4").setCreativeTab(TheDarkEra.tabTDE);
+		blockLog4 = new BlockLogs3().setBlockName("log4").setCreativeTab(TheDarkEra.tabTDEBlocks);
 		reg(blockLog4, ItemLogBlocks4.class);
 
-		block_leaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDE);
+		block_leaves = new BlockLeaf().setBlockName("leaf").setCreativeTab(TheDarkEra.tabTDEBlocks);
 		reg(block_leaves, ItemLeafBlocks.class);
 
-		saplings = new BlockSaplings().setBlockName("sapling").setCreativeTab(TheDarkEra.tabTDE);
+		saplings = new BlockSaplings().setBlockName("sapling").setCreativeTab(TheDarkEra.tabTDEBlocks);
 		reg(saplings, ItemSaplingBlocks.class);
 
 		// Placeable items//

@@ -13,7 +13,7 @@ public class BlockDarkStoneFence extends BlockFence {
 		super(string, Material.rock);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + texture);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setHardness(1.5F);
 		setResistance(10F);
 		setStepSound(soundTypeStone);

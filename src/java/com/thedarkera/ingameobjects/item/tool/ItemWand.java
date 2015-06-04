@@ -27,7 +27,7 @@ public class ItemWand extends Item {
 		theToolMaterial = m;
 		maxStackSize = 1;
 		setMaxDamage(m.getMaxUses());
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
 	}

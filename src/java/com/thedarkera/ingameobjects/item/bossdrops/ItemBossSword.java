@@ -28,7 +28,7 @@ public class ItemBossSword extends Item {
 	private static final String __OBFID = "CL_00000072";
 
 	public ItemBossSword(ToolMaterial material) {
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 
 		field_150933_b = material;
 		maxStackSize = 1;

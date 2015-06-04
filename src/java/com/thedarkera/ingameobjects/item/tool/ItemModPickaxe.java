@@ -8,7 +8,7 @@ public class ItemModPickaxe extends ItemPickaxe {
 
 	public ItemModPickaxe(ToolMaterial material, String name, String texture) {
 		super(material);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + texture);
 	}

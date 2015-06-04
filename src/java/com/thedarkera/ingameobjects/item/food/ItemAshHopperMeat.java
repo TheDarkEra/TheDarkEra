@@ -10,7 +10,7 @@ public class ItemAshHopperMeat extends ItemFood {
 		super(food, saturation, wolfFood);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setAlwaysEdible();
 	}
 }

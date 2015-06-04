@@ -9,7 +9,7 @@ public class BlockLamp extends BlockTorch {
 	private String name = "lamp";
 	
 	public BlockLamp(){
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
 	}

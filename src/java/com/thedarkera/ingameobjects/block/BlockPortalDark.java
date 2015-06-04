@@ -16,7 +16,7 @@ public class BlockPortalDark extends BlockPortal {
 	public BlockPortalDark() {
 		super();
 		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 	}
 
 	@Override

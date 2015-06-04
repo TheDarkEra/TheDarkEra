@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 public class ItemDragonArrow extends Item {
 	public ItemDragonArrow(String name) {
 		super();
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
 	}

@@ -8,7 +8,7 @@ public class ItemModSpade extends ItemSpade {
 
 	public ItemModSpade(ToolMaterial m, String name, String texture) {
 		super(m);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setTextureName(TheDarkEra.MODID + ":" + texture);
 		setUnlocalizedName(name);
 	}

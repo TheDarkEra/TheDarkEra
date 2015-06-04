@@ -14,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.google.common.collect.Multimap;
+import com.thedarkera.TheDarkEra;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -26,7 +27,7 @@ public class ItemMace extends Item{ // ItemSword
 		this.material = material;
 		maxStackSize = 1;
 		setMaxDamage(material.getMaxUses());
-		setCreativeTab(CreativeTabs.tabCombat);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		damage = 3.0F + material.getDamageVsEntity();
 	}
 

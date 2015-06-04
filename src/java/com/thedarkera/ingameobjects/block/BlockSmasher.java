@@ -20,7 +20,7 @@ public class BlockSmasher extends Block implements ITileEntityProvider {
 	public BlockSmasher() {
 		super(Material.rock);
 		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		GameRegistry.registerBlock(this, name);
 	}
 

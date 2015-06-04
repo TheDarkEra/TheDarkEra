@@ -34,7 +34,7 @@ public class BlockSaplings extends BlockSapling {
 	public BlockSaplings() {
 		float f = 0.4F;
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
-		this.setCreativeTab(TheDarkEra.tabTDE);
+		this.setCreativeTab(TheDarkEra.tabTDEBlocks);
 		this.setBlockName("sapling");
 	}
 

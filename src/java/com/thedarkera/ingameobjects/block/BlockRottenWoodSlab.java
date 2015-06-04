@@ -13,7 +13,7 @@ public class BlockRottenWoodSlab extends BlockSlab {
 		super(b, m);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + texture);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setHardness(1F);
 		setResistance(2.5F);
 		setStepSound(soundTypeWood);

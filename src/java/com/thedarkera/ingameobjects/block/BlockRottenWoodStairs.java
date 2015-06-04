@@ -11,7 +11,7 @@ public class BlockRottenWoodStairs extends BlockStairs {
 	public BlockRottenWoodStairs(Block b, int i) {
 		super(b, i);
 		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setHardness(1F);
 		setResistance(2.5F);
 		setStepSound(soundTypeWood);

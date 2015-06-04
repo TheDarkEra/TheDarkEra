@@ -9,6 +9,6 @@ public class ItemModSword extends ItemSword {
 		super(material);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 	}
 }

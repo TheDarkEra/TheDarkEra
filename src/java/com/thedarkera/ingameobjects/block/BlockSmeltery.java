@@ -22,7 +22,7 @@ public class BlockSmeltery extends BlockContainer {
 	public BlockSmeltery() {
 		super(Material.rock);
 		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 	}
 
 	@Override

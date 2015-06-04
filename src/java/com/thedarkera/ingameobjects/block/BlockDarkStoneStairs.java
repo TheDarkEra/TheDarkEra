@@ -11,7 +11,7 @@ public class BlockDarkStoneStairs extends BlockStairs {
 	public BlockDarkStoneStairs(Block block, int par2) {
 		super(block, par2);
 		setBlockName(name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setHardness(2F);
 		setResistance(10F);
 		setStepSound(soundTypeStone);

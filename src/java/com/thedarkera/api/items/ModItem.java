@@ -10,10 +10,9 @@ public class ModItem extends Item{
 		String item = name;
 		String resource = TheDarkEra.MODID + ":" + item;
 		
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setUnlocalizedName(item);
 		setTextureName(resource);
-		this.setCreativeTab(TheDarkEra.tabTDE);
 	}
 
 }

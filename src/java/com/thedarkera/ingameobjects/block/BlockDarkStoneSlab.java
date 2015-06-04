@@ -15,7 +15,7 @@ public class BlockDarkStoneSlab extends BlockSlab {
 		super(b, m);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TheDarkEra.tabTDE);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setHardness(2F);
 		setResistance(10F);
 		setStepSound(soundTypeStone);
