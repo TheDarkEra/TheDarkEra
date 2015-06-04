@@ -30,9 +30,10 @@ public class TDERecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(TDEItems.rotten_wood_stick, 4), "x", "x", 'x', TDEBlocks.rotten_wood);
 
 		// Dye's //
-		//GameRegistry.addSmelting(new ItemStack(Items.dye, 1, 1), new ItemStack(TDEItems.dark_red_dye, 2), 0.1F);
-		//GameRegistry.addShapedRecipe(new ItemStack(TDEBlocks.dark_red_wool, 2), "xxx", "xyx", "xxx", 'x', TDEItems.dark_red_dye, 'y', new ItemStack(Blocks.wool, 1));
-		//GameRegistry.addShapedRecipe(new ItemStack(TDEBlocks.dark_red_clay, 2), "xxx", "xyx", "xxx", 'x', TDEItems.dark_red_dye, 'y', new ItemStack(Blocks.clay, 1));
+		GameRegistry.addSmelting(new ItemStack(Items.dye, 1, 1), new ItemStack(TDEItems.dark_dye, 4, 0), 0.1F);
+		GameRegistry.addSmelting(new ItemStack(Items.dye, 1, 4), new ItemStack(TDEItems.dark_dye, 4, 1), 0.1F);
+		GameRegistry.addSmelting(new ItemStack(Items.dye, 1, 2), new ItemStack(TDEItems.dark_dye, 4, 2), 0.1F);
+		GameRegistry.addShapedRecipe(new ItemStack(TDEItems.dark_dye, 3, 4), "xxx", "yyy", "zzz", 'x', new ItemStack(TDEItems.dark_dye, 1, 0), 'y', new ItemStack(TDEItems.dark_dye, 1, 1), 'z', new ItemStack(TDEItems.dark_dye, 1, 2));
 		
 		// Ingots//
 		GameRegistry.addSmelting(Items.chainmail_boots, new ItemStack(TDEItems.steel_ingot, 2), 0.8F);

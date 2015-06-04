@@ -1,4 +1,4 @@
-package com.thedarkera.api.items;
+package com.thedarkera.ingameobjects.item;
 
 import java.util.List;
 
@@ -9,26 +9,27 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.items.ModItem;
 
-public class ModDye extends ModItem{
+public class ItemDye extends ModItem{
 
-	public ModDye(String name) {
+	public ItemDye(String name) {
 		super(name);
 		setHasSubtypes(true);
 	}
 	
-	public IIcon[] icons = new IIcon[3];
+	public IIcon[] icons = new IIcon[4];
 
 	@Override
 	public void registerIcons(IIconRegister reg) {
-	    for (int i = 0; i < 3; i ++) {
+	    for (int i = 0; i < 4; i ++) {
 	        this.icons[i] = reg.registerIcon(TheDarkEra.MODID + ":" + "dark_dye_" + i);
 	    }
 	}
 
 	@Override
 	public IIcon getIconFromDamage(int meta) {
-	    if (meta > 2)
+	    if (meta > 3)
 	        meta = 0;
 
 	    return this.icons[meta];
@@ -36,7 +37,7 @@ public class ModDye extends ModItem{
 
 	@Override
 	public void getSubItems(Item item, CreativeTabs tab, List list) {
-	    for (int i = 0; i < 3; i ++) {
+	    for (int i = 0; i < 4; i ++) {
 	        list.add(new ItemStack(item, 1, i));
 	    }
 	}

@@ -3,7 +3,6 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 
 import com.thedarkera.api.items.TabLogo;
-import com.thedarkera.api.items.ModDye;
 import com.thedarkera.ingameobjects.item.ItemAchievementBook;
 import com.thedarkera.ingameobjects.item.ItemAncientIngot;
 import com.thedarkera.ingameobjects.item.ItemAshHopperJelly;
@@ -23,6 +22,7 @@ import com.thedarkera.ingameobjects.item.ItemRottenWoodStick;
 import com.thedarkera.ingameobjects.item.ItemSoulGem;
 import com.thedarkera.ingameobjects.item.ItemSteelIngot;
 import com.thedarkera.ingameobjects.item.ItemWitchFeather;
+import com.thedarkera.ingameobjects.item.ItemDye;
 import com.thedarkera.ingameobjects.item.food.ItemAshHopperMeat;
 import com.thedarkera.ingameobjects.item.food.ItemGrape;
 import com.thedarkera.ingameobjects.item.tool.ItemBoneAndSteel;
@@ -120,7 +120,7 @@ public class TDEItems {
 		reg(bone_and_steel);
 
 		// Dye's //
-		dark_dye = new ModDye("dark_dye");
+		dark_dye = new ItemDye("dark_dye");
 		reg(dark_dye);
 		
 		// Ingot items init//

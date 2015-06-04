@@ -9,8 +9,6 @@ import net.minecraft.world.IBlockAccess;
 
 public class ModSkull extends ModBlock {
 
-	//private IIcon[] icons = new IIcon[6];
-	
 	public ModSkull(Material material, Float hardness, Float resistance, String name, String tool, int lvl, SoundType sound) {
 		super(material, hardness, resistance, name, tool, lvl, sound);
 		String resource = TheDarkEra.MODID + name;
@@ -21,7 +19,9 @@ public class ModSkull extends ModBlock {
 		
 	}
 	
-	/*@Override
+	/*private IIcon[] icons = new IIcon[6];
+	
+	@Override
 	public void registerBlockIcons(IIconRegister iconRegister) {
 		icons[0] = iconRegister.registerIcon(resource);
 		icons[1] = iconRegister.registerIcon(resource + "_top");
@@ -29,7 +29,7 @@ public class ModSkull extends ModBlock {
 		icons[3] = iconRegister.registerIcon(resource + "_side");
 		icons[4] = iconRegister.registerIcon(resource + "_side");
 		icons[5] = iconRegister.registerIcon(resource + "_side");
-	}*/
+	}*/ //Add to skulls class
 	
     @Override
 	public boolean isOpaqueCube() {

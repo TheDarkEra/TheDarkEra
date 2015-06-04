@@ -22,7 +22,7 @@ public class TDE {
 	};
 	
 	/*
-	 * Put anything that would normaly go in TheDarkEra class but needs to be available to addon developers here.
+	 * Put anything that would normally go in TheDarkEra class but needs to be available to addon developers here.
 	 */
 
 }

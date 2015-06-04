@@ -3,9 +3,10 @@ itemGroup.the_dark_era_blocks=The Dark Era Blocks
 
 //Meta items and blocks//
 //dyes//
-item.dark_dye_0.name=Dark Red Dye
-item.dark_dye_1.name=Dark Blue Dye
-item.dark_dye_2.name=Dark Green Dye
+item.dark_dye_0.name=Dark Dye (Red)
+item.dark_dye_1.name=Dark Dye (Blue)
+item.dark_dye_2.name=Dark Dye (Green)
+item.dark_dye_3.name=Dark Dye (Gray)
 
 //wool//
 
