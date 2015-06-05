@@ -24,7 +24,9 @@ public class TDERecipes {
 		GameRegistry.addSmelting(TDEBlocks.dark_cobblestone, new ItemStack(TDEBlocks.dark_stone), 0.2F);
 		GameRegistry.addSmelting(TDEBlocks.dark_sand, new ItemStack(Blocks.stained_glass, 1, 7), 0.2F);
 
+		
 		// Misc items//
+		GameRegistry.addShapedRecipe(new ItemStack(TDEItems.bowl_o_jelly), "x", "y", 'x', new ItemStack(TDEItems.ash_drops, 1, 0), 'y', Items.bowl);
 		GameRegistry.addShapedRecipe(new ItemStack(TDEItems.leather_strip, 2), "  ", " x ", "  ", 'x', Items.leather);
 		GameRegistry.addShapedRecipe(new ItemStack(TDEItems.dark_stone_rod, 4), "x", "x", 'x', TDEBlocks.dark_cobblestone);
 		GameRegistry.addShapedRecipe(new ItemStack(TDEItems.rotten_wood_stick, 4), "x", "x", 'x', TDEBlocks.rotten_wood);

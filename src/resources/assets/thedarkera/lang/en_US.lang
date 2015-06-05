@@ -1,6 +1,7 @@
 itemGroup.the_dark_era_items=The Dark Era Items
 itemGroup.the_dark_era_blocks=The Dark Era Blocks
 
+
 //Meta items and blocks//
 //dyes//
 item.dark_dye_0.name=Dark Dye (Red)
@@ -29,6 +30,7 @@ item.lightning_rune.name=Lightning Rune
 item.achievement_book.name=Achievement Book
 item.null.name=null
 item.bone_and_steel.name=Bone and Steel
+item.bowl_o_jelly.name=Bowl O' Jelly
 
 // Meta //
 item.ash_hopper_meat.name=Ash Hopper Meat

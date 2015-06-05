@@ -6,8 +6,8 @@ import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
 
 public class ItemAshHopperMeat extends ItemFood {
-	public ItemAshHopperMeat(int food, float saturation, boolean wolfFood,
-			String name) {
+	
+	public ItemAshHopperMeat(int food, float saturation, boolean wolfFood, String name) {
 		super(food, saturation, wolfFood);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
