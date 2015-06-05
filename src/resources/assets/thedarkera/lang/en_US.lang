@@ -129,10 +129,10 @@ tile.dark_clay.red.name=Dark Clay (Red)
 tile.dark_clay.blue.name=Dark Clay (Blue)
 tile.dark_clay.green.name=Dark Clay (Green)
 tile.dark_clay.gray.name=Dark Clay (Gray)
-tile.dark_wool_0=Dark Wool (Red)
-tile.dark_wool_1=Dark Wool (Blue)
-tile.dark_wool_2=Dark Wool (Green)
-tile.dark_wool_3=Dark Wool (Gray)
+tile.dark_wool.red.name=Dark Wool (Red)
+tile.dark_wool.blue.name=Dark Wool (Blue)
+tile.dark_wool.green.name=Dark Wool (Green)
+tile.dark_wool.gray.name=Dark Wool (Gray)
 
 tile.work_bench.name=Work Bench
 tile.smasher.name=Smasher

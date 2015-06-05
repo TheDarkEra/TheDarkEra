@@ -39,7 +39,6 @@ import com.thedarkera.ingameobjects.block.BlockRottenWoodStairs;
 import com.thedarkera.ingameobjects.block.BlockSaplings;
 import com.thedarkera.ingameobjects.block.BlockSmeltery;
 import com.thedarkera.ingameobjects.block.BlockWeedyDirt;
-import com.thedarkera.ingameobjects.block.BlockWool;
 import com.thedarkera.ingameobjects.block.heads.HeadDeathLord;
 import com.thedarkera.ingameobjects.block.leaves.BlockLeaf;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs1;
@@ -47,6 +46,8 @@ import com.thedarkera.ingameobjects.block.logs.BlockLogs2;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs3;
 import com.thedarkera.ingameobjects.block.metadata.BlockClay;
 import com.thedarkera.ingameobjects.block.metadata.BlockClayItem;
+import com.thedarkera.ingameobjects.block.metadata.BlockWool;
+import com.thedarkera.ingameobjects.block.metadata.BlockWoolItem;
 import com.thedarkera.ingameobjects.flatblocks.FlatBlockExample;
 import com.thedarkera.ingameobjects.item.ItemLeafBlocks;
 import com.thedarkera.ingameobjects.item.ItemLogBlocks1;
@@ -140,8 +141,9 @@ public class TDEBlocks {
 	public static Block death_lord_head;
 	
 	//MetaData blocks//
-	public static Block mod_metadata_example;
 	public static Block dark_clay;
+	public static Block dark_wool;
+	
 
 	
 
@@ -267,6 +269,8 @@ public class TDEBlocks {
 		// Meta Blocks//
 		dark_clay = new BlockClay(Material.rock, 0.1f, 0.1f, "dark_clay", "pickaxe", 0, Block.soundTypeSand);
 		GameRegistry.registerBlock(dark_clay, BlockClayItem.class, "dark_clay");
+		dark_wool = new BlockWool(Material.cloth, 0.1f, 0.1f, "dark_wool", "pickaxe", 0, Block.soundTypeCloth);
+		GameRegistry.registerBlock(dark_wool, BlockWoolItem.class, "dark_wool");
 
 	}
 
