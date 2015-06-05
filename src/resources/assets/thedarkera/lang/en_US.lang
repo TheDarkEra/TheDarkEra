@@ -125,10 +125,10 @@ item.ancient_leggings.name=Ancient Leggings
 item.ancient_boots.name=Ancient Boots
 
 //Block//
-tile.dark_clay_0=Dark Clay (Red)
-tile.dark_clay_1=Dark Clay (Blue)
-tile.dark_clay_2=Dark Clay (Green)
-tile.dark_clay_3=Dark Clay (Gray)
+tile.dark_clay.red.name=Dark Clay (Red)
+tile.dark_clay.blue.name=Dark Clay (Blue)
+tile.dark_clay.green.name=Dark Clay (Green)
+tile.dark_clay.gray.name=Dark Clay (Gray)
 tile.dark_wool_0=Dark Wool (Red)
 tile.dark_wool_1=Dark Wool (Blue)
 tile.dark_wool_2=Dark Wool (Green)

@@ -21,16 +21,16 @@ public class BlockClayItem extends ItemBlock
 		switch(itemstack.getItemDamage())
 		{
 		case 0:
-			name = "red_clay";
+			name = "red";
 			break;
 		case 1:
-			name = "blue_clay";
+			name = "blue";
 			break;
 		case 2:
-			name = "green_clay";
+			name = "green";
 			break;
 		case 3:
-			name = "gray_clay";
+			name = "gray";
 			break;
 		default:
 			System.out.println("Invalid metadata for Block dark_clay");
