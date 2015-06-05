@@ -8,18 +8,9 @@ item.dark_dye_1.name=Dark Dye (Blue)
 item.dark_dye_2.name=Dark Dye (Green)
 item.dark_dye_3.name=Dark Dye (Gray)
 
-//wool//
-
-
-//clay//
-
-
 //Item Misc//
 item.death_lord_skull.name=Death Lord's Skull
 item.dark_flint.name=Dark Flint
-item.ash_hopper_meat.name=Ash Hopper Meat
-item.ash_hopper_leg.name=Ash Hopper Leg
-item.ash_hopper_jelly.name=Ash Hopper Jelly
 item.witch_feather.name=Witch Feather
 item.rotten_wood_stick.name=Rotten Stick
 item.dark_stone_rod.name=Dark Stone Rod
@@ -38,6 +29,11 @@ item.lightning_rune.name=Lightning Rune
 item.achievement_book.name=Achievement Book
 item.null.name=null
 item.bone_and_steel.name=Bone and Steel
+
+// Meta //
+item.ash_hopper_meat.name=Ash Hopper Meat
+item.ash_drops_1.name=Ash Hopper Leg
+item.ash_drops_0.name=Ash Hopper Jelly
 
 //Item Ingot//
 item.ebony_ingot.name=Ebony Ingot

@@ -5,13 +5,12 @@ import net.minecraft.item.Item;
 import com.thedarkera.api.items.TabLogo;
 import com.thedarkera.ingameobjects.item.ItemAchievementBook;
 import com.thedarkera.ingameobjects.item.ItemAncientIngot;
-import com.thedarkera.ingameobjects.item.ItemAshHopperJelly;
-import com.thedarkera.ingameobjects.item.ItemAshHopperLeg;
 import com.thedarkera.ingameobjects.item.ItemDaedraHeart;
 import com.thedarkera.ingameobjects.item.ItemDarkFlint;
 import com.thedarkera.ingameobjects.item.ItemDarkStoneRod;
 import com.thedarkera.ingameobjects.item.ItemDragonBone;
 import com.thedarkera.ingameobjects.item.ItemDragonScale;
+import com.thedarkera.ingameobjects.item.ItemDye;
 import com.thedarkera.ingameobjects.item.ItemEbonyIngot;
 import com.thedarkera.ingameobjects.item.ItemFireRune;
 import com.thedarkera.ingameobjects.item.ItemFrostRune;
@@ -22,7 +21,7 @@ import com.thedarkera.ingameobjects.item.ItemRottenWoodStick;
 import com.thedarkera.ingameobjects.item.ItemSoulGem;
 import com.thedarkera.ingameobjects.item.ItemSteelIngot;
 import com.thedarkera.ingameobjects.item.ItemWitchFeather;
-import com.thedarkera.ingameobjects.item.ItemDye;
+import com.thedarkera.ingameobjects.item.drops.ItemAshDrops;
 import com.thedarkera.ingameobjects.item.food.ItemAshHopperMeat;
 import com.thedarkera.ingameobjects.item.food.ItemGrape;
 import com.thedarkera.ingameobjects.item.tool.ItemBoneAndSteel;
@@ -38,8 +37,6 @@ public class TDEItems {
 	public static Item death_lord_skull;
 	public static Item dark_flint;
 	public static Item witch_feather;
-	public static Item ash_hopper_leg;
-	public static Item ash_hopper_jelly;
 	public static Item ash_hopper_meat;
 	public static Item rotten_wood_stick;
 	public static Item dark_stone_rod;
@@ -56,6 +53,7 @@ public class TDEItems {
 
 	// Meta's //
 	public static Item dark_dye;
+	public static Item ash_drops;
 	
 	// Ingot items//
 	public static Item steel_ingot;
@@ -90,10 +88,6 @@ public class TDEItems {
 		reg(witch_feather);
 		ash_hopper_meat = new ItemAshHopperMeat(3, 0.3F, true, "ash_hopper_meat");
 		reg(ash_hopper_meat);
-		ash_hopper_jelly = new ItemAshHopperJelly("ash_hopper_jelly");
-		reg(ash_hopper_jelly);
-		ash_hopper_leg = new ItemAshHopperLeg("ash_hopper_leg");
-		reg(ash_hopper_leg);
 		rotten_wood_stick = new ItemRottenWoodStick("rotten_wood_stick");
 		reg(rotten_wood_stick);
 		dark_stone_rod = new ItemDarkStoneRod("dark_stone_rod");
@@ -119,9 +113,11 @@ public class TDEItems {
 		bone_and_steel = new ItemBoneAndSteel("bone_and_steel");
 		reg(bone_and_steel);
 
-		// Dye's //
+		// MetaItems //
 		dark_dye = new ItemDye("dark_dye");
 		reg(dark_dye);
+		ash_drops = new ItemAshDrops("ash_drops");
+		reg(ash_drops);
 		
 		// Ingot items init//
 		steel_ingot = new ItemSteelIngot("steel_ingot");
