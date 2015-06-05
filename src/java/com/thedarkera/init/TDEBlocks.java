@@ -7,7 +7,7 @@ import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
-<<<<<<< HEAD
+
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlassPane;
@@ -41,8 +41,7 @@ import com.thedarkera.ingameobjects.block.BlockRottenWoodStairs;
 import com.thedarkera.ingameobjects.block.BlockSaplings;
 import com.thedarkera.ingameobjects.block.BlockSmeltery;
 import com.thedarkera.ingameobjects.block.BlockWeedyDirt;
-=======
->>>>>>> origin/master
+
 import com.thedarkera.ingameobjects.block.heads.HeadDeathLord;
 import com.thedarkera.ingameobjects.block.leaves.BlockLeaf;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs1;
