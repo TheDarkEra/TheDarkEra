@@ -65,6 +65,7 @@ public class BlockClay extends Block
 				return icons[1];
 		default:
 			System.out.println("Problems with getting the icon for mod_metadata_example");
+            System.out.println("STAHP DA SPAM!!!");
 			return null;
 		}
 	}

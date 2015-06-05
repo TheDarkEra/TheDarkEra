@@ -1,11 +1,13 @@
 package com.thedarkera.init;
 
+import com.thedarkera.ingameobjects.block.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
+<<<<<<< HEAD
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlassPane;
@@ -39,6 +41,8 @@ import com.thedarkera.ingameobjects.block.BlockRottenWoodStairs;
 import com.thedarkera.ingameobjects.block.BlockSaplings;
 import com.thedarkera.ingameobjects.block.BlockSmeltery;
 import com.thedarkera.ingameobjects.block.BlockWeedyDirt;
+=======
+>>>>>>> origin/master
 import com.thedarkera.ingameobjects.block.heads.HeadDeathLord;
 import com.thedarkera.ingameobjects.block.leaves.BlockLeaf;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs1;
@@ -234,8 +238,8 @@ public class TDEBlocks {
 
 		// Placeable items//
 		example = new FlatBlockExample();
-		//dragon_bone = new BlockDragonBone(Material.cloth, 1f, 1f, "dragon_bone", "pickaxe", 0, Block.soundTypeStone);
-		//reg(dragon_bone);
+		dragon_bone = new BlockDragonBone(Material.cloth, 1f, 1f, "dragon_bones", "pickaxe", 0, Block.soundTypeStone);
+		reg(dragon_bone);
 
 		// Special Blocks //
 		dark_stone_ladder = new BlockDarkStoneLadder();

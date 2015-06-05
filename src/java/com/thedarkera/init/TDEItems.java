@@ -1,6 +1,7 @@
 package com.thedarkera.init;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 import com.thedarkera.api.items.TabLogo;
 import com.thedarkera.ingameobjects.item.ItemAchievementBook;
@@ -23,6 +24,7 @@ import com.thedarkera.ingameobjects.item.ItemSteelIngot;
 import com.thedarkera.ingameobjects.item.ItemWitchFeather;
 import com.thedarkera.ingameobjects.item.drops.ItemAshDrops;
 import com.thedarkera.ingameobjects.item.food.ItemAshHopperMeat;
+import com.thedarkera.ingameobjects.item.food.ItemBowlOJelly;
 import com.thedarkera.ingameobjects.item.food.ItemGrape;
 import com.thedarkera.ingameobjects.item.tool.ItemBoneAndSteel;
 import com.thedarkera.ingameobjects.item.tool.ItemShout;
@@ -50,7 +52,8 @@ public class TDEItems {
 	public static Item achievement_book;
 	public static Item shout;
 	public static Item bone_and_steel;
-
+	public static Item bowl_o_jelly;
+	
 	// Meta's //
 	public static Item dark_dye;
 	public static Item ash_drops;
@@ -70,6 +73,7 @@ public class TDEItems {
 	// Placeable items//
 	public static Item example;
 	public static Item dragon_bone;
+	
 	
 
 	// Plant items//
@@ -112,6 +116,8 @@ public class TDEItems {
 		reg(shout);
 		bone_and_steel = new ItemBoneAndSteel("bone_and_steel");
 		reg(bone_and_steel);
+		bowl_o_jelly = new ItemBowlOJelly("bowl_o_jelly");
+		reg(bowl_o_jelly);
 
 		// MetaItems //
 		dark_dye = new ItemDye("dark_dye");
