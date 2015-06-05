@@ -1,12 +1,12 @@
-package com.thedarkera.api.blocks;
+package com.thedarkera.ingameobjects.block.metadata;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ModItemMetadataExample extends ItemBlock
+public class BlockClayItem extends ItemBlock
 {
-	public ModItemMetadataExample(Block block) 
+	public BlockClayItem(Block block) 
 	{
 		super(block);
 		setHasSubtypes(true);
@@ -21,13 +21,19 @@ public class ModItemMetadataExample extends ItemBlock
 		switch(itemstack.getItemDamage())
 		{
 		case 0:
-			name = "dark_wool";
+			name = "red_clay";
 			break;
 		case 1:
-			name = "dark_clay";
+			name = "blue_clay";
+			break;
+		case 2:
+			name = "green_clay";
+			break;
+		case 3:
+			name = "gray_clay";
 			break;
 		default:
-			System.out.println("Invalid metadata for Block mod_item_metadata_example");
+			System.out.println("Invalid metadata for Block dark_clay");
 			name = "broken";
 			break;
 		}

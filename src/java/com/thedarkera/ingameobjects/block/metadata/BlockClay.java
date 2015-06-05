@@ -1,4 +1,4 @@
-package com.thedarkera.api.blocks;
+package com.thedarkera.ingameobjects.block.metadata;
 
 import java.util.List;
 
@@ -16,13 +16,13 @@ import net.minecraftforge.common.util.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ModMetadataExample extends Block 
+public class BlockClay extends Block 
 {
 	
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
 	
-	public ModMetadataExample(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound){
+	public BlockClay(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound){
 		super(material);
 		String block = name;
 		String resource = TheDarkEra.MODID + ":" + block;
@@ -46,7 +46,7 @@ public class ModMetadataExample extends Block
 
 		for (int i = 0; i < icons.length; i++)
 		{
-			icons[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + "mod_metadata_example" + i);
+			icons[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + "dark_clay" + i);
 		}
 	}
 	
@@ -75,7 +75,7 @@ public class ModMetadataExample extends Block
 	@Override
 	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List)
 	{
-		for (int var4 = 0; var4 < 2; ++var4)
+		for (int var4 = 0; var4 < 4; ++var4)
 		{
 			par3List.add(new ItemStack(par1, 1, var4));
 		}

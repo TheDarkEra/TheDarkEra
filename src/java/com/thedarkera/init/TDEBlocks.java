@@ -6,10 +6,7 @@ import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
-import com.thedarkera.api.blocks.ModItemMetadataExample;
-import com.thedarkera.api.blocks.ModMetadataExample;
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
-import com.thedarkera.ingameobjects.block.BlockClay;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlassPane;
 import com.thedarkera.ingameobjects.block.BlockDarkBirchPlanks;
@@ -48,6 +45,8 @@ import com.thedarkera.ingameobjects.block.leaves.BlockLeaf;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs1;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs2;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs3;
+import com.thedarkera.ingameobjects.block.metadata.BlockClay;
+import com.thedarkera.ingameobjects.block.metadata.BlockClayItem;
 import com.thedarkera.ingameobjects.flatblocks.FlatBlockExample;
 import com.thedarkera.ingameobjects.item.ItemLeafBlocks;
 import com.thedarkera.ingameobjects.item.ItemLogBlocks1;
@@ -88,10 +87,10 @@ public class TDEBlocks {
 	public static Block smasher;
 
 	// Wool/Clay
-	public static Block dark_wool;
-	public static Block dark_wool_2;
-	public static Block dark_clay;
-	public static Block dark_clay_2;
+//	public static Block dark_wool;
+	//public static Block dark_wool_2;
+	//public static Block dark_clay;
+	//public static Block dark_clay_2;
 
 	// plants//
 	public static Block grape_plant;
@@ -142,6 +141,7 @@ public class TDEBlocks {
 	
 	//MetaData blocks//
 	public static Block mod_metadata_example;
+	public static Block dark_clay;
 
 	
 
@@ -184,10 +184,10 @@ public class TDEBlocks {
 		reg(smeltery);
 		
 	   // Wool/Clay  //
-		dark_wool = new BlockWool(Material.cloth, 0.9f, 1.7f, "dark_wool", "shovel", 1, Block.soundTypeCloth);
-		reg(dark_wool);
-		dark_clay = new BlockClay(Material.clay, 0.7f, 1.5f, "dark_clay", "shovel", 1, Block.soundTypeGravel);
-		reg(dark_clay);
+		//dark_wool = new BlockWool(Material.cloth, 0.9f, 1.7f, "dark_wool", "shovel", 1, Block.soundTypeCloth);
+		//reg(dark_wool);
+	//	dark_clay = new BlockClay(Material.clay, 0.7f, 1.5f, "dark_clay", "shovel", 1, Block.soundTypeGravel);
+	//	reg(dark_clay);
 		
 		// Plants//
 		grape_plant = new BlockGrapePlant();
@@ -265,8 +265,8 @@ public class TDEBlocks {
 		reg(death_lord_head);
 		
 		// Meta Blocks//
-		mod_metadata_example = new ModMetadataExample(Material.rock, 0.1f, 0.1f, "mod_metadata_example", "pickaxe", 0, Block.soundTypeGravel);
-		GameRegistry.registerBlock(mod_metadata_example, ModItemMetadataExample.class, "mod_metadata_example");
+		dark_clay = new BlockClay(Material.rock, 0.1f, 0.1f, "dark_clay", "pickaxe", 0, Block.soundTypeSand);
+		GameRegistry.registerBlock(dark_clay, BlockClayItem.class, "dark_clay");
 
 	}
 
