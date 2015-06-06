@@ -9,12 +9,12 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.PlayerEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 
 public class EnterBiomeHandler {
 
 	@SubscribeEvent
-	public void enterBiome(PlayerEvent event) {
+	public void enterBiome(PlayerChangedDimensionEvent event) {
 		// Item item = event.player.getHeldItem().getItem();
 		World world = event.player.worldObj;
 		EntityPlayer player = event.player;
