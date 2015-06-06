@@ -1,13 +1,14 @@
 package com.thedarkera.init;
 
 import com.thedarkera.ingameobjects.block.*;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
-
+import com.thedarkera.api.helper.RegHelper;
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlassPane;
@@ -41,7 +42,6 @@ import com.thedarkera.ingameobjects.block.BlockRottenWoodStairs;
 import com.thedarkera.ingameobjects.block.BlockSaplings;
 import com.thedarkera.ingameobjects.block.BlockSmeltery;
 import com.thedarkera.ingameobjects.block.BlockWeedyDirt;
-
 import com.thedarkera.ingameobjects.block.heads.HeadDeathLord;
 import com.thedarkera.ingameobjects.block.leaves.BlockLeaf;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs1;
@@ -58,7 +58,6 @@ import com.thedarkera.ingameobjects.item.ItemLogBlocks2;
 import com.thedarkera.ingameobjects.item.ItemLogBlocks3;
 import com.thedarkera.ingameobjects.item.ItemLogBlocks4;
 import com.thedarkera.ingameobjects.item.ItemSaplingBlocks;
-import com.thedarkera.utils.RegUtils;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -278,10 +277,10 @@ public class TDEBlocks {
 	}
 
 	public static void reg(Block block) {
-		RegUtils.reg(block);
+		RegHelper.reg(block);
 	}
 
 	public static void reg(Block block, Class<? extends ItemBlock> itemBlock) {
-		RegUtils.reg(block, itemBlock);
+		RegHelper.reg(block, itemBlock);
 	}
 }

@@ -6,9 +6,9 @@ import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.TheDarkEra.GuiID;
-import com.thedarkera.api.items.ModItem;
+import com.thedarkera.api.items.ItemTDEBase;
 
-public class ItemAchievementBook extends ModItem {
+public class ItemAchievementBook extends ItemTDEBase {
 
 	public ItemAchievementBook(String name) {
 		super(name);

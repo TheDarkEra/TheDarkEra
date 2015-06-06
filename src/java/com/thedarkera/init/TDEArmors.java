@@ -4,13 +4,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
+import com.thedarkera.api.helper.RegHelper;
 import com.thedarkera.ingameobjects.item.armor.ItemAncientArmor;
 import com.thedarkera.ingameobjects.item.armor.ItemDaedricArmor;
 import com.thedarkera.ingameobjects.item.armor.ItemDragonHeavyArmor;
 import com.thedarkera.ingameobjects.item.armor.ItemDragonLightArmor;
 import com.thedarkera.ingameobjects.item.armor.ItemOrichalcumArmor;
 import com.thedarkera.ingameobjects.item.armor.ItemSteelArmor;
-import com.thedarkera.utils.RegUtils;
 
 public class TDEArmors {
 	public static Item daedric_helmet;
@@ -143,6 +143,6 @@ public class TDEArmors {
 	}
 
 	public static void reg(Item item) {
-		RegUtils.reg(item);
+		RegHelper.reg(item);
 	}
 }

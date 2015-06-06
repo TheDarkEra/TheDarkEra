@@ -3,12 +3,12 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 
+import com.thedarkera.api.helper.RegHelper;
 import com.thedarkera.ingameobjects.item.tool.ItemModAxe;
 import com.thedarkera.ingameobjects.item.tool.ItemModHoe;
 import com.thedarkera.ingameobjects.item.tool.ItemModPickaxe;
 import com.thedarkera.ingameobjects.item.tool.ItemModSpade;
 import com.thedarkera.ingameobjects.item.tool.ItemWand;
-import com.thedarkera.utils.RegUtils;
 
 public class TDETools {
 	public static Item ancient_pickaxe;
@@ -86,6 +86,6 @@ public class TDETools {
 	}
 
 	public static void reg(Item item) {
-		RegUtils.reg(item);
+		RegHelper.reg(item);
 	}
 }

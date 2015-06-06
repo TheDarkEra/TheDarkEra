@@ -3,6 +3,7 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.thedarkera.api.helper.RegHelper;
 import com.thedarkera.api.items.TabLogo;
 import com.thedarkera.ingameobjects.item.ItemAchievementBook;
 import com.thedarkera.ingameobjects.item.ItemAncientIngot;
@@ -29,7 +30,6 @@ import com.thedarkera.ingameobjects.item.food.ItemGrape;
 import com.thedarkera.ingameobjects.item.tool.ItemBoneAndSteel;
 import com.thedarkera.ingameobjects.item.tool.ItemShout;
 import com.thedarkera.placeableitem.ItemPlaceAbleExample;
-import com.thedarkera.utils.RegUtils;
 
 public class TDEItems {
 	public static Item tab_logo_0;
@@ -149,6 +149,6 @@ public class TDEItems {
 	}
 
 	public static void reg(Item item) {
-		RegUtils.reg(item);
+		RegHelper.reg(item);
 	}
 }

@@ -3,6 +3,7 @@ package com.thedarkera.init;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 
+import com.thedarkera.api.helper.RegHelper;
 import com.thedarkera.ingameobjects.item.bossdrops.deathlord.ItemDeathSword;
 import com.thedarkera.ingameobjects.item.weapon.ItemDaedricArrow;
 import com.thedarkera.ingameobjects.item.weapon.ItemDaedricBow;
@@ -11,7 +12,6 @@ import com.thedarkera.ingameobjects.item.weapon.ItemDragonBow;
 import com.thedarkera.ingameobjects.item.weapon.ItemModDagger;
 import com.thedarkera.ingameobjects.item.weapon.ItemModMace;
 import com.thedarkera.ingameobjects.item.weapon.ItemModSword;
-import com.thedarkera.utils.RegUtils;
 
 public class TDEWeapons {
 
@@ -110,6 +110,6 @@ public class TDEWeapons {
 	}
 
 	public static void reg(Item item) {
-		RegUtils.reg(item);
+		RegHelper.reg(item);
 	}
 }

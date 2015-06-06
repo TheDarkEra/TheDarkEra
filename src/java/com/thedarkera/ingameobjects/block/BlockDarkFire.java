@@ -1,22 +1,17 @@
 package com.thedarkera.ingameobjects.block;
 
-import com.google.common.collect.Maps;
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.init.TDEBlocks;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockFire;
-import net.minecraft.entity.Entity;
-import net.minecraft.init.Blocks;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
-import java.util.IdentityHashMap;
-import java.util.Map;
-
-import static net.minecraftforge.common.util.ForgeDirection.*;
+import static net.minecraftforge.common.util.ForgeDirection.DOWN;
+import static net.minecraftforge.common.util.ForgeDirection.EAST;
 import static net.minecraftforge.common.util.ForgeDirection.NORTH;
 import static net.minecraftforge.common.util.ForgeDirection.SOUTH;
+import static net.minecraftforge.common.util.ForgeDirection.UP;
+import static net.minecraftforge.common.util.ForgeDirection.WEST;
+import net.minecraft.block.BlockFire;
+import net.minecraft.entity.Entity;
+import net.minecraft.world.World;
+
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.init.TDEBlocks;
 
 public class BlockDarkFire extends BlockFire {
 

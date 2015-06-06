@@ -3,21 +3,17 @@ package com.thedarkera.ingameobjects.block;
 import net.minecraft.block.material.Material;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.blocks.ModBlock;
+import com.thedarkera.api.blocks.BlockTDEBase;
 
-public class BlockClay extends ModBlock{
+public class BlockClay extends BlockTDEBase {
 
 	public BlockClay(Material material, Float hardness, Float resistance, String name, String tool, int lvl, SoundType sound) {
-		super(material, hardness, resistance, name, tool, lvl, sound);
-		String BlockId = name;
+		super(name, material, hardness, resistance, tool, lvl, sound);
 		String i = "will be the meta eventually";
 		String resource = TheDarkEra.MODID + ":" + name + "_" + i;
 		
-		setBlockName(BlockId); // This means when making recipes use name_id for now
-		setBlockTextureName(resource); // Texture are name_color
-		setHarvestLevel(tool, lvl);
+		setBlockTextureName(resource);
 	}
-
 }
 
 

@@ -1,13 +1,11 @@
-package com.thedarkera.utils;
-
-import com.thedarkera.handler.AchievementHandler;
+package com.thedarkera.api.helper;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class RegUtils {
+public class RegHelper {
 	public static void reg(Block block) {
 		GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
 	}

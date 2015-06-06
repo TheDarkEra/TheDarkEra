@@ -6,13 +6,13 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.blocks.ModBlock;
+import com.thedarkera.api.blocks.BlockTDEBase;
 
-public class BlockDarkStoneDirt extends ModBlock {
+public class BlockDarkStoneDirt extends BlockTDEBase {
 	private IIcon[] icons = new IIcon[6];
 
 	public BlockDarkStoneDirt(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
-		super(material, hardness, resistance, name, tool, lvl, sound);
+		super(name, material, hardness, resistance, tool, lvl, sound);
 	}
 
 	@Override

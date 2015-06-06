@@ -5,18 +5,19 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.blocks.ModSkull;
+import com.thedarkera.api.blocks.BlockTDESkull;
 
-public class HeadDeathLord extends ModSkull {
+public class HeadDeathLord extends BlockTDESkull {
 
 	public HeadDeathLord(Material material, Float hardness, Float resistance, String name, String tool, int lvl, SoundType sound) {
-		super(material, hardness, resistance, name, tool, lvl, sound);
+		super(name, material, hardness, resistance, tool, lvl, sound, icons);
+		this.name = name;
 	}
 	
-	String name = "head_death_lord";
+	String name;
 	String resource = TheDarkEra.MODID + ":" + "skulls/" + name;
 
-	private IIcon[] icons = new IIcon[6];
+	private static IIcon[] icons = new IIcon[6];
 
 	@Override
 	public void registerBlockIcons(IIconRegister iconRegister) {

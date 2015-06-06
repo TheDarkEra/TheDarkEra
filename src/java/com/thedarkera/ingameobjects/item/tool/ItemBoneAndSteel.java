@@ -3,10 +3,10 @@ package com.thedarkera.ingameobjects.item.tool;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import com.thedarkera.api.items.ModItem;
+import com.thedarkera.api.items.ItemTDEBase;
 import com.thedarkera.init.TDEBlocks;
 
-public class ItemBoneAndSteel extends ModItem {
+public class ItemBoneAndSteel extends ItemTDEBase {
 
 	public ItemBoneAndSteel(String name) {
 		super(name);

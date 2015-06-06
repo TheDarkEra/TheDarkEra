@@ -9,15 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 
-import com.thedarkera.api.blocks.ModBlock;
+import com.thedarkera.api.blocks.BlockTDEBase;
 import com.thedarkera.init.TDEBlocks;
 
-public class BlockDarkOre extends ModBlock { //BlockOre
+public class BlockDarkOre extends BlockTDEBase { //BlockOre
 
-	
 	public BlockDarkOre(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
-		super(material, hardness, resistance, name, tool, lvl, sound);
-		setHarvestLevel(tool, lvl);
+		super(name, material, hardness, resistance, tool, lvl, sound);
 	}
 	
 	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)

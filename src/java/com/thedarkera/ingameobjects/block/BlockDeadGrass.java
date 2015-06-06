@@ -10,15 +10,15 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.blocks.ModBlock;
+import com.thedarkera.api.blocks.BlockTDEBase;
 import com.thedarkera.init.TDEBlocks;
 
-public class BlockDeadGrass extends ModBlock {
+public class BlockDeadGrass extends BlockTDEBase {
 	private IIcon[] icons = new IIcon[6];
 	private String textureName = "dead_grass";
 
 	public BlockDeadGrass(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
-		super(material, hardness, resistance, name, tool, lvl, sound);
+		super(name, material, hardness, resistance, tool, lvl, sound);
 	}
 
 	@Override
