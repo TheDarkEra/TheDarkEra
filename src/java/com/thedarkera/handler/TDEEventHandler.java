@@ -18,6 +18,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class TDEEventHandler {
 
+    // this is unused and should be removed?
 	public void onUpdate(PlayerUseItemEvent event) {
 		EntityPlayer entity = event.entityPlayer;
 		if (entity instanceof EntityPlayerMP && ((EntityPlayerMP) entity).getCurrentEquippedItem() == null) {
@@ -35,31 +36,3 @@ public class TDEEventHandler {
         }
 	}
 }
-
-// @SubscribeEvent
-// public void onEntityConstructing(EntityConstructing event) {
-// if (event.entity instanceof EntityPlayer && ExtendedPlayer.get((EntityPlayer)
-// event.entity) == null)
-// ExtendedPlayer.register((EntityPlayer) event.entity);
-//
-// if (event.entity instanceof EntityPlayer &&
-// event.entity.getExtendedProperties(ExtendedPlayer.EXT_PROP_NAME) == null)
-// event.entity.registerExtendedProperties(ExtendedPlayer.EXT_PROP_NAME, new
-// ExtendedPlayer((EntityPlayer) event.entity));
-// }
-//
-// @SubscribeEvent
-// public void onEntityJoinWorld(EntityJoinWorldEvent event) {
-// if (event.entity instanceof EntityPlayer && !event.entity.worldObj.isRemote)
-// {
-// // Using my SimpleNetworkWrapper implementation:
-// TheDarkEra.packetPipeline.sendToServer(new PacketSyncMana((EntityPlayer)
-// event.entity));
-// }
-// }
-//
-// @SubscribeEvent
-// public void onClonePlayer(PlayerEvent.Clone event) {
-// ExtendedPlayer.get(event.entityPlayer).copy(ExtendedPlayer.get(event.original));
-// }
-// }

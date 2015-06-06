@@ -16,18 +16,15 @@ public class ItemAchievementBook extends ItemTDEBase {
 		setMaxStackSize(1);
 	}
 
+    @Deprecated
 	@Override
 	public boolean hasEffect(ItemStack stack) {
 		return true;
 	}
-	
-	/* TODO: onItemRightClick openGui
-	 */
 
     @Override
     public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player) {
             player.openGui(TheDarkEra.instance, GuiID.ACHIEVEMENTBOOK.ordinal(), world, (int) player.posX, (int) player.posY, (int) player.posZ);
-            //FMLClientHandler.instance().displayGuiScreen(player, new GuiAchievementsBook());
 
         return item;
     }
