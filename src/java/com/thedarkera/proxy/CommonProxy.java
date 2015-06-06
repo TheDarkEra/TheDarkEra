@@ -7,6 +7,7 @@ import net.minecraft.nbt.NBTTagCompound;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.handler.GuiHandler;
+import com.thedarkera.ingameobjects.tileentity.TEDragonBone;
 import com.thedarkera.ingameobjects.tileentity.TESmasher;
 import com.thedarkera.ingameobjects.tileentity.TESmeltery;
 
@@ -18,9 +19,14 @@ public class CommonProxy {
 
     public void init() {}
 
+    public void registerRenderers() {
+    	
+    }
+    
 	public void registerTileEntities() {
 		GameRegistry.registerTileEntity(TESmasher.class, TESmasher.name);
 		GameRegistry.registerTileEntity(TESmeltery.class, "smeltery");
+		GameRegistry.registerTileEntity(TEDragonBone.class, "dragon_bone");
 	}
 
 	public void registerGuiHandler() {

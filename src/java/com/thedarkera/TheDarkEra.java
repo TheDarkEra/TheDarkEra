@@ -140,6 +140,7 @@ public class TheDarkEra {
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 3.");
 
 		proxy.registerGuiHandler();
+		proxy.registerRenderers();
 
 		packetPipeline.postInitialize();
 

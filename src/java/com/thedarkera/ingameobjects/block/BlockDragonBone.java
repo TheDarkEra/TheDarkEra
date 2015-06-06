@@ -4,25 +4,35 @@ import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
-import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraft.world.World;
 
-import com.thedarkera.api.blocks.BlockTDEBase;
+import com.thedarkera.TheDarkEra;
+import com.thedarkera.ingameobjects.tileentity.TEDragonBone;
 import com.thedarkera.init.TDEItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockDragonBone extends BlockTDEBase {
+public class BlockDragonBone extends BlockContainer {
 
-	// TODO make a 3D model
-
+	// TODO fix side not rendering
+	
 	public BlockDragonBone(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
-		super(name, material, hardness, resistance, tool, lvl, sound);
+		super(material);
+		
+		setBlockName(name);
+		setBlockTextureName(TheDarkEra.MODID + ":dragon_bone");
+		setHardness(hardness);
+		setResistance(resistance);
+		setHarvestLevel(tool, lvl);
+		setStepSound(sound);
 		setLightOpacity(1);
 	}
 
@@ -48,9 +58,25 @@ public class BlockDragonBone extends BlockTDEBase {
 	}
 
 	@Override
+	public boolean shouldSideBeRendered(IBlockAccess world, int x, int y, int z, int side) {
+		return false;
+	}
+
+	@Override
 	public boolean isOpaqueCube() {
 		return false;
 	}
+
+	@Override
+	public boolean renderAsNormalBlock() {
+		return false;
+	}
+	
+	@Override
+	public boolean isBlockSolid(IBlockAccess world, int x, int y, int z, int meta)
+    {
+        return true;
+    }
 
 	@Override
 	public Item getItemDropped(int meta, Random rand, int par2){
@@ -78,14 +104,8 @@ public class BlockDragonBone extends BlockTDEBase {
 	}
 
 	@Override
-	public boolean renderAsNormalBlock() {
-		return false;
-	}
-
-	@Override
-	public boolean isSideSolid(IBlockAccess world, int x, int y, int z, ForgeDirection side) {
-	//  int meta = world.getBlockMetadata(x, y, z);
-		return side == ForgeDirection.UP;
+	public TileEntity createNewTileEntity(World world, int par2) {
+		return new TEDragonBone();
 	}
 }
 
