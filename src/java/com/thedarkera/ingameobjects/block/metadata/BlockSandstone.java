@@ -13,7 +13,6 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
-import com.thedarkera.api.blocks.ModBlock;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
