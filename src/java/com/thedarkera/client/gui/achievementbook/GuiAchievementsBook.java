@@ -26,7 +26,7 @@ public class GuiAchievementsBook extends GuiScreen {
     private int maxPages;
     private PageButton bButton;
     private PageButton nButton;
-    private List<GuiAchievement> achievementList = new ArrayList<>();
+    private List<GuiAchievement> achievementList = new ArrayList<GuiAchievement>();
 
     @Override
     public void initGui() {

@@ -15,6 +15,7 @@ import java.util.List;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.NetHandlerPlayServer;
 
@@ -128,6 +129,13 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
 		}
 		//out.add(abstractPacket);
 	}
+
+    public void sendToClient(EntityPlayerMP player, AbstractPacket message){
+        this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.PLAYER);
+        this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGETARGS).set(player);
+        this.channels.get(Side.SERVER).writeAndFlush(message);
+    }
+
 	public void sendToServer(AbstractPacket message){
 		this.channels.get(Side.CLIENT).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.TOSERVER);
 		this.channels.get(Side.CLIENT).writeAndFlush(message);

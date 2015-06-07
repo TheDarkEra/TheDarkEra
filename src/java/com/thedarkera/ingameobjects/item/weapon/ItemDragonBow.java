@@ -33,7 +33,8 @@ public class ItemDragonBow extends Item {
 		setTextureName(TheDarkEra.MODID + ":" + name);
 		setCreativeTab(TDE.tabTDEItems);
 	}
-	
+
+    @Deprecated
 	@Override
 	public boolean hasEffect(ItemStack stack) {
 		
