@@ -1,13 +1,11 @@
 package com.thedarkera.init;
 
-import com.thedarkera.ingameobjects.block.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
-
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlassPane;
@@ -19,7 +17,6 @@ import com.thedarkera.ingameobjects.block.BlockDarkGrass;
 import com.thedarkera.ingameobjects.block.BlockDarkGravel;
 import com.thedarkera.ingameobjects.block.BlockDarkOre;
 import com.thedarkera.ingameobjects.block.BlockDarkSand;
-import com.thedarkera.ingameobjects.block.BlockDarkSandstone;
 import com.thedarkera.ingameobjects.block.BlockDarkStone;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneBricks;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneDirt;
@@ -28,6 +25,7 @@ import com.thedarkera.ingameobjects.block.BlockDarkStoneLadder;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneSlab;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneStairs;
 import com.thedarkera.ingameobjects.block.BlockDeadGrass;
+import com.thedarkera.ingameobjects.block.BlockDragonBone;
 import com.thedarkera.ingameobjects.block.BlockDragonBoneOre;
 import com.thedarkera.ingameobjects.block.BlockEbonyOre;
 import com.thedarkera.ingameobjects.block.BlockGrapePlant;
@@ -41,7 +39,6 @@ import com.thedarkera.ingameobjects.block.BlockRottenWoodStairs;
 import com.thedarkera.ingameobjects.block.BlockSaplings;
 import com.thedarkera.ingameobjects.block.BlockSmeltery;
 import com.thedarkera.ingameobjects.block.BlockWeedyDirt;
-
 import com.thedarkera.ingameobjects.block.heads.HeadDeathLord;
 import com.thedarkera.ingameobjects.block.leaves.BlockLeaf;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs1;
@@ -49,6 +46,8 @@ import com.thedarkera.ingameobjects.block.logs.BlockLogs2;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs3;
 import com.thedarkera.ingameobjects.block.metadata.BlockClay;
 import com.thedarkera.ingameobjects.block.metadata.BlockClayItem;
+import com.thedarkera.ingameobjects.block.metadata.BlockSandstone;
+import com.thedarkera.ingameobjects.block.metadata.BlockSandstoneItem;
 import com.thedarkera.ingameobjects.block.metadata.BlockWool;
 import com.thedarkera.ingameobjects.block.metadata.BlockWoolItem;
 import com.thedarkera.ingameobjects.flatblocks.FlatBlockExample;
@@ -90,12 +89,6 @@ public class TDEBlocks {
 	public static Block smeltery;
 	public static Block smasher;
 
-	// Wool/Clay
-//	public static Block dark_wool;
-	//public static Block dark_wool_2;
-	//public static Block dark_clay;
-	//public static Block dark_clay_2;
-
 	// plants//
 	public static Block grape_plant;
 	public static Block saplings;
@@ -124,7 +117,6 @@ public class TDEBlocks {
 	public static Block dark_grass;
 	public static Block dark_dirt;
 	public static Block dark_gravel;
-	public static Block dark_sandstone;
 	public static Block dark_sand;
 	public static Block dark_sandstone_bricks;
 
@@ -146,6 +138,7 @@ public class TDEBlocks {
 	//MetaData blocks//
 	public static Block dark_clay;
 	public static Block dark_wool;
+	public static Block dark_sandstone;
 	
 
 	
@@ -188,12 +181,6 @@ public class TDEBlocks {
 		smeltery = new BlockSmeltery();
 		reg(smeltery);
 		
-	   // Wool/Clay  //
-		//dark_wool = new BlockWool(Material.cloth, 0.9f, 1.7f, "dark_wool", "shovel", 1, Block.soundTypeCloth);
-		//reg(dark_wool);
-	//	dark_clay = new BlockClay(Material.clay, 0.7f, 1.5f, "dark_clay", "shovel", 1, Block.soundTypeGravel);
-	//	reg(dark_clay);
-		
 		// Plants//
 		grape_plant = new BlockGrapePlant();
 		reg(grape_plant);
@@ -215,10 +202,6 @@ public class TDEBlocks {
 		reg(weedy_dirt);
 		dark_sand = new BlockDarkSand(Material.sand, 2f, 2f, "dark_sand", "shovel", 0, Block.soundTypeSand);
 		reg(dark_sand);
-		dark_sandstone = new BlockDarkSandstone(Material.rock, 2f, 2f, "dark_sandstone", "pickaxe", 0, Block.soundTypeStone);
-		reg(dark_sandstone);
-		dark_sandstone_bricks = new BlockDarkSandstone(Material.rock, 2f, 2f, "dark_sandstone_bricks", "pickaxe", 0, Block.soundTypeStone);
-		reg(dark_sandstone_bricks);
 
 		blockLog1 = new BlockLogs1().setBlockName("log1").setCreativeTab(TDE.tabTDEBlocks);
 		reg(blockLog1, ItemLogBlocks1.class);
@@ -270,10 +253,12 @@ public class TDEBlocks {
 		reg(death_lord_head);
 		
 		// Meta Blocks//
-		dark_clay = new BlockClay(Material.rock, 0.1f, 0.1f, "dark_clay", "pickaxe", 0, Block.soundTypeSand);
+		dark_clay = new BlockClay(Material.rock, 0.1f, 0.1f, "dark_clay", "shovel", 0, Block.soundTypeSand);
 		GameRegistry.registerBlock(dark_clay, BlockClayItem.class, "dark_clay");
-		dark_wool = new BlockWool(Material.cloth, 0.1f, 0.1f, "dark_wool", "pickaxe", 0, Block.soundTypeCloth);
+		dark_wool = new BlockWool(Material.cloth, 0.1f, 0.1f, "dark_wool", "sheers", 0, Block.soundTypeCloth);
 		GameRegistry.registerBlock(dark_wool, BlockWoolItem.class, "dark_wool");
+		dark_sandstone = new BlockSandstone(Material.rock, 0.1f, 0.1f, "dark_sandstone", "pickaxe", 0, Block.soundTypeStone);
+		GameRegistry.registerBlock(dark_sandstone, BlockSandstoneItem.class, "dark_sandstone");
 
 	}
 
