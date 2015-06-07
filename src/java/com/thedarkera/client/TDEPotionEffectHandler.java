@@ -1,4 +1,4 @@
-package com.thedarkera.handler;
+package com.thedarkera.client;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.Potion;

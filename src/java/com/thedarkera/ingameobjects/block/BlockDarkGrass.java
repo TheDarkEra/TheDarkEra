@@ -10,16 +10,16 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.blocks.ModBlock;
+import com.thedarkera.api.blocks.BlockTDEBase;
 import com.thedarkera.init.TDEBlocks;
 
-public class BlockDarkGrass extends ModBlock {
+public class BlockDarkGrass extends BlockTDEBase {
 	private IIcon[] icons = new IIcon[6];
 	private String textureName = "dark_grass";
 	private String textureName1 = "dark_dirt";
 
 	public BlockDarkGrass(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
-		super(material, hardness, resistance, name, tool, lvl, sound);
+		super(name, material, hardness, resistance, tool, lvl, sound);
 		setTickRandomly(true);
 	}
 

@@ -8,15 +8,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.blocks.ModBlock;
+import com.thedarkera.api.blocks.BlockTDEBase;
 import com.thedarkera.init.TDETools;
 
-public class BlockAncientOre extends ModBlock {
+public class BlockAncientOre extends BlockTDEBase {
 
 	public BlockAncientOre(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
-		super(material, hardness, resistance, name, tool, lvl, sound);
-		setHarvestLevel(tool, lvl);
+		super(tool, material, hardness, resistance, tool, lvl, sound);
 	}
 
 	@Override

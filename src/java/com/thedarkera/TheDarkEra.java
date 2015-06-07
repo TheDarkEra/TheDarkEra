@@ -3,14 +3,12 @@ package com.thedarkera;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
+import com.thedarkera.client.TDEPotionEffectHandler;
 import com.thedarkera.handler.*;
 import com.thedarkera.init.*;
 import net.minecraft.client.Minecraft;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ChatComponentText;
-import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -122,13 +120,11 @@ public class TheDarkEra {
 		packetPipeline.initialize();
 
 		proxy.registerTileEntities();
-		proxy.init();
 
 		DimensionManager.registerProviderType(dimension, TDEWorldProvider.class, false);
 		DimensionManager.registerDimension(dimension, dimension);
 
 		MinecraftForge.EVENT_BUS.register(new TDEEventHandler());
-		MinecraftForge.EVENT_BUS.register(new TDEPotionEffectHandler());
 
 		FMLCommonHandler.instance().bus().register(new AchievedHandler());
 
@@ -140,6 +136,7 @@ public class TheDarkEra {
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 3.");
 
 		proxy.registerGuiHandler();
+		proxy.registerRenderers();
 
 		packetPipeline.postInitialize();
 

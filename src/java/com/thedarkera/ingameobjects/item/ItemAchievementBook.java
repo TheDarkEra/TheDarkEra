@@ -6,9 +6,9 @@ import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.TheDarkEra.GuiID;
-import com.thedarkera.api.items.ModItem;
+import com.thedarkera.api.items.ItemTDEBase;
 
-public class ItemAchievementBook extends ModItem {
+public class ItemAchievementBook extends ItemTDEBase {
 
 	public ItemAchievementBook(String name) {
 		super(name);
@@ -16,18 +16,15 @@ public class ItemAchievementBook extends ModItem {
 		setMaxStackSize(1);
 	}
 
+    @Deprecated
 	@Override
 	public boolean hasEffect(ItemStack stack) {
 		return true;
 	}
-	
-	/* TODO: onItemRightClick openGui
-	 */
 
     @Override
     public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player) {
             player.openGui(TheDarkEra.instance, GuiID.ACHIEVEMENTBOOK.ordinal(), world, (int) player.posX, (int) player.posY, (int) player.posZ);
-            //FMLClientHandler.instance().displayGuiScreen(player, new GuiAchievementsBook());
 
         return item;
     }

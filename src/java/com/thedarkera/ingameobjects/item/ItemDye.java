@@ -9,9 +9,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.items.ModItem;
+import com.thedarkera.api.items.ItemTDEBase;
 
-public class ItemDye extends ModItem{
+public class ItemDye extends ItemTDEBase{
 
 	public ItemDye(String name) {
 		super(name);
