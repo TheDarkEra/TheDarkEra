@@ -8,6 +8,10 @@ item.dark_dye_0.name=Dark Dye (Red)
 item.dark_dye_1.name=Dark Dye (Blue)
 item.dark_dye_2.name=Dark Dye (Green)
 item.dark_dye_3.name=Dark Dye (Gray)
+item.dark_clay_ball_0.name=Dark Clay Ball (Red)
+item.dark_clay_ball_1.name=Dark Clay Ball (Blue)
+item.dark_clay_ball_2.name=Dark Clay Ball (Green)
+item.dark_clay_ball_3.name=Dark Clay Ball (Gray)
 
 //Item Misc//
 item.death_lord_skull.name=Death Lord's Skull

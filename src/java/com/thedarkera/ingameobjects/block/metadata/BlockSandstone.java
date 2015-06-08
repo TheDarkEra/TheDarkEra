@@ -9,7 +9,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
-import net.minecraftforge.common.util.ForgeDirection;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
@@ -21,12 +20,13 @@ public class BlockSandstone extends Block {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
-
+	private String block;
+	
 	public BlockSandstone(Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
 		super(material);
-		String block = name;
+		block = name;
 		String resource = TheDarkEra.MODID + ":" + block;
-		
+
 		setBlockName(block);
 		setBlockTextureName(resource);
 		setCreativeTab(TDE.tabTDEBlocks);
@@ -39,10 +39,10 @@ public class BlockSandstone extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		icons = new IIcon[3];
+		icons = new IIcon[2];
 
 		for (int i = 0; i < icons.length; i++) {
-			icons[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":" + "dark_sandstone_" + i);
+			icons[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":meta/" + block + "_" + i);
 		}
 	}
 
@@ -50,17 +50,14 @@ public class BlockSandstone extends Block {
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int par1, int par2) {
 		switch (par2) {
-		case 0:
-			return icons[0];
-		case 1:
-			if (ForgeDirection.getOrientation(par1) == ForgeDirection.UP || ForgeDirection.getOrientation(par1) == ForgeDirection.DOWN)
-				return icons[2];
-			else
+			case 0:
+				return icons[0];
+			case 1:
 				return icons[1];
-		default:
-			System.out.println("Problems with getting the icon for sandstone");
-			System.out.println("STAHP DA SPAM!!!");
-			return null;
+			default:
+				System.out.println("Problems with getting the icon for" + block);
+				System.out.println("STAHP DA SPAM!!!");
+				return null;
 		}
 	}
 

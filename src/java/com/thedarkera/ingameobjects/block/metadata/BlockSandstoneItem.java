@@ -24,14 +24,14 @@ public class BlockSandstoneItem extends ItemBlock
 			name = "";
 			break;
 		case 1:
-			name = "_bricks";
+			name = ".bricks";
 			break;
 		default:
 			System.out.println("Invalid metadata for Block dark_clay");
 			name = "broken";
 			break;
 		}
-		return getUnlocalizedName() + "." + name;
+		return getUnlocalizedName() + name;
 	}
 	
 	@Override

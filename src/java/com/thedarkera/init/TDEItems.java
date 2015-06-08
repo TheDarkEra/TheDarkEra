@@ -1,7 +1,6 @@
 package com.thedarkera.init;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 import com.thedarkera.api.helper.RegHelper;
 import com.thedarkera.api.items.TabLogo;
@@ -12,7 +11,6 @@ import com.thedarkera.ingameobjects.item.ItemDarkFlint;
 import com.thedarkera.ingameobjects.item.ItemDarkStoneRod;
 import com.thedarkera.ingameobjects.item.ItemDragonBone;
 import com.thedarkera.ingameobjects.item.ItemDragonScale;
-import com.thedarkera.ingameobjects.item.ItemDye;
 import com.thedarkera.ingameobjects.item.ItemEbonyIngot;
 import com.thedarkera.ingameobjects.item.ItemFireRune;
 import com.thedarkera.ingameobjects.item.ItemFrostRune;
@@ -27,6 +25,8 @@ import com.thedarkera.ingameobjects.item.drops.ItemAshDrops;
 import com.thedarkera.ingameobjects.item.food.ItemAshHopperMeat;
 import com.thedarkera.ingameobjects.item.food.ItemBowlOJelly;
 import com.thedarkera.ingameobjects.item.food.ItemGrape;
+import com.thedarkera.ingameobjects.item.meta.ItemClayBall;
+import com.thedarkera.ingameobjects.item.meta.ItemDye;
 import com.thedarkera.ingameobjects.item.tool.ItemBoneAndSteel;
 import com.thedarkera.ingameobjects.item.tool.ItemShout;
 import com.thedarkera.placeableitem.ItemPlaceAbleExample;
@@ -56,6 +56,7 @@ public class TDEItems {
 	
 	// Meta's //
 	public static Item dark_dye;
+	public static Item dark_clay_ball;
 	public static Item ash_drops;
 	
 	// Ingot items//
@@ -122,6 +123,8 @@ public class TDEItems {
 		// MetaItems //
 		dark_dye = new ItemDye("dark_dye");
 		reg(dark_dye);
+		dark_clay_ball = new ItemClayBall("dark_clay_ball");
+		reg(dark_clay_ball);
 		ash_drops = new ItemAshDrops("ash_drops");
 		reg(ash_drops);
 		
