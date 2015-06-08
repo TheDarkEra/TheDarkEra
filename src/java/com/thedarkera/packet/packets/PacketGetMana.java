@@ -20,13 +20,13 @@ public class PacketGetMana extends AbstractPacket {
 
 	public void encodeInto(ChannelHandlerContext ctx, ByteBuf buffer) {
 		buffer.writeInt(this.maxMana);
-		System.out.println("encoded maxMana: " + maxMana);
+		//System.out.println("encoded maxMana: " + maxMana);
 
 	}
 
 	public void decodeInto(ChannelHandlerContext ctx, ByteBuf buffer) {
 		this.maxMana = buffer.readInt();
-		System.out.println("dencoded maxMana: " + maxMana);
+		//System.out.println("dencoded maxMana: " + maxMana);
 	}
 
 	public void handleClientSide(EntityPlayer player) {
@@ -38,7 +38,7 @@ public class PacketGetMana extends AbstractPacket {
 	public void handleServerSide(EntityPlayer player) {
 
 		ExtendedPlayer props = ExtendedPlayer.get((EntityPlayer) player);
-		System.out.println(player.getCommandSenderName());
+		//System.out.println(player.getCommandSenderName());
 		props.setMaxMana(maxMana);
 	}
 

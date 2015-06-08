@@ -10,7 +10,8 @@ public class TDE {
 	public static CreativeTabs tabTDEBlocks = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era_blocks") {
 		@Override
 		public Item getTabIconItem() {
-			this.setBackgroundImageName("tabTDEBlocks");
+			this.setNoTitle();
+			this.setBackgroundImageName("TDEBlocks.png");
 			return TDEItems.tab_logo_0;
 		}
 	};
@@ -18,7 +19,8 @@ public class TDE {
 	public static CreativeTabs tabTDEItems = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era_items") {
 		@Override
 		public Item getTabIconItem() {
-			this.setBackgroundImageName("tabTDEItems");
+			this.setNoTitle();
+			this.setBackgroundImageName("TDEItems.png");
 			return TDEItems.tab_logo_1;
 		}
 	};

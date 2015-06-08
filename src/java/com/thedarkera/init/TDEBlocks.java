@@ -6,6 +6,7 @@ import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
+import com.thedarkera.api.blocks.BlockTDEStairs;
 import com.thedarkera.api.helper.RegHelper;
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
 import com.thedarkera.ingameobjects.block.BlockCrackedGlass;
@@ -23,7 +24,6 @@ import com.thedarkera.ingameobjects.block.BlockDarkStoneBricks;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneDirt;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneFence;
 import com.thedarkera.ingameobjects.block.BlockDarkStoneLadder;
-import com.thedarkera.ingameobjects.block.BlockDarkStoneStairs;
 import com.thedarkera.ingameobjects.block.BlockDeadGrass;
 import com.thedarkera.ingameobjects.block.BlockDragonBone;
 import com.thedarkera.ingameobjects.block.BlockDragonBoneOre;
@@ -35,7 +35,6 @@ import com.thedarkera.ingameobjects.block.BlockPortalDark;
 import com.thedarkera.ingameobjects.block.BlockRottenWood;
 import com.thedarkera.ingameobjects.block.BlockRottenWoodFence;
 import com.thedarkera.ingameobjects.block.BlockRottenWoodSlab;
-import com.thedarkera.ingameobjects.block.BlockRottenWoodStairs;
 import com.thedarkera.ingameobjects.block.BlockSaplings;
 import com.thedarkera.ingameobjects.block.BlockSmeltery;
 import com.thedarkera.ingameobjects.block.BlockWeedyDirt;
@@ -101,20 +100,23 @@ public class TDEBlocks {
 	public static Block dark_cobblestone;
 	public static Block dark_stone_bricks;
 	public static Block dark_stone_fence;
-	public static Block dark_stone_stairs;
 	public static Block rotten_wood;
-	public static Block rotten_wood_stairs;
 	public static Block rotten_wood_slab;
 	public static Block rotten_wood_fence;
 	public static Block dark_stone_dirt;
 	public static Block cracked_glass_pane;
 	public static Block cracked_glass;
 	public static Block lamp;
-	
+
 	// Slabs //
 	public static Block dark_stone_slab;
 	public static Block dark_stone_double_slab;
 
+	// Stairs //
+	public static Block dark_stone_stairs;
+	public static Block rotten_wood_stairs;
+	public static Block dark_sandstone_stairs;
+	
 	// Biome Blocks //
 	public static Block dead_grass;
 	public static Block weedy_dirt;
@@ -138,14 +140,11 @@ public class TDEBlocks {
 
 	// Boss Heads //
 	public static Block death_lord_head;
-	
+
 	//MetaData blocks//
 	public static Block dark_clay;
 	public static Block dark_wool;
 	public static Block dark_sandstone;
-	
-
-	
 
 	public static void init() {
 
@@ -184,7 +183,7 @@ public class TDEBlocks {
 		// TE
 		smeltery = new BlockSmeltery();
 		reg(smeltery);
-		
+
 		// Plants//
 		grape_plant = new BlockGrapePlant();
 		reg(grape_plant);
@@ -230,14 +229,10 @@ public class TDEBlocks {
 		// Special Blocks //
 		dark_stone_ladder = new BlockDarkStoneLadder();
 		reg(dark_stone_ladder);
-		dark_stone_stairs = new BlockDarkStoneStairs(dark_cobblestone, 0);
-		reg(dark_stone_stairs);
 		dark_stone_fence = new BlockDarkStoneFence(TheDarkEra.MODID + ":dark_stone");
 		reg(dark_stone_fence);
 		rotten_wood_fence = new BlockRottenWoodFence(TheDarkEra.MODID + ":rotting_wood");
 		reg(rotten_wood_fence);
-		rotten_wood_stairs = new BlockRottenWoodStairs(rotten_wood, 0);
-		reg(rotten_wood_stairs);
 		rotten_wood_slab = new BlockRottenWoodSlab(false, Material.wood);
 		reg(rotten_wood_slab);
 		cracked_glass_pane = new BlockCrackedGlassPane(TheDarkEra.MODID + ":cracked_glass", "cracked_glass", Material.glass, false);
@@ -256,10 +251,18 @@ public class TDEBlocks {
 		dark_stone_double_slab = new BlockDarkStoneDoubleSlab("dark_stone_double_slab", Material.rock, 1f, Block.soundTypeStone, "dark_stone_slab");
 		reg(dark_stone_double_slab);
 		
+		// Stairs //
+		dark_stone_stairs = new BlockTDEStairs(dark_cobblestone, 1, 1f, 1f, "dark_stone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
+		reg(dark_stone_stairs);
+		rotten_wood_stairs = new BlockTDEStairs(rotten_wood, 2, 1f, 1f, "rotten_wood_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
+		reg(rotten_wood_stairs);
+		//dark_sandstone_stairs = new BlockTDEStairs(dark_sandstone, 3, 1f, 1f, "dark_sandstone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
+		//reg(dark_sandstone_stairs);
+		
 		// Boss Heads //
 		death_lord_head = new HeadDeathLord(Material.cloth, 0.1f, 0.1f, "death_lord_head", "axe", 0, Block.soundTypeCloth);
 		reg(death_lord_head);
-		
+
 		// Meta Blocks//
 		dark_clay = new BlockClay(Material.rock, 0.1f, 0.1f, "dark_clay", "shovel", 0, Block.soundTypeSand);
 		GameRegistry.registerBlock(dark_clay, BlockClayItem.class, "dark_clay");
