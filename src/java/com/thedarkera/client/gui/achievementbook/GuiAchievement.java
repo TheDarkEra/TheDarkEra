@@ -1,17 +1,19 @@
 package com.thedarkera.client.gui.achievementbook;
 
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.utils.Achievement;
+import java.util.List;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.util.ResourceLocation;
+
 import org.lwjgl.opengl.GL11;
 
-import java.util.List;
+import com.thedarkera.api.helper.ResourceHelper;
+import com.thedarkera.utils.Achievement;
 
 public class GuiAchievement extends GuiButton{
 
-    private ResourceLocation texture = new ResourceLocation(TheDarkEra.MODID.toLowerCase(), "textures/gui/achievement_book.png");
+    private ResourceLocation texture = new ResourceLocation(ResourceHelper.getGuiResourceName() + "achievement_book.png");
 
     private boolean isAchieved;
     private int boxWidth;

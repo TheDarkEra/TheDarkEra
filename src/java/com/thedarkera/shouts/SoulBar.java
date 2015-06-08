@@ -1,13 +1,11 @@
 package com.thedarkera.shouts;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 
-import com.thedarkera.TheDarkEra;
+import com.thedarkera.api.helper.ResourceHelper;
 
 public class SoulBar {
 	// max manaBar should be 48
@@ -22,7 +20,7 @@ public class SoulBar {
 				//int posX = event.resolution.getScaledWidth() / 2 + 10;
 				//int posY = event.resolution.getScaledHeight() - 48;
 
-				mc.renderEngine.bindTexture(new ResourceLocation(TheDarkEra.MODID + ":textures/gui/SoulBar.png"));
+				mc.renderEngine.bindTexture(new ResourceLocation(ResourceHelper.getGuiResourceName() + "SoulBar.png"));
 
 //				mc.ingameGUI.drawTexturedModalRect(posX, posY, 0, 0, 50, 5);
 //				mc.ingameGUI.drawTexturedModalRect(posX + 1, posY + 1, 0, 6, (int) manaBar, 3);

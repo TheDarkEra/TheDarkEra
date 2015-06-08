@@ -11,4 +11,12 @@ public class ResourceHelper {
 	public static String getSlabResourceName(String name) {
 		return TheDarkEra.MODID + ":slabs/" + name;
 	}
+	
+	public static String getMetaResourceName(String name) {
+		return TheDarkEra.MODID + ":meta/" + name;
+	}
+	
+	public static String getGuiResourceName() {
+		return TheDarkEra.MODID + ":textures/gui/";
+	}
 }

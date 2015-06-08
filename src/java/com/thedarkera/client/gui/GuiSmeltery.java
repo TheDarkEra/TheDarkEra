@@ -1,7 +1,5 @@
 package com.thedarkera.client.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
@@ -9,12 +7,14 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 
-import com.thedarkera.TheDarkEra;
+import org.lwjgl.opengl.GL11;
+
+import com.thedarkera.api.helper.ResourceHelper;
 import com.thedarkera.ingameobjects.tileentity.TESmeltery;
 import com.thedarkera.inventory.ContainerSmeltery;
 
 public class GuiSmeltery extends GuiContainer {
-	private ResourceLocation texture = new ResourceLocation(TheDarkEra.MODID.toLowerCase(), "textures/gui/container/smeltery.png");
+	private ResourceLocation texture = new ResourceLocation(ResourceHelper.getGuiResourceName() + "smeltery.png");
 
 	private InventoryPlayer inventory;
 	private TESmeltery te;

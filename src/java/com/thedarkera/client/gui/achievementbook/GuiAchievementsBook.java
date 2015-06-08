@@ -1,19 +1,21 @@
 package com.thedarkera.client.gui.achievementbook;
 
-import com.thedarkera.TheDarkEra;
-import com.thedarkera.handler.AchievementHandler;
-import com.thedarkera.utils.Achievement;
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.util.ResourceLocation;
-import org.lwjgl.opengl.GL11;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.util.ResourceLocation;
+
+import org.lwjgl.opengl.GL11;
+
+import com.thedarkera.api.helper.ResourceHelper;
+import com.thedarkera.handler.AchievementHandler;
+import com.thedarkera.utils.Achievement;
+
 public class GuiAchievementsBook extends GuiScreen {
 
-    private ResourceLocation texture = new ResourceLocation(TheDarkEra.MODID.toLowerCase(), "textures/gui/achievement_book.png");
+    private ResourceLocation texture = new ResourceLocation(ResourceHelper.getGuiResourceName() + "achievement_book.png");
 
     private AchievementHandler achievements = new AchievementHandler();
 

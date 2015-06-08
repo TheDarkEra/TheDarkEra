@@ -1,14 +1,16 @@
 package com.thedarkera.client.gui.achievementbook;
 
-import com.thedarkera.TheDarkEra;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.util.ResourceLocation;
+
 import org.lwjgl.opengl.GL11;
+
+import com.thedarkera.api.helper.ResourceHelper;
 
 public class PageButton extends GuiButton{
 
-    private ResourceLocation texture = new ResourceLocation(TheDarkEra.MODID.toLowerCase(), "textures/gui/achievement_book.png");
+    private ResourceLocation texture = new ResourceLocation(ResourceHelper.getGuiResourceName() + "achievement_book.png");
     private final boolean nextPage;
 
     public PageButton(int id, int x, int y, boolean nextPage) {

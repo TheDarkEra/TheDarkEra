@@ -1,11 +1,11 @@
 package com.thedarkera.client.gui;
 
-import com.thedarkera.TheDarkEra;
-
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+
+import com.thedarkera.api.helper.ResourceHelper;
 
 public class GuiSmasher extends GuiScreen{
     
@@ -24,7 +24,7 @@ public class GuiSmasher extends GuiScreen{
         xSize = 176;
         ySize = 214;
     }
-    private ResourceLocation backgroundimage = new ResourceLocation(TheDarkEra.MODID.toLowerCase() + ":" + "textures/client/gui/GuiSmasher.png");
+    private ResourceLocation backgroundimage = new ResourceLocation(ResourceHelper.getGuiResourceName() + "GuiSmasher.png");
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float renderPartialTicks) {
