@@ -251,14 +251,6 @@ public class TDEBlocks {
 		dark_stone_double_slab = new BlockDarkStoneDoubleSlab("dark_stone_double_slab", Material.rock, 1f, Block.soundTypeStone, "dark_stone_slab");
 		reg(dark_stone_double_slab);
 		
-		// Stairs //
-		dark_stone_stairs = new BlockTDEStairs(dark_cobblestone, 1, 1f, 1f, "dark_stone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
-		reg(dark_stone_stairs);
-		rotten_wood_stairs = new BlockTDEStairs(rotten_wood, 2, 1f, 1f, "rotten_wood_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
-		reg(rotten_wood_stairs);
-		//dark_sandstone_stairs = new BlockTDEStairs(dark_sandstone, 3, 1f, 1f, "dark_sandstone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
-		//reg(dark_sandstone_stairs);
-		
 		// Boss Heads //
 		death_lord_head = new HeadDeathLord(Material.cloth, 0.1f, 0.1f, "death_lord_head", "axe", 0, Block.soundTypeCloth);
 		reg(death_lord_head);
@@ -270,6 +262,14 @@ public class TDEBlocks {
 		GameRegistry.registerBlock(dark_wool, BlockWoolItem.class, "dark_wool");
 		dark_sandstone = new BlockSandstone(Material.rock, 0.1f, 0.1f, "dark_sandstone", "pickaxe", 0, Block.soundTypeStone);
 		GameRegistry.registerBlock(dark_sandstone, BlockSandstoneItem.class, "dark_sandstone");
+
+        // Stairs //
+        dark_stone_stairs = new BlockTDEStairs(dark_cobblestone, 1, 1f, 1f, "dark_stone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
+        reg(dark_stone_stairs);
+        rotten_wood_stairs = new BlockTDEStairs(rotten_wood, 2, 1f, 1f, "rotten_wood_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
+        reg(rotten_wood_stairs);
+        dark_sandstone_stairs = new BlockTDEStairs(dark_sandstone, 3, 1f, 1f, "dark_sandstone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
+        reg(dark_sandstone_stairs);
 
 	}
 
