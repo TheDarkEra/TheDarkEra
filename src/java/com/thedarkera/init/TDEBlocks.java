@@ -6,6 +6,7 @@ import net.minecraft.item.ItemBlock;
 
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
+import com.thedarkera.api.blocks.BlockTDELamp;
 import com.thedarkera.api.blocks.BlockTDEStairs;
 import com.thedarkera.api.helper.RegHelper;
 import com.thedarkera.ingameobjects.block.BlockAncientOre;
@@ -45,6 +46,8 @@ import com.thedarkera.ingameobjects.block.logs.BlockLogs2;
 import com.thedarkera.ingameobjects.block.logs.BlockLogs3;
 import com.thedarkera.ingameobjects.block.metadata.BlockClay;
 import com.thedarkera.ingameobjects.block.metadata.BlockClayItem;
+import com.thedarkera.ingameobjects.block.metadata.BlockClayStairs;
+import com.thedarkera.ingameobjects.block.metadata.BlockClayStairsItem;
 import com.thedarkera.ingameobjects.block.metadata.BlockSandstone;
 import com.thedarkera.ingameobjects.block.metadata.BlockSandstoneItem;
 import com.thedarkera.ingameobjects.block.metadata.BlockWool;
@@ -145,6 +148,8 @@ public class TDEBlocks {
 	public static Block dark_clay;
 	public static Block dark_wool;
 	public static Block dark_sandstone;
+	public static Block purple_lamp; // TODO: Needs meta block set up (I'm running out of time before internet disconnects)
+	public static Block dark_clay_stairs;
 
 	public static void init() {
 
@@ -262,6 +267,10 @@ public class TDEBlocks {
 		GameRegistry.registerBlock(dark_wool, BlockWoolItem.class, "dark_wool");
 		dark_sandstone = new BlockSandstone(Material.rock, 0.1f, 0.1f, "dark_sandstone", "pickaxe", 0, Block.soundTypeStone);
 		GameRegistry.registerBlock(dark_sandstone, BlockSandstoneItem.class, "dark_sandstone");
+		purple_lamp = new BlockTDELamp("purple_lamp", Material.glass, 1f, 5f, "pickaxe", 0, Block.soundTypeGlass, 5f);
+		reg(purple_lamp);
+		dark_clay_stairs = new BlockClayStairs(dark_clay, 0, Material.rock, 0.1f, 0.1f, "dark_clay", "shovel", 0, Block.soundTypeSand);
+		GameRegistry.registerBlock(dark_clay_stairs, BlockClayStairsItem.class, "dark_clay_stairs");
 
         // Stairs //
         dark_stone_stairs = new BlockTDEStairs(dark_cobblestone, 1, 1f, 1f, "dark_stone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4

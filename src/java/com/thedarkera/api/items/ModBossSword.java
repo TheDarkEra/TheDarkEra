@@ -86,13 +86,18 @@ public class ModBossSword extends Item {
 		return block == Blocks.web;
 	}
 
-	/** Override this in sword classes
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, EntityPlayer player, List tooltip, boolean advanced) {
-		tooltip.add("");
-		tooltip.add("Attack Damage:" + EnumChatFormatting.DARK_RED + " Enough...");
-		tooltip.add("Obtained by killing the Boss: " + EnumChatFormatting.DARK_BLUE + "Need to add Boss");
-	} **/
-	
+	/**
+	 * Override this in sword classes
+	 * 
+	 * @Override
+	 * @SideOnly(Side.CLIENT) public void addInformation(ItemStack stack,
+	 *                        EntityPlayer player, List tooltip, boolean
+	 *                        advanced) { tooltip.add("");
+	 *                        tooltip.add("Attack Damage:" +
+	 *                        EnumChatFormatting.DARK_RED + " Enough...");
+	 *                        tooltip.add("Obtained by killing the Boss: " +
+	 *                        EnumChatFormatting.DARK_BLUE +
+	 *                        "Need to add Boss"); }
+	 **/
+
 }
