@@ -18,7 +18,7 @@ public class ExtendedPlayerAchievements implements IExtendedEntityProperties {
     public final static String identifier = TheDarkEra.MODID + "_achievements";
 
     private final EntityPlayer player;
-    private static Map<EntityPlayer, List<Achievement>> achievements = new HashMap<EntityPlayer, List<Achievement>>();
+    //private static Map<EntityPlayer, List<Achievement>> achievements = new HashMap<EntityPlayer, List<Achievement>>();
 
     public ExtendedPlayerAchievements(EntityPlayer player){
         this.player = player;
@@ -29,29 +29,51 @@ public class ExtendedPlayerAchievements implements IExtendedEntityProperties {
         return (ExtendedPlayerAchievements) player.getExtendedProperties(identifier);
     }
 
-    @Override
+    /*@Override
     public void saveNBTData(NBTTagCompound compound) {
         NBTTagCompound properties = new NBTTagCompound();
-        /*achievements = AchievementHandler.getAchievementMap();
+        achievements = AchievementHandler.getAchievementMap();
         for(int i = 0; i < AchievementHandler.achievementNames.size(); i++) {
             Achievement achievement = achievements.get(AchievementHandler.achievementNames.get(i));
             String name = achievement.getName();
             boolean isAchieved = achievement.isAchieved();
             properties.setBoolean(name, isAchieved);
-        }*/
+        }
         compound.setTag(identifier, properties);
     }
 
     @Override
     public void loadNBTData(NBTTagCompound compound) {
         NBTTagCompound properties = (NBTTagCompound) compound.getTag(identifier);
-        /*achievements = AchievementHandler.getAchievementMap();
+        achievements = AchievementHandler.getAchievementMap();
         for(int i = 0; i < AchievementHandler.achievementNames.size(); i++) {
             Achievement achievement = achievements.get(AchievementHandler.achievementNames.get(i));
             String name = achievement.getName();
             achievement.setAchieved(properties.getBoolean(name));
         }
-        AchievementHandler.setAchievementMap(achievements);*/
+        AchievementHandler.setAchievementMap(achievements);
+    }*/
+
+    @Override
+    public void saveNBTData(NBTTagCompound compound) {
+        NBTTagCompound properties = new NBTTagCompound();
+        for(int i = 0; i < AchievementHandler.achievementNames.size(); i++) {
+            Achievement achievement = AchievementHandler.achievements.get(AchievementHandler.achievementNames.get(i));
+            String name = achievement.getName();
+            boolean isAchieved = achievement.isAchieved();
+            properties.setBoolean(name, isAchieved);
+        }
+        compound.setTag(identifier, properties);
+    }
+
+    @Override
+    public void loadNBTData(NBTTagCompound compound) {
+        NBTTagCompound properties = (NBTTagCompound) compound.getTag(identifier);
+        for(int i = 0; i < AchievementHandler.achievementNames.size(); i++) {
+            Achievement achievement = AchievementHandler.achievements.get(AchievementHandler.achievementNames.get(i));
+            String name = achievement.getName();
+            achievement.setAchieved(properties.getBoolean(name));
+        }
     }
 
     @Override

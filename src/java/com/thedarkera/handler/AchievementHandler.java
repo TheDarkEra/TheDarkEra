@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class AchievementHandler {
 
-    private static Map<String, Achievement> achievements = new HashMap<String, Achievement>();
+    /*private*/ public static Map<String, Achievement> achievements = new HashMap<String, Achievement>();
     public static List<String> achievementNames = new ArrayList<String>();
 
     public static void add(Achievement achievement){
@@ -42,7 +42,7 @@ public class AchievementHandler {
     }
 
     public static void setAchieved(Achievement achievement) {
-        if(FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
+        //if(FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
             String name = achievement.getName();
             if (achievements.containsKey(name)) {
                 if (!achievements.get(name).isAchieved()) {
@@ -52,7 +52,7 @@ public class AchievementHandler {
             } else {
                 TheDarkEra.logger.warn(name + " cannot be achieved because it isn't registered!");
             }
-        }
+        //}
     }
 
     public static int getAmount(){
