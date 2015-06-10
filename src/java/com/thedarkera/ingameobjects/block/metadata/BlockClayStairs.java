@@ -13,6 +13,7 @@ import net.minecraft.util.IIcon;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
 import com.thedarkera.api.blocks.BlockTDEStairs;
+import com.thedarkera.api.helper.ResourceHelper;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -27,10 +28,9 @@ public class BlockClayStairs extends BlockTDEStairs {
 	public BlockClayStairs(Block materialFromBlock, int par2, Material material, Float hardness, Float resistance, String name, String tool, int lvl, Block.SoundType sound) {
 		super(materialFromBlock, par2, hardness, resistance, name, sound);
 		block = name;
-		String resource = TheDarkEra.MODID + ":" + block;
 
 		setBlockName(block);
-		setBlockTextureName(resource);
+		setBlockTextureName(ResourceHelper.getMetaResourceName(name));
 		setCreativeTab(TDE.tabTDEBlocks);
 		setResistance(resistance);
 		setHardness(hardness);
@@ -44,7 +44,7 @@ public class BlockClayStairs extends BlockTDEStairs {
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		icons = new IIcon[4];
 
-		for (int i = 0; i < icons.length; i++) {
+		for (int i = 0; i < icons.length; ++i) {
 			icons[i] = par1IconRegister.registerIcon(TheDarkEra.MODID + ":meta/" + clay + "_" + i);
 		}
 	}

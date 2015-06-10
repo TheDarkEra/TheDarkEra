@@ -66,12 +66,12 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TDEBlocks {
 	// This adds all the trees. DO NOT CHANGE THE NAMES!
-	public static String[] treeTypes1 = new String[] { "Dead", "Dark_Jungle", "Dark_Birch", "Royal_Oak", "Dark_Oak" };
-	public static String[][] leafTypes = new String[][] { { "Leaf_Dead", "Leaf_Dark_Jungle", "Leaf_Dark_Birch", "Leaf_Royal_Oak", "Leaf_Black_Wood_Tree", "Leaf_Paper_Birch_Tree", "Leaf_Maple_Tree", "Leaf_Rotten_Tree", "Leaf_Black_Willow", "Leaf_Mangroves" }, { "Leaf_Dead_Opaque", "Leaf_Dark_Jungle	_Opaque", "Leaf_Dark_Birch_Opaque", "Leaf_Royal_Oak_Opaque", "Leaf_Black_Wood_Tree_Opaque", "Leaf_Paper_Birch_Tree_Opaque", "Leaf_Maple_Tree_Opaque", "Leaf_Rotten_Tree_Opaque", "Leaf_Black_Willow_Opaque", "Leaf_Mangroves_Opaque" } };
+	public static String[] treeTypes1 = new String[] { "Dead", "Dark_Jungle", "Dark_Birch", "Royal_Oak", "Dark_Oak", "Dark_Spruce" };
+	public static String[][] leafTypes = new String[][] { { "Leaf_Dead", "Leaf_Dark_Jungle", "Leaf_Dark_Birch", "Leaf_Royal_Oak", "Leaf_Black_Wood_Tree", "Leaf_Paper_Birch_Tree", "Leaf_Maple_Tree", "Leaf_Rotten_Tree", "Leaf_Black_Willow", "Leaf_Mangroves", "Leaf_Dark_Spruce" }, { "Leaf_Dead_Opaque", "Leaf_Dark_Jungle	_Opaque", "Leaf_Dark_Birch_Opaque", "Leaf_Royal_Oak_Opaque", "Leaf_Black_Wood_Tree_Opaque", "Leaf_Paper_Birch_Tree_Opaque", "Leaf_Maple_Tree_Opaque", "Leaf_Rotten_Tree_Opaque", "Leaf_Black_Willow_Opaque", "Leaf_Mangroves_Opaque", "Leaf_Dark_Spruce" } };
 	public static String[] treeTypes2 = new String[] { "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree" };
 	public static String[] treeTypes3 = new String[] { "Black_Willow", "Mangroves" };
 	public static String[] treeTypes4 = new String[] { "Black_Willow", "Mangroves" };
-	public static String[] allTreeTypes = new String[] { "Dead", "Dark_Jungle", "Dark_Birch", "Royal_Oak", "Dark_Oak", "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves" };
+	public static String[] allTreeTypes = new String[] { "Dead", "Dark_Jungle", "Dark_Birch", "Royal_Oak", "Dark_Oak", "Black_Wood_Tree", "Paper_Birch_Tree", "Maple_Tree", "Rotten_Tree", "Black_Willow", "Mangroves", "Dark_Spruce" };
 
 	// Blocks//
 	public static Block ebony_ore;
@@ -119,7 +119,7 @@ public class TDEBlocks {
 	public static Block dark_stone_stairs;
 	public static Block rotten_wood_stairs;
 	public static Block dark_sandstone_stairs;
-	
+
 	// Biome Blocks //
 	public static Block dead_grass;
 	public static Block weedy_dirt;
@@ -255,7 +255,7 @@ public class TDEBlocks {
 		reg(dark_stone_slab);
 		dark_stone_double_slab = new BlockDarkStoneDoubleSlab("dark_stone_double_slab", Material.rock, 1f, Block.soundTypeStone, "dark_stone_slab");
 		reg(dark_stone_double_slab);
-		
+
 		// Boss Heads //
 		death_lord_head = new HeadDeathLord(Material.cloth, 0.1f, 0.1f, "death_lord_head", "axe", 0, Block.soundTypeCloth);
 		reg(death_lord_head);
@@ -269,16 +269,16 @@ public class TDEBlocks {
 		GameRegistry.registerBlock(dark_sandstone, BlockSandstoneItem.class, "dark_sandstone");
 		purple_lamp = new BlockTDELamp("purple_lamp", Material.glass, 1f, 5f, "pickaxe", 0, Block.soundTypeGlass, 5f);
 		reg(purple_lamp);
-		dark_clay_stairs = new BlockClayStairs(dark_clay, 0, Material.rock, 0.1f, 0.1f, "dark_clay", "shovel", 0, Block.soundTypeSand);
+		dark_clay_stairs = new BlockClayStairs(dark_clay, 0, Material.rock, 0.1f, 0.1f, "dark_clay_stairs", "shovel", 0, Block.soundTypeSand);
 		GameRegistry.registerBlock(dark_clay_stairs, BlockClayStairsItem.class, "dark_clay_stairs");
 
-        // Stairs //
-        dark_stone_stairs = new BlockTDEStairs(dark_cobblestone, 1, 1f, 1f, "dark_stone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
-        reg(dark_stone_stairs);
-        rotten_wood_stairs = new BlockTDEStairs(rotten_wood, 2, 1f, 1f, "rotten_wood_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
-        reg(rotten_wood_stairs);
-        dark_sandstone_stairs = new BlockTDEStairs(dark_sandstone, 3, 1f, 1f, "dark_sandstone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
-        reg(dark_sandstone_stairs);
+		// Stairs //
+		dark_stone_stairs = new BlockTDEStairs(dark_cobblestone, 1, 1f, 1f, "dark_stone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
+		reg(dark_stone_stairs);
+		rotten_wood_stairs = new BlockTDEStairs(rotten_wood, 2, 1f, 1f, "rotten_wood_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
+		reg(rotten_wood_stairs);
+		dark_sandstone_stairs = new BlockTDEStairs(dark_sandstone, 3, 1f, 1f, "dark_sandstone_stairs", Block.soundTypeStone); // TODO: Set Parameter 3 & 4
+		reg(dark_sandstone_stairs);
 
 	}
 

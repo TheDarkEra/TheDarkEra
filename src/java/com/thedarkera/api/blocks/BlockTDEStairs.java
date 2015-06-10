@@ -2,10 +2,10 @@ package com.thedarkera.api.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
-import net.minecraft.block.material.Material;
 import net.minecraft.util.IIcon;
 
 import com.thedarkera.api.TDE;
+import com.thedarkera.api.helper.ResourceHelper;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

@@ -2,6 +2,7 @@ package com.thedarkera.handler;
 
 import com.thedarkera.init.TDEAchievements;
 import com.thedarkera.init.TDEBiomes;
+import com.thedarkera.score.ScoreStat;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
@@ -30,56 +31,67 @@ public class EnterBiomeHandler {
 		if (biome == TDEBiomes.dark_forest) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Forrest biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome);
+			ScoreStat.addScore(1);
 		}
 		
 		if (biome == TDEBiomes.dark_jungle) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Jungle biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome1);
+			ScoreStat.addScore(1);
 		}
 		
 		/*if (biome == TDEBiomes.dark_plains) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Plains biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome2);
+			ScoreStat.addScore(1);
 		}*/
 		
 		if (biome == TDEBiomes.dark_hills) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Hills biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome3);
+			ScoreStat.addScore(1);
 		}
 		
 		if (biome == TDEBiomes.dead_land) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dead Land biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome4);
+			ScoreStat.addScore(1);
 		}
 		
 		if (biome == TDEBiomes.dark_ocean) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Ocean biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome5);
+			ScoreStat.addScore(1);
 		}
 		
 		if (biome == TDEBiomes.dark_land) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Land biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome6);
+			ScoreStat.addScore(1);
 		}
 		
 		if (biome == TDEBiomes.ancient_land) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Ancient Land biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome7);
+			ScoreStat.addScore(1);
 		}
 		
 		if (biome == TDEBiomes.misty_mountains) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Misty Mountains biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome8);
+			ScoreStat.addScore(1);
 		}
 		
 		/*if (biome == TDEBiomes.magical_forrest) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Magical Forrest biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome9);
+			ScoreStat.addScore(1);
 		}*/
 		
 		/*if (biome == TDEBiomes.dark_roofed_forrest) {
 			player.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "You entered the Dark Roofed Forrest biome"));
 			AchievementHandler.setAchieved(TDEAchievements.biome10);
+			ScoreStat.addScore(1);
 		}*/
 		
 	}
