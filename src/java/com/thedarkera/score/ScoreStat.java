@@ -4,7 +4,7 @@ package com.thedarkera.score;
 public class ScoreStat {
 
 	private static int totalScore;
-	private static int maxScore = 1; // TODO
+	private static int maxScore = 25; // Every time a achievement is added, add this.
 
 	public static void addScore(int addScore) {
 		totalScore = totalScore + addScore;
@@ -17,5 +17,7 @@ public class ScoreStat {
 	public static int getMaxScore() {
 		return maxScore;
 	}
+	
+	
 
 }
