@@ -23,7 +23,7 @@ public class ItemDaedricArmor extends ItemTDEArmor {
 		super(material, armorType, name);
 		this.setUnlocalizedName(unlocalizedName);
 		this.textureName = name;
-		setTextureName(TheDarkEra.MODID + ":" + name);
+		this.setTextureName(TheDarkEra.MODID + ":" + getUnlocalizedName());
 		setCreativeTab(TDE.tabTDEItems);
 	}
 
