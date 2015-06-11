@@ -59,11 +59,11 @@ public class TDEArmors {
 		// Daedric armor//
 		daedric_helmet = new ItemDaedricArmor("daedric_helmet", daedric_armor, 0, 0, "daedric_helmet");
 		reg(daedric_helmet);
-		daedric_chestplate = new ItemDaedricArmor("daedric_helmet", daedric_armor, 0, 1, "daedric_chestplate");
+		daedric_chestplate = new ItemDaedricArmor("daedric_chestplate", daedric_armor, 0, 1, "daedric_chestplate");
 		reg(daedric_chestplate);
-		daedric_leggings = new ItemDaedricArmor("daedric_helmet", daedric_armor, 0, 2, "daedric_leggings");
+		daedric_leggings = new ItemDaedricArmor("daedric_leggings", daedric_armor, 0, 2, "daedric_leggings");
 		reg(daedric_leggings);
-		daedric_boots = new ItemDaedricArmor("daedric_helmet", daedric_armor, 0, 3, "daedric_boots");
+		daedric_boots = new ItemDaedricArmor("daedric_boots", daedric_armor, 0, 3, "daedric_boots");
 		reg(daedric_boots);
 
 		// Steel armor//
