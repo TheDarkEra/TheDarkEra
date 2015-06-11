@@ -13,6 +13,7 @@ import net.minecraft.world.World;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
 import com.thedarkera.init.TDEArmors;
+import com.thedarkera.proxy.CommonProxy;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -51,10 +52,10 @@ public class ItemDaedricArmor extends ItemArmor {
 	    		
 	    	int type =((ItemArmor)itemStack.getItem()).armorType;
 	    		if(type == 1 || type == 3) {
-	    			armorModel = com.thedarkera.proxy.getArmorModel(0);
+	    			armorModel = TheDarkEra.proxy.getArmorModel(0);
 	    		}
 	    		else {
-	    			armorModel = com.thedarkera.proxy.getArmorModel(1);
+	    			armorModel = TheDarkEra.proxy.getArmorModel(1);
 	    		}
 //	    	    if (armorSlot == 0)
 //	           return new ModelScaleHelm();
