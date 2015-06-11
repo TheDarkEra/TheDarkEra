@@ -1,22 +1,23 @@
 package com.thedarkera.api.helper;
 
-import com.thedarkera.TheDarkEra;
 
 public class ResourceHelper {
 
+	public static String TDE = "thedarkera";
+	
 	public static String getResourceName(String name) {
-		return TheDarkEra.MODID + ":" + name;
+		return TDE + ":" + name;
 	}
 	
 	public static String getSlabResourceName(String name) {
-		return TheDarkEra.MODID + ":slabs/" + name;
+		return TDE + ":slabs/" + name;
 	}
 	
 	public static String getMetaResourceName(String name) {
-		return TheDarkEra.MODID + ":meta/" + name;
+		return TDE + ":meta/" + name;
 	}
 	
 	public static String getGuiResourceName() {
-		return TheDarkEra.MODID + ":textures/gui/";
+		return TDE + ":textures/gui/";
 	}
 }

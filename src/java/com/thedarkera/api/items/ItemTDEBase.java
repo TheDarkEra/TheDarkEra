@@ -2,17 +2,16 @@ package com.thedarkera.api.items;
 
 import net.minecraft.item.Item;
 
-import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
+import com.thedarkera.api.helper.ResourceHelper;
 
 public class ItemTDEBase extends Item{
 	
 	public ItemTDEBase(String name){
-		String item = name;
-		String resource = TheDarkEra.MODID + ":" + item;
+		String resource = ResourceHelper.getResourceName(name);
 		
 		setCreativeTab(TDE.tabTDEItems);
-		setUnlocalizedName(item);
+		setUnlocalizedName(name);
 		setTextureName(resource);
 	}
 
