@@ -54,4 +54,5 @@ public class ItemAncientArmor extends ItemArmor {
 
 		}
 	}
+	
 }
