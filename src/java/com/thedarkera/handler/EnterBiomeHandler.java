@@ -1,8 +1,8 @@
 package com.thedarkera.handler;
 
+import com.thedarkera.api.systems.scoring.ScoreStat;
 import com.thedarkera.init.TDEAchievements;
 import com.thedarkera.init.TDEBiomes;
-import com.thedarkera.score.ScoreStat;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;

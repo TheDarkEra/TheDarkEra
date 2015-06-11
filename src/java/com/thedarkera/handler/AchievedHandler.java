@@ -2,10 +2,10 @@ package com.thedarkera.handler;
 
 import net.minecraft.item.Item;
 
+import com.thedarkera.api.systems.scoring.ScoreStat;
 import com.thedarkera.init.TDEAchievements;
 import com.thedarkera.init.TDETools;
 import com.thedarkera.init.TDEWeapons;
-import com.thedarkera.score.ScoreStat;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
