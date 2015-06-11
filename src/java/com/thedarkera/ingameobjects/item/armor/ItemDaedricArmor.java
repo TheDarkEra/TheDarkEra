@@ -19,8 +19,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemDaedricArmor extends ItemTDEArmor {
 
-	public ItemDaedricArmor(String unlocalizedName, ArmorMaterial material, int armorType, String name) {
-		super(material, armorType, name);
+	public String textureName;
+	
+	public ItemDaedricArmor(String unlocalizedName, ArmorMaterial material, int par3, int armorType, String name) {
+		super(material, par3, armorType, name);
 		this.setUnlocalizedName(unlocalizedName);
 		this.textureName = name;
 		this.setTextureName(TheDarkEra.MODID + ":" + getUnlocalizedName());
