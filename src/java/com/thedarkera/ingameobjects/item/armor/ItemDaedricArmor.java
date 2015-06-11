@@ -1,6 +1,8 @@
 package com.thedarkera.ingameobjects.item.armor;
 
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -11,6 +13,9 @@ import net.minecraft.world.World;
 import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.TDE;
 import com.thedarkera.init.TDEArmors;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemDaedricArmor extends ItemArmor {
 	public ItemDaedricArmor(ArmorMaterial material, int armorType, String name) {
@@ -34,6 +39,28 @@ public class ItemDaedricArmor extends ItemArmor {
 			return null;
 		}
 	}
+	@SideOnly(Side.CLIENT)
+	   // @Override
+	    public ModelBiped getArmorModel(EntityLiving entityLiving, ItemStack itemStack, int armorSlot) {
+	    	ModelBiped armorModel = null;
+	    		if(itemStack != null) {
+	    			if(itemStack.getItem() instanceof ItemDaedricArmor) {
+	    				
+	    			}
+	    		}
+	    		
+	    	int type =((ItemArmor)itemStack.getItem()).armorType;
+	    		if(type == 1 || type == 3) {
+	    			armorModel = com.thedarkera.proxy.getArmorModel(0);
+	    		}
+	    		else {
+	    			armorModel = com.thedarkera.proxy.getArmorModel(1);
+	    		}
+//	    	    if (armorSlot == 0)
+//	           return new ModelScaleHelm();
+	        return null;
+	    }
+
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {

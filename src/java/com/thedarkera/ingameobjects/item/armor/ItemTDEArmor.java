@@ -41,7 +41,7 @@ public class ItemTDEArmor extends ItemArmor{
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 		
-		if(player.getActivePotionEffects().contains(Potion.damageBoost.id) && this instanceof ItemScaleArmor) {
+		if(player.getActivePotionEffects().contains(Potion.damageBoost.id) && this instanceof ItemDaedricArmor) {
 		    ItemStack[] armor = new ItemStack[] {
 		    		new ItemStack(TDEArmors.daedric_boots),
 		    		new ItemStack(TDEArmors.daedric_chestplate),
