@@ -1,10 +1,10 @@
 package com.thedarkera.client.model;
 
-import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class ModelDaedricHelmet extends ModelBase {
+public class ModelDaedricHelmet extends ModelBiped {
 
 	//fields
 	ModelRenderer Left;

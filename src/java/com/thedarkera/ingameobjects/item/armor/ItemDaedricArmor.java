@@ -18,7 +18,7 @@ import com.thedarkera.proxy.CommonProxy;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemDaedricArmor extends ItemArmor {
+public class ItemDaedricArmor extends ItemTDEArmor {
 	public ItemDaedricArmor(ArmorMaterial material, int armorType, String name) {
 		super(material, 0, armorType);
 		setUnlocalizedName(name);
