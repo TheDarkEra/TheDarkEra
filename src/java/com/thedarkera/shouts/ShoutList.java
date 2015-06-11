@@ -33,7 +33,7 @@ public class ShoutList {
 			GL11.glDisable(GL11.GL_ALPHA_TEST);
 			mc.ingameGUI.drawTexturedModalRect(posX, posY, 0, 0, 22, 21);
 			mc.ingameGUI.drawTexturedModalRect(posX + 3, posY + 3, NumberIconLocation, 22, 16, 16);
-			if (FontDuration > 0){
+			if (FontDuration > 0) {
 				mc.fontRenderer.drawStringWithShadow(ShoutNames[Shout], posX, posY, 0xFFFFFF);
 				FontDuration--;
 			}
@@ -44,7 +44,7 @@ public class ShoutList {
 	}
 
 	public static void NextShout() {
-		if (!(Shout >= ShoutNames.length-1)) {
+		if (!(Shout >= ShoutNames.length - 1)) {
 			Shout++;
 		}
 		FontDuration = 40;
@@ -56,10 +56,12 @@ public class ShoutList {
 		}
 		FontDuration = 40;
 	}
-	public static void SelectShout(int shout){
+
+	public static void SelectShout(int shout) {
 		Shout = shout;
 	}
-	public static int getShout(){
+
+	public static int getShout() {
 		return Shout;
 	}
 }
