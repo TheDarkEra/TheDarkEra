@@ -13,7 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.google.common.collect.Multimap;
-import com.thedarkera.api.TDE;
+import com.thedarkera.TheDarkEra;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -26,7 +26,7 @@ public class ItemDagger extends Item {
 		this.material = material;
 		maxStackSize = 1;
 		setMaxDamage(material.getMaxUses());
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		damage = 2.0F + material.getDamageVsEntity();
 	}
 

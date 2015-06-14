@@ -20,10 +20,9 @@ public class GuiAchievementsBook extends GuiScreen {
 	private ResourceLocation texture = new ResourceLocation(ResourceHelper.getGuiResourceName() + "achievement_book.png");
 
 	private AchievementHandler achievements = new AchievementHandler();
-	private int totalScore = ScoreStat.getScore();
-	private int maxScore = ScoreStat.getMaxScore();
+	private double scorePercentage = ScoreStat.getScorePercentage();
 	private String score = "Score: ";
-	
+
 	private int guiWidth = 256;
 	private int guiHeight = 180;
 	private int x;
@@ -72,10 +71,14 @@ public class GuiAchievementsBook extends GuiScreen {
 		this.drawTexturedModalRect(x, y, 0, 0, guiWidth, guiHeight);
 
 		/**
-		 * To draw on the score
+		 * To draw on the score TODO: Percentage needs fixing
 		 */
-		this.drawString(fontRendererObj, score + totalScore +  "/" + maxScore, 8, 6, 888888);
-		
+		if (ScoreStat.getScorePercentage() <= 75.0) {
+			drawString(fontRendererObj, "Achievement Score: " + ScoreStat.getScorePercentage() + "% Complete (" + ScoreStat.getScore() + "/" + ScoreStat.getMaxScore() + ")", 8, 6, 888888);
+		} else if (ScoreStat.getScorePercentage() <= 25.0 & ScoreStat.getScorePercentage() >= 75.0) {
+			drawString(fontRendererObj, EnumChatFormatting.YELLOW + "Achievement Score: " + ScoreStat.getScorePercentage() + "% Complete (" + ScoreStat.getScore() + "/" + ScoreStat.getMaxScore() + ")", 8, 6, 888888);
+		} else drawString(fontRendererObj, EnumChatFormatting.DARK_RED + "Achievement Score: " + ScoreStat.getScorePercentage() + "% Complete (" + ScoreStat.getScore() + "/" + ScoreStat.getMaxScore() + ")", 8, 6, 888888);
+
 		super.drawScreen(mouseX, mouseY, partialTicks);
 
 		for (int i = 0; i < achievementList.size(); ++i) {

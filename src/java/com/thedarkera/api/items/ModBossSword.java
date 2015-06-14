@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.thedarkera.api.TDE;
+import com.thedarkera.TheDarkEra;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -21,7 +21,7 @@ public class ModBossSword extends Item {
 	private static final String __OBFID = "CL_00000072";
 
 	public ModBossSword(ToolMaterial material) {
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 
 		field_150933_b = material;
 		maxStackSize = 1;

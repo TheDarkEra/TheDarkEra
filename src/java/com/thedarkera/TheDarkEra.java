@@ -3,10 +3,14 @@ package com.thedarkera;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
+import com.thedarkera.api.items.TabLogo;
 import com.thedarkera.client.TDEPotionEffectHandler;
 import com.thedarkera.handler.*;
 import com.thedarkera.init.*;
+
 import net.minecraft.client.Minecraft;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.DimensionManager;
@@ -39,6 +43,10 @@ public class TheDarkEra {
 	public static final String MODID = "TheDarkEra";
 	public static final String VERSION = "1.7.10-A1.0";
 	public static int MODVERSION = 1;
+	
+	private static Item tab_logo_0;
+	private static Item tab_logo_1;
+
 
 	public static int dimension = -10;
 
@@ -78,6 +86,11 @@ public class TheDarkEra {
 		TDEBiomes.init();
 		TDEPotionEffects.init();
 		TDEAchievements.init();
+		
+		tab_logo_0 = new TabLogo("tab_logo_0");
+		GameRegistry.registerItem(tab_logo_0, tab_logo_0.getUnlocalizedName().substring(5));
+		tab_logo_1 = new TabLogo("tab_logo_1");
+		GameRegistry.registerItem(tab_logo_1, tab_logo_1.getUnlocalizedName().substring(5));
 
 		if (FMLCommonHandler.instance().getEffectiveSide().isClient())
 			MinecraftForge.EVENT_BUS.register(new GuiManaBar(Minecraft.getMinecraft()));
@@ -111,8 +124,25 @@ public class TheDarkEra {
 		logger.info(TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " loaded Phase 1 successfully!");
 	}
 	
-	//Tabs
 
+	public static CreativeTabs tabTDEBlocks = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era_blocks") {
+		@Override
+		public Item getTabIconItem() {
+			this.setNoTitle();
+			this.setBackgroundImageName("TDEBlocks.png");
+			return tab_logo_0;
+		}
+	};
+	
+	public static CreativeTabs tabTDEItems = new CreativeTabs(CreativeTabs.getNextID(), "the_dark_era_items") {
+		@Override
+		public Item getTabIconItem() {
+			this.setNoTitle();
+			this.setBackgroundImageName("TDEItems.png");
+			return tab_logo_1;
+		}
+	};
+	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		logger.info("Loading " + TheDarkEra.NAME + " version " + TheDarkEra.VERSION + " Phase 2.");

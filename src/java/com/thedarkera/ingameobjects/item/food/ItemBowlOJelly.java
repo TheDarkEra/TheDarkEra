@@ -7,7 +7,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 
 public class ItemBowlOJelly extends ItemFood { //Items
 
@@ -15,7 +14,7 @@ public class ItemBowlOJelly extends ItemFood { //Items
 		super(4, 0.4f, false);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setAlwaysEdible();
 	}
 

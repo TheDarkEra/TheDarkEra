@@ -8,7 +8,6 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 import com.thedarkera.init.TDEBlocks;
 
 public class BlockPortalDark extends BlockPortal {
@@ -17,7 +16,7 @@ public class BlockPortalDark extends BlockPortal {
 	public BlockPortalDark() {
 		super();
 		setBlockName(name);
-		setCreativeTab(TDE.tabTDEBlocks);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 	}
 
 	@Override

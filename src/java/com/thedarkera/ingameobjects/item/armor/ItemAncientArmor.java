@@ -9,7 +9,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 import com.thedarkera.init.TDEArmors;
 
 public class ItemAncientArmor extends ItemArmor {
@@ -17,7 +16,7 @@ public class ItemAncientArmor extends ItemArmor {
 		super(material, 0, armorType);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 	}
 
 	@Override

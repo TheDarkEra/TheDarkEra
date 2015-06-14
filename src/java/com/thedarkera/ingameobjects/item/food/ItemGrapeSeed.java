@@ -11,7 +11,6 @@ import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 
 public class ItemGrapeSeed extends Item implements IPlantable {
 	private Block plant;
@@ -23,7 +22,7 @@ public class ItemGrapeSeed extends Item implements IPlantable {
 		this.plant = plant;
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 	}
 
 	public boolean onItemUse(ItemStack par1ItemStack,

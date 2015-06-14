@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 import com.thedarkera.api.blocks.BlockTDEStairs;
 import com.thedarkera.api.helper.ResourceHelper;
 
@@ -31,7 +30,7 @@ public class BlockClayStairs extends BlockTDEStairs {
 
 		setBlockName(block);
 		setBlockTextureName(ResourceHelper.getMetaResourceName(name));
-		setCreativeTab(TDE.tabTDEBlocks);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setResistance(resistance);
 		setHardness(hardness);
 		setStepSound(sound);

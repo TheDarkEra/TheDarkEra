@@ -10,7 +10,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.UseHoeEvent;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.shouts.SoulBar;
 import com.thedarkera.shouts.UseShout;
@@ -28,7 +27,7 @@ public class ItemWand extends Item {
 		theToolMaterial = m;
 		maxStackSize = 1;
 		setMaxDamage(m.getMaxUses());
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
 	}

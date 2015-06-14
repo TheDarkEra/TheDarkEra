@@ -8,7 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -20,7 +19,7 @@ public abstract class IPlaceableItem extends Item implements
 	public IPlaceableItem() {
 		super();
 		this.setUnlocalizedName(getName());
-		this.setCreativeTab(TDE.tabTDEBlocks);
+		this.setCreativeTab(TheDarkEra.tabTDEBlocks);
 		GameRegistry.registerItem(this, getName());
 
 	}

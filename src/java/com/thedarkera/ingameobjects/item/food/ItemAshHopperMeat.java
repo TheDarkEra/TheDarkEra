@@ -3,7 +3,6 @@ package com.thedarkera.ingameobjects.item.food;
 import net.minecraft.item.ItemFood;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 
 public class ItemAshHopperMeat extends ItemFood {
 	
@@ -11,7 +10,7 @@ public class ItemAshHopperMeat extends ItemFood {
 		super(food, saturation, wolfFood);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setAlwaysEdible();
 	}
 }

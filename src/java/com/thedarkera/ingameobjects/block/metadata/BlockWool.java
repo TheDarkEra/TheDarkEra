@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -29,7 +28,7 @@ public class BlockWool extends Block {
 
 		setBlockName(block);
 		setBlockTextureName(resource);
-		setCreativeTab(TDE.tabTDEBlocks);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setResistance(resistance);
 		setHardness(hardness);
 		setStepSound(sound);

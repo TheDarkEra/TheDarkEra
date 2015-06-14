@@ -10,7 +10,6 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -24,7 +23,7 @@ public class ItemSoulGem extends Item {
 	public ItemSoulGem() {
 		setUnlocalizedName("soul_gem");
 		setHasSubtypes(true);
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 	}
 
 	@Override

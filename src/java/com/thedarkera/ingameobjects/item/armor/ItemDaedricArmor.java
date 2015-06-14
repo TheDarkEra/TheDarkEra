@@ -11,7 +11,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 import com.thedarkera.init.TDEArmors;
 
 import cpw.mods.fml.relauncher.Side;
@@ -26,7 +25,7 @@ public class ItemDaedricArmor extends ItemTDEArmor {
 		this.setUnlocalizedName(unlocalizedName);
 		this.textureName = name;
 		this.setTextureName(TheDarkEra.MODID + ":" + getUnlocalizedName());
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 	}
 
 	@Override

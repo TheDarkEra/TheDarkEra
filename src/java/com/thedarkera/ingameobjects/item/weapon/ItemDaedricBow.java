@@ -14,7 +14,6 @@ import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 import com.thedarkera.entity.EntityDragonArrow;
 import com.thedarkera.init.TDEWeapons;
 
@@ -31,7 +30,7 @@ public class ItemDaedricBow extends Item {
 		setMaxDamage(384);
 		setUnlocalizedName(name);
 		setTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 	}
 
     @Deprecated

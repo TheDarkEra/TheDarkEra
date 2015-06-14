@@ -3,7 +3,6 @@ package com.thedarkera.ingameobjects.block;
 import net.minecraft.block.BlockLadder;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 
 public class BlockDarkStoneLadder extends BlockLadder {
 	String name = "dark_stone_ladder";
@@ -11,7 +10,7 @@ public class BlockDarkStoneLadder extends BlockLadder {
 	public BlockDarkStoneLadder() {
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TDE.tabTDEBlocks);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setHardness(1.5F);
 		setResistance(10F);
 		setStepSound(soundTypeStone);

@@ -8,14 +8,13 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 
 public class BlockDarkGravel extends BlockFalling {
 	public BlockDarkGravel(String name) {
 		super(Material.gourd);
 		setBlockName(name);
 		setBlockTextureName(TheDarkEra.MODID + ":" + name);
-		setCreativeTab(TDE.tabTDEBlocks);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 		setHardness(0.3F);
 		setStepSound(soundTypeGravel);
 		setHarvestLevel("shovel", 0);

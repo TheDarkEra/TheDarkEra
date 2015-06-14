@@ -3,7 +3,7 @@ package com.thedarkera.api.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-import com.thedarkera.api.TDE;
+import com.thedarkera.TheDarkEra;
 import com.thedarkera.api.helper.ResourceHelper;
 
 public class BlockTDEBase extends Block {
@@ -13,7 +13,7 @@ public class BlockTDEBase extends Block {
 		
 		setBlockName(name);
 		setBlockTextureName(ResourceHelper.getResourceName(name));
-		setCreativeTab(TDE.tabTDEBlocks);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 	}
 	
 	public BlockTDEBase(String name, Material material, float hardness, float resistance) {

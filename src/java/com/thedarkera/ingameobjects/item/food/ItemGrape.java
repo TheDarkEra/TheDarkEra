@@ -8,7 +8,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 
 public class ItemGrape extends ItemFood {
 	private int secondpotionId;
@@ -22,7 +21,7 @@ public class ItemGrape extends ItemFood {
 		setTextureName(TheDarkEra.MODID + ":" + name);
 		setPotionEffect(Potion.moveSpeed.id, 15, 0, 1F);
 		setSecondPotionEffect(Potion.digSpeed.id, 15, 0, 1F);
-		setCreativeTab(TDE.tabTDEItems);
+		setCreativeTab(TheDarkEra.tabTDEItems);
 		setAlwaysEdible();
 	}
 

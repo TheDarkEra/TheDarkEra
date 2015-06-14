@@ -18,7 +18,6 @@ import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.thedarkera.TheDarkEra;
-import com.thedarkera.api.TDE;
 import com.thedarkera.init.TDEBlocks;
 import com.thedarkera.world.biome.features.WorldGenDarkJungleTree;
 import com.thedarkera.world.biome.features.WorldGenDeadTree;
@@ -34,7 +33,7 @@ public class BlockSaplings extends BlockSapling {
 	public BlockSaplings() {
 		float f = 0.4F;
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
-		this.setCreativeTab(TDE.tabTDEBlocks);
+		this.setCreativeTab(TheDarkEra.tabTDEBlocks);
 		this.setBlockName("sapling");
 	}
 

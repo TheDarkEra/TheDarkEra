@@ -4,8 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.util.IIcon;
 
-import com.thedarkera.api.TDE;
-import com.thedarkera.api.helper.ResourceHelper;
+import com.thedarkera.TheDarkEra;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -24,7 +23,7 @@ public class BlockTDEStairs extends BlockStairs {
 		setHardness(blockHardness);
 		setResistance(blockResistance);
 		setStepSound(stepSound);
-		setCreativeTab(TDE.tabTDEBlocks);
+		setCreativeTab(TheDarkEra.tabTDEBlocks);
 	}
 	
 	@SideOnly(Side.CLIENT)
