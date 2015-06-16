@@ -5,7 +5,7 @@ public class ScoreStat {
 	private static int totalScore;
 	private static int maxScore = 25; // Every time a achievement is added, add to this.
 	private static int addedScore;
-	private static double scorePercentage;
+	private static int scorePercentage;
 
 	public static void addScore(int addScore) {
 		totalScore = totalScore + addScore;
@@ -22,7 +22,7 @@ public class ScoreStat {
 		return maxScore;
 	}
 	
-	public static double getScorePercentage() {
+	public static int getScorePercentage() {
 		return scorePercentage;
 	}
 }

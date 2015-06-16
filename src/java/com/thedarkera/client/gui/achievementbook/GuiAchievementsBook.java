@@ -71,13 +71,26 @@ public class GuiAchievementsBook extends GuiScreen {
 		this.drawTexturedModalRect(x, y, 0, 0, guiWidth, guiHeight);
 
 		/**
-		 * To draw on the score TODO: Percentage needs fixing
+		 * Score
 		 */
-		if (ScoreStat.getScorePercentage() <= 75.0) {
-			drawString(fontRendererObj, "Achievement Score: " + ScoreStat.getScorePercentage() + "% Complete (" + ScoreStat.getScore() + "/" + ScoreStat.getMaxScore() + ")", 8, 6, 888888);
-		} else if (ScoreStat.getScorePercentage() <= 25.0 & ScoreStat.getScorePercentage() >= 75.0) {
-			drawString(fontRendererObj, EnumChatFormatting.YELLOW + "Achievement Score: " + ScoreStat.getScorePercentage() + "% Complete (" + ScoreStat.getScore() + "/" + ScoreStat.getMaxScore() + ")", 8, 6, 888888);
-		} else drawString(fontRendererObj, EnumChatFormatting.DARK_RED + "Achievement Score: " + ScoreStat.getScorePercentage() + "% Complete (" + ScoreStat.getScore() + "/" + ScoreStat.getMaxScore() + ")", 8, 6, 888888);
+		int scoreTotal = ScoreStat.getScore();
+		int scorePercentage = ScoreStat.getScorePercentage();
+		int scoreMax = ScoreStat.getMaxScore();
+		String scoreString = "Achievement Score: " + scorePercentage + "% Complete (" + scoreTotal + "/" + scoreMax + ")";
+		EnumChatFormatting LOW = EnumChatFormatting.DARK_RED;
+		EnumChatFormatting AVERAGE = EnumChatFormatting.YELLOW;
+		EnumChatFormatting HIGH = EnumChatFormatting.DARK_GREEN;
+
+		if (scorePercentage >= 75 & scorePercentage <= 100) {
+			drawString(fontRendererObj, HIGH + scoreString, 8, 6, 888888);
+		} if (scorePercentage >= 25 & scorePercentage <= 74) {
+			drawString(fontRendererObj, AVERAGE + scoreString, 8, 6, 888888);
+		} if (scorePercentage >= 0 & scorePercentage <= 24) {
+			drawString(fontRendererObj, LOW + scoreString, 8, 6, 888888);
+		} else {
+			drawString(fontRendererObj, LOW + "Please " + AVERAGE + "Check" + HIGH + " Console!", 8, 6, 888888);
+			System.out.println("TDE Achievement Score Over 100% or Less than 0%.");
+		}
 
 		super.drawScreen(mouseX, mouseY, partialTicks);
 
