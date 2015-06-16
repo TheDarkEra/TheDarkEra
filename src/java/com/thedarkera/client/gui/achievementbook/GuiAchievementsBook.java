@@ -83,15 +83,16 @@ public class GuiAchievementsBook extends GuiScreen {
 
 		if (scorePercentage >= 75 & scorePercentage <= 100) {
 			drawString(fontRendererObj, HIGH + scoreString, 8, 6, 888888);
-		} if (scorePercentage >= 25 & scorePercentage <= 74) {
+		}
+		if (scorePercentage >= 25 & scorePercentage <= 74) {
 			drawString(fontRendererObj, AVERAGE + scoreString, 8, 6, 888888);
-		} if (scorePercentage >= 0 & scorePercentage <= 24) {
+		}
+		if (scorePercentage >= 0 & scorePercentage <= 24) {
 			drawString(fontRendererObj, LOW + scoreString, 8, 6, 888888);
 		} else {
 			drawString(fontRendererObj, LOW + "Please " + AVERAGE + "Check" + HIGH + " Console!", 8, 6, 888888);
 			System.out.println("TDE Achievement Score Over 100% or Less than 0%.");
 		}
-
 		super.drawScreen(mouseX, mouseY, partialTicks);
 
 		for (int i = 0; i < achievementList.size(); ++i) {
