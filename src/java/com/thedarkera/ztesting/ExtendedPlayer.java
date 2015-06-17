@@ -25,19 +25,16 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 		dw.addObject(DataWatcher, ExtendedPlayer.maxMana);
 	}
 
-	@Override
 	public void saveNBTData(NBTTagCompound compound) {
 		compound.setInteger("mana", mana);
 		compound.setInteger("maxMana", player.getDataWatcher().getWatchableObjectInt(DataWatcher));
 	}
 
-	@Override
 	public void loadNBTData(NBTTagCompound compound) {
 		mana = compound.getInteger("mana");
 		player.getDataWatcher().updateObject(DataWatcher, compound.getInteger("maxMana"));
 	}
 
-	@Override
 	public void init(Entity entity, World world) {
 		mana = 20;
 	}

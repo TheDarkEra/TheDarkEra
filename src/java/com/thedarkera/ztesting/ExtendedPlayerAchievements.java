@@ -54,7 +54,6 @@ public class ExtendedPlayerAchievements implements IExtendedEntityProperties {
         AchievementHandler.setAchievementMap(achievements);
     }*/
 
-    @Override
     public void saveNBTData(NBTTagCompound compound) {
         NBTTagCompound properties = new NBTTagCompound();
         for(int i = 0; i < AchievementHandler.achievementNames.size(); i++) {
@@ -66,7 +65,6 @@ public class ExtendedPlayerAchievements implements IExtendedEntityProperties {
         compound.setTag(identifier, properties);
     }
 
-    @Override
     public void loadNBTData(NBTTagCompound compound) {
         NBTTagCompound properties = (NBTTagCompound) compound.getTag(identifier);
         for(int i = 0; i < AchievementHandler.achievementNames.size(); i++) {
@@ -76,7 +74,6 @@ public class ExtendedPlayerAchievements implements IExtendedEntityProperties {
         }
     }
 
-    @Override
     public void init(Entity entity, World world) {
         System.out.println("THIS IS WORKING, INIT EXTPLAYERACHIEVEMENTS IS WORKING!");
     }
