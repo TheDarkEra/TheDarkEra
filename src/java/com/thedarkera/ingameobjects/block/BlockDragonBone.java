@@ -103,7 +103,6 @@ public class BlockDragonBone extends BlockContainer {
 		}
 	}
 
-	@Override
 	public TileEntity createNewTileEntity(World world, int par2) {
 		return new TEDragonBone();
 	}
