@@ -13,7 +13,6 @@ public class BuffDaedricSet implements IBuffHandler {
         player.addPotionEffect(new PotionEffect(Potion.resistance.id, 20, 0));
     }
 
-    @Override
     public void removePlayerBuffs(EntityPlayer player) {
 
     }
