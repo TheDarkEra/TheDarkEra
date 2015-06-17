@@ -73,26 +73,28 @@ public class GuiAchievementsBook extends GuiScreen {
 		/**
 		 * Score
 		 */
-		int scoreTotal = ScoreStat.getScore();
-		int scorePercentage = ScoreStat.getScorePercentage();
-		int scoreMax = ScoreStat.getMaxScore();
+		double scoreTotal = ScoreStat.getScore();
+		double scorePercentage = ScoreStat.getScorePercentage();
+		double scoreMax = ScoreStat.getMaxScore();
 		String scoreString = "Achievement Score: " + scorePercentage + "% Complete (" + scoreTotal + "/" + scoreMax + ")";
 		EnumChatFormatting LOW = EnumChatFormatting.DARK_RED;
 		EnumChatFormatting AVERAGE = EnumChatFormatting.YELLOW;
 		EnumChatFormatting HIGH = EnumChatFormatting.DARK_GREEN;
+		int x1 = x + 18;
+		int y1 = y - 9;
 
 		if (scorePercentage >= 75 & scorePercentage <= 100) {
-			drawString(fontRendererObj, HIGH + scoreString, 8, 6, 888888);
+			drawString(fontRendererObj, HIGH + scoreString, x1, y1, 888888);
 		}
 		if (scorePercentage >= 25 & scorePercentage <= 74) {
-			drawString(fontRendererObj, AVERAGE + scoreString, 8, 6, 888888);
+			drawString(fontRendererObj, AVERAGE + scoreString, x1, y1, 888888);
 		}
 		if (scorePercentage >= 0 & scorePercentage <= 24) {
-			drawString(fontRendererObj, LOW + scoreString, 8, 6, 888888);
-		} else {
-			drawString(fontRendererObj, LOW + "Please " + AVERAGE + "Check" + HIGH + " Console!", 8, 6, 888888);
-			System.out.println("TDE Achievement Score Over 100% or Less than 0%.");
-		}
+			drawString(fontRendererObj, LOW + scoreString, x1, y1, 888888);
+		} //else {
+			//drawString(fontRendererObj, LOW + "Please " + AVERAGE + "Check" + HIGH + " Console!", x1, y1, 888888);
+			//System.out.println("TDE Achievement Score Over 100% or Less than 0%.");
+		//}
 		super.drawScreen(mouseX, mouseY, partialTicks);
 
 		for (int i = 0; i < achievementList.size(); ++i) {
