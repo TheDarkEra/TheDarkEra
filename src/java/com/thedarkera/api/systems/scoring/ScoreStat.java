@@ -3,7 +3,7 @@ package com.thedarkera.api.systems.scoring;
 public class ScoreStat {
 
 	private static double totalScore;
-	private static double maxScore = 25.00; // Every time a achievement is added, add to this.
+	private static double maxScore = 25; // Every time a achievement is added, add to this.
 	private static double addedScore;
 	private static double scorePercentage;
 
@@ -11,6 +11,7 @@ public class ScoreStat {
 		totalScore = totalScore + addScore;
 		addedScore = addScore;
 		scorePercentage = totalScore / maxScore * 100;
+		scorePercentage = Math.round(scorePercentage * 100) / 100;
 		System.out.println("ScoreSystem: " + "Current Amount of added score is - " + addedScore);
 	}
 
@@ -28,7 +29,6 @@ public class ScoreStat {
 
 	/**
 	 * Achievement Score TODO: 
-	 * All doubles need to be 00.00 not 00.000000
 	 * Change to if achievement = achieved addScore(1)
 	 * Improve Score display
 	 */

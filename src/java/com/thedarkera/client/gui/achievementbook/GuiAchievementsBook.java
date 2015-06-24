@@ -80,7 +80,7 @@ public class GuiAchievementsBook extends GuiScreen {
 		EnumChatFormatting LOW = EnumChatFormatting.DARK_RED;
 		EnumChatFormatting AVERAGE = EnumChatFormatting.YELLOW;
 		EnumChatFormatting HIGH = EnumChatFormatting.DARK_GREEN;
-		int x1 = x + 18;
+		int x1 = x + 19;
 		int y1 = y - 9;
 
 		if (scorePercentage >= 75 & scorePercentage <= 100) {
