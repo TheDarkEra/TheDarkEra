@@ -22,6 +22,8 @@ public class TESRDragonBone extends TileEntitySpecialRenderer {
 		
 		glPushMatrix();
 		glEnable(GL12.GL_RESCALE_NORMAL);
+		glDisable(GL_CULL_FACE);
+		glDisable(GL_LIGHTING);
 		glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		glTranslatef((float)x + 0.5F, (float)y + 0.0F, (float)z + 0.5F);
 		glScalef(0.075F, 0.075F, 0.075F);
