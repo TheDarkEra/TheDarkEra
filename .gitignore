@@ -6,4 +6,4 @@
 !*.md
 !.project
 *.db
-!*.iml
+*.iml
